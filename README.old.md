@@ -1,0 +1,1 @@
+# aluplast-component-counter
