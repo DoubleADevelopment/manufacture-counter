@@ -1,7 +1,9 @@
+//types
+import type { DataType } from '../types/data-types/data-types';
 //libs
 import { nanoid } from 'nanoid';
 
-const pigmentsData = [
+const pigmentsData: DataType = [
   {
     dataPackageName: 'pigments',
     dataPackageUNID: 2001,
@@ -18,9 +20,9 @@ const pigmentsData = [
         logs: {},
         lastChange: null,
         settings: {
-          pigmentContainerWeight: 77,
-          basePigmentContainerValue: 500,
-          basePigmentBagValue: 25,
+          containerWeight: 77,
+          baseContainerValue: 500,
+          baseBagValue: 25,
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -38,9 +40,9 @@ const pigmentsData = [
         logs: {},
         lastChange: null,
         settings: {
-          pigmentContainerWeight: 77,
-          basePigmentContainerValue: 500,
-          basePigmentBagValue: 25,
+          containerWeight: 77,
+          baseContainerValue: 500,
+          baseBagValue: 25,
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -58,9 +60,9 @@ const pigmentsData = [
         logs: {},
         lastChange: null,
         settings: {
-          pigmentContainerWeight: 77,
-          basePigmentContainerValue: 500,
-          basePigmentBagValue: 25,
+          containerWeight: 77,
+          baseContainerValue: 500,
+          baseBagValue: 25,
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -78,9 +80,9 @@ const pigmentsData = [
         logs: {},
         lastChange: null,
         settings: {
-          pigmentContainerWeight: 77,
-          basePigmentContainerValue: 500,
-          basePigmentBagValue: 25,
+          containerWeight: 77,
+          baseContainerValue: 500,
+          baseBagValue: 25,
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -98,9 +100,9 @@ const pigmentsData = [
         logs: {},
         lastChange: null,
         settings: {
-          pigmentContainerWeight: 77,
-          basePigmentContainerValue: 500,
-          basePigmentBagValue: 25,
+          containerWeight: 77,
+          baseContainerValue: 500,
+          baseBagValue: 25,
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -118,9 +120,9 @@ const pigmentsData = [
         logs: {},
         lastChange: null,
         settings: {
-          pigmentContainerWeight: 77,
-          basePigmentContainerValue: 500,
-          basePigmentBagValue: 25,
+          containerWeight: 77,
+          baseContainerValue: 500,
+          baseBagValue: 25,
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -138,9 +140,9 @@ const pigmentsData = [
         logs: {},
         lastChange: null,
         settings: {
-          pigmentContainerWeight: 77,
-          basePigmentContainerValue: 500,
-          basePigmentBagValue: 25,
+          containerWeight: 77,
+          baseContainerValue: 500,
+          baseBagValue: 25,
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -158,9 +160,9 @@ const pigmentsData = [
         logs: {},
         lastChange: null,
         settings: {
-          pigmentContainerWeight: 77,
-          basePigmentContainerValue: 500,
-          basePigmentBagValue: 25,
+          containerWeight: 77,
+          baseContainerValue: 500,
+          baseBagValue: 25,
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -178,9 +180,9 @@ const pigmentsData = [
         logs: {},
         lastChange: null,
         settings: {
-          pigmentContainerWeight: 77,
-          basePigmentContainerValue: 500,
-          basePigmentBagValue: 25,
+          containerWeight: 77,
+          baseContainerValue: 500,
+          baseBagValue: 25,
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -198,9 +200,9 @@ const pigmentsData = [
         logs: {},
         lastChange: null,
         settings: {
-          pigmentContainerWeight: 77,
-          basePigmentContainerValue: 500,
-          basePigmentBagValue: 25,
+          containerWeight: 77,
+          baseContainerValue: 500,
+          baseBagValue: 25,
         },
         additionalResources: [],
         packagingInfo: 'karton',

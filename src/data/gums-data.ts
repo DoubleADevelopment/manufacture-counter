@@ -1,7 +1,9 @@
+//types
+import type { DataType } from '../types/data-types/data-types';
 //libs
 import { nanoid } from 'nanoid';
 
-const gumsData = [
+const gumsData: DataType = [
   {
     dataPackageName: 'gums',
     dataPackageUNID: 3001,
@@ -18,7 +20,7 @@ const gumsData = [
         logs: {},
         lastChange: null,
         settings: {
-          baseGumCardboardValue: 500,
+          baseCardboardValue: 500,
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -36,7 +38,7 @@ const gumsData = [
         logs: {},
         lastChange: null,
         settings: {
-          baseGumCardboardValue: 500,
+          baseCardboardValue: 500,
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -54,7 +56,7 @@ const gumsData = [
         logs: {},
         lastChange: null,
         settings: {
-          baseGumCardboardValue: 500,
+          baseCardboardValue: 500,
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -72,7 +74,7 @@ const gumsData = [
         logs: {},
         lastChange: null,
         settings: {
-          baseGumCardboardValue: 500,
+          baseCardboardValue: 500,
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -90,7 +92,7 @@ const gumsData = [
         logs: {},
         lastChange: null,
         settings: {
-          baseGumCardboardValue: 500,
+          baseCardboardValue: 500,
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -108,7 +110,7 @@ const gumsData = [
         logs: {},
         lastChange: null,
         settings: {
-          baseGumCardboardValue: 500,
+          baseCardboardValue: 500,
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -126,7 +128,7 @@ const gumsData = [
         logs: {},
         lastChange: null,
         settings: {
-          baseGumCardboardValue: 500,
+          baseCardboardValue: 500,
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -144,7 +146,7 @@ const gumsData = [
         logs: {},
         lastChange: null,
         settings: {
-          baseGumCardboardValue: 500,
+          baseCardboardValue: 500,
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -162,7 +164,7 @@ const gumsData = [
         logs: {},
         lastChange: null,
         settings: {
-          baseGumCardboardValue: 500,
+          baseCardboardValue: 500,
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -180,7 +182,7 @@ const gumsData = [
         logs: {},
         lastChange: null,
         settings: {
-          baseGumCardboardValue: 500,
+          baseCardboardValue: 500,
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -198,7 +200,7 @@ const gumsData = [
         logs: {},
         lastChange: null,
         settings: {
-          baseGumCardboardValue: 500,
+          baseCardboardValue: 500,
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -216,7 +218,7 @@ const gumsData = [
         logs: {},
         lastChange: null,
         settings: {
-          baseGumCardboardValue: 500,
+          baseCardboardValue: 500,
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -234,7 +236,7 @@ const gumsData = [
         logs: {},
         lastChange: null,
         settings: {
-          baseGumCardboardValue: 500,
+          baseCardboardValue: 500,
         },
         additionalResources: [],
         packagingInfo: 'karton',

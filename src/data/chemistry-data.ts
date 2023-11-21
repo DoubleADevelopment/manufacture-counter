@@ -1,7 +1,14 @@
+//vars
+import {
+  ChemistryLogsNames,
+  ChemistrySettingsNames,
+} from '../variables/data-variables/data-variables';
+//types
+import type { ChemistryDataType } from '../types/data-types/chemistry-data-types';
 //libs
 import { nanoid } from 'nanoid';
 
-const chemistryData = [
+const chemistryData: ChemistryDataType = [
   {
     dataPackageName: 'chemistry-veneer',
     dataPackageUNID: 1001,
@@ -15,10 +22,18 @@ const chemistryData = [
         description: 'Drukarki Leibinger Jet2neo/jet2neos',
         image: '/aluplast-components-counter/images/chemistry/Solvent-770001-00030.jpg',
         color: '',
-        logs: {},
+        logs: {
+          [ChemistryLogsNames.COUNTER]: {
+            log: [],
+            name: 'string',
+          },
+        },
         lastChange: null,
         settings: {
-          baseChemistryCounterValue: 1,
+          [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
+            settingValue: 1,
+            name: 'string',
+          },
         },
         additionalResources: [],
         packagingInfo: 'butelka',
@@ -33,10 +48,18 @@ const chemistryData = [
         description: 'Drukarki Leibinger Jet2neo/jet2neos',
         image: '/aluplast-components-counter/images/chemistry/Atrament-70000-00030.jpg',
         color: '',
-        logs: {},
+        logs: {
+          [ChemistryLogsNames.COUNTER]: {
+            log: [],
+            name: 'string',
+          },
+        },
         lastChange: null,
         settings: {
-          baseChemistryCounterValue: 1,
+          [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
+            settingValue: 1,
+            name: 'string',
+          },
         },
         additionalResources: [],
         packagingInfo: 'butelka',
@@ -51,10 +74,18 @@ const chemistryData = [
         description: 'Drukarki Leibinger Jet2neo/jet2neos',
         image: '/aluplast-components-counter/images/chemistry/Solvent-SJN 1700.jpg',
         color: '',
-        logs: {},
+        logs: {
+          [ChemistryLogsNames.COUNTER]: {
+            log: [],
+            name: 'string',
+          },
+        },
         lastChange: null,
         settings: {
-          baseChemistryCounterValue: 1,
+          [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
+            settingValue: 1,
+            name: 'string',
+          },
         },
         additionalResources: [],
         packagingInfo: 'butelka',
@@ -70,10 +101,18 @@ const chemistryData = [
         description: 'Dotyczy drukarek 1220',
         image: '/aluplast-components-counter/images/chemistry/Make-up-VJ706-D.jpg',
         color: '',
-        logs: {},
+        logs: {
+          [ChemistryLogsNames.COUNTER]: {
+            log: [],
+            name: 'string',
+          },
+        },
         lastChange: null,
         settings: {
-          baseChemistryCounterValue: 1,
+          [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
+            settingValue: 1,
+            name: 'string',
+          },
         },
         additionalResources: [],
         packagingInfo: 'butelka',
@@ -88,10 +127,18 @@ const chemistryData = [
         description: 'Dotyczy drukarek 1220',
         image: '/aluplast-components-counter/images/chemistry/Atrament-VJ411-D.jpg',
         color: '',
-        logs: {},
+        logs: {
+          [ChemistryLogsNames.COUNTER]: {
+            log: [],
+            name: 'string',
+          },
+        },
         lastChange: null,
         settings: {
-          baseChemistryCounterValue: 1,
+          [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
+            settingValue: 1,
+            name: 'string',
+          },
         },
         additionalResources: [],
         packagingInfo: 'butelka',
@@ -107,10 +154,18 @@ const chemistryData = [
         description: 'Dotyczy drukarek 1580',
         image: '/aluplast-components-counter/images/chemistry/Make-up-VJ7222-D.jpg',
         color: '',
-        logs: {},
+        logs: {
+          [ChemistryLogsNames.COUNTER]: {
+            log: [],
+            name: 'string',
+          },
+        },
         lastChange: null,
         settings: {
-          baseChemistryCounterValue: 1,
+          [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
+            settingValue: 1,
+            name: 'string',
+          },
         },
         additionalResources: [],
         packagingInfo: 'butelka',
@@ -125,10 +180,18 @@ const chemistryData = [
         description: 'Dotyczy drukarek 1580',
         image: '/aluplast-components-counter/images/chemistry/Atrament-VJ411-D.jpg',
         color: '',
-        logs: {},
+        logs: {
+          [ChemistryLogsNames.COUNTER]: {
+            log: [],
+            name: 'string',
+          },
+        },
         lastChange: null,
         settings: {
-          baseChemistryCounterValue: 1,
+          [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
+            settingValue: 1,
+            name: 'string',
+          },
         },
         additionalResources: [],
         packagingInfo: 'butelka',
@@ -137,8 +200,8 @@ const chemistryData = [
     ],
   },
   {
-    packageName: 'chemistry-extrusion',
-    packageUNID: 1002,
+    dataPackageName: 'chemistry-extrusion',
+    dataPackageUNID: 1002,
     items: [],
   },
 ];
