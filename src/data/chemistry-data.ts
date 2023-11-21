@@ -3,11 +3,11 @@ import { nanoid } from 'nanoid';
 
 const chemistryData = [
   {
-    dataPackageName: 'ekstruzja',
+    dataPackageName: 'chemistry-veneer',
     dataPackageUNID: 1001,
     items: [
       {
-        UNID: `chemistry-ekstruzja-${nanoid()}`,
+        UNID: `chemistry-veneer-${nanoid()}`,
         amount: 0,
         firm: '',
         name: 'Solvent',
@@ -25,7 +25,7 @@ const chemistryData = [
         manufacturer: '',
       },
       {
-        UNID: `chemistry-ekstruzja-${nanoid()}`,
+        UNID: `chemistry-veneer-${nanoid()}`,
         amount: 0,
         firm: '',
         name: 'Atrament',
@@ -43,7 +43,7 @@ const chemistryData = [
         manufacturer: '',
       },
       {
-        UNID: `chemistry-ekstruzja-${nanoid()}`,
+        UNID: `chemistry-veneer-${nanoid()}`,
         amount: 0,
         firm: '',
         name: 'Solvent',
@@ -62,7 +62,7 @@ const chemistryData = [
       },
 
       {
-        UNID: `chemistry-ekstruzja-${nanoid()}`,
+        UNID: `chemistry-veneer-${nanoid()}`,
         amount: 0,
         firm: '',
         name: 'Make-up',
@@ -80,7 +80,7 @@ const chemistryData = [
         manufacturer: '',
       },
       {
-        UNID: `chemistry-ekstruzja-${nanoid()}`,
+        UNID: `chemistry-veneer-${nanoid()}`,
         amount: 0,
         firm: '',
         name: 'Atrament',
@@ -99,7 +99,7 @@ const chemistryData = [
       },
 
       {
-        UNID: `chemistry-ekstruzja-${nanoid()}`,
+        UNID: `chemistry-veneer-${nanoid()}`,
         amount: 0,
         firm: '',
         name: 'Make-up',
@@ -117,7 +117,7 @@ const chemistryData = [
         manufacturer: '',
       },
       {
-        UNID: `chemistry-ekstruzja-${nanoid()}`,
+        UNID: `chemistry-veneer-${nanoid()}`,
         amount: 0,
         firm: '',
         name: 'Atrament',
@@ -137,7 +137,7 @@ const chemistryData = [
     ],
   },
   {
-    packageName: 'okleina',
+    packageName: 'chemistry-extrusion',
     packageUNID: 1002,
     items: [],
   },
