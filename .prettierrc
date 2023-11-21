@@ -16,7 +16,7 @@
     {
       "files": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
       "options": {
-        "parser": "babel"
+        "parser": "typescript"
       }
     }
   ],
