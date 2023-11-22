@@ -5,7 +5,7 @@ interface IDataPackageType {
 }
 
 interface ILogsType {
-  [name: string]: {
+  [key: string]: {
     log: string[];
     name: string;
   };
