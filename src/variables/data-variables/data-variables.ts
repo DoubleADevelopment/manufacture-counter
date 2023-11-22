@@ -1,5 +1,5 @@
 //logs names
-export const enum PigmentsLogsNames {
+export enum PigmentsLogsNames {
   CONTAINER = 'container',
   BAG = 'bag',
   COUNTER = 'counter',
