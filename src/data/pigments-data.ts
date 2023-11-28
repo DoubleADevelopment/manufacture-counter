@@ -1,9 +1,14 @@
 //types
-import type { DataType } from '../types/data-types/data-types';
+import type { PigmentsDataType } from '../types/data-types/pigments-data-type';
+//vars
+import {
+  PigmentsLogsNames,
+  PigmentsSettingsNames,
+} from '../variables/data-variables/data-variables';
 //libs
 import { nanoid } from 'nanoid';
 
-const pigmentsData: DataType = [
+const pigmentsData: PigmentsDataType = [
   {
     dataPackageName: 'pigments',
     dataPackageUNID: 2001,
@@ -17,12 +22,34 @@ const pigmentsData: DataType = [
         amount: 0,
         image: '/aluplast-components-counter/images/pigments/pigment-braz.jpg',
         description: 'Pigment brązowy',
-        logs: {},
+        logs: {
+          [PigmentsLogsNames.COUNTER]: {
+            log: [],
+            name: 'Licznik',
+          },
+          [PigmentsLogsNames.CONTAINER]: {
+            log: [],
+            name: 'Kontenery',
+          },
+          [PigmentsLogsNames.BAG]: {
+            log: [],
+            name: 'Kartony',
+          },
+        },
         lastChange: null,
         settings: {
-          containerWeight: 77,
-          baseContainerValue: 500,
-          baseBagValue: 25,
+          [PigmentsSettingsNames.BASE_BAG_VALUE]: {
+            settingValue: 25,
+            name: 'Waga jednego worka / KG',
+          },
+          [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
+            settingValue: 500,
+            name: 'Waga kontenera / KG',
+          },
+          [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
+            settingValue: 77,
+            name: 'Waga jednego kontenera / KG',
+          },
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -37,12 +64,34 @@ const pigmentsData: DataType = [
         amount: 0,
         image: '/aluplast-components-counter/images/pigments/pigment-antracyt.jpg',
         description: 'Pigment antracyt',
-        logs: {},
+        logs: {
+          [PigmentsLogsNames.COUNTER]: {
+            log: [],
+            name: 'Licznik',
+          },
+          [PigmentsLogsNames.CONTAINER]: {
+            log: [],
+            name: 'Kontenery',
+          },
+          [PigmentsLogsNames.BAG]: {
+            log: [],
+            name: 'Kartony',
+          },
+        },
         lastChange: null,
         settings: {
-          containerWeight: 77,
-          baseContainerValue: 500,
-          baseBagValue: 25,
+          [PigmentsSettingsNames.BASE_BAG_VALUE]: {
+            settingValue: 25,
+            name: 'Waga jednego worka / KG',
+          },
+          [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
+            settingValue: 500,
+            name: 'Waga kontenera / KG',
+          },
+          [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
+            settingValue: 77,
+            name: 'Waga jednego kontenera / KG',
+          },
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -57,12 +106,34 @@ const pigmentsData: DataType = [
         amount: 0,
         image: '/aluplast-components-counter/images/pigments/pigment-cream.jpg',
         description: 'Pigment krem',
-        logs: {},
+        logs: {
+          [PigmentsLogsNames.COUNTER]: {
+            log: [],
+            name: 'Licznik',
+          },
+          [PigmentsLogsNames.CONTAINER]: {
+            log: [],
+            name: 'Kontenery',
+          },
+          [PigmentsLogsNames.BAG]: {
+            log: [],
+            name: 'Kartony',
+          },
+        },
         lastChange: null,
         settings: {
-          containerWeight: 77,
-          baseContainerValue: 500,
-          baseBagValue: 25,
+          [PigmentsSettingsNames.BASE_BAG_VALUE]: {
+            settingValue: 25,
+            name: 'Waga jednego worka / KG',
+          },
+          [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
+            settingValue: 500,
+            name: 'Waga kontenera / KG',
+          },
+          [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
+            settingValue: 77,
+            name: 'Waga jednego kontenera / KG',
+          },
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -77,12 +148,34 @@ const pigmentsData: DataType = [
         amount: 0,
         image: '/aluplast-components-counter/images/pigments/pigment-ochra.jpg',
         description: 'Pigment ochra',
-        logs: {},
+        logs: {
+          [PigmentsLogsNames.COUNTER]: {
+            log: [],
+            name: 'Licznik',
+          },
+          [PigmentsLogsNames.CONTAINER]: {
+            log: [],
+            name: 'Kontenery',
+          },
+          [PigmentsLogsNames.BAG]: {
+            log: [],
+            name: 'Kartony',
+          },
+        },
         lastChange: null,
         settings: {
-          containerWeight: 77,
-          baseContainerValue: 500,
-          baseBagValue: 25,
+          [PigmentsSettingsNames.BASE_BAG_VALUE]: {
+            settingValue: 25,
+            name: 'Waga jednego worka / KG',
+          },
+          [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
+            settingValue: 500,
+            name: 'Waga kontenera / KG',
+          },
+          [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
+            settingValue: 77,
+            name: 'Waga jednego kontenera / KG',
+          },
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -97,12 +190,34 @@ const pigmentsData: DataType = [
         amount: 0,
         image: '/aluplast-components-counter/images/pigments/pigment-braz.jpg',
         description: 'Pigment brązowy',
-        logs: {},
+        logs: {
+          [PigmentsLogsNames.COUNTER]: {
+            log: [],
+            name: 'Licznik',
+          },
+          [PigmentsLogsNames.CONTAINER]: {
+            log: [],
+            name: 'Kontenery',
+          },
+          [PigmentsLogsNames.BAG]: {
+            log: [],
+            name: 'Kartony',
+          },
+        },
         lastChange: null,
         settings: {
-          containerWeight: 77,
-          baseContainerValue: 500,
-          baseBagValue: 25,
+          [PigmentsSettingsNames.BASE_BAG_VALUE]: {
+            settingValue: 25,
+            name: 'Waga jednego worka / KG',
+          },
+          [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
+            settingValue: 500,
+            name: 'Waga kontenera / KG',
+          },
+          [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
+            settingValue: 77,
+            name: 'Waga jednego kontenera / KG',
+          },
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -117,12 +232,34 @@ const pigmentsData: DataType = [
         amount: 0,
         image: '/aluplast-components-counter/images/pigments/pigment-bialy.jpg',
         description: '',
-        logs: {},
+        logs: {
+          [PigmentsLogsNames.COUNTER]: {
+            log: [],
+            name: 'Licznik',
+          },
+          [PigmentsLogsNames.CONTAINER]: {
+            log: [],
+            name: 'Kontenery',
+          },
+          [PigmentsLogsNames.BAG]: {
+            log: [],
+            name: 'Kartony',
+          },
+        },
         lastChange: null,
         settings: {
-          containerWeight: 77,
-          baseContainerValue: 500,
-          baseBagValue: 25,
+          [PigmentsSettingsNames.BASE_BAG_VALUE]: {
+            settingValue: 25,
+            name: 'Waga jednego worka / KG',
+          },
+          [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
+            settingValue: 500,
+            name: 'Waga kontenera / KG',
+          },
+          [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
+            settingValue: 77,
+            name: 'Waga jednego kontenera / KG',
+          },
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -137,12 +274,34 @@ const pigmentsData: DataType = [
         amount: 0,
         image: '/aluplast-components-counter/images/pigments/pigment-zolty.jpg',
         description: '',
-        logs: {},
+        logs: {
+          [PigmentsLogsNames.COUNTER]: {
+            log: [],
+            name: 'Licznik',
+          },
+          [PigmentsLogsNames.CONTAINER]: {
+            log: [],
+            name: 'Kontenery',
+          },
+          [PigmentsLogsNames.BAG]: {
+            log: [],
+            name: 'Kartony',
+          },
+        },
         lastChange: null,
         settings: {
-          containerWeight: 77,
-          baseContainerValue: 500,
-          baseBagValue: 25,
+          [PigmentsSettingsNames.BASE_BAG_VALUE]: {
+            settingValue: 25,
+            name: 'Waga jednego worka / KG',
+          },
+          [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
+            settingValue: 500,
+            name: 'Waga kontenera / KG',
+          },
+          [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
+            settingValue: 77,
+            name: 'Waga jednego kontenera / KG',
+          },
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -157,12 +316,34 @@ const pigmentsData: DataType = [
         amount: 0,
         image: '/aluplast-components-counter/images/pigments/pigment-antracyt.jpg',
         description: '',
-        logs: {},
+        logs: {
+          [PigmentsLogsNames.COUNTER]: {
+            log: [],
+            name: 'Licznik',
+          },
+          [PigmentsLogsNames.CONTAINER]: {
+            log: [],
+            name: 'Kontenery',
+          },
+          [PigmentsLogsNames.BAG]: {
+            log: [],
+            name: 'Kartony',
+          },
+        },
         lastChange: null,
         settings: {
-          containerWeight: 77,
-          baseContainerValue: 500,
-          baseBagValue: 25,
+          [PigmentsSettingsNames.BASE_BAG_VALUE]: {
+            settingValue: 25,
+            name: 'Waga jednego worka / KG',
+          },
+          [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
+            settingValue: 500,
+            name: 'Waga kontenera / KG',
+          },
+          [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
+            settingValue: 77,
+            name: 'Waga jednego kontenera / KG',
+          },
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -177,12 +358,34 @@ const pigmentsData: DataType = [
         amount: 0,
         image: '/aluplast-components-counter/images/pigments/pigment-shelblue.jpg',
         description: 'Masa wysokostabilna',
-        logs: {},
+        logs: {
+          [PigmentsLogsNames.COUNTER]: {
+            log: [],
+            name: 'Licznik',
+          },
+          [PigmentsLogsNames.CONTAINER]: {
+            log: [],
+            name: 'Kontenery',
+          },
+          [PigmentsLogsNames.BAG]: {
+            log: [],
+            name: 'Kartony',
+          },
+        },
         lastChange: null,
         settings: {
-          containerWeight: 77,
-          baseContainerValue: 500,
-          baseBagValue: 25,
+          [PigmentsSettingsNames.BASE_BAG_VALUE]: {
+            settingValue: 25,
+            name: 'Waga jednego worka / KG',
+          },
+          [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
+            settingValue: 500,
+            name: 'Waga kontenera / KG',
+          },
+          [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
+            settingValue: 77,
+            name: 'Waga jednego kontenera / KG',
+          },
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -197,12 +400,34 @@ const pigmentsData: DataType = [
         amount: 0,
         image: '/aluplast-components-counter/images/pigments/pigment-shelblue.jpg',
         description: 'Masa wysokostabilna',
-        logs: {},
+        logs: {
+          [PigmentsLogsNames.COUNTER]: {
+            log: [],
+            name: 'Licznik',
+          },
+          [PigmentsLogsNames.CONTAINER]: {
+            log: [],
+            name: 'Kontenery',
+          },
+          [PigmentsLogsNames.BAG]: {
+            log: [],
+            name: 'Kartony',
+          },
+        },
         lastChange: null,
         settings: {
-          containerWeight: 77,
-          baseContainerValue: 500,
-          baseBagValue: 25,
+          [PigmentsSettingsNames.BASE_BAG_VALUE]: {
+            settingValue: 25,
+            name: 'Waga jednego worka / KG',
+          },
+          [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
+            settingValue: 500,
+            name: 'Waga kontenera / KG',
+          },
+          [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
+            settingValue: 77,
+            name: 'Waga jednego kontenera / KG',
+          },
         },
         additionalResources: [],
         packagingInfo: 'karton',

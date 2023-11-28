@@ -1,9 +1,11 @@
 //types
-import type { DataType } from '../types/data-types/data-types';
+import type { GumsDataType } from '../types/data-types/gums-data-types';
+//vars
+import { GumsLogsNames, GumsSettingsNames } from '../variables/data-variables/data-variables';
 //libs
 import { nanoid } from 'nanoid';
 
-const gumsData: DataType = [
+const gumsData: GumsDataType = [
   {
     dataPackageName: 'gums',
     dataPackageUNID: 3001,
@@ -17,10 +19,22 @@ const gumsData: DataType = [
         description: '(kolor etykiety niebieski)',
         image: '/aluplast-components-counter/images/gums/uszczelka czarna.jpg',
         color: '#2181FC',
-        logs: {},
+        logs: {
+          [GumsLogsNames.COUNTER]: {
+            log: [],
+            name: 'Licznik',
+          },
+          [GumsLogsNames.CARDBOARD]: {
+            log: [],
+            name: 'Kartony',
+          },
+        },
         lastChange: null,
         settings: {
-          baseCardboardValue: 500,
+          [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
+            settingValue: 500,
+            name: 'Waga kartonu / KG',
+          },
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -35,10 +49,22 @@ const gumsData: DataType = [
         description: '(kolor etykiety niebieski 2x250)',
         image: '/aluplast-components-counter/images/gums/uszczelka czarna.jpg',
         color: '#2181FC',
-        logs: {},
+        logs: {
+          [GumsLogsNames.COUNTER]: {
+            log: [],
+            name: 'Licznik',
+          },
+          [GumsLogsNames.CARDBOARD]: {
+            log: [],
+            name: 'Kartony',
+          },
+        },
         lastChange: null,
         settings: {
-          baseCardboardValue: 500,
+          [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
+            settingValue: 500,
+            name: 'Waga kartonu / KG',
+          },
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -53,10 +79,22 @@ const gumsData: DataType = [
         description: '(kolor etykiety zielony)',
         image: '/aluplast-components-counter/images/gums/uszczelka szara.jpg',
         color: '#32BD43',
-        logs: {},
+        logs: {
+          [GumsLogsNames.COUNTER]: {
+            log: [],
+            name: 'Licznik',
+          },
+          [GumsLogsNames.CARDBOARD]: {
+            log: [],
+            name: 'Kartony',
+          },
+        },
         lastChange: null,
         settings: {
-          baseCardboardValue: 500,
+          [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
+            settingValue: 500,
+            name: 'Waga kartonu / KG',
+          },
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -71,10 +109,22 @@ const gumsData: DataType = [
         description: '(kolor etykiety zielony) 2x250',
         image: '/aluplast-components-counter/images/gums/uszczelka szara.jpg',
         color: '#32BD43',
-        logs: {},
+        logs: {
+          [GumsLogsNames.COUNTER]: {
+            log: [],
+            name: 'Licznik',
+          },
+          [GumsLogsNames.CARDBOARD]: {
+            log: [],
+            name: 'Kartony',
+          },
+        },
         lastChange: null,
         settings: {
-          baseCardboardValue: 500,
+          [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
+            settingValue: 500,
+            name: 'Waga kartonu / KG',
+          },
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -89,10 +139,22 @@ const gumsData: DataType = [
         description: '(kolor etykiety pomarańczowy)',
         image: '/aluplast-components-counter/images/gums/uszczelka szara.jpg',
         color: '#d0312d',
-        logs: {},
+        logs: {
+          [GumsLogsNames.COUNTER]: {
+            log: [],
+            name: 'Licznik',
+          },
+          [GumsLogsNames.CARDBOARD]: {
+            log: [],
+            name: 'Kartony',
+          },
+        },
         lastChange: null,
         settings: {
-          baseCardboardValue: 500,
+          [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
+            settingValue: 500,
+            name: 'Waga kartonu / KG',
+          },
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -107,10 +169,22 @@ const gumsData: DataType = [
         description: '(kolor etykiety pomarańczowy)',
         image: '/aluplast-components-counter/images/gums/uszczelka szara.jpg',
         color: '#F4B084',
-        logs: {},
+        logs: {
+          [GumsLogsNames.COUNTER]: {
+            log: [],
+            name: 'Licznik',
+          },
+          [GumsLogsNames.CARDBOARD]: {
+            log: [],
+            name: 'Kartony',
+          },
+        },
         lastChange: null,
         settings: {
-          baseCardboardValue: 500,
+          [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
+            settingValue: 500,
+            name: 'Waga kartonu / KG',
+          },
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -125,10 +199,22 @@ const gumsData: DataType = [
         description: '(kolor etykiety biały)',
         image: '/aluplast-components-counter/images/gums/uszczelka czarna.jpg',
         color: '#ffff00',
-        logs: {},
+        logs: {
+          [GumsLogsNames.COUNTER]: {
+            log: [],
+            name: 'Licznik',
+          },
+          [GumsLogsNames.CARDBOARD]: {
+            log: [],
+            name: 'Kartony',
+          },
+        },
         lastChange: null,
         settings: {
-          baseCardboardValue: 500,
+          [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
+            settingValue: 500,
+            name: 'Waga kartonu / KG',
+          },
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -143,10 +229,22 @@ const gumsData: DataType = [
         description: '(kolor etykiety biały)',
         image: '/aluplast-components-counter/images/gums/uszczelka czarna.jpg',
         color: '#ffffff',
-        logs: {},
+        logs: {
+          [GumsLogsNames.COUNTER]: {
+            log: [],
+            name: 'Licznik',
+          },
+          [GumsLogsNames.CARDBOARD]: {
+            log: [],
+            name: 'Kartony',
+          },
+        },
         lastChange: null,
         settings: {
-          baseCardboardValue: 500,
+          [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
+            settingValue: 500,
+            name: 'Waga kartonu / KG',
+          },
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -161,10 +259,22 @@ const gumsData: DataType = [
         description: '(kolor etykiety niebieski)',
         image: '/aluplast-components-counter/images/gums/uszczelka czarna.jpg',
         color: '#004DFF',
-        logs: {},
+        logs: {
+          [GumsLogsNames.COUNTER]: {
+            log: [],
+            name: 'Licznik',
+          },
+          [GumsLogsNames.CARDBOARD]: {
+            log: [],
+            name: 'Kartony',
+          },
+        },
         lastChange: null,
         settings: {
-          baseCardboardValue: 500,
+          [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
+            settingValue: 500,
+            name: 'Waga kartonu / KG',
+          },
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -179,10 +289,22 @@ const gumsData: DataType = [
         description: '(kolor etykiety zielony)',
         image: '/aluplast-components-counter/images/gums/uszczelka szara.jpg',
         color: '#87FF00',
-        logs: {},
+        logs: {
+          [GumsLogsNames.COUNTER]: {
+            log: [],
+            name: 'Licznik',
+          },
+          [GumsLogsNames.CARDBOARD]: {
+            log: [],
+            name: 'Kartony',
+          },
+        },
         lastChange: null,
         settings: {
-          baseCardboardValue: 500,
+          [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
+            settingValue: 500,
+            name: 'Waga kartonu / KG',
+          },
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -197,10 +319,22 @@ const gumsData: DataType = [
         description: '(kolor etykiety biały)',
         image: '/aluplast-components-counter/images/gums/uszczelka czarna.jpg',
         color: '#ffffff',
-        logs: {},
+        logs: {
+          [GumsLogsNames.COUNTER]: {
+            log: [],
+            name: 'Licznik',
+          },
+          [GumsLogsNames.CARDBOARD]: {
+            log: [],
+            name: 'Kartony',
+          },
+        },
         lastChange: null,
         settings: {
-          baseCardboardValue: 500,
+          [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
+            settingValue: 500,
+            name: 'Waga kartonu / KG',
+          },
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -215,10 +349,22 @@ const gumsData: DataType = [
         description: '(kolor etykiety czerwony)',
         image: '/aluplast-components-counter/images/gums/uszczelka szara.jpg',
         color: '#FFAA00',
-        logs: {},
+        logs: {
+          [GumsLogsNames.COUNTER]: {
+            log: [],
+            name: 'Licznik',
+          },
+          [GumsLogsNames.CARDBOARD]: {
+            log: [],
+            name: 'Kartony',
+          },
+        },
         lastChange: null,
         settings: {
-          baseCardboardValue: 500,
+          [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
+            settingValue: 500,
+            name: 'Waga kartonu / KG',
+          },
         },
         additionalResources: [],
         packagingInfo: 'karton',
@@ -233,10 +379,22 @@ const gumsData: DataType = [
         description: '',
         image: '/aluplast-components-counter/images/gums/uszczelka szara.jpg',
         color: '#c0c0c0',
-        logs: {},
+        logs: {
+          [GumsLogsNames.COUNTER]: {
+            log: [],
+            name: 'Licznik',
+          },
+          [GumsLogsNames.CARDBOARD]: {
+            log: [],
+            name: 'Kartony',
+          },
+        },
         lastChange: null,
         settings: {
-          baseCardboardValue: 500,
+          [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
+            settingValue: 500,
+            name: 'Waga kartonu / KG',
+          },
         },
         additionalResources: [],
         packagingInfo: 'karton',
