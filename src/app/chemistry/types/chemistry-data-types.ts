@@ -1,8 +1,5 @@
 //vars
-import {
-  ChemistryLogsNames,
-  ChemistrySettingsNames,
-} from '../../variables/data-variables/data-variables';
+import { ChemistryLogsNames, ChemistrySettingsNames } from '../variables/data-variables';
 
 interface IChemistryDataPackageType {
   dataPackageName: string;
