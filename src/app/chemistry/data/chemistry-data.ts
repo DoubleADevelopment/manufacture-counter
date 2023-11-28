@@ -2,9 +2,9 @@
 import {
   ChemistryLogsNames,
   ChemistrySettingsNames,
-} from '../variables/data-variables/data-variables';
+} from '../../../variables/data-variables/data-variables';
 //types
-import type { ChemistryDataType } from '../types/data-types/chemistry-data-types';
+import type { ChemistryDataType } from '../types/chemistry-data-types';
 //libs
 import { nanoid } from 'nanoid';
 

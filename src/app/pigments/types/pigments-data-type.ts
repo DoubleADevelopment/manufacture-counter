@@ -1,8 +1,5 @@
 //vars
-import {
-  PigmentsLogsNames,
-  PigmentsSettingsNames,
-} from '../../variables/data-variables/data-variables';
+import { PigmentsLogsNames, PigmentsSettingsNames } from '../variables/data-variables';
 
 interface IPigmentsDataPackageType {
   dataPackageName: string;
