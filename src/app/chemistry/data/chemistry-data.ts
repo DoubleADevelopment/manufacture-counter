@@ -1,10 +1,7 @@
 //vars
-import {
-  ChemistryLogsNames,
-  ChemistrySettingsNames,
-} from '../variables/data-variables/data-variables';
+import { ChemistryLogsNames, ChemistrySettingsNames } from '../variables/data-variables';
 //types
-import type { ChemistryDataType } from '../types/data-types/chemistry-data-types';
+import type { ChemistryDataType } from '../types/chemistry-data-types';
 //libs
 import { nanoid } from 'nanoid';
 
