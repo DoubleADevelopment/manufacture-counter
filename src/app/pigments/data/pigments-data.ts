@@ -1,10 +1,7 @@
 //types
 import type { PigmentsDataType } from '../types/pigments-data-type';
 //vars
-import {
-  PigmentsLogsNames,
-  PigmentsSettingsNames,
-} from '../../../variables/data-variables/data-variables';
+import { PigmentsLogsNames, PigmentsSettingsNames } from '../variables/data-variables';
 //libs
 import { nanoid } from 'nanoid';
 

@@ -1,10 +1,10 @@
 //types
-import type { DataType } from '../types/data-types';
+import type { DataType, LocalstorageNamesType } from '../types/data-types';
 
 abstract class AbstractLocalstorageService {
-  #storageName: string;
+  #storageName: LocalstorageNamesType;
 
-  constructor(storageName: string) {
+  constructor(storageName: LocalstorageNamesType) {
     this.#storageName = storageName;
   }
 

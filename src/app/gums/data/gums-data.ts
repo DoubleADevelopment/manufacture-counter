@@ -1,7 +1,7 @@
 //types
 import type { GumsDataType } from '../types/gums-data-types';
 //vars
-import { GumsLogsNames, GumsSettingsNames } from '../../../variables/data-variables/data-variables';
+import { GumsLogsNames, GumsSettingsNames } from '../variables/data-variables';
 //libs
 import { nanoid } from 'nanoid';
 
