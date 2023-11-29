@@ -19,8 +19,17 @@ abstract class AbstractLocalstorageService {
     }
   }
 
-  setItems(data: DataType) {
-    localStorage.setItem(this.#storageName, JSON.stringify(data));
+  setItems(data: DataType): DataType | Error {
+    try {
+      localStorage.setItem(this.#storageName, JSON.stringify(data));
+      return data;
+    } catch (err) {
+      if (err instanceof Error) {
+        return new Error(err.message);
+      } else {
+        return new Error('Failed to write data to localStorage');
+      }
+    }
   }
 
   clearStore() {

@@ -3,7 +3,6 @@ import AbstractDataService from './abstract-data.service';
 import AbstractLocalstorageService from './abstract-localstorage.service';
 //types
 import type { DataType } from '../types/data-types';
-import type { IErrorInfo } from '../types/error-types';
 
 class AbstractRepository {
   #dataService: AbstractDataService;
@@ -22,30 +21,20 @@ class AbstractRepository {
     return this.#dataService.getData();
   }
 
-  #sendDataToStorage(data: DataType): boolean | IErrorInfo {
-    try {
-      this.#localstorageService.setItems(data);
-      return true;
-    } catch (err) {
-      if (err instanceof Error) {
-        return {
-          errorInfo: 'something went wrong in send data to storage.',
-          errorText: err.message,
-        };
-      } else {
-        return false;
-      }
-    }
+  #sendDataToStorage(data: DataType): DataType | Error {
+    return this.#localstorageService.setItems(data);
   }
 
-  sendData(data: DataType): boolean | IErrorInfo {
-    const result: boolean | IErrorInfo = this.#sendDataToStorage(data);
+  async sendData(data: DataType): Promise<DataType | Error> {
+    return new Promise((resolve, reject) => {
+      const result = this.#sendDataToStorage(data);
 
-    if (result === true) {
-      return true;
-    } else {
-      return result;
-    }
+      if (result instanceof Error) {
+        reject(result);
+      } else {
+        resolve(result);
+      }
+    });
   }
 
   getData(): DataType {
