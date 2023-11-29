@@ -5,12 +5,12 @@ import type { GumsDataType } from '../types/gums-data-types';
 //data
 import gumsData from '../data/gums-data';
 
-class DataService extends AbstractDataService<GumsDataType> {
+class GumsDataService extends AbstractDataService<GumsDataType> {
   constructor(data: GumsDataType) {
     super(data);
   }
 }
 
-const dataService = new DataService(gumsData);
+const gumsDataService = new GumsDataService(gumsData);
 
-export default dataService;
+export default gumsDataService;

@@ -5,12 +5,12 @@ import type { ChemistryDataType } from '../types/chemistry-data-types';
 //data
 import chemistryData from '../data/chemistry-data';
 
-class DataService extends AbstractDataService<ChemistryDataType> {
+class ChemistryDataService extends AbstractDataService<ChemistryDataType> {
   constructor(data: ChemistryDataType) {
     super(data);
   }
 }
 
-const dataService = new DataService(chemistryData);
+const chemistryDataService = new ChemistryDataService(chemistryData);
 
-export default dataService;
+export default chemistryDataService;

@@ -5,12 +5,12 @@ import { PigmentsDataType } from '../types/pigments-data-type';
 //data
 import pigmentsData from '../data/pigments-data';
 
-class DataService extends AbstractDataService<PigmentsDataType> {
+class PigmentsDataService extends AbstractDataService<PigmentsDataType> {
   constructor(data: PigmentsDataType) {
     super(data);
   }
 }
 
-const dataService = new DataService(pigmentsData);
+const pigmentsDataService = new PigmentsDataService(pigmentsData);
 
-export default dataService;
+export default pigmentsDataService;

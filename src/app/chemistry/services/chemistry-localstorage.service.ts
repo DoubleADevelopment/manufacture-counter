@@ -6,12 +6,12 @@ import type { ChemistryDataType } from '../types/chemistry-data-types';
 //variables
 import { CHEMISTRY_STORAGE_NAME } from '../variables/data-variables';
 
-class LocalstorageService extends AbstractLocalstorageService<ChemistryDataType> {
+class ChemistryLocalstorageService extends AbstractLocalstorageService<ChemistryDataType> {
   constructor(storageName: LocalstorageNamesType) {
     super(storageName);
   }
 }
 
-const localstorageService = new LocalstorageService(CHEMISTRY_STORAGE_NAME);
+const chemistryLocalstorageService = new ChemistryLocalstorageService(CHEMISTRY_STORAGE_NAME);
 
-export default localstorageService;
+export default chemistryLocalstorageService;

@@ -6,12 +6,12 @@ import type { GumsDataType } from '../types/gums-data-types';
 //variables
 import { GUMS_STORAGE_NAME } from '../variables/data-variables';
 
-class LocalstorageService extends AbstractLocalstorageService<GumsDataType> {
+class GumsLocalstorageService extends AbstractLocalstorageService<GumsDataType> {
   constructor(storageName: LocalstorageNamesType) {
     super(storageName);
   }
 }
 
-const localstorageService = new LocalstorageService(GUMS_STORAGE_NAME);
+const gumsLocalstorageService = new GumsLocalstorageService(GUMS_STORAGE_NAME);
 
-export default localstorageService;
+export default gumsLocalstorageService;
