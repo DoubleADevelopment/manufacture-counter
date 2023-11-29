@@ -2,7 +2,7 @@
 import AbstractDataService from './abstract-data.service';
 import AbstractLocalstorageService from './abstract-localstorage.service';
 
-class AbstractRepository<D> {
+abstract class AbstractRepository<D> {
   #dataService: AbstractDataService<D>;
   #localstorageService: AbstractLocalstorageService<D>;
 
