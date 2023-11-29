@@ -1,31 +1,32 @@
 //abstract
 import AbstractDataService from './abstract-data.service';
 import AbstractLocalstorageService from './abstract-localstorage.service';
-//types
-import type { DataType } from '../types/data-types';
 
-class AbstractRepository {
-  #dataService: AbstractDataService;
-  #localstorageService: AbstractLocalstorageService;
+class AbstractRepository<D> {
+  #dataService: AbstractDataService<D>;
+  #localstorageService: AbstractLocalstorageService<D>;
 
-  constructor(dataService: AbstractDataService, localstorageService: AbstractLocalstorageService) {
+  constructor(
+    dataService: AbstractDataService<D>,
+    localstorageService: AbstractLocalstorageService<D>,
+  ) {
     this.#dataService = dataService;
     this.#localstorageService = localstorageService;
   }
 
-  #getDataFromStorage(): DataType | null {
+  #getDataFromStorage(): D | null {
     return this.#localstorageService.getItems();
   }
 
-  #getDefaultData(): DataType {
+  #getDefaultData(): D {
     return this.#dataService.getData();
   }
 
-  #sendDataToStorage(data: DataType): DataType | Error {
+  #sendDataToStorage<D>(data: D): D | Error {
     return this.#localstorageService.setItems(data);
   }
 
-  async sendData(data: DataType): Promise<DataType | Error> {
+  async sendData<D>(data: D): Promise<D | Error> {
     return new Promise((resolve, reject) => {
       const result = this.#sendDataToStorage(data);
 
@@ -37,8 +38,8 @@ class AbstractRepository {
     });
   }
 
-  getData(): DataType {
-    const resultFromStorage: DataType | null = this.#getDataFromStorage();
+  getData(): D {
+    const resultFromStorage: D | null = this.#getDataFromStorage();
 
     if (resultFromStorage) {
       return resultFromStorage;

@@ -1,12 +1,12 @@
 //abstract
 import AbstractDataService from '../../../abstract/abstract-data.service';
 //types
-import type { DataType } from '../../../types/data-types';
+import type { ChemistryDataType } from '../types/chemistry-data-types';
 //data
 import chemistryData from '../data/chemistry-data';
 
-class DataService extends AbstractDataService {
-  constructor(data: DataType) {
+class DataService extends AbstractDataService<ChemistryDataType> {
+  constructor(data: ChemistryDataType) {
     super(data);
   }
 }

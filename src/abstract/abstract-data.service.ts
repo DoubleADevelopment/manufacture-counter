@@ -1,14 +1,11 @@
-//types
-import type { DataType } from '../types/data-types';
+abstract class AbstractDataService<D> {
+  #data: D;
 
-abstract class AbstractDataService {
-  #data: DataType;
-
-  constructor(data: DataType) {
+  constructor(data: D) {
     this.#data = data;
   }
 
-  getData(): DataType {
+  getData(): D {
     return this.#data;
   }
 }
