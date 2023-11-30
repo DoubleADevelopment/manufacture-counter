@@ -1,5 +1,5 @@
 //abstract
-import AbstractDataService from '../../../abstract/abstract-data.service';
+import { AbstractDataService } from '../../../abstract';
 //types
 import type { ChemistryDataType } from '../types/chemistry-data-types';
 //data

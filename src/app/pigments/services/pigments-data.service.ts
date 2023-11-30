@@ -1,5 +1,5 @@
 //abstract
-import AbstractDataService from '../../../abstract/abstract-data.service';
+import { AbstractDataService } from '../../../abstract';
 //types
 import { PigmentsDataType } from '../types/pigments-data-type';
 //data

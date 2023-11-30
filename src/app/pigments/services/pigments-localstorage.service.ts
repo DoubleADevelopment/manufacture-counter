@@ -1,5 +1,5 @@
 //abstract
-import AbstractLocalstorageService from '../../../abstract/abstract-localstorage.service';
+import { AbstractLocalstorageService } from '../../../abstract';
 //types
 import type { LocalstorageNamesType } from '../../../types/localstorage-types';
 import type { PigmentsDataType } from '../types/pigments-data-type';

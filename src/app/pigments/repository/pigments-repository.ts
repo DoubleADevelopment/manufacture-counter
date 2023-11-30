@@ -1,7 +1,9 @@
 //abstract
-import AbstractRepository from '../../../abstract/abstract-repository';
-import AbstractLocalstorageService from '../../../abstract/abstract-localstorage.service';
-import AbstractDataService from '../../../abstract/abstract-data.service';
+import {
+  AbstractDataService,
+  AbstractLocalstorageService,
+  AbstractRepository,
+} from '../../../abstract';
 //services
 import pigmentsLocalstorageService from '../services/pigments-localstorage.service';
 import pigmentsDataService from '../services/pigments-data.service';
