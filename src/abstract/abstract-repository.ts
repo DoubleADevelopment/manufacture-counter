@@ -14,7 +14,7 @@ abstract class AbstractRepository<D> {
     this.#localstorageService = localstorageService;
   }
 
-  #getDataFromStorage(): D | null {
+  #getDataFromStorage(): D | null | Error {
     return this.#localstorageService.getItems();
   }
 
@@ -38,14 +38,19 @@ abstract class AbstractRepository<D> {
     });
   }
 
-  getData(): D {
-    const resultFromStorage: D | null = this.#getDataFromStorage();
+  async getData(): Promise<D | Error | null> {
+    return new Promise((resolve, reject) => {
+      const result = this.#getDataFromStorage();
 
-    if (resultFromStorage) {
-      return resultFromStorage;
-    } else {
-      return this.#getDefaultData();
-    }
+      if (result instanceof Error) {
+        reject(result);
+      } else if (result !== null) {
+        resolve(result);
+      } else {
+        const defaultData = this.#getDefaultData();
+        resolve(defaultData);
+      }
+    });
   }
 }
 

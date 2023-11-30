@@ -1,10 +1,10 @@
 //abstract
-import AbstractLocalstorageService from '../../../abstract/abstract-localstorage.service';
+import { AbstractLocalstorageService } from '../../../abstract';
 //types
 import type { LocalstorageNamesType } from '../../../types/localstorage-types';
 import type { GumsDataType } from '../types/gums-data-types';
 //variables
-import { GUMS_STORAGE_NAME } from '../variables/data-variables';
+import { GUMS_STORAGE_NAME } from '../variables/gums-data-variables';
 
 class GumsLocalstorageService extends AbstractLocalstorageService<GumsDataType> {
   constructor(storageName: LocalstorageNamesType) {

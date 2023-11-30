@@ -1,5 +1,5 @@
 //vars
-import { GumsLogsNames, GumsSettingsNames } from '../variables/data-variables';
+import { GumsLogsNames, GumsSettingsNames } from '../variables/gums-data-variables';
 
 interface IGumsDataPackageType {
   dataPackageName: string;

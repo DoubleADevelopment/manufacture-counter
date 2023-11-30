@@ -8,14 +8,22 @@ abstract class AbstractLocalstorageService<D> {
     this.#storageName = storageName;
   }
 
-  getItems(): D | null {
-    const jsonData: string | null = localStorage.getItem(this.#storageName);
+  getItems(): D | Error | null {
+    try {
+      const jsonData: string | null = localStorage.getItem(this.#storageName);
 
-    if (jsonData) {
-      const parsedJsonData: D = JSON.parse(jsonData);
-      return parsedJsonData;
-    } else {
-      return null;
+      if (jsonData) {
+        const parsedJsonData: D = JSON.parse(jsonData);
+        return parsedJsonData;
+      } else {
+        return null;
+      }
+    } catch (err) {
+      if (err instanceof Error) {
+        return new Error(err.message);
+      } else {
+        return new Error('Failed to get data from localStorage');
+      }
     }
   }
 

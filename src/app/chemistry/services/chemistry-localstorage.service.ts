@@ -1,10 +1,10 @@
 //abstract
-import AbstractLocalstorageService from '../../../abstract/abstract-localstorage.service';
+import { AbstractLocalstorageService } from '../../../abstract';
 //types
 import type { LocalstorageNamesType } from '../../../types/localstorage-types';
 import type { ChemistryDataType } from '../types/chemistry-data-types';
 //variables
-import { CHEMISTRY_STORAGE_NAME } from '../variables/data-variables';
+import { CHEMISTRY_STORAGE_NAME } from '../variables/chemistry-data-variables';
 
 class ChemistryLocalstorageService extends AbstractLocalstorageService<ChemistryDataType> {
   constructor(storageName: LocalstorageNamesType) {
