@@ -4,7 +4,7 @@ import { AbstractLocalstorageService } from '../../../abstract';
 import type { LocalstorageNamesType } from '../../../types/localstorage-types';
 import type { PigmentsDataType } from '../types/pigments-data-type';
 //variables
-import { PIGMENTS_STORAGE_NAME } from '../variables/data-variables';
+import { PIGMENTS_STORAGE_NAME } from '../variables/pigments-data-variables';
 
 class PigmentsLocalstorageService extends AbstractLocalstorageService<PigmentsDataType> {
   constructor(storageName: LocalstorageNamesType) {
