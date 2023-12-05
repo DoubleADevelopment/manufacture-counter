@@ -1,11 +1,11 @@
 //vars
 import { ChemistryLogsNames, ChemistrySettingsNames } from '../variables/chemistry-data-variables';
 //types
-import type { ChemistryDataType } from '../types/data-types';
+import type { RawChemistryDataType } from '../types/data-types';
 //libs
 import { nanoid } from 'nanoid';
 
-const chemistryData: ChemistryDataType = {
+const chemistryData: RawChemistryDataType = {
   dataPackageName: 'chemistry-veneer',
   dataPackageUNID: 1001,
   items: [

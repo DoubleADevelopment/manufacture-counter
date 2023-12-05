@@ -38,15 +38,18 @@ interface IChemistryDataItemType {
   manufacturer: string;
 }
 
-interface IStoreChemistryDataType {
-  [UNID: string]: IChemistryDataItemType;
-}
+type RawChemistryDataType = IChemistryDataPackageType;
 
-type ChemistryDataType = IChemistryDataPackageType;
+type ChemistryDataType = {
+  [UNID: string]: IChemistryDataItemType;
+};
+
+type ChemistryDataForViewType = IChemistryDataItemType[];
 
 export type {
   IChemistryDataItemType,
   ChemistryDataType,
   IChemistryDataPackageType,
-  IStoreChemistryDataType,
+  RawChemistryDataType,
+  ChemistryDataForViewType,
 };
