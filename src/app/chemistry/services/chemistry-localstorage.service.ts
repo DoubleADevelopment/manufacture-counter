@@ -2,7 +2,7 @@
 import { AbstractLocalstorageService } from '../../../abstract';
 //types
 import type { LocalstorageNamesType } from '../../../types/localstorage-types';
-import type { ChemistryDataType } from '../types/chemistry-data-types';
+import type { ChemistryDataType } from '../types/data-types';
 //variables
 import { CHEMISTRY_STORAGE_NAME } from '../variables/chemistry-data-variables';
 

@@ -52,6 +52,14 @@ abstract class AbstractRepository<D> {
       }
     });
   }
+
+  getDefaultData(): D {
+    return this.#getDefaultData();
+  }
+
+  clearData() {
+    this.#localstorageService.clearStore();
+  }
 }
 
 export default AbstractRepository;
