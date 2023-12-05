@@ -38,6 +38,6 @@ interface IChemistryDataItemType {
   manufacturer: string;
 }
 
-type ChemistryDataType = IChemistryDataPackageType[];
+type ChemistryDataType = IChemistryDataPackageType;
 
 export type { IChemistryDataItemType, ChemistryDataType, IChemistryDataPackageType };
