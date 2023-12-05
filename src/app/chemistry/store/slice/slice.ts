@@ -11,7 +11,7 @@ export const chemistrySlice = createSlice({
   reducers: {
     increment: (state, action: PayloadAction<IIncDecActionParametrsType>) => {
       const { UNID, value } = action.payload;
-      state.items.items[UNID].amount = state.items.items[UNID].amount + value;
+      state.items[UNID].amount = state.items[UNID].amount + value;
     },
   },
 });
