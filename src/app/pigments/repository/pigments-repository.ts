@@ -2,7 +2,7 @@
 import PigmentsDataService from '../services/pigments-data.service';
 import PigmentsLocalstorageService from '../services/pigments-localstorage.service';
 //types
-import type { IRepository } from '../../../types/repository-types';
+import type { IRepository } from '../../../types';
 import type { IPigmentsDataType } from '../types/data-type';
 
 class PigmentsRepositroy implements IRepository<IPigmentsDataType> {

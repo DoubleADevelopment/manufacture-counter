@@ -1,5 +1,5 @@
 //types
-import type { IDataService } from '../../../types/services-types';
+import type { IDataService } from '../../../types';
 import type { IChemistryDataPackageType, IChemistryDataType } from '../types/data-types';
 //data
 import chemistryData from '../data/chemistry-data';

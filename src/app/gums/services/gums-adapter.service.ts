@@ -1,4 +1,4 @@
-import type { IAdapterService } from '../../../types/services-types';
+import type { IAdapterService } from '../../../types';
 import { IGumsDataItemType, IGumsDataPackageType, IGumsDataType } from '../types/data-types';
 
 class GumsAdapterService implements IAdapterService<IGumsDataType, IGumsDataPackageType> {

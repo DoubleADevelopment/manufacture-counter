@@ -2,7 +2,7 @@
 import chemistryDataService from '../services/chemistry-data.service';
 import chemistryLocalstorageService from '../services/chemistry-localstorage.service';
 //types
-import type { IRepository } from '../../../types/repository-types';
+import type { IRepository } from '../../../types';
 import type { IChemistryDataType } from '../types/data-types';
 
 class ChemistryRepositroy implements IRepository<IChemistryDataType> {
@@ -17,24 +17,24 @@ class ChemistryRepositroy implements IRepository<IChemistryDataType> {
     this.#localstorageService = localstorageService;
   }
 
-  getDataFromStorage(): IChemistryDataType | null | Error {
+  #getDataFromStorage(): IChemistryDataType | null | Error {
     return this.#localstorageService.getItems();
   }
 
-  getDefaultData(): IChemistryDataType {
-    return this.#dataService.getData();
+  #sendDataToStorage(data: IChemistryDataType): IChemistryDataType | Error {
+    return this.#localstorageService.setItems(data);
   }
 
-  sendDataToStorage(data: IChemistryDataType): IChemistryDataType | Error {
-    return this.#localstorageService.setItems(data);
+  #getDefaultData(): IChemistryDataType {
+    return this.#dataService.getData();
   }
 
   async sendData(data: IChemistryDataType): Promise<IChemistryDataType | Error> {
     return new Promise((resolve, reject) => {
-      const result = this.sendDataToStorage(data);
+      const result = this.#sendDataToStorage(data);
 
       if (result instanceof Error) {
-        reject(result);
+        reject(result.message);
       } else {
         resolve(result);
       }
@@ -43,17 +43,21 @@ class ChemistryRepositroy implements IRepository<IChemistryDataType> {
 
   async getData(): Promise<IChemistryDataType | Error | null> {
     return new Promise((resolve, reject) => {
-      const result = this.getDataFromStorage();
+      const result = this.#getDataFromStorage();
 
       if (result instanceof Error) {
         reject(result);
       } else if (result !== null) {
         resolve(result);
       } else {
-        const defaultData = this.getDefaultData();
+        const defaultData = this.#getDefaultData();
         resolve(defaultData);
       }
     });
+  }
+
+  getDefaultData(): IChemistryDataType {
+    return this.#getDefaultData();
   }
 
   clearData() {

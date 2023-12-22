@@ -1,5 +1,5 @@
 //types
-import type { IDataService } from '../../../types/services-types';
+import type { IDataService } from '../../../types';
 import type { IPigmentsDataPackageType, IPigmentsDataType } from '../types/data-type';
 //data
 import pigmentsData from '../data/pigments-data';

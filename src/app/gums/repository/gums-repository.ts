@@ -2,7 +2,7 @@
 import gumsDataService from '../services/gums-data.service';
 import gumsLocalstorageService from '../services/gums-localstorage.service';
 //types
-import type { IRepository } from '../../../types/repository-types';
+import type { IRepository } from '../../../types';
 import type { IGumsDataType } from '../types/data-types';
 
 class GumsRepositroy implements IRepository<IGumsDataType> {

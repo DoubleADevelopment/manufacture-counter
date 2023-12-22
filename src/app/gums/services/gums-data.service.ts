@@ -1,6 +1,6 @@
 //types
 import type { IGumsDataType, IGumsDataPackageType } from '../types/data-types';
-import type { IDataService } from '../../../types/services-types';
+import type { IDataService } from '../../../types';
 //data
 import gumsData from '../data/gums-data';
 //adapters
