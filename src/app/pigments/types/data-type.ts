@@ -1,5 +1,5 @@
 //vars
-import { PigmentsLogsNames, PigmentsSettingsNames } from '../variables/pigments-data-variables';
+import { PigmentsLogsNames, PigmentsSettingsNames } from '../variables/data-variables';
 
 interface IPigmentsDataPackageType {
   dataPackageName: string;
@@ -54,6 +54,15 @@ interface IPigmentsDataItemType {
   manufacturer: string;
 }
 
-type PigmentsDataType = IPigmentsDataPackageType[];
+interface IPigmentsDataType {
+  [UNID: string]: IPigmentsDataItemType;
+}
 
-export type { IPigmentsDataItemType, PigmentsDataType, IPigmentsDataPackageType };
+type PigmentsDataForViewType = IPigmentsDataItemType[];
+
+export type {
+  IPigmentsDataItemType,
+  IPigmentsDataType,
+  IPigmentsDataPackageType,
+  PigmentsDataForViewType,
+};
