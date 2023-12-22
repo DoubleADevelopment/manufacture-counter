@@ -1,14 +1,12 @@
 //types
-import type IAbstractDataService from '../../../abstract/abstract-data.service';
+import type { IDataService } from '../../../types/services-types';
 import type { IChemistryDataPackageType, IChemistryDataType } from '../types/data-types';
 //data
 import chemistryData from '../data/chemistry-data';
 //adapters
 import chemistryAdapterService from './chemistry-adapter.service';
 
-class ChemistryDataService
-  implements IAbstractDataService<IChemistryDataType, IChemistryDataPackageType>
-{
+class ChemistryDataService implements IDataService<IChemistryDataType, IChemistryDataPackageType> {
   #data: IChemistryDataType;
   #dataPackage: IChemistryDataPackageType;
 
