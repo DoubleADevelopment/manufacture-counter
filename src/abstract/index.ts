@@ -1,5 +1,5 @@
-import AbstractDataService from './abstract-data.service';
-import AbstractLocalstorageService from './abstract-localstorage.service';
-import AbstractRepository from './abstract-repository';
+import type IAbstractDataService from './abstract-data.service';
+import type ILocalstorageService from './abstract-localstorage.service';
+import type IAbstractRepository from './abstract-repository';
 
-export { AbstractDataService, AbstractLocalstorageService, AbstractRepository };
+export type { IAbstractDataService, ILocalstorageService, IAbstractRepository };

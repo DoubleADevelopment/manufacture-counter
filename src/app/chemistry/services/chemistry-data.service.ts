@@ -1,22 +1,33 @@
-//abstract
-import { AbstractDataService } from '../../../abstract';
 //types
-import type { ChemistryDataType, IChemistryDataItemType } from '../types/data-types';
+import type IAbstractDataService from '../../../abstract/abstract-data.service';
+import type { IChemistryDataPackageType, IChemistryDataType } from '../types/data-types';
 //data
 import chemistryData from '../data/chemistry-data';
+//adapters
+import chemistryAdapterService from './chemistry-adapter.service';
 
-import Adapter from '../../../adapter/adapter';
+class ChemistryDataService
+  implements IAbstractDataService<IChemistryDataType, IChemistryDataPackageType>
+{
+  #data: IChemistryDataType;
+  #dataPackage: IChemistryDataPackageType;
 
-class ChemistryDataService extends AbstractDataService<ChemistryDataType> {
-  constructor(data: ChemistryDataType) {
-    super(data);
+  constructor(data: IChemistryDataType, dataPackage: IChemistryDataPackageType) {
+    this.#data = data;
+    this.#dataPackage = dataPackage;
+  }
+
+  getData(): IChemistryDataType {
+    return this.#data;
+  }
+
+  getDataPackage(): IChemistryDataPackageType {
+    return this.#dataPackage;
   }
 }
 
-const adaptedData: ChemistryDataType = Adapter.adaptDataToStore<IChemistryDataItemType>(
-  chemistryData.items,
-);
+const adaptedData: IChemistryDataType = chemistryAdapterService.adaptDataToStore(chemistryData);
 
-const chemistryDataService = new ChemistryDataService(adaptedData);
+const chemistryDataService = new ChemistryDataService(adaptedData, chemistryData);
 
 export default chemistryDataService;

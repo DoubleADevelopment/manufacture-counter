@@ -1,14 +1,51 @@
-//abstract
-import { AbstractLocalstorageService } from '../../../abstract';
 //types
 import type { LocalstorageNamesType } from '../../../types/localstorage-types';
-import type { ChemistryDataType } from '../types/data-types';
+import type { ILocalstorageService } from '../../../types/services-types';
+import type { IChemistryDataType } from '../types/data-types';
 //variables
 import { CHEMISTRY_STORAGE_NAME } from '../variables/chemistry-data-variables';
 
-class ChemistryLocalstorageService extends AbstractLocalstorageService<ChemistryDataType> {
+class ChemistryLocalstorageService implements ILocalstorageService<IChemistryDataType> {
+  #storageName: LocalstorageNamesType;
+
   constructor(storageName: LocalstorageNamesType) {
-    super(storageName);
+    this.#storageName = storageName;
+  }
+
+  getItems(): IChemistryDataType | Error | null {
+    try {
+      const jsonData: string | null = localStorage.getItem(this.#storageName);
+
+      if (jsonData) {
+        const parsedJsonData: IChemistryDataType = JSON.parse(jsonData);
+        return parsedJsonData;
+      } else {
+        return null;
+      }
+    } catch (err) {
+      if (err instanceof Error) {
+        return new Error(err.message);
+      } else {
+        return new Error('Failed to get data from localStorage');
+      }
+    }
+  }
+
+  setItems(data: IChemistryDataType): IChemistryDataType | Error {
+    try {
+      localStorage.setItem(this.#storageName, JSON.stringify(data));
+      return data;
+    } catch (err) {
+      if (err instanceof Error) {
+        return new Error(err.message);
+      } else {
+        return new Error('Failed to write data to localStorage');
+      }
+    }
+  }
+
+  clearStore() {
+    localStorage.removeItem(this.#storageName);
   }
 }
 
