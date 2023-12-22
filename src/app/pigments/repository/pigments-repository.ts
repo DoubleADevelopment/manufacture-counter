@@ -1,24 +1,66 @@
-//abstract
-import {
-  AbstractDataService,
-  AbstractLocalstorageService,
-  AbstractRepository,
-} from '../../../abstract';
 //services
-import pigmentsLocalstorageService from '../services/pigments-localstorage.service';
-import pigmentsDataService from '../services/pigments-data.service';
+import PigmentsDataService from '../services/pigments-data.service';
+import PigmentsLocalstorageService from '../services/pigments-localstorage.service';
 //types
-import type { PigmentsDataType } from '../types/pigments-data-type';
+import type { IRepository } from '../../../types/repository-types';
+import type { IPigmentsDataType } from '../types/data-type';
 
-class PigmentsRepository extends AbstractRepository<PigmentsDataType> {
+class PigmentsRepositroy implements IRepository<IPigmentsDataType> {
+  #dataService: typeof PigmentsDataService;
+  #localstorageService: typeof PigmentsLocalstorageService;
+
   constructor(
-    pigmentsDataService: AbstractDataService<PigmentsDataType>,
-    pigmentsLocalstorageService: AbstractLocalstorageService<PigmentsDataType>,
+    dataService: typeof PigmentsDataService,
+    localstorageService: typeof PigmentsLocalstorageService,
   ) {
-    super(pigmentsDataService, pigmentsLocalstorageService);
+    this.#dataService = dataService;
+    this.#localstorageService = localstorageService;
+  }
+
+  getDataFromStorage(): IPigmentsDataType | null | Error {
+    return this.#localstorageService.getItems();
+  }
+
+  getDefaultData(): IPigmentsDataType {
+    return this.#dataService.getData();
+  }
+
+  sendDataToStorage(data: IPigmentsDataType): IPigmentsDataType | Error {
+    return this.#localstorageService.setItems(data);
+  }
+
+  async sendData(data: IPigmentsDataType): Promise<IPigmentsDataType | Error> {
+    return new Promise((resolve, reject) => {
+      const result = this.sendDataToStorage(data);
+
+      if (result instanceof Error) {
+        reject(result);
+      } else {
+        resolve(result);
+      }
+    });
+  }
+
+  async getData(): Promise<IPigmentsDataType | Error | null> {
+    return new Promise((resolve, reject) => {
+      const result = this.getDataFromStorage();
+
+      if (result instanceof Error) {
+        reject(result);
+      } else if (result !== null) {
+        resolve(result);
+      } else {
+        const defaultData = this.getDefaultData();
+        resolve(defaultData);
+      }
+    });
+  }
+
+  clearData() {
+    this.#localstorageService.clearStore();
   }
 }
 
-const pigmentsRepository = new PigmentsRepository(pigmentsDataService, pigmentsLocalstorageService);
+const pigmentsRepository = new PigmentsRepositroy(PigmentsDataService, PigmentsLocalstorageService);
 
 export default pigmentsRepository;

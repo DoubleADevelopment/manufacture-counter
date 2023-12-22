@@ -1,6 +1,6 @@
-import { CHEMISTRY_STORAGE_NAME } from '../app/chemistry/variables/chemistry-data-variables';
-import { GUMS_STORAGE_NAME } from '../app/gums/variables/gums-data-variables';
-import { PIGMENTS_STORAGE_NAME } from '../app/pigments/variables/pigments-data-variables';
+import { CHEMISTRY_STORAGE_NAME } from '../app/chemistry/variables/data-variables';
+import { GUMS_STORAGE_NAME } from '../app/gums/variables/data-variables';
+import { PIGMENTS_STORAGE_NAME } from '../app/pigments/variables/data-variables';
 
 type LocalstorageNamesType =
   | typeof CHEMISTRY_STORAGE_NAME

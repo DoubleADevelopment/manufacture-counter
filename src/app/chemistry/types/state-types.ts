@@ -1,8 +1,8 @@
 //types
-import type { IStoreChemistryDataType } from './data-types';
+import type { IChemistryDataType } from './data-types';
 
 interface IChemistryStateType {
-  items: IStoreChemistryDataType;
+  items: IChemistryDataType;
 }
 
 export type { IChemistryStateType };

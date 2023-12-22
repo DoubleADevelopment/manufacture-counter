@@ -1,5 +1,5 @@
 //vars
-import { ChemistryLogsNames, ChemistrySettingsNames } from '../variables/chemistry-data-variables';
+import { ChemistryLogsNames, ChemistrySettingsNames } from '../variables/data-variables';
 
 interface IChemistryDataPackageType {
   dataPackageName: string;
@@ -38,18 +38,15 @@ interface IChemistryDataItemType {
   manufacturer: string;
 }
 
-type RawChemistryDataType = IChemistryDataPackageType;
-
-type ChemistryDataType = {
+interface IChemistryDataType {
   [UNID: string]: IChemistryDataItemType;
-};
+}
 
 type ChemistryDataForViewType = IChemistryDataItemType[];
 
 export type {
   IChemistryDataItemType,
-  ChemistryDataType,
+  IChemistryDataType,
   IChemistryDataPackageType,
-  RawChemistryDataType,
   ChemistryDataForViewType,
 };

@@ -1,5 +1,5 @@
 //vars
-import { GumsLogsNames, GumsSettingsNames } from '../variables/gums-data-variables';
+import { GumsLogsNames, GumsSettingsNames } from '../variables/data-variables';
 
 interface IGumsDataPackageType {
   dataPackageName: string;
@@ -42,6 +42,10 @@ interface IGumsDataItemType {
   manufacturer: string;
 }
 
-type GumsDataType = IGumsDataPackageType[];
+interface IGumsDataType {
+  [UNID: string]: IGumsDataItemType;
+}
 
-export type { IGumsDataItemType, GumsDataType, IGumsDataPackageType };
+type GumsDataForViewType = IGumsDataItemType[];
+
+export type { IGumsDataItemType, IGumsDataType, IGumsDataPackageType, GumsDataForViewType };
