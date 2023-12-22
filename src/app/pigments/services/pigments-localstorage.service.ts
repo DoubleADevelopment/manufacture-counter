@@ -1,6 +1,5 @@
 //types
-import type { LocalstorageNamesType } from '../../../types/localstorage-types';
-import type { ILocalstorageService } from '../../../types/services-types';
+import type { LocalstorageNamesType, ILocalstorageService } from '../../../types';
 import type { IPigmentsDataType } from '../types/data-type';
 //variables
 import { PIGMENTS_STORAGE_NAME } from '../variables/data-variables';

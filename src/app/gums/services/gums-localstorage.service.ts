@@ -1,6 +1,5 @@
 //types
-import type { LocalstorageNamesType } from '../../../types/localstorage-types';
-import type { ILocalstorageService } from '../../../types/services-types';
+import type { LocalstorageNamesType, ILocalstorageService } from '../../../types';
 import type { IGumsDataType } from '../types/data-types';
 //variables
 import { GUMS_STORAGE_NAME } from '../variables/data-variables';

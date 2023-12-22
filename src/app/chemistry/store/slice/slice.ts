@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 //state
 import chemistryState from '../state/state';
 //types
-import type { IIncDecActionParametrsType } from '../../../../types/action-types';
+import type { IIncDecActionParametrsType } from '../../../../types';
 
 export const chemistrySlice = createSlice({
   name: 'chemistry',

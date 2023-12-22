@@ -1,10 +1,12 @@
 //types
 import type { AppThunk } from './store-types';
 
-export interface IIncDecActionParametrsType {
+interface IIncDecActionParametrsType {
   UNID: string;
   value: number;
 }
 
-export type IncrementActionType = (action: IIncDecActionParametrsType) => AppThunk;
-export type DecrementActionType = (action: IIncDecActionParametrsType) => AppThunk;
+type IncrementActionType = (action: IIncDecActionParametrsType) => AppThunk;
+type DecrementActionType = (action: IIncDecActionParametrsType) => AppThunk;
+
+export type { IIncDecActionParametrsType, IncrementActionType, DecrementActionType };
