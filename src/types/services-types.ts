@@ -12,7 +12,7 @@ interface ILocalstorageService<D> {
 }
 
 interface IAdapterService<D, P> {
-  adaptDataToStore(dataPackage: P): D;
+  adaptDataToApp(dataPackage: P): D;
 }
 
 export type { IDataService, ILocalstorageService, IAdapterService };

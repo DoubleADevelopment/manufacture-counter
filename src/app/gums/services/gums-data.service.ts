@@ -24,7 +24,7 @@ class GumsDataService implements IDataService<IGumsDataType, IGumsDataPackageTyp
   }
 }
 
-const adaptedData: IGumsDataType = gumsAdapterService.adaptDataToStore(gumsData);
+const adaptedData: IGumsDataType = gumsAdapterService.adaptDataToApp(gumsData);
 
 const gumsDataService = new GumsDataService(adaptedData, gumsData);
 

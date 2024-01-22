@@ -8,7 +8,7 @@ import {
 class PigmentsAdapterService
   implements IAdapterService<IPigmentsDataType, IPigmentsDataPackageType>
 {
-  adaptDataToStore(data: IPigmentsDataPackageType): IPigmentsDataType {
+  adaptDataToApp(data: IPigmentsDataPackageType): IPigmentsDataType {
     const adaptedData: IPigmentsDataType = {};
 
     data.items.forEach((item: IPigmentsDataItemType) => {

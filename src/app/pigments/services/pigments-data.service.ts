@@ -24,7 +24,7 @@ class PigmentsDataService implements IDataService<IPigmentsDataType, IPigmentsDa
   }
 }
 
-const adaptedData: IPigmentsDataType = pigmentsAdapterService.adaptDataToStore(pigmentsData);
+const adaptedData: IPigmentsDataType = pigmentsAdapterService.adaptDataToApp(pigmentsData);
 
 const pigmentsDataService = new PigmentsDataService(adaptedData, pigmentsData);
 
