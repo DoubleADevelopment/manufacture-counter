@@ -17,21 +17,21 @@ class PigmentsRepositroy implements IRepository<IPigmentsDataType> {
     this.#localstorageService = localstorageService;
   }
 
-  getDataFromStorage(): IPigmentsDataType | null | Error {
+  #getDataFromStorage(): IPigmentsDataType | null | Error {
     return this.#localstorageService.getItems();
   }
 
-  getDefaultData(): IPigmentsDataType {
-    return this.#dataService.getData();
+  #sendDataToStorage(data: IPigmentsDataType): IPigmentsDataType | Error {
+    return this.#localstorageService.setItems(data);
   }
 
-  sendDataToStorage(data: IPigmentsDataType): IPigmentsDataType | Error {
-    return this.#localstorageService.setItems(data);
+  #getDefaultData(): IPigmentsDataType {
+    return this.#dataService.getData();
   }
 
   async sendData(data: IPigmentsDataType): Promise<IPigmentsDataType | Error> {
     return new Promise((resolve, reject) => {
-      const result = this.sendDataToStorage(data);
+      const result = this.#sendDataToStorage(data);
 
       if (result instanceof Error) {
         reject(result);
@@ -43,7 +43,7 @@ class PigmentsRepositroy implements IRepository<IPigmentsDataType> {
 
   async getData(): Promise<IPigmentsDataType | Error | null> {
     return new Promise((resolve, reject) => {
-      const result = this.getDataFromStorage();
+      const result = this.#getDataFromStorage();
 
       if (result instanceof Error) {
         reject(result);
@@ -54,6 +54,10 @@ class PigmentsRepositroy implements IRepository<IPigmentsDataType> {
         resolve(defaultData);
       }
     });
+  }
+
+  getDefaultData(): IPigmentsDataType {
+    return this.#getDefaultData();
   }
 
   clearData() {
