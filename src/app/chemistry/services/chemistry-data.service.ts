@@ -24,7 +24,7 @@ class ChemistryDataService implements IDataService<IChemistryDataType, IChemistr
   }
 }
 
-const adaptedData: IChemistryDataType = chemistryAdapterService.adaptDataToStore(chemistryData);
+const adaptedData: IChemistryDataType = chemistryAdapterService.adaptDataToApp(chemistryData);
 
 const chemistryDataService = new ChemistryDataService(adaptedData, chemistryData);
 

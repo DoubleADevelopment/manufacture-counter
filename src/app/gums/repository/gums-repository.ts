@@ -17,21 +17,21 @@ class GumsRepositroy implements IRepository<IGumsDataType> {
     this.#localstorageService = localstorageService;
   }
 
-  getDataFromStorage(): IGumsDataType | null | Error {
+  #getDataFromStorage(): IGumsDataType | null | Error {
     return this.#localstorageService.getItems();
   }
 
-  getDefaultData(): IGumsDataType {
-    return this.#dataService.getData();
+  #sendDataToStorage(data: IGumsDataType): IGumsDataType | Error {
+    return this.#localstorageService.setItems(data);
   }
 
-  sendDataToStorage(data: IGumsDataType): IGumsDataType | Error {
-    return this.#localstorageService.setItems(data);
+  #getDefaultData(): IGumsDataType {
+    return this.#dataService.getData();
   }
 
   async sendData(data: IGumsDataType): Promise<IGumsDataType | Error> {
     return new Promise((resolve, reject) => {
-      const result = this.sendDataToStorage(data);
+      const result = this.#sendDataToStorage(data);
 
       if (result instanceof Error) {
         reject(result);
@@ -43,7 +43,7 @@ class GumsRepositroy implements IRepository<IGumsDataType> {
 
   async getData(): Promise<IGumsDataType | Error | null> {
     return new Promise((resolve, reject) => {
-      const result = this.getDataFromStorage();
+      const result = this.#getDataFromStorage();
 
       if (result instanceof Error) {
         reject(result);
@@ -54,6 +54,10 @@ class GumsRepositroy implements IRepository<IGumsDataType> {
         resolve(defaultData);
       }
     });
+  }
+
+  getDefaultData(): IGumsDataType {
+    return this.#getDefaultData();
   }
 
   clearData() {

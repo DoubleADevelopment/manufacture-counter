@@ -8,7 +8,7 @@ import {
 class ChemistryAdapterService
   implements IAdapterService<IChemistryDataType, IChemistryDataPackageType>
 {
-  adaptDataToStore(data: IChemistryDataPackageType): IChemistryDataType {
+  adaptDataToApp(data: IChemistryDataPackageType): IChemistryDataType {
     const adaptedData: IChemistryDataType = {};
 
     data.items.forEach((item: IChemistryDataItemType) => {

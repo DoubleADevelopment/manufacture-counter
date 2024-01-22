@@ -2,7 +2,7 @@ import type { IAdapterService } from '../../../types';
 import { IGumsDataItemType, IGumsDataPackageType, IGumsDataType } from '../types/data-types';
 
 class GumsAdapterService implements IAdapterService<IGumsDataType, IGumsDataPackageType> {
-  adaptDataToStore(data: IGumsDataPackageType): IGumsDataType {
+  adaptDataToApp(data: IGumsDataPackageType): IGumsDataType {
     const adaptedData: IGumsDataType = {};
 
     data.items.forEach((item: IGumsDataItemType) => {
