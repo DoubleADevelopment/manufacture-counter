@@ -1,0 +1,16 @@
+:root {
+  // background
+  --backgroud-primary: var(--primary-b);
+  --background-secondary: var(--gray-50);
+  --background-tertiary: var(--gray-100);
+
+  // content
+  --content-primary: var(--black);
+  --content-secondary: var(--gray-800);
+  --content-tertiary: var(--gray-700);
+
+  // border
+  --border-opaque: var(--gray-100);
+  --border-transparent: rgba(var(--primay-a) 0.1);
+  --border-selected: var(--black);
+}
