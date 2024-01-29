@@ -1,0 +1,11 @@
+@import './variables/width-variables';
+
+.container-desctope {
+  margin: 0 auto;
+  max-width: $desctope-width;
+}
+
+.container-mobile {
+  margin: 0 auto;
+  max-width: $mobile-width;
+}
