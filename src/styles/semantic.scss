@@ -1,0 +1,14 @@
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+// disable text selection
+.unselectable { /* Chrome/Safari/Opera */ /* Konqueror */ /* Firefox */ /* Internet Explorer/Edge */
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+  user-select: none; /* Non-prefixed version, currently not supported by any browser */
+  -webkit-touch-callout: none; /* iOS Safari */
+}
