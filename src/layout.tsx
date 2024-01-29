@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 //all necessary styles
 import './styles/container.scss';
 import './styles/global-styles.scss';
+import './styles/semantic.scss';
 import './styles/variables/core.scss';
 import './styles/variables/primitives.scss';
 import './styles/variables/semantic.scss';
