@@ -8,6 +8,8 @@ import type {
   DecrementActionType,
 } from './action-types';
 import { AppDispatch, RootState, AppThunk, AppDispatchType } from './store-types';
+import { SetActiveLinkType } from './other-types';
+import { IIconPropsType } from './icon-props-type';
 
 export type {
   IDataService,
@@ -25,4 +27,6 @@ export type {
   RootState,
   AppThunk,
   AppDispatchType,
+  IIconPropsType,
+  SetActiveLinkType,
 };

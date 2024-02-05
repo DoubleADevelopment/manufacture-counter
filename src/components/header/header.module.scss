@@ -1,0 +1,9 @@
+.header {
+  position: fixed;
+  left: 50%;
+  right: 0;
+  bottom: var(--standart-side-padding);
+  width: max-content;
+  background-color: transparent;
+  transform: translateX(-50%);
+}
