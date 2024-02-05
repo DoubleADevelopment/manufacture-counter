@@ -11,4 +11,10 @@
   &:focus {
     color: var(--accent);
   }
+
+  &--active {
+    color: var(--accent);
+    cursor: default;
+    pointer-events: none;
+  }
 }

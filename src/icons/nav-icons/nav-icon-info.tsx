@@ -1,5 +1,5 @@
 //types
-import { IIconPropsType } from '../../types/icon-props-type';
+import { IIconPropsType } from '../../types';
 
 const NavIconInfo = ({ color, size }: IIconPropsType): JSX.Element => {
   return (
