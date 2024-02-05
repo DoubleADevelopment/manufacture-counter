@@ -1,5 +1,7 @@
 //components
 import NavigationLink from './navigation-link/navigation-link';
+//variables
+import { AppRouting } from '../../variables/app-routing-variables';
 //styles
 import style from './nav.module.scss';
 //icons
@@ -10,22 +12,22 @@ const Navigation = (): JSX.Element => {
     <nav className={`${style.nav} unselectable`}>
       <ul className={style.nav__list}>
         <li className={style.nav__item}>
-          <NavigationLink to={'./'} name="home">
+          <NavigationLink to={AppRouting.ROOT.path} name={AppRouting.ROOT.title}>
             <NavIconHome />
           </NavigationLink>
         </li>
         <li className={style.nav__item}>
-          <NavigationLink to={'./settings'} name="settings">
+          <NavigationLink to={AppRouting.SETTINGS.path} name={AppRouting.SETTINGS.title}>
             <NavIconSettings />
           </NavigationLink>
         </li>
         <li className={style.nav__item}>
-          <NavigationLink to={'./overview'} name="overview">
+          <NavigationLink to={AppRouting.OVERVIEW.path} name={AppRouting.OVERVIEW.title}>
             <NavIconOverview />
           </NavigationLink>
         </li>
         <li className={style.nav__item}>
-          <NavigationLink to={'./info'} name="info">
+          <NavigationLink to={AppRouting.INFORMATION.path} name={AppRouting.INFORMATION.title}>
             <NavIconInfo />
           </NavigationLink>
         </li>
