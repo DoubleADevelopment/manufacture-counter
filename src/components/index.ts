@@ -1,4 +1,4 @@
 import Header from './header/header';
-import Nav from './nav/nav';
+import Navigation from './nav/nav';
 
-export { Header, Nav };
+export { Header, Navigation };

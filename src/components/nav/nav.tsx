@@ -1,40 +1,37 @@
-import { NavLink } from 'react-router-dom';
+//components
+import NavigationLink from './navigation-link/navigation-link';
 //styles
 import style from './nav.module.scss';
 //icons
 import { NavIconHome, NavIconSettings, NavIconInfo, NavIconOverview } from '../../icons';
 
-const Nav = (): JSX.Element => {
+const Navigation = (): JSX.Element => {
   return (
     <nav className={`${style.nav} unselectable`}>
       <ul className={style.nav__list}>
         <li className={style.nav__item}>
-          <NavLink className={style.nav__link} to={'./'}>
-            <span className="visually-hidden">home</span>
+          <NavigationLink to={'./'} name="home">
             <NavIconHome />
-          </NavLink>
+          </NavigationLink>
         </li>
         <li className={style.nav__item}>
-          <NavLink className={style.nav__link} to={'./settings'}>
-            <span className="visually-hidden">settings</span>
+          <NavigationLink to={'./settings'} name="settings">
             <NavIconSettings />
-          </NavLink>
+          </NavigationLink>
         </li>
         <li className={style.nav__item}>
-          <NavLink className={style.nav__link} to={'./overview'}>
-            <span className="visually-hidden">overview</span>
+          <NavigationLink to={'./overview'} name="overview">
             <NavIconOverview />
-          </NavLink>
+          </NavigationLink>
         </li>
         <li className={style.nav__item}>
-          <NavLink className={style.nav__link} to={'./info'}>
-            <span className="visually-hidden">info</span>
+          <NavigationLink to={'./info'} name="info">
             <NavIconInfo />
-          </NavLink>
+          </NavigationLink>
         </li>
       </ul>
     </nav>
   );
 };
 
-export default Nav;
+export default Navigation;

@@ -1,5 +1,5 @@
 //components
-import Nav from '../nav/nav';
+import { Navigation } from '../';
 //styles
 import style from './header.module.scss';
 
@@ -8,7 +8,7 @@ const Header = (): JSX.Element => {
     <header className={style.header}>
       <h1 className="visually-hidden">header</h1>
 
-      <Nav />
+      <Navigation />
     </header>
   );
 };
