@@ -6,7 +6,7 @@ import { NavIconHome, NavIconSettings, NavIconInfo, NavIconOverview } from '../.
 
 const Nav = (): JSX.Element => {
   return (
-    <nav className={style.nav}>
+    <nav className={`${style.nav} unselectable`}>
       <ul className={style.nav__list}>
         <li className={style.nav__item}>
           <NavLink className={style.nav__link} to={'./'}>
