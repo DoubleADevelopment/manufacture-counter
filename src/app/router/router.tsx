@@ -9,6 +9,9 @@ const Router = (): JSX.Element => {
     <BrowserRouter basename={rootBaseName}>
       <Routes>
         <Route path={AppRoutingPaths.ROOT} element={<Pages.MainPage />} />
+        <Route path={AppRoutingPaths.INFORMATION} element={<Pages.InfoPage />} />
+        <Route path={AppRoutingPaths.SETTINGS} element={<Pages.SettingsPage />} />
+        <Route path={AppRoutingPaths.OVERVIEW} element={<Pages.OverviewPage />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,0 +1,15 @@
+.info-page {
+  width: 100%;
+}
+
+.info-page__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr min-content;
+  gap: 40px;
+}
+
+.info-page__title {
+  justify-self: left;
+  color: var(--content-primary-a);
+}
