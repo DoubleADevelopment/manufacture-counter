@@ -2,12 +2,9 @@
   width: 100%;
 }
 
-.test-title {
-  font-weight: 700;
-  font-size: 30px;
-}
-
-.test {
-  font-weight: 500;
-  font-size: 20px;
+.main-page__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 }
