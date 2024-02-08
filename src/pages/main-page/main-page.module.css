@@ -3,8 +3,13 @@
 }
 
 .main-page__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr min-content;
+  gap: 40px;
+}
+
+.main-page__title {
+  justify-self: left;
+  color: var(--content-primary-a);
 }

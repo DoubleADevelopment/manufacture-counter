@@ -1,0 +1,41 @@
+.counters-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.counter-list__item {
+  position: relative;
+  list-style: none;
+  border-radius: 20px;
+  width: 150px;
+  height: 150px;
+}
+
+.counter-list__title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: var(--content-primary-b);
+  transform: translate(-50%, -50%);
+}
+
+.counters-list__image {
+  display: flex;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.counters-list__link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  background-color: transparent;
+}
