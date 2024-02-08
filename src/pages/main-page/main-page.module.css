@@ -2,12 +2,14 @@
   width: 100%;
 }
 
-.test-title {
-  font-weight: 700;
-  font-size: 30px;
+.main-page__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr min-content;
+  gap: 40px;
 }
 
-.test {
-  font-weight: 500;
-  font-size: 20px;
+.main-page__title {
+  justify-self: left;
+  color: var(--content-primary-a);
 }

@@ -1,3 +1,6 @@
 :root {
   --standart-side-padding: 20px;
+  --standart-vertical-padding: 20px;
+  --bottom-padding-with-menu: 100px;
+  --standart-page-padding: var(--standart-vertical-padding) var(--standart-side-padding) var(--bottom-padding-with-menu) var(--standart-side-padding);
 }

@@ -1,7 +1,7 @@
 import type { IDataService, ILocalstorageService, IAdapterService } from './services-types';
 import type { IRepository } from './repository-types';
 import type { LocalstorageNamesType } from './localstorage-types';
-import type { DataTypeAlias, DataPackageTypeAlias, DataItemTypeAlias } from './data-types';
+import type { ICountersListDataItem, CountersListDataType } from './data-types';
 import type {
   IIncDecActionParametrsType,
   IncrementActionType,
@@ -17,9 +17,6 @@ export type {
   IAdapterService,
   IRepository,
   LocalstorageNamesType,
-  DataTypeAlias,
-  DataPackageTypeAlias,
-  DataItemTypeAlias,
   IIncDecActionParametrsType,
   IncrementActionType,
   DecrementActionType,
@@ -29,4 +26,6 @@ export type {
   AppDispatchType,
   IIconPropsType,
   SetActiveLinkType,
+  CountersListDataType,
+  ICountersListDataItem,
 };

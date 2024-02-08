@@ -1,11 +1,9 @@
-import type {
-  IChemistryDataType,
-  IChemistryDataPackageType,
-  IChemistryDataItemType,
-} from '../app/chemistry/types/data-types';
+interface ICountersListDataItem {
+  title: string;
+  link: string;
+  image: string;
+}
 
-type DataPackageTypeAlias = IChemistryDataPackageType;
-type DataTypeAlias = IChemistryDataType;
-type DataItemTypeAlias = IChemistryDataItemType;
+type CountersListDataType = ICountersListDataItem[];
 
-export type { DataTypeAlias, DataPackageTypeAlias, DataItemTypeAlias };
+export type { ICountersListDataItem, CountersListDataType };
