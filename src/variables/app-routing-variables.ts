@@ -1,3 +1,6 @@
+//type
+import type { IRouteItem } from '../types';
+
 const rootBaseName = '/';
 
 const enum AppRoutingPaths {
@@ -12,11 +15,6 @@ const enum AppRoutingNames {
   SETTINGS = 'SETTINGS',
   INFORMATION = 'INFORMATION',
   OVERVIEW = 'OVERVIEW',
-}
-
-interface IRouteItem {
-  title: string;
-  path: string;
 }
 
 type IAppRoutingType = Record<AppRoutingNames, IRouteItem>;

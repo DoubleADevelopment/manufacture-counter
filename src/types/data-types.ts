@@ -1,9 +1,9 @@
-interface ICountersListDataItem {
+interface IComponentsListDataItem {
   title: string;
   link: string;
   image: string;
 }
 
-type CountersListDataType = ICountersListDataItem[];
+type ComponentsListDataType = IComponentsListDataItem[];
 
-export type { ICountersListDataItem, CountersListDataType };
+export type { IComponentsListDataItem, ComponentsListDataType };
