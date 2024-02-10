@@ -3,13 +3,13 @@ import type { IRouteItem } from '../types';
 
 const enum ComponentsRoutingPaths {
   CHEMISTRY = 'chemistry',
-  PIGMENT = 'pigments',
+  PIGMENTS = 'pigments',
   GUMS = 'gums',
 }
 
 const enum ComponentsRoutingNames {
   CHEMISTRY = 'CHEMISTRY',
-  PIGMENT = 'PIGMENTS',
+  PIGMENTS = 'PIGMENTS',
   GUMS = 'GUMS',
 }
 
@@ -24,9 +24,9 @@ const ComponentsRouting: IComponentsRoutingType = {
     title: 'Uszczelka',
     path: ComponentsRoutingPaths.GUMS,
   },
-  [ComponentsRoutingNames.PIGMENT]: {
+  [ComponentsRoutingNames.PIGMENTS]: {
     title: 'Pigmenty',
-    path: ComponentsRoutingPaths.PIGMENT,
+    path: ComponentsRoutingPaths.PIGMENTS,
   },
 };
 
