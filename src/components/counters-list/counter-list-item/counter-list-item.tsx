@@ -1,10 +1,10 @@
 //types
-import { ICountersListDataItem } from '../../../types';
+import { IComponentsListDataItem } from '../../../types';
 //styles
 import style from './counter-list-item.module.scss';
 
 interface ICountersListItemProps {
-  item: ICountersListDataItem;
+  item: IComponentsListDataItem;
 }
 
 const CountersListItem = ({ item }: ICountersListItemProps): JSX.Element => {

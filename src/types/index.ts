@@ -1,7 +1,8 @@
 import type { IDataService, ILocalstorageService, IAdapterService } from './services-types';
 import type { IRepository } from './repository-types';
 import type { LocalstorageNamesType } from './localstorage-types';
-import type { ICountersListDataItem, CountersListDataType } from './data-types';
+import type { IComponentsListDataItem, ComponentsListDataType } from './data-types';
+import type { IRouteItem } from './routing-types';
 import type {
   IIncDecActionParametrsType,
   IncrementActionType,
@@ -26,6 +27,7 @@ export type {
   AppDispatchType,
   IIconPropsType,
   SetActiveLinkType,
-  CountersListDataType,
-  ICountersListDataItem,
+  ComponentsListDataType,
+  IComponentsListDataItem,
+  IRouteItem,
 };
