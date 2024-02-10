@@ -7,21 +7,21 @@ const enum AppRoutingPaths {
   ROOT = '/',
   SETTINGS = '/settings',
   INFORMATION = '/information',
-  OVERVIEW = '/overview',
+  COMPONENTS_OVERVIEW = '/components-overview',
 }
 
 const enum AppRoutingNames {
   ROOT = 'ROOT',
   SETTINGS = 'SETTINGS',
   INFORMATION = 'INFORMATION',
-  OVERVIEW = 'OVERVIEW',
+  COMPONENTS_OVERVIEW = 'COMPONENTS_OVERVIEW',
 }
 
 type IAppRoutingType = Record<AppRoutingNames, IRouteItem>;
 
 const AppRouting: IAppRoutingType = {
   [AppRoutingNames.ROOT]: {
-    title: 'home',
+    title: 'some',
     path: AppRoutingPaths.ROOT,
   },
   [AppRoutingNames.SETTINGS]: {
@@ -32,9 +32,9 @@ const AppRouting: IAppRoutingType = {
     title: 'information',
     path: AppRoutingPaths.INFORMATION,
   },
-  [AppRoutingNames.OVERVIEW]: {
-    title: 'overview',
-    path: AppRoutingPaths.OVERVIEW,
+  [AppRoutingNames.COMPONENTS_OVERVIEW]: {
+    title: 'components overview',
+    path: AppRoutingPaths.COMPONENTS_OVERVIEW,
   },
 };
 
