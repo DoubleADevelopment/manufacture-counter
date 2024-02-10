@@ -2,7 +2,7 @@
 import type { IRouteItem } from '../types';
 
 const enum ComponentsRoutingPaths {
-  CHEMISTRY = '/chemistry',
+  CHEMISTRY = 'chemistry',
   PIGMENT = 'pigments',
   GUMS = 'gums',
 }
