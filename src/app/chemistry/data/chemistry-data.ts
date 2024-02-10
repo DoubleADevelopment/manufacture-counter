@@ -6,7 +6,7 @@ import type { IChemistryDataPackageType } from '../types/data-types';
 import { nanoid } from 'nanoid';
 
 const chemistryData: IChemistryDataPackageType = {
-  dataPackageName: 'chemistry-veneer',
+  dataPackageName: 'chemistry',
   dataPackageUNID: 1001,
   items: [
     {
@@ -16,7 +16,7 @@ const chemistryData: IChemistryDataPackageType = {
       name: 'Solvent',
       itemNumber: '77001-003',
       description: 'Drukarki Leibinger Jet2neo/jet2neos',
-      image: '/aluplast-components-counter/images/chemistry/Solvent-770001-00030.jpg',
+      image: '/images/chemistry/Solvent-770001-00030.jpg',
       color: '',
       logs: {
         [ChemistryLogsNames.COUNTER]: {
@@ -42,7 +42,7 @@ const chemistryData: IChemistryDataPackageType = {
       name: 'Atrament',
       itemNumber: '770000-00030',
       description: 'Drukarki Leibinger Jet2neo/jet2neos',
-      image: '/aluplast-components-counter/images/chemistry/Atrament-70000-00030.jpg',
+      image: '/images/chemistry/Atrament-70000-00030.jpg',
       color: '',
       logs: {
         [ChemistryLogsNames.COUNTER]: {
@@ -68,7 +68,7 @@ const chemistryData: IChemistryDataPackageType = {
       name: 'Solvent',
       itemNumber: 'SJN1700',
       description: 'Drukarki Leibinger Jet2neo/jet2neos',
-      image: '/aluplast-components-counter/images/chemistry/Solvent-SJN 1700.jpg',
+      image: '/images/chemistry/Solvent-SJN 1700.jpg',
       color: '',
       logs: {
         [ChemistryLogsNames.COUNTER]: {
@@ -95,7 +95,7 @@ const chemistryData: IChemistryDataPackageType = {
       name: 'Make-up',
       itemNumber: 'VJ706-D',
       description: 'Dotyczy drukarek 1220',
-      image: '/aluplast-components-counter/images/chemistry/Make-up-VJ706-D.jpg',
+      image: '/images/chemistry/Make-up-VJ706-D.jpg',
       color: '',
       logs: {
         [ChemistryLogsNames.COUNTER]: {
@@ -121,7 +121,7 @@ const chemistryData: IChemistryDataPackageType = {
       name: 'Atrament',
       itemNumber: 'VJ411-D',
       description: 'Dotyczy drukarek 1220',
-      image: '/aluplast-components-counter/images/chemistry/Atrament-VJ411-D.jpg',
+      image: '/images/chemistry/Atrament-VJ411-D.jpg',
       color: '',
       logs: {
         [ChemistryLogsNames.COUNTER]: {
@@ -148,7 +148,7 @@ const chemistryData: IChemistryDataPackageType = {
       name: 'Make-up',
       itemNumber: 'VJ7222-D',
       description: 'Dotyczy drukarek 1580',
-      image: '/aluplast-components-counter/images/chemistry/Make-up-VJ7222-D.jpg',
+      image: '/images/chemistry/Make-up-VJ7222-D.jpg',
       color: '',
       logs: {
         [ChemistryLogsNames.COUNTER]: {
@@ -174,7 +174,7 @@ const chemistryData: IChemistryDataPackageType = {
       name: 'Atrament',
       itemNumber: 'VJ4262-D',
       description: 'Dotyczy drukarek 1580',
-      image: '/aluplast-components-counter/images/chemistry/Atrament-VJ411-D.jpg',
+      image: '/images/chemistry/Atrament-VJ411-D.jpg',
       color: '',
       logs: {
         [ChemistryLogsNames.COUNTER]: {
