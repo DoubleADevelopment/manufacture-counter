@@ -17,7 +17,10 @@ const Router = (): JSX.Element => {
         <Route index element={<Pages.MainPage />} />
         <Route path={AppRouting.INFORMATION.path} element={<Pages.InfoPage />} />
         <Route path={AppRouting.SETTINGS.path} element={<Pages.SettingsPage />} />
-        <Route path={AppRouting.OVERVIEW.path} element={<Pages.OverviewPage />} />
+        <Route
+          path={AppRouting.COMPONENTS_OVERVIEW.path}
+          element={<Pages.ComponentOverviewPage />}
+        />
 
         <Route path={`${ComponentsRouting.CHEMISTRY.path}/*`} element={<ChemistryApp />} />
         <Route path={`${ComponentsRouting.GUMS.path}/*`} element={<GumsApp />} />

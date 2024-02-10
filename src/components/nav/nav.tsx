@@ -22,7 +22,10 @@ const Navigation = (): JSX.Element => {
           </NavigationLink>
         </li>
         <li className={style.nav__item}>
-          <NavigationLink to={AppRouting.OVERVIEW.path} name={AppRouting.OVERVIEW.title}>
+          <NavigationLink
+            to={AppRouting.COMPONENTS_OVERVIEW.path}
+            name={AppRouting.COMPONENTS_OVERVIEW.title}
+          >
             <NavIconOverview />
           </NavigationLink>
         </li>

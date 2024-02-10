@@ -1,15 +1,15 @@
-.overview-page {
+.components-overview-page {
   width: 100%;
 }
 
-.overview-page__content {
+.components-overview-page__content {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr min-content;
   gap: 40px;
 }
 
-.overview-page__title {
+.components-overview-page__title {
   justify-self: left;
   color: var(--content-primary-a);
 }
