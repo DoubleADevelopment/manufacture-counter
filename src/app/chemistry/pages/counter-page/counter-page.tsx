@@ -1,5 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+//components
+import { CounterItem } from '../../../../components';
 //types
 import type { IChemistryDataItemType } from '../../types/data-types';
 //store
@@ -26,11 +28,10 @@ const CounterPage = (): JSX.Element => {
   console.log(item);
 
   return (
-    <div className={`${style['chemistry-page']} container-mobile page-without-menu`}>
-      <main className={style['chemistry-page__content']}>
-        <h2 className={`${style['chemistry-page__title']} heading-xl-large`}>counter</h2>
-
-        {item === null ? <p>null</p> : item.name}
+    <div className={`${style['counter-page']} container-mobile page-without-menu`}>
+      <main className={style['counter-page__content']}>
+        <h2 className={`${style['counter-page__title']} heading-xl-large`}>counter</h2>
+        {item && <CounterItem item={item} />}
       </main>
     </div>
   );

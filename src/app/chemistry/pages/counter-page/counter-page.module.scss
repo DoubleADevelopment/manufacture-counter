@@ -5,8 +5,8 @@
 .counter-page__content {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: min-content 1fr;
-  gap: 40px;
+  grid-template-rows: min-content min-content 1fr;
+  gap: 20px;
 }
 
 .counter-page__title {
