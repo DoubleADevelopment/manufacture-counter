@@ -1,29 +1,26 @@
+import { useEffect, useState } from 'react';
 //store
 import { useAppSelector } from '../../../../hooks/hooks';
 import { SelectorGetChemistryState } from '../../store/eslectors/selectors';
+//services
+import chemistryAdapterService from '../../services/chemistry-adapter.service';
 //components
 import { Header, ComponentsList } from '../../../../components';
 //variables
 import { ComponentsRouting } from '../../../../variables/component-routing-variables';
 //types
-import type { ChemistryDataForViewType, IChemistryDataType } from '../../types/data-types';
+import type { ChemistryDataForViewType } from '../../types/data-types';
 //styles
 import style from './chemistry-page.module.scss';
 
 const ChemistryPage = () => {
+  const [cheistryData, setChemistryData] = useState<ChemistryDataForViewType>();
   const chemistryData = useAppSelector(SelectorGetChemistryState);
 
-  const storeDataToClient = (data: IChemistryDataType): ChemistryDataForViewType => {
-    const itemsArray: ChemistryDataForViewType = [];
-
-    for (const item in data) {
-      itemsArray.push(data[item]);
-    }
-
-    return itemsArray;
-  };
-
-  const adaptedData = storeDataToClient(chemistryData);
+  useEffect(() => {
+    const adaptedData = chemistryAdapterService.adaptDataToView(chemistryData);
+    setChemistryData(adaptedData);
+  }, [chemistryData]);
 
   return (
     <div className={`${style['chemistry-page']} container-mobile page`}>
@@ -32,7 +29,9 @@ const ChemistryPage = () => {
         <h2 className={`${style['chemistry-page__title']} heading-xl-large`}>
           {ComponentsRouting.CHEMISTRY.title}
         </h2>
-        <ComponentsList data={adaptedData} />
+
+        {/* add a loader here!!! */}
+        {cheistryData && <ComponentsList data={cheistryData} />}
       </main>
     </div>
   );
