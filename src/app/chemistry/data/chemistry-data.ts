@@ -2,15 +2,13 @@
 import { ChemistryLogsNames, ChemistrySettingsNames } from '../variables/data-variables';
 //types
 import type { IChemistryDataPackageType } from '../types/data-types';
-//libs
-import { nanoid } from 'nanoid';
 
 const chemistryData: IChemistryDataPackageType = {
   dataPackageName: 'chemistry',
   dataPackageUNID: 1001,
   items: [
     {
-      UNID: `chemistry-veneer-${nanoid()}`,
+      UNID: `chemistry-veneer-77001-003`,
       amount: 0,
       firm: '',
       name: 'Solvent',
@@ -36,7 +34,7 @@ const chemistryData: IChemistryDataPackageType = {
       manufacturer: '',
     },
     {
-      UNID: `chemistry-veneer-${nanoid()}`,
+      UNID: `chemistry-veneer-770000-00030`,
       amount: 0,
       firm: '',
       name: 'Atrament',
@@ -62,7 +60,7 @@ const chemistryData: IChemistryDataPackageType = {
       manufacturer: '',
     },
     {
-      UNID: `chemistry-veneer-${nanoid()}`,
+      UNID: `chemistry-veneer-SJN1700`,
       amount: 0,
       firm: '',
       name: 'Solvent',
@@ -89,7 +87,7 @@ const chemistryData: IChemistryDataPackageType = {
     },
 
     {
-      UNID: `chemistry-veneer-${nanoid()}`,
+      UNID: `chemistry-veneer-VJ706-D`,
       amount: 0,
       firm: '',
       name: 'Make-up',
@@ -115,7 +113,7 @@ const chemistryData: IChemistryDataPackageType = {
       manufacturer: '',
     },
     {
-      UNID: `chemistry-veneer-${nanoid()}`,
+      UNID: `chemistry-veneer-VJ411-D`,
       amount: 0,
       firm: '',
       name: 'Atrament',
@@ -142,7 +140,7 @@ const chemistryData: IChemistryDataPackageType = {
     },
 
     {
-      UNID: `chemistry-veneer-${nanoid()}`,
+      UNID: `chemistry-veneer-VJ7222-D`,
       amount: 0,
       firm: '',
       name: 'Make-up',
@@ -168,7 +166,7 @@ const chemistryData: IChemistryDataPackageType = {
       manufacturer: '',
     },
     {
-      UNID: `chemistry-veneer-${nanoid()}`,
+      UNID: `chemistry-veneer-VJ4262-D`,
       amount: 0,
       firm: '',
       name: 'Atrament',

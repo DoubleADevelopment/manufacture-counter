@@ -23,9 +23,29 @@ type UnionComponentsDataItemType =
   | IGumsDataItemType
   | IPigmentsDataItemType;
 
+interface IItemCardFull {
+  UNID: string;
+  name: string;
+  description: string;
+  itemNumber: string;
+  packagingInfo: string;
+  image: string;
+  amount: number;
+}
+
+interface IItemCardShort {
+  name: string;
+  description: string;
+  itemNumber: string;
+  packagingInfo: string;
+  image: string;
+}
+
 export type {
   IComponentsListDataItem,
   ComponentsListDataType,
   UnionComponentsDataItemType,
   UnionComponentsDataForView,
+  IItemCardFull,
+  IItemCardShort,
 };

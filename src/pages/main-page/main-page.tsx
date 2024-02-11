@@ -1,18 +1,21 @@
 //components
-import { Header, CountersList } from '../../components';
+import { ComponentsList } from '../../components';
+//layouts
+import { PageWithMenuLayout } from '../../layouts';
 //styles
-import style from './main-page.module.css';
+import style from './main-page.module.scss';
 
 const MainPage = (): JSX.Element => {
   return (
-    <div className={`${style['main-page']} container-mobile page`}>
-      <Header />
-      <main className={style['main-page__content']}>
-        <h2 className={`${style['main-page__title']} heading-xl-large`}>Strona główna</h2>
+    <PageWithMenuLayout>
+      <main className={style['main-page']}>
+        <h2 className={`${style['main-page__title']} heading-xl-large content-primary-a`}>
+          Strona główna
+        </h2>
 
-        <CountersList />
+        <ComponentsList />
       </main>
-    </div>
+    </PageWithMenuLayout>
   );
 };
 

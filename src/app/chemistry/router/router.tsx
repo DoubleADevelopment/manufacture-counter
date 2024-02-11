@@ -1,12 +1,14 @@
 import { Route, Routes } from 'react-router-dom';
+//variables
+import { CounterRouting } from '../variables/counter-routing';
 //pages
-import { ChemistryPage } from '../pages';
+import { ChemistryPage, CounterPage } from '../pages';
 
 const Router = (): JSX.Element => {
   return (
     <Routes>
       <Route index element={<ChemistryPage />} />
-      <Route path={`counter`} element={<ChemistryPage />} />
+      <Route path={CounterRouting.COUNTER} element={<CounterPage />} />
     </Routes>
   );
 };

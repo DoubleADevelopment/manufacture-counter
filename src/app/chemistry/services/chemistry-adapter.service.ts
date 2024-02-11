@@ -1,5 +1,6 @@
 import type { IAdapterService } from '../../../types';
 import {
+  ChemistryDataForViewType,
   IChemistryDataItemType,
   IChemistryDataPackageType,
   IChemistryDataType,
@@ -15,6 +16,16 @@ class ChemistryAdapterService
       adaptedData[item.UNID] = item;
     });
     return adaptedData;
+  }
+
+  adaptDataToView(data: IChemistryDataType): ChemistryDataForViewType {
+    const itemsArray: ChemistryDataForViewType = [];
+
+    for (const item in data) {
+      itemsArray.push(data[item]);
+    }
+
+    return itemsArray;
   }
 }
 
