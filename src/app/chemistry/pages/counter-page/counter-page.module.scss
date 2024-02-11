@@ -1,0 +1,15 @@
+.counter-page {
+  width: 100%;
+}
+
+.counter-page__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr min-content;
+  gap: 40px;
+}
+
+.counter-page__title {
+  justify-self: left;
+  color: var(--content-primary-a);
+}
