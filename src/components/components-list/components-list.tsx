@@ -13,7 +13,7 @@ const ComponentsList = ({ data }: IComponentsListProps): JSX.Element => {
   return (
     <ul className={style['components-list']}>
       {data.map((item) => {
-        return <Item item={item} />;
+        return <Item item={item} key={item.UNID} />;
       })}
     </ul>
   );

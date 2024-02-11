@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 //store
 import { useAppSelector } from '../../../../hooks/hooks';
-import { SelectorGetChemistryState } from '../../store/eslectors/selectors';
+import { SelectorGetChemistryState } from '../../store/slectors/selectors';
 //services
 import chemistryAdapterService from '../../services/chemistry-adapter.service';
 //components

@@ -6,3 +6,12 @@
   min-height: 100vh;
   background-color: var(--backgroud-primary);
 }
+
+.page-without-menu {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: var(--page-padding-without-menu);
+  min-height: 100vh;
+  background-color: var(--backgroud-primary);
+}
