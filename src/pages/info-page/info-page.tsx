@@ -1,16 +1,17 @@
-//components
-import { Header } from '../../components';
+//layouts
+import { PageWithMenuLayout } from '../../layouts';
 //styles
 import style from './info-page.module.scss';
 
 const InfoPage = (): JSX.Element => {
   return (
-    <div className={`${style['info-page']} container-mobile page`}>
-      <Header />
-      <main className={style['info-page__content']}>
-        <h2 className={`${style['info-page__title']} heading-xl-large`}>Informacja o aplikacji</h2>
+    <PageWithMenuLayout>
+      <main className={style['info-page']}>
+        <h2 className={`${style['info-page__title']} heading-xl-large content-primary-a`}>
+          Informacja o aplikacji
+        </h2>
       </main>
-    </div>
+    </PageWithMenuLayout>
   );
 };
 

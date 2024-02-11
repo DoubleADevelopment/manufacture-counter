@@ -1,16 +1,17 @@
-//components
-import { Header } from '../../../../components';
+//layouts
+import { PageWithMenuLayout } from '../../../../layouts';
 //styles
 import style from './gums-page.module.scss';
 
 const GumsPage = () => {
   return (
-    <div className={`${style['info-page']} container-mobile page`}>
-      <Header />
+    <PageWithMenuLayout>
       <main className={style['info-page__content']}>
-        <h2 className={`${style['info-page__title']} heading-xl-large`}>Uszczelka</h2>
+        <h2 className={`${style['info-page__title']} heading-xl-large content-primary-a`}>
+          Uszczelka
+        </h2>
       </main>
-    </div>
+    </PageWithMenuLayout>
   );
 };
 

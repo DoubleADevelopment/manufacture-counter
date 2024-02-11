@@ -1,7 +1,8 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+//layouts
+import { PageWithoutMenuLayout } from '../../../../layouts';
 //components
-// import { CounterItemInfo } from '../../../../components';
 import { ItemCardShort } from '../../../../components';
 //types
 import type { IChemistryDataItemType } from '../../types/data-types';
@@ -44,12 +45,14 @@ const CounterPage = (): JSX.Element => {
   console.log(item);
 
   return (
-    <div className={`${style['counter-page']} container-mobile page-without-menu`}>
-      <main className={style['counter-page__content']}>
-        <h2 className={`${style['counter-page__title']} heading-xl-large`}>counter</h2>
+    <PageWithoutMenuLayout>
+      <main className={style['counter-page']}>
+        <h2 className={`${style['counter-page__title']} heading-xl-large content-primary-a`}>
+          counter
+        </h2>
         {itemCardShortData && <ItemCardShort item={itemCardShortData} />}
       </main>
-    </div>
+    </PageWithoutMenuLayout>
   );
 };
 

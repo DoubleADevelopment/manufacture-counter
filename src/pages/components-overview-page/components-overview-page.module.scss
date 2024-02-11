@@ -1,8 +1,4 @@
 .components-overview-page {
-  width: 100%;
-}
-
-.components-overview-page__content {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr min-content;
@@ -11,5 +7,4 @@
 
 .components-overview-page__title {
   justify-self: left;
-  color: var(--content-primary-a);
 }

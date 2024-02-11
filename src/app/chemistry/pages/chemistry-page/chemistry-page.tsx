@@ -4,8 +4,10 @@ import { useAppSelector } from '../../../../hooks/hooks';
 import { SelectorGetChemistryState } from '../../store/slectors/selectors';
 //services
 import chemistryAdapterService from '../../services/chemistry-adapter.service';
+//layouts
+import { PageWithMenuLayout } from '../../../../layouts';
 //components
-import { Header, ItemsList } from '../../../../components';
+import { ItemsList } from '../../../../components';
 //variables
 import { ComponentsRouting } from '../../../../variables/component-routing-variables';
 //types
@@ -23,9 +25,8 @@ const ChemistryPage = () => {
   }, [chemistryData]);
 
   return (
-    <div className={`${style['chemistry-page']} container-mobile page`}>
-      <Header />
-      <main className={style['chemistry-page__content']}>
+    <PageWithMenuLayout>
+      <main className={style['chemistry-page']}>
         <h2 className={`${style['chemistry-page__title']} heading-xl-large`}>
           {ComponentsRouting.CHEMISTRY.title}
         </h2>
@@ -33,7 +34,7 @@ const ChemistryPage = () => {
         {/* add a loader here!!! */}
         {cheistryData && <ItemsList data={cheistryData} />}
       </main>
-    </div>
+    </PageWithMenuLayout>
   );
 };
 
