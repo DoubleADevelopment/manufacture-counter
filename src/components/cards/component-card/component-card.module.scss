@@ -1,4 +1,4 @@
-.counters-list-item {
+.component-card {
   position: relative;
   list-style: none;
   overflow: hidden;
@@ -11,7 +11,7 @@
   &:hover {
     border-color: var(--accent);
 
-    & .counters-list-item__image {
+    & .component-card__image {
       position: absolute;
       left: 0;
       top: 0;
@@ -23,16 +23,15 @@
   }
 }
 
-.counters-list-item__title {
+.component-card__title {
   position: absolute;
   left: 50%;
   top: 50%;
   z-index: 1;
-  color: var(--content-primary-b);
   transform: translate(-50%, -50%);
 }
 
-.counters-list-item__image {
+.component-card__image {
   display: flex;
   border-radius: var(--basic-border-radius);
   width: 100%;
@@ -41,7 +40,7 @@
   transition: all ease 0.2s;
 }
 
-.counters-list-item__link {
+.component-card__link {
   position: absolute;
   left: 0;
   top: 0;

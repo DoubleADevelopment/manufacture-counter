@@ -5,7 +5,7 @@ import { SelectorGetChemistryState } from '../../store/slectors/selectors';
 //services
 import chemistryAdapterService from '../../services/chemistry-adapter.service';
 //components
-import { Header, ComponentsList } from '../../../../components';
+import { Header, ItemsList } from '../../../../components';
 //variables
 import { ComponentsRouting } from '../../../../variables/component-routing-variables';
 //types
@@ -31,7 +31,7 @@ const ChemistryPage = () => {
         </h2>
 
         {/* add a loader here!!! */}
-        {cheistryData && <ComponentsList data={cheistryData} />}
+        {cheistryData && <ItemsList data={cheistryData} />}
       </main>
     </div>
   );

@@ -1,19 +1,15 @@
 //components
-import Item from './item/item';
-//types
-import type { UnionComponentsDataForView } from '../../types/data-types';
+import CountersListItem from '../cards/component-card/component-card';
+//data
+import { componentsListData } from '../../data/components-list-data';
 //styles
 import style from './components-list.module.scss';
 
-interface IComponentsListProps {
-  data: UnionComponentsDataForView;
-}
-
-const ComponentsList = ({ data }: IComponentsListProps): JSX.Element => {
+const ComponentsList = (): JSX.Element => {
   return (
     <ul className={style['components-list']}>
-      {data.map((item) => {
-        return <Item item={item} key={item.UNID} />;
+      {componentsListData.map((item, i) => {
+        return <CountersListItem item={item} key={item.title + i} />;
       })}
     </ul>
   );

@@ -1,6 +1,7 @@
 .components-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   gap: 20px;
 }

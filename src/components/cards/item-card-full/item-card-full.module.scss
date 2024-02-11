@@ -1,4 +1,4 @@
-.item {
+.item-card-full {
   position: relative;
   display: grid;
   grid-template-areas:
@@ -18,7 +18,7 @@
   }
 }
 
-.item__info {
+.item-card-full__info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -28,7 +28,7 @@
   gap: 5px;
 }
 
-.item__image {
+.item-card-full__image {
   display: flex;
   justify-self: flex-start;
   grid-area: image;
@@ -39,7 +39,7 @@
   object-fit: cover;
 }
 
-.item__amount {
+.item-card-full__amount {
   position: absolute;
   right: -15px;
   top: -15px;
@@ -55,7 +55,7 @@
   background-color: var(--background-light-accent);
 }
 
-.item__link {
+.item-card-full__link {
   position: absolute;
   left: 0;
   top: 0;

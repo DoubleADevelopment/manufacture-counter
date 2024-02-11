@@ -1,5 +1,5 @@
 //components
-import { Header, CountersList } from '../../components';
+import { Header, ComponentsList } from '../../components';
 //styles
 import style from './main-page.module.css';
 
@@ -10,7 +10,7 @@ const MainPage = (): JSX.Element => {
       <main className={style['main-page__content']}>
         <h2 className={`${style['main-page__title']} heading-xl-large`}>Strona główna</h2>
 
-        <CountersList />
+        <ComponentsList />
       </main>
     </div>
   );

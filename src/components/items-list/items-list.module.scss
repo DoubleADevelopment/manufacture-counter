@@ -1,0 +1,6 @@
+.items-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  list-style: none;
+  gap: 20px;
+}
