@@ -27,22 +27,18 @@ const CounterPage = (): JSX.Element => {
 
   useEffect(() => {
     setItem(selectedItem);
-  }, [UNID]);
 
-  useEffect(() => {
     if (item) {
       const itemCardShortData = {
-        name: item?.name,
-        description: item?.description,
-        itemNumber: item?.itemNumber,
-        packagingInfo: item?.packagingInfo,
-        image: item?.image,
+        name: item.name,
+        description: item.description,
+        itemNumber: item.itemNumber,
+        packagingInfo: item.packagingInfo,
+        image: item.image,
       };
       setItemCardShortData(itemCardShortData);
     }
-  }, [item]);
-
-  console.log(item);
+  }, [UNID, item]);
 
   return (
     <PageWithoutMenuLayout>
