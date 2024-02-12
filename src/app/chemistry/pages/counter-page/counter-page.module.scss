@@ -5,6 +5,13 @@
   gap: 20px;
 }
 
+.counter-page__header {
+  display: grid;
+  grid-template-columns: min-content 1fr max-content;
+  grid-template-rows: repeat(2, min-content);
+}
+
 .counter-page__title {
-  justify-self: left;
+  align-self: right;
+  grid-column: 3/-1;
 }

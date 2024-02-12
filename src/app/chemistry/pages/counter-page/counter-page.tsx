@@ -42,7 +42,7 @@ const CounterPage = (): JSX.Element => {
 
   return (
     <PageWithHeaderLayout>
-      <header>
+      <header className={style['counter-page__header']}>
         <h2 className={`${style['counter-page__title']} heading-xl-large content-primary-a`}>
           Licznik chemii
         </h2>
