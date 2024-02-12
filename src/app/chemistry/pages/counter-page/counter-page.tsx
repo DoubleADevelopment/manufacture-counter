@@ -1,19 +1,16 @@
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 //layouts
 import { PageWithHeaderLayout } from '../../../../layouts';
 //components
 import { ItemCardShort } from '../../../../components';
+import { CounterHeader } from '../../components';
 //types
 import type { IChemistryDataItemType } from '../../types/data-types';
 import { IItemCardShort } from '../../../../types/data-types';
 //store
 import { useAppSelector } from '../../../../hooks/hooks';
 import { SelectorGetCurrentChemistry } from '../../store/slectors/selectors';
-//variables
-import { CounterRouting } from '../../variables/counter-routing';
-//icons
-import { ArrowBackIcon } from '../../../../icons';
 //styles
 import style from './counter-page.module.scss';
 
@@ -46,15 +43,7 @@ const CounterPage = (): JSX.Element => {
 
   return (
     <PageWithHeaderLayout>
-      <header className={style['counter-page__header']}>
-        <Link to={CounterRouting.ROOT}>
-          <ArrowBackIcon />
-          <span className="visually-hidden">Powrót do przeglądu</span>
-        </Link>
-        <h2 className={`${style['counter-page__title']} heading-xl-large content-primary-a`}>
-          Licznik chemii
-        </h2>
-      </header>
+      <CounterHeader />
       <main className={style['counter-page']}>
         {itemCardShortData && <ItemCardShort item={itemCardShortData} />}
       </main>

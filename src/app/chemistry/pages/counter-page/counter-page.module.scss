@@ -4,15 +4,3 @@
   grid-template-rows: min-content 1fr;
   gap: 20px;
 }
-
-.counter-page__header {
-  display: grid;
-  align-items: center;
-  grid-template-columns: min-content 1fr max-content;
-  grid-template-rows: repeat(2, min-content);
-}
-
-.counter-page__title {
-  align-self: right;
-  grid-column: 3/-1;
-}
