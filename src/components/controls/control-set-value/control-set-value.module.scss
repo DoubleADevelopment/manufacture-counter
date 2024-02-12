@@ -1,0 +1,53 @@
+.control-set-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-set-value__label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  &--error .control-set-value__input {
+    border-color: var(--border-negative);
+  }
+
+  &--success .control-set-value__input {
+    border-color: var(--border-positive);
+  }
+}
+
+.control-set-value__message {
+  color: var(--content-negative);
+}
+
+.control-set-value__input {
+  appearance: textfield;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid var(--border-opaque);
+  border-radius: 30px;
+  padding: 10px;
+  width: 300px;
+  height: 200px;
+  font-weight: bold;
+  font-size: 70px;
+  text-align: center;
+  background-color: var(--backgroud-primary);
+
+  &:focus,
+  &:hover {
+    border-color: var(--border-accent);
+    background-color: var(--background-light-accent);
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+}

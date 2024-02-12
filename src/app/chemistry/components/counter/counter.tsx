@@ -1,12 +1,16 @@
-//style
 import { useParams } from 'react-router-dom';
-import style from './counter.module.scss';
 import { useState, useEffect } from 'react';
+//components
 import { ItemCardShort } from '../../../../components';
+import { ControlSetValue } from '../../../../components/controls';
+//store
 import { useAppSelector } from '../../../../hooks/hooks';
-import { IItemCardShort } from '../../../../types/data-types';
 import { SelectorGetCurrentChemistry } from '../../store/slectors/selectors';
-import { IChemistryDataItemType } from '../../types/data-types';
+//types
+import type { IItemCardShort } from '../../../../types/data-types';
+import type { IChemistryDataItemType } from '../../types/data-types';
+//style
+import style from './counter.module.scss';
 
 const Counter = (): JSX.Element => {
   const { UNID } = useParams();
@@ -38,6 +42,8 @@ const Counter = (): JSX.Element => {
   return (
     <main className={style['counter']}>
       {itemCardShortData && <ItemCardShort item={itemCardShortData} />}
+
+      <ControlSetValue />
     </main>
   );
 };
