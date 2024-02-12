@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 //layouts
-import { PageWithoutMenuLayout } from '../../../../layouts';
+import { PageWithHeaderLayout } from '../../../../layouts';
 //components
 import { ItemCardShort } from '../../../../components';
 //types
@@ -41,14 +41,16 @@ const CounterPage = (): JSX.Element => {
   }, [UNID, item]);
 
   return (
-    <PageWithoutMenuLayout>
-      <main className={style['counter-page']}>
+    <PageWithHeaderLayout>
+      <header>
         <h2 className={`${style['counter-page__title']} heading-xl-large content-primary-a`}>
-          counter
+          Licznik chemii
         </h2>
+      </header>
+      <main className={style['counter-page']}>
         {itemCardShortData && <ItemCardShort item={itemCardShortData} />}
       </main>
-    </PageWithoutMenuLayout>
+    </PageWithHeaderLayout>
   );
 };
 
