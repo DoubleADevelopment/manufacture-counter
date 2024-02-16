@@ -38,4 +38,4 @@ const AppRouting: IAppRoutingType = {
   },
 };
 
-export { AppRoutingPaths, rootBaseName, AppRouting };
+export { AppRoutingPaths, rootBaseName, AppRouting, AppRoutingNames };

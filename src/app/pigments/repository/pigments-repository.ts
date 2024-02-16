@@ -29,31 +29,26 @@ class PigmentsRepositroy implements IRepository<IPigmentsDataType> {
     return this.#dataService.getData();
   }
 
-  async sendData(data: IPigmentsDataType): Promise<IPigmentsDataType | Error> {
-    return new Promise((resolve, reject) => {
-      const result = this.#sendDataToStorage(data);
+  sendData(data: IPigmentsDataType): IPigmentsDataType | Error {
+    const result = this.#sendDataToStorage(data);
 
-      if (result instanceof Error) {
-        reject(result);
-      } else {
-        resolve(result);
-      }
-    });
+    if (result instanceof Error) {
+      return result;
+    } else {
+      return result;
+    }
   }
 
-  async getData(): Promise<IPigmentsDataType | Error | null> {
-    return new Promise((resolve, reject) => {
-      const result = this.#getDataFromStorage();
+  getData(): IPigmentsDataType {
+    const result = this.#getDataFromStorage();
 
-      if (result instanceof Error) {
-        reject(result);
-      } else if (result !== null) {
-        resolve(result);
-      } else {
-        const defaultData = this.getDefaultData();
-        resolve(defaultData);
-      }
-    });
+    if (result instanceof Error) {
+      const defaultData = this.#getDefaultData();
+      return defaultData;
+    } else {
+      const defaultData = this.#getDefaultData();
+      return defaultData;
+    }
   }
 
   getDefaultData(): IPigmentsDataType {

@@ -29,31 +29,26 @@ class GumsRepositroy implements IRepository<IGumsDataType> {
     return this.#dataService.getData();
   }
 
-  async sendData(data: IGumsDataType): Promise<IGumsDataType | Error> {
-    return new Promise((resolve, reject) => {
-      const result = this.#sendDataToStorage(data);
+  sendData(data: IGumsDataType): IGumsDataType | Error {
+    const result = this.#sendDataToStorage(data);
 
-      if (result instanceof Error) {
-        reject(result);
-      } else {
-        resolve(result);
-      }
-    });
+    if (result instanceof Error) {
+      return result;
+    } else {
+      return result;
+    }
   }
 
-  async getData(): Promise<IGumsDataType | Error | null> {
-    return new Promise((resolve, reject) => {
-      const result = this.#getDataFromStorage();
+  getData(): IGumsDataType {
+    const result = this.#getDataFromStorage();
 
-      if (result instanceof Error) {
-        reject(result);
-      } else if (result !== null) {
-        resolve(result);
-      } else {
-        const defaultData = this.getDefaultData();
-        resolve(defaultData);
-      }
-    });
+    if (result instanceof Error) {
+      const defaultData = this.#getDefaultData();
+      return defaultData;
+    } else {
+      const defaultData = this.#getDefaultData();
+      return defaultData;
+    }
   }
 
   getDefaultData(): IGumsDataType {

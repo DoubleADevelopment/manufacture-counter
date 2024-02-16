@@ -34,11 +34,13 @@ interface IItemCardFull {
 }
 
 interface IItemCardShort {
+  UNID: string;
   name: string;
   description: string;
   itemNumber: string;
   packagingInfo: string;
   image: string;
+  amount: number;
 }
 
 export type {

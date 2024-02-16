@@ -8,7 +8,7 @@ interface IItemCardShortProps {
 }
 
 const ItemCardShort = ({ item }: IItemCardShortProps): JSX.Element => {
-  const { name, itemNumber, packagingInfo, image, description } = item;
+  const { name, itemNumber, packagingInfo, image, description, amount } = item;
 
   return (
     <article className={style['item-card-short']}>
@@ -28,6 +28,9 @@ const ItemCardShort = ({ item }: IItemCardShortProps): JSX.Element => {
         width={150}
         height={150}
       />
+      <p className={`${style['item-card-short__amount']} paragraph-primary-a heading-medium`}>
+        {amount}
+      </p>
     </article>
   );
 };

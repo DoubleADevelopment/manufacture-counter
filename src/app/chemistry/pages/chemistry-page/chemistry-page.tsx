@@ -27,7 +27,7 @@ const ChemistryPage = () => {
   return (
     <PageWithMenuLayout>
       <main className={style['chemistry-page']}>
-        <h2 className={`${style['chemistry-page__title']} heading-xl-large`}>
+        <h2 className={`${style['chemistry-page__title']} heading-medium content-primary-a`}>
           {ComponentsRouting.CHEMISTRY.title}
         </h2>
 

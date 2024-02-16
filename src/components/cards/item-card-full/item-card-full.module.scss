@@ -6,9 +6,8 @@
   ;
   grid-template-columns: 1fr max-content;
   grid-template-rows: min-content;
+  border: 2px solid var(--border-opaque);
   border-radius: var(--basic-border-radius);
-  border-radius: 2rem;
-  background-color: var(--background-secondary);
 
   &:focus-within,
   &:hover {

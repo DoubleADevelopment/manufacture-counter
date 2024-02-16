@@ -4,7 +4,7 @@ import chemistryRepository from '../../repository/chemistry-repository';
 import { IChemistryStateType } from '../../types/state-types';
 
 const chemistryState: IChemistryStateType = {
-  items: chemistryRepository.getDefaultData(),
+  items: chemistryRepository.getData(),
 };
 
 export default chemistryState;

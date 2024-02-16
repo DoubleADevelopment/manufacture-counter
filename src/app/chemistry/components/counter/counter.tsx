@@ -1,49 +1,96 @@
-import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 //components
-import { ItemCardShort } from '../../../../components';
-import { ControlSetValue } from '../../../../components/controls';
+import {
+  ItemCardShort,
+  ControlSetValue,
+  ButtonPrimary,
+  ButtonSecondary,
+} from '../../../../components';
 //store
-import { useAppSelector } from '../../../../hooks/hooks';
-import { SelectorGetCurrentChemistry } from '../../store/slectors/selectors';
+import { useAppDispatch } from '../../../../hooks/hooks';
+import { incrementAction, decrementAction } from '../../store/actions/actions';
+//variables
+import { InputStatuses, CounterText, CounterInputErrorsText } from '../../../../variables';
 //types
 import type { IItemCardShort } from '../../../../types/data-types';
-import type { IChemistryDataItemType } from '../../types/data-types';
 //style
 import style from './counter.module.scss';
 
-const Counter = (): JSX.Element => {
-  const { UNID } = useParams();
-  const [item, setItem] = useState<IChemistryDataItemType | null>(null);
-  const [itemCardShortData, setItemCardShortData] = useState<IItemCardShort | null>(null);
+interface ICounterProps {
+  item: IItemCardShort;
+}
 
-  const selectedItem = useAppSelector((state) => {
-    if (UNID) {
-      return SelectorGetCurrentChemistry(UNID)(state);
-    }
-    return null;
-  });
+const Counter = ({ item }: ICounterProps): JSX.Element => {
+  const [value, setValue] = useState<number | null>(1);
+  const [message, setMessage] = useState<string>('');
+  const [status, setStatus] = useState<InputStatuses>(InputStatuses.DEFAULT);
+
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
-    setItem(selectedItem);
+    const timer = setTimeout(() => {
+      setStatus(InputStatuses.DEFAULT);
+    }, 200);
 
-    if (item) {
-      const itemCardShortData = {
-        name: item.name,
-        description: item.description,
-        itemNumber: item.itemNumber,
-        packagingInfo: item.packagingInfo,
-        image: item.image,
-      };
-      setItemCardShortData(itemCardShortData);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [status]);
+
+  const validateInputData = (value: number | null): boolean => {
+    if (value === null) {
+      setStatus(InputStatuses.ERROR);
+      setMessage(CounterInputErrorsText.EMPTY_FIELD);
+      return false;
+    } else if (value === 0) {
+      setStatus(InputStatuses.ERROR);
+      setMessage(CounterInputErrorsText.DIVISION_BY_ZERO);
+      return false;
+    } else {
+      setStatus(InputStatuses.SUCCESS);
+      setMessage(CounterInputErrorsText.DEFAULT);
+      return true;
     }
-  }, [UNID, item]);
+  };
+
+  const onInputValueChangeHandler = (value: number | null): void => {
+    setValue(value);
+    if (value === 0) {
+      setStatus(InputStatuses.ERROR);
+      setMessage(CounterInputErrorsText.DIVISION_BY_ZERO);
+    } else {
+      setMessage(CounterInputErrorsText.DEFAULT);
+    }
+  };
+
+  const plusClickHandler = () => {
+    const validateResult = validateInputData(value);
+    if (validateResult === true && value !== null) {
+      dispatch(incrementAction({ UNID: item.UNID, value: value }));
+    }
+  };
+
+  const minusClickHandler = () => {
+    const validateResult = validateInputData(value);
+    if (validateResult === true && value !== null) {
+      dispatch(decrementAction({ UNID: item.UNID, value: value }));
+    }
+  };
 
   return (
     <main className={style['counter']}>
-      {itemCardShortData && <ItemCardShort item={itemCardShortData} />}
+      <ItemCardShort item={item} />
 
-      <ControlSetValue />
+      <ControlSetValue
+        onInputChangeHandler={onInputValueChangeHandler}
+        value={value}
+        status={status}
+        message={message}
+      />
+      <div className={style.counter__controls}>
+        <ButtonSecondary text={CounterText.MINUS} clickHandler={minusClickHandler} />
+        <ButtonPrimary text={CounterText.PLUS} clickHandler={plusClickHandler} />
+      </div>
     </main>
   );
 };

@@ -12,8 +12,8 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: min-content 1fr;
-  padding: var(--page-padding-without-menu);
+  padding: var(--page-padding-with-header);
   min-height: 100vh;
   background-color: var(--backgroud-primary);
-  gap: 20px;
+  gap: 40px;
 }

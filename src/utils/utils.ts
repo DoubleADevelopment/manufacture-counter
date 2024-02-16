@@ -1,4 +1,4 @@
-export const onEnterClickHandler = (
+const onEnterClickHandlerToElementBlur = (
   evt: any,
   htmlElement: HTMLElement | null = null,
 ): void | boolean => {
@@ -12,3 +12,5 @@ export const onEnterClickHandler = (
     }
   }
 };
+
+export { onEnterClickHandlerToElementBlur };
