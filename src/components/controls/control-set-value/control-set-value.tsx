@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
+//utils
+import { onEnterClickHandlerToElementBlur } from '../../../utils/utils';
 //variables
 import { CounterText, InputStatuses } from '../../../variables';
 //styles
 import style from './control-set-value.module.scss';
-import { onEnterClickHandlerToElementBlur } from '../../../utils/utils';
 
 interface IControlSetValueProps {
   onInputChangeHandler: (value: number | null) => void;
@@ -57,7 +58,6 @@ const ControlSetValue = ({
         ) : (
           CounterText.CHEMISTRY_SET_VALUE_TITLE
         )}
-        {/* <span className={style['control-set-value__message']}>{message ? message : null}</span> */}
         <input
           className={`${style['control-set-value__input']} ${inputClassName} content-primary-a`}
           type="number"

@@ -34,6 +34,7 @@ interface IItemCardFull {
 }
 
 interface IItemCardShort {
+  UNID: string;
   name: string;
   description: string;
   itemNumber: string;

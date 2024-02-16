@@ -6,6 +6,9 @@ import {
   ButtonPrimary,
   ButtonSecondary,
 } from '../../../../components';
+//store
+import { useAppDispatch } from '../../../../hooks/hooks';
+import { incrementAction, decrementAction } from '../../store/actions/actions';
 //variables
 import { InputStatuses, CounterText, CounterInputErrorsText } from '../../../../variables';
 //types
@@ -21,6 +24,8 @@ const Counter = ({ item }: ICounterProps): JSX.Element => {
   const [value, setValue] = useState<number | null>(1);
   const [message, setMessage] = useState<string>('');
   const [status, setStatus] = useState<InputStatuses>(InputStatuses.DEFAULT);
+
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -60,15 +65,15 @@ const Counter = ({ item }: ICounterProps): JSX.Element => {
 
   const plusClickHandler = () => {
     const validateResult = validateInputData(value);
-    if (validateResult === true) {
-      console.log('plus');
+    if (validateResult === true && value !== null) {
+      dispatch(incrementAction({ UNID: item.UNID, value: value }));
     }
   };
 
   const minusClickHandler = () => {
     const validateResult = validateInputData(value);
-    if (validateResult === true) {
-      console.log('plus');
+    if (validateResult === true && value !== null) {
+      dispatch(decrementAction({ UNID: item.UNID, value: value }));
     }
   };
 
@@ -83,8 +88,8 @@ const Counter = ({ item }: ICounterProps): JSX.Element => {
         message={message}
       />
       <div className={style.counter__controls}>
-        <ButtonSecondary text={CounterText.MINUS} clickHandler={plusClickHandler} />
-        <ButtonPrimary text={CounterText.PLUS} clickHandler={minusClickHandler} />
+        <ButtonSecondary text={CounterText.MINUS} clickHandler={minusClickHandler} />
+        <ButtonPrimary text={CounterText.PLUS} clickHandler={plusClickHandler} />
       </div>
     </main>
   );

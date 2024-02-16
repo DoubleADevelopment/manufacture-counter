@@ -26,6 +26,7 @@ const CounterPage = (): JSX.Element => {
 
     if (item) {
       const itemCardShortData = {
+        UNID: item.UNID,
         name: item.name,
         description: item.description,
         itemNumber: item.itemNumber,
