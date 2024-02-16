@@ -4,3 +4,9 @@
   grid-template-rows: min-content 1fr;
   gap: 20px;
 }
+
+.counter__controls {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+}

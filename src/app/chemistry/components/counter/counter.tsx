@@ -1,8 +1,12 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 //components
-import { ItemCardShort } from '../../../../components';
-import { ControlSetValue } from '../../../../components/controls';
+import {
+  ItemCardShort,
+  ControlSetValue,
+  ButtonPrimary,
+  ButtonSecondary,
+} from '../../../../components';
 //store
 import { useAppSelector } from '../../../../hooks/hooks';
 import { SelectorGetCurrentChemistry } from '../../store/slectors/selectors';
@@ -16,7 +20,7 @@ import style from './counter.module.scss';
 
 const Counter = (): JSX.Element => {
   const { UNID } = useParams();
-  const [value, setValue] = useState<number | null>(null);
+  const [value, setValue] = useState<number | null>(1);
   const [message, setMessage] = useState<string>('');
   const [status, setStatus] = useState<InputStatuses>(InputStatuses.DEFAULT);
   const [item, setItem] = useState<IChemistryDataItemType | null>(null);
@@ -60,6 +64,12 @@ const Counter = (): JSX.Element => {
     }
   }, [UNID, item]);
 
+  const textAdd = 'Dodać';
+
+  const addClickHandler = () => {
+    console.log('click');
+  };
+
   return (
     <main className={style['counter']}>
       {itemCardShortData && <ItemCardShort item={itemCardShortData} />}
@@ -70,6 +80,10 @@ const Counter = (): JSX.Element => {
         status={status}
         message={message}
       />
+      <div className={style.counter__controls}>
+        <ButtonSecondary text={textAdd} clickHandler={addClickHandler} />
+        <ButtonPrimary text={textAdd} clickHandler={addClickHandler} />
+      </div>
     </main>
   );
 };

@@ -52,8 +52,8 @@ const ControlSetValue = ({
   return (
     <div className={style['control-set-value']}>
       <label className={`${style['control-set-value__label']} label-large content-primary-a`}>
-        Dodać
-        <span className={style['control-set-value__message']}>{message ? message : null}</span>
+        {message ? <span className={style['control-set-value__message']}>{message}</span> : 'Dodać'}
+        {/* <span className={style['control-set-value__message']}>{message ? message : null}</span> */}
         <input
           className={`${style['control-set-value__input']} ${inputClassName} content-primary-a`}
           type="number"
