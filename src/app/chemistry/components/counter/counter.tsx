@@ -1,26 +1,21 @@
 import { useState, useEffect } from 'react';
 //components
-import {
-  ItemCardShort,
-  ControlSetValue,
-  ButtonPrimary,
-  ButtonSecondary,
-} from '../../../../components';
+import { ControlSetValue, ButtonPrimary, ButtonSecondary } from '../../../../components';
 //store
 import { useAppDispatch } from '../../../../hooks/hooks';
 import { incrementAction, decrementAction } from '../../store/actions/actions';
 //variables
 import { InputStatuses, CounterText, CounterInputErrorsText } from '../../../../variables';
-//types
-import type { IItemCardData } from '../../../../types/data-types';
 //style
 import style from './counter.module.scss';
+import { useParams } from 'react-router-dom';
 
-interface ICounterProps {
-  item: IItemCardData;
+interface UNIDParams {
+  UNID: string;
 }
 
-const Counter = ({ item }: ICounterProps): JSX.Element => {
+const Counter = (): JSX.Element => {
+  const { UNID } = useParams<keyof UNIDParams>() as UNIDParams;
   const [value, setValue] = useState<number | null>(1);
   const [message, setMessage] = useState<string>('');
   const [status, setStatus] = useState<InputStatuses>(InputStatuses.DEFAULT);
@@ -66,21 +61,19 @@ const Counter = ({ item }: ICounterProps): JSX.Element => {
   const plusClickHandler = () => {
     const validateResult = validateInputData(value);
     if (validateResult === true && value !== null) {
-      dispatch(incrementAction({ UNID: item.UNID, value: value }));
+      dispatch(incrementAction({ UNID: UNID, value: value }));
     }
   };
 
   const minusClickHandler = () => {
     const validateResult = validateInputData(value);
     if (validateResult === true && value !== null) {
-      dispatch(decrementAction({ UNID: item.UNID, value: value }));
+      dispatch(decrementAction({ UNID: UNID, value: value }));
     }
   };
 
   return (
     <main className={style['counter']}>
-      <ItemCardShort item={item} />
-
       <ControlSetValue
         onInputChangeHandler={onInputValueChangeHandler}
         value={value}
