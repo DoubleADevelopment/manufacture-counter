@@ -30,4 +30,4 @@ const ComponentsRouting: IComponentsRoutingType = {
   },
 };
 
-export { ComponentsRoutingPaths, ComponentsRouting };
+export { ComponentsRoutingPaths, ComponentsRoutingNames, ComponentsRouting };
