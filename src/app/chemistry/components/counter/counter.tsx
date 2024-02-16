@@ -35,8 +35,6 @@ const Counter = (): JSX.Element => {
       setStatus(InputStatuses.ERROR);
       setMessage('Nie można dodać/odjąć ZERO!');
     } else {
-      // dispatch(this.incrementAction({ UNID: currentItemUNID, value: value }));
-      // dispatch(logAction({ UNID: currentItemUNID, logName: logName, logValue: `+${value}kg` }));
       setStatus(InputStatuses.SUCCESS);
       setMessage('');
     }
@@ -66,7 +64,11 @@ const Counter = (): JSX.Element => {
 
   const textAdd = 'Dodać';
 
-  const addClickHandler = () => {
+  const plusClickHandler = () => {
+    console.log('click');
+  };
+
+  const minusClickHandler = () => {
     console.log('click');
   };
 
@@ -81,8 +83,8 @@ const Counter = (): JSX.Element => {
         message={message}
       />
       <div className={style.counter__controls}>
-        <ButtonSecondary text={textAdd} clickHandler={addClickHandler} />
-        <ButtonPrimary text={textAdd} clickHandler={addClickHandler} />
+        <ButtonSecondary text={textAdd} clickHandler={plusClickHandler} />
+        <ButtonPrimary text={textAdd} clickHandler={minusClickHandler} />
       </div>
     </main>
   );

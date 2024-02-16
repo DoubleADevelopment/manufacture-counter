@@ -1,18 +1,20 @@
 .button-secondary {
   border: none;
-  border-radius: 8px;
+  border-radius: var(--button-border-radius);
   padding: 16px 20px;
   width: 100%;
-  background-color: var(--gray-400);
+  color: var(--content-primary-a);
+  background-color: var(--gray-200);
   transition: all ease 0.1s;
   cursor: pointer;
 
   &:hover,
   &:focus {
-    background-color: var(--gray-900);
+    background-color: var(--gray-300);
   }
 
   &:active {
-    background-color: var(--background-always-dark);
+    color: var(--content-primary-b);
+    background-color: var(--gray-800);
   }
 }

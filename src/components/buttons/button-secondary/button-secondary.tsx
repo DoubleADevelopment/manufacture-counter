@@ -10,7 +10,7 @@ const ButtonSecondary = ({ text, clickHandler }: IButtonPrimaryProps): JSX.Eleme
   return (
     <button
       type="button"
-      className={`${style['button-secondary']} paragraph-large content-primary-b`}
+      className={`${style['button-secondary']} paragraph-large`}
       onClick={clickHandler}
     >
       {text}
