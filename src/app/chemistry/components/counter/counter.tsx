@@ -7,7 +7,7 @@ import {
   ButtonSecondary,
 } from '../../../../components';
 //variables
-import { InputStatuses } from '../../../../variables';
+import { InputStatuses, CounterText, CounterInputErrorsText } from '../../../../variables';
 //types
 import type { IItemCardShort } from '../../../../types/data-types';
 //style
@@ -32,31 +32,44 @@ const Counter = ({ item }: ICounterProps): JSX.Element => {
     };
   }, [status]);
 
-  const textAdd = 'Dodać';
-
-  const setCurrentStatus = (value: number | null) => {
+  const validateInputData = (value: number | null): boolean => {
     if (value === null) {
       setStatus(InputStatuses.ERROR);
-      setMessage('Nic nie wpisanę w pole!');
+      setMessage(CounterInputErrorsText.EMPTY_FIELD);
+      return false;
     } else if (value === 0) {
       setStatus(InputStatuses.ERROR);
-      setMessage('Nie można dodać/odjąć ZERO!');
+      setMessage(CounterInputErrorsText.DIVISION_BY_ZERO);
+      return false;
     } else {
       setStatus(InputStatuses.SUCCESS);
-      setMessage('');
+      setMessage(CounterInputErrorsText.DEFAULT);
+      return true;
     }
   };
 
   const onInputValueChangeHandler = (value: number | null): void => {
     setValue(value);
+    if (value === 0) {
+      setStatus(InputStatuses.ERROR);
+      setMessage(CounterInputErrorsText.DIVISION_BY_ZERO);
+    } else {
+      setMessage(CounterInputErrorsText.DEFAULT);
+    }
   };
 
   const plusClickHandler = () => {
-    setCurrentStatus(value);
+    const validateResult = validateInputData(value);
+    if (validateResult === true) {
+      console.log('plus');
+    }
   };
 
   const minusClickHandler = () => {
-    setCurrentStatus(value);
+    const validateResult = validateInputData(value);
+    if (validateResult === true) {
+      console.log('plus');
+    }
   };
 
   return (
@@ -70,8 +83,8 @@ const Counter = ({ item }: ICounterProps): JSX.Element => {
         message={message}
       />
       <div className={style.counter__controls}>
-        <ButtonSecondary text={textAdd} clickHandler={plusClickHandler} />
-        <ButtonPrimary text={textAdd} clickHandler={minusClickHandler} />
+        <ButtonSecondary text={CounterText.MINUS} clickHandler={plusClickHandler} />
+        <ButtonPrimary text={CounterText.PLUS} clickHandler={minusClickHandler} />
       </div>
     </main>
   );

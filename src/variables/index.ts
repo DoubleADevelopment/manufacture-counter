@@ -10,6 +10,7 @@ import {
   ComponentsRoutingNames,
   ComponentsRouting,
 } from './component-routing-variables';
+import { CounterText, CounterInputErrorsText } from './text-variables';
 
 export {
   InputStatuses,
@@ -20,4 +21,6 @@ export {
   ComponentsRoutingPaths,
   ComponentsRoutingNames,
   ComponentsRouting,
+  CounterText,
+  CounterInputErrorsText,
 };
