@@ -18,11 +18,11 @@ const ControlSetValue = (): JSX.Element => {
 
   return (
     <div className={style['control-set-value']}>
-      <label className={`${style['control-set-value__label']} label-large`}>
+      <label className={`${style['control-set-value__label']} label-large content-primary-a`}>
         Dodać
         {/* <span className={style['control-set-value__message']}>{message ? message : null}</span> */}
         <input
-          className={style['control-set-value__input']}
+          className={`${style['control-set-value__input']} content-primary-a`}
           type="number"
           ref={inputEl}
           value={inputValue}
