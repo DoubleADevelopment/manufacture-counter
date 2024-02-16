@@ -1,4 +1,5 @@
 import type { IAdapterService } from '../../../types';
+import type { IItemCardData } from '../../../types/data-types';
 import {
   ChemistryDataForViewType,
   IChemistryDataItemType,
@@ -26,6 +27,18 @@ class ChemistryAdapterService
     }
 
     return itemsArray;
+  }
+
+  adaptItemToShort(item: IChemistryDataItemType): IItemCardData {
+    return {
+      UNID: item.UNID,
+      name: item.name,
+      description: item.description,
+      itemNumber: item.itemNumber,
+      packagingInfo: item.packagingInfo,
+      image: item.image,
+      amount: item.amount,
+    };
   }
 }
 

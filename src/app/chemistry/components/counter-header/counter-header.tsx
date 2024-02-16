@@ -1,8 +1,10 @@
-//styles
 import { Link } from 'react-router-dom';
-import style from './counter-header.module.scss';
-import { ArrowBackIcon } from '../../../../icons';
+//variables
 import { CounterRouting } from '../../variables/counter-routing';
+//icons
+import { ArrowBackIcon } from '../../../../icons';
+//styles
+import style from './counter-header.module.scss';
 
 const CounterHeader = (): JSX.Element => {
   return (

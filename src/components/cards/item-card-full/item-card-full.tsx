@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 //types
-import type { IItemCardFull } from '../../../types/data-types';
+import type { IItemCardData } from '../../../types/data-types';
 //style
 import style from './item-card-full.module.scss';
 
 interface IItemProps {
-  item: IItemCardFull;
+  item: IItemCardData;
 }
 
 const ItemCardFull = ({ item }: IItemProps): JSX.Element => {

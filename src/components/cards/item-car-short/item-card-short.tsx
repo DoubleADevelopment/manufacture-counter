@@ -1,10 +1,10 @@
 //types
-import type { IItemCardShort } from '../../../types/data-types';
+import type { IItemCardData } from '../../../types/data-types';
 //styles
 import style from './item-card-short.module.scss';
 
 interface IItemCardShortProps {
-  item: IItemCardShort;
+  item: IItemCardData;
 }
 
 const ItemCardShort = ({ item }: IItemCardShortProps): JSX.Element => {

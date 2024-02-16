@@ -12,12 +12,12 @@ import { incrementAction, decrementAction } from '../../store/actions/actions';
 //variables
 import { InputStatuses, CounterText, CounterInputErrorsText } from '../../../../variables';
 //types
-import type { IItemCardShort } from '../../../../types/data-types';
+import type { IItemCardData } from '../../../../types/data-types';
 //style
 import style from './counter.module.scss';
 
 interface ICounterProps {
-  item: IItemCardShort;
+  item: IItemCardData;
 }
 
 const Counter = ({ item }: ICounterProps): JSX.Element => {
