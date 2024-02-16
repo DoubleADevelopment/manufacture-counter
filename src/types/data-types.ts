@@ -40,6 +40,7 @@ interface IItemCardShort {
   itemNumber: string;
   packagingInfo: string;
   image: string;
+  amount: number;
 }
 
 export type {
