@@ -1,4 +1,3 @@
-import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 //components
 import {
@@ -7,27 +6,35 @@ import {
   ButtonPrimary,
   ButtonSecondary,
 } from '../../../../components';
-//store
-import { useAppSelector } from '../../../../hooks/hooks';
-import { SelectorGetCurrentChemistry } from '../../store/slectors/selectors';
 //variables
 import { InputStatuses } from '../../../../variables';
 //types
 import type { IItemCardShort } from '../../../../types/data-types';
-import type { IChemistryDataItemType } from '../../types/data-types';
 //style
 import style from './counter.module.scss';
 
-const Counter = (): JSX.Element => {
-  const { UNID } = useParams();
+interface ICounterProps {
+  item: IItemCardShort;
+}
+
+const Counter = ({ item }: ICounterProps): JSX.Element => {
   const [value, setValue] = useState<number | null>(1);
   const [message, setMessage] = useState<string>('');
   const [status, setStatus] = useState<InputStatuses>(InputStatuses.DEFAULT);
-  const [item, setItem] = useState<IChemistryDataItemType | null>(null);
-  const [itemCardShortData, setItemCardShortData] = useState<IItemCardShort | null>(null);
 
-  const onInputValueChangeHandler = (value: number | null): void => {
-    setValue(value);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setStatus(InputStatuses.DEFAULT);
+    }, 200);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [status]);
+
+  const textAdd = 'Dodać';
+
+  const setCurrentStatus = (value: number | null) => {
     if (value === null) {
       setStatus(InputStatuses.ERROR);
       setMessage('Nic nie wpisanę w pole!');
@@ -40,41 +47,21 @@ const Counter = (): JSX.Element => {
     }
   };
 
-  const selectedItem = useAppSelector((state) => {
-    if (UNID) {
-      return SelectorGetCurrentChemistry(UNID)(state);
-    }
-    return null;
-  });
-
-  useEffect(() => {
-    setItem(selectedItem);
-
-    if (item) {
-      const itemCardShortData = {
-        name: item.name,
-        description: item.description,
-        itemNumber: item.itemNumber,
-        packagingInfo: item.packagingInfo,
-        image: item.image,
-      };
-      setItemCardShortData(itemCardShortData);
-    }
-  }, [UNID, item]);
-
-  const textAdd = 'Dodać';
+  const onInputValueChangeHandler = (value: number | null): void => {
+    setValue(value);
+  };
 
   const plusClickHandler = () => {
-    console.log('click');
+    setCurrentStatus(value);
   };
 
   const minusClickHandler = () => {
-    console.log('click');
+    setCurrentStatus(value);
   };
 
   return (
     <main className={style['counter']}>
-      {itemCardShortData && <ItemCardShort item={itemCardShortData} />}
+      <ItemCardShort item={item} />
 
       <ControlSetValue
         onInputChangeHandler={onInputValueChangeHandler}
