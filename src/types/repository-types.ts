@@ -1,7 +1,7 @@
 interface IRepository<D> {
-  sendData(data: D): Promise<D | Error>;
+  sendData(data: D): D | Error;
 
-  getData(): Promise<D | Error | null>;
+  getData(): D;
 
   getDefaultData(): D;
 

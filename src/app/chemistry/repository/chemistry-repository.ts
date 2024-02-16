@@ -29,31 +29,27 @@ class ChemistryRepositroy implements IRepository<IChemistryDataType> {
     return this.#dataService.getData();
   }
 
-  async sendData(data: IChemistryDataType): Promise<IChemistryDataType | Error> {
-    return new Promise((resolve, reject) => {
-      const result = this.#sendDataToStorage(data);
+  sendData(data: IChemistryDataType): IChemistryDataType | Error {
+    const result = this.#sendDataToStorage(data);
 
-      if (result instanceof Error) {
-        reject(result.message);
-      } else {
-        resolve(result);
-      }
-    });
+    if (result instanceof Error) {
+      throw new Error(result.message);
+    } else {
+      return result;
+    }
   }
 
-  async getData(): Promise<IChemistryDataType | Error | null> {
-    return new Promise((resolve, reject) => {
-      const result = this.#getDataFromStorage();
+  getData(): IChemistryDataType {
+    const result = this.#getDataFromStorage();
 
-      if (result instanceof Error) {
-        reject(result);
-      } else if (result !== null) {
-        resolve(result);
-      } else {
-        const defaultData = this.#getDefaultData();
-        resolve(defaultData);
-      }
-    });
+    if (result instanceof Error) {
+      throw new Error(result.message);
+    } else if (result === null) {
+      const defaultData = this.#getDefaultData();
+      return defaultData;
+    } else {
+      return result;
+    }
   }
 
   getDefaultData(): IChemistryDataType {
