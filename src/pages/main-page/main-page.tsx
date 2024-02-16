@@ -9,7 +9,7 @@ const MainPage = (): JSX.Element => {
   return (
     <PageWithMenuLayout>
       <main className={style['main-page']}>
-        <h2 className={`${style['main-page__title']} heading-xl-large content-primary-a`}>
+        <h2 className={`${style['main-page__title']} heading-medium content-primary-a`}>
           Strona główna
         </h2>
 

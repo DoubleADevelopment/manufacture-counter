@@ -11,7 +11,7 @@ const CounterHeader = (): JSX.Element => {
         <ArrowBackIcon />
         <span className="visually-hidden">Powrót do przeglądu</span>
       </Link>
-      <h1 className={`${style.header__title} heading-medium content-primary-a`}>Licznik chemii</h1>
+      <h1 className={`${style.header__title} heading-medium  content-primary-a`}>Licznik chemii</h1>
     </header>
   );
 };
