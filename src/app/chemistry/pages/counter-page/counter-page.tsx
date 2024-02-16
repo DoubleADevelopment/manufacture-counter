@@ -6,46 +6,25 @@ import { CounterHeader, Counter } from '../../components';
 //store
 import { useAppSelector } from '../../../../hooks/hooks';
 import { SelectorGetCurrentChemistry } from '../../store/slectors/selectors';
+//services
+import chemistryAdapterService from '../../services/chemistry-adapter.service';
 //types
-import type { IChemistryDataItemType } from '../../types/data-types';
-import type { IItemCardShort } from '../../../../types/data-types';
+import type { IItemCardData } from '../../../../types/data-types';
+
+interface UNIDParams {
+  UNID: string;
+}
 
 const CounterPage = (): JSX.Element => {
-  const { UNID } = useParams();
-
-  let currentItemUNID: string;
-
-  if (UNID) {
-    currentItemUNID = UNID.toString();
-  } else {
-    currentItemUNID = 'undefined';
-  }
-
-  const item: IChemistryDataItemType = useAppSelector(SelectorGetCurrentChemistry(currentItemUNID));
-  const itemCardShortData: IItemCardShort = item
-    ? {
-        UNID: item.UNID,
-        name: item.name,
-        description: item.description,
-        itemNumber: item.itemNumber,
-        packagingInfo: item.packagingInfo,
-        image: item.image,
-        amount: item.amount,
-      }
-    : {
-        UNID: 'undefined',
-        name: 'undefined',
-        description: 'undefined',
-        itemNumber: 'undefined',
-        packagingInfo: 'undefined',
-        image: 'undefined',
-        amount: 0,
-      };
+  const { UNID } = useParams<keyof UNIDParams>() as UNIDParams;
+  const item: IItemCardData = chemistryAdapterService.adaptItemToShort(
+    useAppSelector(SelectorGetCurrentChemistry(UNID)),
+  );
 
   return (
     <PageWithHeaderLayout>
       <CounterHeader />
-      {itemCardShortData && <Counter item={itemCardShortData} />}
+      {item && <Counter item={item} />}
     </PageWithHeaderLayout>
   );
 };
