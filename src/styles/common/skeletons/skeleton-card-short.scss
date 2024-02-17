@@ -1,9 +1,6 @@
-
-.skeleton {
-  --light-surface: #FFFFFF;
-  --light-overlay: #DADADA;
-  --surface: var(--light-surface);
-  --overlay: var(--light-overlay);
+.skeleton-card-short {
+  --surface: var(--backgroud-primary);
+  --overlay: var(--background-tertiary);
   --light-skeleton-line: 	linear-gradient(
     90deg,
     rgb(255 255 255 / 0%) 0,

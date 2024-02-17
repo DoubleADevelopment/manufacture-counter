@@ -33,7 +33,9 @@ const ItemCardShort = ({ item }: IItemCardShortProps): JSX.Element => {
       </article>
     );
   } else {
-    return <article className={`${style['item-card-short--skeleton']} skeleton`}></article>;
+    return (
+      <article className={`${style['item-card-short-skeleton']} skeleton-card-short`}></article>
+    );
   }
 };
 export default ItemCardShort;
