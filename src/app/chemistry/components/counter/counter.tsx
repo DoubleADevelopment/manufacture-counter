@@ -1,36 +1,45 @@
+import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 //components
 import {
-  ItemCardShort,
   ControlSetValue,
   ButtonPrimary,
   ButtonSecondary,
+  NotificationStatic,
 } from '../../../../components';
 //store
-import { useAppDispatch } from '../../../../hooks/hooks';
+import { useAppDispatch, useAppSelector } from '../../../../hooks/hooks';
 import { incrementAction, decrementAction } from '../../store/actions/actions';
+import { SelectorCheckIsItemIsset } from '../../store/slectors/selectors';
 //variables
-import { InputStatuses, CounterText, CounterInputErrorsText } from '../../../../variables';
-//types
-import type { IItemCardData } from '../../../../types/data-types';
+import {
+  InputStatuses,
+  CounterText,
+  CounterInputErrorsText,
+  ErrorsText,
+  NotificationType,
+} from '../../../../variables';
 //style
 import style from './counter.module.scss';
 
-interface ICounterProps {
-  item: IItemCardData;
+interface UNIDParams {
+  UNID: string;
 }
 
-const Counter = ({ item }: ICounterProps): JSX.Element => {
+const Counter = (): JSX.Element => {
+  const { UNID } = useParams<keyof UNIDParams>() as UNIDParams;
   const [value, setValue] = useState<number | null>(1);
   const [message, setMessage] = useState<string>('');
   const [status, setStatus] = useState<InputStatuses>(InputStatuses.DEFAULT);
+
+  const itemFromUnidIsset = useAppSelector(SelectorCheckIsItemIsset(UNID));
 
   const dispatch = useAppDispatch();
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setStatus(InputStatuses.DEFAULT);
-    }, 200);
+    }, 300);
 
     return () => {
       clearTimeout(timer);
@@ -66,31 +75,39 @@ const Counter = ({ item }: ICounterProps): JSX.Element => {
   const plusClickHandler = () => {
     const validateResult = validateInputData(value);
     if (validateResult === true && value !== null) {
-      dispatch(incrementAction({ UNID: item.UNID, value: value }));
+      dispatch(incrementAction({ UNID: UNID, value: value }));
     }
   };
 
   const minusClickHandler = () => {
     const validateResult = validateInputData(value);
     if (validateResult === true && value !== null) {
-      dispatch(decrementAction({ UNID: item.UNID, value: value }));
+      dispatch(decrementAction({ UNID: UNID, value: value }));
     }
   };
 
   return (
     <main className={style['counter']}>
-      <ItemCardShort item={item} />
-
-      <ControlSetValue
-        onInputChangeHandler={onInputValueChangeHandler}
-        value={value}
-        status={status}
-        message={message}
-      />
-      <div className={style.counter__controls}>
-        <ButtonSecondary text={CounterText.MINUS} clickHandler={minusClickHandler} />
-        <ButtonPrimary text={CounterText.PLUS} clickHandler={plusClickHandler} />
-      </div>
+      {itemFromUnidIsset ? (
+        <>
+          <ControlSetValue
+            onInputChangeHandler={onInputValueChangeHandler}
+            value={value}
+            status={status}
+            message={message}
+          />
+          <div className={style.counter__controls}>
+            <ButtonSecondary text={CounterText.MINUS} clickHandler={minusClickHandler} />
+            <ButtonPrimary text={CounterText.PLUS} clickHandler={plusClickHandler} />
+          </div>
+        </>
+      ) : (
+        <NotificationStatic
+          headingText="Błąd przy otwarciu licznika"
+          paragraphText={ErrorsText.COMPONENT_NOT_FOUND}
+          type={NotificationType.ERROR}
+        />
+      )}
     </main>
   );
 };

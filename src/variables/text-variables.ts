@@ -10,4 +10,8 @@ enum CounterInputErrorsText {
   DEFAULT = '',
 }
 
-export { CounterText, CounterInputErrorsText };
+enum ErrorsText {
+  COMPONENT_NOT_FOUND = 'Nie znaleziono komponentu do przeliczenia.',
+}
+
+export { CounterText, CounterInputErrorsText, ErrorsText };

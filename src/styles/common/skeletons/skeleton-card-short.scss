@@ -1,0 +1,81 @@
+.skeleton-card-short {
+  --surface: var(--backgroud-primary);
+  --overlay: var(--background-tertiary);
+  --light-skeleton-line: 	linear-gradient(
+    90deg,
+    rgb(255 255 255 / 0%) 0,
+    rgb(255 255 255 / 80%) 50%,
+    rgb(255 255 255 / 0%) 100%
+  );
+  --skeleton-line: var(--light-skeleton-line);
+  --card-padding: 120px;
+  --card-height: 100%;
+  --card-skeleton: linear-gradient(var(--surface), var(--card-height), transparent 0);
+  --line-1-width: 100px;
+  --line-1-height: 100px;
+  --line-1-position: 0 10%;
+  --line-1-skeleton: linear-gradient(var(--overlay), var(--line-1-height), transparent 0);
+  --line-2-width: 50%;
+  --line-2-height: 20px;
+  --line-2-position: var(--card-padding) 10%;
+  --line-2-skeleton: linear-gradient(var(--overlay) var(--line-2-height), transparent 0);
+  --line-3-width: 35%;
+  --line-3-height: 20px;
+  --line-3-position: var(--card-padding) 40%;
+  --line-3-skeleton: linear-gradient(var(--overlay) var(--line-3-height), transparent 0);
+  --line-4-width: 60%;
+  --line-4-height: 20px;
+  --line-4-position: var(--card-padding) 70%;
+  --line-4-skeleton: linear-gradient(var(--overlay) var(--line-3-height), transparent 0);;
+  --blur-width: 200px;
+  --blur-size: var(--blur-width) var(--card-height);
+
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    z-index: 3;
+    border-radius:var(--weather-basic-border-radius);
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    background-image:
+      var(--skeleton-line),
+      var(--line-1-skeleton),
+      var(--line-2-skeleton),
+      var(--line-3-skeleton),
+      var(--line-4-skeleton),
+      var(--card-skeleton);
+    background-position:
+      -150% 0,
+      var(--line-1-position),
+      var(--line-2-position),
+      var(--line-3-position),
+      var(--line-4-position),
+      0 0;
+    background-size:
+      var(--blur-size),
+      var(--line-1-width) var(--line-1-height),
+      var(--line-2-width) var(--line-2-height),
+      var(--line-3-width) var(--line-3-height),
+      var(--line-4-width) var(--line-4-height),
+      100% 100%;
+    background-repeat: no-repeat;
+    animation: current-weather-skeleton-loading-animation 1.5s infinite;
+  }
+}
+
+@keyframes current-weather-skeleton-loading-animation {
+  to {
+    background-position:
+      200% 0,
+      var(--line-1-position),
+      var(--line-2-position),
+      var(--line-3-position),
+      var(--line-4-position),
+      0 0;
+  }
+}

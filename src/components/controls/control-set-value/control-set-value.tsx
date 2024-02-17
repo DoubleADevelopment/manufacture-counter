@@ -62,7 +62,7 @@ const ControlSetValue = ({
           className={`${style['control-set-value__input']} ${inputClassName} content-primary-a`}
           type="number"
           ref={inputEl}
-          value={value ? value : ''}
+          value={value !== null ? value : ''}
           onChange={handleInputChange}
           onKeyDown={onInputKeydownListener}
         />

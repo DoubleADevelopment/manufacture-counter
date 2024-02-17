@@ -1,0 +1,25 @@
+.notification-static {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--basic-border-radius);
+  padding: 16px;
+  width: 100%;
+  height: min-content;
+}
+
+.notification-static--success {
+  background-color: var(--background-light-accent);
+}
+
+.notification-static--error {
+  background-color: var(--background-light-negative);
+}
+
+.notification-static--warning {
+  background-color: var(--background-light-warning);
+}
+
+.notification-static--positive {
+  background-color: var(--background-light-positive);
+}
