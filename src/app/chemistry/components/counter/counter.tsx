@@ -5,7 +5,7 @@ import {
   ControlSetValue,
   ButtonPrimary,
   ButtonSecondary,
-  ComponentNotFound,
+  NotificationStatic,
 } from '../../../../components';
 //store
 import { useAppDispatch, useAppSelector } from '../../../../hooks/hooks';
@@ -17,6 +17,7 @@ import {
   CounterText,
   CounterInputErrorsText,
   ErrorsText,
+  NotificationType,
 } from '../../../../variables';
 //style
 import style from './counter.module.scss';
@@ -101,7 +102,11 @@ const Counter = (): JSX.Element => {
           </div>
         </>
       ) : (
-        <ComponentNotFound text={ErrorsText.COMPONENT_NOT_FOUND} />
+        <NotificationStatic
+          headingText="Błąd przy otwarciu licznika"
+          paragraphText={ErrorsText.COMPONENT_NOT_FOUND}
+          type={NotificationType.ERROR}
+        />
       )}
     </main>
   );

@@ -11,6 +11,7 @@ import {
   ComponentsRouting,
 } from './component-routing-variables';
 import { CounterText, CounterInputErrorsText, ErrorsText } from './text-variables';
+import { NotificationType } from './notofication-variables';
 
 export {
   InputStatuses,
@@ -24,4 +25,5 @@ export {
   CounterText,
   CounterInputErrorsText,
   ErrorsText,
+  NotificationType,
 };
