@@ -1,14 +1,25 @@
+import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 //components
-import { ControlSetValue, ButtonPrimary, ButtonSecondary } from '../../../../components';
+import {
+  ControlSetValue,
+  ButtonPrimary,
+  ButtonSecondary,
+  ComponentNotFound,
+} from '../../../../components';
 //store
-import { useAppDispatch } from '../../../../hooks/hooks';
+import { useAppDispatch, useAppSelector } from '../../../../hooks/hooks';
 import { incrementAction, decrementAction } from '../../store/actions/actions';
+import { SelectorCheckIsItemIsset } from '../../store/slectors/selectors';
 //variables
-import { InputStatuses, CounterText, CounterInputErrorsText } from '../../../../variables';
+import {
+  InputStatuses,
+  CounterText,
+  CounterInputErrorsText,
+  ErrorsText,
+} from '../../../../variables';
 //style
 import style from './counter.module.scss';
-import { useParams } from 'react-router-dom';
 
 interface UNIDParams {
   UNID: string;
@@ -20,12 +31,14 @@ const Counter = (): JSX.Element => {
   const [message, setMessage] = useState<string>('');
   const [status, setStatus] = useState<InputStatuses>(InputStatuses.DEFAULT);
 
+  const itemFromUnidIsset = useAppSelector(SelectorCheckIsItemIsset(UNID));
+
   const dispatch = useAppDispatch();
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setStatus(InputStatuses.DEFAULT);
-    }, 200);
+    }, 300);
 
     return () => {
       clearTimeout(timer);
@@ -74,16 +87,22 @@ const Counter = (): JSX.Element => {
 
   return (
     <main className={style['counter']}>
-      <ControlSetValue
-        onInputChangeHandler={onInputValueChangeHandler}
-        value={value}
-        status={status}
-        message={message}
-      />
-      <div className={style.counter__controls}>
-        <ButtonSecondary text={CounterText.MINUS} clickHandler={minusClickHandler} />
-        <ButtonPrimary text={CounterText.PLUS} clickHandler={plusClickHandler} />
-      </div>
+      {itemFromUnidIsset ? (
+        <>
+          <ControlSetValue
+            onInputChangeHandler={onInputValueChangeHandler}
+            value={value}
+            status={status}
+            message={message}
+          />
+          <div className={style.counter__controls}>
+            <ButtonSecondary text={CounterText.MINUS} clickHandler={minusClickHandler} />
+            <ButtonPrimary text={CounterText.PLUS} clickHandler={plusClickHandler} />
+          </div>
+        </>
+      ) : (
+        <ComponentNotFound text={ErrorsText.COMPONENT_NOT_FOUND} />
+      )}
     </main>
   );
 };
