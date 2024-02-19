@@ -11,16 +11,16 @@ import { ItemsList } from '../../../../components';
 //variables
 import { ComponentsRouting } from '../../../../variables/component-routing-variables';
 //types
-import type { ChemistryDataForViewType } from '../../types/data-types';
+import type { ItemsListDataType } from '../../../../types';
 //styles
 import style from './chemistry-page.module.scss';
 
 const ChemistryPage = () => {
-  const [cheistryData, setChemistryData] = useState<ChemistryDataForViewType>();
+  const [cheistryData, setChemistryData] = useState<ItemsListDataType>();
   const chemistryData = useAppSelector(SelectorGetChemistryState);
 
   useEffect(() => {
-    const adaptedData = chemistryAdapterService.adaptDataToView(chemistryData);
+    const adaptedData = chemistryAdapterService.adaptDataToItemsList(chemistryData);
     setChemistryData(adaptedData);
   }, [chemistryData]);
 

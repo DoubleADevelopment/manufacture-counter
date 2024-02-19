@@ -1,5 +1,5 @@
 import type { IAdapterService } from '../../../types';
-import type { IItemCardData } from '../../../types/data-types';
+import type { ItemsListDataType, IItemCardData } from '../../../types/data-types';
 import {
   ChemistryDataForViewType,
   IChemistryDataItemType,
@@ -29,7 +29,7 @@ class ChemistryAdapterService
     return itemsArray;
   }
 
-  adaptItemToShort(item: IChemistryDataItemType): IItemCardData {
+  adaptItemDataToCard(item: IChemistryDataItemType): IItemCardData {
     return {
       UNID: item.UNID,
       name: item.name,
@@ -39,6 +39,14 @@ class ChemistryAdapterService
       image: item.image,
       amount: item.amount,
     };
+  }
+
+  adaptDataToItemsList(data: IChemistryDataType): ItemsListDataType {
+    const dataAdaptedToView = this.adaptDataToView(data);
+    const adaptedData = dataAdaptedToView.map((item) => {
+      return this.adaptItemDataToCard(item);
+    });
+    return adaptedData;
   }
 }
 

@@ -19,7 +19,6 @@ import { IChemistryDataItemType } from '../../types/data-types';
 
 const CounterHeader = (): JSX.Element => {
   const { UNID } = useParams();
-  // const itemFromUnidIsset = useAppSelector(SelectorCheckIsItemIsset(UNID));
 
   const item: IChemistryDataItemType | undefined = UNID
     ? useAppSelector(SelectorGetCurrentChemistry(UNID))
@@ -27,7 +26,7 @@ const CounterHeader = (): JSX.Element => {
   let convertedItem: IItemCardData | undefined;
 
   if (item !== undefined && item) {
-    convertedItem = chemistryAdapterService.adaptItemToShort(item);
+    convertedItem = chemistryAdapterService.adaptItemDataToCard(item);
   } else {
     convertedItem = undefined;
   }
