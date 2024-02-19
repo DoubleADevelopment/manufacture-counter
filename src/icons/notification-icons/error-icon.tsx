@@ -5,7 +5,6 @@ const ErrorIcon = ({ color, size }: IIconPropsType): JSX.Element => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      // viewBox="80 -880 800 800"
       viewBox="0 -960 960 960"
       height={size ? size.height : 40}
       width={size ? size.width : 40}
