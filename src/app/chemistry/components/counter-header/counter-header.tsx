@@ -18,6 +18,8 @@ import { IChemistryDataItemType } from '../../types/data-types';
 
 const CounterHeader = (): JSX.Element => {
   const { UNID } = useParams();
+  // const itemFromUnidIsset = useAppSelector(SelectorCheckIsItemIsset(UNID));
+
   const item: IChemistryDataItemType | undefined = UNID
     ? useAppSelector(SelectorGetCurrentChemistry(UNID))
     : undefined;
