@@ -3,7 +3,7 @@
   align-items: center;
   grid-template-columns: min-content 1fr max-content;
   grid-template-rows: repeat(2, min-content);
-  gap: 20px;
+  gap: var(--header-from-top-to-first-element-padding);
 }
 
 .header__back-link {
