@@ -8,6 +8,7 @@ import { SelectorGetCurrentChemistry } from '../../store/slectors/selectors';
 import { ItemCardShort } from '../../../../components';
 //variables
 import { CounterRouting } from '../../variables/counter-routing';
+import { UnitsOfMeasurementText } from '../../../../variables/text-variables';
 //types
 import type { IItemCardData } from '../../../../types/data-types';
 //icons
@@ -40,7 +41,7 @@ const CounterHeader = (): JSX.Element => {
       <h1 className={`${style.header__title} heading-medium  content-primary-a`}>Licznik chemii</h1>
 
       <div className={style['header__counter-controls']}>
-        <ItemCardShort item={convertedItem} />
+        <ItemCardShort item={convertedItem} measurementText={UnitsOfMeasurementText.AMOUNT} />
       </div>
     </header>
   );

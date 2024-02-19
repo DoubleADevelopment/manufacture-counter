@@ -1,5 +1,7 @@
 //components
 import { ItemCardFull } from '..';
+//variables
+import { UnitsOfMeasurementText } from '../../variables/text-variables';
 //types
 import type { UnionComponentsDataForView } from '../../types/data-types';
 //styles
@@ -22,7 +24,13 @@ const ItemsList = ({ data }: IComponentsListProps): JSX.Element => {
           image: item.image,
           amount: item.amount,
         };
-        return <ItemCardFull item={itemCardFull} key={item.UNID} />;
+        return (
+          <ItemCardFull
+            item={itemCardFull}
+            measurementText={UnitsOfMeasurementText.AMOUNT}
+            key={item.UNID}
+          />
+        );
       })}
     </ul>
   );

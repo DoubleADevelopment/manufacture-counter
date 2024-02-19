@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+//variables
+import { UnitsOfMeasurementText } from '../../../variables/text-variables';
 //types
 import type { IItemCardData } from '../../../types/data-types';
 //style
@@ -6,9 +8,10 @@ import style from './item-card-full.module.scss';
 
 interface IItemProps {
   item: IItemCardData;
+  measurementText: UnitsOfMeasurementText;
 }
 
-const ItemCardFull = ({ item }: IItemProps): JSX.Element => {
+const ItemCardFull = ({ item, measurementText }: IItemProps): JSX.Element => {
   const { UNID, name, description, itemNumber, packagingInfo, image, amount } = item;
 
   return (
@@ -33,7 +36,7 @@ const ItemCardFull = ({ item }: IItemProps): JSX.Element => {
         height={150}
       />
       <div className={`${style['item-card-full__amount']} paragraph-primary-a label-medium`}>
-        Ilość <span className="paragraph-primary-a heading-medium">{amount}</span>
+        {measurementText} <span className="paragraph-primary-a heading-medium">{amount}</span>
       </div>
       <Link className={style['item-card-full__link']} to={`./${UNID}`}>
         <span className="visually-hidden">Otwórz licznik dla {name}</span>
