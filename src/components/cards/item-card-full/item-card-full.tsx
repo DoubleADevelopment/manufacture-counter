@@ -32,9 +32,9 @@ const ItemCardFull = ({ item }: IItemProps): JSX.Element => {
         width={150}
         height={150}
       />
-      <p className={`${style['item-card-full__amount']} paragraph-primary-a paragraph-small`}>
-        {amount}
-      </p>
+      <div className={`${style['item-card-full__amount']} paragraph-primary-a label-medium`}>
+        Ilość <span className="paragraph-primary-a heading-medium">{amount}</span>
+      </div>
       <Link className={style['item-card-full__link']} to={`./${UNID}`}>
         <span className="visually-hidden">Otwórz licznik dla {name}</span>
       </Link>
