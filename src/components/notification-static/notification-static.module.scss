@@ -1,25 +1,54 @@
 .notification-static {
-  display: flex;
+  display: grid;
   align-items: center;
-  justify-content: center;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: repeat(2, max-content);
   border-radius: var(--basic-border-radius);
   padding: 16px;
   width: 100%;
   height: min-content;
+  gap: 5px;
 }
 
-.notification-static--success {
+.notification-static__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column-start: 1;
+  grid-row: 1/-1;
+  border-radius: 100%;
+  width: min-content;
+  height: min-content;
+}
+
+.notification-static--info {
   background-color: var(--background-light-accent);
+
+  & .notification-static__icon::after {
+    border-color: var(--background-accent);
+  }
 }
 
 .notification-static--error {
   background-color: var(--background-light-negative);
+
+  & .notification-static__icon::after {
+    border-color: var(--background-negative);
+  }
 }
 
 .notification-static--warning {
   background-color: var(--background-light-warning);
+
+  & .notification-static__icon::after {
+    border-color: var(--background-warning);
+  }
 }
 
 .notification-static--positive {
   background-color: var(--background-light-positive);
+
+  & .notification-static__icon::after {
+    border-color: var(--background-positive);
+  }
 }

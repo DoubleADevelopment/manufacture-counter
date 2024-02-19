@@ -8,11 +8,10 @@ export const SelectorGetCurrentChemistry =
   (UNID: string) =>
   (state: RootState): IChemistryDataItemType =>
     state.chemistry.items[UNID];
-export const SelectorCheckIsItemIsset =
-  (UNID: string) =>
+export const SelectorCheckIfElementExistsByUNID =
+  (UNID: string | undefined) =>
   (state: RootState): boolean => {
-    const item = state.chemistry.items[UNID];
-    if (item) {
+    if (UNID && state.chemistry.items[UNID]) {
       return true;
     } else {
       return false;

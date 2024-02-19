@@ -1,10 +1,3 @@
-import {
-  ChemistryDataForViewType,
-  IChemistryDataItemType,
-} from '../app/chemistry/types/data-types';
-import { GumsDataForViewType, IGumsDataItemType } from '../app/gums/types/data-types';
-import { PigmentsDataForViewType, IPigmentsDataItemType } from '../app/pigments/types/data-type';
-
 interface IComponentsListDataItem {
   title: string;
   link: string;
@@ -12,16 +5,6 @@ interface IComponentsListDataItem {
 }
 
 type ComponentsListDataType = IComponentsListDataItem[];
-
-type UnionComponentsDataForView =
-  | ChemistryDataForViewType
-  | GumsDataForViewType
-  | PigmentsDataForViewType;
-
-type UnionComponentsDataItemType =
-  | IChemistryDataItemType
-  | IGumsDataItemType
-  | IPigmentsDataItemType;
 
 interface IItemCardData {
   UNID: string;
@@ -33,10 +16,6 @@ interface IItemCardData {
   amount: number;
 }
 
-export type {
-  IComponentsListDataItem,
-  ComponentsListDataType,
-  UnionComponentsDataItemType,
-  UnionComponentsDataForView,
-  IItemCardData,
-};
+type ItemsListDataType = IItemCardData[];
+
+export type { IComponentsListDataItem, ComponentsListDataType, IItemCardData, ItemsListDataType };

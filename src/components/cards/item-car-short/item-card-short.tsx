@@ -1,3 +1,5 @@
+//variables
+import { UnitsOfMeasurementText } from '../../../variables/text-variables';
 //types
 import type { IItemCardData } from '../../../types/data-types';
 //styles
@@ -5,9 +7,10 @@ import style from './item-card-short.module.scss';
 
 interface IItemCardShortProps {
   item: IItemCardData | undefined;
+  measurementText: UnitsOfMeasurementText;
 }
 
-const ItemCardShort = ({ item }: IItemCardShortProps): JSX.Element => {
+const ItemCardShort = ({ item, measurementText }: IItemCardShortProps): JSX.Element => {
   if (item) {
     return (
       <article className={style['item-card-short']}>
@@ -28,7 +31,8 @@ const ItemCardShort = ({ item }: IItemCardShortProps): JSX.Element => {
           height={150}
         />
         <div className={`${style['item-card-short__amount']} paragraph-primary-a label-medium`}>
-          Ilość <span className="paragraph-primary-a heading-medium">{item && item.amount}</span>
+          {measurementText}
+          <span className="paragraph-primary-a heading-medium">{item && item.amount}</span>
         </div>
       </article>
     );

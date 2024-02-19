@@ -2,9 +2,9 @@
   position: relative;
   display: grid;
   grid-template-areas:
-  "info image"
+  "image info amount"
   ;
-  grid-template-columns: 1fr max-content;
+  grid-template-columns: 100px 1fr min-content;
   grid-template-rows: min-content;
   border: 2px solid var(--border-opaque);
   border-radius: var(--basic-border-radius);
@@ -23,32 +23,27 @@
   align-items: flex-start;
   justify-content: flex-start;
   grid-area: info;
-  padding: 16px;
+  padding: 15px 10px;
   gap: 5px;
 }
 
 .item-card-full__image {
   flex-flow: 1;
   border-radius: var(--basic-border-radius);
+  width: 100%;
+  min-width: 50px;
   min-height: 100%;
   max-width: 100px;
   object-fit: cover;
 }
 
 .item-card-full__amount {
-  position: absolute;
-  right: -15px;
-  top: -15px;
-  z-index: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--border-opaque);
-  border-radius: 50%;
-  padding: 16px;
-  width: 40px;
-  height: 40px;
-  background-color: var(--background-light-accent);
+  grid-area: amount;
+  padding-right: 10px;
 }
 
 .item-card-full__link {

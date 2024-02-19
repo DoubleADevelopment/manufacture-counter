@@ -8,6 +8,7 @@ import { SelectorGetCurrentChemistry } from '../../store/slectors/selectors';
 import { ItemCardShort } from '../../../../components';
 //variables
 import { CounterRouting } from '../../variables/counter-routing';
+import { UnitsOfMeasurementText } from '../../../../variables/text-variables';
 //types
 import type { IItemCardData } from '../../../../types/data-types';
 //icons
@@ -18,13 +19,14 @@ import { IChemistryDataItemType } from '../../types/data-types';
 
 const CounterHeader = (): JSX.Element => {
   const { UNID } = useParams();
+
   const item: IChemistryDataItemType | undefined = UNID
     ? useAppSelector(SelectorGetCurrentChemistry(UNID))
     : undefined;
   let convertedItem: IItemCardData | undefined;
 
   if (item !== undefined && item) {
-    convertedItem = chemistryAdapterService.adaptItemToShort(item);
+    convertedItem = chemistryAdapterService.adaptItemDataToCard(item);
   } else {
     convertedItem = undefined;
   }
@@ -38,7 +40,7 @@ const CounterHeader = (): JSX.Element => {
       <h1 className={`${style.header__title} heading-medium  content-primary-a`}>Licznik chemii</h1>
 
       <div className={style['header__counter-controls']}>
-        <ItemCardShort item={convertedItem} />
+        <ItemCardShort item={convertedItem} measurementText={UnitsOfMeasurementText.AMOUNT} />
       </div>
     </header>
   );

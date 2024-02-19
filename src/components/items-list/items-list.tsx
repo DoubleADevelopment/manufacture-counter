@@ -1,28 +1,27 @@
 //components
 import { ItemCardFull } from '..';
+//variables
+import { UnitsOfMeasurementText } from '../../variables/text-variables';
 //types
-import type { UnionComponentsDataForView } from '../../types/data-types';
+import type { ItemsListDataType } from '../../types/data-types';
 //styles
 import style from './items-list.module.scss';
 
 interface IComponentsListProps {
-  data: UnionComponentsDataForView;
+  data: ItemsListDataType;
 }
 
 const ItemsList = ({ data }: IComponentsListProps): JSX.Element => {
   return (
     <ul className={style['items-list']}>
       {data.map((item) => {
-        const itemCardFull = {
-          UNID: item.UNID,
-          name: item.name,
-          description: item.description,
-          itemNumber: item.itemNumber,
-          packagingInfo: item.packagingInfo,
-          image: item.image,
-          amount: item.amount,
-        };
-        return <ItemCardFull item={itemCardFull} key={item.UNID} />;
+        return (
+          <ItemCardFull
+            item={item}
+            measurementText={UnitsOfMeasurementText.AMOUNT}
+            key={item.UNID}
+          />
+        );
       })}
     </ul>
   );

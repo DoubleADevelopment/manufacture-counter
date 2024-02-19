@@ -14,4 +14,10 @@ enum ErrorsText {
   COMPONENT_NOT_FOUND = 'Nie znaleziono komponentu do przeliczenia.',
 }
 
-export { CounterText, CounterInputErrorsText, ErrorsText };
+enum UnitsOfMeasurementText {
+  KG = 'Kg',
+  AMOUNT = 'Ilość',
+  BAGS = 'vorki',
+}
+
+export { CounterText, UnitsOfMeasurementText, CounterInputErrorsText, ErrorsText };
