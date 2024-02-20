@@ -7,24 +7,19 @@ import type {
   ItemsListDataType,
 } from './data-types';
 import type { IRouteItem } from './routing-types';
-import type {
-  IIncDecActionParametrsType,
-  IncrementActionType,
-  DecrementActionType,
-} from './action-types';
+import type { IIncDecActionParametrsType, ILogActionType } from './action-types';
 import { AppDispatch, RootState, AppThunk, AppDispatchType } from './store-types';
 import { SetActiveLinkType } from './other-types';
 import { IIconPropsType } from './icon-props-type';
 
 export type {
+  ILogActionType,
   IDataService,
   ILocalstorageService,
   IAdapterService,
   IRepository,
   LocalstorageNamesType,
   IIncDecActionParametrsType,
-  IncrementActionType,
-  DecrementActionType,
   AppDispatch,
   RootState,
   AppThunk,
