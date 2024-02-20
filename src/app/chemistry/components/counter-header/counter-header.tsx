@@ -5,10 +5,10 @@ import chemistryAdapterService from '../../services/chemistry-adapter.service';
 import { useAppSelector } from '../../../../hooks/hooks';
 import { SelectorGetCurrentChemistry } from '../../store/slectors/selectors';
 //components
-import { ItemCardShort, ItemCardShortSkeleton } from '../../../../components';
+import { ItemCardShortSkeleton } from '../../../../components';
+import { CounterItemInfo } from '../';
 //variables
 import { CounterRouting } from '../../variables/counter-routing';
-import { UnitsOfMeasurementText } from '../../../../variables/text-variables';
 //types
 import type { IItemCardData } from '../../../../types/data-types';
 import type { IChemistryDataItemType } from '../../types/data-types';
@@ -40,8 +40,8 @@ const CounterHeader = (): JSX.Element => {
       <h1 className={`${style.header__title} heading-medium  content-primary-a`}>Licznik chemii</h1>
 
       <div className={style['header__counter-controls']}>
-        {convertedItem ? (
-          <ItemCardShort item={convertedItem} measurementText={UnitsOfMeasurementText.AMOUNT} />
+        {convertedItem && item ? (
+          <CounterItemInfo itemLogs={item.logs} convertedItem={convertedItem} />
         ) : (
           <ItemCardShortSkeleton />
         )}

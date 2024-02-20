@@ -1,0 +1,15 @@
+.log-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  gap: 5px;
+}
+
+.log-item__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  list-style: none;
+  gap: 10px;
+}

@@ -8,11 +8,16 @@ import style from './item-card-short.module.scss';
 interface IItemCardShortProps {
   item: IItemCardData;
   measurementText: UnitsOfMeasurementText;
+  onCardClickHandler?: () => void;
 }
 
-const ItemCardShort = ({ item, measurementText }: IItemCardShortProps): JSX.Element => {
+const ItemCardShort = ({
+  item,
+  measurementText,
+  onCardClickHandler,
+}: IItemCardShortProps): JSX.Element => {
   return (
-    <article className={style['item-card-short']}>
+    <article onClick={onCardClickHandler} className={style['item-card-short']}>
       <div className={style['item-card-short__wrap']}>
         <h3 className={`content-primary-a heading-small`}>{item && item.name}</h3>
         <p className={`content-primary-a paragraph-small`}>

@@ -5,6 +5,7 @@ import type {
   IComponentsListDataItem,
   ComponentsListDataType,
   ItemsListDataType,
+  ILogsType,
 } from './data-types';
 import type { IRouteItem } from './routing-types';
 import type { IIncDecActionParametrsType, ILogActionType } from './action-types';
@@ -30,4 +31,5 @@ export type {
   IComponentsListDataItem,
   IRouteItem,
   ItemsListDataType,
+  ILogsType,
 };

@@ -1,4 +1,5 @@
 //vars
+import { ILogsType } from '../../../types/data-types';
 import { GumsLogsNames, GumsSettingsNames } from '../variables/data-variables';
 
 interface IGumsDataPackageType {
@@ -7,7 +8,7 @@ interface IGumsDataPackageType {
   items: IGumsDataItemType[];
 }
 
-interface IGumsLogs {
+interface IGumsLogs extends ILogsType {
   [GumsLogsNames.COUNTER]: {
     log: string[];
     name: string;
@@ -48,4 +49,10 @@ interface IGumsDataType {
 
 type GumsDataForViewType = IGumsDataItemType[];
 
-export type { IGumsDataItemType, IGumsDataType, IGumsDataPackageType, GumsDataForViewType };
+export type {
+  IGumsDataItemType,
+  IGumsDataType,
+  IGumsDataPackageType,
+  GumsDataForViewType,
+  IGumsLogs,
+};

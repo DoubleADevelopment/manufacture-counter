@@ -16,6 +16,19 @@ interface IItemCardData {
   amount: number;
 }
 
+interface ILogsType {
+  [key: string]: {
+    log: string[];
+    name: string;
+  };
+}
+
 type ItemsListDataType = IItemCardData[];
 
-export type { IComponentsListDataItem, ComponentsListDataType, IItemCardData, ItemsListDataType };
+export type {
+  IComponentsListDataItem,
+  ComponentsListDataType,
+  IItemCardData,
+  ItemsListDataType,
+  ILogsType,
+};

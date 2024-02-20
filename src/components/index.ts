@@ -6,6 +6,7 @@ import { ItemCardFull, ItemCardShort, ComponentCard, ItemCardShortSkeleton } fro
 import { ControlSetValue } from './controls';
 import { ButtonPrimary, ButtonSecondary } from './buttons';
 import NotificationStatic from './notification-static/notification-static';
+import { LogsModal } from './modals';
 
 export {
   Header,
@@ -20,4 +21,5 @@ export {
   ButtonSecondary,
   NotificationStatic,
   ItemCardShortSkeleton,
+  LogsModal,
 };
