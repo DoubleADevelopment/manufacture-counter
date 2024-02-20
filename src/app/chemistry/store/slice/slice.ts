@@ -21,8 +21,7 @@ export const chemistrySlice = createSlice({
     },
     log: (state, action: PayloadAction<ILogActionType<ChemistryLogsNames>>) => {
       const { UNID, logName, log } = action.payload;
-      console.log(UNID, logName, log);
-      state.items[UNID].logs[logName].log = [...state.items[UNID].logs[logName].log, log];
+      state.items[UNID].logs[logName].log.push(log);
     },
   },
 });
