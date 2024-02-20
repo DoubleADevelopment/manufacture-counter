@@ -1,4 +1,5 @@
 //vars
+import { ILogsType } from '../../../types/data-types';
 import { PigmentsLogsNames, PigmentsSettingsNames } from '../variables/data-variables';
 
 interface IPigmentsDataPackageType {
@@ -7,7 +8,7 @@ interface IPigmentsDataPackageType {
   items: IPigmentsDataItemType[];
 }
 
-interface IPigmentsLogs {
+interface IPigmentsLogs extends ILogsType {
   [PigmentsLogsNames.COUNTER]: {
     log: string[];
     name: string;
@@ -65,4 +66,5 @@ export type {
   IPigmentsDataType,
   IPigmentsDataPackageType,
   PigmentsDataForViewType,
+  IPigmentsLogs,
 };

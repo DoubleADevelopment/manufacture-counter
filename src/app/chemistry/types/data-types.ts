@@ -1,4 +1,5 @@
 //vars
+import { ILogsType } from '../../../types/data-types';
 import { ChemistryLogsNames, ChemistrySettingsNames } from '../variables/data-variables';
 
 interface IChemistryDataPackageType {
@@ -7,7 +8,7 @@ interface IChemistryDataPackageType {
   items: IChemistryDataItemType[];
 }
 
-interface IChemistryLogs {
+interface IChemistryLogs extends ILogsType {
   [ChemistryLogsNames.COUNTER]: {
     log: string[];
     name: string;
@@ -49,4 +50,5 @@ export type {
   IChemistryDataType,
   IChemistryDataPackageType,
   ChemistryDataForViewType,
+  IChemistryLogs,
 };

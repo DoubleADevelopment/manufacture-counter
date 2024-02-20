@@ -1,8 +1,10 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+//variables
+import { ChemistryLogsNames } from '../../variables/data-variables';
 //state
 import chemistryState from '../state/state';
 //types
-import type { IIncDecActionParametrsType } from '../../../../types';
+import type { IIncDecActionParametrsType, ILogActionType } from '../../../../types';
 
 export const chemistrySlice = createSlice({
   name: 'chemistry',
@@ -17,9 +19,13 @@ export const chemistrySlice = createSlice({
       const { UNID, value } = action.payload;
       state.items[UNID].amount = state.items[UNID].amount - value;
     },
+    log: (state, action: PayloadAction<ILogActionType<ChemistryLogsNames>>) => {
+      const { UNID, logName, log } = action.payload;
+      state.items[UNID].logs[logName].log.push(log);
+    },
   },
 });
 
-export const { increment, decrement } = chemistrySlice.actions;
+export const { increment, decrement, log } = chemistrySlice.actions;
 
 export default chemistrySlice.reducer;

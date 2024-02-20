@@ -19,7 +19,7 @@ const chemistryData: IChemistryDataPackageType = {
       logs: {
         [ChemistryLogsNames.COUNTER]: {
           log: [],
-          name: 'string',
+          name: 'Licznik',
         },
       },
       lastChange: null,
@@ -45,7 +45,7 @@ const chemistryData: IChemistryDataPackageType = {
       logs: {
         [ChemistryLogsNames.COUNTER]: {
           log: [],
-          name: 'string',
+          name: 'Licznik',
         },
       },
       lastChange: null,
@@ -71,7 +71,7 @@ const chemistryData: IChemistryDataPackageType = {
       logs: {
         [ChemistryLogsNames.COUNTER]: {
           log: [],
-          name: 'string',
+          name: 'Licznik',
         },
       },
       lastChange: null,
@@ -98,7 +98,7 @@ const chemistryData: IChemistryDataPackageType = {
       logs: {
         [ChemistryLogsNames.COUNTER]: {
           log: [],
-          name: 'string',
+          name: 'Licznik',
         },
       },
       lastChange: null,
@@ -124,7 +124,7 @@ const chemistryData: IChemistryDataPackageType = {
       logs: {
         [ChemistryLogsNames.COUNTER]: {
           log: [],
-          name: 'string',
+          name: 'Licznik',
         },
       },
       lastChange: null,
@@ -151,7 +151,7 @@ const chemistryData: IChemistryDataPackageType = {
       logs: {
         [ChemistryLogsNames.COUNTER]: {
           log: [],
-          name: 'string',
+          name: 'Licznik',
         },
       },
       lastChange: null,
@@ -177,7 +177,7 @@ const chemistryData: IChemistryDataPackageType = {
       logs: {
         [ChemistryLogsNames.COUNTER]: {
           log: [],
-          name: 'string',
+          name: 'Licznik',
         },
       },
       lastChange: null,
