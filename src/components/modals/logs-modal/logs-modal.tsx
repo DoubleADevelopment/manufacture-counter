@@ -1,6 +1,10 @@
 import { MouseEvent } from 'react';
 //component
 import LogItem from './log-item/log-item';
+//variables
+import { InterfaceTest } from '../../../variables';
+//icons
+import { CloseIcon } from '../../../icons';
 //types
 import type { ILogsType } from '../../../types';
 //styles
@@ -20,7 +24,7 @@ const LogsModal = ({ logsData, closeModal }: ILogsModalProps) => {
     return logsArray;
   };
 
-  const onCloseModalClickHandler = (evt: MouseEvent<HTMLDivElement | HTMLButtonElement>) => {
+  const onModalBackgroundClickHandler = (evt: MouseEvent<HTMLDivElement | HTMLButtonElement>) => {
     const target = evt.target as HTMLElement;
     const dataCloseModal = target.getAttribute('data-close-modal');
 
@@ -29,13 +33,28 @@ const LogsModal = ({ logsData, closeModal }: ILogsModalProps) => {
     }
   };
 
+  const onCloseButtonClickHandler = () => {
+    closeModal();
+  };
+
   return (
-    <div className={style['logs-modal']} onClick={onCloseModalClickHandler} data-close-modal="true">
+    <div
+      className={style['logs-modal']}
+      onClick={onModalBackgroundClickHandler}
+      data-close-modal="true"
+    >
       <div className={style['logs-modal__content']}>
         {generateLogs()}
-        <button type="button" onClick={onCloseModalClickHandler} data-close-modal="true">
-          close modal
+        <button
+          className={style['logs-modal__close-btn']}
+          type="button"
+          onClick={onCloseButtonClickHandler}
+        >
+          <span className="visually-hidden">{InterfaceTest.CLOSE_MODAL}</span>
+          <CloseIcon />
         </button>
+
+        <button type="button">clear data</button>
       </div>
     </div>
   );

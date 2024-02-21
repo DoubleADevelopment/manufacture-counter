@@ -20,4 +20,8 @@ enum UnitsOfMeasurementText {
   BAGS = 'vorki',
 }
 
-export { CounterText, UnitsOfMeasurementText, CounterInputErrorsText, ErrorsText };
+enum InterfaceTest {
+  CLOSE_MODAL = 'Zamknąć okno',
+}
+
+export { CounterText, UnitsOfMeasurementText, CounterInputErrorsText, ErrorsText, InterfaceTest };

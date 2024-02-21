@@ -7,6 +7,7 @@ import ErrorIcon from './notification-icons/error-icon';
 import WarningIcon from './notification-icons/warning-icon';
 import InfoIcon from './notification-icons/info-icon';
 import PositiveIcon from './notification-icons/positive-icon';
+import CloseIcon from './common-icons/close-icon';
 
 export {
   ErrorIcon,
@@ -18,4 +19,5 @@ export {
   NavIconOverview,
   ArrowBackIcon,
   PositiveIcon,
+  CloseIcon,
 };
