@@ -2,6 +2,7 @@ enum CounterText {
   PLUS = 'Dodać',
   MINUS = 'Odjąć',
   CHEMISTRY_SET_VALUE_TITLE = 'Ilość',
+  CLEAR_COUNTER_DATA = 'Usuń danę licznika',
 }
 
 enum CounterInputErrorsText {

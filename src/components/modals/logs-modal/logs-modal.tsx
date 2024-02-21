@@ -1,9 +1,9 @@
 import { MouseEvent } from 'react';
 //component
 import LogItem from './log-item/log-item';
-import { ButtonSecondary } from '../../';
+import { ButtonSecondarySmall } from '../../';
 //variables
-import { InterfaceTest } from '../../../variables';
+import { CounterText, InterfaceTest } from '../../../variables';
 //icons
 import { CloseIcon } from '../../../icons';
 //types
@@ -60,7 +60,10 @@ const LogsModal = ({ logsData, closeModal }: ILogsModalProps) => {
         </button>
 
         <div className={style['logs-modal__controls']}>
-          <ButtonSecondary text={'clear data'} clickHandler={onClearDataClickHandler} />
+          <ButtonSecondarySmall
+            text={CounterText.CLEAR_COUNTER_DATA}
+            clickHandler={onClearDataClickHandler}
+          />
         </div>
       </div>
     </div>
