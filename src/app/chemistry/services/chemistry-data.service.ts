@@ -1,6 +1,10 @@
 //types
 import type { IDataService } from '../../../types';
-import type { IChemistryDataPackageType, IChemistryDataType } from '../types/data-types';
+import type {
+  IChemistryDataItemType,
+  IChemistryDataPackageType,
+  IChemistryDataType,
+} from '../types/data-types';
 //data
 import chemistryData from '../data/chemistry-data';
 //adapters
@@ -21,6 +25,10 @@ class ChemistryDataService implements IDataService<IChemistryDataType, IChemistr
 
   getDataPackage(): IChemistryDataPackageType {
     return this.#dataPackage;
+  }
+
+  getDataItem(id: string): IChemistryDataItemType {
+    return this.#data[id];
   }
 }
 

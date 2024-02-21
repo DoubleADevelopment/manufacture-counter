@@ -1,10 +1,13 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+//services
+import chemistryDataService from '../../services/chemistry-data.service';
 //variables
 import { ChemistryLogsNames } from '../../variables/data-variables';
 //state
 import chemistryState from '../state/state';
 //types
 import type { IIncDecActionParametrsType, ILogActionType } from '../../../../types';
+import type { IChemistryDataItemType } from '../../types/data-types';
 
 export const chemistrySlice = createSlice({
   name: 'chemistry',
@@ -23,9 +26,16 @@ export const chemistrySlice = createSlice({
       const { UNID, logName, log } = action.payload;
       state.items[UNID].logs[logName].log.push(log);
     },
+    clearItem: (state, action: PayloadAction<IChemistryDataItemType>) => {
+      const { UNID } = action.payload;
+      state.items[UNID] = action.payload;
+    },
+    clear: (state) => {
+      state.items = chemistryDataService.getData();
+    },
   },
 });
 
-export const { increment, decrement, log } = chemistrySlice.actions;
+export const { increment, decrement, log, clearItem } = chemistrySlice.actions;
 
 export default chemistrySlice.reducer;
