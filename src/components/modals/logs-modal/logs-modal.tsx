@@ -14,9 +14,10 @@ import style from './logs-modal.module.scss';
 interface ILogsModalProps {
   logsData: ILogsType;
   closeModal: () => void;
+  clearData: () => void;
 }
 
-const LogsModal = ({ logsData, closeModal }: ILogsModalProps) => {
+const LogsModal = ({ logsData, closeModal, clearData }: ILogsModalProps) => {
   const generateLogs = (): JSX.Element[] => {
     const logsArray: JSX.Element[] = [];
     for (const key in logsData) {
@@ -39,7 +40,7 @@ const LogsModal = ({ logsData, closeModal }: ILogsModalProps) => {
   };
 
   const onClearDataClickHandler = () => {
-    console.log('click');
+    clearData();
   };
 
   return (
