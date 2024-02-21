@@ -10,7 +10,7 @@ import {
   ButtonPrimarySmall,
   ButtonSecondarySmall,
 } from './buttons';
-import NotificationStatic from './notification-static/notification-static';
+import { NotificationStatic, PageNotification } from './notifications/';
 import { LogsModal } from './modals';
 
 export {
@@ -29,4 +29,5 @@ export {
   LogsModal,
   ButtonPrimarySmall,
   ButtonSecondarySmall,
+  PageNotification,
 };

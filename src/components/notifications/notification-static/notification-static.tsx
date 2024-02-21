@@ -1,7 +1,7 @@
 //variables
-import { NotificationType } from '../../variables';
+import { NotificationType } from '../../../variables';
 //icons
-import { ErrorIcon, InfoIcon, WarningIcon, PositiveIcon } from '../../icons';
+import { ErrorIcon, InfoIcon, WarningIcon, PositiveIcon } from '../../../icons';
 //styles
 import style from './notification-static.module.scss';
 

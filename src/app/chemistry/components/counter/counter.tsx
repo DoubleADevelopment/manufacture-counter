@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 //components
-import { NotificationStatic } from '../../../../components';
+import { PageNotification } from '../../../../components';
 import CounterControls from './counter-controls/counter-controls';
 //store
 import { useAppSelector } from '../../../../hooks/hooks';
@@ -20,10 +20,10 @@ const Counter = (): JSX.Element => {
       {displayCounter ? (
         <CounterControls UNID={UNID} />
       ) : (
-        <NotificationStatic
+        <PageNotification
           headingText="Błąd przy otwarciu licznika"
           paragraphText={ErrorsText.COMPONENT_NOT_FOUND}
-          type={NotificationType.ERROR}
+          type={NotificationType.INFO}
         />
       )}
     </main>
