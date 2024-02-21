@@ -55,6 +55,7 @@ const CounterControls = ({ UNID }: ICounterControlsProps): JSX.Element => {
       setMessage(CounterInputErrorsText.DEFAULT);
     }
   };
+
   const plusClickHandler = () => {
     const validateResult = validateInputData(value);
     if (validateResult === true && value !== null) {

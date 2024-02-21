@@ -13,4 +13,8 @@ const onEnterClickHandlerToElementBlur = (
   }
 };
 
-export { onEnterClickHandlerToElementBlur };
+const extractNumbers = (inputString: string): string => {
+  return inputString.replace(/[^0-9]+/g, '');
+};
+
+export { onEnterClickHandlerToElementBlur, extractNumbers };
