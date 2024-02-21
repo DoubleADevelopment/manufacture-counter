@@ -8,7 +8,8 @@ import { SelectorGetCurrentChemistry } from '../../store/slectors/selectors';
 import { ItemCardShortSkeleton } from '../../../../components';
 import { CounterItemInfo } from '../';
 //variables
-import { CounterRouting } from '../../variables/counter-routing';
+import { CounterRouting } from '../../variables/';
+import { InterfaceText } from '../../../../variables';
 //types
 import type { IItemCardData } from '../../../../types/data-types';
 import type { IChemistryDataItemType } from '../../types/data-types';
@@ -35,7 +36,7 @@ const CounterHeader = (): JSX.Element => {
     <header className={style.header}>
       <Link className={style['header__back-link']} to={CounterRouting.ROOT}>
         <ArrowBackIcon />
-        <span className="visually-hidden">Powrót do przeglądu</span>
+        <span className="visually-hidden">{InterfaceText.BACK_TO_OVERVIEW}</span>
       </Link>
       <h1 className={`${style.header__title} heading-medium  content-primary-a`}>Licznik chemii</h1>
 

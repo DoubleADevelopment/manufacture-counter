@@ -3,7 +3,7 @@ import { MouseEvent } from 'react';
 import LogItem from './log-item/log-item';
 import { ButtonSecondarySmall } from '../../';
 //variables
-import { CounterText, InterfaceTest } from '../../../variables';
+import { CounterText, InterfaceText } from '../../../variables';
 //icons
 import { CloseIcon } from '../../../icons';
 //types
@@ -56,7 +56,7 @@ const LogsModal = ({ logsData, closeModal, clearData }: ILogsModalProps) => {
           type="button"
           onClick={onCloseButtonClickHandler}
         >
-          <span className="visually-hidden">{InterfaceTest.CLOSE_MODAL}</span>
+          <span className="visually-hidden">{InterfaceText.CLOSE_MODAL}</span>
           <CloseIcon />
         </button>
 

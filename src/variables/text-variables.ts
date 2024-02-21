@@ -14,6 +14,7 @@ enum CounterInputErrorsText {
 
 enum ErrorsText {
   COMPONENT_NOT_FOUND = 'Nie znaleziono komponentu do przeliczenia.',
+  COUNTER_OPENING_ERROR = 'Błąd przy otwarciu licznika',
 }
 
 enum UnitsOfMeasurementText {
@@ -22,8 +23,9 @@ enum UnitsOfMeasurementText {
   BAGS = 'vorki',
 }
 
-enum InterfaceTest {
+enum InterfaceText {
   CLOSE_MODAL = 'Zamknąć okno',
+  BACK_TO_OVERVIEW = 'Powrót do przeglądu',
 }
 
-export { CounterText, UnitsOfMeasurementText, CounterInputErrorsText, ErrorsText, InterfaceTest };
+export { CounterText, UnitsOfMeasurementText, CounterInputErrorsText, ErrorsText, InterfaceText };

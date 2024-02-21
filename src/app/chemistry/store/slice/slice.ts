@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 //variables
-import { ChemistryLogsNames } from '../../variables/data-variables';
+import { ChemistryLogsNames } from '../../variables/';
 //state
 import chemistryState from '../state/state';
 //types

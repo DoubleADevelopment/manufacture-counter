@@ -1,6 +1,6 @@
 import { chemistrySlice } from '../slice/slice';
 //variables
-import { ChemistryLogsNames } from '../../variables/data-variables';
+import { ChemistryLogsNames } from '../../variables/';
 //services
 import chemistryDataService from '../../services/chemistry-data.service';
 //repository

@@ -10,7 +10,7 @@ import {
   ComponentsRoutingNames,
   ComponentsRouting,
 } from './component-routing-variables';
-import { CounterText, CounterInputErrorsText, ErrorsText, InterfaceTest } from './text-variables';
+import { CounterText, CounterInputErrorsText, ErrorsText, InterfaceText } from './text-variables';
 import { NotificationType } from './notofication-variables';
 
 export {
@@ -26,5 +26,5 @@ export {
   CounterInputErrorsText,
   ErrorsText,
   NotificationType,
-  InterfaceTest,
+  InterfaceText,
 };

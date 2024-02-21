@@ -20,7 +20,7 @@ const Counter = (): JSX.Element => {
     } else {
       return (
         <PageNotification
-          headingText="Błąd przy otwarciu licznika"
+          headingText={ErrorsText.COUNTER_OPENING_ERROR}
           paragraphText={ErrorsText.COMPONENT_NOT_FOUND}
           type={NotificationType.ERROR}
         />

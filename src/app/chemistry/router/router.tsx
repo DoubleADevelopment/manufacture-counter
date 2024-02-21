@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 //variables
-import { CounterRouting } from '../variables/counter-routing';
+import { CounterRouting } from '../variables/';
 //pages
 import { ChemistryPage, CounterPage } from '../pages';
 

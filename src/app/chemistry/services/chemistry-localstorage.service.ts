@@ -2,7 +2,7 @@
 import type { LocalstorageNamesType, ILocalstorageService } from '../../../types';
 import type { IChemistryDataType } from '../types/data-types';
 //variables
-import { CHEMISTRY_STORAGE_NAME } from '../variables/data-variables';
+import { CHEMISTRY_STORAGE_NAME } from '../variables/';
 
 class ChemistryLocalstorageService implements ILocalstorageService<IChemistryDataType> {
   #storageName: LocalstorageNamesType;

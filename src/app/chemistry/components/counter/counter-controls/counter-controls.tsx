@@ -29,6 +29,7 @@ const CounterControls = ({ UNID }: ICounterControlsProps): JSX.Element => {
       clearTimeout(timer);
     };
   }, [status]);
+
   const validateInputData = (value: number | null): boolean => {
     if (value === null) {
       setStatus(InputStatuses.ERROR);
