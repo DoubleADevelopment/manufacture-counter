@@ -1,3 +1,5 @@
+//variables
+import { CounterText } from '../../../../variables';
 //styles
 import style from './log-item.module.scss';
 
@@ -8,16 +10,20 @@ interface ILogsItemProps {
 
 const LogItem = ({ log, logName }: ILogsItemProps): JSX.Element => {
   return (
-    <div className={style['log-item']}>
-      <h4 className="heading-x-small content-primary-a">{logName}</h4>
+    <article className={style['log-item']}>
+      <h4 className="heading-x-small content-primary-a">{logName} logi</h4>
       <ul className={`${style['log-item__list']}`}>
-        {log.map((item) => (
-          <li className="content-primary-a paragraph-medium" key={item}>
-            {item}
-          </li>
-        ))}
+        {log.length ? (
+          log.map((item, i) => (
+            <li className="content-primary-a paragraph-medium" key={i}>
+              {item}
+            </li>
+          ))
+        ) : (
+          <p className="content-primary-a paragraph-medium">{CounterText.NO_LOGS}</p>
+        )}
       </ul>
-    </div>
+    </article>
   );
 };
 

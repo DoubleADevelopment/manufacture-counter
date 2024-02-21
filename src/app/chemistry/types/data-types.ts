@@ -1,6 +1,6 @@
 //vars
 import { ILogsType } from '../../../types/data-types';
-import { ChemistryLogsNames, ChemistrySettingsNames } from '../variables/data-variables';
+import { ChemistryLogsNames, ChemistrySettingsNames } from '../variables/';
 
 interface IChemistryDataPackageType {
   dataPackageName: string;

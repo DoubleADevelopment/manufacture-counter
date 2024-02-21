@@ -13,10 +13,36 @@
 }
 
 .logs-modal__content {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 1fr min-content;
   border-radius: var(--basic-border-radius);
-  padding: var(--standart-side-padding);
+  padding: 30px var(--standart-side-padding);
+  width: max-content;
+  min-width: 300px;
   background-color: var(--backgroud-primary);
   gap: 20px;
+}
+
+.logs-modal__close-btn {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.logs-modal__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: max-content;
+  gap: 10px;
 }

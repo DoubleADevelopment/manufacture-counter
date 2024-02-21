@@ -1,16 +1,13 @@
+//types
+import type { IButtonProps } from '../../../types/other-types';
 //styles
 import style from './button-primary.module.scss';
 
-interface IButtonPrimaryProps {
-  text: string;
-  clickHandler: () => void;
-}
-
-const ButtonPrimary = ({ text, clickHandler }: IButtonPrimaryProps): JSX.Element => {
+const ButtonPrimary = ({ text, clickHandler }: IButtonProps): JSX.Element => {
   return (
     <button
       type="button"
-      className={`${style['button-primary']} paragraph-large`}
+      className={`${style['button-primary']} label-large`}
       onClick={clickHandler}
     >
       {text}

@@ -1,6 +1,11 @@
 import { MouseEvent } from 'react';
 //component
 import LogItem from './log-item/log-item';
+import { ButtonSecondarySmall } from '../../';
+//variables
+import { CounterText, InterfaceText } from '../../../variables';
+//icons
+import { CloseIcon } from '../../../icons';
 //types
 import type { ILogsType } from '../../../types';
 //styles
@@ -9,9 +14,10 @@ import style from './logs-modal.module.scss';
 interface ILogsModalProps {
   logsData: ILogsType;
   closeModal: () => void;
+  clearData: () => void;
 }
 
-const LogsModal = ({ logsData, closeModal }: ILogsModalProps) => {
+const LogsModal = ({ logsData, closeModal, clearData }: ILogsModalProps) => {
   const generateLogs = (): JSX.Element[] => {
     const logsArray: JSX.Element[] = [];
     for (const key in logsData) {
@@ -20,7 +26,7 @@ const LogsModal = ({ logsData, closeModal }: ILogsModalProps) => {
     return logsArray;
   };
 
-  const onCloseModalClickHandler = (evt: MouseEvent<HTMLDivElement | HTMLButtonElement>) => {
+  const onModalBackgroundClickHandler = (evt: MouseEvent<HTMLDivElement | HTMLButtonElement>) => {
     const target = evt.target as HTMLElement;
     const dataCloseModal = target.getAttribute('data-close-modal');
 
@@ -29,13 +35,37 @@ const LogsModal = ({ logsData, closeModal }: ILogsModalProps) => {
     }
   };
 
+  const onCloseButtonClickHandler = () => {
+    closeModal();
+  };
+
+  const onClearDataClickHandler = () => {
+    clearData();
+  };
+
   return (
-    <div className={style['logs-modal']} onClick={onCloseModalClickHandler} data-close-modal="true">
+    <div
+      className={style['logs-modal']}
+      onClick={onModalBackgroundClickHandler}
+      data-close-modal="true"
+    >
       <div className={style['logs-modal__content']}>
         {generateLogs()}
-        <button type="button" onClick={onCloseModalClickHandler} data-close-modal="true">
-          close modal
+        <button
+          className={style['logs-modal__close-btn']}
+          type="button"
+          onClick={onCloseButtonClickHandler}
+        >
+          <span className="visually-hidden">{InterfaceText.CLOSE_MODAL}</span>
+          <CloseIcon />
         </button>
+
+        <div className={style['logs-modal__controls']}>
+          <ButtonSecondarySmall
+            text={CounterText.CLEAR_COUNTER_DATA}
+            clickHandler={onClearDataClickHandler}
+          />
+        </div>
       </div>
     </div>
   );

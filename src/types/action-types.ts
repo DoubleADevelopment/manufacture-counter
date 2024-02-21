@@ -1,19 +1,16 @@
-//types
-// import type { AppThunk } from './store-types';
-
-interface IIncDecActionParametrsType {
+interface IIncDecAction {
   UNID: string;
   value: number;
 }
 
-interface ILogActionType<T> {
+interface IClearItemDataAction {
+  UNID: string;
+}
+
+interface ILogAction<T> {
   UNID: string;
   log: string;
   logName: T;
 }
 
-// type IncrementActionType = (action: IIncDecActionParametrsType) => AppThunk;
-// type DecrementActionType = (action: IIncDecActionParametrsType) => AppThunk;
-// type LogActionType = (action: ILogActionType) => AppThunk;
-
-export type { IIncDecActionParametrsType, ILogActionType };
+export type { IIncDecAction, ILogAction, IClearItemDataAction };

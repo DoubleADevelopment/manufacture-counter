@@ -1,7 +1,7 @@
 //variables
-import { NotificationType } from '../../variables';
+import { NotificationType } from '../../../variables';
 //icons
-import { ErrorIcon, InfoIcon, WarningIcon, PositiveIcon } from '../../icons';
+import { ErrorIcon, InfoIcon, WarningIcon, PositiveIcon } from '../../../icons';
 //styles
 import style from './notification-static.module.scss';
 
@@ -19,13 +19,13 @@ const NotificationStatic = ({
   const NotificationIcon = ((): JSX.Element => {
     switch (type) {
       case NotificationType.ERROR:
-        return <ErrorIcon color="var(--background-negative)" />;
+        return <ErrorIcon />;
       case NotificationType.INFO:
-        return <InfoIcon color="var(--background-accent)" />;
+        return <InfoIcon />;
       case NotificationType.WARNING:
-        return <WarningIcon color="var(--background-warning)" />;
+        return <WarningIcon />;
       case NotificationType.POSITIVE:
-        return <PositiveIcon color="var(--background-positive)" />;
+        return <PositiveIcon />;
       default:
         const exhaustiveCheck: never = type;
         throw new Error(`Unhandled notification type: ${exhaustiveCheck}`);

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 //utils
-import { onEnterClickHandlerToElementBlur } from '../../../utils/utils';
+import { extractNumbers, onEnterClickHandlerToElementBlur } from '../../../utils/utils';
 //variables
 import { CounterText, InputStatuses } from '../../../variables';
 //styles
@@ -23,7 +23,7 @@ const ControlSetValue = ({
   const [inputClassName, setInputClassName] = useState('');
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newValue = event.target.value.trim();
+    const newValue = extractNumbers(event.target.value.trim());
 
     if (newValue === '') {
       onInputChangeHandler(null);
@@ -63,7 +63,7 @@ const ControlSetValue = ({
           type="number"
           ref={inputEl}
           value={value !== null ? value : ''}
-          onChange={handleInputChange}
+          onInput={handleInputChange}
           onKeyDown={onInputKeydownListener}
         />
       </label>
