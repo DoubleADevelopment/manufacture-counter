@@ -23,7 +23,7 @@ const Counter = (): JSX.Element => {
         <PageNotification
           headingText="Błąd przy otwarciu licznika"
           paragraphText={ErrorsText.COMPONENT_NOT_FOUND}
-          type={NotificationType.INFO}
+          type={NotificationType.ERROR}
         />
       )}
     </main>
