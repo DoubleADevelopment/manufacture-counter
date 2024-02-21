@@ -1,4 +1,4 @@
-interface IIncDecActionParametrsType {
+interface IIncDecAction {
   UNID: string;
   value: number;
 }
@@ -7,10 +7,10 @@ interface IClearItemDataAction {
   UNID: string;
 }
 
-interface ILogActionType<T> {
+interface ILogAction<T> {
   UNID: string;
   log: string;
   logName: T;
 }
 
-export type { IIncDecActionParametrsType, ILogActionType, IClearItemDataAction };
+export type { IIncDecAction, ILogAction, IClearItemDataAction };

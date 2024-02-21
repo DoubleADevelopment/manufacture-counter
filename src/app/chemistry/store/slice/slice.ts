@@ -6,7 +6,7 @@ import { ChemistryLogsNames } from '../../variables/data-variables';
 //state
 import chemistryState from '../state/state';
 //types
-import type { IIncDecActionParametrsType, ILogActionType } from '../../../../types';
+import type { IIncDecAction, ILogAction } from '../../../../types';
 import type { IChemistryDataItemType } from '../../types/data-types';
 
 export const chemistrySlice = createSlice({
@@ -14,15 +14,15 @@ export const chemistrySlice = createSlice({
   initialState: chemistryState,
 
   reducers: {
-    increment: (state, action: PayloadAction<IIncDecActionParametrsType>) => {
+    increment: (state, action: PayloadAction<IIncDecAction>) => {
       const { UNID, value } = action.payload;
       state.items[UNID].amount = state.items[UNID].amount + value;
     },
-    decrement: (state, action: PayloadAction<IIncDecActionParametrsType>) => {
+    decrement: (state, action: PayloadAction<IIncDecAction>) => {
       const { UNID, value } = action.payload;
       state.items[UNID].amount = state.items[UNID].amount - value;
     },
-    log: (state, action: PayloadAction<ILogActionType<ChemistryLogsNames>>) => {
+    log: (state, action: PayloadAction<ILogAction<ChemistryLogsNames>>) => {
       const { UNID, logName, log } = action.payload;
       state.items[UNID].logs[logName].log.push(log);
     },

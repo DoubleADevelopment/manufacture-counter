@@ -6,13 +6,13 @@ import chemistryDataService from '../../services/chemistry-data.service';
 //repository
 import chemistryRepository from '../../repository/chemistry-repository';
 //types
-import type { AppThunk, IIncDecActionParametrsType } from '../../../../types';
+import type { AppThunk, IIncDecAction } from '../../../../types';
 import type { IClearItemDataAction } from '../../../../types/action-types';
 
 const { increment, decrement, log, clearItem } = chemistrySlice.actions;
 
 export const incrementAction =
-  (action: IIncDecActionParametrsType): AppThunk =>
+  (action: IIncDecAction): AppThunk =>
   (dispatch, getState) => {
     dispatch(increment(action));
 
@@ -27,7 +27,7 @@ export const incrementAction =
   };
 
 export const decrementAction =
-  (action: IIncDecActionParametrsType): AppThunk =>
+  (action: IIncDecAction): AppThunk =>
   (dispatch, getState) => {
     dispatch(decrement(action));
 

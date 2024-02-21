@@ -8,19 +8,19 @@ import type {
   ILogsType,
 } from './data-types';
 import type { IRouteItem } from './routing-types';
-import type { IIncDecActionParametrsType, ILogActionType } from './action-types';
+import type { IIncDecAction, ILogAction } from './action-types';
 import { AppDispatch, RootState, AppThunk, AppDispatchType } from './store-types';
 import { SetActiveLinkType } from './other-types';
 import { IIconPropsType } from './icon-props-type';
 
 export type {
-  ILogActionType,
+  ILogAction,
   IDataService,
   ILocalstorageService,
   IAdapterService,
   IRepository,
   LocalstorageNamesType,
-  IIncDecActionParametrsType,
+  IIncDecAction,
   AppDispatch,
   RootState,
   AppThunk,
