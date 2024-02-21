@@ -8,7 +8,7 @@ interface ILogsItemProps {
 
 const LogItem = ({ log, logName }: ILogsItemProps): JSX.Element => {
   return (
-    <div className={style['log-item']}>
+    <article className={style['log-item']}>
       <h4 className="heading-x-small content-primary-a">{logName} logi</h4>
       <ul className={`${style['log-item__list']}`}>
         {log.map((item) => (
@@ -17,7 +17,7 @@ const LogItem = ({ log, logName }: ILogsItemProps): JSX.Element => {
           </li>
         ))}
       </ul>
-    </div>
+    </article>
   );
 };
 

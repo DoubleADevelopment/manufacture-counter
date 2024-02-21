@@ -1,6 +1,7 @@
 import { MouseEvent } from 'react';
 //component
 import LogItem from './log-item/log-item';
+import { ButtonSecondary } from '../../';
 //variables
 import { InterfaceTest } from '../../../variables';
 //icons
@@ -37,6 +38,10 @@ const LogsModal = ({ logsData, closeModal }: ILogsModalProps) => {
     closeModal();
   };
 
+  const onClearDataClickHandler = () => {
+    console.log('click');
+  };
+
   return (
     <div
       className={style['logs-modal']}
@@ -54,7 +59,9 @@ const LogsModal = ({ logsData, closeModal }: ILogsModalProps) => {
           <CloseIcon />
         </button>
 
-        <button type="button">clear data</button>
+        <div className={style['logs-modal__controls']}>
+          <ButtonSecondary text={'clear data'} clickHandler={onClearDataClickHandler} />
+        </div>
       </div>
     </div>
   );
