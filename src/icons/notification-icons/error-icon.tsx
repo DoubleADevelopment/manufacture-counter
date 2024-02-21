@@ -1,7 +1,7 @@
 //types
 import { IIconPropsType } from '../../types';
 
-const ErrorIcon = ({ size }: IIconPropsType): JSX.Element => {
+const ErrorIcon = ({ size }: Omit<IIconPropsType, 'color'>): JSX.Element => {
   return (
     <svg
       height={size ? size.height : 40}
