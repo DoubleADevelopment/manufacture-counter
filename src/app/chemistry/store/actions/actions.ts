@@ -9,7 +9,7 @@ import chemistryRepository from '../../repository/chemistry-repository';
 import type { AppThunk, IIncDecAction } from '../../../../types';
 import type { IClearItemDataAction } from '../../../../types/action-types';
 
-const { increment, decrement, log, clearItem } = chemistrySlice.actions;
+const { increment, decrement, log, clearItem, clearData } = chemistrySlice.actions;
 
 export const incrementAction =
   (action: IIncDecAction): AppThunk =>
@@ -49,3 +49,10 @@ export const clearItemDataAction =
 
     chemistryRepository.sendData(getState().chemistry.items);
   };
+
+export const clearDataAction = (): AppThunk => (dispatch, getState) => {
+  const clearedItem = chemistryDataService.getData();
+  dispatch(clearData(clearedItem));
+
+  chemistryRepository.sendData(getState().chemistry.items);
+};
