@@ -6,7 +6,7 @@ import style from './header.module.scss';
 const Header = (): JSX.Element => {
   return (
     <header className={style.header}>
-      <h1 className="visually-hidden">counter app</h1>
+      <h1 className="visually-hidden">Licznik komponentów</h1>
 
       <Navigation />
     </header>

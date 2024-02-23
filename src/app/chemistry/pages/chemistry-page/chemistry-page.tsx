@@ -31,7 +31,6 @@ const ChemistryPage = () => {
           {ComponentsRouting.CHEMISTRY.title}
         </h2>
 
-        {/* add a loader here!!! */}
         {cheistryData && <ItemsList data={cheistryData} />}
       </main>
     </PageWithMenuLayout>
