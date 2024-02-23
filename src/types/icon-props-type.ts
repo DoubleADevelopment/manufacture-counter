@@ -1,4 +1,4 @@
-interface IIconPropsType {
+interface IIconProps {
   color?: string;
   size?: {
     width: number;
@@ -6,4 +6,4 @@ interface IIconPropsType {
   };
 }
 
-export type { IIconPropsType };
+export type { IIconProps };

@@ -11,8 +11,8 @@ import type {
 import type { IRouteItem } from './routing-types';
 import type { IIncDecAction, ILogAction, IncDecActionType } from './action-types';
 import { AppDispatch, RootState, AppThunk, AppDispatchType } from './store-types';
-import { SetActiveLinkType } from './other-types';
-import { IIconPropsType } from './icon-props-type';
+import { ISetActiveLink } from './other-types';
+import { IIconProps } from './icon-props-type';
 import { GetItemSelectorType } from './selectors-types';
 
 export type {
@@ -27,8 +27,8 @@ export type {
   RootState,
   AppThunk,
   AppDispatchType,
-  IIconPropsType,
-  SetActiveLinkType,
+  IIconProps,
+  ISetActiveLink,
   ComponentsListDataType,
   IComponentsListDataItem,
   IRouteItem,

@@ -1,7 +1,7 @@
 //types
-import { IIconPropsType } from '../../types';
+import { IIconProps } from '../../types';
 
-const InfoIcon = ({ size }: Omit<IIconPropsType, 'color'>): JSX.Element => {
+const InfoIcon = ({ size }: Omit<IIconProps, 'color'>): JSX.Element => {
   return (
     <svg
       height={size ? size.height : 40}
