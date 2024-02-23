@@ -1,0 +1,40 @@
+.additional-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--backgroud-primary);
+  gap: 10px;
+}
+
+.additional-nav__label {
+  position: relative;
+  flex: 1;
+  padding: 5px 8px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  text-transform: capitalize;
+  cursor: pointer;
+
+  // &:hover > span{
+  //   color: var(--background-accent);
+  // }
+}
+
+.additional-nav__input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+}
+
+.selected {
+  position: absolute;
+  z-index: 1;
+  border-radius: 12px;
+  height: 40px;
+  background-color: blue;
+}

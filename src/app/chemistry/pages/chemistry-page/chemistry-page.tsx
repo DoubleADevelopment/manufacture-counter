@@ -7,7 +7,7 @@ import chemistryAdapterService from '../../services/chemistry-adapter.service';
 //layouts
 import { PageWithMenuLayout } from '../../../../layouts';
 //components
-import { ItemsList } from '../../../../components';
+import { AdditionalNav, ItemsList } from '../../../../components';
 //variables
 import { ComponentsRouting } from '../../../../variables/component-routing-variables';
 //types
@@ -24,8 +24,13 @@ const ChemistryPage = () => {
     setChemistryData(adaptedData);
   }, [chemistryData]);
 
+  const additionalNavForChemistry = ['okleina', 'produkcja'];
+
   return (
-    <PageWithMenuLayout headerTitle={ComponentsRouting.CHEMISTRY.title}>
+    <PageWithMenuLayout
+      headerTitle={ComponentsRouting.CHEMISTRY.title}
+      additionalNav={<AdditionalNav items={additionalNavForChemistry} />}
+    >
       <main className={style['chemistry-page']}>
         {cheistryData && <ItemsList data={cheistryData} />}
       </main>

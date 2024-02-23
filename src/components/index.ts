@@ -20,6 +20,7 @@ import { NotificationStatic, PageNotification } from './notifications/';
 import { LogsModal } from './modals';
 import CounterHeader from './counter-header/counter-header';
 import { BasicCounter } from './counter';
+import AdditionalNav from './additional-nav/additional-nav';
 
 export {
   Header,
@@ -41,4 +42,5 @@ export {
   ShortCardWithLogs,
   CounterHeader,
   BasicCounter,
+  AdditionalNav,
 };
