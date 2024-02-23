@@ -1,5 +1,4 @@
-import CounterHeader from './counter-header/counter-header';
 import Counter from './counter/counter';
-import CounterItemInfo from './counter-item-info/counter-item-info';
+import CountableItemInfo from './countable-item-info/countable-item-info';
 
-export { CounterHeader, Counter, CounterItemInfo };
+export { Counter, CountableItemInfo };

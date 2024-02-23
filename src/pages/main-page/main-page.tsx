@@ -2,17 +2,15 @@
 import { ComponentsList } from '../../components';
 //layouts
 import { PageWithMenuLayout } from '../../layouts';
+//variables
+import { AppRouting } from '../../variables';
 //styles
 import style from './main-page.module.scss';
 
 const MainPage = (): JSX.Element => {
   return (
-    <PageWithMenuLayout>
+    <PageWithMenuLayout headerTitle={AppRouting.ROOT.title}>
       <main className={style['main-page']}>
-        <h2 className={`${style['main-page__title']} heading-medium content-primary-a`}>
-          Strona główna
-        </h2>
-
         <ComponentsList />
       </main>
     </PageWithMenuLayout>

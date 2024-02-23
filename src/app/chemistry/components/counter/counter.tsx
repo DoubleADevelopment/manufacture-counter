@@ -7,8 +7,6 @@ import { useAppSelector } from '../../../../hooks/hooks';
 import { SelectorCheckIfElementExistsByUNID } from '../../store/slectors/selectors';
 //variables
 import { ErrorsText, NotificationType } from '../../../../variables';
-//style
-import style from './counter.module.scss';
 
 const Counter = (): JSX.Element => {
   const { UNID } = useParams();
@@ -28,7 +26,7 @@ const Counter = (): JSX.Element => {
     }
   };
 
-  return <main className={style['counter']}>{renderComponents()}</main>;
+  return renderComponents();
 };
 
 export default Counter;

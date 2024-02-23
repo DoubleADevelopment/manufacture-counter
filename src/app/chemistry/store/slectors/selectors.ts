@@ -1,12 +1,12 @@
 //types
 import type { RootState } from '../../../../types';
-import type { IChemistryDataItemType, IChemistryDataType } from '../../types/data-types';
+import type { IChemistryDataItem, IChemistryData } from '../../types/data-types';
 
-export const SelectorGetChemistryState = (state: RootState): IChemistryDataType =>
+export const SelectorGetChemistryState = (state: RootState): IChemistryData =>
   state.chemistry.items;
 export const SelectorGetCurrentChemistry =
   (UNID: string) =>
-  (state: RootState): IChemistryDataItemType =>
+  (state: RootState): IChemistryDataItem =>
     state.chemistry.items[UNID];
 export const SelectorCheckIfElementExistsByUNID =
   (UNID: string | undefined) =>

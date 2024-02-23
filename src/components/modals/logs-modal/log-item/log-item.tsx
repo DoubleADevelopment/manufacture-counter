@@ -15,7 +15,7 @@ const LogItem = ({ log, logName }: ILogsItemProps): JSX.Element => {
       <ul className={`${style['log-item__list']}`}>
         {log.length ? (
           log.map((item, i) => (
-            <li className="content-primary-a paragraph-medium" key={i}>
+            <li className={`${style['log-item__item']} content-primary-a paragraph-medium`} key={i}>
               {item}
             </li>
           ))

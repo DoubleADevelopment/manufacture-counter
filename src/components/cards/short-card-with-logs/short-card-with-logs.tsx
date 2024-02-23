@@ -1,23 +1,23 @@
 import { useState } from 'react';
-//store
-import { useAppDispatch } from '../../../../hooks/hooks';
-import { clearItemDataAction } from '../../store/actions/actions';
 //components
-import { ItemCardShort, LogsModal } from '../../../../components';
+import { ItemCardShort, LogsModal } from '../../';
 //variables
-import { UnitsOfMeasurementText } from '../../../../variables/text-variables';
+import { UnitsOfMeasurementText } from '../../../variables/text-variables';
 //types
-import type { IItemCardData, ILogsType } from '../../../../types/data-types';
+import type { IItemCardData, ILogsType } from '../../../types/data-types';
 
-interface ICounterItemInfo {
+interface IShortCardWithLogs {
   itemLogs: ILogsType;
-  convertedItem: IItemCardData;
+  item: IItemCardData;
+  clearDataHandler: (id: string) => void;
 }
 
-const CounterItemInfo = ({ itemLogs, convertedItem }: ICounterItemInfo): JSX.Element => {
+const ShortCardWithLogs = ({
+  itemLogs,
+  item,
+  clearDataHandler,
+}: IShortCardWithLogs): JSX.Element => {
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
-
-  const dispatch = useAppDispatch();
 
   const onCardClickHandler = () => {
     setModalIsOpen(true);
@@ -28,7 +28,7 @@ const CounterItemInfo = ({ itemLogs, convertedItem }: ICounterItemInfo): JSX.Ele
   };
 
   const onClearDataButtonClickHandler = () => {
-    dispatch(clearItemDataAction({ UNID: convertedItem.UNID }));
+    clearDataHandler(item.UNID);
     setModalIsOpen(false);
   };
 
@@ -44,11 +44,11 @@ const CounterItemInfo = ({ itemLogs, convertedItem }: ICounterItemInfo): JSX.Ele
 
       <ItemCardShort
         onCardClickHandler={onCardClickHandler}
-        item={convertedItem}
+        item={item}
         measurementText={UnitsOfMeasurementText.AMOUNT}
       />
     </>
   );
 };
 
-export default CounterItemInfo;
+export default ShortCardWithLogs;

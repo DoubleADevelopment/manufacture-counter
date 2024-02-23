@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr min-content;
-  gap: var(--header-from-top-to-first-element-padding);
+  gap: var(--page-blocks-gap);
 }
 
 .chemistry-page__title {

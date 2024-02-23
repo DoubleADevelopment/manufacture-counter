@@ -6,12 +6,14 @@ import type {
   ComponentsListDataType,
   ItemsListDataType,
   ILogsType,
+  IItemCardData,
 } from './data-types';
 import type { IRouteItem } from './routing-types';
-import type { IIncDecAction, ILogAction } from './action-types';
+import type { IIncDecAction, ILogAction, IncDecActionType } from './action-types';
 import { AppDispatch, RootState, AppThunk, AppDispatchType } from './store-types';
-import { SetActiveLinkType } from './other-types';
-import { IIconPropsType } from './icon-props-type';
+import { ISetActiveLink } from './other-types';
+import { IIconProps } from './icon-props-type';
+import { GetItemSelectorType } from './selectors-types';
 
 export type {
   ILogAction,
@@ -25,11 +27,14 @@ export type {
   RootState,
   AppThunk,
   AppDispatchType,
-  IIconPropsType,
-  SetActiveLinkType,
+  IIconProps,
+  ISetActiveLink,
   ComponentsListDataType,
   IComponentsListDataItem,
   IRouteItem,
   ItemsListDataType,
   ILogsType,
+  IncDecActionType,
+  GetItemSelectorType,
+  IItemCardData,
 };

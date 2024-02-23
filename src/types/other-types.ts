@@ -1,8 +1,10 @@
-export type SetActiveLinkType = {
+interface ISetActiveLink {
   isActive: boolean;
-};
+}
 
-export interface IButtonProps {
+interface IButtonProps {
   text: string;
   clickHandler: () => void;
 }
+
+export type { ISetActiveLink, IButtonProps };

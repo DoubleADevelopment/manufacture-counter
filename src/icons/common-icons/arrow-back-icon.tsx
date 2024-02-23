@@ -1,7 +1,7 @@
 //types
-import { IIconPropsType } from '../../types';
+import { IIconProps } from '../../types';
 
-const ArrowBackIcon = ({ color, size }: IIconPropsType): JSX.Element => {
+const ArrowBackIcon = ({ color, size }: IIconProps): JSX.Element => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
