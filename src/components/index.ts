@@ -18,7 +18,8 @@ import {
 } from './buttons';
 import { NotificationStatic, PageNotification } from './notifications/';
 import { LogsModal } from './modals';
-import CountableItemInfo from '../app/chemistry/components/countable-item-info/countable-item-info';
+import CounterHeader from './counter-header/counter-header';
+import { BasicCounter } from './counter';
 
 export {
   Header,
@@ -37,6 +38,7 @@ export {
   ButtonPrimarySmall,
   ButtonSecondarySmall,
   PageNotification,
-  CountableItemInfo,
   ShortCardWithLogs,
+  CounterHeader,
+  BasicCounter,
 };

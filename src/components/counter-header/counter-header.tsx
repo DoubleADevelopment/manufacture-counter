@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 //variables
-import { InterfaceText } from '../../../../variables';
+import { InterfaceText } from '../../variables';
 //icons
-import { ArrowBackIcon } from '../../../../icons';
+import { ArrowBackIcon } from '../../icons';
 //styles
 import style from './counter-header.module.scss';
 

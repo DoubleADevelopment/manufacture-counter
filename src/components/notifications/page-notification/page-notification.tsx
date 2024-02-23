@@ -31,11 +31,11 @@ const PageNotification = ({
   })();
   return (
     <section className={style['page-notification']}>
-      {NotificationIcon}
       <div className={style['page-notification__content']}>
         <h4 className="heading-x-small content-primary-a">{headingText}</h4>
         <p className="paragraph-medium content-primary-a">{paragraphText}</p>
       </div>
+      {NotificationIcon}
     </section>
   );
 };

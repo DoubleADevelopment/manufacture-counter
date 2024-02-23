@@ -5,8 +5,6 @@ import { ItemCardShort, LogsModal } from '../../';
 import { UnitsOfMeasurementText } from '../../../variables/text-variables';
 //types
 import type { IItemCardData, ILogsType } from '../../../types/data-types';
-//styles
-import style from './short-card-with-logs.module.scss';
 
 interface IShortCardWithLogs {
   itemLogs: ILogsType;
@@ -35,7 +33,7 @@ const ShortCardWithLogs = ({
   };
 
   return (
-    <div className={style['short-card-with-logs']}>
+    <>
       {modalIsOpen && (
         <LogsModal
           logsData={itemLogs}
@@ -49,7 +47,7 @@ const ShortCardWithLogs = ({
         item={item}
         measurementText={UnitsOfMeasurementText.AMOUNT}
       />
-    </div>
+    </>
   );
 };
 
