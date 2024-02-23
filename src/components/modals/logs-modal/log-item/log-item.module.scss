@@ -11,5 +11,16 @@
   align-items: flex-start;
   justify-content: flex-start;
   list-style: none;
-  gap: 10px;
+  gap: 4px;
+}
+
+.log-item__item {
+  position: relative;
+
+  &:not(:last-child)::after {
+    content: ',';
+    position: absolute;
+    right: -4px;
+    bottom: 0;
+  }
 }
