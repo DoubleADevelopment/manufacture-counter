@@ -9,11 +9,11 @@ import { SelectorGetCurrentChemistry } from '../../store/slectors/selectors';
 import { ItemCardShortSkeleton, ShortCardWithLogs } from '../../../../components/cards';
 //types
 import type { IItemCardData } from '../../../../types';
-import type { IChemistryDataItemType } from '../../types/data-types';
+import type { IChemistryDataItem } from '../../types/data-types';
 
 const CountableItemInfo = (): JSX.Element => {
   const { UNID } = useParams();
-  const item: IChemistryDataItemType | null = UNID
+  const item: IChemistryDataItem | null = UNID
     ? useAppSelector(SelectorGetCurrentChemistry(UNID))
     : null;
 

@@ -3,9 +3,9 @@ import chemistryDataService from '../services/chemistry-data.service';
 import chemistryLocalstorageService from '../services/chemistry-localstorage.service';
 //types
 import type { IRepository } from '../../../types';
-import type { IChemistryDataType } from '../types/data-types';
+import type { IChemistryData } from '../types/data-types';
 
-class ChemistryRepositroy implements IRepository<IChemistryDataType> {
+class ChemistryRepositroy implements IRepository<IChemistryData> {
   #dataService: typeof chemistryDataService;
   #localstorageService: typeof chemistryLocalstorageService;
 
@@ -17,19 +17,19 @@ class ChemistryRepositroy implements IRepository<IChemistryDataType> {
     this.#localstorageService = localstorageService;
   }
 
-  #getDataFromStorage(): IChemistryDataType | null | Error {
+  #getDataFromStorage(): IChemistryData | null | Error {
     return this.#localstorageService.getItems();
   }
 
-  #sendDataToStorage(data: IChemistryDataType): IChemistryDataType | Error {
+  #sendDataToStorage(data: IChemistryData): IChemistryData | Error {
     return this.#localstorageService.setItems(data);
   }
 
-  #getDefaultData(): IChemistryDataType {
+  #getDefaultData(): IChemistryData {
     return this.#dataService.getData();
   }
 
-  sendData(data: IChemistryDataType): IChemistryDataType | Error {
+  sendData(data: IChemistryData): IChemistryData | Error {
     const result = this.#sendDataToStorage(data);
 
     if (result instanceof Error) {
@@ -39,7 +39,7 @@ class ChemistryRepositroy implements IRepository<IChemistryDataType> {
     }
   }
 
-  getData(): IChemistryDataType {
+  getData(): IChemistryData {
     const result = this.#getDataFromStorage();
 
     if (result instanceof Error) {
@@ -52,7 +52,7 @@ class ChemistryRepositroy implements IRepository<IChemistryDataType> {
     }
   }
 
-  getDefaultData(): IChemistryDataType {
+  getDefaultData(): IChemistryData {
     return this.#getDefaultData();
   }
 

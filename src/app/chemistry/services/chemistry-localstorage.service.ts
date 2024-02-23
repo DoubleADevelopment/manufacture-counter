@@ -1,22 +1,22 @@
 //types
 import type { LocalstorageNamesType, ILocalstorageService } from '../../../types';
-import type { IChemistryDataType } from '../types/data-types';
+import type { IChemistryData } from '../types/data-types';
 //variables
 import { CHEMISTRY_STORAGE_NAME } from '../variables/';
 
-class ChemistryLocalstorageService implements ILocalstorageService<IChemistryDataType> {
+class ChemistryLocalstorageService implements ILocalstorageService<IChemistryData> {
   #storageName: LocalstorageNamesType;
 
   constructor(storageName: LocalstorageNamesType) {
     this.#storageName = storageName;
   }
 
-  getItems(): IChemistryDataType | Error | null {
+  getItems(): IChemistryData | Error | null {
     try {
       const jsonData: string | null = localStorage.getItem(this.#storageName);
 
       if (jsonData) {
-        const parsedJsonData: IChemistryDataType = JSON.parse(jsonData);
+        const parsedJsonData: IChemistryData = JSON.parse(jsonData);
         return parsedJsonData;
       } else {
         return null;
@@ -30,7 +30,7 @@ class ChemistryLocalstorageService implements ILocalstorageService<IChemistryDat
     }
   }
 
-  setItems(data: IChemistryDataType): IChemistryDataType | Error {
+  setItems(data: IChemistryData): IChemistryData | Error {
     try {
       localStorage.setItem(this.#storageName, JSON.stringify(data));
       return data;

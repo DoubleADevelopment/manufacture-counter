@@ -1,9 +1,9 @@
 //vars
 import { ChemistryLogsNames, ChemistrySettingsNames } from '../variables/';
 //types
-import type { IChemistryDataPackageType } from '../types/data-types';
+import type { IChemistryDataPackage } from '../types/data-types';
 
-const chemistryData: IChemistryDataPackageType = {
+const chemistryData: IChemistryDataPackage = {
   dataPackageName: 'chemistry',
   dataPackageUNID: 1001,
   items: [

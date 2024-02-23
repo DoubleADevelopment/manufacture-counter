@@ -5,7 +5,7 @@ import { ChemistryLogsNames } from '../../variables/';
 import chemistryState from '../state/state';
 //types
 import type { IIncDecAction, ILogAction } from '../../../../types';
-import type { IChemistryDataItemType, IChemistryDataType } from '../../types/data-types';
+import type { IChemistryDataItem, IChemistryData } from '../../types/data-types';
 
 export const chemistrySlice = createSlice({
   name: 'chemistry',
@@ -24,11 +24,11 @@ export const chemistrySlice = createSlice({
       const { UNID, logName, log } = action.payload;
       state.items[UNID].logs[logName].log.push(log);
     },
-    clearItem: (state, action: PayloadAction<IChemistryDataItemType>) => {
+    clearItem: (state, action: PayloadAction<IChemistryDataItem>) => {
       const { UNID } = action.payload;
       state.items[UNID] = action.payload;
     },
-    clearData: (state, action: PayloadAction<IChemistryDataType>) => {
+    clearData: (state, action: PayloadAction<IChemistryData>) => {
       state.items = action.payload;
     },
   },

@@ -2,10 +2,10 @@
 import { ILogsType } from '../../../types/data-types';
 import { ChemistryLogsNames, ChemistrySettingsNames } from '../variables/';
 
-interface IChemistryDataPackageType {
+interface IChemistryDataPackage {
   dataPackageName: string;
   dataPackageUNID: number;
-  items: IChemistryDataItemType[];
+  items: IChemistryDataItem[];
 }
 
 interface IChemistryLogs extends ILogsType {
@@ -22,7 +22,7 @@ interface IChemistrySettings {
   };
 }
 
-interface IChemistryDataItemType {
+interface IChemistryDataItem {
   UNID: string;
   amount: number;
   firm: string;
@@ -39,16 +39,16 @@ interface IChemistryDataItemType {
   manufacturer: string;
 }
 
-interface IChemistryDataType {
-  [UNID: string]: IChemistryDataItemType;
+interface IChemistryData {
+  [UNID: string]: IChemistryDataItem;
 }
 
-type ChemistryDataForViewType = IChemistryDataItemType[];
+type ChemistryDataForViewType = IChemistryDataItem[];
 
 export type {
-  IChemistryDataItemType,
-  IChemistryDataType,
-  IChemistryDataPackageType,
+  IChemistryDataItem,
+  IChemistryData,
+  IChemistryDataPackage,
   ChemistryDataForViewType,
   IChemistryLogs,
 };
