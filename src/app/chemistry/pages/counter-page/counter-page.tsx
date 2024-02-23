@@ -1,9 +1,7 @@
 //layouts
 import { CounterPageLayout } from '../../../../layouts';
 //components
-import { Counter } from '../../components';
-// import { CounterHeader } from '../../../../components';
-import { CountableItemInfo } from '../../components/';
+import { CountableItemInfo, Counter } from '../../components/';
 //variables
 import { ChemistryAppRouting, CounterText } from '../../../../variables';
 //style

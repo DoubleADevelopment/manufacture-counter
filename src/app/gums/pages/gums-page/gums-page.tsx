@@ -1,16 +1,14 @@
 //layouts
 import { PageWithMenuLayout } from '../../../../layouts';
+//variables
+import { ComponentsRouting } from '../../../../variables';
 //styles
 import style from './gums-page.module.scss';
 
 const GumsPage = () => {
   return (
-    <PageWithMenuLayout>
-      <main className={style['info-page__content']}>
-        <h2 className={`${style['info-page__title']} heading-xl-large content-primary-a`}>
-          Uszczelka
-        </h2>
-      </main>
+    <PageWithMenuLayout headerTitle={ComponentsRouting.GUMS.title}>
+      <main className={style['info-page__content']}></main>
     </PageWithMenuLayout>
   );
 };

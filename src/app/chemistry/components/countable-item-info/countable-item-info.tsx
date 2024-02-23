@@ -1,12 +1,15 @@
-//styles
 import { useParams } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../../../hooks/hooks';
-import { ItemCardShortSkeleton, ShortCardWithLogs } from '../../../../components/cards';
-import { IItemCardData } from '../../../../types';
+//services
 import chemistryAdapterService from '../../services/chemistry-adapter.service';
+//store
 import { clearItemDataAction } from '../../store/actions/actions';
 import { SelectorGetCurrentChemistry } from '../../store/slectors/selectors';
-import { IChemistryDataItemType } from '../../types/data-types';
+//components
+import { ItemCardShortSkeleton, ShortCardWithLogs } from '../../../../components/cards';
+//types
+import type { IItemCardData } from '../../../../types';
+import type { IChemistryDataItemType } from '../../types/data-types';
 
 const CountableItemInfo = (): JSX.Element => {
   const { UNID } = useParams();

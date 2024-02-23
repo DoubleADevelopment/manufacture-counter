@@ -1,8 +1,15 @@
 .nav {
+  position: fixed;
+  left: 50%;
+  right: 0;
+  bottom: 10px;
+  z-index: var(--z-index-nav);
   border: 2px solid var(--border-opaque);
   border-radius: var(--basic-border-radius);
   padding: 10px;
-  user-select: none;
+  width: max-content;
+  background-color: var(--backgroud-primary);
+  transform: translateX(-50%);
 }
 
 .nav__list {

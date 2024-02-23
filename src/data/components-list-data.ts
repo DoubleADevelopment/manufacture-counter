@@ -1,7 +1,7 @@
-//
+//variables
 import { ComponentsRouting } from '../variables/component-routing-variables';
 //types
-import { ComponentsListDataType } from '../types';
+import type { ComponentsListDataType } from '../types';
 
 const componentsListData: ComponentsListDataType = [
   {

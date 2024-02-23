@@ -21,19 +21,19 @@ type IAppRoutingType = Record<AppRoutingNames, IRouteItem>;
 
 const AppRouting: IAppRoutingType = {
   [AppRoutingNames.ROOT]: {
-    title: 'some',
+    title: 'Strona główna',
     path: AppRoutingPaths.ROOT,
   },
   [AppRoutingNames.SETTINGS]: {
-    title: 'settings',
+    title: 'Ustawienia',
     path: AppRoutingPaths.SETTINGS,
   },
   [AppRoutingNames.INFORMATION]: {
-    title: 'information',
+    title: 'Informacja',
     path: AppRoutingPaths.INFORMATION,
   },
   [AppRoutingNames.COMPONENTS_OVERVIEW]: {
-    title: 'components overview',
+    title: 'Przegląd komponentów',
     path: AppRoutingPaths.COMPONENTS_OVERVIEW,
   },
 };

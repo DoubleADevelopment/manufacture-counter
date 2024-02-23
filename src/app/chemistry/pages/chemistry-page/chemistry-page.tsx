@@ -25,12 +25,8 @@ const ChemistryPage = () => {
   }, [chemistryData]);
 
   return (
-    <PageWithMenuLayout>
+    <PageWithMenuLayout headerTitle={ComponentsRouting.CHEMISTRY.title}>
       <main className={style['chemistry-page']}>
-        <h2 className={`${style['chemistry-page__title']} heading-medium content-primary-a`}>
-          {ComponentsRouting.CHEMISTRY.title}
-        </h2>
-
         {cheistryData && <ItemsList data={cheistryData} />}
       </main>
     </PageWithMenuLayout>
