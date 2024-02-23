@@ -1,4 +1,4 @@
 import PageWithMenuLayout from './page-with-menu-layout/page-with-menu-layout';
-import PageWithHeaderLayout from './page-with-header-layout/page-with-header-layout';
+import CounterPageLayout from './counter-page-layout/counter-page-layout';
 
-export { PageWithMenuLayout, PageWithHeaderLayout };
+export { PageWithMenuLayout, CounterPageLayout };

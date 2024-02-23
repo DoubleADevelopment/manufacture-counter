@@ -1,3 +1,6 @@
+//types
+import type { AppThunk } from './store-types';
+
 interface IIncDecAction {
   UNID: string;
   value: number;
@@ -13,4 +16,6 @@ interface ILogAction<T> {
   logName: T;
 }
 
-export type { IIncDecAction, ILogAction, IClearItemDataAction };
+type IncDecActionType = (action: IIncDecAction) => AppThunk;
+
+export type { IIncDecAction, ILogAction, IClearItemDataAction, IncDecActionType };

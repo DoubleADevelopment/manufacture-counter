@@ -10,7 +10,7 @@ interface IPageWithMenuLayoutProps {
 
 const PageWithMenuLayout = ({ children }: IPageWithMenuLayoutProps): JSX.Element => {
   return (
-    <div className={`${style['wrap']} container-mobile page`}>
+    <div className={`${style['page']} container-mobile`}>
       <Header />
       {children}
     </div>

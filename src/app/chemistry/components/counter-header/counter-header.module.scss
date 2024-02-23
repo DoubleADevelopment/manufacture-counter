@@ -1,8 +1,8 @@
 .header {
-  display: grid;
+  display: flex;
+  flex-direction: row-reverse;
   align-items: center;
-  grid-template-columns: min-content 1fr max-content;
-  grid-template-rows: repeat(2, min-content);
+  justify-content: space-between;
   gap: var(--header-from-top-to-first-element-padding);
 }
 
@@ -13,15 +13,4 @@
   text-decoration: none;
   color: var(--content-primary-a);
   cursor: pointer;
-}
-
-.header__title {
-  align-self: right;
-  grid-column: 3/-1;
-}
-
-.header__counter-controls {
-  grid-column: 1/-1;
-  cursor: pointer;
-  user-select: none;
 }
