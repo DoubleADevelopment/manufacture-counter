@@ -8,7 +8,7 @@ import { SelectorGetCurrentChemistry } from '../../store/slectors/selectors';
 import { ItemCardShortSkeleton } from '../../../../components';
 import { CounterItemInfo } from '../';
 //variables
-import { CounterRouting } from '../../variables/';
+import { ChemistryAppRouting } from '../../../../variables';
 import { InterfaceText } from '../../../../variables';
 //types
 import type { IItemCardData } from '../../../../types/data-types';
@@ -34,7 +34,7 @@ const CounterHeader = (): JSX.Element => {
   }
   return (
     <header className={style.header}>
-      <Link className={style['header__back-link']} to={CounterRouting.ROOT}>
+      <Link className={style['header__back-link']} to={ChemistryAppRouting.ROOT}>
         <ArrowBackIcon />
         <span className="visually-hidden">{InterfaceText.BACK_TO_OVERVIEW}</span>
       </Link>
