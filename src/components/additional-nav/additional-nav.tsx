@@ -1,5 +1,5 @@
+import { ChangeEvent, useState } from 'react';
 //style
-import { ChangeEvent, useEffect, useRef, useState } from 'react';
 import style from './additional-nav.module.scss';
 
 interface IAdditionalNavProps {
@@ -7,30 +7,18 @@ interface IAdditionalNavProps {
 }
 
 const AdditionalNav = ({ items }: IAdditionalNavProps) => {
-  const [selectedItem, setSelectedItem] = useState<string | null>(null);
-  const selectedLabelRef = useRef<HTMLLabelElement | null>(null);
+  const [selectedItem, setSelectedItem] = useState<string>(items[0]);
+  const leftDistanceForIndicator = items.indexOf(selectedItem) * (100 / items.length) + '%';
 
   const handler = (evt: ChangeEvent<HTMLFormElement>) => {
-    // console.log(evt.target);
     setSelectedItem(evt.target.value);
   };
 
-  useEffect(() => {
-    if (selectedLabelRef.current) {
-      const labelRect = selectedLabelRef.current.getBoundingClientRect();
-      console.log(labelRect);
-    }
-  }, [selectedItem]);
-
   return (
-    <form className={style['additional-nav']} onChange={handler}>
+    <form className={`${style['additional-nav']} unselectable`} onChange={handler}>
       {items.map((item) => {
         return (
-          <label
-            className={`${style['additional-nav__label']}`}
-            key={item}
-            ref={selectedItem === item ? selectedLabelRef : null}
-          >
+          <label className={`${style['additional-nav__label']}`} key={item}>
             <span className={`label-large content-primary-a`}>{item}</span>
             <input
               className={style['additional-nav__input']}
@@ -41,6 +29,13 @@ const AdditionalNav = ({ items }: IAdditionalNavProps) => {
           </label>
         );
       })}
+      <div
+        className={style.indicator}
+        style={{
+          width: `${100 / items.length}%`,
+          left: leftDistanceForIndicator,
+        }}
+      ></div>
     </form>
   );
 };
