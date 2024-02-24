@@ -1,11 +1,10 @@
 import { ChangeEvent, useEffect, useState } from 'react';
 //style
 import style from './additional-nav.module.scss';
-import { ChemistryPackagesNames } from '../../app/chemistry/variables/data-variables';
 
 interface IAdditionalNavProps {
   items: string[];
-  changeHandler: (value: ChemistryPackagesNames) => void;
+  changeHandler: (value: string) => void;
 }
 
 const AdditionalNav = ({ items, changeHandler }: IAdditionalNavProps) => {
@@ -17,7 +16,7 @@ const AdditionalNav = ({ items, changeHandler }: IAdditionalNavProps) => {
   };
 
   useEffect(() => {
-    changeHandler(selectedItem as ChemistryPackagesNames);
+    changeHandler(selectedItem);
   }, [selectedItem]);
 
   return (

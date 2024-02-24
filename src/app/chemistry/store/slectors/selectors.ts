@@ -1,5 +1,3 @@
-//variables
-import { ChemistryPackagesNames } from '../../variables/data-variables';
 //types
 import type { RootState } from '../../../../types';
 import type { IChemistryDataItem, IChemistryData } from '../../types/data-types';
@@ -7,15 +5,24 @@ import type { IChemistryDataItem, IChemistryData } from '../../types/data-types'
 export const SelectorGetChemistryState = (state: RootState): IChemistryData =>
   state.chemistry.packages;
 export const SelectorGetCurrentChemistry =
-  (UNID: string, packName: ChemistryPackagesNames) =>
+  (UNID: string, packName: string) =>
   (state: RootState): IChemistryDataItem =>
     state.chemistry.packages[packName][UNID];
 export const SelectorCheckIfElementExistsByUNID =
-  (UNID: string | undefined, packName: ChemistryPackagesNames | undefined) =>
+  (UNID: string | undefined, packName: string | undefined) =>
   (state: RootState): boolean => {
-    if (UNID && packName && state.chemistry.packages[packName][UNID]) {
-      return true;
+    let result = false;
+    if (!UNID || !packName) {
+      result = false;
     } else {
-      return false;
+      if (!state.chemistry.packages[packName]) {
+        result = false;
+      } else if (!state.chemistry.packages[packName][UNID]) {
+        result = false;
+      } else {
+        result = true;
+      }
     }
+
+    return result;
   };

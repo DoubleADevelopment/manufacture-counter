@@ -1,6 +1,5 @@
 //types
-import { IChemistryDataItem } from '../app/chemistry/types/data-types';
-import { ChemistryPackagesNames } from '../app/chemistry/variables/data-variables';
+import type { IChemistryDataItem } from '../app/chemistry/types/data-types';
 import type { AppThunk } from './store-types';
 
 interface IIncDecAction {
@@ -11,7 +10,7 @@ interface IIncDecAction {
 interface IIncDecPackageAction {
   UNID: string;
   value: number;
-  packageName: ChemistryPackagesNames;
+  packageName: string;
 }
 
 interface IClearItemDataAction {
@@ -20,7 +19,7 @@ interface IClearItemDataAction {
 
 interface IClearItemDataPackageAction {
   UNID: string;
-  packageName: ChemistryPackagesNames;
+  packageName: string;
 }
 
 interface ILogAction<T> {
@@ -33,12 +32,12 @@ interface ILogPackageAction<T> {
   UNID: string;
   log: string;
   logName: T;
-  packageName: ChemistryPackagesNames;
+  packageName: string;
 }
 
 interface IClearItemPackageAction {
   item: IChemistryDataItem;
-  packageName: ChemistryPackagesNames;
+  packageName: string;
 }
 
 type IncDecActionType = (action: IIncDecAction) => AppThunk;

@@ -1,10 +1,10 @@
 //vars
-import { ILogsType } from '../../../types/data-types';
 import { ChemistryLogsNames, ChemistrySettingsNames } from '../variables/';
-import { ChemistryPackagesNames } from '../variables/data-variables';
+//types
+import type { ILogsType } from '../../../types/data-types';
 
 interface IChemistryDataPackage {
-  dataPackageName: ChemistryPackagesNames;
+  dataPackageName: string;
   dataPackageUNID: number;
   items: IChemistryDataItem[];
 }
@@ -27,6 +27,7 @@ interface IChemistrySettings {
 
 interface IChemistryDataItem {
   UNID: string;
+  packageName: string;
   amount: number;
   firm: string;
   name: string;
@@ -51,8 +52,7 @@ interface IChemistryPackageData {
 // }
 
 interface IChemistryData {
-  [ChemistryPackagesNames.EKSTRUZJA]: IChemistryPackageData;
-  [ChemistryPackagesNames.OKLEINA]: IChemistryPackageData;
+  [key: string]: IChemistryPackageData;
 }
 
 type ChemistryDataForViewType = IChemistryDataItem[];

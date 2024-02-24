@@ -9,7 +9,7 @@ import type { IItemCardData, ILogsType } from '../../../types/data-types';
 interface IShortCardWithLogs {
   itemLogs: ILogsType;
   item: IItemCardData;
-  clearDataHandler: (id: string) => void;
+  clearDataHandler: () => void;
 }
 
 const ShortCardWithLogs = ({
@@ -28,7 +28,7 @@ const ShortCardWithLogs = ({
   };
 
   const onClearDataButtonClickHandler = () => {
-    clearDataHandler(item.UNID);
+    clearDataHandler();
     setModalIsOpen(false);
   };
 

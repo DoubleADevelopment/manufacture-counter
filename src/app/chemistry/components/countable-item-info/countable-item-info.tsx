@@ -4,19 +4,22 @@ import { useAppDispatch, useAppSelector } from '../../../../hooks/hooks';
 import chemistryAdapterService from '../../services/chemistry-adapter.service';
 //store
 import { clearItemDataAction } from '../../store/actions/actions';
-import { SelectorGetCurrentChemistry } from '../../store/slectors/selectors';
+import {
+  SelectorCheckIfElementExistsByUNID,
+  SelectorGetCurrentChemistry,
+} from '../../store/slectors/selectors';
 //components
 import { ItemCardShortSkeleton, ShortCardWithLogs } from '../../../../components/cards';
 //types
 import type { IItemCardData } from '../../../../types';
 import type { IChemistryDataItem } from '../../types/data-types';
-import { ChemistryPackagesNames } from '../../variables/data-variables';
 
 const CountableItemInfo = (): JSX.Element => {
   const { UNID, packName } = useParams();
+  const itemFromUnidIsset = useAppSelector(SelectorCheckIfElementExistsByUNID(UNID, packName));
   const item: IChemistryDataItem | null =
-    UNID && packName
-      ? useAppSelector(SelectorGetCurrentChemistry(UNID, packName as ChemistryPackagesNames))
+    UNID && packName && itemFromUnidIsset
+      ? useAppSelector(SelectorGetCurrentChemistry(UNID, packName))
       : null;
 
   const dispatch = useAppDispatch();
@@ -29,8 +32,10 @@ const CountableItemInfo = (): JSX.Element => {
     convertedItem = undefined;
   }
 
-  const clearDataHandler = (id: string) => {
-    dispatch(clearItemDataAction({ UNID: id, packageName: packName as ChemistryPackagesNames }));
+  const clearDataHandler = () => {
+    if (item) {
+      dispatch(clearItemDataAction({ UNID: item.UNID, packageName: item.packageName }));
+    }
   };
 
   return (

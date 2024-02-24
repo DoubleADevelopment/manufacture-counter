@@ -5,8 +5,6 @@ import type { IChemistryDataItem, IChemistryData } from '../types/data-types';
 import chemistryData from '../data/chemistry-data';
 //adapters
 import chemistryAdapterService from './chemistry-adapter.service';
-//variables
-import { ChemistryPackagesNames } from '../variables/data-variables';
 
 class ChemistryDataService implements IDataService<IChemistryData> {
   #data: IChemistryData;
@@ -19,7 +17,7 @@ class ChemistryDataService implements IDataService<IChemistryData> {
     return this.#data;
   }
 
-  getDataItem(id: string, packageName: ChemistryPackagesNames): IChemistryDataItem {
+  getDataItem(id: string, packageName: string): IChemistryDataItem {
     return this.#data[packageName][id];
   }
 }

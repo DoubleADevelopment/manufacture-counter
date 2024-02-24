@@ -7,17 +7,14 @@ import { useAppSelector } from '../../../../hooks/hooks';
 import { SelectorCheckIfElementExistsByUNID } from '../../store/slectors/selectors';
 //variables
 import { ErrorsText, NotificationType } from '../../../../variables';
-import { ChemistryPackagesNames } from '../../variables/data-variables';
 
 const Counter = (): JSX.Element => {
   const { UNID, packName } = useParams();
-  const itemFromUnidIsset = useAppSelector(
-    SelectorCheckIfElementExistsByUNID(UNID, packName as ChemistryPackagesNames),
-  );
+  const itemFromUnidIsset = useAppSelector(SelectorCheckIfElementExistsByUNID(UNID, packName));
 
   const renderComponents = (): JSX.Element => {
     if (UNID && packName && itemFromUnidIsset) {
-      return <CounterControls UNID={UNID} packName={packName as ChemistryPackagesNames} />;
+      return <CounterControls UNID={UNID} packName={packName} />;
     } else {
       return (
         <PageNotification

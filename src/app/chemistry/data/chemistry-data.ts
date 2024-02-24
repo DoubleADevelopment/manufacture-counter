@@ -2,15 +2,15 @@
 import { ChemistryLogsNames, ChemistrySettingsNames } from '../variables/';
 //types
 import type { ChemistryDataPackagesType } from '../types/data-types';
-import { ChemistryPackagesNames } from '../variables/data-variables';
 
 const chemistryData: ChemistryDataPackagesType = [
   {
-    dataPackageName: ChemistryPackagesNames.EKSTRUZJA,
+    dataPackageName: 'ekstruzja',
     dataPackageUNID: 1001,
     items: [
       {
         UNID: `chemistry-veneer-77001-003`,
+        packageName: 'ekstruzja',
         amount: 0,
         firm: '',
         name: 'Solvent',
@@ -37,6 +37,7 @@ const chemistryData: ChemistryDataPackagesType = [
       },
       {
         UNID: `chemistry-veneer-770000-00030`,
+        packageName: 'ekstruzja',
         amount: 0,
         firm: '',
         name: 'Atrament',
@@ -63,6 +64,7 @@ const chemistryData: ChemistryDataPackagesType = [
       },
       {
         UNID: `chemistry-veneer-SJN1700`,
+        packageName: 'ekstruzja',
         amount: 0,
         firm: '',
         name: 'Solvent',
@@ -90,6 +92,7 @@ const chemistryData: ChemistryDataPackagesType = [
 
       {
         UNID: `chemistry-veneer-VJ706-D`,
+        packageName: 'ekstruzja',
         amount: 0,
         firm: '',
         name: 'Make-up',
@@ -116,6 +119,7 @@ const chemistryData: ChemistryDataPackagesType = [
       },
       {
         UNID: `chemistry-veneer-VJ411-D`,
+        packageName: 'ekstruzja',
         amount: 0,
         firm: '',
         name: 'Atrament',
@@ -143,6 +147,7 @@ const chemistryData: ChemistryDataPackagesType = [
 
       {
         UNID: `chemistry-veneer-VJ7222-D`,
+        packageName: 'ekstruzja',
         amount: 0,
         firm: '',
         name: 'Make-up',
@@ -169,6 +174,7 @@ const chemistryData: ChemistryDataPackagesType = [
       },
       {
         UNID: `chemistry-veneer-VJ4262-D`,
+        packageName: 'ekstruzja',
         amount: 0,
         firm: '',
         name: 'Atrament',
@@ -196,11 +202,12 @@ const chemistryData: ChemistryDataPackagesType = [
     ],
   },
   {
-    dataPackageName: ChemistryPackagesNames.OKLEINA,
+    dataPackageName: 'okleina',
     dataPackageUNID: 1002,
     items: [
       {
         UNID: `chemistry-veneer-77001-003`,
+        packageName: 'okleina',
         amount: 0,
         firm: '',
         name: 'Solvent',
@@ -227,6 +234,7 @@ const chemistryData: ChemistryDataPackagesType = [
       },
       {
         UNID: `chemistry-veneer-770000-00030`,
+        packageName: 'okleina',
         amount: 0,
         firm: '',
         name: 'Atrament',
@@ -253,6 +261,7 @@ const chemistryData: ChemistryDataPackagesType = [
       },
       {
         UNID: `chemistry-veneer-SJN1700`,
+        packageName: 'okleina',
         amount: 0,
         firm: '',
         name: 'Solvent',
@@ -280,6 +289,7 @@ const chemistryData: ChemistryDataPackagesType = [
 
       {
         UNID: `chemistry-veneer-VJ706-D`,
+        packageName: 'okleina',
         amount: 0,
         firm: '',
         name: 'Make-up',
@@ -306,6 +316,7 @@ const chemistryData: ChemistryDataPackagesType = [
       },
       {
         UNID: `chemistry-veneer-VJ411-D`,
+        packageName: 'okleina',
         amount: 0,
         firm: '',
         name: 'Atrament',
@@ -333,6 +344,7 @@ const chemistryData: ChemistryDataPackagesType = [
 
       {
         UNID: `chemistry-veneer-VJ7222-D`,
+        packageName: 'okleina',
         amount: 0,
         firm: '',
         name: 'Make-up',
@@ -359,6 +371,7 @@ const chemistryData: ChemistryDataPackagesType = [
       },
       {
         UNID: `chemistry-veneer-VJ4262-D`,
+        packageName: 'okleina',
         amount: 0,
         firm: '',
         name: 'Atrament',
