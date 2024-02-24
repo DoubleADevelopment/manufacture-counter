@@ -1,6 +1,6 @@
 const enum ChemistryAppRouting {
   ROOT = '/chemistry',
-  COUNTER = '/:UNID',
+  COUNTER = '/:packName/:UNID',
 }
 
 export { ChemistryAppRouting };

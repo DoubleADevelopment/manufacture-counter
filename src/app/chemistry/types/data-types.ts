@@ -1,12 +1,15 @@
 //vars
 import { ILogsType } from '../../../types/data-types';
 import { ChemistryLogsNames, ChemistrySettingsNames } from '../variables/';
+import { ChemistryPackagesNames } from '../variables/data-variables';
 
 interface IChemistryDataPackage {
-  dataPackageName: string;
+  dataPackageName: ChemistryPackagesNames;
   dataPackageUNID: number;
   items: IChemistryDataItem[];
 }
+
+type ChemistryDataPackagesType = IChemistryDataPackage[];
 
 interface IChemistryLogs extends ILogsType {
   [ChemistryLogsNames.COUNTER]: {
@@ -39,13 +42,23 @@ interface IChemistryDataItem {
   manufacturer: string;
 }
 
-interface IChemistryData {
+interface IChemistryPackageData {
   [UNID: string]: IChemistryDataItem;
+}
+
+// interface IChemistryData {
+//   [UNID: string]: IChemistryDataItem;
+// }
+
+interface IChemistryData {
+  [ChemistryPackagesNames.EKSTRUZJA]: IChemistryPackageData;
+  [ChemistryPackagesNames.OKLEINA]: IChemistryPackageData;
 }
 
 type ChemistryDataForViewType = IChemistryDataItem[];
 
 export type {
+  ChemistryDataPackagesType,
   IChemistryDataItem,
   IChemistryData,
   IChemistryDataPackage,

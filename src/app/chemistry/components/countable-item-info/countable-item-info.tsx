@@ -10,12 +10,14 @@ import { ItemCardShortSkeleton, ShortCardWithLogs } from '../../../../components
 //types
 import type { IItemCardData } from '../../../../types';
 import type { IChemistryDataItem } from '../../types/data-types';
+import { ChemistryPackagesNames } from '../../variables/data-variables';
 
 const CountableItemInfo = (): JSX.Element => {
-  const { UNID } = useParams();
-  const item: IChemistryDataItem | null = UNID
-    ? useAppSelector(SelectorGetCurrentChemistry(UNID))
-    : null;
+  const { UNID, packName } = useParams();
+  const item: IChemistryDataItem | null =
+    UNID && packName
+      ? useAppSelector(SelectorGetCurrentChemistry(UNID, packName as ChemistryPackagesNames))
+      : null;
 
   const dispatch = useAppDispatch();
 
@@ -28,7 +30,7 @@ const CountableItemInfo = (): JSX.Element => {
   }
 
   const clearDataHandler = (id: string) => {
-    dispatch(clearItemDataAction({ UNID: id }));
+    dispatch(clearItemDataAction({ UNID: id, packageName: packName as ChemistryPackagesNames }));
   };
 
   return (

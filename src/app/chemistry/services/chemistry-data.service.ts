@@ -1,39 +1,31 @@
 //types
 import type { IDataService } from '../../../types';
-import type {
-  IChemistryDataItem,
-  IChemistryDataPackage,
-  IChemistryData,
-} from '../types/data-types';
+import type { IChemistryDataItem, IChemistryData } from '../types/data-types';
 //data
 import chemistryData from '../data/chemistry-data';
 //adapters
 import chemistryAdapterService from './chemistry-adapter.service';
+//variables
+import { ChemistryPackagesNames } from '../variables/data-variables';
 
-class ChemistryDataService implements IDataService<IChemistryData, IChemistryDataPackage> {
+class ChemistryDataService implements IDataService<IChemistryData> {
   #data: IChemistryData;
-  #dataPackage: IChemistryDataPackage;
 
-  constructor(data: IChemistryData, dataPackage: IChemistryDataPackage) {
+  constructor(data: IChemistryData) {
     this.#data = data;
-    this.#dataPackage = dataPackage;
   }
 
   getData(): IChemistryData {
     return this.#data;
   }
 
-  getDataPackage(): IChemistryDataPackage {
-    return this.#dataPackage;
-  }
-
-  getDataItem(id: string): IChemistryDataItem {
-    return this.#data[id];
+  getDataItem(id: string, packageName: ChemistryPackagesNames): IChemistryDataItem {
+    return this.#data[packageName][id];
   }
 }
 
 const adaptedData: IChemistryData = chemistryAdapterService.adaptDataToApp(chemistryData);
 
-const chemistryDataService = new ChemistryDataService(adaptedData, chemistryData);
+const chemistryDataService = new ChemistryDataService(adaptedData);
 
 export default chemistryDataService;

@@ -9,9 +9,10 @@ import style from './item-card-full.module.scss';
 interface IItemProps {
   item: IItemCardData;
   measurementText: UnitsOfMeasurementText;
+  path?: string;
 }
 
-const ItemCardFull = ({ item, measurementText }: IItemProps): JSX.Element => {
+const ItemCardFull = ({ item, measurementText, path }: IItemProps): JSX.Element => {
   const { UNID, name, description, itemNumber, packagingInfo, image, amount } = item;
 
   return (
@@ -38,7 +39,7 @@ const ItemCardFull = ({ item, measurementText }: IItemProps): JSX.Element => {
       <div className={`${style['item-card-full__amount']} paragraph-primary-a label-medium`}>
         {measurementText} <span className="paragraph-primary-a heading-medium">{amount}</span>
       </div>
-      <Link className={style['item-card-full__link']} to={`./${UNID}`}>
+      <Link className={style['item-card-full__link']} to={`./${path}/${UNID}`}>
         <span className="visually-hidden">Otwórz licznik dla {name}</span>
       </Link>
     </li>

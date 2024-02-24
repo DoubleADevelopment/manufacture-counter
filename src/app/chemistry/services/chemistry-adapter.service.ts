@@ -1,27 +1,41 @@
+//types
 import type { IAdapterService } from '../../../types';
 import type { ItemsListDataType, IItemCardData } from '../../../types/data-types';
-import {
+import type {
   ChemistryDataForViewType,
   IChemistryDataItem,
-  IChemistryDataPackage,
+  ChemistryDataPackagesType,
   IChemistryData,
+  IChemistryDataPackage,
 } from '../types/data-types';
+//variables
+import { ChemistryPackagesNames } from '../variables/data-variables';
 
-class ChemistryAdapterService implements IAdapterService<IChemistryData, IChemistryDataPackage> {
-  adaptDataToApp(data: IChemistryDataPackage): IChemistryData {
-    const adaptedData: IChemistryData = {};
+class ChemistryAdapterService
+  implements IAdapterService<IChemistryData, ChemistryDataPackagesType>
+{
+  adaptDataToApp(data: ChemistryDataPackagesType): IChemistryData {
+    const adaptedData: IChemistryData = {
+      [ChemistryPackagesNames.EKSTRUZJA]: {},
+      [ChemistryPackagesNames.OKLEINA]: {},
+    };
 
-    data.items.forEach((item: IChemistryDataItem) => {
-      adaptedData[item.UNID] = item;
+    data.map((dataPackage: IChemistryDataPackage) => {
+      dataPackage.items.forEach((item: IChemistryDataItem) => {
+        return (adaptedData[dataPackage.dataPackageName][item.UNID] = item);
+      });
     });
     return adaptedData;
   }
 
-  adaptDataToView(data: IChemistryData): ChemistryDataForViewType {
+  adaptDataToView(
+    data: IChemistryData,
+    packageName: ChemistryPackagesNames,
+  ): ChemistryDataForViewType {
     const itemsArray: ChemistryDataForViewType = [];
 
-    for (const item in data) {
-      itemsArray.push(data[item]);
+    for (const item in data[packageName]) {
+      itemsArray.push(data[packageName][item]);
     }
 
     return itemsArray;
@@ -39,8 +53,11 @@ class ChemistryAdapterService implements IAdapterService<IChemistryData, IChemis
     };
   }
 
-  adaptDataToItemsList(data: IChemistryData): ItemsListDataType {
-    const dataAdaptedToView = this.adaptDataToView(data);
+  adaptDataToItemsList(
+    data: IChemistryData,
+    packageName: ChemistryPackagesNames,
+  ): ItemsListDataType {
+    const dataAdaptedToView = this.adaptDataToView(data, packageName);
     const adaptedData = dataAdaptedToView.map((item) => {
       return this.adaptItemDataToCard(item);
     });
