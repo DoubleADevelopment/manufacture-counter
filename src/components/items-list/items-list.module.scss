@@ -1,6 +1,7 @@
 .items-list {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   list-style: none;
   gap: 20px;
 }

@@ -3,17 +3,26 @@ import type { RootState } from '../../../../types';
 import type { IChemistryDataItem, IChemistryData } from '../../types/data-types';
 
 export const SelectorGetChemistryState = (state: RootState): IChemistryData =>
-  state.chemistry.items;
+  state.chemistry.packages;
 export const SelectorGetCurrentChemistry =
-  (UNID: string) =>
+  (UNID: string, packName: string) =>
   (state: RootState): IChemistryDataItem =>
-    state.chemistry.items[UNID];
+    state.chemistry.packages[packName][UNID];
 export const SelectorCheckIfElementExistsByUNID =
-  (UNID: string | undefined) =>
+  (UNID: string | undefined, packName: string | undefined) =>
   (state: RootState): boolean => {
-    if (UNID && state.chemistry.items[UNID]) {
-      return true;
+    let result = false;
+    if (!UNID || !packName) {
+      result = false;
     } else {
-      return false;
+      if (!state.chemistry.packages[packName]) {
+        result = false;
+      } else if (!state.chemistry.packages[packName][UNID]) {
+        result = false;
+      } else {
+        result = true;
+      }
     }
+
+    return result;
   };

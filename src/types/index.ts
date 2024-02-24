@@ -9,7 +9,15 @@ import type {
   IItemCardData,
 } from './data-types';
 import type { IRouteItem } from './routing-types';
-import type { IIncDecAction, ILogAction, IncDecActionType } from './action-types';
+import type {
+  IClearItemDataWithPackageAction,
+  IClearItemWithPackageAction,
+  IIncDecAction,
+  ILogAction,
+  ILogWithPackageAction,
+  IIncDecWithPackageNameAction,
+  IClearItemAction,
+} from './action-types';
 import { AppDispatch, RootState, AppThunk, AppDispatchType } from './store-types';
 import { ISetActiveLink } from './other-types';
 import { IIconProps } from './icon-props-type';
@@ -34,7 +42,11 @@ export type {
   IRouteItem,
   ItemsListDataType,
   ILogsType,
-  IncDecActionType,
   GetItemSelectorType,
   IItemCardData,
+  IClearItemDataWithPackageAction,
+  ILogWithPackageAction,
+  IClearItemWithPackageAction,
+  IIncDecWithPackageNameAction,
+  IClearItemAction,
 };

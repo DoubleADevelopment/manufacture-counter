@@ -17,22 +17,31 @@ import style from './chemistry-page.module.scss';
 
 const ChemistryPage = () => {
   const [cheistryData, setChemistryData] = useState<ItemsListDataType>();
-  const chemistryData = useAppSelector(SelectorGetChemistryState);
+  const [currentPackage, setCurrentPackage] = useState<string>('');
+  const chemistryState = useAppSelector(SelectorGetChemistryState);
+
+  const additionalNavForChemistry: string[] = [];
+  for (const key in chemistryState) {
+    additionalNavForChemistry.push(key);
+  }
 
   useEffect(() => {
-    const adaptedData = chemistryAdapterService.adaptDataToItemsList(chemistryData);
+    const adaptedData = chemistryAdapterService.adaptDataToItemsList(
+      chemistryState,
+      currentPackage,
+    );
     setChemistryData(adaptedData);
-  }, [chemistryData]);
+  }, [chemistryState, currentPackage]);
 
-  const additionalNavForChemistry = ['okleina', 'produkcja'];
+  const changePackageHandler = (value: string) => {
+    setCurrentPackage(value);
+  };
 
   return (
-    <PageWithMenuLayout
-      headerTitle={ComponentsRouting.CHEMISTRY.title}
-      additionalNav={<AdditionalNav items={additionalNavForChemistry} />}
-    >
+    <PageWithMenuLayout headerTitle={ComponentsRouting.CHEMISTRY.title}>
       <main className={style['chemistry-page']}>
-        {cheistryData && <ItemsList data={cheistryData} />}
+        <AdditionalNav items={additionalNavForChemistry} changeHandler={changePackageHandler} />
+        {cheistryData && <ItemsList data={cheistryData} additionalPath={currentPackage} />}
       </main>
     </PageWithMenuLayout>
   );

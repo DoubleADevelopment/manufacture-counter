@@ -9,9 +9,10 @@ import style from './items-list.module.scss';
 
 interface IComponentsListProps {
   data: ItemsListDataType;
+  additionalPath?: string;
 }
 
-const ItemsList = ({ data }: IComponentsListProps): JSX.Element => {
+const ItemsList = ({ data, additionalPath }: IComponentsListProps): JSX.Element => {
   return (
     <ul className={style['items-list']}>
       {data.map((item) => {
@@ -20,6 +21,7 @@ const ItemsList = ({ data }: IComponentsListProps): JSX.Element => {
             item={item}
             measurementText={UnitsOfMeasurementText.AMOUNT}
             key={item.UNID}
+            additionalPath={additionalPath}
           />
         );
       })}

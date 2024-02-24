@@ -1,6 +1,5 @@
-interface IDataService<D, P> {
+interface IDataService<D> {
   getData(): D;
-  getDataPackage(): P;
 }
 
 interface ILocalstorageService<D> {

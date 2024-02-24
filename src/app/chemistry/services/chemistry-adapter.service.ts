@@ -1,27 +1,33 @@
+//types
 import type { IAdapterService } from '../../../types';
 import type { ItemsListDataType, IItemCardData } from '../../../types/data-types';
-import {
+import type {
   ChemistryDataForViewType,
   IChemistryDataItem,
-  IChemistryDataPackage,
+  ChemistryDataPackagesType,
   IChemistryData,
 } from '../types/data-types';
 
-class ChemistryAdapterService implements IAdapterService<IChemistryData, IChemistryDataPackage> {
-  adaptDataToApp(data: IChemistryDataPackage): IChemistryData {
+class ChemistryAdapterService
+  implements IAdapterService<IChemistryData, ChemistryDataPackagesType>
+{
+  adaptDataToApp(data: ChemistryDataPackagesType): IChemistryData {
     const adaptedData: IChemistryData = {};
 
-    data.items.forEach((item: IChemistryDataItem) => {
-      adaptedData[item.UNID] = item;
-    });
+    for (const dataPackage of data) {
+      adaptedData[dataPackage.dataPackageName] = {};
+      dataPackage.items.forEach((item: IChemistryDataItem) => {
+        adaptedData[dataPackage.dataPackageName][item.UNID] = item;
+      });
+    }
     return adaptedData;
   }
 
-  adaptDataToView(data: IChemistryData): ChemistryDataForViewType {
+  adaptDataToView(data: IChemistryData, packageName: string): ChemistryDataForViewType {
     const itemsArray: ChemistryDataForViewType = [];
 
-    for (const item in data) {
-      itemsArray.push(data[item]);
+    for (const item in data[packageName]) {
+      itemsArray.push(data[packageName][item]);
     }
 
     return itemsArray;
@@ -39,8 +45,8 @@ class ChemistryAdapterService implements IAdapterService<IChemistryData, IChemis
     };
   }
 
-  adaptDataToItemsList(data: IChemistryData): ItemsListDataType {
-    const dataAdaptedToView = this.adaptDataToView(data);
+  adaptDataToItemsList(data: IChemistryData, packageName: string): ItemsListDataType {
+    const dataAdaptedToView = this.adaptDataToView(data, packageName);
     const adaptedData = dataAdaptedToView.map((item) => {
       return this.adaptItemDataToCard(item);
     });

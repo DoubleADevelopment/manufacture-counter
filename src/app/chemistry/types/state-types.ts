@@ -2,7 +2,7 @@
 import type { IChemistryData } from './data-types';
 
 interface IChemistryStateType {
-  items: IChemistryData;
+  packages: IChemistryData;
 }
 
 export type { IChemistryStateType };

@@ -3,24 +3,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid var(--border-opaque);
+  border-radius: var(--basic-border-radius);
   width: 100%;
   background-color: var(--backgroud-primary);
-  gap: 10px;
+
+  &:focus-within,
+  &:focus {
+    border-color: var(--border-selected);
+  }
 }
 
 .additional-nav__label {
   position: relative;
+  z-index: 1;
   flex: 1;
   padding: 5px 8px;
+  min-width: max-content;
   font-weight: bold;
   font-size: 18px;
   text-align: center;
   text-transform: capitalize;
   cursor: pointer;
-
-  // &:hover > span{
-  //   color: var(--background-accent);
-  // }
 }
 
 .additional-nav__input {
@@ -31,10 +35,12 @@
   height: 0;
 }
 
-.selected {
-  position: absolute;
-  z-index: 1;
-  border-radius: 12px;
-  height: 40px;
-  background-color: blue;
+.indicator {
+  position:absolute;
+  left:0;
+  top:0;
+  border-radius: var(--basic-border-radius);
+  height:100%;
+  background: var(--background-light-accent);
+  transition: all 300ms ease-in-out;
 }

@@ -9,12 +9,12 @@ import { SelectorCheckIfElementExistsByUNID } from '../../store/slectors/selecto
 import { ErrorsText, NotificationType } from '../../../../variables';
 
 const Counter = (): JSX.Element => {
-  const { UNID } = useParams();
-  const itemFromUnidIsset = useAppSelector(SelectorCheckIfElementExistsByUNID(UNID));
+  const { UNID, packName } = useParams();
+  const itemFromUnidIsset = useAppSelector(SelectorCheckIfElementExistsByUNID(UNID, packName));
 
   const renderComponents = (): JSX.Element => {
-    if (UNID && itemFromUnidIsset) {
-      return <CounterControls UNID={UNID} />;
+    if (UNID && packName && itemFromUnidIsset) {
+      return <CounterControls UNID={UNID} packName={packName} />;
     } else {
       return (
         <PageNotification
