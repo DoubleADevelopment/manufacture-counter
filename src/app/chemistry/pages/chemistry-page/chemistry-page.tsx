@@ -27,11 +27,9 @@ const ChemistryPage = () => {
   const additionalNavForChemistry = ['okleina', 'produkcja'];
 
   return (
-    <PageWithMenuLayout
-      headerTitle={ComponentsRouting.CHEMISTRY.title}
-      additionalNav={<AdditionalNav items={additionalNavForChemistry} />}
-    >
+    <PageWithMenuLayout headerTitle={ComponentsRouting.CHEMISTRY.title}>
       <main className={style['chemistry-page']}>
+        <AdditionalNav items={additionalNavForChemistry} />
         {cheistryData && <ItemsList data={cheistryData} />}
       </main>
     </PageWithMenuLayout>
