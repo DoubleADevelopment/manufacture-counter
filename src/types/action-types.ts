@@ -1,24 +1,15 @@
-//types
-import type { IChemistryDataItem } from '../app/chemistry/types/data-types';
-import type { AppThunk } from './store-types';
-
 interface IIncDecAction {
   UNID: string;
   value: number;
 }
-
-interface IIncDecPackageAction {
-  UNID: string;
-  value: number;
+interface IIncDecWithPackageNameAction extends IIncDecAction {
   packageName: string;
 }
 
 interface IClearItemDataAction {
   UNID: string;
 }
-
-interface IClearItemDataPackageAction {
-  UNID: string;
+interface IClearItemDataWithPackageAction extends IClearItemDataAction {
   packageName: string;
 }
 
@@ -27,30 +18,25 @@ interface ILogAction<T> {
   log: string;
   logName: T;
 }
-
-interface ILogPackageAction<T> {
-  UNID: string;
-  log: string;
-  logName: T;
+interface ILogWithPackageAction<T> extends ILogAction<T> {
   packageName: string;
 }
 
-interface IClearItemPackageAction {
-  item: IChemistryDataItem;
-  packageName: string;
+interface IClearItemAction<T> {
+  item: T;
 }
 
-type IncDecActionType = (action: IIncDecAction) => AppThunk;
-type IncDecPackageActionType = (action: IIncDecPackageAction) => AppThunk;
+interface IClearItemWithPackageAction<T> extends IClearItemAction<T> {
+  packageName: string;
+}
 
 export type {
   IIncDecAction,
   ILogAction,
   IClearItemDataAction,
-  IncDecActionType,
-  IIncDecPackageAction,
-  IClearItemDataPackageAction,
-  ILogPackageAction,
-  IncDecPackageActionType,
-  IClearItemPackageAction,
+  IClearItemDataWithPackageAction,
+  ILogWithPackageAction,
+  IClearItemWithPackageAction,
+  IIncDecWithPackageNameAction,
+  IClearItemAction,
 };

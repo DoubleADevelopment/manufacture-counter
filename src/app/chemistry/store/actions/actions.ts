@@ -8,14 +8,14 @@ import chemistryRepository from '../../repository/chemistry-repository';
 //types
 import type { AppThunk } from '../../../../types';
 import type {
-  IClearItemDataPackageAction,
-  IIncDecPackageAction,
+  IClearItemDataWithPackageAction,
+  IIncDecWithPackageNameAction,
 } from '../../../../types/action-types';
 
 const { increment, decrement, log, clearItem, clearData } = chemistrySlice.actions;
 
 export const incrementAction =
-  (action: IIncDecPackageAction): AppThunk =>
+  (action: IIncDecWithPackageNameAction): AppThunk =>
   (dispatch, getState) => {
     dispatch(increment(action));
 
@@ -31,7 +31,7 @@ export const incrementAction =
   };
 
 export const decrementAction =
-  (action: IIncDecPackageAction): AppThunk =>
+  (action: IIncDecWithPackageNameAction): AppThunk =>
   (dispatch, getState) => {
     dispatch(decrement(action));
 
@@ -47,7 +47,7 @@ export const decrementAction =
   };
 
 export const clearItemDataAction =
-  (action: IClearItemDataPackageAction): AppThunk =>
+  (action: IClearItemDataWithPackageAction): AppThunk =>
   (dispatch, getState) => {
     const clearedItem = chemistryDataService.getDataItem(action.UNID, action.packageName);
     dispatch(clearItem({ item: clearedItem, packageName: action.packageName }));

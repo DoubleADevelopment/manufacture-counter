@@ -18,7 +18,7 @@ const ItemCardFull = ({ item, measurementText, additionalPath }: IItemProps): JS
   const linkPath = additionalPath ? `${additionalPath}/${UNID}` : `${UNID}`;
 
   return (
-    <li className={style['item-card-full']} key={UNID}>
+    <li className={`${style['item-card-full']} unselectable`} key={UNID}>
       <div className={style['item-card-full__info']}>
         <h3 className={`content-primary-a heading-small`}>{name}</h3>
         <p className={`content-primary-a paragraph-large`}>

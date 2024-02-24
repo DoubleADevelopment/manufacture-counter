@@ -10,14 +10,13 @@ import type {
 } from './data-types';
 import type { IRouteItem } from './routing-types';
 import type {
-  IClearItemDataPackageAction,
-  IClearItemPackageAction,
+  IClearItemDataWithPackageAction,
+  IClearItemWithPackageAction,
   IIncDecAction,
-  IIncDecPackageAction,
   ILogAction,
-  ILogPackageAction,
-  IncDecActionType,
-  IncDecPackageActionType,
+  ILogWithPackageAction,
+  IIncDecWithPackageNameAction,
+  IClearItemAction,
 } from './action-types';
 import { AppDispatch, RootState, AppThunk, AppDispatchType } from './store-types';
 import { ISetActiveLink } from './other-types';
@@ -43,12 +42,11 @@ export type {
   IRouteItem,
   ItemsListDataType,
   ILogsType,
-  IncDecActionType,
   GetItemSelectorType,
   IItemCardData,
-  IIncDecPackageAction,
-  IClearItemDataPackageAction,
-  ILogPackageAction,
-  IncDecPackageActionType,
-  IClearItemPackageAction,
+  IClearItemDataWithPackageAction,
+  ILogWithPackageAction,
+  IClearItemWithPackageAction,
+  IIncDecWithPackageNameAction,
+  IClearItemAction,
 };

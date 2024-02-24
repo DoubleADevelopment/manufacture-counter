@@ -5,42 +5,38 @@ import { ChemistryLogsNames } from '../../variables/';
 import chemistryState from '../state/state';
 //types
 import type {
-  ILogPackageAction,
-  IIncDecPackageAction,
-  IClearItemPackageAction,
+  ILogWithPackageAction,
+  IIncDecWithPackageNameAction,
+  IClearItemWithPackageAction,
 } from '../../../../types';
-import type { IChemistryData } from '../../types/data-types';
+import type { IChemistryData, IChemistryDataItem } from '../../types/data-types';
 
 export const chemistrySlice = createSlice({
   name: 'chemistry',
   initialState: chemistryState,
 
   reducers: {
-    increment: (state, action: PayloadAction<IIncDecPackageAction>) => {
+    increment: (state, action: PayloadAction<IIncDecWithPackageNameAction>) => {
       const { UNID, value, packageName } = action.payload;
       console.log(UNID, value);
-      // state.items[UNID].amount = state.items[UNID].amount + value;
       state.packages[packageName][UNID].amount = state.packages[packageName][UNID].amount + value;
     },
-    decrement: (state, action: PayloadAction<IIncDecPackageAction>) => {
+    decrement: (state, action: PayloadAction<IIncDecWithPackageNameAction>) => {
       const { UNID, value, packageName } = action.payload;
       console.log(UNID, value);
-      // state.items[UNID].amount = state.items[UNID].amount - value;
       state.packages[packageName][UNID].amount = state.packages[packageName][UNID].amount - value;
     },
-    log: (state, action: PayloadAction<ILogPackageAction<ChemistryLogsNames>>) => {
+    log: (state, action: PayloadAction<ILogWithPackageAction<ChemistryLogsNames>>) => {
       const { UNID, logName, log, packageName } = action.payload;
       console.log(UNID, logName, log);
-      // state.items[UNID].logs[logName].log.push(log);
       state.packages[packageName][UNID].logs[logName].log.push(log);
     },
-    clearItem: (state, action: PayloadAction<IClearItemPackageAction>) => {
+    clearItem: (state, action: PayloadAction<IClearItemWithPackageAction<IChemistryDataItem>>) => {
       const { UNID } = action.payload.item;
       state.packages[action.payload.packageName][UNID] = action.payload.item;
     },
     clearData: (state, action: PayloadAction<IChemistryData>) => {
-      // state.items = action.payload;
-      console.log(action.payload);
+      state.packages = action.payload;
     },
   },
 });
