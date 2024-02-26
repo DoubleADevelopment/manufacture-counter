@@ -29,7 +29,6 @@ interface IItemCardData {
 type ItemsListDataType = IItemCardData[];
 
 //data types for apps/counters
-
 interface ILogs {
   [key: string]: {
     log: string[];

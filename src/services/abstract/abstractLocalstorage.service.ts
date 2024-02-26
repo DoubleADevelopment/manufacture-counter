@@ -1,10 +1,12 @@
 //types
-import type { ILocalstorageService, LocalstorageNamesType } from '../../types';
+import type { DataAliasType, ILocalstorageService, storageNamesAliasType } from '../../types';
 
-abstract class AbstractLocalstorageService<D> implements ILocalstorageService<D> {
-  #storageName: LocalstorageNamesType;
+abstract class AbstractLocalstorageService<D extends DataAliasType>
+  implements ILocalstorageService<D>
+{
+  #storageName: storageNamesAliasType;
 
-  constructor(storageName: LocalstorageNamesType) {
+  constructor(storageName: storageNamesAliasType) {
     this.#storageName = storageName;
   }
 

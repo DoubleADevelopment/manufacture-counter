@@ -1,6 +1,5 @@
 import type { IDataService, ILocalstorageService, IAdapterService } from './services-types';
 import type { IRepository } from './repository-types';
-import type { LocalstorageNamesType } from './localstorage-types';
 import type {
   IComponentsListDataItem,
   ComponentsListDataType,
@@ -13,6 +12,7 @@ import type {
   IDataItem,
   IDataPackage,
   IData,
+  storageNamesAliasType,
 } from './data-types';
 import type { IRouteItem } from './routing-types';
 import type {
@@ -35,7 +35,6 @@ export type {
   ILocalstorageService,
   IAdapterService,
   IRepository,
-  LocalstorageNamesType,
   IIncDecAction,
   AppDispatch,
   RootState,
@@ -61,4 +60,5 @@ export type {
   IDataItem,
   IDataPackage,
   IData,
+  storageNamesAliasType,
 };

@@ -1,8 +1,10 @@
+import { DataAliasType } from './data-types';
+
 interface IDataService<D> {
   getData(): D;
 }
 
-interface ILocalstorageService<D> {
+interface ILocalstorageService<D extends DataAliasType> {
   getItems(): D | Error | null;
 
   setItems(data: D): D | Error;

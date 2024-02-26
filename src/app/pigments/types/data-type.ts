@@ -4,7 +4,6 @@ import { PigmentsLogsNames, PigmentsSettingsNames } from '../variables/data-vari
 import type { IData, IDataItem, IDataPackage, ILogs, ISettings } from '../../../types/data-types';
 
 interface IPigmentsDataPackageType extends IDataPackage<IPigmentsDataItemType> {}
-
 interface IPigmentsDataItemType extends IDataItem<IPigmentsLogs, IPigmentsSettings> {}
 
 interface IPigmentsLogs extends ILogs {
