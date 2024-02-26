@@ -1,7 +1,7 @@
 //types
-import type { IDataService } from '../../types';
+import type { DataAliasType, IDataService } from '../../types';
 
-abstract class AbstractDataService<D extends Record<string, any>, I> implements IDataService<D> {
+abstract class AbstractDataService<D extends DataAliasType> implements IDataService<D> {
   #data: D;
 
   constructor(data: D) {
@@ -12,8 +12,12 @@ abstract class AbstractDataService<D extends Record<string, any>, I> implements 
     return this.#data;
   }
 
-  getDataItem(id: string, packageName: string): I {
-    return this.#data[packageName][id];
+  getDataItemFromPackage<P extends keyof D>(id: keyof D[P], packageName: P) {
+    return this.#data[packageName][id as keyof D[P]];
+  }
+
+  getDataItem(id: string) {
+    return this.#data[id];
   }
 }
 

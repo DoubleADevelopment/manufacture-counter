@@ -51,6 +51,7 @@ interface IDataPackage<I> {
 
 interface IDataItem<L extends ILogs, S extends ISettings> {
   UNID: string;
+  packageName?: string;
   amount: number;
   firm: string;
   name: string;
