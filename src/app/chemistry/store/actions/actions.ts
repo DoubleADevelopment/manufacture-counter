@@ -49,7 +49,10 @@ export const decrementAction =
 export const clearItemDataAction =
   (action: IClearItemDataWithPackageAction): AppThunk =>
   (dispatch, getState) => {
-    const clearedItem = chemistryDataService.getDataItem(action.UNID, action.packageName);
+    const clearedItem = chemistryDataService.getDataItemFromPackage(
+      action.UNID,
+      action.packageName,
+    );
     dispatch(clearItem({ item: clearedItem, packageName: action.packageName }));
 
     chemistryRepository.sendData(getState().chemistry.packages);

@@ -4,10 +4,10 @@ import { ItemCardShort, LogsModal } from '../../';
 //variables
 import { UnitsOfMeasurementText } from '../../../variables/text-variables';
 //types
-import type { IItemCardData, ILogsType } from '../../../types/data-types';
+import type { IItemCardData, ILogs } from '../../../types/data-types';
 
 interface IShortCardWithLogs {
-  itemLogs: ILogsType;
+  itemLogs: ILogs;
   item: IItemCardData;
   clearDataHandler: () => void;
 }

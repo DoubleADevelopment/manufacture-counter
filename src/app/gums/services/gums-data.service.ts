@@ -1,25 +1,19 @@
 //types
-import type { IGumsDataType } from '../types/data-types';
-import type { IDataService } from '../../../types';
+import type { IGumsData } from '../types/data-types';
 //data
 import gumsData from '../data/gums-data';
 //adapters
 import gumsAdapterService from './gums-adapter.service';
+//abstract
+import { AbstractDataService } from '../../../services';
 
-class GumsDataService implements IDataService<IGumsDataType> {
-  #data: IGumsDataType;
+const adaptedData: IGumsData = gumsAdapterService.adaptDataToApp(gumsData);
 
-  constructor(data: IGumsDataType) {
-    this.#data = data;
-  }
-
-  getData(): IGumsDataType {
-    return this.#data;
+class GumsDataService extends AbstractDataService<IGumsData> {
+  constructor(data: IGumsData) {
+    super(data);
   }
 }
-
-const adaptedData: IGumsDataType = gumsAdapterService.adaptDataToApp(gumsData);
-
 const gumsDataService = new GumsDataService(adaptedData);
 
 export default gumsDataService;

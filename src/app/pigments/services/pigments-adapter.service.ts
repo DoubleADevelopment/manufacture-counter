@@ -1,15 +1,9 @@
 import type { IAdapterService } from '../../../types';
-import {
-  IPigmentsDataItemType,
-  IPigmentsDataPackageType,
-  IPigmentsDataType,
-} from '../types/data-type';
+import { IPigmentsDataItemType, IPigmentsDataPackageType, IPigmentsData } from '../types/data-type';
 
-class PigmentsAdapterService
-  implements IAdapterService<IPigmentsDataType, IPigmentsDataPackageType>
-{
-  adaptDataToApp(data: IPigmentsDataPackageType): IPigmentsDataType {
-    const adaptedData: IPigmentsDataType = {};
+class PigmentsAdapterService implements IAdapterService<IPigmentsData, IPigmentsDataPackageType> {
+  adaptDataToApp(data: IPigmentsDataPackageType): IPigmentsData {
+    const adaptedData: IPigmentsData = {};
 
     data.items.forEach((item: IPigmentsDataItemType) => {
       adaptedData[item.UNID] = item;
