@@ -1,24 +1,24 @@
 //types
-import type { IGumsDataType } from '../types/data-types';
+import type { IGumsData } from '../types/data-types';
 import type { IDataService } from '../../../types';
 //data
 import gumsData from '../data/gums-data';
 //adapters
 import gumsAdapterService from './gums-adapter.service';
 
-class GumsDataService implements IDataService<IGumsDataType> {
-  #data: IGumsDataType;
+class GumsDataService implements IDataService<IGumsData> {
+  #data: IGumsData;
 
-  constructor(data: IGumsDataType) {
+  constructor(data: IGumsData) {
     this.#data = data;
   }
 
-  getData(): IGumsDataType {
+  getData(): IGumsData {
     return this.#data;
   }
 }
 
-const adaptedData: IGumsDataType = gumsAdapterService.adaptDataToApp(gumsData);
+const adaptedData: IGumsData = gumsAdapterService.adaptDataToApp(gumsData);
 
 const gumsDataService = new GumsDataService(adaptedData);
 

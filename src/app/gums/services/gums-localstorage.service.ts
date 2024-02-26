@@ -1,12 +1,12 @@
 //types
 import type { LocalstorageNamesType } from '../../../types';
-import type { IGumsDataType } from '../types/data-types';
+import type { IGumsData } from '../types/data-types';
 //variables
 import { GUMS_STORAGE_NAME } from '../variables/data-variables';
 //abstract
 import { AbstractLocalstorageService } from '../../../services';
 
-class GumsLocalstorageService extends AbstractLocalstorageService<IGumsDataType> {
+class GumsLocalstorageService extends AbstractLocalstorageService<IGumsData> {
   constructor(storageName: LocalstorageNamesType) {
     super(storageName);
   }

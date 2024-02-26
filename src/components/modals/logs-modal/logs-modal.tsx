@@ -7,12 +7,12 @@ import { CounterText, InterfaceText } from '../../../variables';
 //icons
 import { CloseIcon } from '../../../icons';
 //types
-import type { ILogsType } from '../../../types';
+import type { ILogs } from '../../../types';
 //styles
 import style from './logs-modal.module.scss';
 
 interface ILogsModalProps {
-  logsData: ILogsType;
+  logsData: ILogs;
   closeModal: () => void;
   clearData: () => void;
 }

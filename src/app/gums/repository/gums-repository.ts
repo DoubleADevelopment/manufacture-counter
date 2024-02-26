@@ -3,9 +3,9 @@ import gumsDataService from '../services/gums-data.service';
 import gumsLocalstorageService from '../services/gums-localstorage.service';
 //types
 import type { IRepository } from '../../../types';
-import type { IGumsDataType } from '../types/data-types';
+import type { IGumsData } from '../types/data-types';
 
-class GumsRepositroy implements IRepository<IGumsDataType> {
+class GumsRepositroy implements IRepository<IGumsData> {
   #dataService: typeof gumsDataService;
   #localstorageService: typeof gumsLocalstorageService;
 
@@ -17,19 +17,19 @@ class GumsRepositroy implements IRepository<IGumsDataType> {
     this.#localstorageService = localstorageService;
   }
 
-  #getDataFromStorage(): IGumsDataType | null | Error {
+  #getDataFromStorage(): IGumsData | null | Error {
     return this.#localstorageService.getItems();
   }
 
-  #sendDataToStorage(data: IGumsDataType): IGumsDataType | Error {
+  #sendDataToStorage(data: IGumsData): IGumsData | Error {
     return this.#localstorageService.setItems(data);
   }
 
-  #getDefaultData(): IGumsDataType {
+  #getDefaultData(): IGumsData {
     return this.#dataService.getData();
   }
 
-  sendData(data: IGumsDataType): IGumsDataType | Error {
+  sendData(data: IGumsData): IGumsData | Error {
     const result = this.#sendDataToStorage(data);
 
     if (result instanceof Error) {
@@ -39,7 +39,7 @@ class GumsRepositroy implements IRepository<IGumsDataType> {
     }
   }
 
-  getData(): IGumsDataType {
+  getData(): IGumsData {
     const result = this.#getDataFromStorage();
 
     if (result instanceof Error) {
@@ -51,7 +51,7 @@ class GumsRepositroy implements IRepository<IGumsDataType> {
     }
   }
 
-  getDefaultData(): IGumsDataType {
+  getDefaultData(): IGumsData {
     return this.#getDefaultData();
   }
 

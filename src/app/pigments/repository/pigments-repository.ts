@@ -3,9 +3,9 @@ import PigmentsDataService from '../services/pigments-data.service';
 import PigmentsLocalstorageService from '../services/pigments-localstorage.service';
 //types
 import type { IRepository } from '../../../types';
-import type { IPigmentsDataType } from '../types/data-type';
+import type { IPigmentsData } from '../types/data-type';
 
-class PigmentsRepositroy implements IRepository<IPigmentsDataType> {
+class PigmentsRepositroy implements IRepository<IPigmentsData> {
   #dataService: typeof PigmentsDataService;
   #localstorageService: typeof PigmentsLocalstorageService;
 
@@ -17,19 +17,19 @@ class PigmentsRepositroy implements IRepository<IPigmentsDataType> {
     this.#localstorageService = localstorageService;
   }
 
-  #getDataFromStorage(): IPigmentsDataType | null | Error {
+  #getDataFromStorage(): IPigmentsData | null | Error {
     return this.#localstorageService.getItems();
   }
 
-  #sendDataToStorage(data: IPigmentsDataType): IPigmentsDataType | Error {
+  #sendDataToStorage(data: IPigmentsData): IPigmentsData | Error {
     return this.#localstorageService.setItems(data);
   }
 
-  #getDefaultData(): IPigmentsDataType {
+  #getDefaultData(): IPigmentsData {
     return this.#dataService.getData();
   }
 
-  sendData(data: IPigmentsDataType): IPigmentsDataType | Error {
+  sendData(data: IPigmentsData): IPigmentsData | Error {
     const result = this.#sendDataToStorage(data);
 
     if (result instanceof Error) {
@@ -39,7 +39,7 @@ class PigmentsRepositroy implements IRepository<IPigmentsDataType> {
     }
   }
 
-  getData(): IPigmentsDataType {
+  getData(): IPigmentsData {
     const result = this.#getDataFromStorage();
 
     if (result instanceof Error) {
@@ -51,7 +51,7 @@ class PigmentsRepositroy implements IRepository<IPigmentsDataType> {
     }
   }
 
-  getDefaultData(): IPigmentsDataType {
+  getDefaultData(): IPigmentsData {
     return this.#getDefaultData();
   }
 

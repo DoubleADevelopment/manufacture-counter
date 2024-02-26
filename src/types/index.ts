@@ -5,8 +5,14 @@ import type {
   IComponentsListDataItem,
   ComponentsListDataType,
   ItemsListDataType,
-  ILogsType,
+  ILogs,
   IItemCardData,
+  DataAliasType,
+  ISettings,
+  ItemDataAliasType,
+  IDataItem,
+  IDataPackage,
+  IData,
 } from './data-types';
 import type { IRouteItem } from './routing-types';
 import type {
@@ -41,7 +47,7 @@ export type {
   IComponentsListDataItem,
   IRouteItem,
   ItemsListDataType,
-  ILogsType,
+  ILogs,
   GetItemSelectorType,
   IItemCardData,
   IClearItemDataWithPackageAction,
@@ -49,4 +55,10 @@ export type {
   IClearItemWithPackageAction,
   IIncDecWithPackageNameAction,
   IClearItemAction,
+  DataAliasType,
+  ISettings,
+  ItemDataAliasType,
+  IDataItem,
+  IDataPackage,
+  IData,
 };
