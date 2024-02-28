@@ -12,7 +12,6 @@ import {
 } from './component-routing-variables';
 import { CounterText, CounterInputErrorsText, ErrorsText, InterfaceText } from './text-variables';
 import { NotificationType } from './notofication-variables';
-import { ChemistryAppRouting } from './apps-routing-variables';
 
 export {
   InputStatuses,
@@ -28,5 +27,4 @@ export {
   ErrorsText,
   NotificationType,
   InterfaceText,
-  ChemistryAppRouting,
 };

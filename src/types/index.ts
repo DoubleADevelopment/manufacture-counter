@@ -3,7 +3,7 @@ import type { IRepository } from './repository-types';
 import type {
   IComponentsListDataItem,
   ComponentsListDataType,
-  ItemsListDataType,
+  ItemsCardListDataType,
   ILogs,
   IItemCardData,
   DataAliasType,
@@ -15,15 +15,7 @@ import type {
   storageNamesAliasType,
 } from './data-types';
 import type { IRouteItem } from './routing-types';
-import type {
-  IClearItemDataWithPackageAction,
-  IClearItemWithPackageAction,
-  IIncDecAction,
-  ILogAction,
-  ILogWithPackageAction,
-  IIncDecWithPackageNameAction,
-  IClearItemAction,
-} from './action-types';
+import type { IIncDecAction, ILogAction, IClearItemAction } from './action-types';
 import { AppDispatch, RootState, AppThunk, AppDispatchType } from './store-types';
 import { ISetActiveLink } from './other-types';
 import { IIconProps } from './icon-props-type';
@@ -45,15 +37,10 @@ export type {
   ComponentsListDataType,
   IComponentsListDataItem,
   IRouteItem,
-  ItemsListDataType,
+  ItemsCardListDataType,
   ILogs,
   GetItemSelectorType,
   IItemCardData,
-  IClearItemDataWithPackageAction,
-  ILogWithPackageAction,
-  IClearItemWithPackageAction,
-  IIncDecWithPackageNameAction,
-  IClearItemAction,
   DataAliasType,
   ISettings,
   ItemDataAliasType,
@@ -61,4 +48,5 @@ export type {
   IDataPackage,
   IData,
   storageNamesAliasType,
+  IClearItemAction,
 };

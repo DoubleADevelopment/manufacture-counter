@@ -1,4 +1,5 @@
 //types
+import { Link } from 'react-router-dom';
 import { IComponentsListDataItem } from '../../../types';
 //styles
 import style from './component-card.module.scss';
@@ -14,7 +15,7 @@ const ComponentCard = ({ item }: ICountersListItemProps): JSX.Element => {
         {item.title}
       </h3>
       <img className={style['component-card__image']} src={item.image} alt="" />
-      <a className={style['component-card__link']} href={item.link}></a>
+      <Link className={style['component-card__link']} to={item.link}></Link>
     </li>
   );
 };

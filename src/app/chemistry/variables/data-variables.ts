@@ -8,9 +8,10 @@ enum ChemistrySettingsNames {
 
 const CHEMISTRY_STORAGE_NAME = 'chemistry-data';
 
+//veneer, extrusion
 enum ChemistryPackagesNames {
-  OKLEINA = 'okleina',
-  EKSTRUZJA = 'ekstruzja',
+  VENEER = 'veener',
+  EXTRUSION = 'extrusion',
 }
 
 export {
