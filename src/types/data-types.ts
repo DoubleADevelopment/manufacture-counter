@@ -1,5 +1,5 @@
 //data types
-import type { IChemistryData, IChemistryDataItem } from '../app/chemistry/types/data-types';
+import type { IChemistryItem } from '../app/chemistry/types/data-types';
 import { CHEMISTRY_STORAGE_NAME } from '../app/chemistry/variables';
 import type { IGumsData, IGumsDataItemType } from '../app/gums/types/data-types';
 import { GUMS_STORAGE_NAME } from '../app/gums/variables/data-variables';
@@ -26,7 +26,7 @@ interface IItemCardData {
   amount: number;
 }
 
-type ItemsListDataType = IItemCardData[];
+type ItemsCardListDataType = IItemCardData[];
 
 //data types for apps/counters
 interface ILogs {
@@ -72,9 +72,9 @@ interface IData<I> {
 }
 
 //aliases
-type DataAliasType = IChemistryData | IGumsData | IPigmentsData;
+type DataAliasType = IGumsData | IPigmentsData;
 
-type ItemDataAliasType = IChemistryDataItem | IGumsDataItemType | IPigmentsDataItemType;
+type ItemDataAliasType = IChemistryItem | IGumsDataItemType | IPigmentsDataItemType;
 
 type storageNamesAliasType =
   | typeof CHEMISTRY_STORAGE_NAME
@@ -85,7 +85,7 @@ export type {
   IComponentsListDataItem,
   ComponentsListDataType,
   IItemCardData,
-  ItemsListDataType,
+  ItemsCardListDataType,
   ILogs,
   DataAliasType,
   ISettings,

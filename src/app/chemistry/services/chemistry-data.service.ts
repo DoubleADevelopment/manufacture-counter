@@ -2,16 +2,26 @@
 import type { IChemistryData } from '../types/data-types';
 //data
 import chemistryData from '../data/chemistry-data';
+//variables
+import { ChemistryPackagesNames } from '../variables/data-variables';
 //adapters
 import chemistryAdapterService from './chemistry-adapter.service';
-//abstract
-import { AbstractDataService } from '../../../services';
 
 const adaptedData: IChemistryData = chemistryAdapterService.adaptDataToApp(chemistryData);
 
-class ChemistryDataService extends AbstractDataService<IChemistryData> {
+class ChemistryDataService {
+  #data: IChemistryData;
+
   constructor(data: IChemistryData) {
-    super(data);
+    this.#data = data;
+  }
+
+  getData(): IChemistryData {
+    return this.#data;
+  }
+
+  getDataItem(id: string, packageName: ChemistryPackagesNames) {
+    return this.#data[packageName][id];
   }
 }
 const chemistryDataService = new ChemistryDataService(adaptedData);

@@ -1,14 +1,8 @@
 //vars
+import { ILogs } from '../../../types';
 import { ChemistryLogsNames, ChemistrySettingsNames } from '../variables/';
 //types
-import type { IData, IDataItem, IDataPackage, ILogs, ISettings } from '../../../types/data-types';
-
-interface IChemistryDataPackage extends IDataPackage<IChemistryDataItem> {}
-interface IChemistryDataItem extends IDataItem<IChemistryLogs, IChemistrySettings> {
-  packageName: string;
-}
-
-type ChemistryDataPackagesType = IChemistryDataPackage[];
+import { ChemistryPackagesNames } from '../variables/data-variables';
 
 interface IChemistryLogs extends ILogs {
   [ChemistryLogsNames.COUNTER]: {
@@ -17,27 +11,56 @@ interface IChemistryLogs extends ILogs {
   };
 }
 
-interface IChemistrySettings extends ISettings {
+interface IChemistrySettings {
   [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
     settingValue: number;
     name: string;
   };
 }
 
-//we have 2 packages of data for "okleina" and "ekstruzja"
-interface IChemistryPackageData {
-  [UNID: string]: IChemistryDataItem;
+interface IChemistryItem {
+  UNID: string;
+  packageName: ChemistryPackagesNames;
+  amount: number;
+  firm: string;
+  name: string;
+  itemNumber: string;
+  description: string;
+  image: string;
+  color: string;
+  logs: IChemistryLogs;
+  lastChange: string | null;
+  settings: IChemistrySettings;
+  additionalResources: string[];
+  packagingInfo: string;
+  manufacturer: string;
 }
 
-interface IChemistryData extends IData<IChemistryPackageData> {}
+type ChemistryItemsListType = IChemistryItem[];
 
-type ChemistryDataForViewType = IChemistryDataItem[];
+interface IChemistryPackage {
+  dataPackageName: ChemistryPackagesNames;
+  dataPackageUNID: number;
+  items: ChemistryItemsListType;
+}
+
+type ChemistryPackagesListType = IChemistryPackage[];
+
+interface IChemistryItems {
+  [UNID: string]: IChemistryItem;
+}
+
+interface IChemistryData {
+  [ChemistryPackagesNames.EXTRUSION]: IChemistryItems;
+  [ChemistryPackagesNames.VENEER]: IChemistryItems;
+}
 
 export type {
-  ChemistryDataPackagesType,
-  IChemistryDataItem,
+  ChemistryPackagesListType,
+  IChemistryItem,
   IChemistryData,
-  IChemistryDataPackage,
-  ChemistryDataForViewType,
+  IChemistryPackage,
   IChemistryLogs,
+  IChemistryItems,
+  ChemistryItemsListType,
 };

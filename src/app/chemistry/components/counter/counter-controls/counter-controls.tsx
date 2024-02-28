@@ -3,12 +3,14 @@ import { BasicCounter } from '../../../../../components';
 //store
 import { useAppDispatch } from '../../../../../hooks/hooks';
 import { decrementAction, incrementAction } from '../../../store/actions/actions';
+//variables
+import { ChemistryPackagesNames } from '../../../variables/data-variables';
 //styles
 import style from './counter-controls.module.scss';
 
 interface ICounterControlsProps {
   UNID: string;
-  packName: string;
+  packName: ChemistryPackagesNames;
 }
 
 const CounterControls = ({ UNID, packName }: ICounterControlsProps): JSX.Element => {
