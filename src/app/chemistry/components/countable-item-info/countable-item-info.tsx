@@ -22,6 +22,7 @@ interface ICountableItemInfoProps {
 
 const CountableItemInfo = ({ packageName }: ICountableItemInfoProps): JSX.Element => {
   const { UNID } = useParams();
+  console.log(UNID, packageName);
   const itemFromUnidIsset = useAppSelector(SelectorCheckIfElementExistsByUNID(UNID, packageName));
   const item: IChemistryItem | null =
     UNID && itemFromUnidIsset

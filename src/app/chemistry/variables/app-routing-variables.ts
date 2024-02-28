@@ -5,8 +5,9 @@ const enum ChemistryAppRoutingPaths {
   ROOT = '/',
   EKSTRUZJA = 'ekstruzja',
   OKLEINA = 'okleina',
-  COUNTER_OKLEINA = 'okleina/:unid',
-  COUNTER_EKSTRUZJA = 'ekstruzja/:unid',
+  COUNTER_OKLEINA = 'okleina/:UNID',
+  COUNTER_EKSTRUZJA = 'ekstruzja/:UNID',
+  COUNTER = '/:UNID',
 }
 
 const enum ChemistryAppRoutingNames {
