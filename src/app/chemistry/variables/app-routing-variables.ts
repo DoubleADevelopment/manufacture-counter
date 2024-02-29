@@ -1,13 +1,20 @@
 //types
 import type { IRouteItem } from '../../../types';
 
-const enum ChemistryAppRoutingPaths {
-  ROOT = '/chemistry',
+const enum ChemistryAppRoutes {
+  ROOT = '/',
   EXTRUSION = 'extrusion',
   VENEER = 'veener',
   COUNTER_VENEER = 'veener/:UNID',
   COUNTER_EXTRUSION = 'extrusion/:UNID',
-  COUNTER = '/:UNID',
+}
+
+const enum ChemistryAppPaths {
+  ROOT = '/chemistry',
+  EXTRUSION = '/chemistry/extrusion',
+  VENEER = '/chemistry/veener',
+  COUNTER_VENEER = '/chemistry/veener/:UNID',
+  COUNTER_EXTRUSION = '/chemistry/extrusion/:UNID',
 }
 
 const enum ChemistryAppRoutingNames {
@@ -23,23 +30,28 @@ type IAppRoutingType = Record<ChemistryAppRoutingNames, IRouteItem>;
 const ChemistryAppRouting: IAppRoutingType = {
   [ChemistryAppRoutingNames.ROOT]: {
     title: 'Strona główna',
-    path: ChemistryAppRoutingPaths.ROOT,
+    route: ChemistryAppRoutes.ROOT,
+    path: ChemistryAppPaths.ROOT,
   },
   [ChemistryAppRoutingNames.EXTRUSION]: {
     title: 'Ekstruzja',
-    path: ChemistryAppRoutingPaths.EXTRUSION,
+    route: ChemistryAppRoutes.EXTRUSION,
+    path: ChemistryAppPaths.EXTRUSION,
   },
   [ChemistryAppRoutingNames.VENEER]: {
     title: 'Okleina',
-    path: ChemistryAppRoutingPaths.VENEER,
+    route: ChemistryAppRoutes.VENEER,
+    path: ChemistryAppPaths.VENEER,
   },
   [ChemistryAppRoutingNames.COUNTER_EXTRUSION]: {
     title: 'Licznik - ekstruzja',
-    path: ChemistryAppRoutingPaths.COUNTER_EXTRUSION,
+    route: ChemistryAppRoutes.COUNTER_EXTRUSION,
+    path: ChemistryAppPaths.COUNTER_EXTRUSION,
   },
   [ChemistryAppRoutingNames.COUNTER_VENEER]: {
     title: 'Licznik - okleina',
-    path: ChemistryAppRoutingPaths.COUNTER_VENEER,
+    route: ChemistryAppRoutes.COUNTER_VENEER,
+    path: ChemistryAppPaths.COUNTER_VENEER,
   },
 };
 

@@ -14,10 +14,13 @@ const Router = (): JSX.Element => {
   return (
     <Routes>
       <Route index element={<PackagesOverviewPage />} />
-      <Route path={ChemistryAppRouting.EXTRUSION.path} element={<ExtrusionPage />} />
-      <Route path={ChemistryAppRouting.VENEER.path} element={<VeneerPage />} />
-      <Route path={ChemistryAppRouting.COUNTER_EXTRUSION.path} element={<ExtrusionCounterPage />} />
-      <Route path={ChemistryAppRouting.COUNTER_VENEER.path} element={<VeneerCounterPage />} />
+      <Route path={ChemistryAppRouting.EXTRUSION.route} element={<ExtrusionPage />} />
+      <Route path={ChemistryAppRouting.VENEER.route} element={<VeneerPage />} />
+      <Route
+        path={ChemistryAppRouting.COUNTER_EXTRUSION.route}
+        element={<ExtrusionCounterPage />}
+      />
+      <Route path={ChemistryAppRouting.COUNTER_VENEER.route} element={<VeneerCounterPage />} />
     </Routes>
   );
 };
