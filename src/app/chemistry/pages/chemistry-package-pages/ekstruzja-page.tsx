@@ -13,7 +13,7 @@ const EkstruzjaPage = (): JSX.Element => {
   const adaptedData = chemistryAdapterService.adaptItemsToCardList(chemistryState);
 
   return (
-    <PageWithMenuLayout headerTitle={ChemistryAppRouting.EKSTRUZJA.title}>
+    <PageWithMenuLayout headerTitle={ChemistryAppRouting.EXTRUSION.title}>
       <main className={style.page}>{chemistryState && <ItemsList data={adaptedData} />}</main>
     </PageWithMenuLayout>
   );
