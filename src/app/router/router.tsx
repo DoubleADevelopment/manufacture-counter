@@ -15,16 +15,16 @@ const Router = (): JSX.Element => {
     <BrowserRouter basename={rootBaseName}>
       <Routes>
         <Route index element={<Pages.MainPage />} />
-        <Route path={AppRouting.INFORMATION.path} element={<Pages.InfoPage />} />
-        <Route path={AppRouting.SETTINGS.path} element={<Pages.SettingsPage />} />
+        <Route path={AppRouting.INFORMATION.route} element={<Pages.InfoPage />} />
+        <Route path={AppRouting.SETTINGS.route} element={<Pages.SettingsPage />} />
         <Route
-          path={AppRouting.COMPONENTS_OVERVIEW.path}
+          path={AppRouting.COMPONENTS_OVERVIEW.route}
           element={<Pages.ComponentOverviewPage />}
         />
 
-        <Route path={`${ComponentsRouting.CHEMISTRY.path}/*`} element={<ChemistryApp />} />
-        <Route path={`${ComponentsRouting.GUMS.path}/*`} element={<GumsApp />} />
-        <Route path={`${ComponentsRouting.PIGMENTS.path}/*`} element={<PigmentsApp />} />
+        <Route path={`${ComponentsRouting.CHEMISTRY.route}/*`} element={<ChemistryApp />} />
+        <Route path={`${ComponentsRouting.GUMS.route}/*`} element={<GumsApp />} />
+        <Route path={`${ComponentsRouting.PIGMENTS.route}/*`} element={<PigmentsApp />} />
       </Routes>
     </BrowserRouter>
   );

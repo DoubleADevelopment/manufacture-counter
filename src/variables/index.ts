@@ -1,17 +1,11 @@
 import { InputStatuses } from './input-variables';
-import {
-  ComponentsRoutingPaths,
-  ComponentsRoutingNames,
-  ComponentsRouting,
-} from './component-routing-variables';
+import { ComponentsRouting } from './component-routing-variables';
 import { CounterText, CounterInputErrorsText, ErrorsText, InterfaceText } from './text-variables';
 import { NotificationType } from './notofication-variables';
-import { AppRouting, AppRoutingNames, rootBaseName } from './app-routing-variables';
+import { AppRouting, rootBaseName } from './app-routing-variables';
 
 export {
   InputStatuses,
-  ComponentsRoutingPaths,
-  ComponentsRoutingNames,
   ComponentsRouting,
   CounterText,
   CounterInputErrorsText,
@@ -19,6 +13,5 @@ export {
   NotificationType,
   InterfaceText,
   AppRouting,
-  AppRoutingNames,
   rootBaseName,
 };

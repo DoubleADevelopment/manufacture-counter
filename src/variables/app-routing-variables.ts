@@ -3,13 +3,6 @@ import type { IRouteItem } from '../types';
 
 const rootBaseName = '/';
 
-const enum AppRoutingPaths {
-  ROOT = '/',
-  SETTINGS = '/settings',
-  INFORMATION = '/information',
-  COMPONENTS_OVERVIEW = '/components-overview',
-}
-
 const enum AppRoutingNames {
   ROOT = 'ROOT',
   SETTINGS = 'SETTINGS',
@@ -17,25 +10,41 @@ const enum AppRoutingNames {
   COMPONENTS_OVERVIEW = 'COMPONENTS_OVERVIEW',
 }
 
-type IAppRoutingType = Record<AppRoutingNames, IRouteItem>;
+const AppRoutes: Record<AppRoutingNames, string> = {
+  [AppRoutingNames.ROOT]: '/',
+  [AppRoutingNames.SETTINGS]: 'settings',
+  [AppRoutingNames.INFORMATION]: 'information',
+  [AppRoutingNames.COMPONENTS_OVERVIEW]: 'components-overview',
+};
 
-const AppRouting: IAppRoutingType = {
+const AppPaths: Record<AppRoutingNames, string> = {
+  [AppRoutingNames.ROOT]: '/',
+  [AppRoutingNames.SETTINGS]: '/settings',
+  [AppRoutingNames.INFORMATION]: '/information',
+  [AppRoutingNames.COMPONENTS_OVERVIEW]: '/components-overview',
+};
+
+const AppRouting: Record<AppRoutingNames, IRouteItem> = {
   [AppRoutingNames.ROOT]: {
     title: 'Strona główna',
-    path: AppRoutingPaths.ROOT,
+    route: AppRoutes.ROOT,
+    path: AppPaths.ROOT,
   },
   [AppRoutingNames.SETTINGS]: {
     title: 'Ustawienia',
-    path: AppRoutingPaths.SETTINGS,
+    route: AppRoutes.SETTINGS,
+    path: AppPaths.SETTINGS,
   },
   [AppRoutingNames.INFORMATION]: {
     title: 'Informacja',
-    path: AppRoutingPaths.INFORMATION,
+    route: AppRoutes.INFORMATION,
+    path: AppPaths.INFORMATION,
   },
   [AppRoutingNames.COMPONENTS_OVERVIEW]: {
     title: 'Przegląd komponentów',
-    path: AppRoutingPaths.COMPONENTS_OVERVIEW,
+    route: AppRoutes.COMPONENTS_OVERVIEW,
+    path: AppPaths.COMPONENTS_OVERVIEW,
   },
 };
 
-export { AppRoutingPaths, rootBaseName, AppRouting, AppRoutingNames };
+export { AppRouting, rootBaseName };

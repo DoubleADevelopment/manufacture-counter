@@ -1,21 +1,8 @@
 //types
 import type { IRouteItem } from '../../../types';
+import { ComponentsRouting } from '../../../variables';
 
-const enum ChemistryAppRoutes {
-  ROOT = '/',
-  EXTRUSION = 'extrusion',
-  VENEER = 'veener',
-  COUNTER_VENEER = 'veener/:UNID',
-  COUNTER_EXTRUSION = 'extrusion/:UNID',
-}
-
-const enum ChemistryAppPaths {
-  ROOT = '/chemistry',
-  EXTRUSION = '/chemistry/extrusion',
-  VENEER = '/chemistry/veener',
-  COUNTER_VENEER = '/chemistry/veener/:UNID',
-  COUNTER_EXTRUSION = '/chemistry/extrusion/:UNID',
-}
+const CHEMISTRY_ROOT = ComponentsRouting.CHEMISTRY.route;
 
 const enum ChemistryAppRoutingNames {
   ROOT = 'ROOT',
@@ -25,9 +12,23 @@ const enum ChemistryAppRoutingNames {
   COUNTER_VENEER = 'COUNTER_VENEER',
 }
 
-type IAppRoutingType = Record<ChemistryAppRoutingNames, IRouteItem>;
+const ChemistryAppRoutes: Record<ChemistryAppRoutingNames, string> = {
+  [ChemistryAppRoutingNames.ROOT]: '/',
+  [ChemistryAppRoutingNames.EXTRUSION]: 'extrusion',
+  [ChemistryAppRoutingNames.VENEER]: 'veener',
+  [ChemistryAppRoutingNames.COUNTER_VENEER]: 'veener/:UNID',
+  [ChemistryAppRoutingNames.COUNTER_EXTRUSION]: 'extrusion/:UNID',
+};
 
-const ChemistryAppRouting: IAppRoutingType = {
+const ChemistryAppPaths: Record<ChemistryAppRoutingNames, string> = {
+  [ChemistryAppRoutingNames.ROOT]: `/${CHEMISTRY_ROOT}`,
+  [ChemistryAppRoutingNames.EXTRUSION]: `/${CHEMISTRY_ROOT}/extrusion`,
+  [ChemistryAppRoutingNames.VENEER]: `/${CHEMISTRY_ROOT}/veener`,
+  [ChemistryAppRoutingNames.COUNTER_VENEER]: `/${CHEMISTRY_ROOT}/veener/:UNID`,
+  [ChemistryAppRoutingNames.COUNTER_EXTRUSION]: `/${CHEMISTRY_ROOT}/extrusion/:UNID`,
+};
+
+const ChemistryAppRouting: Record<ChemistryAppRoutingNames, IRouteItem> = {
   [ChemistryAppRoutingNames.ROOT]: {
     title: 'Strona główna',
     route: ChemistryAppRoutes.ROOT,

@@ -1,7 +1,7 @@
 interface IRouteItem {
   title: string;
   path: string;
-  route?: string; //delete ? from this
+  route: string;
 }
 
 export type { IRouteItem };
