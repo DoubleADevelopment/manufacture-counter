@@ -10,7 +10,7 @@ const chemistryData: ChemistryPackagesListType = [
     dataPackageUNID: 1001,
     items: [
       {
-        UNID: `chemistry-veneer-77001-003`,
+        UNID: `chemistry-extrusion-77001-003`,
         packageName: ChemistryPackagesNames.EXTRUSION,
         amount: 0,
         firm: '',
@@ -37,7 +37,7 @@ const chemistryData: ChemistryPackagesListType = [
         manufacturer: '',
       },
       {
-        UNID: `chemistry-veneer-770000-00030`,
+        UNID: `chemistry-extrusion-770000-00030`,
         packageName: ChemistryPackagesNames.EXTRUSION,
         amount: 0,
         firm: '',
@@ -64,7 +64,7 @@ const chemistryData: ChemistryPackagesListType = [
         manufacturer: '',
       },
       {
-        UNID: `chemistry-veneer-SJN1700`,
+        UNID: `chemistry-extrusion-SJN1700`,
         packageName: ChemistryPackagesNames.EXTRUSION,
         amount: 0,
         firm: '',
@@ -92,7 +92,7 @@ const chemistryData: ChemistryPackagesListType = [
       },
 
       {
-        UNID: `chemistry-veneer-VJ706-D`,
+        UNID: `chemistry-extrusion-VJ706-D`,
         packageName: ChemistryPackagesNames.EXTRUSION,
         amount: 0,
         firm: '',
@@ -119,7 +119,7 @@ const chemistryData: ChemistryPackagesListType = [
         manufacturer: '',
       },
       {
-        UNID: `chemistry-veneer-VJ411-D`,
+        UNID: `chemistry-extrusion-VJ411-D`,
         packageName: ChemistryPackagesNames.EXTRUSION,
         amount: 0,
         firm: '',
@@ -147,7 +147,7 @@ const chemistryData: ChemistryPackagesListType = [
       },
 
       {
-        UNID: `chemistry-veneer-VJ7222-D`,
+        UNID: `chemistry-extrusion-VJ7222-D`,
         packageName: ChemistryPackagesNames.EXTRUSION,
         amount: 0,
         firm: '',
@@ -174,7 +174,7 @@ const chemistryData: ChemistryPackagesListType = [
         manufacturer: '',
       },
       {
-        UNID: `chemistry-veneer-VJ4262-D`,
+        UNID: `chemistry-extrusion-VJ4262-D`,
         packageName: ChemistryPackagesNames.EXTRUSION,
         amount: 0,
         firm: '',

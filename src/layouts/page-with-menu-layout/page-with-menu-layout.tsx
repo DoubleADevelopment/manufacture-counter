@@ -7,12 +7,17 @@ import style from './page-with-menu-layout.module.scss';
 interface IPageWithMenuLayoutProps {
   children: ReactNode;
   headerTitle: string;
+  backLink?: string;
 }
 
-const PageWithMenuLayout = ({ children, headerTitle }: IPageWithMenuLayoutProps): JSX.Element => {
+const PageWithMenuLayout = ({
+  children,
+  headerTitle,
+  backLink,
+}: IPageWithMenuLayoutProps): JSX.Element => {
   return (
     <div className={`${style['page']} container-mobile`}>
-      <Header title={headerTitle} />
+      <Header title={headerTitle} backLink={backLink} />
       {children}
     </div>
   );

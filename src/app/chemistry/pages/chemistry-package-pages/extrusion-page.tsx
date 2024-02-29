@@ -8,15 +8,18 @@ import { ChemistryAppRouting } from '../../variables';
 //styles
 import style from './page.module.scss';
 
-const EkstruzjaPage = (): JSX.Element => {
+const ExtrusionPage = (): JSX.Element => {
   const chemistryState = useAppSelector(SelectorGetExtrusionChemistry());
   const adaptedData = chemistryAdapterService.adaptItemsToCardList(chemistryState);
 
   return (
-    <PageWithMenuLayout headerTitle={ChemistryAppRouting.EKSTRUZJA.title}>
+    <PageWithMenuLayout
+      headerTitle={ChemistryAppRouting.EXTRUSION.title}
+      backLink={ChemistryAppRouting.ROOT.path}
+    >
       <main className={style.page}>{chemistryState && <ItemsList data={adaptedData} />}</main>
     </PageWithMenuLayout>
   );
 };
 
-export default EkstruzjaPage;
+export default ExtrusionPage;
