@@ -3,7 +3,7 @@ import chemistryDataService from '../services/chemistry-data.service';
 import chemistryLocalstorageService from '../services/chemistry-localstorage.service';
 //types
 import type { IRepository } from '../../../types';
-import type { IChemistryData } from '../types/data-types';
+import type { IChemistryData } from '../types/';
 
 class ChemistryRepositroy implements IRepository<IChemistryData> {
   #dataService: typeof chemistryDataService;

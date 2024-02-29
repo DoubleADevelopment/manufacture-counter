@@ -1,7 +1,7 @@
 //repository
 import chemistryRepository from '../../repository/chemistry-repository';
 //types
-import type { IChemistryData } from '../../types/data-types';
+import type { IChemistryData } from '../../types/';
 
 const chemistryState: IChemistryData = chemistryRepository.getData();
 

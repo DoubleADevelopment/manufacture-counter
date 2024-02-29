@@ -1,5 +1,5 @@
 //types
-import type { IButtonProps } from '../../../types/other-types';
+import type { IButtonProps } from '../../../types/';
 //styles
 import style from './button-primary.module.scss';
 

@@ -1,7 +1,7 @@
 //variables
 import { UnitsOfMeasurementText } from '../../../variables/';
 //types
-import type { IItemCardData } from '../../../types/data-types';
+import type { IItemCardData } from '../../../types/';
 //styles
 import style from './item-card-short.module.scss';
 

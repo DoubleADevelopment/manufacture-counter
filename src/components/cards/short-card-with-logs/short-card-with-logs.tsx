@@ -4,7 +4,7 @@ import { ItemCardShort, LogsModal } from '../../';
 //variables
 import { UnitsOfMeasurementText } from '../../../variables/';
 //types
-import type { IItemCardData, ILogs } from '../../../types/data-types';
+import type { IItemCardData, ILogs } from '../../../types/';
 
 interface IShortCardWithLogs {
   itemLogs: ILogs;

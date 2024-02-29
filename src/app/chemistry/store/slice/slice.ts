@@ -4,9 +4,13 @@ import { ChemistryLogsNames } from '../../variables/';
 //state
 import chemistryState from '../state/state';
 //types
-
-import type { IChemistryData, IChemistryItem } from '../../types/data-types';
-import { IClearItemAction, IIncDecAction, ILogAction } from '../../types';
+import type {
+  IClearItemAction,
+  IIncDecAction,
+  ILogAction,
+  IChemistryData,
+  IChemistryItem,
+} from '../../types';
 
 export const chemistrySlice = createSlice({
   name: 'chemistry',

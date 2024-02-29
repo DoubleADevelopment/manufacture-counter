@@ -14,7 +14,7 @@ import { ChemistryPackagesNames } from '../../variables/';
 import { ItemCardShortSkeleton, ShortCardWithLogs } from '../../../../components/cards';
 //types
 import type { IItemCardData } from '../../../../types';
-import type { IChemistryItem } from '../../types/data-types';
+import type { IChemistryItem } from '../../types/';
 
 interface ICountableItemInfoProps {
   packageName: ChemistryPackagesNames;
