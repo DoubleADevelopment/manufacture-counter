@@ -13,7 +13,10 @@ const VeneerPage = (): JSX.Element => {
   const adaptedData = chemistryAdapterService.adaptItemsToCardList(chemistryState);
 
   return (
-    <PageWithMenuLayout headerTitle={ChemistryAppRouting.VENEER.title}>
+    <PageWithMenuLayout
+      headerTitle={ChemistryAppRouting.VENEER.title}
+      backLink={ChemistryAppRouting.ROOT.path}
+    >
       <main className={style.page}>{chemistryState && <ItemsList data={adaptedData} />}</main>
     </PageWithMenuLayout>
   );

@@ -2,7 +2,7 @@
 import type { IRouteItem } from '../../../types';
 
 const enum ChemistryAppRoutingPaths {
-  ROOT = '/',
+  ROOT = '/chemistry',
   EXTRUSION = 'extrusion',
   VENEER = 'veener',
   COUNTER_VENEER = 'veener/:UNID',

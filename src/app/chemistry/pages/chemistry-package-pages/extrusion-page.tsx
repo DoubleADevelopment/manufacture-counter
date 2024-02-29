@@ -13,7 +13,10 @@ const ExtrusionPage = (): JSX.Element => {
   const adaptedData = chemistryAdapterService.adaptItemsToCardList(chemistryState);
 
   return (
-    <PageWithMenuLayout headerTitle={ChemistryAppRouting.EXTRUSION.title}>
+    <PageWithMenuLayout
+      headerTitle={ChemistryAppRouting.EXTRUSION.title}
+      backLink={ChemistryAppRouting.ROOT.path}
+    >
       <main className={style.page}>{chemistryState && <ItemsList data={adaptedData} />}</main>
     </PageWithMenuLayout>
   );

@@ -12,7 +12,7 @@ import { ChemistryPackagesNames } from '../../variables/data-variables';
 const VeneerCounterPage = (): JSX.Element => {
   return (
     <CounterPageLayout
-      backLink={ChemistryAppRouting.VENEER.path}
+      backLink={`/chemistry/${ChemistryAppRouting.VENEER.path}`}
       headerTitle={CounterText.CHEMISTRY_COUNTER_TITLE}
     >
       <main className={style['counter-page']}>
