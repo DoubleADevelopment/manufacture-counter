@@ -6,23 +6,21 @@ import { CountableItemInfo, Counter } from '../../components/';
 import { CounterText } from '../../../../variables';
 //style
 import style from './counter-page.module.scss';
-import { ChemistryAppRoutingPaths } from '../../variables';
+import { ChemistryAppRouting } from '../../variables';
 import { ChemistryPackagesNames } from '../../variables/data-variables';
 
-const CounterPage = (): JSX.Element => {
-  // ChemistryPackagesNames
-
+const VeneerCounterPage = (): JSX.Element => {
   return (
     <CounterPageLayout
-      backLink={ChemistryAppRoutingPaths.ROOT}
+      backLink={ChemistryAppRouting.VENEER.path}
       headerTitle={CounterText.CHEMISTRY_COUNTER_TITLE}
     >
       <main className={style['counter-page']}>
-        <CountableItemInfo packageName={ChemistryPackagesNames.EXTRUSION} />
-        <Counter packageName={ChemistryPackagesNames.EXTRUSION} />
+        <CountableItemInfo packageName={ChemistryPackagesNames.VENEER} />
+        <Counter packageName={ChemistryPackagesNames.VENEER} />
       </main>
     </CounterPageLayout>
   );
 };
 
-export default CounterPage;
+export default VeneerCounterPage;

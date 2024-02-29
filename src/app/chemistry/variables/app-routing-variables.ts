@@ -5,8 +5,8 @@ const enum ChemistryAppRoutingPaths {
   ROOT = '/',
   EXTRUSION = 'extrusion',
   VENEER = 'veener',
-  COUNTER_OKLEINA = 'okleina/:UNID',
-  COUNTER_EKSTRUZJA = 'ekstruzja/:UNID',
+  COUNTER_VENEER = 'veener/:UNID',
+  COUNTER_EXTRUSION = 'extrusion/:UNID',
   COUNTER = '/:UNID',
 }
 
@@ -35,12 +35,12 @@ const ChemistryAppRouting: IAppRoutingType = {
   },
   [ChemistryAppRoutingNames.COUNTER_EXTRUSION]: {
     title: 'Licznik - ekstruzja',
-    path: ChemistryAppRoutingPaths.EXTRUSION,
+    path: ChemistryAppRoutingPaths.COUNTER_EXTRUSION,
   },
   [ChemistryAppRoutingNames.COUNTER_VENEER]: {
     title: 'Licznik - okleina',
-    path: ChemistryAppRoutingPaths.VENEER,
+    path: ChemistryAppRoutingPaths.COUNTER_VENEER,
   },
 };
 
-export { ChemistryAppRoutingPaths, ChemistryAppRoutingNames, ChemistryAppRouting };
+export { ChemistryAppRouting };

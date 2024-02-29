@@ -1,3 +1,4 @@
-import EkstruzjaPage from './ekstruzja-page';
+import ExtrusionPage from './extrusion-page';
+import VeneerPage from './veener-page';
 
-export { EkstruzjaPage };
+export { ExtrusionPage, VeneerPage };
