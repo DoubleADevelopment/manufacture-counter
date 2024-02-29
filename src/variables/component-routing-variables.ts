@@ -1,33 +1,40 @@
 //type
 import type { IRouteItem } from '../types';
 
-const enum ComponentsRoutingPaths {
-  CHEMISTRY = 'chemistry',
-  PIGMENTS = 'pigments',
-  GUMS = 'gums',
-}
-
 const enum ComponentsRoutingNames {
   CHEMISTRY = 'CHEMISTRY',
   PIGMENTS = 'PIGMENTS',
   GUMS = 'GUMS',
 }
 
-type IComponentsRoutingType = Record<ComponentsRoutingNames, IRouteItem>;
+const ComponentsRoutes: Record<ComponentsRoutingNames, string> = {
+  [ComponentsRoutingNames.CHEMISTRY]: 'chemistry',
+  [ComponentsRoutingNames.PIGMENTS]: 'pigments',
+  [ComponentsRoutingNames.GUMS]: 'gums',
+};
 
-const ComponentsRouting: IComponentsRoutingType = {
+const ComponentsPaths: Record<ComponentsRoutingNames, string> = {
+  [ComponentsRoutingNames.CHEMISTRY]: '/chemistry',
+  [ComponentsRoutingNames.PIGMENTS]: '/pigments',
+  [ComponentsRoutingNames.GUMS]: '/gums',
+};
+
+const ComponentsRouting: Record<ComponentsRoutingNames, IRouteItem> = {
   [ComponentsRoutingNames.CHEMISTRY]: {
     title: 'Chemia',
-    path: ComponentsRoutingPaths.CHEMISTRY,
+    route: ComponentsRoutes.CHEMISTRY,
+    path: ComponentsPaths.CHEMISTRY,
   },
   [ComponentsRoutingNames.GUMS]: {
     title: 'Uszczelka',
-    path: ComponentsRoutingPaths.GUMS,
+    route: ComponentsRoutes.GUMS,
+    path: ComponentsPaths.GUMS,
   },
   [ComponentsRoutingNames.PIGMENTS]: {
     title: 'Pigmenty',
-    path: ComponentsRoutingPaths.PIGMENTS,
+    route: ComponentsRoutes.PIGMENTS,
+    path: ComponentsPaths.PIGMENTS,
   },
 };
 
-export { ComponentsRoutingPaths, ComponentsRoutingNames, ComponentsRouting };
+export { ComponentsRouting };

@@ -14,7 +14,7 @@ const ExtrusionCounterPage = (): JSX.Element => {
 
   return (
     <CounterPageLayout
-      backLink={`/chemistry/${ChemistryAppRouting.EXTRUSION.path}`}
+      backLink={ChemistryAppRouting.EXTRUSION.path}
       headerTitle={CounterText.CHEMISTRY_COUNTER_TITLE}
     >
       <main className={style['counter-page']}>
