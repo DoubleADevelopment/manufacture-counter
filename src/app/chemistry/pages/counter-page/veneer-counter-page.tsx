@@ -6,8 +6,7 @@ import { CountableItemInfo, Counter } from '../../components/';
 import { CounterText } from '../../../../variables';
 //style
 import style from './counter-page.module.scss';
-import { ChemistryAppRouting } from '../../variables';
-import { ChemistryPackagesNames } from '../../variables/data-variables';
+import { ChemistryAppRouting, ChemistryPackagesNames } from '../../variables';
 
 const VeneerCounterPage = (): JSX.Element => {
   return (

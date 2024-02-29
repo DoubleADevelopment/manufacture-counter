@@ -7,8 +7,7 @@ import ChemistryApp from '../chemistry/app';
 import GumsApp from '../gums/app';
 import PigmentsApp from '../pigments/app';
 //variables
-import { ComponentsRouting } from '../../variables/component-routing-variables';
-import { AppRouting, rootBaseName } from '../../variables/app-routing-variables';
+import { AppRouting, rootBaseName, ComponentsRouting } from '../../variables';
 
 const Router = (): JSX.Element => {
   return (

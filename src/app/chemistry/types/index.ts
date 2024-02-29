@@ -8,7 +8,6 @@ import type {
   IChemistryItems,
   ChemistryItemsListType,
 } from './data-types';
-import type { IChemistryStateType } from './state-types';
 
 export type {
   IIncDecAction,
@@ -19,7 +18,6 @@ export type {
   IChemistryData,
   IChemistryPackage,
   IChemistryLogs,
-  IChemistryStateType,
   IChemistryItems,
   ChemistryItemsListType,
 };

@@ -1,8 +1,8 @@
 //vars
 import { ChemistryLogsNames, ChemistrySettingsNames } from '../variables/';
 //types
-import type { ChemistryPackagesListType } from '../types/data-types';
-import { ChemistryPackagesNames } from '../variables/data-variables';
+import type { ChemistryPackagesListType } from '../types/';
+import { ChemistryPackagesNames } from '../variables/';
 
 const chemistryData: ChemistryPackagesListType = [
   {

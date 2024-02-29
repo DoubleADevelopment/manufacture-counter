@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 //variables
-import { UnitsOfMeasurementText } from '../../../variables/text-variables';
+import { UnitsOfMeasurementText } from '../../../variables';
 //types
-import type { IItemCardData } from '../../../types/data-types';
+import type { IItemCardData } from '../../../types/';
 //style
 import style from './item-card-full.module.scss';
 

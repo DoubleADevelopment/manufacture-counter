@@ -6,19 +6,19 @@ import { PageWithMenuLayout } from '../../../../layouts';
 import { AppRouting, ComponentsRouting } from '../../../../variables';
 import { chemistryComponentsListData } from '../../data/chemistry-components-list-data';
 //styles
-import style from './packages-overview-page.module.scss';
+import style from './chemistry-root-page.module.scss';
 
-const PackagesOverviewPage = (): JSX.Element => {
+const ChemistryRootPage = (): JSX.Element => {
   return (
     <PageWithMenuLayout
       headerTitle={ComponentsRouting.CHEMISTRY.title}
       backLink={AppRouting.ROOT.path}
     >
-      <main className={style['packages-overview-page']}>
+      <main className={style['chemistry-root-page']}>
         <ComponentsList dataList={chemistryComponentsListData} />
       </main>
     </PageWithMenuLayout>
   );
 };
 
-export default PackagesOverviewPage;
+export default ChemistryRootPage;

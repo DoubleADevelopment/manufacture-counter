@@ -1,9 +1,8 @@
 //data types
-import type { IChemistryItem } from '../app/chemistry/types/data-types';
 import { CHEMISTRY_STORAGE_NAME } from '../app/chemistry/variables';
-import type { IGumsData, IGumsDataItemType } from '../app/gums/types/data-types';
+import type { IGumsData } from '../app/gums/types/data-types';
 import { GUMS_STORAGE_NAME } from '../app/gums/variables/data-variables';
-import type { IPigmentsData, IPigmentsDataItemType } from '../app/pigments/types/data-type';
+import type { IPigmentsData } from '../app/pigments/types/data-type';
 import { PIGMENTS_STORAGE_NAME } from '../app/pigments/variables/data-variables';
 
 //componentsList type we use in main page for show all components in overview page
@@ -74,8 +73,6 @@ interface IData<I> {
 //aliases
 type DataAliasType = IGumsData | IPigmentsData;
 
-type ItemDataAliasType = IChemistryItem | IGumsDataItemType | IPigmentsDataItemType;
-
 type storageNamesAliasType =
   | typeof CHEMISTRY_STORAGE_NAME
   | typeof GUMS_STORAGE_NAME
@@ -89,7 +86,6 @@ export type {
   ILogs,
   DataAliasType,
   ISettings,
-  ItemDataAliasType,
   IDataItem,
   IDataPackage,
   IData,

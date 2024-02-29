@@ -9,12 +9,12 @@ import {
   SelectorGetCurrentChemistry,
 } from '../../store/slectors/selectors';
 //variables
-import { ChemistryPackagesNames } from '../../variables/data-variables';
+import { ChemistryPackagesNames } from '../../variables/';
 //components
 import { ItemCardShortSkeleton, ShortCardWithLogs } from '../../../../components/cards';
 //types
 import type { IItemCardData } from '../../../../types';
-import type { IChemistryItem } from '../../types/data-types';
+import type { IChemistryItem } from '../../types/';
 
 interface ICountableItemInfoProps {
   packageName: ChemistryPackagesNames;

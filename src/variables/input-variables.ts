@@ -4,10 +4,10 @@ enum InputStatuses {
   DEFAULT = '',
 }
 
-enum InputStatusesDescription {
-  EMPTY_FIELD = 'EMPTY_FIELD',
-  DIVISION_BY_ZERO = 'DIVISION_BY_ZERO',
-  SUCCESS = 'SUCCESS',
-}
+// enum InputStatusesDescription {
+//   EMPTY_FIELD = 'EMPTY_FIELD',
+//   DIVISION_BY_ZERO = 'DIVISION_BY_ZERO',
+//   SUCCESS = 'SUCCESS',
+// }
 
-export { InputStatuses, InputStatusesDescription };
+export { InputStatuses };

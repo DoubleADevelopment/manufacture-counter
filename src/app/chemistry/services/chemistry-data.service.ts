@@ -3,7 +3,7 @@ import type { IChemistryData } from '../types/data-types';
 //data
 import chemistryData from '../data/chemistry-data';
 //variables
-import { ChemistryPackagesNames } from '../variables/data-variables';
+import { ChemistryPackagesNames } from '../variables/';
 //adapters
 import chemistryAdapterService from './chemistry-adapter.service';
 

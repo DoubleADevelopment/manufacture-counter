@@ -1,7 +1,7 @@
 //types
 import type { RootState } from '../../../../types';
-import type { IChemistryItem, IChemistryData, IChemistryItems } from '../../types/data-types';
-import { ChemistryPackagesNames } from '../../variables/data-variables';
+import type { IChemistryItem, IChemistryData, IChemistryItems } from '../../types/';
+import { ChemistryPackagesNames } from '../../variables/';
 
 export const SelectorGetChemistryState = (state: RootState): IChemistryData => state.chemistry;
 

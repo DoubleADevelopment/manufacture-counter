@@ -1,9 +1,9 @@
 //components
 import { ItemCardFull } from '..';
 //variables
-import { UnitsOfMeasurementText } from '../../variables/text-variables';
+import { UnitsOfMeasurementText } from '../../variables/';
 //types
-import type { ItemsCardListDataType } from '../../types/data-types';
+import type { ItemsCardListDataType } from '../../types/';
 //styles
 import style from './items-list.module.scss';
 
