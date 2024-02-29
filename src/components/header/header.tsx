@@ -1,10 +1,12 @@
-//components
 import { Link } from 'react-router-dom';
+//components
 import { Navigation } from '../';
+//variables
+import { InterfaceText } from '../../variables';
+//icons
+import { ArrowBackIcon } from '../../icons';
 //styles
 import style from './header.module.scss';
-import { InterfaceText } from '../../variables';
-import { ArrowBackIcon } from '../../icons';
 
 interface IHeaderProps {
   title: string;
