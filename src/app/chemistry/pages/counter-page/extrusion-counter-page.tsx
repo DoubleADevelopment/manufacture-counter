@@ -10,8 +10,6 @@ import { ChemistryAppRouting } from '../../variables';
 import { ChemistryPackagesNames } from '../../variables/data-variables';
 
 const ExtrusionCounterPage = (): JSX.Element => {
-  // ChemistryPackagesNames
-
   return (
     <CounterPageLayout
       backLink={ChemistryAppRouting.EXTRUSION.path}

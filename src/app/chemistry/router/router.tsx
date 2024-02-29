@@ -2,25 +2,28 @@ import { Route, Routes } from 'react-router-dom';
 //variables
 import { ChemistryAppRouting } from '../variables';
 //pages
-import {
-  ExtrusionCounterPage,
-  PackagesOverviewPage,
-  VeneerCounterPage,
-  ExtrusionPage,
-  VeneerPage,
-} from '../pages';
+import * as Pages from '../pages';
 
 const Router = (): JSX.Element => {
   return (
     <Routes>
-      <Route index element={<PackagesOverviewPage />} />
-      <Route path={ChemistryAppRouting.EXTRUSION.route} element={<ExtrusionPage />} />
-      <Route path={ChemistryAppRouting.VENEER.route} element={<VeneerPage />} />
+      <Route index element={<Pages.ChemistryRootPage />} />
+      <Route
+        path={ChemistryAppRouting.EXTRUSION.route}
+        element={<Pages.ChemistryPages.ChemistryExtrusionPage />}
+      />
+      <Route
+        path={ChemistryAppRouting.VENEER.route}
+        element={<Pages.ChemistryPages.ChemistryVeneerPage />}
+      />
       <Route
         path={ChemistryAppRouting.COUNTER_EXTRUSION.route}
-        element={<ExtrusionCounterPage />}
+        element={<Pages.CounterPages.ExtrusionCounterPage />}
       />
-      <Route path={ChemistryAppRouting.COUNTER_VENEER.route} element={<VeneerCounterPage />} />
+      <Route
+        path={ChemistryAppRouting.COUNTER_VENEER.route}
+        element={<Pages.CounterPages.VeneerCounterPage />}
+      />
     </Routes>
   );
 };

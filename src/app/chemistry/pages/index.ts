@@ -1,6 +1,5 @@
-import { ExtrusionPage, VeneerPage } from './chemistry-package-pages';
-import ExtrusionCounterPage from './counter-page/extrusion-counter-page';
-import VeneerCounterPage from './counter-page/veneer-counter-page';
-import PackagesOverviewPage from './packages-overview-page/packages-overview-page';
+import * as ChemistryPages from './chemistry-pages';
+import * as CounterPages from './counter-page/';
+import ChemistryRootPage from './chemistry-root-page/chemistry-root-page';
 
-export { ExtrusionCounterPage, PackagesOverviewPage, VeneerCounterPage, ExtrusionPage, VeneerPage };
+export { ChemistryRootPage, ChemistryPages, CounterPages };
