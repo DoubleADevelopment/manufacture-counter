@@ -1,7 +1,7 @@
 //components
 import NavigationLink from './navigation-link/navigation-link';
 //variables
-import { AppRouting } from '../../variables/app-routing-variables';
+import { AppRouting } from '../../variables/';
 //styles
 import style from './nav.module.scss';
 //icons

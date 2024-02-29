@@ -1,5 +1,5 @@
 //variables
-import { UnitsOfMeasurementText } from '../../../variables/text-variables';
+import { UnitsOfMeasurementText } from '../../../variables/';
 //types
 import type { IItemCardData } from '../../../types/data-types';
 //styles

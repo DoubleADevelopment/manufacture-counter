@@ -1,6 +1,12 @@
 import { InputStatuses } from './input-variables';
 import { ComponentsRouting } from './component-routing-variables';
-import { CounterText, CounterInputErrorsText, ErrorsText, InterfaceText } from './text-variables';
+import {
+  CounterText,
+  CounterInputErrorsText,
+  ErrorsText,
+  InterfaceText,
+  UnitsOfMeasurementText,
+} from './text-variables';
 import { NotificationType } from './notofication-variables';
 import { AppRouting, rootBaseName } from './app-routing-variables';
 
@@ -14,4 +20,5 @@ export {
   InterfaceText,
   AppRouting,
   rootBaseName,
+  UnitsOfMeasurementText,
 };

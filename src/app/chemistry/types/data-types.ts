@@ -2,7 +2,7 @@
 import { ILogs } from '../../../types';
 import { ChemistryLogsNames, ChemistrySettingsNames } from '../variables/';
 //types
-import { ChemistryPackagesNames } from '../variables/data-variables';
+import { ChemistryPackagesNames } from '../variables/';
 
 interface IChemistryLogs extends ILogs {
   [ChemistryLogsNames.COUNTER]: {

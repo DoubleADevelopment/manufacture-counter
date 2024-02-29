@@ -7,7 +7,7 @@ import { useAppSelector } from '../../../../hooks/hooks';
 import { SelectorCheckIfElementExistsByUNID } from '../../store/slectors/selectors';
 //variables
 import { ErrorsText, NotificationType } from '../../../../variables';
-import { ChemistryPackagesNames } from '../../variables/data-variables';
+import { ChemistryPackagesNames } from '../../variables/';
 
 interface ICounterProps {
   packageName: ChemistryPackagesNames;

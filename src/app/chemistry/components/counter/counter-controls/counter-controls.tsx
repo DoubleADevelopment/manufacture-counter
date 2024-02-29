@@ -4,7 +4,7 @@ import { BasicCounter } from '../../../../../components';
 import { useAppDispatch } from '../../../../../hooks/hooks';
 import { decrementAction, incrementAction } from '../../../store/actions/actions';
 //variables
-import { ChemistryPackagesNames } from '../../../variables/data-variables';
+import { ChemistryPackagesNames } from '../../../variables/';
 //styles
 import style from './counter-controls.module.scss';
 

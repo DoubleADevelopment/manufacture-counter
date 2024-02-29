@@ -3,7 +3,7 @@ import {
   IClearItemAction as clearItem,
   ILogAction as log,
 } from '../../../types';
-import { ChemistryPackagesNames } from '../variables/data-variables';
+import { ChemistryPackagesNames } from '../variables/';
 
 interface IIncDecAction extends incDec {
   packageName: ChemistryPackagesNames;

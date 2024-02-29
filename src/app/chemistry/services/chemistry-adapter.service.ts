@@ -1,5 +1,5 @@
 //variablse
-import { ChemistryPackagesNames } from '../variables/data-variables';
+import { ChemistryPackagesNames } from '../variables/';
 //types
 import type { IAdapterService } from '../../../types';
 import type { IItemCardData, ItemsCardListDataType } from '../../../types/data-types';

@@ -2,7 +2,7 @@ import { useState } from 'react';
 //components
 import { ItemCardShort, LogsModal } from '../../';
 //variables
-import { UnitsOfMeasurementText } from '../../../variables/text-variables';
+import { UnitsOfMeasurementText } from '../../../variables/';
 //types
 import type { IItemCardData, ILogs } from '../../../types/data-types';
 

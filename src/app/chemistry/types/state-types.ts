@@ -1,5 +1,5 @@
 //variables
-import { ChemistryPackagesNames } from '../variables/data-variables';
+import { ChemistryPackagesNames } from '../variables/';
 //types
 import type { IChemistryData } from './data-types';
 

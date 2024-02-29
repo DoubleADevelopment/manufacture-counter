@@ -1,5 +1,5 @@
 //variables
-import { ComponentsRouting } from '../variables/component-routing-variables';
+import { ComponentsRouting } from '../variables';
 //types
 import type { ComponentsListDataType } from '../types';
 
