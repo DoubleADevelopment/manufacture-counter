@@ -1,5 +1,6 @@
 //components
-import { ItemCardFull } from '..';
+// import { ItemCardFull } from '..';
+import ItemsListItem from './items-list-item/items-list-item';
 //variables
 import { UnitsOfMeasurementText } from '../../variables/';
 //types
@@ -16,7 +17,7 @@ const ItemsList = ({ data }: IComponentsListProps): JSX.Element => {
     <ul className={style['items-list']}>
       {data.map((item) => {
         return (
-          <ItemCardFull
+          <ItemsListItem
             item={item}
             measurementText={UnitsOfMeasurementText.AMOUNT}
             key={item.UNID}
