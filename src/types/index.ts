@@ -1,7 +1,7 @@
 import type { IDataService, ILocalstorageService, IAdapterService } from './services-types';
 import type { IRepository } from './repository-types';
 import type {
-  IComponentsListDataItem,
+  IComponentsListItem,
   ComponentsListDataType,
   ItemsCardListDataType,
   ILogs,
@@ -32,7 +32,7 @@ export type {
   IIconProps,
   ISetActiveLink,
   ComponentsListDataType,
-  IComponentsListDataItem,
+  IComponentsListItem,
   IRouteItem,
   ItemsCardListDataType,
   ILogs,

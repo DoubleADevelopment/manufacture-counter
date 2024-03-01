@@ -6,13 +6,13 @@ import type { IPigmentsData } from '../app/pigments/types/data-type';
 import { PIGMENTS_STORAGE_NAME } from '../app/pigments/variables/data-variables';
 
 //componentsList type we use in main page for show all components in overview page
-interface IComponentsListDataItem {
+interface IComponentsListItem {
   title: string;
   link: string;
   image: string;
 }
 
-type ComponentsListDataType = IComponentsListDataItem[];
+type ComponentsListDataType = IComponentsListItem[];
 
 //card type we use inside a card components
 interface IItemCardData {
@@ -79,7 +79,7 @@ type storageNamesAliasType =
   | typeof PIGMENTS_STORAGE_NAME;
 
 export type {
-  IComponentsListDataItem,
+  IComponentsListItem,
   ComponentsListDataType,
   IItemCardData,
   ItemsCardListDataType,
