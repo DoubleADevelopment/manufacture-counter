@@ -50,15 +50,18 @@ const LogsModal = ({ logsData, closeModal, clearData }: ILogsModalProps) => {
       data-close-modal="true"
     >
       <div className={style['logs-modal__content']}>
+        <div className={style['logs-modal__header']}>
+          <h3 className="content-primary-a heading-small">Logi licznika</h3>
+          <button
+            className={style['logs-modal__close-btn']}
+            type="button"
+            onClick={onCloseButtonClickHandler}
+          >
+            <span className="visually-hidden">{InterfaceText.CLOSE_MODAL}</span>
+            <CloseIcon size={{ width: 30, height: 30 }} />
+          </button>
+        </div>
         {generateLogs()}
-        <button
-          className={style['logs-modal__close-btn']}
-          type="button"
-          onClick={onCloseButtonClickHandler}
-        >
-          <span className="visually-hidden">{InterfaceText.CLOSE_MODAL}</span>
-          <CloseIcon />
-        </button>
 
         <div className={style['logs-modal__controls']}>
           <ButtonSecondarySmall
