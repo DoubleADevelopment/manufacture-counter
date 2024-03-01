@@ -7,12 +7,14 @@ interface INotificationProps {
   type: NotificationType;
   headingText: string;
   paragraphText: string;
+  additionalInfo?: string;
 }
 
 const PageNotification = ({
   type,
   headingText,
   paragraphText,
+  additionalInfo,
 }: INotificationProps): JSX.Element => {
   const NotificationIcon = ((): JSX.Element => {
     switch (type) {
@@ -29,11 +31,13 @@ const PageNotification = ({
         throw new Error(`Unhandled notification type: ${exhaustiveCheck}`);
     }
   })();
+
   return (
     <section className={style['page-notification']}>
       <div className={style['page-notification__content']}>
         <h4 className="heading-x-small content-primary-a">{headingText}</h4>
         <p className="paragraph-medium content-primary-a">{paragraphText}</p>
+        {additionalInfo && <p className="paragraph-small content-primary-a">{additionalInfo}</p>}
       </div>
       {NotificationIcon}
     </section>
