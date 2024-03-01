@@ -9,6 +9,7 @@ import {
   ButtonSecondary,
   ButtonPrimarySmall,
   ButtonSecondarySmall,
+  ButtonDeleteWithConfirm,
 } from './buttons';
 import { NotificationStatic, PageNotification } from './notifications/';
 import { LogsModal } from './modals';
@@ -35,4 +36,5 @@ export {
   CounterHeader,
   BasicCounter,
   AdditionalNav,
+  ButtonDeleteWithConfirm,
 };
