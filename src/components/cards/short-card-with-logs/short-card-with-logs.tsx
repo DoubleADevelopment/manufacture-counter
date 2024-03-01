@@ -7,8 +7,8 @@ import { UnitsOfMeasurementText } from '../../../variables/';
 import type { IItemDataToDisplay, ILogs } from '../../../types/';
 
 interface IShortCardWithLogs {
-  itemLogs: ILogs;
-  item: IItemDataToDisplay;
+  itemLogs: ILogs | undefined;
+  item: IItemDataToDisplay | undefined;
   clearDataHandler: () => void;
 }
 
@@ -34,7 +34,7 @@ const ShortCardWithLogs = ({
 
   return (
     <>
-      {modalIsOpen && (
+      {modalIsOpen && itemLogs && (
         <LogsModal
           logsData={itemLogs}
           closeModal={onModalClickHandler}

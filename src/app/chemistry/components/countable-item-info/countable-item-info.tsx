@@ -11,7 +11,7 @@ import {
 //variables
 import { ChemistryPackagesNames } from '../../variables/';
 //components
-import { ItemCardShortSkeleton, ShortCardWithLogs } from '../../../../components/cards';
+import { ShortCardWithLogs } from '../../../../components/cards';
 //types
 import type { IItemDataToDisplay } from '../../../../types';
 import type { IChemistryItem } from '../../types/';
@@ -24,10 +24,10 @@ const CountableItemInfo = ({ packageName }: ICountableItemInfoProps): JSX.Elemen
   const { UNID } = useParams();
 
   const itemFromUnidIsset = useAppSelector(SelectorCheckIfElementExistsByUNID(UNID, packageName));
-  const item: IChemistryItem | null =
+  const item: IChemistryItem | undefined =
     UNID && itemFromUnidIsset
       ? useAppSelector(SelectorGetCurrentChemistry(UNID, packageName))
-      : null;
+      : undefined;
 
   const dispatch = useAppDispatch();
 
@@ -46,17 +46,11 @@ const CountableItemInfo = ({ packageName }: ICountableItemInfoProps): JSX.Elemen
   };
 
   return (
-    <>
-      {convertedItem && !!item ? (
-        <ShortCardWithLogs
-          item={convertedItem}
-          itemLogs={item.logs}
-          clearDataHandler={clearDataHandler}
-        />
-      ) : (
-        <ItemCardShortSkeleton />
-      )}
-    </>
+    <ShortCardWithLogs
+      item={convertedItem}
+      itemLogs={item?.logs}
+      clearDataHandler={clearDataHandler}
+    />
   );
 };
 
