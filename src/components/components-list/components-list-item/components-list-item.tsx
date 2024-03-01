@@ -1,11 +1,11 @@
 //types
 import { Link } from 'react-router-dom';
-import { IComponentsListItem } from '../../../types';
+import { IComponentData } from '../../../types';
 //styles
 import style from './components-list-item.module.scss';
 
 interface ICountersListItemProps {
-  item: IComponentsListItem;
+  item: IComponentData;
 }
 
 const ComponentsListItem = ({ item }: ICountersListItemProps): JSX.Element => {

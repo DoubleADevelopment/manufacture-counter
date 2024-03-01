@@ -1,10 +1,10 @@
 //vars
 import { PigmentsLogsNames, PigmentsSettingsNames } from '../variables/data-variables';
 //types
-import type { IData, IDataItem, IDataPackage, ILogs, ISettings } from '../../../types/';
+import type { IData, IItemData, IDataPackage, ILogs, ISettings } from '../../../types/';
 
 interface IPigmentsDataPackageType extends IDataPackage<IPigmentsDataItemType> {}
-interface IPigmentsDataItemType extends IDataItem<IPigmentsLogs, IPigmentsSettings> {}
+interface IPigmentsDataItemType extends IItemData<IPigmentsLogs, IPigmentsSettings> {}
 
 interface IPigmentsLogs extends ILogs {
   [PigmentsLogsNames.COUNTER]: {

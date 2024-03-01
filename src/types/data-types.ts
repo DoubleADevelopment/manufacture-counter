@@ -6,13 +6,13 @@ import type { IPigmentsData } from '../app/pigments/types/data-type';
 import { PIGMENTS_STORAGE_NAME } from '../app/pigments/variables/data-variables';
 
 //componentsList type we use in main page for show all components in overview page
-interface IComponentsListItem {
+interface IComponentData {
   title: string;
   link: string;
   image: string;
 }
 
-type ComponentsListDataType = IComponentsListItem[];
+type ComponentsDataListType = IComponentData[];
 
 //card type we use inside a card components
 interface IItemDataToDisplay {
@@ -25,7 +25,7 @@ interface IItemDataToDisplay {
   amount: number;
 }
 
-type ItemsDataToDisplayList = IItemDataToDisplay[];
+type ItemsDataToDisplayListType = IItemDataToDisplay[];
 
 //data types for apps/counters
 interface ILogs {
@@ -48,7 +48,7 @@ interface IDataPackage<I> {
   items: I[];
 }
 
-interface IDataItem<L extends ILogs, S extends ISettings> {
+interface IItemData<L extends ILogs, S extends ISettings> {
   UNID: string;
   packageName?: string;
   amount: number;
@@ -79,14 +79,14 @@ type storageNamesAliasType =
   | typeof PIGMENTS_STORAGE_NAME;
 
 export type {
-  IComponentsListItem,
-  ComponentsListDataType,
+  IComponentData,
+  ComponentsDataListType,
   IItemDataToDisplay,
-  ItemsDataToDisplayList,
+  ItemsDataToDisplayListType,
   ILogs,
   DataAliasType,
   ISettings,
-  IDataItem,
+  IItemData,
   IDataPackage,
   IData,
   storageNamesAliasType,

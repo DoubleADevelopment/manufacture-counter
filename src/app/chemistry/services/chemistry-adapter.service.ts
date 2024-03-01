@@ -1,7 +1,11 @@
 //variablse
 import { ChemistryPackagesNames } from '../variables/';
 //types
-import type { IAdapterService, IItemDataToDisplay, ItemsDataToDisplayList } from '../../../types';
+import type {
+  IAdapterService,
+  IItemDataToDisplay,
+  ItemsDataToDisplayListType,
+} from '../../../types';
 import type {
   IChemistryItem,
   IChemistryData,
@@ -49,7 +53,7 @@ class ChemistryAdapterService
     };
   }
 
-  adaptItemsDataToDisplayList(data: IChemistryItems): ItemsDataToDisplayList {
+  adaptItemsDataToDisplayList(data: IChemistryItems): ItemsDataToDisplayListType {
     const dataAdaptedToView = this.adaptDataToView(data);
     const adaptedData = dataAdaptedToView.map((item) => {
       return this.adaptItemDataToDisplay(item);

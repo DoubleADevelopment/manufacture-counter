@@ -1,9 +1,9 @@
 //variables
 import { ChemistryAppRouting } from '../variables';
 //types
-import type { ComponentsListDataType } from '../../../types';
+import type { ComponentsDataListType } from '../../../types';
 
-const chemistryComponentsListData: ComponentsListDataType = [
+const chemistryComponentsListData: ComponentsDataListType = [
   {
     title: ChemistryAppRouting.EXTRUSION.title,
     link: ChemistryAppRouting.EXTRUSION.path,
