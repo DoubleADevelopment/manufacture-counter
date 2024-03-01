@@ -1,10 +1,10 @@
 //vars
 import { GumsLogsNames, GumsSettingsNames } from '../variables/data-variables';
 //types
-import type { IData, IDataItem, IDataPackage, ILogs, ISettings } from '../../../types/';
+import type { IData, IItemData, IDataPackage, ILogs, ISettings } from '../../../types/';
 
 interface IGumsDataPackageType extends IDataPackage<IGumsDataItemType> {}
-interface IGumsDataItemType extends IDataItem<IGumsLogs, IGumsSettings> {}
+interface IGumsDataItemType extends IItemData<IGumsLogs, IGumsSettings> {}
 
 interface IGumsLogs extends ILogs {
   [GumsLogsNames.COUNTER]: {

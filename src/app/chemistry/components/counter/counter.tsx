@@ -26,6 +26,7 @@ const Counter = ({ packageName }: ICounterProps): JSX.Element => {
           headingText={ErrorsText.COUNTER_OPENING_ERROR}
           paragraphText={ErrorsText.COMPONENT_NOT_FOUND}
           type={NotificationType.ERROR}
+          additionalInfo={`${ErrorsText.COMPONENT_NOT_FOUND_WITH_UNID} ${UNID}`}
         />
       );
     }

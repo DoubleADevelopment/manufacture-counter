@@ -1,19 +1,19 @@
 //components
-import CountersListItem from '../cards/component-card/component-card';
+import ComponentsListItem from './components-list-item/components-list-item';
 //types
-import { ComponentsListDataType } from '../../types';
+import { ComponentsDataListType } from '../../types';
 //styles
 import style from './components-list.module.scss';
 
 interface IComponentsListProps {
-  dataList: ComponentsListDataType;
+  dataList: ComponentsDataListType;
 }
 
 const ComponentsList = ({ dataList }: IComponentsListProps): JSX.Element => {
   return (
     <ul className={style['components-list']}>
       {dataList.map((item, i) => {
-        return <CountersListItem item={item} key={item.title + i} />;
+        return <ComponentsListItem item={item} key={item.title + i} />;
       })}
     </ul>
   );

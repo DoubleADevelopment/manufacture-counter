@@ -1,4 +1,4 @@
-.component-card {
+.components-list-item {
   position: relative;
   list-style: none;
   overflow: hidden;
@@ -11,7 +11,7 @@
   &:hover {
     border-color: var(--accent);
 
-    & .component-card__image {
+    & .components-list-item__image {
       position: absolute;
       left: 0;
       top: 0;
@@ -23,7 +23,7 @@
   }
 }
 
-.component-card__title {
+.components-list-item__title {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -31,7 +31,7 @@
   transform: translate(-50%, -50%);
 }
 
-.component-card__image {
+.components-list-item__image {
   display: flex;
   border-radius: var(--basic-border-radius);
   width: 100%;
@@ -40,7 +40,7 @@
   transition: all ease 0.2s;
 }
 
-.component-card__link {
+.components-list-item__link {
   position: absolute;
   left: 0;
   top: 0;

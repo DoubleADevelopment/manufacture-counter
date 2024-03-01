@@ -10,7 +10,7 @@ import style from './chemistry-page.module.scss';
 
 const ChemistryVeneerPage = (): JSX.Element => {
   const chemistryState = useAppSelector(SelectorGetVeenerChemistry());
-  const adaptedData = chemistryAdapterService.adaptItemsToCardList(chemistryState);
+  const adaptedData = chemistryAdapterService.adaptItemsDataToDisplayList(chemistryState);
 
   return (
     <PageWithMenuLayout

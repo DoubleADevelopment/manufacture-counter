@@ -1,9 +1,9 @@
 //variables
 import { ComponentsRouting } from '../variables';
 //types
-import type { ComponentsListDataType } from '../types';
+import type { ComponentsDataListType } from '../types';
 
-const componentsListData: ComponentsListDataType = [
+const componentsListData: ComponentsDataListType = [
   {
     title: ComponentsRouting.PIGMENTS.title,
     link: ComponentsRouting.PIGMENTS.path,

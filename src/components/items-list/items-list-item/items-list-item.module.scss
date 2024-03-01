@@ -1,4 +1,4 @@
-.item-card-full {
+.items-list-item {
   position: relative;
   display: grid;
   grid-template-areas:
@@ -17,7 +17,7 @@
   }
 }
 
-.item-card-full__info {
+.items-list-item__info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -27,7 +27,7 @@
   gap: 5px;
 }
 
-.item-card-full__image {
+.items-list-item__image {
   flex-flow: 1;
   border-radius: var(--basic-border-radius);
   width: 100%;
@@ -37,7 +37,7 @@
   object-fit: cover;
 }
 
-.item-card-full__amount {
+.items-list-item__amount {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,7 +46,7 @@
   padding-right: 10px;
 }
 
-.item-card-full__link {
+.items-list-item__link {
   position: absolute;
   left: 0;
   top: 0;
