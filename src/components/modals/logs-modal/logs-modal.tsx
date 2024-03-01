@@ -1,7 +1,7 @@
 import { MouseEvent } from 'react';
 //component
 import LogItem from './log-item/log-item';
-import { ButtonSecondarySmall } from '../../';
+import { ButtonDeleteWithConfirm } from '../../';
 //variables
 import { CounterText, InterfaceText } from '../../../variables';
 //icons
@@ -64,7 +64,7 @@ const LogsModal = ({ logsData, closeModal, clearData }: ILogsModalProps) => {
         {generateLogs()}
 
         <div className={style['logs-modal__controls']}>
-          <ButtonSecondarySmall
+          <ButtonDeleteWithConfirm
             text={CounterText.CLEAR_COUNTER_DATA}
             clickHandler={onClearDataClickHandler}
           />
