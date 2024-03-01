@@ -1,7 +1,7 @@
 //variablse
 import { ChemistryPackagesNames } from '../variables/';
 //types
-import type { IAdapterService, IItemCardData, ItemsCardListDataType } from '../../../types';
+import type { IAdapterService, IItemDataToDisplay, ItemsDataToDisplayList } from '../../../types';
 import type {
   IChemistryItem,
   IChemistryData,
@@ -37,7 +37,7 @@ class ChemistryAdapterService
     return itemsArray;
   }
 
-  adaptItemDataToCard(item: IChemistryItem): IItemCardData {
+  adaptItemDataToDisplay(item: IChemistryItem): IItemDataToDisplay {
     return {
       UNID: item.UNID,
       name: item.name,
@@ -49,10 +49,10 @@ class ChemistryAdapterService
     };
   }
 
-  adaptItemsToCardList(data: IChemistryItems): ItemsCardListDataType {
+  adaptItemsDataToDisplayList(data: IChemistryItems): ItemsDataToDisplayList {
     const dataAdaptedToView = this.adaptDataToView(data);
     const adaptedData = dataAdaptedToView.map((item) => {
-      return this.adaptItemDataToCard(item);
+      return this.adaptItemDataToDisplay(item);
     });
     return adaptedData;
   }

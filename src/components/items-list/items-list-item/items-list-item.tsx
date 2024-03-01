@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom';
 //variables
 import { UnitsOfMeasurementText } from '../../../variables';
 //types
-import type { IItemCardData } from '../../../types/';
+import type { IItemDataToDisplay } from '../../../types/';
 //style
 import style from './items-list-item.module.scss';
 
 interface IItemsListItemProps {
-  item: IItemCardData;
+  item: IItemDataToDisplay;
   measurementText: UnitsOfMeasurementText;
 }
 

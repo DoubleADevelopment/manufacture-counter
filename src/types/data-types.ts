@@ -15,7 +15,7 @@ interface IComponentsListItem {
 type ComponentsListDataType = IComponentsListItem[];
 
 //card type we use inside a card components
-interface IItemCardData {
+interface IItemDataToDisplay {
   UNID: string;
   name: string;
   description: string;
@@ -25,7 +25,7 @@ interface IItemCardData {
   amount: number;
 }
 
-type ItemsCardListDataType = IItemCardData[];
+type ItemsDataToDisplayList = IItemDataToDisplay[];
 
 //data types for apps/counters
 interface ILogs {
@@ -81,8 +81,8 @@ type storageNamesAliasType =
 export type {
   IComponentsListItem,
   ComponentsListDataType,
-  IItemCardData,
-  ItemsCardListDataType,
+  IItemDataToDisplay,
+  ItemsDataToDisplayList,
   ILogs,
   DataAliasType,
   ISettings,

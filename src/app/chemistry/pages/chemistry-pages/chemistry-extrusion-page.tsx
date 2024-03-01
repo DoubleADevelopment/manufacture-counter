@@ -10,7 +10,7 @@ import style from './chemistry-page.module.scss';
 
 const ChemistryExtrusionPage = (): JSX.Element => {
   const chemistryState = useAppSelector(SelectorGetExtrusionChemistry());
-  const adaptedData = chemistryAdapterService.adaptItemsToCardList(chemistryState);
+  const adaptedData = chemistryAdapterService.adaptItemsDataToDisplayList(chemistryState);
 
   return (
     <PageWithMenuLayout

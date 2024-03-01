@@ -1,12 +1,12 @@
 //variables
 import { UnitsOfMeasurementText } from '../../../variables/';
 //types
-import type { IItemCardData } from '../../../types/';
+import type { IItemDataToDisplay } from '../../../types/';
 //styles
 import style from './item-card-short.module.scss';
 
 interface IItemCardShortProps {
-  item: IItemCardData;
+  item: IItemDataToDisplay;
   measurementText: UnitsOfMeasurementText;
   onCardClickHandler?: () => void;
 }

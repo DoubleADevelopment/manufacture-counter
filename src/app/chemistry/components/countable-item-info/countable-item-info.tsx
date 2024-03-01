@@ -13,7 +13,7 @@ import { ChemistryPackagesNames } from '../../variables/';
 //components
 import { ItemCardShortSkeleton, ShortCardWithLogs } from '../../../../components/cards';
 //types
-import type { IItemCardData } from '../../../../types';
+import type { IItemDataToDisplay } from '../../../../types';
 import type { IChemistryItem } from '../../types/';
 
 interface ICountableItemInfoProps {
@@ -31,10 +31,10 @@ const CountableItemInfo = ({ packageName }: ICountableItemInfoProps): JSX.Elemen
 
   const dispatch = useAppDispatch();
 
-  let convertedItem: IItemCardData | undefined;
+  let convertedItem: IItemDataToDisplay | undefined;
 
   if (item !== undefined && item) {
-    convertedItem = chemistryAdapterService.adaptItemDataToCard(item);
+    convertedItem = chemistryAdapterService.adaptItemDataToDisplay(item);
   } else {
     convertedItem = undefined;
   }

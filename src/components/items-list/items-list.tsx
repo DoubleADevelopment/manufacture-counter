@@ -4,12 +4,12 @@ import ItemsListItem from './items-list-item/items-list-item';
 //variables
 import { UnitsOfMeasurementText } from '../../variables/';
 //types
-import type { ItemsCardListDataType } from '../../types/';
+import type { ItemsDataToDisplayList } from '../../types/';
 //styles
 import style from './items-list.module.scss';
 
 interface IComponentsListProps {
-  data: ItemsCardListDataType;
+  data: ItemsDataToDisplayList;
 }
 
 const ItemsList = ({ data }: IComponentsListProps): JSX.Element => {
