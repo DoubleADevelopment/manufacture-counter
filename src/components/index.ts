@@ -2,7 +2,7 @@ import Header from './header/header';
 import Navigation from './nav/nav';
 import ComponentsList from './components-list/components-list';
 import ItemsList from './items-list/items-list';
-import { ItemCardShort, ItemCardShortSkeleton, ShortCardWithLogs } from './cards';
+import { ItemCardShort, ShortCardWithLogs } from './cards';
 import { ControlSetValue } from './controls';
 import {
   ButtonPrimary,
@@ -31,7 +31,6 @@ export {
   ButtonPrimary,
   ButtonSecondary,
   NotificationStatic,
-  ItemCardShortSkeleton,
   LogsModal,
   ButtonPrimarySmall,
   ButtonSecondarySmall,
