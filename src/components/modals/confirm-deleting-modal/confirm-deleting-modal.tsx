@@ -1,5 +1,5 @@
 //layouts
-import { DeleteButton, SystemSecondaryButton } from '../..';
+import { DeleteButton, ButtonTertiarySmall } from '../..';
 import { ModalLayout } from '../../../layouts';
 //variables
 import { CounterText, InterfaceText } from '../../../variables';
@@ -21,7 +21,7 @@ const ConfirmDeletingModal = ({
         <h3 className="content-primary-a heading-small">
           {CounterText.CLEAR_COUNTER_HISTORY_CONFIRM}
         </h3>
-        <SystemSecondaryButton
+        <ButtonTertiarySmall
           clickHandler={onCancelButtonClickHandler}
           text={InterfaceText.CANCEL_DELETING}
         />

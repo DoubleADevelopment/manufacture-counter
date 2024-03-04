@@ -35,7 +35,7 @@ const LogsModalBody = ({
     <ModalLayout onOverlayClickHandler={closeModalClickHandler}>
       <section className={style['logs-modal-body']}>
         <div className={style['logs-modal-body__header']}>
-          <h3 className="content-primary-a heading-small">Logi licznika</h3>
+          <h3 className="content-primary-a heading-small">{CounterText.COUNTER_LOGS}</h3>
           <button
             className={style['logs-modal-body__close-btn']}
             type="button"

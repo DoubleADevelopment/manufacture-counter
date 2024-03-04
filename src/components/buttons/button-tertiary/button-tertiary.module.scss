@@ -1,8 +1,8 @@
-.system-secondary-button {
+.button-tertiary {
   border: none;
   border: 1px solid var(--border-opaque);
   border-radius: var(--button-border-radius);
-  padding: 8px 12px;
+  padding: 16px 20px;
   width: 100%;
   color: var(--content-primary-a);
   background-color: transparent;
@@ -12,5 +12,10 @@
   &:hover,
   &:focus {
     background-color: var(--border-opaque);
+  }
+
+
+  &:active {
+    background-color: var(--gray-200);
   }
 }

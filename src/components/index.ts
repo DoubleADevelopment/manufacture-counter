@@ -11,7 +11,8 @@ import {
   ButtonSecondarySmall,
   ButtonDeleteWithConfirm,
   DeleteButton,
-  SystemSecondaryButton,
+  ButtonTertiarySmall,
+  ButtonTertiary,
 } from './buttons';
 import { NotificationStatic, PageNotification } from './notifications/';
 import { LogsModal, ConfirmDeletingModal } from './modals';
@@ -41,5 +42,6 @@ export {
   ButtonDeleteWithConfirm,
   DeleteButton,
   ConfirmDeletingModal,
-  SystemSecondaryButton,
+  ButtonTertiary,
+  ButtonTertiarySmall,
 };
