@@ -1,0 +1,16 @@
+.system-secondary-button {
+  border: none;
+  border: 1px solid var(--border-opaque);
+  border-radius: var(--button-border-radius);
+  padding: 8px 12px;
+  width: 100%;
+  color: var(--content-primary-a);
+  background-color: transparent;
+  transition: all ease 0.1s;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: var(--border-opaque);
+  }
+}
