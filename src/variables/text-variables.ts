@@ -19,6 +19,8 @@ enum ErrorsText {
   COMPONENT_NOT_FOUND = 'Nie znaleziono komponentu do przeliczenia.',
   COUNTER_OPENING_ERROR = 'Błąd przy otwarciu licznika',
   COMPONENT_NOT_FOUND_WITH_UNID = 'Nie znaleziono komponentu o numerze - ',
+  SOMETHING_WENT_WRONG = 'uuups... Coś poszło nie tak...',
+  ITEMS_LIST_NOT_FOUND = 'Nie udało się nam otworzyć listę komponentów.',
 }
 
 enum UnitsOfMeasurementText {

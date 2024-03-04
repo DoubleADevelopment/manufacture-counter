@@ -1,5 +1,4 @@
 //components
-// import { ItemCardFull } from '..';
 import ItemsListItem from './items-list-item/items-list-item';
 //variables
 import { UnitsOfMeasurementText } from '../../variables/';
