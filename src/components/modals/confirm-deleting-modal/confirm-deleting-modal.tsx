@@ -1,6 +1,8 @@
 //layouts
 import { DeleteButton, SystemSecondaryButton } from '../..';
 import { ModalLayout } from '../../../layouts';
+//variables
+import { CounterText, InterfaceText } from '../../../variables';
 //styles
 import style from './confirm-deleting-modal.module.scss';
 
@@ -16,9 +18,17 @@ const ConfirmDeletingModal = ({
   return (
     <ModalLayout onOverlayClickHandler={onCancelButtonClickHandler}>
       <section className={style['confirm-deleting-modal']}>
-        <h4>Clear your chat history - are you sure?</h4>
-        <SystemSecondaryButton clickHandler={onCancelButtonClickHandler} text="anulować" />
-        <DeleteButton clickHandler={confirmButtonClickHandler} text="Potwierdź usunięcie" />
+        <h3 className="content-primary-a heading-small">
+          {CounterText.CLEAR_COUNTER_HISTORY_CONFIRM}
+        </h3>
+        <SystemSecondaryButton
+          clickHandler={onCancelButtonClickHandler}
+          text={InterfaceText.CANCEL_DELETING}
+        />
+        <DeleteButton
+          clickHandler={confirmButtonClickHandler}
+          text={InterfaceText.CONFIRM_DELETING}
+        />
       </section>
     </ModalLayout>
   );
