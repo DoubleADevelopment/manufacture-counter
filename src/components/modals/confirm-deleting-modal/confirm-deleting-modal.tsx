@@ -1,3 +1,5 @@
+//layouts
+import { ModalLayout } from '../../../layouts';
 //styles
 import style from './confirm-deleting-modal.module.scss';
 
@@ -11,8 +13,8 @@ const ConfirmDeletingModal = ({
   confirmButtonClickHandler,
 }: IConfirmDeletingModalProps): JSX.Element => {
   return (
-    <div className={style['button-delete-with-confirm__modal']}>
-      <div className={style['button-delete-with-confirm__modal-content']}>
+    <ModalLayout onOverlayClickHandler={onCancelButtonClickHandler}>
+      <section className={style['confirm-deleting-modal']}>
         <h4>Clear your chat history - are you sure?</h4>
         <button
           onClick={onCancelButtonClickHandler}
@@ -28,8 +30,8 @@ const ConfirmDeletingModal = ({
         >
           Potwierdź usunięcie
         </button>
-      </div>
-    </div>
+      </section>
+    </ModalLayout>
   );
 };
 
