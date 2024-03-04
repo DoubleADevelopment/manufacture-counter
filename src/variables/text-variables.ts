@@ -6,6 +6,8 @@ enum CounterText {
   NO_LOGS = 'Brak logów',
   COUNTER_LOGS = 'Logi licznika',
   CHEMISTRY_COUNTER_TITLE = 'Licznik chemii',
+  CHEMISTRY_COUNTER_VENEER = 'Okleina',
+  CHEMISTRY_COUNTER_EXTRUSION = 'Ekstruzja',
   CLEAR_COUNTER_HISTORY_CONFIRM = 'Napewno chcesz usunąć danę licznika?',
   OPEN_COUNTER = 'Otwórz licznik',
 }

@@ -12,7 +12,7 @@ const VeneerCounterPage = (): JSX.Element => {
   return (
     <CounterPageLayout
       backLink={ChemistryAppRouting.VENEER.path}
-      headerTitle={CounterText.CHEMISTRY_COUNTER_TITLE}
+      headerTitle={CounterText.CHEMISTRY_COUNTER_VENEER}
     >
       <main className={style['counter-page']}>
         <CountableItemInfo packageName={ChemistryPackagesNames.VENEER} />
