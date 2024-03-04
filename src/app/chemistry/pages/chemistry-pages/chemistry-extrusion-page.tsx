@@ -1,8 +1,12 @@
-import { ItemsList } from '../../../../components';
+//store
 import { useAppSelector } from '../../../../hooks/hooks';
-import { PageWithMenuLayout } from '../../../../layouts';
-import chemistryAdapterService from '../../services/chemistry-adapter.service';
 import { SelectorGetExtrusionChemistry } from '../../store/slectors/selectors';
+//services
+import chemistryAdapterService from '../../services/chemistry-adapter.service';
+//components
+import { ItemsList } from '../../../../components';
+//layouts
+import { PageWithMenuLayout } from '../../../../layouts';
 //variables
 import { ChemistryAppRouting } from '../../variables';
 //styles

@@ -16,7 +16,7 @@ const ComponentsListItem = ({ item }: ICountersListItemProps): JSX.Element => {
       </h3>
       <img className={style['components-list-item__image']} src={item.image} alt="" />
       <Link className={style['components-list-item__link']} to={item.link}>
-        {item.title}
+        <span className="visually-hidden">{item.title}</span>
       </Link>
     </li>
   );
