@@ -3,6 +3,8 @@ import { MouseEvent } from 'react';
 //component
 import LogItem from './log-item/log-item';
 import { ButtonDeleteWithConfirm, DeleteButton } from '../../';
+//layouts
+import { ModalLayout } from '../../../layouts';
 //variables
 import { CounterText, InterfaceText } from '../../../variables';
 //icons
@@ -27,7 +29,7 @@ const LogsModal = ({ logsData, closeModal, clearData }: ILogsModalProps) => {
     return logsArray;
   };
 
-  const onModalBackgroundClickHandler = () => {
+  const onOverlayClickHandler = () => {
     closeModal();
   };
 
@@ -48,33 +50,31 @@ const LogsModal = ({ logsData, closeModal, clearData }: ILogsModalProps) => {
   };
 
   return (
-    <div className={`${style['logs-modal']}`} onClick={onModalBackgroundClickHandler}>
-      <div className={`${style['logs-modal__content']}`} onClick={stopImmediatePropagation}>
-        <div className={style['logs-modal__header']}>
-          <h3 className="content-primary-a heading-small">Logi licznika</h3>
-          <button
-            className={style['logs-modal__close-btn']}
-            type="button"
-            onClick={onCloseButtonClickHandler}
-          >
-            <span className="visually-hidden">{InterfaceText.CLOSE_MODAL}</span>
-            <CloseIcon size={{ width: 30, height: 30 }} />
-          </button>
-        </div>
-        {generateLogs()}
+    <ModalLayout onOverlayClickHandler={onOverlayClickHandler}>
+      <div className={style['logs-modal__header']}>
+        <h3 className="content-primary-a heading-small">Logi licznika</h3>
+        <button
+          className={style['logs-modal__close-btn']}
+          type="button"
+          onClick={onCloseButtonClickHandler}
+        >
+          <span className="visually-hidden">{InterfaceText.CLOSE_MODAL}</span>
+          <CloseIcon size={{ width: 30, height: 30 }} />
+        </button>
+      </div>
+      {generateLogs()}
 
-        <div className={style['logs-modal__controls']}>
-          {/* <ButtonDeleteWithConfirm
+      <div className={style['logs-modal__controls']}>
+        {/* <ButtonDeleteWithConfirm
             text={CounterText.CLEAR_COUNTER_DATA}
             clickHandler={onClearDataClickHandler}
           /> */}
-          <DeleteButton
-            text={CounterText.CLEAR_COUNTER_DATA}
-            clickHandler={onClearDataButtonClickHandler}
-          />
-        </div>
+        <DeleteButton
+          text={CounterText.CLEAR_COUNTER_DATA}
+          clickHandler={onClearDataButtonClickHandler}
+        />
       </div>
-    </div>
+    </ModalLayout>
   );
 };
 
