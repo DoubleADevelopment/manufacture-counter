@@ -9,6 +9,8 @@ const ErrorIcon = ({ size }: Omit<IIconProps, 'color'>): JSX.Element => {
       viewBox="0 0 40 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      focusable="false"
+      aria-hidden="true"
     >
       <path
         d="M20.0002 38.8891C30.4323 38.8891 38.8891 30.4323 38.8891 20.0002C38.8891 9.56817 30.4323 1.11133 20.0002 1.11133C9.56817 1.11133 1.11133 9.56817 1.11133 20.0002C1.11133 30.4323 9.56817 38.8891 20.0002 38.8891Z"

@@ -9,6 +9,8 @@ const WarningIcon = ({ size }: Omit<IIconProps, 'color'>): JSX.Element => {
       viewBox="0 0 40 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      focusable="false"
+      aria-hidden="true"
     >
       <path
         d="M1.23947 35.206L19.2616 3.96769C19.5619 3.40986 20.3772 3.40986 20.7205 3.96769L38.7855 35.206C39.0859 35.7638 38.6997 36.4504 38.056 36.4504H1.92602C1.28238 36.4504 0.896188 35.7638 1.23947 35.206Z"
