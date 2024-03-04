@@ -1,7 +1,10 @@
 //components
 import { DeleteButton } from '../../../';
+import LogItem from '../log-item/log-item';
 //layouts
 import { ModalLayout } from '../../../../layouts';
+//types
+import type { ILogs } from '../../../../types';
 //variables
 import { CounterText, InterfaceText } from '../../../../variables';
 //icons
@@ -12,14 +15,22 @@ import style from './logs-modal-body.module.scss';
 interface ILogsModalBodyProps {
   closeModalClickHandler: () => void;
   openConfirmDeletingModal: () => void;
-  logs: JSX.Element[];
+  logsData: ILogs;
 }
 
 const LogsModalBody = ({
   closeModalClickHandler,
-  logs,
+  logsData,
   openConfirmDeletingModal,
 }: ILogsModalBodyProps): JSX.Element => {
+  const generateLogs = (): JSX.Element[] => {
+    const logsArray: JSX.Element[] = [];
+    for (const key in logsData) {
+      logsArray.push(<LogItem log={logsData[key].log} logName={key} key={key} />);
+    }
+    return logsArray;
+  };
+
   return (
     <ModalLayout onOverlayClickHandler={closeModalClickHandler}>
       <section className={style['logs-modal-body']}>
@@ -35,7 +46,7 @@ const LogsModalBody = ({
           </button>
         </div>
 
-        {logs}
+        {generateLogs()}
 
         <div className={style['logs-modal-body__controls']}>
           <DeleteButton
