@@ -17,7 +17,7 @@ const ItemsListItem = ({ item, measurementText }: IItemsListItemProps): JSX.Elem
   return (
     <li className={`${style['items-list-item']} unselectable`} key={UNID}>
       <div className={style['items-list-item__info']}>
-        <h3 className={`content-primary-a heading-small`}>{name}</h3>
+        <h2 className={`content-primary-a heading-small`}>{name}</h2>
         <p className={`content-primary-a paragraph-large`}>
           <span className={`content-secondary-a`}>Opis:</span> {description}
         </p>
