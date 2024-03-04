@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 //variables
-import { UnitsOfMeasurementText } from '../../../variables';
+import { CounterText, UnitsOfMeasurementText } from '../../../variables';
 //types
 import type { IItemDataToDisplay } from '../../../types/';
 //style
@@ -39,7 +39,9 @@ const ItemsListItem = ({ item, measurementText }: IItemsListItemProps): JSX.Elem
         {measurementText} <span className="paragraph-primary-a heading-medium">{amount}</span>
       </div>
       <Link className={style['items-list-item__link']} to={`${UNID}`}>
-        <span className="visually-hidden">Otwórz licznik dla {name}</span>
+        <span className="visually-hidden">
+          {CounterText.OPEN_COUNTER} {name}
+        </span>
       </Link>
     </li>
   );
