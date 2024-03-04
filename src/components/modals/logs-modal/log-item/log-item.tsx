@@ -11,7 +11,7 @@ interface ILogsItemProps {
 const LogItem = ({ log, logName }: ILogsItemProps): JSX.Element => {
   return (
     <article className={style['log-item']}>
-      <h4 className="heading-x-small content-primary-a">{logName} logi</h4>
+      <h4 className="heading-x-small content-primary-a">{logName}</h4>
       <ul className={`${style['log-item__list']}`}>
         {log.length ? (
           log.map((item, i) => (

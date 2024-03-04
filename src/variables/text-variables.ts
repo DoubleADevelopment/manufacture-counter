@@ -4,7 +4,9 @@ enum CounterText {
   CHEMISTRY_SET_VALUE_TITLE = 'Ilość',
   CLEAR_COUNTER_DATA = 'Usuń danę licznika',
   NO_LOGS = 'Brak logów',
+  COUNTER_LOGS = 'Logi licznika',
   CHEMISTRY_COUNTER_TITLE = 'Licznik chemii',
+  CLEAR_COUNTER_HISTORY_CONFIRM = 'Napewno chcesz usunąć danę licznika?',
 }
 
 enum CounterInputErrorsText {
@@ -28,6 +30,8 @@ enum UnitsOfMeasurementText {
 enum InterfaceText {
   CLOSE_MODAL = 'Zamknąć okno',
   BACK_TO_OVERVIEW = 'Powrót do przeglądu',
+  CANCEL_DELETING = 'Anulować',
+  CONFIRM_DELETING = 'Potwierdź usunięcie',
 }
 
 export { CounterText, UnitsOfMeasurementText, CounterInputErrorsText, ErrorsText, InterfaceText };

@@ -1,15 +1,11 @@
-import { MouseEvent } from 'react';
+import { useState } from 'react';
 //component
-import LogItem from './log-item/log-item';
-import { ButtonDeleteWithConfirm } from '../../';
+import LogsModalBody from './logs-modal-body/logs-modal-body';
+import { ConfirmDeletingModal } from '../../';
 //variables
-import { CounterText, InterfaceText } from '../../../variables';
-//icons
-import { CloseIcon } from '../../../icons';
+import { CounterText } from '../../../variables';
 //types
 import type { ILogs } from '../../../types';
-//styles
-import style from './logs-modal.module.scss';
 
 interface ILogsModalProps {
   logsData: ILogs;
@@ -18,59 +14,40 @@ interface ILogsModalProps {
 }
 
 const LogsModal = ({ logsData, closeModal, clearData }: ILogsModalProps) => {
-  const generateLogs = (): JSX.Element[] => {
-    const logsArray: JSX.Element[] = [];
-    for (const key in logsData) {
-      logsArray.push(<LogItem log={logsData[key].log} logName={key} key={key} />);
-    }
-    return logsArray;
-  };
+  const [isConfirmModalOpen, setIsConfirmModalOpen] = useState<boolean>(false);
 
-  const onModalBackgroundClickHandler = (evt: MouseEvent<HTMLDivElement | HTMLButtonElement>) => {
-    const target = evt.target as HTMLElement;
-    const dataCloseModal = target.getAttribute('data-close-modal');
-
-    if (dataCloseModal !== null) {
-      closeModal();
-    }
-  };
-
-  const onCloseButtonClickHandler = () => {
+  const closeModalClickHandler = () => {
     closeModal();
   };
 
-  const onClearDataClickHandler = () => {
+  const clearDataHandler = () => {
     clearData();
   };
 
-  return (
-    <div
-      className={style['logs-modal']}
-      onClick={onModalBackgroundClickHandler}
-      data-close-modal="true"
-    >
-      <div className={style['logs-modal__content']}>
-        <div className={style['logs-modal__header']}>
-          <h3 className="content-primary-a heading-small">Logi licznika</h3>
-          <button
-            className={style['logs-modal__close-btn']}
-            type="button"
-            onClick={onCloseButtonClickHandler}
-          >
-            <span className="visually-hidden">{InterfaceText.CLOSE_MODAL}</span>
-            <CloseIcon size={{ width: 30, height: 30 }} />
-          </button>
-        </div>
-        {generateLogs()}
+  const openConfirmDeletingModal = () => {
+    setIsConfirmModalOpen(true);
+  };
 
-        <div className={style['logs-modal__controls']}>
-          <ButtonDeleteWithConfirm
-            text={CounterText.CLEAR_COUNTER_DATA}
-            clickHandler={onClearDataClickHandler}
-          />
-        </div>
-      </div>
-    </div>
+  const closeConfirmDeletingModal = () => {
+    setIsConfirmModalOpen(false);
+  };
+
+  return (
+    <>
+      {isConfirmModalOpen ? (
+        <ConfirmDeletingModal
+          modalTitle={CounterText.CLEAR_COUNTER_HISTORY_CONFIRM}
+          onCancelButtonClickHandler={closeConfirmDeletingModal}
+          confirmButtonClickHandler={clearDataHandler}
+        />
+      ) : (
+        <LogsModalBody
+          closeModalClickHandler={closeModalClickHandler}
+          logsData={logsData}
+          openConfirmDeletingModal={openConfirmDeletingModal}
+        />
+      )}
+    </>
   );
 };
 

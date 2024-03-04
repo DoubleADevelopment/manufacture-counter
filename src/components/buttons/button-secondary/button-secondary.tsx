@@ -7,7 +7,7 @@ const ButtonSecondary = ({ text, clickHandler }: IButtonProps): JSX.Element => {
   return (
     <button
       type="button"
-      className={`${style['button-secondary']} label-large`}
+      className={`${style['button-secondary']} label-large content-primary-a`}
       onClick={clickHandler}
     >
       {text}

@@ -2,7 +2,7 @@ import Header from './header/header';
 import Navigation from './nav/nav';
 import ComponentsList from './components-list/components-list';
 import ItemsList from './items-list/items-list';
-import { ItemCardShort, ItemCardShortSkeleton, ShortCardWithLogs } from './cards';
+import { ItemCardShort, ShortCardWithLogs } from './cards';
 import { ControlSetValue } from './controls';
 import {
   ButtonPrimary,
@@ -10,9 +10,13 @@ import {
   ButtonPrimarySmall,
   ButtonSecondarySmall,
   ButtonDeleteWithConfirm,
+  ButtonDelete,
+  ButtonTertiarySmall,
+  ButtonTertiary,
+  ButtonDeleteSmall,
 } from './buttons';
 import { NotificationStatic, PageNotification } from './notifications/';
-import { LogsModal } from './modals';
+import { LogsModal, ConfirmDeletingModal } from './modals';
 import CounterHeader from './counter-header/counter-header';
 import { BasicCounter } from './counter';
 import AdditionalNav from './additional-nav/additional-nav';
@@ -27,7 +31,6 @@ export {
   ButtonPrimary,
   ButtonSecondary,
   NotificationStatic,
-  ItemCardShortSkeleton,
   LogsModal,
   ButtonPrimarySmall,
   ButtonSecondarySmall,
@@ -37,4 +40,9 @@ export {
   BasicCounter,
   AdditionalNav,
   ButtonDeleteWithConfirm,
+  ButtonDelete,
+  ConfirmDeletingModal,
+  ButtonTertiary,
+  ButtonTertiarySmall,
+  ButtonDeleteSmall,
 };
