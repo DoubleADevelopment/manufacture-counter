@@ -2,6 +2,8 @@ import { useState } from 'react';
 //component
 import LogsModalBody from './logs-modal-body/logs-modal-body';
 import { ConfirmDeletingModal } from '../../';
+//variables
+import { CounterText } from '../../../variables';
 //types
 import type { ILogs } from '../../../types';
 
@@ -34,6 +36,7 @@ const LogsModal = ({ logsData, closeModal, clearData }: ILogsModalProps) => {
     <>
       {isConfirmModalOpen ? (
         <ConfirmDeletingModal
+          modalTitle={CounterText.CLEAR_COUNTER_HISTORY_CONFIRM}
           onCancelButtonClickHandler={closeConfirmDeletingModal}
           confirmButtonClickHandler={clearDataHandler}
         />

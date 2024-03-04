@@ -1,10 +1,8 @@
-.delete-button {
+.button-delete {
   border: none;
-  border: 1px solid transparent;
   border-radius: var(--button-border-radius);
-  padding: 8px 12px;
+  padding: 16px 20px;
   width: 100%;
-  color: var(--content-primary-b);
   background-color: var(--background-negative);
   transition: all ease 0.1s;
   cursor: pointer;
@@ -12,5 +10,9 @@
   &:hover,
   &:focus {
     box-shadow: inset 0 0 29px -15px rgb(66 68 90 / 100%);
+  }
+
+  &:active {
+    box-shadow: inset 0 0 50px -15px rgb(66 68 90 / 100%);
   }
 }

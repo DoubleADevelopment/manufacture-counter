@@ -1,5 +1,5 @@
 //components
-import { DeleteButton } from '../../../';
+import { ButtonDeleteSmall } from '../../../';
 import LogItem from '../log-item/log-item';
 //layouts
 import { ModalLayout } from '../../../../layouts';
@@ -49,7 +49,7 @@ const LogsModalBody = ({
         {generateLogs()}
 
         <div className={style['logs-modal-body__controls']}>
-          <DeleteButton
+          <ButtonDeleteSmall
             text={CounterText.CLEAR_COUNTER_DATA}
             clickHandler={openConfirmDeletingModal}
           />
