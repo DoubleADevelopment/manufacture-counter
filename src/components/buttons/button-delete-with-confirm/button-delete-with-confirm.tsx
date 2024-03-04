@@ -13,7 +13,6 @@ const ButtonDeleteWithConfirm = ({ text, clickHandler }: IButtonProps): JSX.Elem
 
   const confirmButtonClickHandler = () => {
     clickHandler();
-    console.log('confirm');
   };
 
   const onCancelButtonClickHandler = () => {

@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { MouseEvent } from 'react';
 //component
 import LogItem from './log-item/log-item';
-import { ButtonDeleteWithConfirm } from '../../';
+import { ButtonDeleteWithConfirm, DeleteButton } from '../../';
 //variables
 import { CounterText, InterfaceText } from '../../../variables';
 //icons
@@ -26,30 +27,29 @@ const LogsModal = ({ logsData, closeModal, clearData }: ILogsModalProps) => {
     return logsArray;
   };
 
-  const onModalBackgroundClickHandler = (evt: MouseEvent<HTMLDivElement | HTMLButtonElement>) => {
-    const target = evt.target as HTMLElement;
-    const dataCloseModal = target.getAttribute('data-close-modal');
-
-    if (dataCloseModal !== null) {
-      closeModal();
-    }
+  const onModalBackgroundClickHandler = () => {
+    closeModal();
   };
 
   const onCloseButtonClickHandler = () => {
     closeModal();
   };
 
-  const onClearDataClickHandler = () => {
+  const clearDataHandler = () => {
     clearData();
   };
 
+  const onClearDataButtonClickHandler = () => {
+    // clearData();
+  };
+
+  const stopImmediatePropagation = (evt: MouseEvent<HTMLDivElement>) => {
+    evt.stopPropagation();
+  };
+
   return (
-    <div
-      className={style['logs-modal']}
-      onClick={onModalBackgroundClickHandler}
-      data-close-modal="true"
-    >
-      <div className={style['logs-modal__content']}>
+    <div className={`${style['logs-modal']}`} onClick={onModalBackgroundClickHandler}>
+      <div className={`${style['logs-modal__content']}`} onClick={stopImmediatePropagation}>
         <div className={style['logs-modal__header']}>
           <h3 className="content-primary-a heading-small">Logi licznika</h3>
           <button
@@ -64,9 +64,13 @@ const LogsModal = ({ logsData, closeModal, clearData }: ILogsModalProps) => {
         {generateLogs()}
 
         <div className={style['logs-modal__controls']}>
-          <ButtonDeleteWithConfirm
+          {/* <ButtonDeleteWithConfirm
             text={CounterText.CLEAR_COUNTER_DATA}
             clickHandler={onClearDataClickHandler}
+          /> */}
+          <DeleteButton
+            text={CounterText.CLEAR_COUNTER_DATA}
+            clickHandler={onClearDataButtonClickHandler}
           />
         </div>
       </div>
