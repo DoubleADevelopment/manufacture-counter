@@ -12,17 +12,17 @@ interface IItemsListItemProps {
 }
 
 const ItemsListItem = ({ item, measurementText }: IItemsListItemProps): JSX.Element => {
-  const { UNID, name, description, itemNumber, packagingInfo, image, amount } = item;
+  const { UNID, productName, description, systemCode, packagingInfo, image, amount } = item;
 
   return (
     <li className={`${style['items-list-item']} unselectable`} key={UNID}>
       <div className={style['items-list-item__info']}>
-        <h2 className={`content-primary-a heading-small`}>{name}</h2>
+        <h2 className={`content-primary-a heading-small`}>{productName}</h2>
         <p className={`content-primary-a paragraph-large`}>
           <span className={`content-secondary-a`}>Opis:</span> {description}
         </p>
         <p className={`content-primary-a paragraph-small`}>
-          <span className={`content-secondary-a`}>Numer:</span> {itemNumber}
+          <span className={`content-secondary-a`}>Numer:</span> {systemCode}
         </p>
         <p className={`content-primary-a paragraph-small`}>
           <span className={`content-secondary-a`}>Opakowanie:</span> {packagingInfo}
@@ -40,7 +40,7 @@ const ItemsListItem = ({ item, measurementText }: IItemsListItemProps): JSX.Elem
       </div>
       <Link className={style['items-list-item__link']} to={`${UNID}`}>
         <span className="visually-hidden">
-          {CounterText.OPEN_COUNTER} {name}
+          {CounterText.OPEN_COUNTER} {productName}
         </span>
       </Link>
     </li>

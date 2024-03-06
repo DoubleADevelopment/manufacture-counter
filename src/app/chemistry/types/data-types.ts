@@ -22,10 +22,11 @@ interface IChemistryItem {
   UNID: string;
   packageName: ChemistryPackagesNames;
   amount: number;
-  firm: string;
-  name: string;
-  itemNumber: string;
+  manufactured: string;
+  productName: string;
+  systemCode: string;
   description: string;
+  additionalInfo: string;
   image: string;
   color: string;
   logs: IChemistryLogs;
@@ -33,7 +34,6 @@ interface IChemistryItem {
   settings: IChemistrySettings;
   additionalResources: string[];
   packagingInfo: string;
-  manufacturer: string;
 }
 
 type ChemistryItemsListType = IChemistryItem[];

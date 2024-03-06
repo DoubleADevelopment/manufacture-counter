@@ -17,9 +17,11 @@ type ComponentsDataListType = IComponentData[];
 //card type we use inside a card components
 interface IItemDataToDisplay {
   UNID: string;
-  name: string;
+  manufactured: string;
+  productName: string;
+  systemCode: string;
   description: string;
-  itemNumber: string;
+  additionalInfo: string;
   packagingInfo: string;
   image: string;
   amount: number;

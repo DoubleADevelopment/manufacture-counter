@@ -28,9 +28,9 @@ const ItemCardShort = ({
           className={`${style['item-card-short']} ${withModal && style['item-card-short--with-modal']}`}
         >
           <div className={style['item-card-short__wrap']}>
-            <h3 className={`content-primary-a heading-small`}>{item.name}</h3>
+            <h3 className={`content-primary-a heading-small`}>{item.productName}</h3>
             <p className={`content-primary-a paragraph-small`}>
-              <span className={`paragraph-secondary-a`}>Numer:</span> {item.itemNumber}
+              <span className={`paragraph-secondary-a`}>Numer:</span> {item.systemCode}
             </p>
             <p className={`content-primary-a paragraph-small`}>
               <span className={`content-secondary-a`}>Opakowanie:</span> {item.packagingInfo}

@@ -44,9 +44,11 @@ class ChemistryAdapterService
   adaptItemDataToDisplay(item: IChemistryItem): IItemDataToDisplay {
     return {
       UNID: item.UNID,
-      name: item.name,
+      manufactured: item.manufactured,
+      productName: item.productName,
+      systemCode: item.systemCode,
       description: item.description,
-      itemNumber: item.itemNumber,
+      additionalInfo: item.additionalInfo,
       packagingInfo: item.packagingInfo,
       image: item.image,
       amount: item.amount,
