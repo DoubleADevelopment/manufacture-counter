@@ -10,8 +10,9 @@ import style from './counter-page.module.scss';
 
 const ExtrusionCounterPage = (): JSX.Element => {
   return (
+    // backLink={ChemistryAppRouting.EXTRUSION.path} commented while we chave only 1 package of chemistry
     <CounterPageLayout
-      backLink={ChemistryAppRouting.EXTRUSION.path}
+      backLink={ChemistryAppRouting.ROOT.path}
       headerTitle={CounterText.CHEMISTRY_COUNTER_EXTRUSION}
     >
       <main className={style['counter-page']}>

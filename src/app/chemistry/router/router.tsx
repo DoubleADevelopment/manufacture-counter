@@ -7,7 +7,9 @@ import * as Pages from '../pages';
 const Router = (): JSX.Element => {
   return (
     <Routes>
-      <Route index element={<Pages.ChemistryRootPage />} />
+      {/* commented while we chave only 1 package of chemistry */}
+      {/* <Route index element={<Pages.ChemistryRootPage />} />  */}
+      <Route index element={<Pages.ChemistryPages.ChemistryExtrusionPage />} />
       <Route
         path={ChemistryAppRouting.EXTRUSION.route}
         element={<Pages.ChemistryPages.ChemistryExtrusionPage />}
@@ -23,6 +25,10 @@ const Router = (): JSX.Element => {
       <Route
         path={ChemistryAppRouting.COUNTER_VENEER.route}
         element={<Pages.CounterPages.VeneerCounterPage />}
+      />
+      <Route
+        path={ChemistryAppRouting.COUNTER.route}
+        element={<Pages.CounterPages.ExtrusionCounterPage />}
       />
     </Routes>
   );
