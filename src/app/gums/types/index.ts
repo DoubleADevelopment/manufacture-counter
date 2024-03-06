@@ -1,3 +1,4 @@
+import type { IIncDecAction, IClearItemAction, ILogAction } from './action-types';
 import type {
   IGumsItem,
   IGumsData,
@@ -6,4 +7,13 @@ import type {
   GumsItemsListType,
 } from './data-types';
 
-export type { IGumsItem, IGumsData, IGumsPackage, IGumsLogs, GumsItemsListType };
+export type {
+  IGumsItem,
+  IGumsData,
+  IGumsPackage,
+  IGumsLogs,
+  GumsItemsListType,
+  IIncDecAction,
+  IClearItemAction,
+  ILogAction,
+};
