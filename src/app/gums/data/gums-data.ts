@@ -1,9 +1,9 @@
 //types
-import type { IGumsDataPackageType } from '../types/data-types';
+import type { IGumsPackage } from '../types/data-types';
 //vars
 import { GumsLogsNames, GumsSettingsNames } from '../variables/data-variables';
 
-const gumsData: IGumsDataPackageType = {
+const gumsData: IGumsPackage = {
   dataPackageName: 'gums',
   dataPackageUNID: 3001,
   items: [

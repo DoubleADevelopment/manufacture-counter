@@ -1,5 +1,5 @@
 //types
-import type { IGumsData } from '../types/data-types';
+import type { IGumsData } from '../types/';
 //data
 import gumsData from '../data/gums-data';
 //adapters
