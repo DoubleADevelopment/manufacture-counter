@@ -1,12 +1,7 @@
 //vars
 import { GumsLogsNames, GumsSettingsNames } from '../variables/data-variables';
-//types
-import type { IData, IItemData, IDataPackage, ILogs, ISettings } from '../../../types/';
 
-interface IGumsDataPackageType extends IDataPackage<IGumsDataItemType> {}
-interface IGumsDataItemType extends IItemData<IGumsLogs, IGumsSettings> {}
-
-interface IGumsLogs extends ILogs {
+interface IGumsLogs {
   [GumsLogsNames.COUNTER]: {
     log: string[];
     name: string;
@@ -17,15 +12,40 @@ interface IGumsLogs extends ILogs {
   };
 }
 
-interface IGumsSettings extends ISettings {
+interface IGumsSettings {
   [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
     settingValue: number;
     name: string;
   };
 }
 
-interface IGumsData extends IData<IGumsDataItemType> {}
+interface IGumsDataItemType {
+  UNID: string;
+  amount: number;
+  manufactured: string;
+  productName: string;
+  systemCode: string;
+  description: string;
+  additionalInfo: string;
+  image: string;
+  color: string;
+  logs: IGumsLogs;
+  lastChange: string | null;
+  settings: IGumsSettings;
+  additionalResources: string[];
+  packagingInfo: string;
+}
 
-type GumsDataForViewType = IGumsDataItemType[];
+type GumsItemsListType = IGumsDataItemType[];
 
-export type { IGumsDataItemType, IGumsData, IGumsDataPackageType, GumsDataForViewType, IGumsLogs };
+interface IGumsDataPackageType {
+  dataPackageName: string;
+  dataPackageUNID: number;
+  items: IGumsDataItemType[];
+}
+
+interface IGumsData {
+  [UNID: string]: IGumsDataItemType;
+}
+
+export type { IGumsDataItemType, IGumsData, IGumsDataPackageType, IGumsLogs, GumsItemsListType };
