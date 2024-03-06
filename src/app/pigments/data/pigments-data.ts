@@ -2,22 +2,21 @@
 import type { IPigmentsDataPackageType } from '../types/data-type';
 //vars
 import { PigmentsLogsNames, PigmentsSettingsNames } from '../variables/data-variables';
-//libs
-import { nanoid } from 'nanoid';
 
 const pigmentsData: IPigmentsDataPackageType = {
   dataPackageName: 'pigments',
   dataPackageUNID: 2001,
   items: [
     {
-      UNID: `pigments-${nanoid()}`,
-      name: 'CROMOFIX MARRON/BROWN IQAP',
-      firm: 'AURUM',
-      itemNumber: '799549',
-      color: '',
+      UNID: 'pigment-AURUM-799549',
       amount: 0,
+      manufactured: 'AURUM',
+      productName: 'Pigment brązowy - CROMOFIX MARRON/BROWN IQAP',
+      systemCode: '799549',
+      description: '',
+      additionalInfo: '',
       image: '/aluplast-components-counter/images/pigments/pigment-braz.jpg',
-      description: 'Pigment brązowy',
+      color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
           log: [],
@@ -49,17 +48,17 @@ const pigmentsData: IPigmentsDataPackageType = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
-      manufacturer: '',
     },
     {
-      UNID: `pigments-${nanoid()}`,
-      name: 'B1800055 HEUCOBATCH Dark grey 790 199',
-      firm: 'MASTERTEC',
-      itemNumber: '799531',
-      color: '',
+      UNID: 'pigment-MASTERTEC-799531',
       amount: 0,
+      manufactured: 'MASTERTEC',
+      productName: 'Pigment antracyt- B1800055 HEUCOBATCH Dark grey 790 199',
+      systemCode: '799531',
+      description: '',
+      additionalInfo: '',
       image: '/aluplast-components-counter/images/pigments/pigment-antracyt.jpg',
-      description: 'Pigment antracyt',
+      color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
           log: [],
@@ -91,17 +90,17 @@ const pigmentsData: IPigmentsDataPackageType = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
-      manufacturer: '',
     },
     {
-      UNID: `pigments-${nanoid()}`,
-      name: 'HEUCOBATCH Cream 190 193',
-      firm: 'MASTERTEC',
-      itemNumber: '799602',
-      color: '',
+      UNID: 'pigment-MASTERTEC-799602',
       amount: 0,
+      manufactured: 'MASTERTEC',
+      productName: 'Pigment krem- HEUCOBATCH Cream 190 193',
+      systemCode: '799602',
+      description: '',
+      additionalInfo: '',
       image: '/aluplast-components-counter/images/pigments/pigment-cream.jpg',
-      description: 'Pigment krem',
+      color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
           log: [],
@@ -133,17 +132,17 @@ const pigmentsData: IPigmentsDataPackageType = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
-      manufacturer: '',
     },
     {
-      UNID: `pigments-${nanoid()}`,
-      name: 'HEUCOBATCH Ocher brown',
-      firm: 'MASTERTEC',
-      itemNumber: '799547',
-      color: '',
+      UNID: 'pigment-MASTERTEC-799547',
       amount: 0,
+      manufactured: 'MASTERTEC',
+      productName: 'Pigment ochra- HEUCOBATCH Ocher brown',
+      systemCode: '799547',
+      description: '',
+      additionalInfo: '',
       image: '/aluplast-components-counter/images/pigments/pigment-ochra.jpg',
-      description: 'Pigment ochra',
+      color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
           log: [],
@@ -175,17 +174,17 @@ const pigmentsData: IPigmentsDataPackageType = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
-      manufacturer: '',
     },
     {
-      UNID: `pigments-${nanoid()}`,
-      name: 'B1800488 dark brown',
-      firm: 'MASTERTEC',
-      itemNumber: '799290',
-      color: '',
+      UNID: 'pigment-MASTERTEC-799290',
       amount: 0,
+      manufactured: 'MASTERTEC',
+      productName: 'Pigment brązowy- B1800488 dark brown',
+      systemCode: '799290',
+      description: '',
+      additionalInfo: '',
       image: '/aluplast-components-counter/images/pigments/pigment-braz.jpg',
-      description: 'Pigment brązowy',
+      color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
           log: [],
@@ -217,17 +216,17 @@ const pigmentsData: IPigmentsDataPackageType = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
-      manufacturer: '',
     },
     {
-      UNID: `pigments-${nanoid()}`,
-      name: 'Sicovinyl White 00-9065 BASF',
-      firm: 'BASF',
-      itemNumber: '799600',
-      color: '',
+      UNID: 'pigment-BASF-799600',
       amount: 0,
+      manufactured: 'BASF',
+      productName: 'Sicovinyl White 00-9065 BASF',
+      systemCode: '799600',
+      description: '',
+      additionalInfo: '',
       image: '/aluplast-components-counter/images/pigments/pigment-bialy.jpg',
-      description: '',
+      color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
           log: [],
@@ -259,17 +258,17 @@ const pigmentsData: IPigmentsDataPackageType = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
-      manufacturer: '',
     },
     {
-      UNID: `pigments-${nanoid()}`,
-      name: 'Sicovinyl Yellow 10-0895 BASF',
-      firm: 'BASF',
-      itemNumber: '799805',
-      color: '',
+      UNID: 'pigment-BASF-799805',
       amount: 0,
+      manufactured: 'BASF',
+      productName: 'Sicovinyl Yellow 10-0895 BASF',
+      systemCode: '799805',
+      description: '',
+      additionalInfo: '',
       image: '/aluplast-components-counter/images/pigments/pigment-zolty.jpg',
-      description: '',
+      color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
           log: [],
@@ -301,101 +300,59 @@ const pigmentsData: IPigmentsDataPackageType = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
-      manufacturer: '',
     },
     {
-      UNID: `pigments-${nanoid()}`,
-      name: 'Sicovinyl Black 02-270795 BASF',
-      firm: 'BASF',
-      itemNumber: '799544',
-      color: '',
+      UNID: 'pigment-BASF-799544',
       amount: 0,
+      manufactured: 'BASF',
+      productName: 'Sicovinyl Black 02-270795 BASF',
+      systemCode: '799544',
+      description: '',
+      additionalInfo: '',
       image: '/aluplast-components-counter/images/pigments/pigment-antracyt.jpg',
+      color: '',
+      logs: {
+        [PigmentsLogsNames.COUNTER]: {
+          log: [],
+          name: 'Licznik',
+        },
+        [PigmentsLogsNames.CONTAINER]: {
+          log: [],
+          name: 'Kontenery',
+        },
+        [PigmentsLogsNames.BAG]: {
+          log: [],
+          name: 'Kartony',
+        },
+      },
+      lastChange: null,
+      settings: {
+        [PigmentsSettingsNames.BASE_BAG_VALUE]: {
+          settingValue: 25,
+          name: 'Waga jednego worka / KG',
+        },
+        [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
+          settingValue: 500,
+          name: 'Waga kontenera / KG',
+        },
+        [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
+          settingValue: 77,
+          name: 'Waga jednego kontenera / KG',
+        },
+      },
+      additionalResources: [],
+      packagingInfo: 'karton',
+    },
+    {
+      UNID: 'pigment-MASTERTEC-799291',
+      amount: 0,
+      manufactured: 'MASTERTEC',
+      productName: 'Pigment Light  Grey  -M1700345',
+      systemCode: '799291',
       description: '',
-      logs: {
-        [PigmentsLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
-        },
-        [PigmentsLogsNames.CONTAINER]: {
-          log: [],
-          name: 'Kontenery',
-        },
-        [PigmentsLogsNames.BAG]: {
-          log: [],
-          name: 'Kartony',
-        },
-      },
-      lastChange: null,
-      settings: {
-        [PigmentsSettingsNames.BASE_BAG_VALUE]: {
-          settingValue: 25,
-          name: 'Waga jednego worka / KG',
-        },
-        [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
-          settingValue: 500,
-          name: 'Waga kontenera / KG',
-        },
-        [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
-          settingValue: 77,
-          name: 'Waga jednego kontenera / KG',
-        },
-      },
-      additionalResources: [],
-      packagingInfo: 'karton',
-      manufacturer: '',
-    },
-    {
-      UNID: `pigments-${nanoid()}`,
-      name: 'Evicom granulat ACF400/5hellblau 5154 ',
-      firm: 'INEOS/Ekomer',
-      itemNumber: '799199',
-      color: '',
-      amount: 0,
+      additionalInfo: '',
       image: '/aluplast-components-counter/images/pigments/pigment-shelblue.jpg',
-      description: 'Masa wysokostabilna',
-      logs: {
-        [PigmentsLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
-        },
-        [PigmentsLogsNames.CONTAINER]: {
-          log: [],
-          name: 'Kontenery',
-        },
-        [PigmentsLogsNames.BAG]: {
-          log: [],
-          name: 'Kartony',
-        },
-      },
-      lastChange: null,
-      settings: {
-        [PigmentsSettingsNames.BASE_BAG_VALUE]: {
-          settingValue: 25,
-          name: 'Waga jednego worka / KG',
-        },
-        [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
-          settingValue: 500,
-          name: 'Waga kontenera / KG',
-        },
-        [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
-          settingValue: 77,
-          name: 'Waga jednego kontenera / KG',
-        },
-      },
-      additionalResources: [],
-      packagingInfo: 'karton',
-      manufacturer: '',
-    },
-    {
-      UNID: `pigments-${nanoid()}`,
-      name: 'Dryblend chłodzący Colorstab',
-      firm: 'Colorstab',
-      itemNumber: '799199',
       color: '',
-      amount: 0,
-      image: '/aluplast-components-counter/images/pigments/pigment-shelblue.jpg',
-      description: 'Masa wysokostabilna',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
           log: [],
@@ -427,7 +384,6 @@ const pigmentsData: IPigmentsDataPackageType = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
-      manufacturer: '',
     },
   ],
 };

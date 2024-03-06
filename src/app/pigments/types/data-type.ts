@@ -1,12 +1,7 @@
 //vars
 import { PigmentsLogsNames, PigmentsSettingsNames } from '../variables/data-variables';
-//types
-import type { IData, IItemData, IDataPackage, ILogs, ISettings } from '../../../types/';
 
-interface IPigmentsDataPackageType extends IDataPackage<IPigmentsDataItemType> {}
-interface IPigmentsDataItemType extends IItemData<IPigmentsLogs, IPigmentsSettings> {}
-
-interface IPigmentsLogs extends ILogs {
+interface IPigmentsLogs {
   [PigmentsLogsNames.COUNTER]: {
     log: string[];
     name: string;
@@ -21,7 +16,7 @@ interface IPigmentsLogs extends ILogs {
   };
 }
 
-interface IPigmentsSettings extends ISettings {
+interface IPigmentsSettings {
   [PigmentsSettingsNames.BASE_BAG_VALUE]: {
     settingValue: number;
     name: string;
@@ -36,7 +31,34 @@ interface IPigmentsSettings extends ISettings {
   };
 }
 
-interface IPigmentsData extends IData<IPigmentsDataItemType> {}
+interface IPigmentsDataItemType {
+  UNID: string;
+  amount: number;
+  manufactured: string;
+  productName: string;
+  systemCode: string;
+  description: string;
+  additionalInfo: string;
+  image: string;
+  color: string;
+  logs: IPigmentsLogs;
+  lastChange: string | null;
+  settings: IPigmentsSettings;
+  additionalResources: string[];
+  packagingInfo: string;
+}
+
+type PigmentsItemsListType = IPigmentsDataItemType[];
+
+interface IPigmentsDataPackageType {
+  dataPackageName: string;
+  dataPackageUNID: number;
+  items: IPigmentsDataItemType[];
+}
+
+interface IPigmentsData {
+  [UNID: string]: IPigmentsDataItemType;
+}
 
 type PigmentsDataForViewType = IPigmentsDataItemType[];
 
@@ -46,4 +68,5 @@ export type {
   IPigmentsDataPackageType,
   PigmentsDataForViewType,
   IPigmentsLogs,
+  PigmentsItemsListType,
 };
