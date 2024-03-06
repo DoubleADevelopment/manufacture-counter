@@ -7,8 +7,8 @@ import * as Pages from '../pages';
 const Router = (): JSX.Element => {
   return (
     <Routes>
-      <Route index element={<Pages.GumsPage />} />
-      <Route path={GumsAppRouting.COUNTER.route} element={<Pages.GumsPage />} />
+      <Route index element={<Pages.GumsRootPage />} />
+      <Route path={GumsAppRouting.COUNTER.route} element={<Pages.GumsRootPage />} />
     </Routes>
   );
 };
