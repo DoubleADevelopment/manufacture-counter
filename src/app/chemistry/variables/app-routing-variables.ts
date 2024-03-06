@@ -10,6 +10,7 @@ const enum ChemistryAppRoutingNames {
   VENEER = 'VENEER',
   COUNTER_EXTRUSION = 'COUNTER_EXTRUSION',
   COUNTER_VENEER = 'COUNTER_VENEER',
+  COUNTER = 'COUNTER',
 }
 
 const ChemistryAppRoutes: Record<ChemistryAppRoutingNames, string> = {
@@ -18,6 +19,7 @@ const ChemistryAppRoutes: Record<ChemistryAppRoutingNames, string> = {
   [ChemistryAppRoutingNames.VENEER]: 'veener',
   [ChemistryAppRoutingNames.COUNTER_VENEER]: 'veener/:UNID',
   [ChemistryAppRoutingNames.COUNTER_EXTRUSION]: 'extrusion/:UNID',
+  [ChemistryAppRoutingNames.COUNTER]: '/:UNID',
 };
 
 const ChemistryAppPaths: Record<ChemistryAppRoutingNames, string> = {
@@ -26,6 +28,7 @@ const ChemistryAppPaths: Record<ChemistryAppRoutingNames, string> = {
   [ChemistryAppRoutingNames.VENEER]: `/${CHEMISTRY_ROOT}/veener`,
   [ChemistryAppRoutingNames.COUNTER_VENEER]: `/${CHEMISTRY_ROOT}/veener/:UNID`,
   [ChemistryAppRoutingNames.COUNTER_EXTRUSION]: `/${CHEMISTRY_ROOT}/extrusion/:UNID`,
+  [ChemistryAppRoutingNames.COUNTER]: `/${CHEMISTRY_ROOT}/:UNID`,
 };
 
 const ChemistryAppRouting: Record<ChemistryAppRoutingNames, IRouteItem> = {
@@ -53,6 +56,11 @@ const ChemistryAppRouting: Record<ChemistryAppRoutingNames, IRouteItem> = {
     title: 'Licznik - okleina',
     route: ChemistryAppRoutes.COUNTER_VENEER,
     path: ChemistryAppPaths.COUNTER_VENEER,
+  },
+  [ChemistryAppRoutingNames.COUNTER]: {
+    title: 'Licznik chemia',
+    route: ChemistryAppRoutes.COUNTER,
+    path: ChemistryAppPaths.COUNTER,
   },
 };
 

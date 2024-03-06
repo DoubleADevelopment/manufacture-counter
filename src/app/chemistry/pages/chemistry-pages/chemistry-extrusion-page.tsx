@@ -9,7 +9,7 @@ import { ItemsList, PageNotification } from '../../../../components';
 import { PageWithMenuLayout } from '../../../../layouts';
 //variables
 import { ChemistryAppRouting } from '../../variables';
-import { ErrorsText, NotificationType } from '../../../../variables';
+import { AppRouting, ErrorsText, NotificationType } from '../../../../variables';
 //styles
 import style from './chemistry-page.module.scss';
 
@@ -17,10 +17,11 @@ const ChemistryExtrusionPage = (): JSX.Element => {
   const chemistryState = useAppSelector(SelectorGetExtrusionChemistry());
   const adaptedData = chemistryAdapterService.adaptItemsDataToDisplayList(chemistryState);
 
+  // backLink={ChemistryAppRouting.ROOT.path} commented while we chave only 1 package of chemistry
   return (
     <PageWithMenuLayout
       headerTitle={ChemistryAppRouting.EXTRUSION.title}
-      backLink={ChemistryAppRouting.ROOT.path}
+      backLink={AppRouting.ROOT.path}
     >
       <main className={style['chemistry-page']}>
         {adaptedData ? (
