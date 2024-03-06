@@ -29,9 +29,16 @@ const ItemCardShort = ({
         >
           <div className={style['item-card-short__wrap']}>
             <h3 className={`content-primary-a heading-small`}>{item.productName}</h3>
-            <p className={`content-primary-a paragraph-small`}>
-              <span className={`paragraph-secondary-a`}>Numer:</span> {item.systemCode}
-            </p>
+
+            {item.description && (
+              <p className={`content-primary-a paragraph-small`}>{item.description}</p>
+            )}
+
+            {item.systemCode && (
+              <p className={`content-primary-a paragraph-small`}>
+                <span className={`paragraph-secondary-a`}>Numer:</span> {item.systemCode}
+              </p>
+            )}
           </div>
           <img
             className={style['item-card-short__image']}
