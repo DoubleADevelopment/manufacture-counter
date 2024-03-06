@@ -60,6 +60,6 @@ class GumsRepositroy implements IRepository<IGumsData> {
   }
 }
 
-const chemistryRepository = new GumsRepositroy(gumsDataService, gumsLocalstorageService);
+const gumsRepository = new GumsRepositroy(gumsDataService, gumsLocalstorageService);
 
-export default chemistryRepository;
+export default gumsRepository;
