@@ -43,6 +43,7 @@ const ShortCardWithLogs = ({
       )}
 
       <ItemCardShort
+        withModal={true}
         onCardClickHandler={onCardClickHandler}
         item={item}
         measurementText={UnitsOfMeasurementText.AMOUNT}

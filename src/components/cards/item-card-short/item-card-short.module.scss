@@ -4,7 +4,15 @@
   grid-template-rows: 1fr;
   border: 2px solid var(--border-opaque);
   border-radius: var(--basic-border-radius);
+}
 
+.item-card-short--with-modal {
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    border-color: var(--border-accent-light);
+  }
 }
 
 .item-card-short-skeleton {
