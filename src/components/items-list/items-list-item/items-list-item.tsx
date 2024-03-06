@@ -12,21 +12,31 @@ interface IItemsListItemProps {
 }
 
 const ItemsListItem = ({ item, measurementText }: IItemsListItemProps): JSX.Element => {
-  const { UNID, productName, description, systemCode, packagingInfo, image, amount } = item;
+  const {
+    UNID,
+    productName,
+    description,
+    additionalInfo,
+    systemCode,
+    image,
+    amount,
+    manufactured,
+  } = item;
 
   return (
     <li className={`${style['items-list-item']} unselectable`} key={UNID}>
       <div className={style['items-list-item__info']}>
         <h2 className={`content-primary-a heading-small`}>{productName}</h2>
-        <p className={`content-primary-a paragraph-large`}>
-          <span className={`content-secondary-a`}>Opis:</span> {description}
-        </p>
-        <p className={`content-primary-a paragraph-small`}>
-          <span className={`content-secondary-a`}>Numer:</span> {systemCode}
-        </p>
-        <p className={`content-primary-a paragraph-small`}>
-          <span className={`content-secondary-a`}>Opakowanie:</span> {packagingInfo}
-        </p>
+        {description && <p className={`content-primary-a paragraph-large`}> {description}</p>}
+
+        {additionalInfo && <p className={`content-primary-a paragraph-large`}> {additionalInfo}</p>}
+
+        {systemCode && (
+          <p className={`content-primary-a paragraph-small`}>
+            <span className={`content-secondary-a`}>Kod systemowy:</span> {systemCode}
+          </p>
+        )}
+        {manufactured && <p className={`content-primary-a paragraph-large`}> {manufactured}</p>}
       </div>
       <img
         className={style['items-list-item__image']}

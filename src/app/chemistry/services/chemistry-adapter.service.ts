@@ -49,7 +49,6 @@ class ChemistryAdapterService
       systemCode: item.systemCode,
       description: item.description,
       additionalInfo: item.additionalInfo,
-      packagingInfo: item.packagingInfo,
       image: item.image,
       amount: item.amount,
     };

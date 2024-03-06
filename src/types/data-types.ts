@@ -22,7 +22,6 @@ interface IItemDataToDisplay {
   systemCode: string;
   description: string;
   additionalInfo: string;
-  packagingInfo: string;
   image: string;
   amount: number;
 }

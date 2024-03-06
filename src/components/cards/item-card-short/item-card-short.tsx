@@ -32,9 +32,6 @@ const ItemCardShort = ({
             <p className={`content-primary-a paragraph-small`}>
               <span className={`paragraph-secondary-a`}>Numer:</span> {item.systemCode}
             </p>
-            <p className={`content-primary-a paragraph-small`}>
-              <span className={`content-secondary-a`}>Opakowanie:</span> {item.packagingInfo}
-            </p>
           </div>
           <img
             className={style['item-card-short__image']}

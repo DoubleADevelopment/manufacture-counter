@@ -11,9 +11,7 @@
 
   &:focus-within,
   &:hover {
-    & .amount {
-      border-color: var(--accent);
-    }
+    border-color: var(--border-accent-light);
   }
 }
 
@@ -24,7 +22,6 @@
   justify-content: flex-start;
   grid-area: info;
   padding: 15px 10px;
-  gap: 5px;
 }
 
 .items-list-item__image {
