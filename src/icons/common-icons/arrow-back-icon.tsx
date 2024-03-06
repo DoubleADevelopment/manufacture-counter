@@ -8,6 +8,8 @@ const ArrowBackIcon = ({ color, size }: IIconProps): JSX.Element => {
       viewBox="0 -960 960 960"
       height={size ? size.height : 40}
       width={size ? size.width : 40}
+      focusable="false"
+      aria-hidden="true"
     >
       <path
         fill={color ? color : 'currentColor'}

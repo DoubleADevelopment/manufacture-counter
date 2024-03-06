@@ -1,10 +1,15 @@
-import { ItemsList } from '../../../../components';
+//store
 import { useAppSelector } from '../../../../hooks/hooks';
-import { PageWithMenuLayout } from '../../../../layouts';
-import chemistryAdapterService from '../../services/chemistry-adapter.service';
 import { SelectorGetExtrusionChemistry } from '../../store/slectors/selectors';
+//services
+import chemistryAdapterService from '../../services/chemistry-adapter.service';
+//components
+import { ItemsList, PageNotification } from '../../../../components';
+//layouts
+import { PageWithMenuLayout } from '../../../../layouts';
 //variables
 import { ChemistryAppRouting } from '../../variables';
+import { ErrorsText, NotificationType } from '../../../../variables';
 //styles
 import style from './chemistry-page.module.scss';
 
@@ -18,7 +23,15 @@ const ChemistryExtrusionPage = (): JSX.Element => {
       backLink={ChemistryAppRouting.ROOT.path}
     >
       <main className={style['chemistry-page']}>
-        {chemistryState && <ItemsList data={adaptedData} />}
+        {adaptedData ? (
+          <ItemsList data={adaptedData} />
+        ) : (
+          <PageNotification
+            type={NotificationType.ERROR}
+            headingText={ErrorsText.SOMETHING_WENT_WRONG}
+            paragraphText={ErrorsText.ITEMS_LIST_NOT_FOUND}
+          />
+        )}
       </main>
     </PageWithMenuLayout>
   );

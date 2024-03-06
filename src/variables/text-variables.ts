@@ -6,7 +6,10 @@ enum CounterText {
   NO_LOGS = 'Brak logów',
   COUNTER_LOGS = 'Logi licznika',
   CHEMISTRY_COUNTER_TITLE = 'Licznik chemii',
+  CHEMISTRY_COUNTER_VENEER = 'Okleina',
+  CHEMISTRY_COUNTER_EXTRUSION = 'Ekstruzja',
   CLEAR_COUNTER_HISTORY_CONFIRM = 'Napewno chcesz usunąć danę licznika?',
+  OPEN_COUNTER = 'Otwórz licznik',
 }
 
 enum CounterInputErrorsText {
@@ -19,6 +22,8 @@ enum ErrorsText {
   COMPONENT_NOT_FOUND = 'Nie znaleziono komponentu do przeliczenia.',
   COUNTER_OPENING_ERROR = 'Błąd przy otwarciu licznika',
   COMPONENT_NOT_FOUND_WITH_UNID = 'Nie znaleziono komponentu o numerze - ',
+  SOMETHING_WENT_WRONG = 'uuups... Coś poszło nie tak...',
+  ITEMS_LIST_NOT_FOUND = 'Nie udało się nam otworzyć listę komponentów.',
 }
 
 enum UnitsOfMeasurementText {

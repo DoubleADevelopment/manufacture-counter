@@ -8,6 +8,8 @@ const NavIconSettings = ({ color, size }: IIconProps): JSX.Element => {
       height={size ? size.height : 40}
       width={size ? size.width : 40}
       viewBox="0 -960 960 960"
+      focusable="false"
+      aria-hidden="true"
     >
       <path
         fill={color ? color : 'currentColor'}
