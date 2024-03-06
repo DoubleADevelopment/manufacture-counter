@@ -1,12 +1,14 @@
 import { Route, Routes } from 'react-router-dom';
+//variables
+import { GumsAppRouting } from '../variables';
 //pages
-import { GumsPage } from '../pages';
+import * as Pages from '../pages';
 
 const Router = (): JSX.Element => {
   return (
     <Routes>
-      <Route index element={<GumsPage />} />
-      <Route path={`counter`} element={<GumsPage />} />
+      <Route index element={<Pages.GumsRootPage />} />
+      <Route path={GumsAppRouting.COUNTER.route} element={<Pages.GumsRootPage />} />
     </Routes>
   );
 };

@@ -19,7 +19,7 @@ interface IGumsSettings {
   };
 }
 
-interface IGumsDataItemType {
+interface IGumsItem {
   UNID: string;
   amount: number;
   manufactured: string;
@@ -36,16 +36,16 @@ interface IGumsDataItemType {
   packagingInfo: string;
 }
 
-type GumsItemsListType = IGumsDataItemType[];
+type GumsItemsListType = IGumsItem[];
 
-interface IGumsDataPackageType {
+interface IGumsPackage {
   dataPackageName: string;
   dataPackageUNID: number;
-  items: IGumsDataItemType[];
+  items: IGumsItem[];
 }
 
 interface IGumsData {
-  [UNID: string]: IGumsDataItemType;
+  [UNID: string]: IGumsItem;
 }
 
-export type { IGumsDataItemType, IGumsData, IGumsDataPackageType, IGumsLogs, GumsItemsListType };
+export type { IGumsItem, IGumsData, IGumsPackage, IGumsLogs, GumsItemsListType };

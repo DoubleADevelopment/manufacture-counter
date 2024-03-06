@@ -1,3 +1,3 @@
-import GumsPage from './gums-page/gums-page';
+import GumsRootPage from './gums-root-page/gums-root-page';
 
-export { GumsPage };
+export { GumsRootPage };
