@@ -8,6 +8,7 @@ enum CounterText {
   CHEMISTRY_COUNTER_TITLE = 'Licznik chemii',
   CHEMISTRY_COUNTER_VENEER = 'Okleina',
   CHEMISTRY_COUNTER_EXTRUSION = 'Ekstruzja',
+  GUMS_COUNTER_TITLE = 'Licznik gumy',
   CLEAR_COUNTER_HISTORY_CONFIRM = 'Napewno chcesz usunąć danę licznika?',
   OPEN_COUNTER = 'Otwórz licznik',
 }
