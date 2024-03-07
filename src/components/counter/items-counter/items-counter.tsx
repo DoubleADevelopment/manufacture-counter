@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 //components
 import { ButtonPrimary, ButtonSecondary, ControlSetItemsAmount, ControlSetValue } from '../../';
 //variables
@@ -13,9 +13,10 @@ interface IItemsCounterProps {
 
 const ItemsCounter = ({ inc, dec }: IItemsCounterProps): JSX.Element => {
   const [value, setValue] = useState<number | null>(500);
-  const [amountValue, setAmountValue] = useState<number>(1);
+  const [amountValue, setAmountValue] = useState<number | null>(1);
   const [message, setMessage] = useState<string>('');
   const [status, setStatus] = useState<InputStatuses>(InputStatuses.DEFAULT);
+  const [amountStatus, setAmountStatus] = useState<InputStatuses>(InputStatuses.DEFAULT);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -43,7 +44,6 @@ const ItemsCounter = ({ inc, dec }: IItemsCounterProps): JSX.Element => {
     }
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const onInputValueChangeHandler = (value: number | null): void => {
     setValue(value);
     if (value === 0) {
@@ -56,20 +56,25 @@ const ItemsCounter = ({ inc, dec }: IItemsCounterProps): JSX.Element => {
 
   const plusClickHandler = () => {
     const validateResult = validateInputData(value);
-    if (validateResult === true && value !== null) {
+    if (validateResult === true && value !== null && amountValue !== null) {
       inc(value * amountValue);
     }
   };
 
   const minusClickHandler = () => {
     const validateResult = validateInputData(value);
-    if (validateResult === true && value !== null) {
+    if (validateResult === true && value !== null && amountValue !== null) {
       dec(value * amountValue);
     }
   };
 
-  const amountHandler = (evt: ChangeEvent<HTMLInputElement>) => {
-    setAmountValue(+evt.target.value);
+  const amountHandler = (value: number | null) => {
+    setAmountValue(value);
+    if (value === 0) {
+      setAmountStatus(InputStatuses.ERROR);
+    } else {
+      setAmountStatus(InputStatuses.DEFAULT);
+    }
   };
 
   return (
@@ -79,6 +84,7 @@ const ItemsCounter = ({ inc, dec }: IItemsCounterProps): JSX.Element => {
         titleBefore="jedno kliknięcie + "
         titleAfter="karton"
         onInputChangeHandler={amountHandler}
+        status={amountStatus}
       />
       <ControlSetValue
         onInputChangeHandler={onInputValueChangeHandler}

@@ -27,11 +27,16 @@
 
   &:focus,
   &:hover {
-    border-color: var(--border-selected);
+    border-color: var(--border-accent);
+    background-color: var(--backgroud-primary);
   }
 
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
     appearance: none;
   }
+}
+
+.control-set-amount__input--error {
+  border-color: var(--border-negative) !important;
 }
