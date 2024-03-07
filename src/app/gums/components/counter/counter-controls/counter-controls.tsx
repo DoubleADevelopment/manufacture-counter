@@ -3,6 +3,7 @@ import { AdditionalNav, BasicCounter } from '../../../../../components';
 //store
 import { useAppDispatch } from '../../../../../hooks/hooks';
 import { decrementAction, incrementAction } from '../../../store/actions/actions';
+import { GUMS_COUNTERS, gumsCountersList } from '../../../variables';
 //styles
 import style from './counter-controls.module.scss';
 
@@ -27,7 +28,11 @@ const CounterControls = ({ UNID }: ICounterControlsProps): JSX.Element => {
     <>
       <section className={style['counter-controls']}>
         <h2 className="visually-hidden">Licnik</h2>
-        <AdditionalNav changeHandler={additionalNavHandler} items={['licznik', 'kartony']} />
+        <AdditionalNav
+          changeHandler={additionalNavHandler}
+          items={gumsCountersList}
+          defaultItem={GUMS_COUNTERS.CARDBOARD}
+        />
         <BasicCounter inc={inc} dec={dec} />
       </section>
     </>
