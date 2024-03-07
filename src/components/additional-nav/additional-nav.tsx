@@ -5,10 +5,11 @@ import style from './additional-nav.module.scss';
 interface IAdditionalNavProps {
   items: string[];
   changeHandler: (value: string) => void;
+  defaultItem?: string;
 }
 
-const AdditionalNav = ({ items, changeHandler }: IAdditionalNavProps) => {
-  const [selectedItem, setSelectedItem] = useState<string>(items[0]);
+const AdditionalNav = ({ items, changeHandler, defaultItem }: IAdditionalNavProps) => {
+  const [selectedItem, setSelectedItem] = useState<string>(defaultItem ? defaultItem : items[0]);
   const leftDistanceForIndicator = items.indexOf(selectedItem) * (100 / items.length) + '%';
 
   const formHandler = (evt: ChangeEvent<HTMLFormElement>) => {

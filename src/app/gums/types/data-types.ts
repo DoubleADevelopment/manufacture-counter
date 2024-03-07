@@ -1,7 +1,9 @@
+//types
+import type { ILogs } from '../../../types';
 //vars
 import { GumsLogsNames, GumsSettingsNames } from '../variables/data-variables';
 
-interface IGumsLogs {
+interface IGumsLogs extends ILogs {
   [GumsLogsNames.COUNTER]: {
     log: string[];
     name: string;

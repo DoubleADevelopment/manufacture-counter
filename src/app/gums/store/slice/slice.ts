@@ -19,17 +19,14 @@ export const gumsSlice = createSlice({
   reducers: {
     increment: (state, action: PayloadAction<IIncDecAction>) => {
       const { UNID, value } = action.payload;
-      console.log(UNID, value);
       state[UNID].amount = state[UNID].amount + value;
     },
     decrement: (state, action: PayloadAction<IIncDecAction>) => {
       const { UNID, value } = action.payload;
-      console.log(UNID, value);
       state[UNID].amount = state[UNID].amount - value;
     },
     log: (state, action: PayloadAction<ILogAction<GumsLogsNames>>) => {
       const { UNID, logName, log } = action.payload;
-      console.log(UNID, logName, log);
       state[UNID].logs[logName].log.push(log);
     },
     clearItem: (state, action: PayloadAction<IClearItemAction<IGumsItem>>) => {

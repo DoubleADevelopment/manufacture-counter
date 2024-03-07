@@ -1,0 +1,37 @@
+.control-set-amount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.control-set-amount__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 10px;
+}
+
+.control-set-amount__input {
+  appearance: textfield;
+  border: none;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 12px ;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background-color: var(--background-secondary);
+
+  &:focus,
+  &:hover {
+    border-color: var(--border-selected);
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+}

@@ -9,4 +9,11 @@ enum GumsSettingsNames {
 
 const GUMS_STORAGE_NAME = 'gums-data';
 
-export { GumsLogsNames, GumsSettingsNames, GUMS_STORAGE_NAME };
+enum GUMS_COUNTERS {
+  COUNTER = 'licznik',
+  CARDBOARD = 'kartony',
+}
+
+const gumsCountersList = [GUMS_COUNTERS.COUNTER, GUMS_COUNTERS.CARDBOARD];
+
+export { GumsLogsNames, GumsSettingsNames, GUMS_STORAGE_NAME, GUMS_COUNTERS, gumsCountersList };
