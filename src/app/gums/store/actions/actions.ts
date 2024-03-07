@@ -1,15 +1,13 @@
 import { gumsSlice } from '../slice/slice';
-//variables
-import { GumsLogsNames } from '../../variables/';
 //services
 import gumsDataService from '../../services/gums-data.service';
 //repository
 import gumsRepository from '../../repository/gums-repository';
 //types
 import type { AppThunk } from '../../../../types';
-import type { IClearItemAction, IGumsItem, IIncDecAction } from '../../types';
+import type { IChangeItemSetting, IClearItemAction, IGumsItem, IIncDecAction } from '../../types';
 
-const { increment, decrement, log, clearItem, clearData } = gumsSlice.actions;
+const { increment, decrement, log, clearItem, clearData, changeItemSetting } = gumsSlice.actions;
 
 export const incrementAction =
   (action: IIncDecAction): AppThunk =>
@@ -18,7 +16,7 @@ export const incrementAction =
 
     const newLog = {
       log: `+${action.value.toString()}`,
-      logName: GumsLogsNames.COUNTER,
+      logName: action.logName,
       UNID: action.UNID,
     };
 
@@ -33,7 +31,7 @@ export const decrementAction =
 
     const newLog = {
       log: `-${action.value.toString()}`,
-      logName: GumsLogsNames.COUNTER,
+      logName: action.logName,
       UNID: action.UNID,
     };
 
@@ -56,3 +54,10 @@ export const clearDataAction = (): AppThunk => (dispatch, getState) => {
 
   gumsRepository.sendData(getState().gums);
 };
+
+export const changeItemSettingAction =
+  (action: IChangeItemSetting): AppThunk =>
+  (dispatch, getState) => {
+    dispatch(changeItemSetting(action));
+    gumsRepository.sendData(getState().gums);
+  };

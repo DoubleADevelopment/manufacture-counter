@@ -1,4 +1,9 @@
-import type { IIncDecAction, IClearItemAction, ILogAction } from './action-types';
+import type {
+  IIncDecAction,
+  IClearItemAction,
+  ILogAction,
+  IChangeItemSetting,
+} from './action-types';
 import type {
   IGumsItem,
   IGumsData,
@@ -16,4 +21,5 @@ export type {
   IIncDecAction,
   IClearItemAction,
   ILogAction,
+  IChangeItemSetting,
 };

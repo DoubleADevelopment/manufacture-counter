@@ -10,6 +10,7 @@ import type {
   ILogAction,
   IGumsData,
   IGumsItem,
+  IChangeItemSetting,
 } from '../../types';
 
 export const gumsSlice = createSlice({
@@ -36,9 +37,14 @@ export const gumsSlice = createSlice({
     clearData: (state, action: PayloadAction<IGumsData>) => {
       state = action.payload;
     },
+    changeItemSetting: (state, action: PayloadAction<IChangeItemSetting>) => {
+      const { UNID, settingName, newSettingValue } = action.payload;
+      state[UNID].settings[settingName].settingValue = newSettingValue;
+    },
   },
 });
 
-export const { increment, decrement, log, clearItem, clearData } = gumsSlice.actions;
+export const { increment, decrement, log, clearItem, clearData, changeItemSetting } =
+  gumsSlice.actions;
 
 export default gumsSlice.reducer;

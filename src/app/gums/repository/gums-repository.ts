@@ -43,11 +43,12 @@ class GumsRepositroy implements IRepository<IGumsData> {
     const result = this.#getDataFromStorage();
 
     if (result instanceof Error) {
+      throw new Error(result.message);
+    } else if (result === null) {
       const defaultData = this.#getDefaultData();
       return defaultData;
     } else {
-      const defaultData = this.#getDefaultData();
-      return defaultData;
+      return result;
     }
   }
 
