@@ -2,9 +2,9 @@
 import type { RootState } from '../../../../types';
 import type { IGumsItem, IGumsData } from '../../types/';
 
-export const SelectorGetChemistryState = (state: RootState): IGumsData => state.gums;
+export const SelectorGetGumsState = (state: RootState): IGumsData => state.gums;
 
-export const SelectorGetCurrentChemistry =
+export const SelectorGetCurrentGum =
   (UNID: string) =>
   (state: RootState): IGumsItem =>
     state.gums[UNID];

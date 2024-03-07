@@ -1,8 +1,10 @@
 //layouts
 import { CounterPageLayout } from '../../../../layouts';
+//components
+import { GumsAppRouting } from '../../variables';
 //variables
 import { CounterText } from '../../../../variables';
-import { GumsAppRouting } from '../../variables';
+import { CountableItemInfo } from '../../components';
 //styles
 import style from './counter-page.module.scss';
 
@@ -13,8 +15,8 @@ const CounterPage = (): JSX.Element => {
       headerTitle={CounterText.GUMS_COUNTER_TITLE}
     >
       <main className={style['counter-page']}>
-        {/* <CountableItemInfo packageName={ChemistryPackagesNames.EXTRUSION} />
-        <Counter packageName={ChemistryPackagesNames.EXTRUSION} /> */}
+        <CountableItemInfo />
+        {/* <Counter packageName={ChemistryPackagesNames.EXTRUSION} /> */}
       </main>
     </CounterPageLayout>
   );
