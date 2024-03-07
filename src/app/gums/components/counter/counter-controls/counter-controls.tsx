@@ -1,5 +1,6 @@
 //components
-import { AdditionalNav, BasicCounter } from '../../../../../components';
+import { useState } from 'react';
+import { AdditionalNav, BasicCounter, ItemsCounter } from '../../../../../components';
 //store
 import { useAppDispatch } from '../../../../../hooks/hooks';
 import { decrementAction, incrementAction } from '../../../store/actions/actions';
@@ -12,18 +13,37 @@ interface ICounterControlsProps {
 }
 
 const CounterControls = ({ UNID }: ICounterControlsProps): JSX.Element => {
+  const [currentCounter, setCurrentCounter] = useState<GUMS_COUNTERS>(GUMS_COUNTERS.CARDBOARD);
   const dispatch = useAppDispatch();
 
   const inc = (value: number): void => {
     dispatch(incrementAction({ UNID: UNID, value: value }));
   };
+
   const dec = (value: number): void => {
     dispatch(decrementAction({ UNID: UNID, value: value }));
   };
 
   const additionalNavHandler = (value: string): void => {
-    console.log(value);
+    if (value === GUMS_COUNTERS.CARDBOARD || value === GUMS_COUNTERS.COUNTER) {
+      setCurrentCounter(value);
+    } else {
+      console.log('Value dont pass to GUMS_COUNTERS');
+    }
   };
+
+  const getCurrentCounterComponent = (): JSX.Element => {
+    switch (currentCounter) {
+      case GUMS_COUNTERS.CARDBOARD:
+        return <ItemsCounter />;
+      case GUMS_COUNTERS.COUNTER:
+        return <BasicCounter inc={inc} dec={dec} />;
+      default:
+        const exhaustiveCheck: never = currentCounter;
+        throw new Error(`Unhandled notification type: ${exhaustiveCheck}`);
+    }
+  };
+
   return (
     <>
       <section className={style['counter-controls']}>
@@ -31,9 +51,10 @@ const CounterControls = ({ UNID }: ICounterControlsProps): JSX.Element => {
         <AdditionalNav
           changeHandler={additionalNavHandler}
           items={gumsCountersList}
-          defaultItem={GUMS_COUNTERS.CARDBOARD}
+          defaultItem={currentCounter}
         />
-        <BasicCounter inc={inc} dec={dec} />
+
+        {getCurrentCounterComponent()}
       </section>
     </>
   );
