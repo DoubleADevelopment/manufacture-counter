@@ -49,22 +49,16 @@ const CounterControls = ({ UNID }: ICounterControlsProps): JSX.Element => {
     dispatch(decrementAction({ UNID: UNID, value: value, logName: getCurrentLogName() }));
   };
 
-  const additionalNavHandler = (value: string): void => {
-    if (value === GUMS_COUNTERS.CARDBOARD || value === GUMS_COUNTERS.COUNTER) {
-      setCurrentCounter(value);
-    } else {
-      console.log('Value dont pass to GUMS_COUNTERS');
-    }
-  };
-
   const changeCardboarSetting = (value: number) => {
-    dispatch(
-      changeItemSettingAction({
-        UNID: UNID,
-        settingName: GumsSettingsNames.BASE_CARDBOARD_VALUE,
-        newSettingValue: value,
-      }),
-    );
+    if (value !== cardboardDefaultValue) {
+      dispatch(
+        changeItemSettingAction({
+          UNID: UNID,
+          settingName: GumsSettingsNames.BASE_CARDBOARD_VALUE,
+          newSettingValue: value,
+        }),
+      );
+    }
   };
 
   const getCurrentCounterComponent = (): JSX.Element => {
@@ -83,6 +77,14 @@ const CounterControls = ({ UNID }: ICounterControlsProps): JSX.Element => {
       default:
         const exhaustiveCheck: never = currentCounter;
         throw new Error(`Unhandled notification type: ${exhaustiveCheck}`);
+    }
+  };
+
+  const additionalNavHandler = (value: string): void => {
+    if (value === GUMS_COUNTERS.CARDBOARD || value === GUMS_COUNTERS.COUNTER) {
+      setCurrentCounter(value);
+    } else {
+      console.log('Value dont pass to GUMS_COUNTERS');
     }
   };
 
