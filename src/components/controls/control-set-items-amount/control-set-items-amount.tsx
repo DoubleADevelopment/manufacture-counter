@@ -15,10 +15,10 @@ const ControlSetItemsAmount = ({
 }: IControlSetItemsAmountProps): JSX.Element => {
   return (
     <div className={style['control-set-amount']}>
-      <label className={style['control-set-amount__label']}>
+      <label className={`${style['control-set-amount__label']} content-primary-a label-medium`}>
         {title}
         <input
-          className={style['control-set-amount__input']}
+          className={`${style['control-set-amount__input']} content-primary-a label-large`}
           type="number"
           value={value ? value : ''}
           onChange={onInputChangeHandler}

@@ -57,20 +57,19 @@ const ItemsCounter = ({ inc, dec }: IItemsCounterProps): JSX.Element => {
   const plusClickHandler = () => {
     const validateResult = validateInputData(value);
     if (validateResult === true && value !== null) {
-      inc(value);
+      inc(value * amountValue);
     }
   };
 
   const minusClickHandler = () => {
     const validateResult = validateInputData(value);
     if (validateResult === true && value !== null) {
-      dec(value);
+      dec(value * amountValue);
     }
   };
 
   const amountHandler = (evt: ChangeEvent<HTMLInputElement>) => {
     setAmountValue(+evt.target.value);
-    console.log(evt.target.value);
   };
 
   return (
