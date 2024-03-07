@@ -1,5 +1,5 @@
 //components
-import { BasicCounter } from '../../../../../components';
+import { AdditionalNav, BasicCounter } from '../../../../../components';
 //store
 import { useAppDispatch } from '../../../../../hooks/hooks';
 import { decrementAction, incrementAction } from '../../../store/actions/actions';
@@ -19,11 +19,18 @@ const CounterControls = ({ UNID }: ICounterControlsProps): JSX.Element => {
   const dec = (value: number): void => {
     dispatch(decrementAction({ UNID: UNID, value: value }));
   };
+
+  const additionalNavHandler = (value: string): void => {
+    console.log(value);
+  };
   return (
-    <section className={style['counter-controls']}>
-      <h2 className="visually-hidden">Licnik</h2>
-      <BasicCounter inc={inc} dec={dec} />
-    </section>
+    <>
+      <section className={style['counter-controls']}>
+        <h2 className="visually-hidden">Licnik</h2>
+        <AdditionalNav changeHandler={additionalNavHandler} items={['licznik', 'kartony']} />
+        <BasicCounter inc={inc} dec={dec} />
+      </section>
+    </>
   );
 };
 
