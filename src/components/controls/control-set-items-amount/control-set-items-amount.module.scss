@@ -1,0 +1,28 @@
+.control-set-amount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.control-set-amount__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.control-set-amount__input {
+  appearance: textfield;
+  border: none;
+  border-radius: 30px;
+  padding: 5px 10px;
+  width: 60px;
+  text-align: center;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+}

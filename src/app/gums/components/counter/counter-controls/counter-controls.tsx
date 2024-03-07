@@ -35,7 +35,7 @@ const CounterControls = ({ UNID }: ICounterControlsProps): JSX.Element => {
   const getCurrentCounterComponent = (): JSX.Element => {
     switch (currentCounter) {
       case GUMS_COUNTERS.CARDBOARD:
-        return <ItemsCounter />;
+        return <ItemsCounter inc={inc} dec={dec} />;
       case GUMS_COUNTERS.COUNTER:
         return <BasicCounter inc={inc} dec={dec} />;
       default:
