@@ -4,7 +4,7 @@ import { CounterPageLayout } from '../../../../layouts';
 import { GumsAppRouting } from '../../variables';
 //variables
 import { CounterText } from '../../../../variables';
-import { CountableItemInfo } from '../../components';
+import { CountableItemInfo, Counter } from '../../components';
 //styles
 import style from './counter-page.module.scss';
 
@@ -16,7 +16,7 @@ const CounterPage = (): JSX.Element => {
     >
       <main className={style['counter-page']}>
         <CountableItemInfo />
-        {/* <Counter packageName={ChemistryPackagesNames.EXTRUSION} /> */}
+        <Counter />
       </main>
     </CounterPageLayout>
   );

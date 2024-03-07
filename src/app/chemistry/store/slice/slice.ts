@@ -19,17 +19,14 @@ export const chemistrySlice = createSlice({
   reducers: {
     increment: (state, action: PayloadAction<IIncDecAction>) => {
       const { UNID, value, packageName } = action.payload;
-      console.log(UNID, value);
       state[packageName][UNID].amount = state[packageName][UNID].amount + value;
     },
     decrement: (state, action: PayloadAction<IIncDecAction>) => {
       const { UNID, value, packageName } = action.payload;
-      console.log(UNID, value);
       state[packageName][UNID].amount = state[packageName][UNID].amount - value;
     },
     log: (state, action: PayloadAction<ILogAction<ChemistryLogsNames>>) => {
       const { UNID, logName, log, packageName } = action.payload;
-      console.log(UNID, logName, log);
       state[packageName][UNID].logs[logName].log.push(log);
     },
     clearItem: (state, action: PayloadAction<IClearItemAction<IChemistryItem>>) => {
