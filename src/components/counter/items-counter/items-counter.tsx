@@ -76,7 +76,8 @@ const ItemsCounter = ({ inc, dec }: IItemsCounterProps): JSX.Element => {
     <div className={style['items-counter']}>
       <ControlSetItemsAmount
         value={amountValue}
-        title="jedno kliknięcie + "
+        titleBefore="jedno kliknięcie + "
+        titleAfter="karton"
         onInputChangeHandler={amountHandler}
       />
       <ControlSetValue
