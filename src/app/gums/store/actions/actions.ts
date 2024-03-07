@@ -1,6 +1,4 @@
 import { gumsSlice } from '../slice/slice';
-//variables
-import { GumsLogsNames } from '../../variables/';
 //services
 import gumsDataService from '../../services/gums-data.service';
 //repository
@@ -18,7 +16,7 @@ export const incrementAction =
 
     const newLog = {
       log: `+${action.value.toString()}`,
-      logName: GumsLogsNames.COUNTER,
+      logName: action.logName,
       UNID: action.UNID,
     };
 
@@ -33,7 +31,7 @@ export const decrementAction =
 
     const newLog = {
       log: `-${action.value.toString()}`,
-      logName: GumsLogsNames.COUNTER,
+      logName: action.logName,
       UNID: action.UNID,
     };
 

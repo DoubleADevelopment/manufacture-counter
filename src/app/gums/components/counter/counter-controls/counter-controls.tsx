@@ -4,7 +4,7 @@ import { AdditionalNav, BasicCounter, ItemsCounter } from '../../../../../compon
 //store
 import { useAppDispatch } from '../../../../../hooks/hooks';
 import { decrementAction, incrementAction } from '../../../store/actions/actions';
-import { GUMS_COUNTERS, gumsCountersList } from '../../../variables';
+import { GUMS_COUNTERS, GumsLogsNames, gumsCountersList } from '../../../variables';
 //styles
 import style from './counter-controls.module.scss';
 
@@ -16,12 +16,24 @@ const CounterControls = ({ UNID }: ICounterControlsProps): JSX.Element => {
   const [currentCounter, setCurrentCounter] = useState<GUMS_COUNTERS>(GUMS_COUNTERS.CARDBOARD);
   const dispatch = useAppDispatch();
 
+  const getCurrentLogName = (): GumsLogsNames => {
+    switch (currentCounter) {
+      case GUMS_COUNTERS.CARDBOARD:
+        return GumsLogsNames.CARDBOARD;
+      case GUMS_COUNTERS.COUNTER:
+        return GumsLogsNames.COUNTER;
+      default:
+        const exhaustiveCheck: never = currentCounter;
+        throw new Error(`Unhandled notification type: ${exhaustiveCheck}`);
+    }
+  };
+
   const inc = (value: number): void => {
-    dispatch(incrementAction({ UNID: UNID, value: value }));
+    dispatch(incrementAction({ UNID: UNID, value: value, logName: getCurrentLogName() }));
   };
 
   const dec = (value: number): void => {
-    dispatch(decrementAction({ UNID: UNID, value: value }));
+    dispatch(decrementAction({ UNID: UNID, value: value, logName: getCurrentLogName() }));
   };
 
   const additionalNavHandler = (value: string): void => {
