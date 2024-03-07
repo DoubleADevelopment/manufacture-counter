@@ -5,7 +5,7 @@ import type {
   ILogAction as log,
 } from '../../../types';
 //variables
-import { GumsLogsNames } from '../variables';
+import { GumsLogsNames, GumsSettingsNames } from '../variables';
 
 interface IIncDecAction extends incDec {
   logName: GumsLogsNames;
@@ -13,4 +13,10 @@ interface IIncDecAction extends incDec {
 interface IClearItemAction<T> extends clearItem<T> {}
 interface ILogAction<T> extends log<T> {}
 
-export type { IIncDecAction, IClearItemAction, ILogAction };
+interface IChangeItemSetting {
+  UNID: string;
+  settingName: GumsSettingsNames;
+  newSettingValue: number;
+}
+
+export type { IIncDecAction, IClearItemAction, ILogAction, IChangeItemSetting };

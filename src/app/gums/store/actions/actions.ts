@@ -5,9 +5,9 @@ import gumsDataService from '../../services/gums-data.service';
 import gumsRepository from '../../repository/gums-repository';
 //types
 import type { AppThunk } from '../../../../types';
-import type { IClearItemAction, IGumsItem, IIncDecAction } from '../../types';
+import type { IChangeItemSetting, IClearItemAction, IGumsItem, IIncDecAction } from '../../types';
 
-const { increment, decrement, log, clearItem, clearData } = gumsSlice.actions;
+const { increment, decrement, log, clearItem, clearData, changeItemSetting } = gumsSlice.actions;
 
 export const incrementAction =
   (action: IIncDecAction): AppThunk =>
@@ -54,3 +54,10 @@ export const clearDataAction = (): AppThunk => (dispatch, getState) => {
 
   gumsRepository.sendData(getState().gums);
 };
+
+export const changeItemSettingAction =
+  (action: IChangeItemSetting): AppThunk =>
+  (dispatch, getState) => {
+    dispatch(changeItemSetting(action));
+    gumsRepository.sendData(getState().gums);
+  };

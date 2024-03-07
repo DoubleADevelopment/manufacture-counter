@@ -9,10 +9,17 @@ import style from './items-counter.module.scss';
 interface IItemsCounterProps {
   inc: (value: number) => void;
   dec: (value: number) => void;
+  onValueChangeHandler: (value: number) => void;
+  defaultValue: number;
 }
 
-const ItemsCounter = ({ inc, dec }: IItemsCounterProps): JSX.Element => {
-  const [value, setValue] = useState<number | null>(500);
+const ItemsCounter = ({
+  inc,
+  dec,
+  onValueChangeHandler,
+  defaultValue,
+}: IItemsCounterProps): JSX.Element => {
+  const [value, setValue] = useState<number | null>(defaultValue);
   const [amountValue, setAmountValue] = useState<number | null>(1);
   const [message, setMessage] = useState<string>('');
   const [status, setStatus] = useState<InputStatuses>(InputStatuses.DEFAULT);
@@ -27,6 +34,10 @@ const ItemsCounter = ({ inc, dec }: IItemsCounterProps): JSX.Element => {
       clearTimeout(timer);
     };
   }, [status]);
+
+  useEffect(() => {
+    if (!!value && value !== 0) onValueChangeHandler(value);
+  }, [value]);
 
   const validateInputData = (value: number | null): boolean => {
     if (value === null) {
