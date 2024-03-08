@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 //utils
-import { extractNumbers } from '../../../utils/utils';
+import { extractNumbers, onEnterClickHandlerToElementBlur } from '../../../utils/utils';
 //variables
 import { InputMessagesText, InputStatuses } from '../../../variables';
 //styles
@@ -11,8 +11,8 @@ interface IControlSetValueAdditionalProps {
   value: number | null;
   titleBefore: string;
   titleAfter?: string;
-  status?: InputStatuses;
-  message?: InputMessagesText;
+  status: InputStatuses;
+  message: InputMessagesText;
 }
 
 const ControlSetValueAdditional = ({
@@ -23,6 +23,7 @@ const ControlSetValueAdditional = ({
   status,
   message,
 }: IControlSetValueAdditionalProps): JSX.Element => {
+  const inputEl = useRef<HTMLInputElement>(null);
   const [inputClassName, setInputClassName] = useState<string>('');
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -33,6 +34,10 @@ const ControlSetValueAdditional = ({
     } else {
       onInputChangeHandler(parseFloat(newValue) || 0);
     }
+  };
+
+  const onInputKeydownListener = (evt: any) => {
+    onEnterClickHandlerToElementBlur(evt, inputEl.current);
   };
 
   useEffect(() => {
@@ -55,8 +60,10 @@ const ControlSetValueAdditional = ({
         <input
           className={`${style['control-set-value-additional__input']} ${inputClassName} content-primary-a label-large`}
           type="number"
+          ref={inputEl}
           value={value !== null ? value : ''}
-          onChange={handleInputChange}
+          onInput={handleInputChange}
+          onKeyDown={onInputKeydownListener}
         />
         {titleAfter}
       </label>

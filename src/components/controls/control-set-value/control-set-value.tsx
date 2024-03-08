@@ -9,9 +9,9 @@ import style from './control-set-value.module.scss';
 interface IControlSetValueProps {
   onInputChangeHandler: (value: number | null) => void;
   value: number | null;
-  message?: string;
-  status?: InputStatuses;
   title: string;
+  status: InputStatuses;
+  message?: string;
 }
 
 const ControlSetValue = ({

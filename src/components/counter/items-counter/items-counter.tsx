@@ -32,13 +32,13 @@ const ItemsCounter = ({
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setValueStatus(InputStatuses.DEFAULT);
+      if (quantityStatus === InputStatuses.SUCCESS) setQuantityStatus(InputStatuses.DEFAULT);
     }, 300);
 
     return () => {
       clearTimeout(timer);
     };
-  }, [valueStatus]);
+  }, [quantityStatus]);
 
   useEffect(() => {
     if (!!value && value !== 0) onValueChangeHandler(value);
@@ -60,24 +60,16 @@ const ItemsCounter = ({
 
   const onInputValueChangeHandler = (value: number | null): void => {
     setValue(value);
-    if (value === 0) {
-      setValueStatus(InputStatuses.ERROR);
-      setValueMessage(InputMessagesText.DIVISION_BY_ZERO);
-    } else {
-      setValueMessage(InputMessagesText.DEFAULT);
-    }
+    const validateValueResult = inputValueValidate(value);
+    setValueStatus(validateValueResult.status);
+    setValueMessage(validateValueResult.message);
   };
 
-  const quantityHandler = (value: number | null) => {
-    setQuantity(value);
-
-    if (value === 0) {
-      setQuantityStatus(InputStatuses.ERROR);
-      setQuantityMessage(InputMessagesText.DIVISION_BY_ZERO);
-    } else {
-      setQuantityStatus(InputStatuses.DEFAULT);
-      setQuantityMessage(InputMessagesText.DEFAULT);
-    }
+  const quantityHandler = (quantity: number | null) => {
+    setQuantity(quantity);
+    const validateQuantityResult = inputValueValidate(quantity);
+    setQuantityStatus(validateQuantityResult.status);
+    setQuantityMessage(validateQuantityResult.message);
   };
 
   return (
