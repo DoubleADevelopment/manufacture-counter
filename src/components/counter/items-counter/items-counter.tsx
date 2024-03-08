@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 //components
-import { ButtonPrimary, ButtonSecondary, ControlSetItemsAmount, ControlSetValue } from '../../';
+import { ButtonPrimary, ButtonSecondary, ControlSetValueAdditional, ControlSetValue } from '../../';
 //variables
 import { CounterInputErrorsText, CounterText, InputStatuses } from '../../../variables';
 //style
@@ -20,10 +20,10 @@ const ItemsCounter = ({
   defaultValue,
 }: IItemsCounterProps): JSX.Element => {
   const [value, setValue] = useState<number | null>(defaultValue);
-  const [amountValue, setAmountValue] = useState<number | null>(1);
+  const [quantity, setQuantity] = useState<number | null>(1);
   const [message, setMessage] = useState<string>('');
   const [status, setStatus] = useState<InputStatuses>(InputStatuses.DEFAULT);
-  const [amountStatus, setAmountStatus] = useState<InputStatuses>(InputStatuses.DEFAULT);
+  const [quantityStatus, setQuantityStatus] = useState<InputStatuses>(InputStatuses.DEFAULT);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -55,6 +55,20 @@ const ItemsCounter = ({
     }
   };
 
+  const plusClickHandler = () => {
+    const validateResult = validateInputData(quantity);
+    if (validateResult === true && value !== null && quantity !== null) {
+      inc(value * quantity);
+    }
+  };
+
+  const minusClickHandler = () => {
+    const validateResult = validateInputData(quantity);
+    if (validateResult === true && value !== null && quantity !== null) {
+      dec(value * quantity);
+    }
+  };
+
   const onInputValueChangeHandler = (value: number | null): void => {
     setValue(value);
     if (value === 0) {
@@ -65,33 +79,22 @@ const ItemsCounter = ({
     }
   };
 
-  const plusClickHandler = () => {
-    const validateResult = validateInputData(value);
-    if (validateResult === true && value !== null && amountValue !== null) {
-      inc(value * amountValue);
-    }
-  };
+  const quantityHandler = (value: number | null) => {
+    setQuantity(value);
 
-  const minusClickHandler = () => {
-    const validateResult = validateInputData(value);
-    if (validateResult === true && value !== null && amountValue !== null) {
-      dec(value * amountValue);
-    }
-  };
-
-  const amountHandler = (value: number | null) => {
-    setAmountValue(value);
     if (value === 0) {
-      setAmountStatus(InputStatuses.ERROR);
+      setQuantityStatus(InputStatuses.ERROR);
+      setMessage(CounterInputErrorsText.DIVISION_BY_ZERO);
     } else {
-      setAmountStatus(InputStatuses.DEFAULT);
+      setQuantityStatus(InputStatuses.DEFAULT);
+      setMessage(CounterInputErrorsText.DEFAULT);
     }
   };
 
   return (
     <div className={style['items-counter']}>
-      <ControlSetItemsAmount
-        value={amountValue}
+      {/* <ControlSetItemsAmount
+        value={quantity}
         titleBefore="jedno kliknięcie + "
         titleAfter="karton"
         onInputChangeHandler={amountHandler}
@@ -101,6 +104,20 @@ const ItemsCounter = ({
         onInputChangeHandler={onInputValueChangeHandler}
         value={value}
         status={status}
+        message={message}
+      /> */}
+
+      <ControlSetValueAdditional
+        value={value}
+        titleBefore="jeden karton = "
+        titleAfter="kg"
+        onInputChangeHandler={onInputValueChangeHandler}
+        status={quantityStatus}
+      />
+      <ControlSetValue
+        onInputChangeHandler={quantityHandler}
+        value={quantity}
+        status={quantityStatus}
         message={message}
       />
       <div className={style['items-counter__buttons']}>

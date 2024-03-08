@@ -1,4 +1,4 @@
-import ControlSetItemsAmount from './control-set-items-amount/control-set-items-amount';
+import ControlSetValueAdditional from './control-set-value-additional/control-set-value-additional';
 import ControlSetValue from './control-set-value/control-set-value';
 
-export { ControlSetValue, ControlSetItemsAmount };
+export { ControlSetValue, ControlSetValueAdditional };

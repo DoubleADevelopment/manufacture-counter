@@ -1,8 +1,10 @@
-//styles
-import style from './control-set-items-amount.module.scss';
-import { extractNumbers } from '../../../utils/utils';
-import { InputStatuses } from '../../../variables';
 import { useEffect, useState } from 'react';
+//utils
+import { extractNumbers } from '../../../utils/utils';
+//variables
+import { InputStatuses } from '../../../variables';
+//styles
+import style from './control-set-value-additional.module.scss';
 
 interface IControlSetItemsAmountProps {
   onInputChangeHandler: (value: number | null) => void;
@@ -12,7 +14,7 @@ interface IControlSetItemsAmountProps {
   status?: InputStatuses;
 }
 
-const ControlSetItemsAmount = ({
+const ControlSetValueAdditional = ({
   titleBefore,
   titleAfter,
   value,
@@ -34,7 +36,7 @@ const ControlSetItemsAmount = ({
   useEffect(() => {
     switch (status) {
       case InputStatuses.ERROR:
-        setInputClassName(style['control-set-amount__input--error']);
+        setInputClassName(style['control-set-value-additional__input--error']);
         break;
       default:
         setInputClassName('');
@@ -43,11 +45,13 @@ const ControlSetItemsAmount = ({
   }, [status]);
 
   return (
-    <div className={style['control-set-amount']}>
-      <label className={`${style['control-set-amount__label']} content-primary-a label-medium`}>
+    <div className={style['control-set-value-additional']}>
+      <label
+        className={`${style['control-set-value-additional__label']} content-primary-a label-medium`}
+      >
         {titleBefore}
         <input
-          className={`${style['control-set-amount__input']} ${inputClassName} content-primary-a label-large`}
+          className={`${style['control-set-value-additional__input']} ${inputClassName} content-primary-a label-large`}
           type="number"
           value={value !== null ? value : ''}
           onChange={handleInputChange}
@@ -58,4 +62,4 @@ const ControlSetItemsAmount = ({
   );
 };
 
-export default ControlSetItemsAmount;
+export default ControlSetValueAdditional;
