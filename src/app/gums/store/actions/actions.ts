@@ -15,7 +15,7 @@ export const incrementAction =
     dispatch(increment(action));
 
     const newLog = {
-      log: `+${action.value.toString()}`,
+      log: action.logText ? action.logText : `+${action.value.toString()}`,
       logName: action.logName,
       UNID: action.UNID,
     };
@@ -30,7 +30,7 @@ export const decrementAction =
     dispatch(decrement(action));
 
     const newLog = {
-      log: `-${action.value.toString()}`,
+      log: action.logText ? action.logText : `-${action.value.toString()}`,
       logName: action.logName,
       UNID: action.UNID,
     };

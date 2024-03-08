@@ -3,7 +3,7 @@ import Navigation from './nav/nav';
 import ComponentsList from './components-list/components-list';
 import ItemsList from './items-list/items-list';
 import { ItemCardShort, ShortCardWithLogs } from './cards';
-import { ControlSetItemsAmount, ControlSetValue } from './controls';
+import { ControlSetValueAdditional, ControlSetValue } from './controls';
 import {
   ButtonPrimary,
   ButtonSecondary,
@@ -46,5 +46,5 @@ export {
   ButtonTertiarySmall,
   ButtonDeleteSmall,
   ItemsCounter,
-  ControlSetItemsAmount,
+  ControlSetValueAdditional,
 };

@@ -1,91 +1,41 @@
 //components
 import { useState } from 'react';
-import { AdditionalNav, BasicCounter, ItemsCounter } from '../../../../../components';
-//store
-import { useAppDispatch, useAppSelector } from '../../../../../hooks/hooks';
-import {
-  changeItemSettingAction,
-  decrementAction,
-  incrementAction,
-} from '../../../store/actions/actions';
-import {
-  GUMS_COUNTERS,
-  GumsLogsNames,
-  GumsSettingsNames,
-  gumsCountersList,
-} from '../../../variables';
+import { AdditionalNav, PageNotification } from '../../../../../components';
+import GumsCardboardCounter from '../gums-cardboard-counter/gums-cardboard-counter';
+import GumsBasicCounter from '../gums-basic-counter/gums-basic-counter';
+//variables
+import { GUMS_COUNTERS, gumsCountersList } from '../../../variables';
+import { ErrorsText, NotificationType } from '../../../../../variables';
 //styles
 import style from './counter-controls.module.scss';
-import { SelectorGetCurrentGumSetting } from '../../../store/slectors/selectors';
 
 interface ICounterControlsProps {
   UNID: string;
 }
 
 const CounterControls = ({ UNID }: ICounterControlsProps): JSX.Element => {
-  const [currentCounter, setCurrentCounter] = useState<GUMS_COUNTERS>(GUMS_COUNTERS.CARDBOARD);
-  const dispatch = useAppDispatch();
-  const cardboardDefaultValue = useAppSelector(
-    SelectorGetCurrentGumSetting(UNID, GumsSettingsNames.BASE_CARDBOARD_VALUE),
-  );
-
-  const getCurrentLogName = (): GumsLogsNames => {
-    switch (currentCounter) {
-      case GUMS_COUNTERS.CARDBOARD:
-        return GumsLogsNames.CARDBOARD;
-      case GUMS_COUNTERS.COUNTER:
-        return GumsLogsNames.COUNTER;
-      default:
-        const exhaustiveCheck: never = currentCounter;
-        throw new Error(`Unhandled notification type: ${exhaustiveCheck}`);
-    }
-  };
-
-  const inc = (value: number): void => {
-    dispatch(incrementAction({ UNID: UNID, value: value, logName: getCurrentLogName() }));
-  };
-
-  const dec = (value: number): void => {
-    dispatch(decrementAction({ UNID: UNID, value: value, logName: getCurrentLogName() }));
-  };
-
-  const changeCardboarSetting = (value: number) => {
-    if (value !== cardboardDefaultValue) {
-      dispatch(
-        changeItemSettingAction({
-          UNID: UNID,
-          settingName: GumsSettingsNames.BASE_CARDBOARD_VALUE,
-          newSettingValue: value,
-        }),
-      );
-    }
-  };
+  const [currentCounter, setCurrentCounter] = useState<string>(GUMS_COUNTERS.CARDBOARD);
 
   const getCurrentCounterComponent = (): JSX.Element => {
     switch (currentCounter) {
       case GUMS_COUNTERS.CARDBOARD:
+        return <GumsCardboardCounter UNID={UNID} />;
+      case GUMS_COUNTERS.COUNTER:
+        return <GumsBasicCounter UNID={UNID} />;
+      default:
         return (
-          <ItemsCounter
-            inc={inc}
-            dec={dec}
-            onValueChangeHandler={changeCardboarSetting}
-            defaultValue={cardboardDefaultValue}
+          <PageNotification
+            type={NotificationType.ERROR}
+            headingText={ErrorsText.COUNTER_OPENING_ERROR}
+            paragraphText={`${ErrorsText.FAILED_OPEN_COUNTER_CALLED_COUNTERNAME} "${currentCounter}".`}
+            additionalInfo={`"${currentCounter}" nie odpowiada liscie liczników GUMS_COUNTERS.`}
           />
         );
-      case GUMS_COUNTERS.COUNTER:
-        return <BasicCounter inc={inc} dec={dec} />;
-      default:
-        const exhaustiveCheck: never = currentCounter;
-        throw new Error(`Unhandled notification type: ${exhaustiveCheck}`);
     }
   };
 
   const additionalNavHandler = (value: string): void => {
-    if (value === GUMS_COUNTERS.CARDBOARD || value === GUMS_COUNTERS.COUNTER) {
-      setCurrentCounter(value);
-    } else {
-      console.log('Value dont pass to GUMS_COUNTERS');
-    }
+    setCurrentCounter(value);
   };
 
   return (

@@ -11,21 +11,18 @@ interface IItemCardShortProps {
   item: IItemDataToDisplay | undefined;
   measurementText: UnitsOfMeasurementText;
   onCardClickHandler?: () => void;
-  withModal?: boolean;
 }
 
 const ItemCardShort = ({
   item,
   measurementText,
   onCardClickHandler,
-  withModal,
 }: IItemCardShortProps): JSX.Element => {
   return (
     <>
       {item ? (
         <article
-          onClick={onCardClickHandler}
-          className={`${style['item-card-short']} ${withModal && style['item-card-short--with-modal']}`}
+          className={`${style['item-card-short']} ${onCardClickHandler && style['item-card-short--with-modal']}`}
         >
           <div className={style['item-card-short__wrap']}>
             <h3 className={`content-primary-a heading-small`}>{item.productName}</h3>
@@ -51,6 +48,16 @@ const ItemCardShort = ({
             {measurementText}
             <span className="paragraph-primary-a heading-medium">{item.amount}</span>
           </div>
+
+          {onCardClickHandler && (
+            <button
+              className={style['item-card-short__open-modal-button']}
+              type="button"
+              onClick={onCardClickHandler}
+            >
+              <span className="visually-hidden">otwó dodatkową informację</span>
+            </button>
+          )}
         </article>
       ) : (
         <ItemCardShortSkeleton />

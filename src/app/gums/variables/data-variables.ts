@@ -10,8 +10,8 @@ enum GumsSettingsNames {
 const GUMS_STORAGE_NAME = 'gums-data';
 
 enum GUMS_COUNTERS {
-  COUNTER = 'licznik',
-  CARDBOARD = 'kartony',
+  COUNTER = 'Licznik',
+  CARDBOARD = 'Kartony',
 }
 
 const gumsCountersList: GUMS_COUNTERS[] = [GUMS_COUNTERS.COUNTER, GUMS_COUNTERS.CARDBOARD];

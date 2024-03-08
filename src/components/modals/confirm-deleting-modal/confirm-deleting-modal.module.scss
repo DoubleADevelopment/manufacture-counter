@@ -4,3 +4,14 @@
   grid-template-rows: 1fr min-content;
   gap: 20px;
 }
+
+.confirm-deleting-modal__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  @media (width <= 480px) {
+    flex-direction: column;
+  }
+}
