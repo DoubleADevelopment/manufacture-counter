@@ -1,19 +1,20 @@
 //components
 import { useState } from 'react';
-import { AdditionalNav } from '../../../../../components';
+import { AdditionalNav, PageNotification } from '../../../../../components';
 import GumsCardboardCounter from '../gums-cardboard-counter/gums-cardboard-counter';
 //variables
 import { GUMS_COUNTERS, gumsCountersList } from '../../../variables';
 //styles
 import style from './counter-controls.module.scss';
 import GumsBasicCounter from '../gums-basic-counter/gums-basic-counter';
+import { ErrorsText, NotificationType } from '../../../../../variables';
 
 interface ICounterControlsProps {
   UNID: string;
 }
 
 const CounterControls = ({ UNID }: ICounterControlsProps): JSX.Element => {
-  const [currentCounter, setCurrentCounter] = useState<GUMS_COUNTERS>(GUMS_COUNTERS.CARDBOARD);
+  const [currentCounter, setCurrentCounter] = useState<string>(GUMS_COUNTERS.CARDBOARD);
 
   const getCurrentCounterComponent = (): JSX.Element => {
     switch (currentCounter) {
@@ -22,17 +23,19 @@ const CounterControls = ({ UNID }: ICounterControlsProps): JSX.Element => {
       case GUMS_COUNTERS.COUNTER:
         return <GumsBasicCounter UNID={UNID} />;
       default:
-        const exhaustiveCheck: never = currentCounter;
-        throw new Error(`Unhandled notification type: ${exhaustiveCheck}`);
+        return (
+          <PageNotification
+            type={NotificationType.ERROR}
+            headingText={ErrorsText.COUNTER_OPENING_ERROR}
+            paragraphText={`Nie udało się otworzyć licznik o nazwie - "${currentCounter}".`}
+            additionalInfo={`"${currentCounter}" nie odpowiada liscie liczników GUMS_COUNTERS.`}
+          />
+        );
     }
   };
 
   const additionalNavHandler = (value: string): void => {
-    if (value === GUMS_COUNTERS.CARDBOARD || value === GUMS_COUNTERS.COUNTER) {
-      setCurrentCounter(value);
-    } else {
-      console.log('Value dont pass to GUMS_COUNTERS');
-    }
+    setCurrentCounter(value);
   };
 
   return (
