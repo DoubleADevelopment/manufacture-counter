@@ -17,6 +17,8 @@ const CounterText = {
   CHEMISTRY_BASIC_COUNTER_INPUT_TEXT: 'Ilość chemii w szt',
 };
 
+// Failed to open counter called
+
 enum InputMessagesText {
   EMPTY_FIELD = 'Nic nie wpisanę w pole!',
   DIVISION_BY_ZERO = 'Nie można dodać/odjąć ZERO!',
@@ -29,6 +31,7 @@ enum ErrorsText {
   COMPONENT_NOT_FOUND_WITH_UNID = 'Nie znaleziono komponentu o numerze - ',
   SOMETHING_WENT_WRONG = 'uuups... Coś poszło nie tak...',
   ITEMS_LIST_NOT_FOUND = 'Nie udało się nam otworzyć listę komponentów.',
+  FAILED_OPEN_COUNTER_CALLED_COUNTERNAME = 'Nie udało się otworzyć licznik o nazwie - ',
 }
 
 enum UnitsOfMeasurementText {

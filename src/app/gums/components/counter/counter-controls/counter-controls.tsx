@@ -27,7 +27,7 @@ const CounterControls = ({ UNID }: ICounterControlsProps): JSX.Element => {
           <PageNotification
             type={NotificationType.ERROR}
             headingText={ErrorsText.COUNTER_OPENING_ERROR}
-            paragraphText={`Nie udało się otworzyć licznik o nazwie - "${currentCounter}".`}
+            paragraphText={`${ErrorsText.FAILED_OPEN_COUNTER_CALLED_COUNTERNAME} "${currentCounter}".`}
             additionalInfo={`"${currentCounter}" nie odpowiada liscie liczników GUMS_COUNTERS.`}
           />
         );
