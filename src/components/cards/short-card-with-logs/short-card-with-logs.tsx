@@ -18,7 +18,6 @@ const ShortCardWithLogs = ({
   clearDataHandler,
 }: IShortCardWithLogs): JSX.Element => {
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
-
   const onCardClickHandler = () => {
     setModalIsOpen(true);
   };
