@@ -1,3 +1,8 @@
+//variables
+import { InputMessagesText, InputStatuses } from '../variables';
+//types
+import type { IInputValueValidate } from '../types';
+
 const onEnterClickHandlerToElementBlur = (
   evt: any,
   htmlElement: HTMLElement | null = null,
@@ -17,4 +22,23 @@ const extractNumbers = (inputString: string): string => {
   return inputString.replace(/[^0-9]+/g, '');
 };
 
-export { onEnterClickHandlerToElementBlur, extractNumbers };
+const inputValueValidate = (value: number | null): IInputValueValidate => {
+  if (value === null) {
+    return {
+      status: InputStatuses.ERROR,
+      message: InputMessagesText.EMPTY_FIELD,
+    };
+  } else if (value === 0) {
+    return {
+      status: InputStatuses.ERROR,
+      message: InputMessagesText.DIVISION_BY_ZERO,
+    };
+  } else {
+    return {
+      status: InputStatuses.SUCCESS,
+      message: InputMessagesText.DEFAULT,
+    };
+  }
+};
+
+export { onEnterClickHandlerToElementBlur, extractNumbers, inputValueValidate };

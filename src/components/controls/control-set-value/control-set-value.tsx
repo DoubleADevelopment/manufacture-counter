@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 //utils
 import { extractNumbers, onEnterClickHandlerToElementBlur } from '../../../utils/utils';
 //variables
-import { CounterText, InputStatuses } from '../../../variables';
+import { InputStatuses } from '../../../variables';
 //styles
 import style from './control-set-value.module.scss';
 
@@ -11,6 +11,7 @@ interface IControlSetValueProps {
   value: number | null;
   message?: string;
   status?: InputStatuses;
+  title: string;
 }
 
 const ControlSetValue = ({
@@ -18,6 +19,7 @@ const ControlSetValue = ({
   value,
   message,
   status,
+  title,
 }: IControlSetValueProps): JSX.Element => {
   const inputEl = useRef<HTMLInputElement>(null);
   const [inputClassName, setInputClassName] = useState('');
@@ -56,7 +58,7 @@ const ControlSetValue = ({
         {message ? (
           <span className={style['control-set-value__message']}>{message}</span>
         ) : (
-          CounterText.CHEMISTRY_SET_VALUE_TITLE
+          <>{title}</>
         )}
         <input
           className={`${style['control-set-value__input']} ${inputClassName} content-primary-a`}

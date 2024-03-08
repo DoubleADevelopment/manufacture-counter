@@ -75,6 +75,7 @@ const BasicCounter = ({ inc, dec }: IBasicCounterProps): JSX.Element => {
         value={value}
         status={status}
         message={message}
+        title="Ilość"
       />
       <div className={style['basic-counter__buttons']}>
         <ButtonSecondary text={CounterText.MINUS} clickHandler={minusClickHandler} />

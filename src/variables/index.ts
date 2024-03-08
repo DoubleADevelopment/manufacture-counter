@@ -6,6 +6,7 @@ import {
   ErrorsText,
   InterfaceText,
   UnitsOfMeasurementText,
+  InputMessagesText,
 } from './text-variables';
 import { NotificationType } from './notofication-variables';
 import { AppRouting, rootBaseName } from './app-routing-variables';
@@ -21,4 +22,5 @@ export {
   AppRouting,
   rootBaseName,
   UnitsOfMeasurementText,
+  InputMessagesText,
 };

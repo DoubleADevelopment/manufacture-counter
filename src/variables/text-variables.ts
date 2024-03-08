@@ -19,6 +19,12 @@ enum CounterInputErrorsText {
   DEFAULT = '',
 }
 
+enum InputMessagesText {
+  EMPTY_FIELD = 'Nic nie wpisanę w pole!',
+  DIVISION_BY_ZERO = 'Nie można dodać/odjąć ZERO!',
+  DEFAULT = '',
+}
+
 enum ErrorsText {
   COMPONENT_NOT_FOUND = 'Nie znaleziono komponentu do przeliczenia.',
   COUNTER_OPENING_ERROR = 'Błąd przy otwarciu licznika',
@@ -40,4 +46,11 @@ enum InterfaceText {
   CONFIRM_DELETING = 'Potwierdź usunięcie',
 }
 
-export { CounterText, UnitsOfMeasurementText, CounterInputErrorsText, ErrorsText, InterfaceText };
+export {
+  CounterText,
+  UnitsOfMeasurementText,
+  CounterInputErrorsText,
+  ErrorsText,
+  InterfaceText,
+  InputMessagesText,
+};

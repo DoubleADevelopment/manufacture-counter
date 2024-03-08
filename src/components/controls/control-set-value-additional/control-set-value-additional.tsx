@@ -2,16 +2,17 @@ import { useEffect, useState } from 'react';
 //utils
 import { extractNumbers } from '../../../utils/utils';
 //variables
-import { InputStatuses } from '../../../variables';
+import { InputMessagesText, InputStatuses } from '../../../variables';
 //styles
 import style from './control-set-value-additional.module.scss';
 
-interface IControlSetItemsAmountProps {
+interface IControlSetValueAdditionalProps {
   onInputChangeHandler: (value: number | null) => void;
   value: number | null;
   titleBefore: string;
   titleAfter?: string;
   status?: InputStatuses;
+  message?: InputMessagesText;
 }
 
 const ControlSetValueAdditional = ({
@@ -20,7 +21,8 @@ const ControlSetValueAdditional = ({
   value,
   onInputChangeHandler,
   status,
-}: IControlSetItemsAmountProps): JSX.Element => {
+  message,
+}: IControlSetValueAdditionalProps): JSX.Element => {
   const [inputClassName, setInputClassName] = useState<string>('');
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -58,6 +60,11 @@ const ControlSetValueAdditional = ({
         />
         {titleAfter}
       </label>
+      {message && (
+        <div className={`${style['control-set-value-additional__message']} label-large`}>
+          {message}
+        </div>
+      )}
     </div>
   );
 };

@@ -18,6 +18,7 @@ import type { IIncDecAction, ILogAction, IClearItemAction } from './action-types
 import { AppDispatch, RootState, AppThunk } from './store-types';
 import { ISetActiveLink, IButtonProps } from './other-types';
 import { IIconProps } from './icon-props-type';
+import { IInputValueValidate } from './utils-types';
 
 export type {
   ILogAction,
@@ -45,4 +46,5 @@ export type {
   storageNamesAliasType,
   IClearItemAction,
   IButtonProps,
+  IInputValueValidate,
 };
