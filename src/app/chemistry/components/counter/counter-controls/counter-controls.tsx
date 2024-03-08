@@ -2,6 +2,7 @@
 import { BasicCounter } from '../../../../../components';
 //store
 import { useAppDispatch } from '../../../../../hooks/hooks';
+import { CounterText } from '../../../../../variables';
 import { decrementAction, incrementAction } from '../../../store/actions/actions';
 //variables
 import { ChemistryPackagesNames } from '../../../variables/';
@@ -25,7 +26,7 @@ const CounterControls = ({ UNID, packName }: ICounterControlsProps): JSX.Element
   return (
     <section className={style['counter-controls']}>
       <h2 className="visually-hidden">Licnik</h2>
-      <BasicCounter inc={inc} dec={dec} />
+      <BasicCounter inc={inc} dec={dec} title={CounterText.CHEMISTRY_BASIC_COUNTER_INPUT_TEXT} />
     </section>
   );
 };

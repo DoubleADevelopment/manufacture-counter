@@ -13,6 +13,8 @@ const CounterText = {
   OPEN_COUNTER: 'Otwórz licznik',
   QUANTITY_COUNTER_TITLE: 'Ilość',
   ONE_CARDBOARD_VALUE_IS: 'jeden karton = ',
+  GUMS_BASIC_COUNTER_INPUT_TEXT: 'Ilość gumy w kg',
+  CHEMISTRY_BASIC_COUNTER_INPUT_TEXT: 'Ilość chemii w szt',
 };
 
 enum InputMessagesText {

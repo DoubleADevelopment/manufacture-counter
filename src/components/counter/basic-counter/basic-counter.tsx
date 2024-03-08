@@ -1,69 +1,40 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 //components
 import { ButtonPrimary, ButtonSecondary, ControlSetValue } from '../..';
 //variables
 import { InputMessagesText, CounterText, InputStatuses } from '../../../variables';
 //style
 import style from './basic-counter.module.scss';
+import { inputValueValidate } from '../../../utils/utils';
 
 interface IBasicCounterProps {
   inc: (value: number) => void;
   dec: (value: number) => void;
+  title: string;
 }
 
-const BasicCounter = ({ inc, dec }: IBasicCounterProps): JSX.Element => {
-  const [value, setValue] = useState<number | null>(1);
-  const [message, setMessage] = useState<string>('');
+const BasicCounter = ({ inc, dec, title }: IBasicCounterProps): JSX.Element => {
+  const [value, setValue] = useState<number | null>(500);
+  const [message, setMessage] = useState<InputMessagesText>(InputMessagesText.DEFAULT);
   const [status, setStatus] = useState<InputStatuses>(InputStatuses.DEFAULT);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setStatus(InputStatuses.DEFAULT);
-    }, 300);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [status]);
-
-  const validateInputData = (value: number | null): boolean => {
-    if (value === null) {
-      setStatus(InputStatuses.ERROR);
-      setMessage(InputMessagesText.EMPTY_FIELD);
-      return false;
-    } else if (value === 0) {
-      setStatus(InputStatuses.ERROR);
-      setMessage(InputMessagesText.DIVISION_BY_ZERO);
-      return false;
-    } else {
-      setStatus(InputStatuses.SUCCESS);
-      setMessage(InputMessagesText.DEFAULT);
-      return true;
-    }
-  };
 
   const onInputValueChangeHandler = (value: number | null): void => {
     setValue(value);
-    if (value === 0) {
-      setStatus(InputStatuses.ERROR);
-      setMessage(InputMessagesText.DIVISION_BY_ZERO);
-    } else {
-      setMessage(InputMessagesText.DEFAULT);
-    }
+    const validateQuantityResult = inputValueValidate(value);
+    setStatus(validateQuantityResult.status);
+    setMessage(validateQuantityResult.message);
   };
 
   const plusClickHandler = () => {
-    const validateResult = validateInputData(value);
-    if (validateResult === true && value !== null) {
-      // dispatch(incrementAction({ UNID: UNID, value: value }));
+    const validateResult = inputValueValidate(value);
+    if (validateResult.status === InputStatuses.SUCCESS && value !== null) {
       inc(value);
     }
   };
 
   const minusClickHandler = () => {
-    const validateResult = validateInputData(value);
-    if (validateResult === true && value !== null) {
-      // dispatch(decrementAction({ UNID: UNID, value: value }));
+    const validateResult = inputValueValidate(value);
+    if (validateResult.status === InputStatuses.SUCCESS && value !== null) {
       dec(value);
     }
   };
@@ -75,7 +46,7 @@ const BasicCounter = ({ inc, dec }: IBasicCounterProps): JSX.Element => {
         value={value}
         status={status}
         message={message}
-        title="Ilość"
+        title={title}
       />
       <div className={style['basic-counter__buttons']}>
         <ButtonSecondary text={CounterText.MINUS} clickHandler={minusClickHandler} />
