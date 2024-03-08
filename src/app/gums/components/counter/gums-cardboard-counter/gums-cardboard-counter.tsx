@@ -24,11 +24,12 @@ const GumsCardboardCounter = ({ UNID }: IGumsCardboardCounterProps): JSX.Element
   );
 
   const inc = (value: number, quantity: number): void => {
-    const logText = quantity === 1 ? `+${value}` : `+${value} * ${quantity}`;
+    const valueToAdd = value * quantity;
+    const logText = quantity === 1 ? `+${value}` : `+${value} * ${quantity} = ${valueToAdd}`;
     dispatch(
       incrementAction({
         UNID: UNID,
-        value: value * quantity,
+        value: valueToAdd,
         logName: GumsLogsNames.CARDBOARD,
         logText: logText,
       }),
@@ -36,11 +37,12 @@ const GumsCardboardCounter = ({ UNID }: IGumsCardboardCounterProps): JSX.Element
   };
 
   const dec = (value: number, quantity: number): void => {
-    const logText = quantity === 1 ? `+${value}` : `+${value} * ${quantity}`;
+    const valueToAdd = value * quantity;
+    const logText = quantity === 1 ? `+${value}` : `+${value} * ${quantity} = ${valueToAdd}`;
     dispatch(
       decrementAction({
         UNID: UNID,
-        value: value * quantity,
+        value: valueToAdd,
         logName: GumsLogsNames.CARDBOARD,
         logText: logText,
       }),

@@ -21,14 +21,16 @@ const ConfirmDeletingModal = ({
     <ModalLayout onOverlayClickHandler={onCancelButtonClickHandler}>
       <section className={style['confirm-deleting-modal']}>
         <h3 className="content-primary-a heading-small">{modalTitle}</h3>
-        <ButtonTertiarySmall
-          clickHandler={onCancelButtonClickHandler}
-          text={InterfaceText.CANCEL_DELETING}
-        />
-        <ButtonDeleteSmall
-          clickHandler={confirmButtonClickHandler}
-          text={InterfaceText.CONFIRM_DELETING}
-        />
+        <div className={style['confirm-deleting-modal__controls']}>
+          <ButtonTertiarySmall
+            clickHandler={onCancelButtonClickHandler}
+            text={InterfaceText.CANCEL_DELETING}
+          />
+          <ButtonDeleteSmall
+            clickHandler={confirmButtonClickHandler}
+            text={InterfaceText.CONFIRM_DELETING}
+          />
+        </div>
       </section>
     </ModalLayout>
   );

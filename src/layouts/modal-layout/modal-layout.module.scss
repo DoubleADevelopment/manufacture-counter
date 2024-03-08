@@ -16,7 +16,7 @@
 .modal-layout__content {
   border-radius: var(--basic-border-radius);
   padding: var(--modal-paddings);
-  width: max-content;
+  width: 100%;
   min-width: 320px;
   max-width: 640px;
   background-color: var(--backgroud-primary);
