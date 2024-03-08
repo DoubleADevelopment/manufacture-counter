@@ -2,12 +2,12 @@
 import { useState } from 'react';
 import { AdditionalNav, PageNotification } from '../../../../../components';
 import GumsCardboardCounter from '../gums-cardboard-counter/gums-cardboard-counter';
+import GumsBasicCounter from '../gums-basic-counter/gums-basic-counter';
 //variables
 import { GUMS_COUNTERS, gumsCountersList } from '../../../variables';
+import { ErrorsText, NotificationType } from '../../../../../variables';
 //styles
 import style from './counter-controls.module.scss';
-import GumsBasicCounter from '../gums-basic-counter/gums-basic-counter';
-import { ErrorsText, NotificationType } from '../../../../../variables';
 
 interface ICounterControlsProps {
   UNID: string;

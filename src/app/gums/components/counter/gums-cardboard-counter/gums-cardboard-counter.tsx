@@ -23,12 +23,28 @@ const GumsCardboardCounter = ({ UNID }: IGumsCardboardCounterProps): JSX.Element
     SelectorGetCurrentGumSetting(UNID, GumsSettingsNames.BASE_CARDBOARD_VALUE),
   );
 
-  const inc = (value: number): void => {
-    dispatch(incrementAction({ UNID: UNID, value: value, logName: GumsLogsNames.CARDBOARD }));
+  const inc = (value: number, quantity: number): void => {
+    const logText = quantity === 1 ? `+${value}` : `+${value} * ${quantity}`;
+    dispatch(
+      incrementAction({
+        UNID: UNID,
+        value: value * quantity,
+        logName: GumsLogsNames.CARDBOARD,
+        logText: logText,
+      }),
+    );
   };
 
-  const dec = (value: number): void => {
-    dispatch(decrementAction({ UNID: UNID, value: value, logName: GumsLogsNames.CARDBOARD }));
+  const dec = (value: number, quantity: number): void => {
+    const logText = quantity === 1 ? `+${value}` : `+${value} * ${quantity}`;
+    dispatch(
+      decrementAction({
+        UNID: UNID,
+        value: value * quantity,
+        logName: GumsLogsNames.CARDBOARD,
+        logText: logText,
+      }),
+    );
   };
 
   const changeCardboarSetting = (value: number) => {

@@ -16,11 +16,7 @@
 
 .log-item__item {
   position: relative;
-
-  &:not(:last-child)::after {
-    content: ',';
-    position: absolute;
-    right: -4px;
-    bottom: 0;
-  }
+  border-radius: var(--basic-border-radius);
+  padding: 4px 8px;
+  background-color: var(--background-secondary);
 }

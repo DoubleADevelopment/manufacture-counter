@@ -9,6 +9,7 @@ import { GumsLogsNames, GumsSettingsNames } from '../variables';
 
 interface IIncDecAction extends incDec {
   logName: GumsLogsNames;
+  logText?: string;
 }
 interface IClearItemAction<T> extends clearItem<T> {}
 interface ILogAction<T> extends log<T> {}

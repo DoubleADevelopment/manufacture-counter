@@ -9,8 +9,8 @@ import { CounterText, InputMessagesText, InputStatuses } from '../../../variable
 import style from './items-counter.module.scss';
 
 interface IItemsCounterProps {
-  inc: (value: number) => void;
-  dec: (value: number) => void;
+  inc: (value: number, quantity: number) => void;
+  dec: (value: number, quantity: number) => void;
   onValueChangeHandler: (value: number) => void;
   defaultValue: number;
   text: {
@@ -43,14 +43,14 @@ const ItemsCounter = ({
   const plusClickHandler = () => {
     const validateResult = inputValueValidate(quantity);
     if (validateResult.status === InputStatuses.SUCCESS && value !== null && quantity !== null) {
-      inc(value * quantity);
+      inc(value, quantity);
     }
   };
 
   const minusClickHandler = () => {
     const validateResult = inputValueValidate(quantity);
     if (validateResult.status === InputStatuses.SUCCESS && value !== null && quantity !== null) {
-      dec(value * quantity);
+      dec(value, quantity);
     }
   };
 
