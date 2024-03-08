@@ -3,20 +3,22 @@ import { useState } from 'react';
 import { AdditionalNav, BasicCounter, ItemsCounter } from '../../../../../components';
 //store
 import { useAppDispatch, useAppSelector } from '../../../../../hooks/hooks';
+import { SelectorGetCurrentGumSetting } from '../../../store/slectors/selectors';
 import {
   changeItemSettingAction,
   decrementAction,
   incrementAction,
 } from '../../../store/actions/actions';
+//variables
 import {
   GUMS_COUNTERS,
   GumsLogsNames,
   GumsSettingsNames,
   gumsCountersList,
 } from '../../../variables';
+import { CounterText, UnitsOfMeasurementText } from '../../../../../variables';
 //styles
 import style from './counter-controls.module.scss';
-import { SelectorGetCurrentGumSetting } from '../../../store/slectors/selectors';
 
 interface ICounterControlsProps {
   UNID: string;
@@ -71,9 +73,9 @@ const CounterControls = ({ UNID }: ICounterControlsProps): JSX.Element => {
             onValueChangeHandler={changeCardboarSetting}
             defaultValue={cardboardDefaultValue}
             text={{
-              quantityTitle: 'Ilość',
-              valueTitleBefore: 'jeden karton = ',
-              valueTitleAfter: 'kg',
+              quantityTitle: CounterText.QUANTITY_COUNTER_TITLE,
+              valueTitleBefore: CounterText.ONE_CARDBOARD_VALUE_IS,
+              valueTitleAfter: UnitsOfMeasurementText.KG,
             }}
           />
         );

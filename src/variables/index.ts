@@ -2,7 +2,6 @@ import { InputStatuses } from './input-variables';
 import { ComponentsRouting } from './component-routing-variables';
 import {
   CounterText,
-  CounterInputErrorsText,
   ErrorsText,
   InterfaceText,
   UnitsOfMeasurementText,
@@ -15,7 +14,6 @@ export {
   InputStatuses,
   ComponentsRouting,
   CounterText,
-  CounterInputErrorsText,
   ErrorsText,
   NotificationType,
   InterfaceText,

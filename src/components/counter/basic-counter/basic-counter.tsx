@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 //components
 import { ButtonPrimary, ButtonSecondary, ControlSetValue } from '../..';
 //variables
-import { CounterInputErrorsText, CounterText, InputStatuses } from '../../../variables';
+import { InputMessagesText, CounterText, InputStatuses } from '../../../variables';
 //style
 import style from './basic-counter.module.scss';
 
@@ -29,15 +29,15 @@ const BasicCounter = ({ inc, dec }: IBasicCounterProps): JSX.Element => {
   const validateInputData = (value: number | null): boolean => {
     if (value === null) {
       setStatus(InputStatuses.ERROR);
-      setMessage(CounterInputErrorsText.EMPTY_FIELD);
+      setMessage(InputMessagesText.EMPTY_FIELD);
       return false;
     } else if (value === 0) {
       setStatus(InputStatuses.ERROR);
-      setMessage(CounterInputErrorsText.DIVISION_BY_ZERO);
+      setMessage(InputMessagesText.DIVISION_BY_ZERO);
       return false;
     } else {
       setStatus(InputStatuses.SUCCESS);
-      setMessage(CounterInputErrorsText.DEFAULT);
+      setMessage(InputMessagesText.DEFAULT);
       return true;
     }
   };
@@ -46,9 +46,9 @@ const BasicCounter = ({ inc, dec }: IBasicCounterProps): JSX.Element => {
     setValue(value);
     if (value === 0) {
       setStatus(InputStatuses.ERROR);
-      setMessage(CounterInputErrorsText.DIVISION_BY_ZERO);
+      setMessage(InputMessagesText.DIVISION_BY_ZERO);
     } else {
-      setMessage(CounterInputErrorsText.DEFAULT);
+      setMessage(InputMessagesText.DEFAULT);
     }
   };
 
