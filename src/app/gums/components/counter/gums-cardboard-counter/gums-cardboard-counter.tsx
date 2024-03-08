@@ -38,7 +38,7 @@ const GumsCardboardCounter = ({ UNID }: IGumsCardboardCounterProps): JSX.Element
 
   const dec = (value: number, quantity: number): void => {
     const valueToAdd = value * quantity;
-    const logText = quantity === 1 ? `+${value}` : `+${value} * ${quantity} = ${valueToAdd}`;
+    const logText = quantity === 1 ? `-${value}` : `-${value} * ${quantity} = ${valueToAdd}`;
     dispatch(
       decrementAction({
         UNID: UNID,
