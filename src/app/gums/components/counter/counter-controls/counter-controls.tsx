@@ -70,6 +70,11 @@ const CounterControls = ({ UNID }: ICounterControlsProps): JSX.Element => {
             dec={dec}
             onValueChangeHandler={changeCardboarSetting}
             defaultValue={cardboardDefaultValue}
+            text={{
+              quantityTitle: 'Ilość',
+              valueTitleBefore: 'jeden karton = ',
+              valueTitleAfter: 'kg',
+            }}
           />
         );
       case GUMS_COUNTERS.COUNTER:

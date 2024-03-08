@@ -13,6 +13,11 @@ interface IItemsCounterProps {
   dec: (value: number) => void;
   onValueChangeHandler: (value: number) => void;
   defaultValue: number;
+  text: {
+    quantityTitle: string;
+    valueTitleBefore: string;
+    valueTitleAfter: string;
+  };
 }
 
 const ItemsCounter = ({
@@ -20,6 +25,7 @@ const ItemsCounter = ({
   dec,
   onValueChangeHandler,
   defaultValue,
+  text,
 }: IItemsCounterProps): JSX.Element => {
   const [value, setValue] = useState<number | null>(defaultValue);
   const [quantity, setQuantity] = useState<number | null>(1);
@@ -29,16 +35,6 @@ const ItemsCounter = ({
     InputMessagesText.DEFAULT,
   );
   const [quantityStatus, setQuantityStatus] = useState<InputStatuses>(InputStatuses.DEFAULT);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      if (quantityStatus === InputStatuses.SUCCESS) setQuantityStatus(InputStatuses.DEFAULT);
-    }, 300);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [quantityStatus]);
 
   useEffect(() => {
     if (!!value && value !== 0) onValueChangeHandler(value);
@@ -58,7 +54,7 @@ const ItemsCounter = ({
     }
   };
 
-  const onInputValueChangeHandler = (value: number | null): void => {
+  const valueHandler = (value: number | null): void => {
     setValue(value);
     const validateValueResult = inputValueValidate(value);
     setValueStatus(validateValueResult.status);
@@ -76,9 +72,9 @@ const ItemsCounter = ({
     <div className={style['items-counter']}>
       <ControlSetValueAdditional
         value={value}
-        titleBefore="jeden karton = "
-        titleAfter="kg"
-        onInputChangeHandler={onInputValueChangeHandler}
+        titleBefore={text.valueTitleBefore}
+        titleAfter={text.valueTitleAfter}
+        onInputChangeHandler={valueHandler}
         status={valueStatus}
         message={valueMessage}
       />
@@ -87,7 +83,7 @@ const ItemsCounter = ({
         value={quantity}
         status={quantityStatus}
         message={quantityMessage}
-        title="Ilość"
+        title={text.quantityTitle}
       />
       <div className={style['items-counter__buttons']}>
         <ButtonSecondary text={CounterText.MINUS} clickHandler={minusClickHandler} />

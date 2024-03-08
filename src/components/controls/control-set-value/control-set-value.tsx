@@ -43,9 +43,6 @@ const ControlSetValue = ({
       case InputStatuses.ERROR:
         setInputClassName(style['control-set-value__input--error']);
         break;
-      case InputStatuses.SUCCESS:
-        setInputClassName(style['control-set-value__input--success']);
-        break;
       default:
         setInputClassName('');
         break;
