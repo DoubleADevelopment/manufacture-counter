@@ -12,4 +12,22 @@ enum PigmentsSettingsNames {
 
 const PIGMENTS_STORAGE_NAME = 'pigments-data';
 
-export { PigmentsLogsNames, PigmentsSettingsNames, PIGMENTS_STORAGE_NAME };
+enum PIGMENTS_COUNTERS {
+  COUNTER = 'Licznik',
+  BAGS = 'Worki',
+  CONTAINER = 'Kontenery',
+}
+
+const pigmentsCountersList: PIGMENTS_COUNTERS[] = [
+  PIGMENTS_COUNTERS.COUNTER,
+  PIGMENTS_COUNTERS.BAGS,
+  PIGMENTS_COUNTERS.CONTAINER,
+];
+
+export {
+  PigmentsLogsNames,
+  PigmentsSettingsNames,
+  PIGMENTS_STORAGE_NAME,
+  PIGMENTS_COUNTERS,
+  pigmentsCountersList,
+};

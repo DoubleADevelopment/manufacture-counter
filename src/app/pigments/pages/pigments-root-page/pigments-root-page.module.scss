@@ -1,10 +1,6 @@
-.chemistry-page {
+.pigments-root-page {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr min-content;
   gap: 40px;
-}
-
-.chemistry-page__title {
-  justify-self: left;
 }

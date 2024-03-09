@@ -1,9 +1,9 @@
 //types
-import type { IPigmentsDataPackageType } from '../types/data-type';
+import type { IPigmentsPackage } from '../types/data-type';
 //vars
 import { PigmentsLogsNames, PigmentsSettingsNames } from '../variables/data-variables';
 
-const pigmentsData: IPigmentsDataPackageType = {
+const pigmentsData: IPigmentsPackage = {
   dataPackageName: 'pigments',
   dataPackageUNID: 2001,
   items: [
@@ -15,7 +15,7 @@ const pigmentsData: IPigmentsDataPackageType = {
       systemCode: '799549',
       description: '',
       additionalInfo: '',
-      image: '/aluplast-components-counter/images/pigments/pigment-braz.jpg',
+      image: '/images/pigments/pigment-braz.jpg',
       color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
@@ -28,7 +28,7 @@ const pigmentsData: IPigmentsDataPackageType = {
         },
         [PigmentsLogsNames.BAG]: {
           log: [],
-          name: 'Kartony',
+          name: 'Worki',
         },
       },
       lastChange: null,
@@ -57,7 +57,7 @@ const pigmentsData: IPigmentsDataPackageType = {
       systemCode: '799531',
       description: '',
       additionalInfo: '',
-      image: '/aluplast-components-counter/images/pigments/pigment-antracyt.jpg',
+      image: '/images/pigments/pigment-antracyt.jpg',
       color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
@@ -70,7 +70,7 @@ const pigmentsData: IPigmentsDataPackageType = {
         },
         [PigmentsLogsNames.BAG]: {
           log: [],
-          name: 'Kartony',
+          name: 'Worki',
         },
       },
       lastChange: null,
@@ -99,7 +99,7 @@ const pigmentsData: IPigmentsDataPackageType = {
       systemCode: '799602',
       description: '',
       additionalInfo: '',
-      image: '/aluplast-components-counter/images/pigments/pigment-cream.jpg',
+      image: '/images/pigments/pigment-cream.jpg',
       color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
@@ -112,7 +112,7 @@ const pigmentsData: IPigmentsDataPackageType = {
         },
         [PigmentsLogsNames.BAG]: {
           log: [],
-          name: 'Kartony',
+          name: 'Worki',
         },
       },
       lastChange: null,
@@ -141,7 +141,7 @@ const pigmentsData: IPigmentsDataPackageType = {
       systemCode: '799547',
       description: '',
       additionalInfo: '',
-      image: '/aluplast-components-counter/images/pigments/pigment-ochra.jpg',
+      image: '/images/pigments/pigment-ochra.jpg',
       color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
@@ -154,7 +154,7 @@ const pigmentsData: IPigmentsDataPackageType = {
         },
         [PigmentsLogsNames.BAG]: {
           log: [],
-          name: 'Kartony',
+          name: 'Worki',
         },
       },
       lastChange: null,
@@ -183,7 +183,7 @@ const pigmentsData: IPigmentsDataPackageType = {
       systemCode: '799290',
       description: '',
       additionalInfo: '',
-      image: '/aluplast-components-counter/images/pigments/pigment-braz.jpg',
+      image: '/images/pigments/pigment-braz.jpg',
       color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
@@ -196,7 +196,7 @@ const pigmentsData: IPigmentsDataPackageType = {
         },
         [PigmentsLogsNames.BAG]: {
           log: [],
-          name: 'Kartony',
+          name: 'Worki',
         },
       },
       lastChange: null,
@@ -225,7 +225,7 @@ const pigmentsData: IPigmentsDataPackageType = {
       systemCode: '799600',
       description: '',
       additionalInfo: '',
-      image: '/aluplast-components-counter/images/pigments/pigment-bialy.jpg',
+      image: '/images/pigments/pigment-bialy.jpg',
       color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
@@ -238,7 +238,7 @@ const pigmentsData: IPigmentsDataPackageType = {
         },
         [PigmentsLogsNames.BAG]: {
           log: [],
-          name: 'Kartony',
+          name: 'Worki',
         },
       },
       lastChange: null,
@@ -267,7 +267,7 @@ const pigmentsData: IPigmentsDataPackageType = {
       systemCode: '799805',
       description: '',
       additionalInfo: '',
-      image: '/aluplast-components-counter/images/pigments/pigment-zolty.jpg',
+      image: '/images/pigments/pigment-zolty.jpg',
       color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
@@ -280,7 +280,7 @@ const pigmentsData: IPigmentsDataPackageType = {
         },
         [PigmentsLogsNames.BAG]: {
           log: [],
-          name: 'Kartony',
+          name: 'Worki',
         },
       },
       lastChange: null,
@@ -309,7 +309,7 @@ const pigmentsData: IPigmentsDataPackageType = {
       systemCode: '799544',
       description: '',
       additionalInfo: '',
-      image: '/aluplast-components-counter/images/pigments/pigment-antracyt.jpg',
+      image: '/images/pigments/pigment-antracyt.jpg',
       color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
@@ -322,7 +322,7 @@ const pigmentsData: IPigmentsDataPackageType = {
         },
         [PigmentsLogsNames.BAG]: {
           log: [],
-          name: 'Kartony',
+          name: 'Worki',
         },
       },
       lastChange: null,
@@ -351,7 +351,7 @@ const pigmentsData: IPigmentsDataPackageType = {
       systemCode: '799291',
       description: '',
       additionalInfo: '',
-      image: '/aluplast-components-counter/images/pigments/pigment-shelblue.jpg',
+      image: '/images/pigments/pigment-shelblue.jpg',
       color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
@@ -364,7 +364,7 @@ const pigmentsData: IPigmentsDataPackageType = {
         },
         [PigmentsLogsNames.BAG]: {
           log: [],
-          name: 'Kartony',
+          name: 'Worki',
         },
       },
       lastChange: null,

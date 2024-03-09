@@ -1,17 +1,25 @@
-import {
-  IPigmentsDataItemType,
+import type {
+  IIncDecAction,
+  IClearItemAction,
+  ILogAction,
+  IChangeItemSetting,
+} from './action-types';
+import type {
+  IPigmentsItem,
   IPigmentsData,
-  IPigmentsDataPackageType,
-  PigmentsDataForViewType,
+  IPigmentsPackage,
   IPigmentsLogs,
   PigmentsItemsListType,
 } from './data-type';
 
 export type {
-  IPigmentsDataItemType,
+  IPigmentsItem,
   IPigmentsData,
-  IPigmentsDataPackageType,
-  PigmentsDataForViewType,
+  IPigmentsPackage,
   IPigmentsLogs,
   PigmentsItemsListType,
+  IIncDecAction,
+  IClearItemAction,
+  ILogAction,
+  IChangeItemSetting,
 };

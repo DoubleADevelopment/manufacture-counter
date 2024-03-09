@@ -1,9 +1,10 @@
+//types
 import type {
   IAdapterService,
   IItemDataToDisplay,
   ItemsDataToDisplayListType,
 } from '../../../types';
-import { IGumsItem, IGumsPackage, IGumsData, GumsItemsListType } from '../types/data-types';
+import type { IGumsItem, IGumsPackage, IGumsData, GumsItemsListType } from '../types/data-types';
 
 class GumsAdapterService implements IAdapterService<IGumsData, IGumsPackage> {
   adaptDataToApp(data: IGumsPackage): IGumsData {
