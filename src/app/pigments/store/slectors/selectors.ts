@@ -5,16 +5,16 @@ import { PigmentsSettingsNames } from '../../variables';
 
 export const SelectorGetGumsState = (state: RootState): IPigmentsData => state.pigments;
 
-export const SelectorGetCurrentGum =
+export const SelectorGetCurrentPigment =
   (UNID: string) =>
   (state: RootState): IPigmentsItem =>
     state.pigments[UNID];
-export const SelectorGetCurrentGumSetting =
+export const SelectorGetCurrentPigmentSetting =
   (UNID: string, settingName: PigmentsSettingsNames) =>
   (state: RootState): number =>
     state.pigments[UNID].settings[settingName].settingValue;
 
-export const SelectorGetGums =
+export const SelectorGetPigments =
   () =>
   (state: RootState): IPigmentsData => {
     return state.pigments;
