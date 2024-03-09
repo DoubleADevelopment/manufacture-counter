@@ -3,7 +3,7 @@ import type { IRouteItem } from '../../../types';
 //variables
 import { ComponentsRouting } from '../../../variables';
 
-const PIGMENTS_ROOT = ComponentsRouting.GUMS.route;
+const PIGMENTS_ROOT = ComponentsRouting.PIGMENTS.route;
 
 const enum PigmentsAppRoutingNames {
   ROOT = 'ROOT',

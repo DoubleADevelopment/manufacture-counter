@@ -1,12 +1,14 @@
 import { Route, Routes } from 'react-router-dom';
+//variables
+import { PigmentsAppRouting } from '../variables';
 //pages
-import { PigmentsPage } from '../pages';
+import * as Pages from '../pages';
 
 const Router = (): JSX.Element => {
   return (
     <Routes>
-      <Route index element={<PigmentsPage />} />
-      <Route path={`counter`} element={<PigmentsPage />} />
+      <Route index element={<Pages.PigmentsRootPage />} />
+      <Route path={PigmentsAppRouting.COUNTER.route} element={<Pages.CounterPage />} />
     </Routes>
   );
 };

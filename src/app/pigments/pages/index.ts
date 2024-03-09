@@ -1,3 +1,4 @@
-import PigmentsPage from './pigments-page/pigments-page';
+import CounterPage from './counter-page/counter-page';
+import PigmentsRootPage from './pigments-root-page/pigments-root-page';
 
-export { PigmentsPage };
+export { PigmentsRootPage, CounterPage };
