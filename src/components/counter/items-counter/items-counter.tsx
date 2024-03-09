@@ -13,6 +13,7 @@ interface IItemsCounterProps {
   dec: (value: number, quantity: number) => void;
   onValueChangeHandler: (value: number) => void;
   defaultValue: number;
+  defaultQuantity?: number;
   text: {
     quantityTitle: string;
     valueTitleBefore: string;
@@ -26,9 +27,10 @@ const ItemsCounter = ({
   onValueChangeHandler,
   defaultValue,
   text,
+  defaultQuantity,
 }: IItemsCounterProps): JSX.Element => {
   const [value, setValue] = useState<number | null>(defaultValue);
-  const [quantity, setQuantity] = useState<number | null>(1);
+  const [quantity, setQuantity] = useState<number | null>(defaultQuantity ? defaultQuantity : 1);
   const [valueMessage, setValueMessage] = useState<InputMessagesText>(InputMessagesText.DEFAULT);
   const [valueStatus, setValueStatus] = useState<InputStatuses>(InputStatuses.DEFAULT);
   const [quantityMessage, setQuantityMessage] = useState<InputMessagesText>(

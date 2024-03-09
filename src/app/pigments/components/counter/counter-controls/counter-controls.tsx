@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { AdditionalNav, PageNotification } from '../../../../../components';
 import GumsBagCounter from '../pigments-bag-counter/pigments-bag-counter';
 import GumsBasicCounter from '../pigments-basic-counter/pigments-basic-counter';
+import GumsContainerCounter from '../pigments-container-counter/pigments-container-counter';
 //variables
 import { PIGMENTS_COUNTERS, pigmentsCountersList } from '../../../variables';
 import { ErrorsText, NotificationType } from '../../../../../variables';
@@ -14,7 +15,7 @@ interface ICounterControlsProps {
 }
 
 const CounterControls = ({ UNID }: ICounterControlsProps): JSX.Element => {
-  const [currentCounter, setCurrentCounter] = useState<string>(PIGMENTS_COUNTERS.BAGS);
+  const [currentCounter, setCurrentCounter] = useState<string>(PIGMENTS_COUNTERS.CONTAINER);
 
   const getCurrentCounterComponent = (): JSX.Element => {
     switch (currentCounter) {
@@ -22,6 +23,8 @@ const CounterControls = ({ UNID }: ICounterControlsProps): JSX.Element => {
         return <GumsBagCounter UNID={UNID} />;
       case PIGMENTS_COUNTERS.COUNTER:
         return <GumsBasicCounter UNID={UNID} />;
+      case PIGMENTS_COUNTERS.CONTAINER:
+        return <GumsContainerCounter UNID={UNID} />;
       default:
         return (
           <PageNotification
