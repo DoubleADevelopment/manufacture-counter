@@ -14,12 +14,14 @@ const PIGMENTS_STORAGE_NAME = 'pigments-data';
 
 enum PIGMENTS_COUNTERS {
   COUNTER = 'Licznik',
-  CARDBOARD = 'Kartony',
+  BAGS = 'Worki',
+  CONTAINER = 'Kontenery',
 }
 
 const pigmentsCountersList: PIGMENTS_COUNTERS[] = [
   PIGMENTS_COUNTERS.COUNTER,
-  PIGMENTS_COUNTERS.CARDBOARD,
+  PIGMENTS_COUNTERS.BAGS,
+  PIGMENTS_COUNTERS.CONTAINER,
 ];
 
 export {

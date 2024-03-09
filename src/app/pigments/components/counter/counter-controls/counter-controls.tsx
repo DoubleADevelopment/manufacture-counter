@@ -1,7 +1,7 @@
 //components
 import { useState } from 'react';
 import { AdditionalNav, PageNotification } from '../../../../../components';
-import GumsCardboardCounter from '../pigments-cardboard-counter/pigments-cardboard-counter';
+import GumsBagCounter from '../pigments-bag-counter/pigments-bag-counter';
 import GumsBasicCounter from '../pigments-basic-counter/pigments-basic-counter';
 //variables
 import { PIGMENTS_COUNTERS, pigmentsCountersList } from '../../../variables';
@@ -14,12 +14,12 @@ interface ICounterControlsProps {
 }
 
 const CounterControls = ({ UNID }: ICounterControlsProps): JSX.Element => {
-  const [currentCounter, setCurrentCounter] = useState<string>(PIGMENTS_COUNTERS.CARDBOARD);
+  const [currentCounter, setCurrentCounter] = useState<string>(PIGMENTS_COUNTERS.BAGS);
 
   const getCurrentCounterComponent = (): JSX.Element => {
     switch (currentCounter) {
-      case PIGMENTS_COUNTERS.CARDBOARD:
-        return <GumsCardboardCounter UNID={UNID} />;
+      case PIGMENTS_COUNTERS.BAGS:
+        return <GumsBagCounter UNID={UNID} />;
       case PIGMENTS_COUNTERS.COUNTER:
         return <GumsBasicCounter UNID={UNID} />;
       default:

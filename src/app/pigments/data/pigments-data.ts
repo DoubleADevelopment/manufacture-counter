@@ -28,7 +28,7 @@ const pigmentsData: IPigmentsPackage = {
         },
         [PigmentsLogsNames.BAG]: {
           log: [],
-          name: 'Kartony',
+          name: 'Worki',
         },
       },
       lastChange: null,
@@ -70,7 +70,7 @@ const pigmentsData: IPigmentsPackage = {
         },
         [PigmentsLogsNames.BAG]: {
           log: [],
-          name: 'Kartony',
+          name: 'Worki',
         },
       },
       lastChange: null,
@@ -112,7 +112,7 @@ const pigmentsData: IPigmentsPackage = {
         },
         [PigmentsLogsNames.BAG]: {
           log: [],
-          name: 'Kartony',
+          name: 'Worki',
         },
       },
       lastChange: null,
@@ -154,7 +154,7 @@ const pigmentsData: IPigmentsPackage = {
         },
         [PigmentsLogsNames.BAG]: {
           log: [],
-          name: 'Kartony',
+          name: 'Worki',
         },
       },
       lastChange: null,
@@ -196,7 +196,7 @@ const pigmentsData: IPigmentsPackage = {
         },
         [PigmentsLogsNames.BAG]: {
           log: [],
-          name: 'Kartony',
+          name: 'Worki',
         },
       },
       lastChange: null,
@@ -238,7 +238,7 @@ const pigmentsData: IPigmentsPackage = {
         },
         [PigmentsLogsNames.BAG]: {
           log: [],
-          name: 'Kartony',
+          name: 'Worki',
         },
       },
       lastChange: null,
@@ -280,7 +280,7 @@ const pigmentsData: IPigmentsPackage = {
         },
         [PigmentsLogsNames.BAG]: {
           log: [],
-          name: 'Kartony',
+          name: 'Worki',
         },
       },
       lastChange: null,
@@ -322,7 +322,7 @@ const pigmentsData: IPigmentsPackage = {
         },
         [PigmentsLogsNames.BAG]: {
           log: [],
-          name: 'Kartony',
+          name: 'Worki',
         },
       },
       lastChange: null,
@@ -364,7 +364,7 @@ const pigmentsData: IPigmentsPackage = {
         },
         [PigmentsLogsNames.BAG]: {
           log: [],
-          name: 'Kartony',
+          name: 'Worki',
         },
       },
       lastChange: null,

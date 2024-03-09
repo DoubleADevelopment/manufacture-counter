@@ -15,6 +15,9 @@ const CounterText = {
   ONE_CARDBOARD_VALUE_IS: 'jeden karton = ',
   GUMS_BASIC_COUNTER_INPUT_TEXT: 'Ilość gumy w kg',
   CHEMISTRY_BASIC_COUNTER_INPUT_TEXT: 'Ilość chemii w szt',
+  PIGMENTS_BASIC_COUNTER_INPUT_TEXT: 'Ilość pigmentu w kg',
+  PIGMENTS_BAGS_COUNTER_TITLE: 'Ilość vorków',
+  PIGMENTS_BAG_VALUE_IS: 'Waga jednego worku',
 };
 
 // Failed to open counter called

@@ -12,14 +12,14 @@ import { SelectorGetCurrentPigmentSetting } from '../../../store/slectors/select
 import { CounterText, UnitsOfMeasurementText } from '../../../../../variables';
 import { PigmentsLogsNames, PigmentsSettingsNames } from '../../../variables';
 
-interface IGumsCardboardCounterProps {
+interface IPigmentsBagCounterProps {
   UNID: string;
 }
 
-const GumsCardboardCounter = ({ UNID }: IGumsCardboardCounterProps): JSX.Element => {
+const GumsBagCounter = ({ UNID }: IPigmentsBagCounterProps): JSX.Element => {
   const dispatch = useAppDispatch();
 
-  const cardboardDefaultValue = useAppSelector(
+  const bagDefaultValue = useAppSelector(
     SelectorGetCurrentPigmentSetting(UNID, PigmentsSettingsNames.BASE_BAG_VALUE),
   );
 
@@ -50,7 +50,7 @@ const GumsCardboardCounter = ({ UNID }: IGumsCardboardCounterProps): JSX.Element
   };
 
   const changeCardboarSetting = (value: number) => {
-    if (value !== cardboardDefaultValue) {
+    if (value !== bagDefaultValue) {
       dispatch(
         changeItemSettingAction({
           UNID: UNID,
@@ -66,14 +66,14 @@ const GumsCardboardCounter = ({ UNID }: IGumsCardboardCounterProps): JSX.Element
       inc={inc}
       dec={dec}
       onValueChangeHandler={changeCardboarSetting}
-      defaultValue={cardboardDefaultValue}
+      defaultValue={bagDefaultValue}
       text={{
-        quantityTitle: CounterText.QUANTITY_COUNTER_TITLE,
-        valueTitleBefore: CounterText.ONE_CARDBOARD_VALUE_IS,
+        quantityTitle: CounterText.PIGMENTS_BAGS_COUNTER_TITLE,
+        valueTitleBefore: CounterText.PIGMENTS_BAG_VALUE_IS,
         valueTitleAfter: UnitsOfMeasurementText.KG,
       }}
     />
   );
 };
 
-export default GumsCardboardCounter;
+export default GumsBagCounter;
