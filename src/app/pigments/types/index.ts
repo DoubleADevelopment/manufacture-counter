@@ -1,4 +1,10 @@
-import {
+import type {
+  IIncDecAction,
+  IClearItemAction,
+  ILogAction,
+  IChangeItemSetting,
+} from './action-types';
+import type {
   IPigmentsItem,
   IPigmentsData,
   IPigmentsPackage,
@@ -12,4 +18,8 @@ export type {
   IPigmentsPackage,
   IPigmentsLogs,
   PigmentsItemsListType,
+  IIncDecAction,
+  IClearItemAction,
+  ILogAction,
+  IChangeItemSetting,
 };

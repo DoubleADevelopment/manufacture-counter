@@ -1,5 +1,6 @@
 //types
 import type { IRouteItem } from '../../../types';
+//variables
 import { ComponentsRouting } from '../../../variables';
 
 const GUMS_ROOT = ComponentsRouting.GUMS.route;
@@ -26,7 +27,7 @@ const GumsAppRouting: Record<GumsAppRoutingNames, IRouteItem> = {
     path: GumsAppPaths.ROOT,
   },
   [GumsAppRoutingNames.COUNTER]: {
-    title: 'Licznik chemia',
+    title: 'Licznik guma',
     route: GumsAppRoutes.COUNTER,
     path: GumsAppPaths.COUNTER,
   },
