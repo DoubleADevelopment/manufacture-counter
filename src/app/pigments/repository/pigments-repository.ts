@@ -45,9 +45,11 @@ class PigmentsRepositroy implements IRepository<IPigmentsData> {
     if (result instanceof Error) {
       const defaultData = this.#getDefaultData();
       return defaultData;
-    } else {
+    } else if (result === null) {
       const defaultData = this.#getDefaultData();
       return defaultData;
+    } else {
+      return result;
     }
   }
 

@@ -1,5 +1,15 @@
-import type { IAdapterService } from '../../../types';
-import { IPigmentsItem, IPigmentsPackage, IPigmentsData } from '../types/data-type';
+//types
+import type {
+  IAdapterService,
+  IItemDataToDisplay,
+  ItemsDataToDisplayListType,
+} from '../../../types';
+import type {
+  IPigmentsItem,
+  IPigmentsPackage,
+  IPigmentsData,
+  PigmentsItemsListType,
+} from '../types/data-type';
 
 class PigmentsAdapterService implements IAdapterService<IPigmentsData, IPigmentsPackage> {
   adaptDataToApp(data: IPigmentsPackage): IPigmentsData {
@@ -7,6 +17,37 @@ class PigmentsAdapterService implements IAdapterService<IPigmentsData, IPigments
 
     data.items.forEach((item: IPigmentsItem) => {
       adaptedData[item.UNID] = item;
+    });
+    return adaptedData;
+  }
+
+  adaptDataToView(data: IPigmentsData): PigmentsItemsListType {
+    const itemsArray: PigmentsItemsListType = [];
+
+    for (const item in data) {
+      itemsArray.push(data[item]);
+    }
+
+    return itemsArray;
+  }
+
+  adaptItemDataToDisplay(item: IPigmentsItem): IItemDataToDisplay {
+    return {
+      UNID: item.UNID,
+      manufactured: item.manufactured,
+      productName: item.productName,
+      systemCode: item.systemCode,
+      description: item.description,
+      additionalInfo: item.additionalInfo,
+      image: item.image,
+      amount: item.amount,
+    };
+  }
+
+  adaptItemsDataToDisplayList(data: IPigmentsData): ItemsDataToDisplayListType {
+    const dataAdaptedToView = this.adaptDataToView(data);
+    const adaptedData = dataAdaptedToView.map((item) => {
+      return this.adaptItemDataToDisplay(item);
     });
     return adaptedData;
   }
