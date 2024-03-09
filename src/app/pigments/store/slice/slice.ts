@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 //variables
 import { PigmentsLogsNames } from '../../variables/';
 //state
-import gumsState from '../state/state';
+import pigmentsState from '../state/state';
 //types
 import type {
   IClearItemAction,
@@ -14,8 +14,8 @@ import type {
 } from '../../types';
 
 export const pigmentsSlice = createSlice({
-  name: 'gums',
-  initialState: gumsState,
+  name: 'pigments',
+  initialState: pigmentsState,
 
   reducers: {
     increment: (state, action: PayloadAction<IIncDecAction>) => {

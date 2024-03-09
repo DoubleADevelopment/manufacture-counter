@@ -25,7 +25,7 @@ const ItemCardShort = ({
           className={`${style['item-card-short']} ${onCardClickHandler && style['item-card-short--with-modal']}`}
         >
           <div className={style['item-card-short__wrap']}>
-            <h3 className={`content-primary-a heading-small`}>{item.productName}</h3>
+            <h3 className={`content-primary-a heading-x-small`}>{item.productName}</h3>
 
             {item.description && (
               <p className={`content-primary-a paragraph-small`}>{item.description}</p>

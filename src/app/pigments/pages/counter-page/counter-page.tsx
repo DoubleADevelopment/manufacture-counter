@@ -4,7 +4,7 @@ import { CounterPageLayout } from '../../../../layouts';
 import { PigmentsAppRouting } from '../../variables';
 //variables
 import { CounterText } from '../../../../variables';
-// import { CountableItemInfo, Counter } from '../../components';
+import { CountableItemInfo, Counter } from '../../components';
 //styles
 import style from './counter-page.module.scss';
 
@@ -15,8 +15,8 @@ const CounterPage = (): JSX.Element => {
       headerTitle={CounterText.GUMS_COUNTER_TITLE}
     >
       <main className={style['counter-page']}>
-        {/* <CountableItemInfo /> */}
-        {/* <Counter /> */}
+        <CountableItemInfo />
+        <Counter />
       </main>
     </CounterPageLayout>
   );

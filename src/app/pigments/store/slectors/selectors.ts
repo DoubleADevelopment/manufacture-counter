@@ -26,7 +26,7 @@ export const SelectorCheckIfElementExistsByUNID =
     if (!UNID) {
       result = false;
     } else {
-      if (!state.gums[UNID]) {
+      if (!state.pigments[UNID]) {
         result = false;
       } else {
         result = true;
