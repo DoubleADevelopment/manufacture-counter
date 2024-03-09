@@ -1,7 +1,9 @@
+//types
+import type { ILogs } from '../../../types';
 //vars
 import { PigmentsLogsNames, PigmentsSettingsNames } from '../variables/data-variables';
 
-interface IPigmentsLogs {
+interface IPigmentsLogs extends ILogs {
   [PigmentsLogsNames.COUNTER]: {
     log: string[];
     name: string;
@@ -31,7 +33,7 @@ interface IPigmentsSettings {
   };
 }
 
-interface IPigmentsDataItemType {
+interface IPigmentsItem {
   UNID: string;
   amount: number;
   manufactured: string;
@@ -48,25 +50,22 @@ interface IPigmentsDataItemType {
   packagingInfo: string;
 }
 
-type PigmentsItemsListType = IPigmentsDataItemType[];
+type PigmentsItemsListType = IPigmentsItem[];
 
-interface IPigmentsDataPackageType {
+interface IPigmentsPackage {
   dataPackageName: string;
   dataPackageUNID: number;
-  items: IPigmentsDataItemType[];
+  items: IPigmentsItem[];
 }
 
 interface IPigmentsData {
-  [UNID: string]: IPigmentsDataItemType;
+  [UNID: string]: IPigmentsItem;
 }
 
-type PigmentsDataForViewType = IPigmentsDataItemType[];
-
 export type {
-  IPigmentsDataItemType,
+  IPigmentsItem,
   IPigmentsData,
-  IPigmentsDataPackageType,
-  PigmentsDataForViewType,
+  IPigmentsPackage,
   IPigmentsLogs,
   PigmentsItemsListType,
 };

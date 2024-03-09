@@ -1,9 +1,9 @@
 //types
-import type { IPigmentsDataPackageType } from '../types/data-type';
+import type { IPigmentsPackage } from '../types/data-type';
 //vars
 import { PigmentsLogsNames, PigmentsSettingsNames } from '../variables/data-variables';
 
-const pigmentsData: IPigmentsDataPackageType = {
+const pigmentsData: IPigmentsPackage = {
   dataPackageName: 'pigments',
   dataPackageUNID: 2001,
   items: [

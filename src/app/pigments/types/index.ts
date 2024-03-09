@@ -1,17 +1,15 @@
 import {
-  IPigmentsDataItemType,
+  IPigmentsItem,
   IPigmentsData,
-  IPigmentsDataPackageType,
-  PigmentsDataForViewType,
+  IPigmentsPackage,
   IPigmentsLogs,
   PigmentsItemsListType,
 } from './data-type';
 
 export type {
-  IPigmentsDataItemType,
+  IPigmentsItem,
   IPigmentsData,
-  IPigmentsDataPackageType,
-  PigmentsDataForViewType,
+  IPigmentsPackage,
   IPigmentsLogs,
   PigmentsItemsListType,
 };
