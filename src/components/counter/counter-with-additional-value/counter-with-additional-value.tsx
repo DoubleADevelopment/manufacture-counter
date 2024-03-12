@@ -75,9 +75,9 @@ const CounterWithAdditionalValue = ({
     setAdditionalValueMessage(validateAdditionalValueResult.message);
   };
 
-  const valueHandler = (quantity: number | null) => {
-    setValue(quantity);
-    const validateQuantityResult = inputValueValidate(quantity);
+  const valueHandler = (newValue: number | null) => {
+    const validateQuantityResult = inputValueValidate(newValue);
+    setValue(newValue);
     setValueStatus(validateQuantityResult.status);
     setValueMessage(validateQuantityResult.message);
   };
