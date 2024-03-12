@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 //variables
-import { CounterText, UnitsOfMeasurementText } from '../../../variables';
+import { CounterText, InterfaceText } from '../../../variables';
 //types
 import type { IItemDataToDisplay } from '../../../types/';
 //style
@@ -8,10 +8,9 @@ import style from './items-list-item.module.scss';
 
 interface IItemsListItemProps {
   item: IItemDataToDisplay;
-  measurementText: UnitsOfMeasurementText;
 }
 
-const ItemsListItem = ({ item, measurementText }: IItemsListItemProps): JSX.Element => {
+const ItemsListItem = ({ item }: IItemsListItemProps): JSX.Element => {
   const {
     UNID,
     productName,
@@ -42,7 +41,7 @@ const ItemsListItem = ({ item, measurementText }: IItemsListItemProps): JSX.Elem
         {manufactured && <p className={`content-primary-a paragraph-small`}> {manufactured}</p>}
 
         <div className={`${style['items-list-item__amount']} paragraph-primary-a label-small`}>
-          {measurementText}:{' '}
+          {InterfaceText.AMOUNT}:
           <span className="paragraph-primary-a heading-x-small">
             {amount} {unitsOfMeasurement}
           </span>

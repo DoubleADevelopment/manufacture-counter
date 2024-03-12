@@ -1,7 +1,5 @@
 //components
 import ItemsListItem from './items-list-item/items-list-item';
-//variables
-import { UnitsOfMeasurementText } from '../../variables/';
 //types
 import type { ItemsDataToDisplayListType } from '../../types/';
 //styles
@@ -15,13 +13,7 @@ const ItemsList = ({ data }: IComponentsListProps): JSX.Element => {
   return (
     <ul className={style['items-list']}>
       {data.map((item) => {
-        return (
-          <ItemsListItem
-            item={item}
-            measurementText={UnitsOfMeasurementText.AMOUNT}
-            key={item.UNID}
-          />
-        );
+        return <ItemsListItem item={item} key={item.UNID} />;
       })}
     </ul>
   );

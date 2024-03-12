@@ -23,17 +23,12 @@ enum ErrorsText {
   FAILED_OPEN_COUNTER_CALLED_COUNTERNAME = 'Nie udało się otworzyć licznik o nazwie - ',
 }
 
-enum UnitsOfMeasurementText {
-  KG = 'Kg',
-  AMOUNT = 'Ilość',
-  BAGS = 'vorki',
-}
-
 const InterfaceText = {
   CLOSE_MODAL: 'Zamknąć okno',
   BACK_TO_OVERVIEW: 'Powrót do przeglądu',
   CANCEL_DELETING: 'Anulować',
   CONFIRM_DELETING: 'Potwierdź usunięcie',
+  AMOUNT: 'Ilość',
 };
 
-export { CounterText, UnitsOfMeasurementText, ErrorsText, InterfaceText, InputMessagesText };
+export { CounterText, ErrorsText, InterfaceText, InputMessagesText };
