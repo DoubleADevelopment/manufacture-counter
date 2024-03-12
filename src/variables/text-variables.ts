@@ -5,24 +5,18 @@ const CounterText = {
   CLEAR_COUNTER_DATA: 'Usuń danę licznika',
   NO_LOGS: 'Brak logów',
   COUNTER_LOGS: 'Logi licznika',
-  CHEMISTRY_COUNTER_TITLE: 'Licznik chemii',
-  CHEMISTRY_COUNTER_VENEER: 'Okleina',
-  CHEMISTRY_COUNTER_EXTRUSION: 'Ekstruzja',
   GUMS_COUNTER_TITLE: 'Licznik gumy',
   CLEAR_COUNTER_HISTORY_CONFIRM: 'Napewno chcesz usunąć danę licznika?',
   OPEN_COUNTER: 'Otwórz licznik',
   QUANTITY_COUNTER_TITLE: 'Ilość',
   ONE_CARDBOARD_VALUE_IS: 'jeden karton = ',
   GUMS_BASIC_COUNTER_INPUT_TEXT: 'Ilość gumy w kg',
-  CHEMISTRY_BASIC_COUNTER_INPUT_TEXT: 'Ilość chemii w szt',
   PIGMENTS_BASIC_COUNTER_INPUT_TEXT: 'Ilość pigmentu w kg',
   PIGMENTS_BAGS_COUNTER_TITLE: 'Ilość vorków',
   PIGMENTS_BAG_VALUE_IS: 'Waga jednego worku',
   PIGMENTS_CONTAINER_COUNTER_TITLE: 'Waga kontenera z pigmentem',
   PIGMENTS_CONTAINER_WEIGHT: 'Waga kontenera',
 };
-
-// Failed to open counter called
 
 enum InputMessagesText {
   EMPTY_FIELD = 'Nic nie wpisanę w pole!',

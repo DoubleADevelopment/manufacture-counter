@@ -2,11 +2,14 @@
 import { BasicCounter } from '../../../../../components';
 //store
 import { useAppDispatch, useAppSelector } from '../../../../../hooks/hooks';
-import { CounterText } from '../../../../../variables';
 import { decrementAction, incrementAction } from '../../../store/actions/actions';
 import { SelectorGetCurrentChemistrySetting } from '../../../store/slectors/selectors';
 //variables
-import { ChemistryPackagesNames, ChemistrySettingsNames } from '../../../variables/';
+import {
+  CHEMISTRY_TEXT,
+  ChemistryPackagesNames,
+  ChemistrySettingsNames,
+} from '../../../variables/';
 //styles
 import style from './counter-controls.module.scss';
 
@@ -33,7 +36,7 @@ const CounterControls = ({ UNID, packName }: ICounterControlsProps): JSX.Element
       <BasicCounter
         inc={inc}
         dec={dec}
-        title={CounterText.CHEMISTRY_BASIC_COUNTER_INPUT_TEXT}
+        title={CHEMISTRY_TEXT.CHEMISTRY_BASIC_COUNTER_INPUT_FIELD_TEXT}
         defaultValue={chemistryBasicCounterDefaultValue}
       />
     </section>
