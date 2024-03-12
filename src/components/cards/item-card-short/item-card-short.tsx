@@ -47,6 +47,7 @@ const ItemCardShort = ({
           <div className={`${style['item-card-short__amount']} paragraph-primary-a label-medium`}>
             {measurementText}
             <span className="paragraph-primary-a heading-medium">{item.amount}</span>
+            {item.unitsOfMeasurement}
           </div>
 
           {onCardClickHandler && (
