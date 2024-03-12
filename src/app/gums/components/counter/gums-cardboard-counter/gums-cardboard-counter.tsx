@@ -22,9 +22,16 @@ const GumsCardboardCounter = ({ UNID }: IGumsCardboardCounterProps): JSX.Element
     SelectorGetCurrentGumSetting(UNID, GumsSettingsNames.BASE_CARDBOARD_VALUE),
   );
 
-  const inc = (value: number, quantity: number): void => {
-    const valueToAdd = value * quantity;
-    const logText = quantity === 1 ? `+${value}` : `+${value} * ${quantity} = ${valueToAdd}`;
+  const inc = (value: number, additionalValue: number): void => {
+    const cardboardQuantity = value;
+    const cardboardWeight = additionalValue;
+    const valueToAdd = cardboardQuantity * cardboardWeight;
+
+    const logText =
+      value === 1
+        ? `+${cardboardWeight}`
+        : `+${cardboardWeight} * ${cardboardQuantity} = ${valueToAdd}`;
+
     dispatch(
       incrementAction({
         UNID: UNID,
@@ -35,9 +42,16 @@ const GumsCardboardCounter = ({ UNID }: IGumsCardboardCounterProps): JSX.Element
     );
   };
 
-  const dec = (value: number, quantity: number): void => {
-    const valueToAdd = value * quantity;
-    const logText = quantity === 1 ? `-${value}` : `-${value} * ${quantity} = ${valueToAdd}`;
+  const dec = (value: number, additionalValue: number): void => {
+    const cardboardQuantity = value;
+    const cardboardWeight = additionalValue;
+    const valueToAdd = cardboardWeight * cardboardQuantity;
+
+    const logText =
+      cardboardQuantity === 1
+        ? `-${cardboardWeight}`
+        : `-${cardboardWeight} * ${cardboardQuantity} = ${valueToAdd}`;
+
     dispatch(
       decrementAction({
         UNID: UNID,
@@ -64,12 +78,12 @@ const GumsCardboardCounter = ({ UNID }: IGumsCardboardCounterProps): JSX.Element
     <CounterWithAdditionalValue
       inc={inc}
       dec={dec}
-      onValueChangeHandler={changeCardboarSetting}
-      defaultValue={cardboardDefaultValue}
+      onAdditionalValueChangeHandler={changeCardboarSetting}
+      defaultAdditionalValue={cardboardDefaultValue}
       text={{
-        quantityTitle: GUMS_TEXT.GUMS_CARDBOARD_COUNTER_INPUT_FIELD_TEXT,
-        valueTitleBefore: GUMS_TEXT.GUMS_CARDBOARD_COUNTER_ADDITIONAL_INPUT_BEFORE_TEXT,
-        valueTitleAfter: GUMS_TEXT.GUMS_CARDBOARD_COUNTER_ADDITIONAL_INPUT_AFTER_TEXT,
+        valueTitle: GUMS_TEXT.GUMS_CARDBOARD_COUNTER_INPUT_FIELD_TEXT,
+        additionalValueTitleBefore: GUMS_TEXT.GUMS_CARDBOARD_COUNTER_ADDITIONAL_INPUT_BEFORE_TEXT,
+        additionalValueTitleAfter: GUMS_TEXT.GUMS_CARDBOARD_COUNTER_ADDITIONAL_INPUT_AFTER_TEXT,
       }}
     />
   );

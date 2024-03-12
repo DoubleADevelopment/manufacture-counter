@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 //components
-import { ButtonPrimary, ButtonSecondary, ControlSetValueAdditional, ControlSetValue } from '../..';
+import { ButtonPrimary, ButtonSecondary, ControlSetAdditionalValue, ControlSetValue } from '../..';
 //utils
 import { inputValueValidate } from '../../../utils/utils';
 //variables
@@ -9,84 +9,98 @@ import { CounterText, InputMessagesText, InputStatuses } from '../../../variable
 import style from './counter-with-additional-value.module.scss';
 
 interface ICounterWithAdditionalValueProps {
-  inc: (value: number, quantity: number) => void;
-  dec: (value: number, quantity: number) => void;
-  onValueChangeHandler: (value: number) => void;
-  defaultValue: number;
-  defaultQuantity?: number;
+  inc: (value: number, additionalValue: number) => void;
+  dec: (value: number, additionalValue: number) => void;
+  onAdditionalValueChangeHandler: (value: number) => void;
+  defaultAdditionalValue: number;
+  defaultValue?: number;
   text: {
-    quantityTitle: string;
-    valueTitleBefore: string;
-    valueTitleAfter: string;
+    valueTitle: string;
+    additionalValueTitleBefore: string;
+    additionalValueTitleAfter: string;
   };
 }
 
 const CounterWithAdditionalValue = ({
   inc,
   dec,
-  onValueChangeHandler,
-  defaultValue,
+  onAdditionalValueChangeHandler,
+  defaultAdditionalValue,
   text,
-  defaultQuantity,
+  defaultValue,
 }: ICounterWithAdditionalValueProps): JSX.Element => {
-  const [value, setValue] = useState<number | null>(defaultValue);
-  const [quantity, setQuantity] = useState<number | null>(defaultQuantity ? defaultQuantity : 1);
+  //main value state
+  const [value, setValue] = useState<number | null>(defaultValue ? defaultValue : 1);
   const [valueMessage, setValueMessage] = useState<InputMessagesText>(InputMessagesText.DEFAULT);
   const [valueStatus, setValueStatus] = useState<InputStatuses>(InputStatuses.DEFAULT);
-  const [quantityMessage, setQuantityMessage] = useState<InputMessagesText>(
+  //addtitional value state
+  const [additionalValue, setAdditionalValue] = useState<number | null>(defaultAdditionalValue);
+  const [additionalValueMessage, setAdditionalValueMessage] = useState<InputMessagesText>(
     InputMessagesText.DEFAULT,
   );
-  const [quantityStatus, setQuantityStatus] = useState<InputStatuses>(InputStatuses.DEFAULT);
+  const [additionalValueStatus, setAdditionalValueStatus] = useState<InputStatuses>(
+    InputStatuses.DEFAULT,
+  );
 
   useEffect(() => {
-    if (!!value && value !== 0) onValueChangeHandler(value);
-  }, [value]);
+    if (!!additionalValue && additionalValue !== 0) onAdditionalValueChangeHandler(additionalValue);
+  }, [additionalValue]);
 
   const plusClickHandler = () => {
-    const validateResult = inputValueValidate(quantity);
-    if (validateResult.status === InputStatuses.SUCCESS && value !== null && quantity !== null) {
-      inc(value, quantity);
+    const validateResult = inputValueValidate(value);
+    if (
+      validateResult.status === InputStatuses.SUCCESS &&
+      additionalValue !== null &&
+      value !== null
+    ) {
+      inc(value, additionalValue);
     }
   };
 
   const minusClickHandler = () => {
-    const validateResult = inputValueValidate(quantity);
-    if (validateResult.status === InputStatuses.SUCCESS && value !== null && quantity !== null) {
-      dec(value, quantity);
+    const validateResult = inputValueValidate(value);
+    if (
+      validateResult.status === InputStatuses.SUCCESS &&
+      additionalValue !== null &&
+      value !== null
+    ) {
+      dec(value, additionalValue);
     }
   };
 
-  const valueHandler = (value: number | null): void => {
-    setValue(value);
-    const validateValueResult = inputValueValidate(value);
-    setValueStatus(validateValueResult.status);
-    setValueMessage(validateValueResult.message);
+  const additionalValueHandler = (newAdditionalValue: number | null): void => {
+    const validateAdditionalValueResult = inputValueValidate(newAdditionalValue);
+    setAdditionalValue(newAdditionalValue);
+    setAdditionalValueStatus(validateAdditionalValueResult.status);
+    setAdditionalValueMessage(validateAdditionalValueResult.message);
   };
 
-  const quantityHandler = (quantity: number | null) => {
-    setQuantity(quantity);
+  const valueHandler = (quantity: number | null) => {
+    setValue(quantity);
     const validateQuantityResult = inputValueValidate(quantity);
-    setQuantityStatus(validateQuantityResult.status);
-    setQuantityMessage(validateQuantityResult.message);
+    setValueStatus(validateQuantityResult.status);
+    setValueMessage(validateQuantityResult.message);
   };
 
   return (
     <div className={style['items-counter']}>
-      <ControlSetValueAdditional
-        value={value}
-        titleBefore={text.valueTitleBefore}
-        titleAfter={text.valueTitleAfter}
+      <ControlSetAdditionalValue
+        value={additionalValue}
+        titleBefore={text.additionalValueTitleBefore}
+        titleAfter={text.additionalValueTitleAfter}
+        onInputChangeHandler={additionalValueHandler}
+        status={additionalValueStatus}
+        message={additionalValueMessage}
+      />
+
+      <ControlSetValue
         onInputChangeHandler={valueHandler}
+        value={value}
         status={valueStatus}
         message={valueMessage}
+        title={text.valueTitle}
       />
-      <ControlSetValue
-        onInputChangeHandler={quantityHandler}
-        value={quantity}
-        status={quantityStatus}
-        message={quantityMessage}
-        title={text.quantityTitle}
-      />
+
       <div className={style['items-counter__buttons']}>
         <ButtonSecondary text={CounterText.MINUS} clickHandler={minusClickHandler} />
         <ButtonPrimary text={CounterText.PLUS} clickHandler={plusClickHandler} />

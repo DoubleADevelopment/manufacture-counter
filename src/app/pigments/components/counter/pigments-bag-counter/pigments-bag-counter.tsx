@@ -22,9 +22,14 @@ const GumsBagCounter = ({ UNID }: IPigmentsBagCounterProps): JSX.Element => {
     SelectorGetCurrentPigmentSetting(UNID, PigmentsSettingsNames.BASE_BAG_VALUE),
   );
 
-  const inc = (value: number, quantity: number): void => {
-    const valueToAdd = value * quantity;
-    const logText = quantity === 1 ? `+${value}` : `+${value} * ${quantity} = ${valueToAdd}`;
+  const inc = (value: number, additionalValue: number): void => {
+    const bagQuantity = value;
+    const bagWeight = additionalValue;
+    const valueToAdd = bagWeight * bagQuantity;
+
+    const logText =
+      bagQuantity === 1 ? `+${bagWeight}` : `+${bagWeight} * ${bagQuantity} = ${valueToAdd}`;
+
     dispatch(
       incrementAction({
         UNID: UNID,
@@ -35,9 +40,14 @@ const GumsBagCounter = ({ UNID }: IPigmentsBagCounterProps): JSX.Element => {
     );
   };
 
-  const dec = (value: number, quantity: number): void => {
-    const valueToAdd = value * quantity;
-    const logText = quantity === 1 ? `-${value}` : `-${value} * ${quantity} = ${valueToAdd}`;
+  const dec = (value: number, additionalValue: number): void => {
+    const bagQuantity = value;
+    const bagWeight = additionalValue;
+    const valueToAdd = bagWeight * bagQuantity;
+
+    const logText =
+      bagQuantity === 1 ? `-${bagWeight}` : `-${bagWeight} * ${bagQuantity} = ${valueToAdd}`;
+
     dispatch(
       decrementAction({
         UNID: UNID,
@@ -64,12 +74,13 @@ const GumsBagCounter = ({ UNID }: IPigmentsBagCounterProps): JSX.Element => {
     <CounterWithAdditionalValue
       inc={inc}
       dec={dec}
-      onValueChangeHandler={changeCardboarSetting}
-      defaultValue={bagDefaultValue}
+      onAdditionalValueChangeHandler={changeCardboarSetting}
+      defaultAdditionalValue={bagDefaultValue}
       text={{
-        quantityTitle: PIGMENTS_TEXT.PIGMENTS_BAGS_COUNTER_INPUT_FIELD_TEXT,
-        valueTitleBefore: PIGMENTS_TEXT.PIGMENTS_BAGS_COUNTER_ADDITIONAL_INPUT_BEFORE_TEXT,
-        valueTitleAfter: PIGMENTS_TEXT.PIGMENTS_BAGS_COUNTER_ADDITIONAL_INPUT_AFTER_TEXT,
+        valueTitle: PIGMENTS_TEXT.PIGMENTS_BAGS_COUNTER_INPUT_FIELD_TEXT,
+        additionalValueTitleBefore:
+          PIGMENTS_TEXT.PIGMENTS_BAGS_COUNTER_ADDITIONAL_INPUT_BEFORE_TEXT,
+        additionalValueTitleAfter: PIGMENTS_TEXT.PIGMENTS_BAGS_COUNTER_ADDITIONAL_INPUT_AFTER_TEXT,
       }}
     />
   );

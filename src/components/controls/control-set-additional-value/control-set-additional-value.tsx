@@ -4,9 +4,9 @@ import { extractNumbers, onEnterClickHandlerToElementBlur } from '../../../utils
 //variables
 import { InputMessagesText, InputStatuses } from '../../../variables';
 //styles
-import style from './control-set-value-additional.module.scss';
+import style from './control-set-additional-value.module.scss';
 
-interface IControlSetValueAdditionalProps {
+interface IControlSetAdditionalValueProps {
   onInputChangeHandler: (value: number | null) => void;
   value: number | null;
   titleBefore: string;
@@ -15,14 +15,14 @@ interface IControlSetValueAdditionalProps {
   message: InputMessagesText;
 }
 
-const ControlSetValueAdditional = ({
+const ControlSetAdditionalValue = ({
   titleBefore,
   titleAfter,
   value,
   onInputChangeHandler,
   status,
   message,
-}: IControlSetValueAdditionalProps): JSX.Element => {
+}: IControlSetAdditionalValueProps): JSX.Element => {
   const inputEl = useRef<HTMLInputElement>(null);
   const [inputClassName, setInputClassName] = useState<string>('');
 
@@ -76,4 +76,4 @@ const ControlSetValueAdditional = ({
   );
 };
 
-export default ControlSetValueAdditional;
+export default ControlSetAdditionalValue;
