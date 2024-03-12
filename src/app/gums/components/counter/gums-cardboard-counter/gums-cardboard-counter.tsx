@@ -9,8 +9,7 @@ import {
 } from '../../../store/actions/actions';
 import { SelectorGetCurrentGumSetting } from '../../../store/slectors/selectors';
 //variables
-import { CounterText, UnitsOfMeasurementText } from '../../../../../variables';
-import { GumsLogsNames, GumsSettingsNames } from '../../../variables';
+import { GUMS_TEXT, GumsLogsNames, GumsSettingsNames } from '../../../variables';
 
 interface IGumsCardboardCounterProps {
   UNID: string;
@@ -68,9 +67,9 @@ const GumsCardboardCounter = ({ UNID }: IGumsCardboardCounterProps): JSX.Element
       onValueChangeHandler={changeCardboarSetting}
       defaultValue={cardboardDefaultValue}
       text={{
-        quantityTitle: CounterText.QUANTITY_COUNTER_TITLE,
-        valueTitleBefore: CounterText.ONE_CARDBOARD_VALUE_IS,
-        valueTitleAfter: UnitsOfMeasurementText.KG,
+        quantityTitle: GUMS_TEXT.GUMS_CARDBOARD_COUNTER_INPUT_FIELD_TEXT,
+        valueTitleBefore: GUMS_TEXT.GUMS_CARDBOARD_COUNTER_ADDITIONAL_INPUT_BEFORE_TEXT,
+        valueTitleAfter: GUMS_TEXT.GUMS_CARDBOARD_COUNTER_ADDITIONAL_INPUT_AFTER_TEXT,
       }}
     />
   );

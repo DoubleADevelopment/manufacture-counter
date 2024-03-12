@@ -8,7 +8,8 @@ import { SelectorGetGums } from '../../store/slectors/selectors';
 //layouts
 import { PageWithMenuLayout } from '../../../../layouts';
 //variables
-import { AppRouting, ComponentsRouting, ErrorsText, NotificationType } from '../../../../variables';
+import { GUMS_TEXT } from '../../variables';
+import { AppRouting, ErrorsText, NotificationType } from '../../../../variables';
 //styles
 import style from './gums-root-page.module.scss';
 
@@ -17,7 +18,7 @@ const GumsRootPage = () => {
   const adaptedData = gumsAdapterService.adaptItemsDataToDisplayList(gumsState);
 
   return (
-    <PageWithMenuLayout headerTitle={ComponentsRouting.GUMS.title} backLink={AppRouting.ROOT.path}>
+    <PageWithMenuLayout headerTitle={GUMS_TEXT.GUMS} backLink={AppRouting.ROOT.path}>
       <main className={style['gums-root-page']}>
         {adaptedData ? (
           <ItemsList data={adaptedData} />

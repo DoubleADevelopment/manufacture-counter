@@ -5,8 +5,7 @@ import { useAppDispatch, useAppSelector } from '../../../../../hooks/hooks';
 import { decrementAction, incrementAction } from '../../../store/actions/actions';
 import { SelectorGetCurrentGumSetting } from '../../../store/slectors/selectors';
 //variables
-import { CounterText } from '../../../../../variables';
-import { GumsLogsNames, GumsSettingsNames } from '../../../variables';
+import { GUMS_TEXT, GumsLogsNames, GumsSettingsNames } from '../../../variables';
 
 interface IGumsBasicCounterProps {
   UNID: string;
@@ -31,7 +30,7 @@ const GumsBasicCounter = ({ UNID }: IGumsBasicCounterProps): JSX.Element => {
     <BasicCounter
       inc={inc}
       dec={dec}
-      title={CounterText.GUMS_BASIC_COUNTER_INPUT_TEXT}
+      title={GUMS_TEXT.GUMS_BASIC_COUNTER_INPUT_FIELD_TEXT}
       defaultValue={gumsBasicCounterDefaultValue}
     />
   );

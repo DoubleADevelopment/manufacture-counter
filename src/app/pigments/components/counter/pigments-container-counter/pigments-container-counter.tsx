@@ -9,8 +9,7 @@ import {
 } from '../../../store/actions/actions';
 import { SelectorGetCurrentPigmentSetting } from '../../../store/slectors/selectors';
 //variables
-import { CounterText, UnitsOfMeasurementText } from '../../../../../variables';
-import { PigmentsLogsNames, PigmentsSettingsNames } from '../../../variables';
+import { PIGMENTS_TEXT, PigmentsLogsNames, PigmentsSettingsNames } from '../../../variables';
 
 interface IPigmentsBagCounterProps {
   UNID: string;
@@ -72,9 +71,9 @@ const GumsContainerCounter = ({ UNID }: IPigmentsBagCounterProps): JSX.Element =
       defaultValue={containerWeightValue}
       defaultQuantity={baseContainerValue}
       text={{
-        quantityTitle: CounterText.PIGMENTS_CONTAINER_COUNTER_TITLE,
-        valueTitleBefore: CounterText.PIGMENTS_CONTAINER_WEIGHT,
-        valueTitleAfter: UnitsOfMeasurementText.KG,
+        quantityTitle: PIGMENTS_TEXT.PIGMENTS_CONTAINER_COUNTER_INPUT_FIELD_TEXT,
+        valueTitleBefore: PIGMENTS_TEXT.PIGMENTS_CONTAINER_COUNTER_ADDITIONAL_INPUT_BEFORE_TEXT,
+        valueTitleAfter: PIGMENTS_TEXT.PIGMENTS_CONTAINER_COUNTER_ADDITIONAL_INPUT_AFTER_TEXT,
       }}
     />
   );

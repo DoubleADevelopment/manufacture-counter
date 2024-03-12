@@ -1,21 +1,11 @@
 const CounterText = {
   PLUS: 'Dodać',
   MINUS: 'Odjąć',
-  CHEMISTRY_SET_VALUE_TITLE: 'Ilość',
   CLEAR_COUNTER_DATA: 'Usuń danę licznika',
   NO_LOGS: 'Brak logów',
   COUNTER_LOGS: 'Logi licznika',
-  GUMS_COUNTER_TITLE: 'Licznik gumy',
   CLEAR_COUNTER_HISTORY_CONFIRM: 'Napewno chcesz usunąć danę licznika?',
   OPEN_COUNTER: 'Otwórz licznik',
-  QUANTITY_COUNTER_TITLE: 'Ilość',
-  ONE_CARDBOARD_VALUE_IS: 'jeden karton = ',
-  GUMS_BASIC_COUNTER_INPUT_TEXT: 'Ilość gumy w kg',
-  PIGMENTS_BASIC_COUNTER_INPUT_TEXT: 'Ilość pigmentu w kg',
-  PIGMENTS_BAGS_COUNTER_TITLE: 'Ilość vorków',
-  PIGMENTS_BAG_VALUE_IS: 'Waga jednego worku',
-  PIGMENTS_CONTAINER_COUNTER_TITLE: 'Waga kontenera z pigmentem',
-  PIGMENTS_CONTAINER_WEIGHT: 'Waga kontenera',
 };
 
 enum InputMessagesText {
