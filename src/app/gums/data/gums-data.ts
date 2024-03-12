@@ -36,6 +36,7 @@ const gumsData: IGumsPackage = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
+      unitsOfMeasurement: 'kg',
     },
     {
       UNID: 'gums-ALFA-PVC-250kg',
@@ -66,6 +67,7 @@ const gumsData: IGumsPackage = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
+      unitsOfMeasurement: 'kg',
     },
     {
       UNID: 'gums-ALFA-PVC-794126',
@@ -96,6 +98,7 @@ const gumsData: IGumsPackage = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
+      unitsOfMeasurement: 'kg',
     },
     {
       UNID: 'gums-ALFA-PVC-250kg',
@@ -126,6 +129,7 @@ const gumsData: IGumsPackage = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
+      unitsOfMeasurement: 'kg',
     },
     {
       UNID: 'gums-ALFA-PVC-794096A',
@@ -156,6 +160,7 @@ const gumsData: IGumsPackage = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
+      unitsOfMeasurement: 'kg',
     },
     {
       UNID: 'gums-ALFA-PVC-794091',
@@ -186,6 +191,7 @@ const gumsData: IGumsPackage = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
+      unitsOfMeasurement: 'kg',
     },
     {
       UNID: 'gums-INEOS-794096A',
@@ -216,6 +222,7 @@ const gumsData: IGumsPackage = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
+      unitsOfMeasurement: 'kg',
     },
     {
       UNID: 'gums-INEOS-794091',
@@ -246,6 +253,7 @@ const gumsData: IGumsPackage = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
+      unitsOfMeasurement: 'kg',
     },
     {
       UNID: 'gums-Rottolin-794125',
@@ -276,6 +284,7 @@ const gumsData: IGumsPackage = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
+      unitsOfMeasurement: 'kg',
     },
     {
       UNID: 'gums-Rottolin-794126',
@@ -306,6 +315,7 @@ const gumsData: IGumsPackage = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
+      unitsOfMeasurement: 'kg',
     },
     {
       UNID: 'gums-Rottolin-794196',
@@ -336,6 +346,7 @@ const gumsData: IGumsPackage = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
+      unitsOfMeasurement: 'kg',
     },
     {
       UNID: 'gums-Rottolin-794142',
@@ -366,6 +377,7 @@ const gumsData: IGumsPackage = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
+      unitsOfMeasurement: 'kg',
     },
     {
       UNID: 'gums-AluDE-794124',
@@ -396,6 +408,7 @@ const gumsData: IGumsPackage = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
+      unitsOfMeasurement: 'kg',
     },
   ],
 };

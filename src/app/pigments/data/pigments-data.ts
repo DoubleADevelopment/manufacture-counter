@@ -48,6 +48,7 @@ const pigmentsData: IPigmentsPackage = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
+      unitsOfMeasurement: 'kg',
     },
     {
       UNID: 'pigment-MASTERTEC-799531',
@@ -90,6 +91,7 @@ const pigmentsData: IPigmentsPackage = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
+      unitsOfMeasurement: 'kg',
     },
     {
       UNID: 'pigment-MASTERTEC-799602',
@@ -132,6 +134,7 @@ const pigmentsData: IPigmentsPackage = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
+      unitsOfMeasurement: 'kg',
     },
     {
       UNID: 'pigment-MASTERTEC-799547',
@@ -174,6 +177,7 @@ const pigmentsData: IPigmentsPackage = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
+      unitsOfMeasurement: 'kg',
     },
     {
       UNID: 'pigment-MASTERTEC-799290',
@@ -216,6 +220,7 @@ const pigmentsData: IPigmentsPackage = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
+      unitsOfMeasurement: 'kg',
     },
     {
       UNID: 'pigment-BASF-799600',
@@ -258,6 +263,7 @@ const pigmentsData: IPigmentsPackage = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
+      unitsOfMeasurement: 'kg',
     },
     {
       UNID: 'pigment-BASF-799805',
@@ -300,6 +306,7 @@ const pigmentsData: IPigmentsPackage = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
+      unitsOfMeasurement: 'kg',
     },
     {
       UNID: 'pigment-BASF-799544',
@@ -342,6 +349,7 @@ const pigmentsData: IPigmentsPackage = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
+      unitsOfMeasurement: 'kg',
     },
     {
       UNID: 'pigment-MASTERTEC-799291',
@@ -384,6 +392,7 @@ const pigmentsData: IPigmentsPackage = {
       },
       additionalResources: [],
       packagingInfo: 'karton',
+      unitsOfMeasurement: 'kg',
     },
   ],
 };

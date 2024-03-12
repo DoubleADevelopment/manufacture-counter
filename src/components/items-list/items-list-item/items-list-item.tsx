@@ -21,6 +21,7 @@ const ItemsListItem = ({ item, measurementText }: IItemsListItemProps): JSX.Elem
     image,
     amount,
     manufactured,
+    unitsOfMeasurement,
   } = item;
 
   return (
@@ -41,7 +42,10 @@ const ItemsListItem = ({ item, measurementText }: IItemsListItemProps): JSX.Elem
         {manufactured && <p className={`content-primary-a paragraph-small`}> {manufactured}</p>}
 
         <div className={`${style['items-list-item__amount']} paragraph-primary-a label-small`}>
-          {measurementText}: <span className="paragraph-primary-a heading-x-small">{amount}</span>
+          {measurementText}:{' '}
+          <span className="paragraph-primary-a heading-x-small">
+            {amount} {unitsOfMeasurement}
+          </span>
         </div>
       </div>
       <img

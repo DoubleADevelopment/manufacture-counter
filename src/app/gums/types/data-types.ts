@@ -36,6 +36,7 @@ interface IGumsItem {
   settings: IGumsSettings;
   additionalResources: string[];
   packagingInfo: string;
+  unitsOfMeasurement: string;
 }
 
 type GumsItemsListType = IGumsItem[];

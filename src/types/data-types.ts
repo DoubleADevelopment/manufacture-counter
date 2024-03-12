@@ -24,6 +24,7 @@ interface IItemDataToDisplay {
   additionalInfo: string;
   image: string;
   amount: number;
+  unitsOfMeasurement: string;
 }
 
 type ItemsDataToDisplayListType = IItemDataToDisplay[];
