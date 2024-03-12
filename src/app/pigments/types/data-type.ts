@@ -48,6 +48,7 @@ interface IPigmentsItem {
   settings: IPigmentsSettings;
   additionalResources: string[];
   packagingInfo: string;
+  unitsOfMeasurement: string;
 }
 
 type PigmentsItemsListType = IPigmentsItem[];

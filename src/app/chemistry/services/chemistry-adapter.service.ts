@@ -51,6 +51,7 @@ class ChemistryAdapterService
       additionalInfo: item.additionalInfo,
       image: item.image,
       amount: item.amount,
+      unitsOfMeasurement: item.unitsOfMeasurement,
     };
   }
 

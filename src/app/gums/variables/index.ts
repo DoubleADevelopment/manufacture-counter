@@ -6,6 +6,7 @@ import {
   GUMS_COUNTERS,
   gumsCountersList,
 } from './data-variables';
+import { GUMS_TEXT } from './text-variables';
 
 export {
   GumsLogsNames,
@@ -14,4 +15,5 @@ export {
   GumsAppRouting,
   GUMS_COUNTERS,
   gumsCountersList,
+  GUMS_TEXT,
 };

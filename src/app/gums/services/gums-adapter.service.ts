@@ -36,6 +36,7 @@ class GumsAdapterService implements IAdapterService<IGumsData, IGumsPackage> {
       additionalInfo: item.additionalInfo,
       image: item.image,
       amount: item.amount,
+      unitsOfMeasurement: item.unitsOfMeasurement,
     };
   }
 

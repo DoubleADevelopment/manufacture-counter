@@ -2,9 +2,8 @@
   position: relative;
   display: grid;
   grid-template-areas:
-  "image info amount"
-  ;
-  grid-template-columns: 100px 1fr min-content;
+    "image info";
+  grid-template-columns: 100px 1fr;
   grid-template-rows: min-content;
   border: 2px solid var(--border-opaque);
   border-radius: var(--basic-border-radius);
@@ -22,10 +21,10 @@
   justify-content: flex-start;
   grid-area: info;
   padding: 15px 10px;
+  gap: 5px;
 }
 
 .items-list-item__image {
-  // flex-flow: 1;
   border-radius: var(--basic-border-radius);
   width: 100px;
   min-height: 100%;
@@ -34,11 +33,10 @@
 
 .items-list-item__amount {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   grid-area: amount;
-  padding-right: 10px;
+  gap: 5px;
 }
 
 .items-list-item__link {

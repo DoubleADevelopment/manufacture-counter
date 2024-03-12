@@ -3,7 +3,7 @@ import Navigation from './nav/nav';
 import ComponentsList from './components-list/components-list';
 import ItemsList from './items-list/items-list';
 import { ItemCardShort, ShortCardWithLogs } from './cards';
-import { ControlSetValueAdditional, ControlSetValue } from './controls';
+import { ControlSetAdditionalValue, ControlSetValue } from './controls';
 import {
   ButtonPrimary,
   ButtonSecondary,
@@ -18,7 +18,7 @@ import {
 import { NotificationStatic, PageNotification } from './notifications/';
 import { LogsModal, ConfirmDeletingModal } from './modals';
 import CounterHeader from './counter-header/counter-header';
-import { BasicCounter, ItemsCounter } from './counter';
+import { BasicCounter, CounterWithAdditionalValue } from './counter';
 import AdditionalNav from './additional-nav/additional-nav';
 
 export {
@@ -45,6 +45,6 @@ export {
   ButtonTertiary,
   ButtonTertiarySmall,
   ButtonDeleteSmall,
-  ItemsCounter,
-  ControlSetValueAdditional,
+  CounterWithAdditionalValue,
+  ControlSetAdditionalValue,
 };

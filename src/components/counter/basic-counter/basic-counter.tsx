@@ -1,20 +1,22 @@
 import { useState } from 'react';
 //components
 import { ButtonPrimary, ButtonSecondary, ControlSetValue } from '../..';
+//utils
+import { inputValueValidate } from '../../../utils/utils';
 //variables
 import { InputMessagesText, CounterText, InputStatuses } from '../../../variables';
 //style
 import style from './basic-counter.module.scss';
-import { inputValueValidate } from '../../../utils/utils';
 
 interface IBasicCounterProps {
   inc: (value: number) => void;
   dec: (value: number) => void;
   title: string;
+  defaultValue: number;
 }
 
-const BasicCounter = ({ inc, dec, title }: IBasicCounterProps): JSX.Element => {
-  const [value, setValue] = useState<number | null>(500);
+const BasicCounter = ({ inc, dec, title, defaultValue }: IBasicCounterProps): JSX.Element => {
+  const [value, setValue] = useState<number | null>(defaultValue);
   const [message, setMessage] = useState<InputMessagesText>(InputMessagesText.DEFAULT);
   const [status, setStatus] = useState<InputStatuses>(InputStatuses.DEFAULT);
 

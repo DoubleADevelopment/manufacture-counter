@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 //variables
-import { CounterText, UnitsOfMeasurementText } from '../../../variables';
+import { CounterText, InterfaceText } from '../../../variables';
 //types
 import type { IItemDataToDisplay } from '../../../types/';
 //style
@@ -8,10 +8,9 @@ import style from './items-list-item.module.scss';
 
 interface IItemsListItemProps {
   item: IItemDataToDisplay;
-  measurementText: UnitsOfMeasurementText;
 }
 
-const ItemsListItem = ({ item, measurementText }: IItemsListItemProps): JSX.Element => {
+const ItemsListItem = ({ item }: IItemsListItemProps): JSX.Element => {
   const {
     UNID,
     productName,
@@ -21,6 +20,7 @@ const ItemsListItem = ({ item, measurementText }: IItemsListItemProps): JSX.Elem
     image,
     amount,
     manufactured,
+    unitsOfMeasurement,
   } = item;
 
   return (
@@ -38,7 +38,14 @@ const ItemsListItem = ({ item, measurementText }: IItemsListItemProps): JSX.Elem
             <span className={`content-secondary-a`}>Kod systemowy:</span> {systemCode}
           </p>
         )}
-        {manufactured && <p className={`content-primary-a paragraph-medium`}> {manufactured}</p>}
+        {manufactured && <p className={`content-primary-a paragraph-small`}> {manufactured}</p>}
+
+        <div className={`${style['items-list-item__amount']} paragraph-primary-a label-small`}>
+          {InterfaceText.AMOUNT}:
+          <span className="paragraph-primary-a heading-x-small">
+            {amount} {unitsOfMeasurement}
+          </span>
+        </div>
       </div>
       <img
         className={style['items-list-item__image']}
@@ -47,9 +54,7 @@ const ItemsListItem = ({ item, measurementText }: IItemsListItemProps): JSX.Elem
         width={150}
         height={150}
       />
-      <div className={`${style['items-list-item__amount']} paragraph-primary-a label-small`}>
-        {measurementText} <span className="paragraph-primary-a heading-x-small">{amount}</span>
-      </div>
+
       <Link className={style['items-list-item__link']} to={`${UNID}`}>
         <span className="visually-hidden">
           {CounterText.OPEN_COUNTER} {productName}

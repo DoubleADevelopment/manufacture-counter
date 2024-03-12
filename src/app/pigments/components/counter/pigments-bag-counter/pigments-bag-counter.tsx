@@ -1,5 +1,5 @@
 //components
-import { ItemsCounter } from '../../../../../components';
+import { CounterWithAdditionalValue } from '../../../../../components';
 //store
 import { useAppDispatch, useAppSelector } from '../../../../../hooks/hooks';
 import {
@@ -9,8 +9,7 @@ import {
 } from '../../../store/actions/actions';
 import { SelectorGetCurrentPigmentSetting } from '../../../store/slectors/selectors';
 //variables
-import { CounterText, UnitsOfMeasurementText } from '../../../../../variables';
-import { PigmentsLogsNames, PigmentsSettingsNames } from '../../../variables';
+import { PIGMENTS_TEXT, PigmentsLogsNames, PigmentsSettingsNames } from '../../../variables';
 
 interface IPigmentsBagCounterProps {
   UNID: string;
@@ -23,9 +22,14 @@ const GumsBagCounter = ({ UNID }: IPigmentsBagCounterProps): JSX.Element => {
     SelectorGetCurrentPigmentSetting(UNID, PigmentsSettingsNames.BASE_BAG_VALUE),
   );
 
-  const inc = (value: number, quantity: number): void => {
-    const valueToAdd = value * quantity;
-    const logText = quantity === 1 ? `+${value}` : `+${value} * ${quantity} = ${valueToAdd}`;
+  const inc = (value: number, additionalValue: number): void => {
+    const bagQuantity = value;
+    const bagWeight = additionalValue;
+    const valueToAdd = bagWeight * bagQuantity;
+
+    const logText =
+      bagQuantity === 1 ? `+${bagWeight}` : `+${bagWeight} * ${bagQuantity} = ${valueToAdd}`;
+
     dispatch(
       incrementAction({
         UNID: UNID,
@@ -36,9 +40,14 @@ const GumsBagCounter = ({ UNID }: IPigmentsBagCounterProps): JSX.Element => {
     );
   };
 
-  const dec = (value: number, quantity: number): void => {
-    const valueToAdd = value * quantity;
-    const logText = quantity === 1 ? `-${value}` : `-${value} * ${quantity} = ${valueToAdd}`;
+  const dec = (value: number, additionalValue: number): void => {
+    const bagQuantity = value;
+    const bagWeight = additionalValue;
+    const valueToAdd = bagWeight * bagQuantity;
+
+    const logText =
+      bagQuantity === 1 ? `-${bagWeight}` : `-${bagWeight} * ${bagQuantity} = ${valueToAdd}`;
+
     dispatch(
       decrementAction({
         UNID: UNID,
@@ -62,15 +71,16 @@ const GumsBagCounter = ({ UNID }: IPigmentsBagCounterProps): JSX.Element => {
   };
 
   return (
-    <ItemsCounter
+    <CounterWithAdditionalValue
       inc={inc}
       dec={dec}
-      onValueChangeHandler={changeCardboarSetting}
-      defaultValue={bagDefaultValue}
+      onAdditionalValueChangeHandler={changeCardboarSetting}
+      defaultAdditionalValue={bagDefaultValue}
       text={{
-        quantityTitle: CounterText.PIGMENTS_BAGS_COUNTER_TITLE,
-        valueTitleBefore: CounterText.PIGMENTS_BAG_VALUE_IS,
-        valueTitleAfter: UnitsOfMeasurementText.KG,
+        valueTitle: PIGMENTS_TEXT.PIGMENTS_BAGS_COUNTER_INPUT_FIELD_TEXT,
+        additionalValueTitleBefore:
+          PIGMENTS_TEXT.PIGMENTS_BAGS_COUNTER_ADDITIONAL_INPUT_BEFORE_TEXT,
+        additionalValueTitleAfter: PIGMENTS_TEXT.PIGMENTS_BAGS_COUNTER_ADDITIONAL_INPUT_AFTER_TEXT,
       }}
     />
   );

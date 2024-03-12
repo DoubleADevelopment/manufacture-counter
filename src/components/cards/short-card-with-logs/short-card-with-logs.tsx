@@ -1,8 +1,6 @@
 import { useState } from 'react';
 //components
 import { ItemCardShort, LogsModal } from '../../';
-//variables
-import { UnitsOfMeasurementText } from '../../../variables/';
 //types
 import type { IItemDataToDisplay, ILogs } from '../../../types/';
 
@@ -41,11 +39,7 @@ const ShortCardWithLogs = ({
         />
       )}
 
-      <ItemCardShort
-        onCardClickHandler={onCardClickHandler}
-        item={item}
-        measurementText={UnitsOfMeasurementText.AMOUNT}
-      />
+      <ItemCardShort onCardClickHandler={onCardClickHandler} item={item} />
     </>
   );
 };

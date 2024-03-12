@@ -1,5 +1,5 @@
 //components
-import { ItemsCounter } from '../../../../../components';
+import { CounterWithAdditionalValue } from '../../../../../components';
 //store
 import { useAppDispatch, useAppSelector } from '../../../../../hooks/hooks';
 import {
@@ -9,8 +9,7 @@ import {
 } from '../../../store/actions/actions';
 import { SelectorGetCurrentGumSetting } from '../../../store/slectors/selectors';
 //variables
-import { CounterText, UnitsOfMeasurementText } from '../../../../../variables';
-import { GumsLogsNames, GumsSettingsNames } from '../../../variables';
+import { GUMS_TEXT, GumsLogsNames, GumsSettingsNames } from '../../../variables';
 
 interface IGumsCardboardCounterProps {
   UNID: string;
@@ -23,9 +22,16 @@ const GumsCardboardCounter = ({ UNID }: IGumsCardboardCounterProps): JSX.Element
     SelectorGetCurrentGumSetting(UNID, GumsSettingsNames.BASE_CARDBOARD_VALUE),
   );
 
-  const inc = (value: number, quantity: number): void => {
-    const valueToAdd = value * quantity;
-    const logText = quantity === 1 ? `+${value}` : `+${value} * ${quantity} = ${valueToAdd}`;
+  const inc = (value: number, additionalValue: number): void => {
+    const cardboardQuantity = value;
+    const cardboardWeight = additionalValue;
+    const valueToAdd = cardboardQuantity * cardboardWeight;
+
+    const logText =
+      value === 1
+        ? `+${cardboardWeight}`
+        : `+${cardboardWeight} * ${cardboardQuantity} = ${valueToAdd}`;
+
     dispatch(
       incrementAction({
         UNID: UNID,
@@ -36,9 +42,16 @@ const GumsCardboardCounter = ({ UNID }: IGumsCardboardCounterProps): JSX.Element
     );
   };
 
-  const dec = (value: number, quantity: number): void => {
-    const valueToAdd = value * quantity;
-    const logText = quantity === 1 ? `-${value}` : `-${value} * ${quantity} = ${valueToAdd}`;
+  const dec = (value: number, additionalValue: number): void => {
+    const cardboardQuantity = value;
+    const cardboardWeight = additionalValue;
+    const valueToAdd = cardboardWeight * cardboardQuantity;
+
+    const logText =
+      cardboardQuantity === 1
+        ? `-${cardboardWeight}`
+        : `-${cardboardWeight} * ${cardboardQuantity} = ${valueToAdd}`;
+
     dispatch(
       decrementAction({
         UNID: UNID,
@@ -62,15 +75,15 @@ const GumsCardboardCounter = ({ UNID }: IGumsCardboardCounterProps): JSX.Element
   };
 
   return (
-    <ItemsCounter
+    <CounterWithAdditionalValue
       inc={inc}
       dec={dec}
-      onValueChangeHandler={changeCardboarSetting}
-      defaultValue={cardboardDefaultValue}
+      onAdditionalValueChangeHandler={changeCardboarSetting}
+      defaultAdditionalValue={cardboardDefaultValue}
       text={{
-        quantityTitle: CounterText.QUANTITY_COUNTER_TITLE,
-        valueTitleBefore: CounterText.ONE_CARDBOARD_VALUE_IS,
-        valueTitleAfter: UnitsOfMeasurementText.KG,
+        valueTitle: GUMS_TEXT.GUMS_CARDBOARD_COUNTER_INPUT_FIELD_TEXT,
+        additionalValueTitleBefore: GUMS_TEXT.GUMS_CARDBOARD_COUNTER_ADDITIONAL_INPUT_BEFORE_TEXT,
+        additionalValueTitleAfter: GUMS_TEXT.GUMS_CARDBOARD_COUNTER_ADDITIONAL_INPUT_AFTER_TEXT,
       }}
     />
   );

@@ -1,5 +1,5 @@
 //components
-import { ItemsCounter } from '../../../../../components';
+import { CounterWithAdditionalValue } from '../../../../../components';
 //store
 import { useAppDispatch, useAppSelector } from '../../../../../hooks/hooks';
 import {
@@ -9,8 +9,7 @@ import {
 } from '../../../store/actions/actions';
 import { SelectorGetCurrentPigmentSetting } from '../../../store/slectors/selectors';
 //variables
-import { CounterText, UnitsOfMeasurementText } from '../../../../../variables';
-import { PigmentsLogsNames, PigmentsSettingsNames } from '../../../variables';
+import { PIGMENTS_TEXT, PigmentsLogsNames, PigmentsSettingsNames } from '../../../variables';
 
 interface IPigmentsBagCounterProps {
   UNID: string;
@@ -26,9 +25,11 @@ const GumsContainerCounter = ({ UNID }: IPigmentsBagCounterProps): JSX.Element =
     SelectorGetCurrentPigmentSetting(UNID, PigmentsSettingsNames.BASE_CONTAINER_VALUE),
   );
 
-  const inc = (containerWeight: number, pigmentWeight: number): void => {
-    const valueToAdd = pigmentWeight - containerWeight;
-    const logText = `+${valueToAdd} (${pigmentWeight} - ${containerWeight})`;
+  const inc = (value: number, additionalValue: number): void => {
+    const containerWeight = additionalValue;
+    const pigmentsInsideContainerWeight = value;
+    const valueToAdd = pigmentsInsideContainerWeight - containerWeight;
+    const logText = `+${valueToAdd} (${pigmentsInsideContainerWeight} - ${containerWeight})`;
     dispatch(
       incrementAction({
         UNID: UNID,
@@ -39,9 +40,11 @@ const GumsContainerCounter = ({ UNID }: IPigmentsBagCounterProps): JSX.Element =
     );
   };
 
-  const dec = (containerWeight: number, pigmentWeight: number): void => {
-    const valueToAdd = pigmentWeight - containerWeight;
-    const logText = `- ${valueToAdd} (${pigmentWeight} - ${containerWeight}) `;
+  const dec = (value: number, additionalValue: number): void => {
+    const containerWeight = additionalValue;
+    const pigmentsInsideContainerWeight = value;
+    const valueToAdd = pigmentsInsideContainerWeight - containerWeight;
+    const logText = `- ${valueToAdd} (${pigmentsInsideContainerWeight} - ${containerWeight}) `;
     dispatch(
       decrementAction({
         UNID: UNID,
@@ -65,16 +68,18 @@ const GumsContainerCounter = ({ UNID }: IPigmentsBagCounterProps): JSX.Element =
   };
 
   return (
-    <ItemsCounter
+    <CounterWithAdditionalValue
       inc={inc}
       dec={dec}
-      onValueChangeHandler={changeContainerSetting}
-      defaultValue={containerWeightValue}
-      defaultQuantity={baseContainerValue}
+      onAdditionalValueChangeHandler={changeContainerSetting}
+      defaultAdditionalValue={containerWeightValue}
+      defaultValue={baseContainerValue}
       text={{
-        quantityTitle: CounterText.PIGMENTS_CONTAINER_COUNTER_TITLE,
-        valueTitleBefore: CounterText.PIGMENTS_CONTAINER_WEIGHT,
-        valueTitleAfter: UnitsOfMeasurementText.KG,
+        valueTitle: PIGMENTS_TEXT.PIGMENTS_CONTAINER_COUNTER_INPUT_FIELD_TEXT,
+        additionalValueTitleBefore:
+          PIGMENTS_TEXT.PIGMENTS_CONTAINER_COUNTER_ADDITIONAL_INPUT_BEFORE_TEXT,
+        additionalValueTitleAfter:
+          PIGMENTS_TEXT.PIGMENTS_CONTAINER_COUNTER_ADDITIONAL_INPUT_AFTER_TEXT,
       }}
     />
   );

@@ -41,6 +41,7 @@ class PigmentsAdapterService implements IAdapterService<IPigmentsData, IPigments
       additionalInfo: item.additionalInfo,
       image: item.image,
       amount: item.amount,
+      unitsOfMeasurement: item.unitsOfMeasurement,
     };
   }
 

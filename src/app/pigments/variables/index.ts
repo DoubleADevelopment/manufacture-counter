@@ -6,6 +6,7 @@ import {
   PIGMENTS_COUNTERS,
   pigmentsCountersList,
 } from './data-variables';
+import { PIGMENTS_TEXT } from './text-variables';
 
 export {
   PigmentsAppRouting,
@@ -14,4 +15,5 @@ export {
   PIGMENTS_STORAGE_NAME,
   PIGMENTS_COUNTERS,
   pigmentsCountersList,
+  PIGMENTS_TEXT,
 };

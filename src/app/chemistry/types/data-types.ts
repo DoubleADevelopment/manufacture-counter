@@ -34,6 +34,7 @@ interface IChemistryItem {
   settings: IChemistrySettings;
   additionalResources: string[];
   packagingInfo: string;
+  unitsOfMeasurement: string;
 }
 
 type ChemistryItemsListType = IChemistryItem[];

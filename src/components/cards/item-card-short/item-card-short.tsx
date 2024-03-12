@@ -1,7 +1,7 @@
 //components
 import ItemCardShortSkeleton from './item-card-short-skeleton/item-card-short-skeleton';
 //variables
-import { UnitsOfMeasurementText } from '../../../variables/';
+import { InterfaceText } from '../../../variables/';
 //types
 import type { IItemDataToDisplay } from '../../../types/';
 //styles
@@ -9,15 +9,10 @@ import style from './item-card-short.module.scss';
 
 interface IItemCardShortProps {
   item: IItemDataToDisplay | undefined;
-  measurementText: UnitsOfMeasurementText;
   onCardClickHandler?: () => void;
 }
 
-const ItemCardShort = ({
-  item,
-  measurementText,
-  onCardClickHandler,
-}: IItemCardShortProps): JSX.Element => {
+const ItemCardShort = ({ item, onCardClickHandler }: IItemCardShortProps): JSX.Element => {
   return (
     <>
       {item ? (
@@ -41,12 +36,13 @@ const ItemCardShort = ({
             className={style['item-card-short__image']}
             src={item.image}
             alt={item.description}
-            width={150}
-            height={150}
+            width={120}
+            height={120}
           />
           <div className={`${style['item-card-short__amount']} paragraph-primary-a label-medium`}>
-            {measurementText}
+            {InterfaceText.AMOUNT}
             <span className="paragraph-primary-a heading-medium">{item.amount}</span>
+            {item.unitsOfMeasurement}
           </div>
 
           {onCardClickHandler && (
