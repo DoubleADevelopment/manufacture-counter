@@ -8,7 +8,7 @@ import { SelectorGetPigments } from '../../store/slectors/selectors';
 //layouts
 import { PageWithMenuLayout } from '../../../../layouts';
 //variables
-import { ComponentsRouting, ErrorsText, NotificationType } from '../../../../variables';
+import { AppRouting, ComponentsRouting, ErrorsText, NotificationType } from '../../../../variables';
 //styles
 import style from './pigments-root-page.module.scss';
 
@@ -17,7 +17,10 @@ const PigmentsRootPage = () => {
   const adaptedData = pigmentsAdapterService.adaptItemsDataToDisplayList(pigmentsState);
 
   return (
-    <PageWithMenuLayout headerTitle={ComponentsRouting.PIGMENTS.title}>
+    <PageWithMenuLayout
+      headerTitle={ComponentsRouting.PIGMENTS.title}
+      backLink={AppRouting.ROOT.path}
+    >
       <main className={style['pigments-root-page']}>
         {adaptedData ? (
           <ItemsList data={adaptedData} />

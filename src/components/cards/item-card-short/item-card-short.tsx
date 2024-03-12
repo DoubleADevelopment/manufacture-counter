@@ -41,8 +41,8 @@ const ItemCardShort = ({
             className={style['item-card-short__image']}
             src={item.image}
             alt={item.description}
-            width={150}
-            height={150}
+            width={120}
+            height={120}
           />
           <div className={`${style['item-card-short__amount']} paragraph-primary-a label-medium`}>
             {measurementText}
