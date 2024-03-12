@@ -1,7 +1,7 @@
 //types
 import type { RootState } from '../../../../types';
 import type { IChemistryItem, IChemistryData, IChemistryItems } from '../../types/';
-import { ChemistryPackagesNames } from '../../variables/';
+import { ChemistryPackagesNames, ChemistrySettingsNames } from '../../variables/';
 
 export const SelectorGetChemistryState = (state: RootState): IChemistryData => state.chemistry;
 
@@ -20,6 +20,11 @@ export const SelectorGetVeenerChemistry =
   () =>
   (state: RootState): IChemistryItems =>
     state.chemistry.veener;
+
+export const SelectorGetCurrentChemistrySetting =
+  (UNID: string, settingName: ChemistrySettingsNames, packName: ChemistryPackagesNames) =>
+  (state: RootState): number =>
+    state.chemistry[packName][UNID].settings[settingName].settingValue;
 
 export const SelectorCheckIfElementExistsByUNID =
   (UNID: string | undefined, packName: ChemistryPackagesNames | undefined) =>
