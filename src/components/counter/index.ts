@@ -11,11 +11,10 @@ import {
 } from '../buttons';
 import { ControlSetValue } from '../controls';
 import BasicCounter from './basic-counter/basic-counter';
-import ItemsCounter from './items-counter/items-counter';
+import CounterWithAdditionalValue from './counter-with-additional-value/counter-with-additional-value';
 
 export {
   BasicCounter,
-  ItemsCounter,
   ButtonPrimary,
   ButtonSecondary,
   ButtonPrimarySmall,
@@ -26,4 +25,5 @@ export {
   ButtonTertiarySmall,
   ButtonDeleteSmall,
   ControlSetValue,
+  CounterWithAdditionalValue,
 };

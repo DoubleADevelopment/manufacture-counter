@@ -1,11 +1,12 @@
 import { useState } from 'react';
 //components
 import { ButtonPrimary, ButtonSecondary, ControlSetValue } from '../..';
+//utils
+import { inputValueValidate } from '../../../utils/utils';
 //variables
 import { InputMessagesText, CounterText, InputStatuses } from '../../../variables';
 //style
 import style from './basic-counter.module.scss';
-import { inputValueValidate } from '../../../utils/utils';
 
 interface IBasicCounterProps {
   inc: (value: number) => void;

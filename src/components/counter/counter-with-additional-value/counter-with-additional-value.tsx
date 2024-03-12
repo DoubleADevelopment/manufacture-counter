@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 //components
-import { ButtonPrimary, ButtonSecondary, ControlSetValueAdditional, ControlSetValue } from '../../';
+import { ButtonPrimary, ButtonSecondary, ControlSetValueAdditional, ControlSetValue } from '../..';
 //utils
 import { inputValueValidate } from '../../../utils/utils';
 //variables
 import { CounterText, InputMessagesText, InputStatuses } from '../../../variables';
 //style
-import style from './items-counter.module.scss';
+import style from './counter-with-additional-value.module.scss';
 
-interface IItemsCounterProps {
+interface ICounterWithAdditionalValueProps {
   inc: (value: number, quantity: number) => void;
   dec: (value: number, quantity: number) => void;
   onValueChangeHandler: (value: number) => void;
@@ -21,14 +21,14 @@ interface IItemsCounterProps {
   };
 }
 
-const ItemsCounter = ({
+const CounterWithAdditionalValue = ({
   inc,
   dec,
   onValueChangeHandler,
   defaultValue,
   text,
   defaultQuantity,
-}: IItemsCounterProps): JSX.Element => {
+}: ICounterWithAdditionalValueProps): JSX.Element => {
   const [value, setValue] = useState<number | null>(defaultValue);
   const [quantity, setQuantity] = useState<number | null>(defaultQuantity ? defaultQuantity : 1);
   const [valueMessage, setValueMessage] = useState<InputMessagesText>(InputMessagesText.DEFAULT);
@@ -95,4 +95,4 @@ const ItemsCounter = ({
   );
 };
 
-export default ItemsCounter;
+export default CounterWithAdditionalValue;

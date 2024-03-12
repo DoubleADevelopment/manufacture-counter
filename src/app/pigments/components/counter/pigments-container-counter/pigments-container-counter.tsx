@@ -1,5 +1,5 @@
 //components
-import { ItemsCounter } from '../../../../../components';
+import { CounterWithAdditionalValue } from '../../../../../components';
 //store
 import { useAppDispatch, useAppSelector } from '../../../../../hooks/hooks';
 import {
@@ -65,7 +65,7 @@ const GumsContainerCounter = ({ UNID }: IPigmentsBagCounterProps): JSX.Element =
   };
 
   return (
-    <ItemsCounter
+    <CounterWithAdditionalValue
       inc={inc}
       dec={dec}
       onValueChangeHandler={changeContainerSetting}

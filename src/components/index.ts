@@ -18,7 +18,7 @@ import {
 import { NotificationStatic, PageNotification } from './notifications/';
 import { LogsModal, ConfirmDeletingModal } from './modals';
 import CounterHeader from './counter-header/counter-header';
-import { BasicCounter, ItemsCounter } from './counter';
+import { BasicCounter, CounterWithAdditionalValue } from './counter';
 import AdditionalNav from './additional-nav/additional-nav';
 
 export {
@@ -45,6 +45,6 @@ export {
   ButtonTertiary,
   ButtonTertiarySmall,
   ButtonDeleteSmall,
-  ItemsCounter,
+  CounterWithAdditionalValue,
   ControlSetValueAdditional,
 };

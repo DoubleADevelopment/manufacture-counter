@@ -1,5 +1,5 @@
 //components
-import { ItemsCounter } from '../../../../../components';
+import { CounterWithAdditionalValue } from '../../../../../components';
 //store
 import { useAppDispatch, useAppSelector } from '../../../../../hooks/hooks';
 import {
@@ -62,7 +62,7 @@ const GumsCardboardCounter = ({ UNID }: IGumsCardboardCounterProps): JSX.Element
   };
 
   return (
-    <ItemsCounter
+    <CounterWithAdditionalValue
       inc={inc}
       dec={dec}
       onValueChangeHandler={changeCardboarSetting}
