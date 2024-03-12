@@ -1,7 +1,6 @@
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 //pages
 import * as Pages from '../../pages';
-// import { ChemistryPage } from '../chemistry/pages';
 //aps
 import ChemistryApp from '../chemistry/app';
 import GumsApp from '../gums/app';
