@@ -38,7 +38,11 @@ const ItemsListItem = ({ item, measurementText }: IItemsListItemProps): JSX.Elem
             <span className={`content-secondary-a`}>Kod systemowy:</span> {systemCode}
           </p>
         )}
-        {manufactured && <p className={`content-primary-a paragraph-medium`}> {manufactured}</p>}
+        {manufactured && <p className={`content-primary-a paragraph-small`}> {manufactured}</p>}
+
+        <div className={`${style['items-list-item__amount']} paragraph-primary-a label-small`}>
+          {measurementText}: <span className="paragraph-primary-a heading-x-small">{amount}</span>
+        </div>
       </div>
       <img
         className={style['items-list-item__image']}
@@ -47,9 +51,7 @@ const ItemsListItem = ({ item, measurementText }: IItemsListItemProps): JSX.Elem
         width={150}
         height={150}
       />
-      <div className={`${style['items-list-item__amount']} paragraph-primary-a label-small`}>
-        {measurementText} <span className="paragraph-primary-a heading-x-small">{amount}</span>
-      </div>
+
       <Link className={style['items-list-item__link']} to={`${UNID}`}>
         <span className="visually-hidden">
           {CounterText.OPEN_COUNTER} {productName}
