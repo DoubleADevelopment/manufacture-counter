@@ -1,4 +1,5 @@
 //types
+import { rootBaseName } from '../../../variables';
 import type { IPigmentsPackage } from '../types/data-type';
 //vars
 import { PigmentsLogsNames, PigmentsSettingsNames } from '../variables/data-variables';
@@ -15,7 +16,7 @@ const pigmentsData: IPigmentsPackage = {
       systemCode: '799549',
       description: '',
       additionalInfo: '',
-      image: '/images/pigments/pigment-braz.jpg',
+      image: `${rootBaseName}/images/pigments/pigment-braz.jpg`,
       color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
@@ -58,7 +59,7 @@ const pigmentsData: IPigmentsPackage = {
       systemCode: '799531',
       description: '',
       additionalInfo: '',
-      image: '/images/pigments/pigment-antracyt.jpg',
+      image: `${rootBaseName}/images/pigments/pigment-antracyt.jpg`,
       color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
@@ -101,7 +102,7 @@ const pigmentsData: IPigmentsPackage = {
       systemCode: '799602',
       description: '',
       additionalInfo: '',
-      image: '/images/pigments/pigment-cream.jpg',
+      image: `${rootBaseName}/images/pigments/pigment-cream.jpg`,
       color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
@@ -144,7 +145,7 @@ const pigmentsData: IPigmentsPackage = {
       systemCode: '799547',
       description: '',
       additionalInfo: '',
-      image: '/images/pigments/pigment-ochra.jpg',
+      image: `${rootBaseName}/images/pigments/pigment-ochra.jpg`,
       color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
@@ -187,7 +188,7 @@ const pigmentsData: IPigmentsPackage = {
       systemCode: '799290',
       description: '',
       additionalInfo: '',
-      image: '/images/pigments/pigment-braz.jpg',
+      image: `${rootBaseName}/images/pigments/pigment-braz.jpg`,
       color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
@@ -230,7 +231,7 @@ const pigmentsData: IPigmentsPackage = {
       systemCode: '799600',
       description: '',
       additionalInfo: '',
-      image: '/images/pigments/pigment-bialy.jpg',
+      image: `${rootBaseName}/images/pigments/pigment-bialy.jpg`,
       color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
@@ -273,7 +274,7 @@ const pigmentsData: IPigmentsPackage = {
       systemCode: '799805',
       description: '',
       additionalInfo: '',
-      image: '/images/pigments/pigment-zolty.jpg',
+      image: `${rootBaseName}/images/pigments/pigment-zolty.jpg`,
       color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
@@ -316,7 +317,7 @@ const pigmentsData: IPigmentsPackage = {
       systemCode: '799544',
       description: '',
       additionalInfo: '',
-      image: '/images/pigments/pigment-antracyt.jpg',
+      image: `${rootBaseName}/images/pigments/pigment-antracyt.jpg`,
       color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
@@ -359,7 +360,7 @@ const pigmentsData: IPigmentsPackage = {
       systemCode: '799291',
       description: '',
       additionalInfo: '',
-      image: '/images/pigments/pigment-shelblue.jpg',
+      image: `${rootBaseName}/images/pigments/pigment-shelblue.jpg`,
       color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {

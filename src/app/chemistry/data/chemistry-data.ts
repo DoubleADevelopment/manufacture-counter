@@ -1,5 +1,6 @@
 //vars
 import { ChemistryLogsNames, ChemistrySettingsNames } from '../variables/';
+import { rootBaseName } from '../../../variables';
 //types
 import type { ChemistryPackagesListType } from '../types/';
 import { ChemistryPackagesNames } from '../variables/';
@@ -18,7 +19,7 @@ const chemistryData: ChemistryPackagesListType = [
         systemCode: '',
         description: 'z czipem wymagającym otagowania',
         additionalInfo: 'Drukarki Leibinger Jet2neo/Jet2neoS',
-        image: '/images/chemistry/Solvent-770001-00030.jpg',
+        image: `${rootBaseName}/images/chemistry/Solvent-770001-00030.jpg`,
         color: '',
         logs: {
           [ChemistryLogsNames.COUNTER]: {
@@ -46,7 +47,7 @@ const chemistryData: ChemistryPackagesListType = [
         systemCode: '',
         description: 'ASN 1030, z czipem wymagającym otagowania',
         additionalInfo: 'Drukarki Leibinger Jet2neo/Jet2neoS',
-        image: '/images/chemistry/Atrament-70000-00030.jpg',
+        image: `${rootBaseName}/images/chemistry/Atrament-70000-00030.jpg`,
         color: '',
         logs: {
           [ChemistryLogsNames.COUNTER]: {
@@ -74,7 +75,7 @@ const chemistryData: ChemistryPackagesListType = [
         systemCode: '',
         description: 'wykorzystywany do mycia głowicy',
         additionalInfo: 'Drukarki Leibinger Jet2neo/Jet2neoS',
-        image: '/images/chemistry/Solvent-SJN 1700.jpg',
+        image: `${rootBaseName}/images/chemistry/Solvent-SJN 1700.jpg`,
         color: '',
         logs: {
           [ChemistryLogsNames.COUNTER]: {
@@ -103,7 +104,7 @@ const chemistryData: ChemistryPackagesListType = [
         systemCode: '',
         description: '',
         additionalInfo: 'dot. drukarek 1220',
-        image: '/images/chemistry/Make-up-VJ706-D.jpg',
+        image: `${rootBaseName}/images/chemistry/Make-up-VJ706-D.jpg`,
         color: '',
         logs: {
           [ChemistryLogsNames.COUNTER]: {
@@ -131,7 +132,7 @@ const chemistryData: ChemistryPackagesListType = [
         systemCode: '',
         description: '',
         additionalInfo: 'dot. drukarek 1220',
-        image: '/images/chemistry/Atrament-VJ411-D.jpg',
+        image: `${rootBaseName}/images/chemistry/Atrament-VJ411-D.jpg`,
         color: '',
         logs: {
           [ChemistryLogsNames.COUNTER]: {
@@ -160,7 +161,7 @@ const chemistryData: ChemistryPackagesListType = [
         systemCode: '',
         description: '',
         additionalInfo: 'dot. drukarek 1580',
-        image: '/images/chemistry/Make-up-VJ7222-D.jpg',
+        image: `${rootBaseName}/images/chemistry/Make-up-VJ7222-D.jpg`,
         color: '',
         logs: {
           [ChemistryLogsNames.COUNTER]: {
@@ -188,7 +189,7 @@ const chemistryData: ChemistryPackagesListType = [
         systemCode: '',
         description: '',
         additionalInfo: 'dot. drukarek 1580',
-        image: '/images/chemistry/Atrament-VJ411-D.jpg',
+        image: `${rootBaseName}/images/chemistry/Atrament-VJ411-D.jpg`,
         color: '',
         logs: {
           [ChemistryLogsNames.COUNTER]: {
@@ -222,7 +223,7 @@ const chemistryData: ChemistryPackagesListType = [
         systemCode: '77001-003',
         description: 'Drukarki Leibinger Jet2neo/jet2neos',
         additionalInfo: '',
-        image: '/images/chemistry/Solvent-770001-00030.jpg',
+        image: `${rootBaseName}/images/chemistry/Solvent-770001-00030.jpg`,
         color: '',
         logs: {
           [ChemistryLogsNames.COUNTER]: {
@@ -250,7 +251,7 @@ const chemistryData: ChemistryPackagesListType = [
         systemCode: '770000-00030',
         description: 'Drukarki Leibinger Jet2neo/jet2neos',
         additionalInfo: '',
-        image: '/images/chemistry/Atrament-70000-00030.jpg',
+        image: `${rootBaseName}/images/chemistry/Atrament-70000-00030.jpg`,
         color: '',
         logs: {
           [ChemistryLogsNames.COUNTER]: {
@@ -278,7 +279,7 @@ const chemistryData: ChemistryPackagesListType = [
         systemCode: 'SJN1700',
         description: 'Drukarki Leibinger Jet2neo/jet2neos',
         additionalInfo: '',
-        image: '/images/chemistry/Solvent-SJN 1700.jpg',
+        image: `${rootBaseName}/images/chemistry/Solvent-SJN 1700.jpg`,
         color: '',
         logs: {
           [ChemistryLogsNames.COUNTER]: {
@@ -307,7 +308,7 @@ const chemistryData: ChemistryPackagesListType = [
         systemCode: 'VJ706-D',
         description: 'Dotyczy drukarek 1220',
         additionalInfo: '',
-        image: '/images/chemistry/Make-up-VJ706-D.jpg',
+        image: `${rootBaseName}/images/chemistry/Make-up-VJ706-D.jpg`,
         color: '',
         logs: {
           [ChemistryLogsNames.COUNTER]: {
@@ -335,7 +336,7 @@ const chemistryData: ChemistryPackagesListType = [
         systemCode: 'VJ411-D',
         description: 'Dotyczy drukarek 1220',
         additionalInfo: '',
-        image: '/images/chemistry/Atrament-VJ411-D.jpg',
+        image: `${rootBaseName}/images/chemistry/Atrament-VJ411-D.jpg`,
         color: '',
         logs: {
           [ChemistryLogsNames.COUNTER]: {
@@ -364,7 +365,7 @@ const chemistryData: ChemistryPackagesListType = [
         systemCode: 'VJ7222-D',
         description: 'Dotyczy drukarek 1580',
         additionalInfo: '',
-        image: '/images/chemistry/Make-up-VJ7222-D.jpg',
+        image: `${rootBaseName}/images/chemistry/Make-up-VJ7222-D.jpg`,
         color: '',
         logs: {
           [ChemistryLogsNames.COUNTER]: {
@@ -392,7 +393,7 @@ const chemistryData: ChemistryPackagesListType = [
         systemCode: 'VJ4262-D',
         description: 'Dotyczy drukarek 1580',
         additionalInfo: '',
-        image: '/images/chemistry/Atrament-VJ411-D.jpg',
+        image: `${rootBaseName}/images/chemistry/Atrament-VJ411-D.jpg`,
         color: '',
         logs: {
           [ChemistryLogsNames.COUNTER]: {
