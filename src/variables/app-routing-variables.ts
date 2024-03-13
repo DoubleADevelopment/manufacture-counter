@@ -1,7 +1,7 @@
 //type
 import type { IRouteItem } from '../types';
 
-const rootBaseName = '/';
+const rootBaseName = '/aluplast-component-counter';
 
 const enum AppRoutingNames {
   ROOT = 'ROOT',
