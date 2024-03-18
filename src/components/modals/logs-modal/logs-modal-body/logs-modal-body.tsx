@@ -26,7 +26,7 @@ const LogsModalBody = ({
   const generateLogs = (): JSX.Element[] => {
     const logsArray: JSX.Element[] = [];
     for (const key in logsData) {
-      logsArray.push(<LogItem log={logsData[key].log} logName={logsData[key].name} key={key} />);
+      logsArray.push(<LogItem item={logsData[key]} key={key} />);
     }
     return logsArray;
   };

@@ -12,6 +12,7 @@ import type {
   IDataPackage,
   IData,
   storageNamesAliasType,
+  ILogItem,
 } from './data-types';
 import type { IRouteItem } from './routing-types';
 import type { IIncDecAction, ILogAction, IClearItemAction } from './action-types';
@@ -47,4 +48,5 @@ export type {
   IClearItemAction,
   IButtonProps,
   IInputValueValidate,
+  ILogItem,
 };

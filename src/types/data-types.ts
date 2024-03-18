@@ -30,13 +30,15 @@ interface IItemDataToDisplay {
 
 type ItemsDataToDisplayListType = IItemDataToDisplay[];
 
+interface ILogItem {
+  log: string[];
+  name: string;
+  lastChange: Date | null;
+}
+
 //data types for apps/counters
 interface ILogs {
-  [key: string]: {
-    log: string[];
-    name: string;
-    lastChange: Date | null;
-  };
+  [key: string]: ILogItem;
 }
 
 interface ISettings {
@@ -94,4 +96,5 @@ export type {
   IDataPackage,
   IData,
   storageNamesAliasType,
+  ILogItem,
 };
