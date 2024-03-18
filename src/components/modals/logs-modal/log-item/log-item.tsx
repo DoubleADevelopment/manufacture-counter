@@ -27,11 +27,18 @@ const LogItem = ({ item }: ILogsItemProps): JSX.Element => {
     <article className={style['log-item']}>
       <header className={style['log-item__header']}>
         <h4 className="heading-x-small content-primary-a">{name}</h4>
-        <div className={style['log-item__last-change']}>
-          <h5 className="label-x-small content-secondary-a">{CounterText.LASST_CHANGE_TITLE}</h5>
 
-          <p className="paragraph-x-small content-secondary-a">{transformDate}</p>
-        </div>
+        {lastChange && (
+          <div className={style['log-item__last-change']}>
+            <h5 className="label-x-small content-secondary-a">{CounterText.LASST_CHANGE_TITLE}</h5>
+            <time
+              className="paragraph-x-small content-secondary-a"
+              dateTime={lastChange.toString()}
+            >
+              {transformDate}
+            </time>
+          </div>
+        )}
       </header>
       <ul className={`${style['log-item__list']}`}>
         {log.length ? (
