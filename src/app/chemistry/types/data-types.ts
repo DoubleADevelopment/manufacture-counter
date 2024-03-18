@@ -30,7 +30,7 @@ interface IChemistryItem {
   image: string;
   color: string;
   logs: IChemistryLogs;
-  lastChange: string | null;
+  lastChange: Date | null;
   settings: IChemistrySettings;
   additionalResources: string[];
   packagingInfo: string;

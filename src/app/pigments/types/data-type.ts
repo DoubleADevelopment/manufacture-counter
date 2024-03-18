@@ -44,7 +44,7 @@ interface IPigmentsItem {
   image: string;
   color: string;
   logs: IPigmentsLogs;
-  lastChange: string | null;
+  lastChange: Date | null;
   settings: IPigmentsSettings;
   additionalResources: string[];
   packagingInfo: string;

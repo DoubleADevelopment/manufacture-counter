@@ -32,7 +32,7 @@ interface IGumsItem {
   image: string;
   color: string;
   logs: IGumsLogs;
-  lastChange: string | null;
+  lastChange: Date | null;
   settings: IGumsSettings;
   additionalResources: string[];
   packagingInfo: string;

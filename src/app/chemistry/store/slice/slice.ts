@@ -20,10 +20,12 @@ export const chemistrySlice = createSlice({
     increment: (state, action: PayloadAction<IIncDecAction>) => {
       const { UNID, value, packageName } = action.payload;
       state[packageName][UNID].amount = state[packageName][UNID].amount + value;
+      state[packageName][UNID].lastChange = new Date();
     },
     decrement: (state, action: PayloadAction<IIncDecAction>) => {
       const { UNID, value, packageName } = action.payload;
       state[packageName][UNID].amount = state[packageName][UNID].amount - value;
+      state[packageName][UNID].lastChange = new Date();
     },
     log: (state, action: PayloadAction<ILogAction<ChemistryLogsNames>>) => {
       const { UNID, logName, log, packageName } = action.payload;
