@@ -13,7 +13,7 @@ interface INavigationLinkPropsType {
 
 const NavigationLink = ({ to, name, children }: INavigationLinkPropsType): JSX.Element => {
   const activeLinkClass = style['navigation-link--active'];
-  const basicLinkClass = style['navigation-link'];
+  const basicLinkClass = `${style['navigation-link']} unselectable`;
 
   const setActiveLink = ({ isActive }: ISetActiveLink) =>
     isActive ? `${basicLinkClass}  ${activeLinkClass}` : `${basicLinkClass}`;

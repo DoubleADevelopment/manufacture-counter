@@ -24,7 +24,7 @@ const AdditionalNav = ({ items, changeHandler, defaultItem }: IAdditionalNavProp
     <form className={`${style['additional-nav']} unselectable`} onChange={formHandler}>
       {items.map((item) => {
         return (
-          <label className={`${style['additional-nav__label']}`} key={item}>
+          <label className={`${style['additional-nav__label']} unselectable`} key={item}>
             <span className={`label-large content-primary-a`}>{item}</span>
             <input className={`hidden-input`} type="radio" name="additional" value={item} />
           </label>

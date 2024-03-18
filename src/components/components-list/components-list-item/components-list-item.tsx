@@ -10,7 +10,7 @@ interface ICountersListItemProps {
 
 const ComponentsListItem = ({ item }: ICountersListItemProps): JSX.Element => {
   return (
-    <li className={style['components-list-item']}>
+    <li className={`${style['components-list-item']} unselectable`}>
       <h3 className={`${style['components-list-item__title']} heading-medium content-primary-b`}>
         {item.title}
       </h3>

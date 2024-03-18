@@ -54,7 +54,7 @@ const ControlSetAdditionalValue = ({
   return (
     <div className={style['control-set-value-additional']}>
       <label
-        className={`${style['control-set-value-additional__label']} content-primary-a label-medium`}
+        className={`${style['control-set-value-additional__label']} unselectable content-primary-a label-medium`}
       >
         {titleBefore}
         <input
