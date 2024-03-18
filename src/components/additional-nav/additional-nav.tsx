@@ -26,12 +26,7 @@ const AdditionalNav = ({ items, changeHandler, defaultItem }: IAdditionalNavProp
         return (
           <label className={`${style['additional-nav__label']}`} key={item}>
             <span className={`label-large content-primary-a`}>{item}</span>
-            <input
-              className={style['additional-nav__input']}
-              type="radio"
-              name="additional"
-              value={item}
-            />
+            <input className={`hidden-input`} type="radio" name="additional" value={item} />
           </label>
         );
       })}
