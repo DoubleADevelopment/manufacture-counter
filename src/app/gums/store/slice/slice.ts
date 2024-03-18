@@ -21,12 +21,10 @@ export const gumsSlice = createSlice({
     increment: (state, action: PayloadAction<IIncDecAction>) => {
       const { UNID, value } = action.payload;
       state[UNID].amount = state[UNID].amount + value;
-      // state[UNID].lastChange = new Date();
     },
     decrement: (state, action: PayloadAction<IIncDecAction>) => {
       const { UNID, value } = action.payload;
       state[UNID].amount = state[UNID].amount - value;
-      // state[UNID].lastChange = new Date();
     },
     log: (state, action: PayloadAction<ILogAction<GumsLogsNames>>) => {
       const { UNID, logName, log } = action.payload;
