@@ -41,4 +41,22 @@ const inputValueValidate = (value: number | null): IInputValueValidate => {
   }
 };
 
-export { onEnterClickHandlerToElementBlur, extractNumbers, inputValueValidate };
+const formatDateToShortFormat = (date: Date): string => {
+  const options: Intl.DateTimeFormatOptions = {
+    hour: 'numeric',
+    minute: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  };
+
+  const transformedDate = new Intl.DateTimeFormat('pl-PL', options).format(new Date(date));
+
+  return transformedDate;
+};
+
+export {
+  onEnterClickHandlerToElementBlur,
+  extractNumbers,
+  inputValueValidate,
+  formatDateToShortFormat,
+};

@@ -4,6 +4,7 @@ import { CounterText } from '../../../../variables';
 import type { ILogItem } from '../../../../types';
 //styles
 import style from './log-item.module.scss';
+import { formatDateToShortFormat } from '../../../../utils/utils';
 
 interface ILogsItemProps {
   item: ILogItem;
@@ -11,17 +12,6 @@ interface ILogsItemProps {
 
 const LogItem = ({ item }: ILogsItemProps): JSX.Element => {
   const { name, lastChange, log } = item;
-
-  const options: Intl.DateTimeFormatOptions = {
-    hour: 'numeric',
-    minute: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  };
-
-  const transformDate = lastChange
-    ? new Intl.DateTimeFormat('pl-PL', options).format(new Date(lastChange))
-    : null;
 
   return (
     <article className={style['log-item']}>
@@ -35,7 +25,7 @@ const LogItem = ({ item }: ILogsItemProps): JSX.Element => {
               className="paragraph-x-small content-secondary-a"
               dateTime={lastChange.toString()}
             >
-              {transformDate}
+              {formatDateToShortFormat(lastChange)}
             </time>
           </div>
         )}
