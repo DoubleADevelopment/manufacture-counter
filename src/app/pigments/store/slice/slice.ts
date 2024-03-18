@@ -21,16 +21,17 @@ export const pigmentsSlice = createSlice({
     increment: (state, action: PayloadAction<IIncDecAction>) => {
       const { UNID, value } = action.payload;
       state[UNID].amount = state[UNID].amount + value;
-      state[UNID].lastChange = new Date();
+      // state[UNID].lastChange = new Date();
     },
     decrement: (state, action: PayloadAction<IIncDecAction>) => {
       const { UNID, value } = action.payload;
       state[UNID].amount = state[UNID].amount - value;
-      state[UNID].lastChange = new Date();
+      // state[UNID].lastChange = new Date();
     },
     log: (state, action: PayloadAction<ILogAction<PigmentsLogsNames>>) => {
       const { UNID, logName, log } = action.payload;
       state[UNID].logs[logName].log.push(log);
+      state[UNID].logs[logName].lastChange = new Date();
     },
     clearItem: (state, action: PayloadAction<IClearItemAction<IPigmentsItem>>) => {
       const { UNID } = action.payload.item;

@@ -25,6 +25,7 @@ interface IItemDataToDisplay {
   image: string;
   amount: number;
   unitsOfMeasurement: string;
+  lastChange?: Date;
 }
 
 type ItemsDataToDisplayListType = IItemDataToDisplay[];
@@ -34,6 +35,7 @@ interface ILogs {
   [key: string]: {
     log: string[];
     name: string;
+    lastChange: Date | null;
   };
 }
 

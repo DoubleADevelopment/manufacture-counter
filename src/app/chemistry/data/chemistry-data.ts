@@ -25,9 +25,10 @@ const chemistryData: ChemistryPackagesListType = [
           [ChemistryLogsNames.COUNTER]: {
             log: [],
             name: 'Licznik',
+            lastChange: null,
           },
         },
-        lastChange: null,
+
         settings: {
           [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
             settingValue: 1,
@@ -53,9 +54,10 @@ const chemistryData: ChemistryPackagesListType = [
           [ChemistryLogsNames.COUNTER]: {
             log: [],
             name: 'Licznik',
+            lastChange: null,
           },
         },
-        lastChange: null,
+
         settings: {
           [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
             settingValue: 1,
@@ -81,9 +83,10 @@ const chemistryData: ChemistryPackagesListType = [
           [ChemistryLogsNames.COUNTER]: {
             log: [],
             name: 'Licznik',
+            lastChange: null,
           },
         },
-        lastChange: null,
+
         settings: {
           [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
             settingValue: 1,
@@ -110,9 +113,10 @@ const chemistryData: ChemistryPackagesListType = [
           [ChemistryLogsNames.COUNTER]: {
             log: [],
             name: 'Licznik',
+            lastChange: null,
           },
         },
-        lastChange: null,
+
         settings: {
           [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
             settingValue: 1,
@@ -138,9 +142,10 @@ const chemistryData: ChemistryPackagesListType = [
           [ChemistryLogsNames.COUNTER]: {
             log: [],
             name: 'Licznik',
+            lastChange: null,
           },
         },
-        lastChange: null,
+
         settings: {
           [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
             settingValue: 1,
@@ -167,9 +172,10 @@ const chemistryData: ChemistryPackagesListType = [
           [ChemistryLogsNames.COUNTER]: {
             log: [],
             name: 'Licznik',
+            lastChange: null,
           },
         },
-        lastChange: null,
+
         settings: {
           [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
             settingValue: 1,
@@ -195,9 +201,10 @@ const chemistryData: ChemistryPackagesListType = [
           [ChemistryLogsNames.COUNTER]: {
             log: [],
             name: 'Licznik',
+            lastChange: null,
           },
         },
-        lastChange: null,
+
         settings: {
           [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
             settingValue: 1,
@@ -229,9 +236,10 @@ const chemistryData: ChemistryPackagesListType = [
           [ChemistryLogsNames.COUNTER]: {
             log: [],
             name: 'Licznik',
+            lastChange: null,
           },
         },
-        lastChange: null,
+
         settings: {
           [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
             settingValue: 1,
@@ -257,9 +265,10 @@ const chemistryData: ChemistryPackagesListType = [
           [ChemistryLogsNames.COUNTER]: {
             log: [],
             name: 'Licznik',
+            lastChange: null,
           },
         },
-        lastChange: null,
+
         settings: {
           [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
             settingValue: 1,
@@ -285,9 +294,10 @@ const chemistryData: ChemistryPackagesListType = [
           [ChemistryLogsNames.COUNTER]: {
             log: [],
             name: 'Licznik',
+            lastChange: null,
           },
         },
-        lastChange: null,
+
         settings: {
           [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
             settingValue: 1,
@@ -314,9 +324,10 @@ const chemistryData: ChemistryPackagesListType = [
           [ChemistryLogsNames.COUNTER]: {
             log: [],
             name: 'Licznik',
+            lastChange: null,
           },
         },
-        lastChange: null,
+
         settings: {
           [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
             settingValue: 1,
@@ -342,9 +353,10 @@ const chemistryData: ChemistryPackagesListType = [
           [ChemistryLogsNames.COUNTER]: {
             log: [],
             name: 'Licznik',
+            lastChange: null,
           },
         },
-        lastChange: null,
+
         settings: {
           [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
             settingValue: 1,
@@ -371,9 +383,10 @@ const chemistryData: ChemistryPackagesListType = [
           [ChemistryLogsNames.COUNTER]: {
             log: [],
             name: 'Licznik',
+            lastChange: null,
           },
         },
-        lastChange: null,
+
         settings: {
           [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
             settingValue: 1,
@@ -399,9 +412,10 @@ const chemistryData: ChemistryPackagesListType = [
           [ChemistryLogsNames.COUNTER]: {
             log: [],
             name: 'Licznik',
+            lastChange: null,
           },
         },
-        lastChange: null,
+
         settings: {
           [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
             settingValue: 1,
