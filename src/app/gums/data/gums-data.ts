@@ -22,13 +22,14 @@ const gumsData: IGumsPackage = {
         [GumsLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
         },
         [GumsLogsNames.CARDBOARD]: {
           log: [],
           name: 'Kartony',
+          lastChange: null,
         },
       },
-      lastChange: null,
       settings: {
         [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
           settingValue: 500,
@@ -53,13 +54,15 @@ const gumsData: IGumsPackage = {
         [GumsLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
         },
         [GumsLogsNames.CARDBOARD]: {
           log: [],
           name: 'Kartony',
+          lastChange: null,
         },
       },
-      lastChange: null,
+
       settings: {
         [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
           settingValue: 500,
@@ -84,13 +87,15 @@ const gumsData: IGumsPackage = {
         [GumsLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
         },
         [GumsLogsNames.CARDBOARD]: {
           log: [],
           name: 'Kartony',
+          lastChange: null,
         },
       },
-      lastChange: null,
+
       settings: {
         [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
           settingValue: 500,
@@ -115,13 +120,15 @@ const gumsData: IGumsPackage = {
         [GumsLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
         },
         [GumsLogsNames.CARDBOARD]: {
           log: [],
           name: 'Kartony',
+          lastChange: null,
         },
       },
-      lastChange: null,
+
       settings: {
         [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
           settingValue: 500,
@@ -146,13 +153,15 @@ const gumsData: IGumsPackage = {
         [GumsLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
         },
         [GumsLogsNames.CARDBOARD]: {
           log: [],
           name: 'Kartony',
+          lastChange: null,
         },
       },
-      lastChange: null,
+
       settings: {
         [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
           settingValue: 500,
@@ -177,13 +186,15 @@ const gumsData: IGumsPackage = {
         [GumsLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
         },
         [GumsLogsNames.CARDBOARD]: {
           log: [],
           name: 'Kartony',
+          lastChange: null,
         },
       },
-      lastChange: null,
+
       settings: {
         [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
           settingValue: 500,
@@ -208,13 +219,15 @@ const gumsData: IGumsPackage = {
         [GumsLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
         },
         [GumsLogsNames.CARDBOARD]: {
           log: [],
           name: 'Kartony',
+          lastChange: null,
         },
       },
-      lastChange: null,
+
       settings: {
         [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
           settingValue: 500,
@@ -239,13 +252,15 @@ const gumsData: IGumsPackage = {
         [GumsLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
         },
         [GumsLogsNames.CARDBOARD]: {
           log: [],
           name: 'Kartony',
+          lastChange: null,
         },
       },
-      lastChange: null,
+
       settings: {
         [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
           settingValue: 500,
@@ -270,13 +285,15 @@ const gumsData: IGumsPackage = {
         [GumsLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
         },
         [GumsLogsNames.CARDBOARD]: {
           log: [],
           name: 'Kartony',
+          lastChange: null,
         },
       },
-      lastChange: null,
+
       settings: {
         [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
           settingValue: 500,
@@ -301,13 +318,15 @@ const gumsData: IGumsPackage = {
         [GumsLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
         },
         [GumsLogsNames.CARDBOARD]: {
           log: [],
           name: 'Kartony',
+          lastChange: null,
         },
       },
-      lastChange: null,
+
       settings: {
         [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
           settingValue: 500,
@@ -332,13 +351,15 @@ const gumsData: IGumsPackage = {
         [GumsLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
         },
         [GumsLogsNames.CARDBOARD]: {
           log: [],
           name: 'Kartony',
+          lastChange: null,
         },
       },
-      lastChange: null,
+
       settings: {
         [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
           settingValue: 500,
@@ -363,13 +384,15 @@ const gumsData: IGumsPackage = {
         [GumsLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
         },
         [GumsLogsNames.CARDBOARD]: {
           log: [],
           name: 'Kartony',
+          lastChange: null,
         },
       },
-      lastChange: null,
+
       settings: {
         [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
           settingValue: 500,
@@ -394,13 +417,15 @@ const gumsData: IGumsPackage = {
         [GumsLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
         },
         [GumsLogsNames.CARDBOARD]: {
           log: [],
           name: 'Kartony',
+          lastChange: null,
         },
       },
-      lastChange: null,
+
       settings: {
         [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
           settingValue: 500,

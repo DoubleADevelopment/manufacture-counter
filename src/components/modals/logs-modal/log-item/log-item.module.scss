@@ -5,6 +5,20 @@
   gap: 5px;
 }
 
+.log-item__header {
+  display: grid;
+  align-self: center;
+  grid-template-columns: 1fr;
+}
+
+.log-item__last-change {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
 .log-item__list {
   display: flex;
   flex-wrap: wrap;

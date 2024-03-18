@@ -7,7 +7,7 @@ const ButtonTertiarySmall = ({ clickHandler, text }: IButtonProps): JSX.Element 
   return (
     <button
       type="button"
-      className={`${style['button-tertiary-samll']} label-small`}
+      className={`${style['button-tertiary-samll']} unselectable label-small content-primary-a`}
       onClick={clickHandler}
     >
       {text}

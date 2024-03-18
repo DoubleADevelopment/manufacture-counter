@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 //components
-import { ShortCardWithLogs } from '../../../../components';
+import { ShortCardWithLogsModal } from '../../../../components';
 //store
 import { useAppDispatch, useAppSelector } from '../../../../hooks/hooks';
 import { clearItemDataAction } from '../../store/actions/actions';
@@ -38,7 +38,7 @@ const CountableItemInfo = (): JSX.Element => {
   };
 
   return (
-    <ShortCardWithLogs
+    <ShortCardWithLogsModal
       item={convertedItem}
       itemLogs={item?.logs}
       clearDataHandler={clearDataHandler}

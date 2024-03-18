@@ -51,7 +51,9 @@ const ControlSetValue = ({
 
   return (
     <div className={style['control-set-value']}>
-      <label className={`${style['control-set-value__label']} label-large content-primary-a`}>
+      <label
+        className={`${style['control-set-value__label']} unselectable label-large content-primary-a`}
+      >
         {message ? (
           <span className={style['control-set-value__message']}>{message}</span>
         ) : (

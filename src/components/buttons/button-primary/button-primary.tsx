@@ -7,7 +7,7 @@ const ButtonPrimary = ({ text, clickHandler }: IButtonProps): JSX.Element => {
   return (
     <button
       type="button"
-      className={`${style['button-primary']} label-large content-primary-b`}
+      className={`${style['button-primary']} unselectable label-large content-primary-b`}
       onClick={clickHandler}
     >
       {text}

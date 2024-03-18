@@ -6,6 +6,7 @@ const CounterText = {
   COUNTER_LOGS: 'Logi licznika',
   CLEAR_COUNTER_HISTORY_CONFIRM: 'Napewno chcesz usunąć danę licznika?',
   OPEN_COUNTER: 'Otwórz licznik',
+  LASST_CHANGE_TITLE: 'Ostatnia zmiana',
 };
 
 enum InputMessagesText {

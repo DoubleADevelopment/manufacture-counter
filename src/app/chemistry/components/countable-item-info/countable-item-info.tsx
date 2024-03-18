@@ -11,7 +11,7 @@ import {
 //variables
 import { ChemistryPackagesNames } from '../../variables/';
 //components
-import { ShortCardWithLogs } from '../../../../components/cards';
+import { ShortCardWithLogsModal } from '../../../../components/cards';
 //types
 import type { IItemDataToDisplay } from '../../../../types';
 import type { IChemistryItem } from '../../types/';
@@ -46,7 +46,7 @@ const CountableItemInfo = ({ packageName }: ICountableItemInfoProps): JSX.Elemen
   };
 
   return (
-    <ShortCardWithLogs
+    <ShortCardWithLogsModal
       item={convertedItem}
       itemLogs={item?.logs}
       clearDataHandler={clearDataHandler}

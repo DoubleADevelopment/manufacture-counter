@@ -8,6 +8,7 @@ interface IChemistryLogs extends ILogs {
   [ChemistryLogsNames.COUNTER]: {
     log: string[];
     name: string;
+    lastChange: Date | null;
   };
 }
 
@@ -30,7 +31,6 @@ interface IChemistryItem {
   image: string;
   color: string;
   logs: IChemistryLogs;
-  lastChange: string | null;
   settings: IChemistrySettings;
   additionalResources: string[];
   packagingInfo: string;

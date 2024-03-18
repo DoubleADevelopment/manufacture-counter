@@ -1,20 +1,20 @@
 import { useState } from 'react';
 //components
-import { ItemCardShort, LogsModal } from '../../';
+import { ItemCardShort, LogsModal } from '../..';
 //types
-import type { IItemDataToDisplay, ILogs } from '../../../types/';
+import type { IItemDataToDisplay, ILogs } from '../../../types';
 
-interface IShortCardWithLogs {
+interface IShortCardWithLogsModal {
   itemLogs: ILogs | undefined;
   item: IItemDataToDisplay | undefined;
   clearDataHandler: () => void;
 }
 
-const ShortCardWithLogs = ({
+const ShortCardWithLogsModal = ({
   itemLogs,
   item,
   clearDataHandler,
-}: IShortCardWithLogs): JSX.Element => {
+}: IShortCardWithLogsModal): JSX.Element => {
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
   const onCardClickHandler = () => {
     setModalIsOpen(true);
@@ -44,4 +44,4 @@ const ShortCardWithLogs = ({
   );
 };
 
-export default ShortCardWithLogs;
+export default ShortCardWithLogsModal;

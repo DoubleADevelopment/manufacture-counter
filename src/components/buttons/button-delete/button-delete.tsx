@@ -7,7 +7,7 @@ const ButtonDelete = ({ clickHandler, text }: IButtonProps): JSX.Element => {
   return (
     <button
       type="button"
-      className={`${style['button-delete']} label-large content-primary-b`}
+      className={`${style['button-delete']} unselectable label-large content-primary-b`}
       onClick={clickHandler}
     >
       {text}

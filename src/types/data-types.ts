@@ -25,16 +25,20 @@ interface IItemDataToDisplay {
   image: string;
   amount: number;
   unitsOfMeasurement: string;
+  lastChange?: Date;
 }
 
 type ItemsDataToDisplayListType = IItemDataToDisplay[];
 
+interface ILogItem {
+  log: string[];
+  name: string;
+  lastChange: Date | null;
+}
+
 //data types for apps/counters
 interface ILogs {
-  [key: string]: {
-    log: string[];
-    name: string;
-  };
+  [key: string]: ILogItem;
 }
 
 interface ISettings {
@@ -92,4 +96,5 @@ export type {
   IDataPackage,
   IData,
   storageNamesAliasType,
+  ILogItem,
 };

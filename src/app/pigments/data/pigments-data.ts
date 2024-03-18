@@ -22,17 +22,20 @@ const pigmentsData: IPigmentsPackage = {
         [PigmentsLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
         },
         [PigmentsLogsNames.CONTAINER]: {
           log: [],
           name: 'Kontenery',
+          lastChange: null,
         },
         [PigmentsLogsNames.BAG]: {
           log: [],
           name: 'Worki',
+          lastChange: null,
         },
       },
-      lastChange: null,
+
       settings: {
         [PigmentsSettingsNames.BASE_BAG_VALUE]: {
           settingValue: 25,
@@ -65,17 +68,20 @@ const pigmentsData: IPigmentsPackage = {
         [PigmentsLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
         },
         [PigmentsLogsNames.CONTAINER]: {
           log: [],
           name: 'Kontenery',
+          lastChange: null,
         },
         [PigmentsLogsNames.BAG]: {
           log: [],
           name: 'Worki',
+          lastChange: null,
         },
       },
-      lastChange: null,
+
       settings: {
         [PigmentsSettingsNames.BASE_BAG_VALUE]: {
           settingValue: 25,
@@ -108,17 +114,20 @@ const pigmentsData: IPigmentsPackage = {
         [PigmentsLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
         },
         [PigmentsLogsNames.CONTAINER]: {
           log: [],
           name: 'Kontenery',
+          lastChange: null,
         },
         [PigmentsLogsNames.BAG]: {
           log: [],
           name: 'Worki',
+          lastChange: null,
         },
       },
-      lastChange: null,
+
       settings: {
         [PigmentsSettingsNames.BASE_BAG_VALUE]: {
           settingValue: 25,
@@ -151,17 +160,20 @@ const pigmentsData: IPigmentsPackage = {
         [PigmentsLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
         },
         [PigmentsLogsNames.CONTAINER]: {
           log: [],
           name: 'Kontenery',
+          lastChange: null,
         },
         [PigmentsLogsNames.BAG]: {
           log: [],
           name: 'Worki',
+          lastChange: null,
         },
       },
-      lastChange: null,
+
       settings: {
         [PigmentsSettingsNames.BASE_BAG_VALUE]: {
           settingValue: 25,
@@ -194,17 +206,20 @@ const pigmentsData: IPigmentsPackage = {
         [PigmentsLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
         },
         [PigmentsLogsNames.CONTAINER]: {
           log: [],
           name: 'Kontenery',
+          lastChange: null,
         },
         [PigmentsLogsNames.BAG]: {
           log: [],
           name: 'Worki',
+          lastChange: null,
         },
       },
-      lastChange: null,
+
       settings: {
         [PigmentsSettingsNames.BASE_BAG_VALUE]: {
           settingValue: 25,
@@ -237,17 +252,20 @@ const pigmentsData: IPigmentsPackage = {
         [PigmentsLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
         },
         [PigmentsLogsNames.CONTAINER]: {
           log: [],
           name: 'Kontenery',
+          lastChange: null,
         },
         [PigmentsLogsNames.BAG]: {
           log: [],
           name: 'Worki',
+          lastChange: null,
         },
       },
-      lastChange: null,
+
       settings: {
         [PigmentsSettingsNames.BASE_BAG_VALUE]: {
           settingValue: 25,
@@ -280,17 +298,20 @@ const pigmentsData: IPigmentsPackage = {
         [PigmentsLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
         },
         [PigmentsLogsNames.CONTAINER]: {
           log: [],
           name: 'Kontenery',
+          lastChange: null,
         },
         [PigmentsLogsNames.BAG]: {
           log: [],
           name: 'Worki',
+          lastChange: null,
         },
       },
-      lastChange: null,
+
       settings: {
         [PigmentsSettingsNames.BASE_BAG_VALUE]: {
           settingValue: 25,
@@ -323,17 +344,20 @@ const pigmentsData: IPigmentsPackage = {
         [PigmentsLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
         },
         [PigmentsLogsNames.CONTAINER]: {
           log: [],
           name: 'Kontenery',
+          lastChange: null,
         },
         [PigmentsLogsNames.BAG]: {
           log: [],
           name: 'Worki',
+          lastChange: null,
         },
       },
-      lastChange: null,
+
       settings: {
         [PigmentsSettingsNames.BASE_BAG_VALUE]: {
           settingValue: 25,
@@ -366,17 +390,20 @@ const pigmentsData: IPigmentsPackage = {
         [PigmentsLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
         },
         [PigmentsLogsNames.CONTAINER]: {
           log: [],
           name: 'Kontenery',
+          lastChange: null,
         },
         [PigmentsLogsNames.BAG]: {
           log: [],
           name: 'Worki',
+          lastChange: null,
         },
       },
-      lastChange: null,
+
       settings: {
         [PigmentsSettingsNames.BASE_BAG_VALUE]: {
           settingValue: 25,

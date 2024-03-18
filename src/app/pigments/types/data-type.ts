@@ -7,14 +7,17 @@ interface IPigmentsLogs extends ILogs {
   [PigmentsLogsNames.COUNTER]: {
     log: string[];
     name: string;
+    lastChange: Date | null;
   };
   [PigmentsLogsNames.CONTAINER]: {
     log: string[];
     name: string;
+    lastChange: Date | null;
   };
   [PigmentsLogsNames.BAG]: {
     log: string[];
     name: string;
+    lastChange: Date | null;
   };
 }
 
@@ -44,7 +47,6 @@ interface IPigmentsItem {
   image: string;
   color: string;
   logs: IPigmentsLogs;
-  lastChange: string | null;
   settings: IPigmentsSettings;
   additionalResources: string[];
   packagingInfo: string;

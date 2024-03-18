@@ -6,6 +6,15 @@
   clip: rect(0 0 0 0);
 }
 
+.hidden-input {
+  appearance: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+}
+
 // disable text selection
 .unselectable { /* Chrome/Safari/Opera */ /* Konqueror */ /* Firefox */ /* Internet Explorer/Edge */
   -webkit-tap-highlight-color: rgb(0 0 0 / 0%);

@@ -19,7 +19,7 @@ const Header = ({ title, backLink }: IHeaderProps): JSX.Element => {
       <h1 className={`heading-medium content-primary-a`}>{title}</h1>
 
       {backLink && (
-        <Link className={style['header__back-link']} to={backLink}>
+        <Link className={`${style['header__back-link']} unselectable`} to={backLink}>
           <ArrowBackIcon />
           <span className="visually-hidden">{InterfaceText.BACK_TO_OVERVIEW}</span>
         </Link>

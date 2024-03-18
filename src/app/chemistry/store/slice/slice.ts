@@ -28,6 +28,7 @@ export const chemistrySlice = createSlice({
     log: (state, action: PayloadAction<ILogAction<ChemistryLogsNames>>) => {
       const { UNID, logName, log, packageName } = action.payload;
       state[packageName][UNID].logs[logName].log.push(log);
+      state[packageName][UNID].logs[logName].lastChange = new Date();
     },
     clearItem: (state, action: PayloadAction<IClearItemAction<IChemistryItem>>) => {
       const { UNID } = action.payload.item;

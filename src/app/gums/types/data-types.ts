@@ -7,10 +7,12 @@ interface IGumsLogs extends ILogs {
   [GumsLogsNames.COUNTER]: {
     log: string[];
     name: string;
+    lastChange: Date | null;
   };
   [GumsLogsNames.CARDBOARD]: {
     log: string[];
     name: string;
+    lastChange: Date | null;
   };
 }
 
@@ -32,7 +34,6 @@ interface IGumsItem {
   image: string;
   color: string;
   logs: IGumsLogs;
-  lastChange: string | null;
   settings: IGumsSettings;
   additionalResources: string[];
   packagingInfo: string;

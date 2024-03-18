@@ -23,7 +23,7 @@ const ButtonDeleteWithConfirm = ({ text, clickHandler }: IButtonProps): JSX.Elem
     <>
       <button
         type="button"
-        className={`${style['button-delete-with-confirm']} label-small`}
+        className={`${style['button-delete-with-confirm']} unselectable label-small content-primary-b`}
         onClick={onDeleteButtonClickHandler}
       >
         {text}
@@ -43,7 +43,7 @@ const ButtonDeleteWithConfirm = ({ text, clickHandler }: IButtonProps): JSX.Elem
             <button
               onClick={confirmButtonClickHandler}
               type="button"
-              className={`${style['button-delete-with-confirm']} label-small`}
+              className={`${style['button-delete-with-confirm']} unselectable label-small content-primary-b`}
             >
               Potwierdź usunięcie
             </button>
