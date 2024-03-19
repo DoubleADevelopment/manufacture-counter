@@ -1,9 +1,5 @@
 //types
-import type {
-  IAdapterService,
-  IItemDataToDisplay,
-  ItemsDataToDisplayListType,
-} from '../../../types';
+import type { IItemDataToDisplay, ItemsDataToDisplayListType } from '../../../types';
 import type {
   IPigmentsItem,
   IPigmentsPackage,
@@ -11,7 +7,7 @@ import type {
   PigmentsItemsListType,
 } from '../types/data-type';
 
-class PigmentsAdapterService implements IAdapterService<IPigmentsData, IPigmentsPackage> {
+class PigmentsAdapterService {
   adaptDataToApp(data: IPigmentsPackage): IPigmentsData {
     const adaptedData: IPigmentsData = {};
 

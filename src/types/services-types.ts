@@ -6,8 +6,4 @@ interface ILocalstorageService<D> {
   clearStore(): void;
 }
 
-interface IAdapterService<D, P> {
-  adaptDataToApp(dataPackage: P): D;
-}
-
-export type { ILocalstorageService, IAdapterService };
+export type { ILocalstorageService };

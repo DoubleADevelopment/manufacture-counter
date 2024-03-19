@@ -1,4 +1,4 @@
-import type { ILocalstorageService, IAdapterService } from './services-types';
+import type { ILocalstorageService } from './services-types';
 import type { IRepository } from './repository-types';
 import type {
   IComponentData,
@@ -21,7 +21,6 @@ import { IInputValueValidate } from './utils-types';
 export type {
   ILogAction,
   ILocalstorageService,
-  IAdapterService,
   IRepository,
   IIncDecAction,
   AppDispatch,
