@@ -1,4 +1,4 @@
-import type { IDataService, ILocalstorageService, IAdapterService } from './services-types';
+import type { ILocalstorageService } from './services-types';
 import type { IRepository } from './repository-types';
 import type {
   IComponentData,
@@ -6,11 +6,8 @@ import type {
   ItemsDataToDisplayListType,
   ILogs,
   IItemDataToDisplay,
-  DataAliasType,
   ISettings,
   IItemData,
-  IDataPackage,
-  IData,
   storageNamesAliasType,
   ILogItem,
 } from './data-types';
@@ -23,9 +20,7 @@ import { IInputValueValidate } from './utils-types';
 
 export type {
   ILogAction,
-  IDataService,
   ILocalstorageService,
-  IAdapterService,
   IRepository,
   IIncDecAction,
   AppDispatch,
@@ -39,11 +34,8 @@ export type {
   ItemsDataToDisplayListType,
   ILogs,
   IItemDataToDisplay,
-  DataAliasType,
   ISettings,
   IItemData,
-  IDataPackage,
-  IData,
   storageNamesAliasType,
   IClearItemAction,
   IButtonProps,

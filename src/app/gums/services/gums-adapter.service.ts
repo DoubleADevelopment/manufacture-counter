@@ -1,12 +1,8 @@
 //types
-import type {
-  IAdapterService,
-  IItemDataToDisplay,
-  ItemsDataToDisplayListType,
-} from '../../../types';
+import type { IItemDataToDisplay, ItemsDataToDisplayListType } from '../../../types';
 import type { IGumsItem, IGumsPackage, IGumsData, GumsItemsListType } from '../types/data-types';
 
-class GumsAdapterService implements IAdapterService<IGumsData, IGumsPackage> {
+class GumsAdapterService {
   adaptDataToApp(data: IGumsPackage): IGumsData {
     const adaptedData: IGumsData = {};
 

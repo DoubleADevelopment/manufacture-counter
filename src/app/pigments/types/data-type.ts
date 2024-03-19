@@ -1,5 +1,5 @@
 //types
-import type { ILogs } from '../../../types';
+import type { IItemData, ILogs, ISettings } from '../../../types';
 //vars
 import { PigmentsLogsNames, PigmentsSettingsNames } from '../variables/data-variables';
 
@@ -21,7 +21,7 @@ interface IPigmentsLogs extends ILogs {
   };
 }
 
-interface IPigmentsSettings {
+interface IPigmentsSettings extends ISettings {
   [PigmentsSettingsNames.BASE_BAG_VALUE]: {
     settingValue: number;
     name: string;
@@ -40,22 +40,7 @@ interface IPigmentsSettings {
   };
 }
 
-interface IPigmentsItem {
-  UNID: string;
-  amount: number;
-  manufactured: string;
-  productName: string;
-  systemCode: string;
-  description: string;
-  additionalInfo: string;
-  image: string;
-  color: string;
-  logs: IPigmentsLogs;
-  settings: IPigmentsSettings;
-  additionalResources: string[];
-  packagingInfo: string;
-  unitsOfMeasurement: string;
-}
+interface IPigmentsItem extends IItemData<IPigmentsLogs, IPigmentsSettings> {}
 
 type PigmentsItemsListType = IPigmentsItem[];
 

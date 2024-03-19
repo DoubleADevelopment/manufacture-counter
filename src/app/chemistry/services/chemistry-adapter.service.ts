@@ -1,11 +1,7 @@
 //variablse
 import { ChemistryPackagesNames } from '../variables/';
 //types
-import type {
-  IAdapterService,
-  IItemDataToDisplay,
-  ItemsDataToDisplayListType,
-} from '../../../types';
+import type { IItemDataToDisplay, ItemsDataToDisplayListType } from '../../../types';
 import type {
   IChemistryItem,
   IChemistryData,
@@ -14,9 +10,7 @@ import type {
   IChemistryItems,
 } from '../types/data-types';
 
-class ChemistryAdapterService
-  implements IAdapterService<IChemistryData, ChemistryPackagesListType>
-{
+class ChemistryAdapterService {
   adaptDataToApp(data: ChemistryPackagesListType): IChemistryData {
     const adaptedData: IChemistryData = {
       [ChemistryPackagesNames.EXTRUSION]: {},

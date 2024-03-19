@@ -13,4 +13,5 @@ class PigmentsLocalstorageService extends AbstractLocalstorageService<IPigmentsD
 }
 
 const pigmentsLocalstorageService = new PigmentsLocalstorageService(PIGMENTS_STORAGE_NAME);
+
 export default pigmentsLocalstorageService;
