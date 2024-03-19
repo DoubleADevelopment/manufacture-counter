@@ -1,5 +1,5 @@
 //vars
-import { ILogs } from '../../../types';
+import { IItemData, ILogs, ISettings } from '../../../types';
 import { ChemistryLogsNames, ChemistrySettingsNames } from '../variables/';
 //types
 import { ChemistryPackagesNames } from '../variables/';
@@ -12,29 +12,15 @@ interface IChemistryLogs extends ILogs {
   };
 }
 
-interface IChemistrySettings {
+interface IChemistrySettings extends ISettings {
   [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
     settingValue: number;
     name: string;
   };
 }
 
-interface IChemistryItem {
-  UNID: string;
+interface IChemistryItem extends IItemData<IChemistryLogs, IChemistrySettings> {
   packageName: ChemistryPackagesNames;
-  amount: number;
-  manufactured: string;
-  productName: string;
-  systemCode: string;
-  description: string;
-  additionalInfo: string;
-  image: string;
-  color: string;
-  logs: IChemistryLogs;
-  settings: IChemistrySettings;
-  additionalResources: string[];
-  packagingInfo: string;
-  unitsOfMeasurement: string;
 }
 
 type ChemistryItemsListType = IChemistryItem[];

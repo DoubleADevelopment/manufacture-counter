@@ -1,5 +1,5 @@
 //types
-import type { ILogs } from '../../../types';
+import type { IItemData, ILogs, ISettings } from '../../../types';
 //vars
 import { GumsLogsNames, GumsSettingsNames } from '../variables/data-variables';
 
@@ -16,7 +16,7 @@ interface IGumsLogs extends ILogs {
   };
 }
 
-interface IGumsSettings {
+interface IGumsSettings extends ISettings {
   [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
     settingValue: number;
     name: string;
@@ -27,22 +27,7 @@ interface IGumsSettings {
   };
 }
 
-interface IGumsItem {
-  UNID: string;
-  amount: number;
-  manufactured: string;
-  productName: string;
-  systemCode: string;
-  description: string;
-  additionalInfo: string;
-  image: string;
-  color: string;
-  logs: IGumsLogs;
-  settings: IGumsSettings;
-  additionalResources: string[];
-  packagingInfo: string;
-  unitsOfMeasurement: string;
-}
+interface IGumsItem extends IItemData<IGumsLogs, IGumsSettings> {}
 
 type GumsItemsListType = IGumsItem[];
 

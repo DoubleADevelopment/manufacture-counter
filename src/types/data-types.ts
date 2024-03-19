@@ -56,20 +56,19 @@ interface IDataPackage<I> {
 
 interface IItemData<L extends ILogs, S extends ISettings> {
   UNID: string;
-  packageName?: string;
   amount: number;
-  firm: string;
-  name: string;
-  itemNumber: string;
+  manufactured: string;
+  productName: string;
+  systemCode: string;
   description: string;
+  additionalInfo: string;
   image: string;
   color: string;
   logs: L;
-  lastChange: string | null;
   settings: S;
   additionalResources: string[];
   packagingInfo: string;
-  manufacturer: string;
+  unitsOfMeasurement: string;
 }
 
 interface IData<I> {
