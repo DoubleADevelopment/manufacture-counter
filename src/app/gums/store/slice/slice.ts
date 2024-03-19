@@ -29,7 +29,7 @@ export const gumsSlice = createSlice({
     log: (state, action: PayloadAction<ILogAction<GumsLogsNames>>) => {
       const { UNID, logName, log } = action.payload;
       state[UNID].logs[logName].log.push(log);
-      state[UNID].logs[logName].lastChange = new Date();
+      state[UNID].logs[logName].lastChange = new Date().getTime().toString();
     },
     clearItem: (state, action: PayloadAction<IClearItemAction<IGumsItem>>) => {
       const { UNID } = action.payload.item;

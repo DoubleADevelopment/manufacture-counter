@@ -7,17 +7,17 @@ interface IPigmentsLogs extends ILogs {
   [PigmentsLogsNames.COUNTER]: {
     log: string[];
     name: string;
-    lastChange: Date | null;
+    lastChange: string | null;
   };
   [PigmentsLogsNames.CONTAINER]: {
     log: string[];
     name: string;
-    lastChange: Date | null;
+    lastChange: string | null;
   };
   [PigmentsLogsNames.BAG]: {
     log: string[];
     name: string;
-    lastChange: Date | null;
+    lastChange: string | null;
   };
 }
 
