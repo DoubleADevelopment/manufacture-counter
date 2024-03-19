@@ -1,5 +1,7 @@
 //components
 import { ButtonDeleteWithConfirm } from '../../buttons';
+//variables
+import { CounterText } from '../../../variables';
 //styles
 import style from './components-setting.module.scss';
 
@@ -16,7 +18,11 @@ const ComponentsSetting = (): JSX.Element => {
         <p className="label-medium content-primary-a">
           Usunąć danę wszystkich liczników w aplikacji
         </p>
-        <ButtonDeleteWithConfirm clickHandler={onClearAppsDataClickHandler} text="Usunać" />
+        <ButtonDeleteWithConfirm
+          clickHandler={onClearAppsDataClickHandler}
+          text="Usunać"
+          modalTitle={CounterText.CLEAR_COUNTER_HISTORY_CONFIRM}
+        />
       </div>
     </section>
   );

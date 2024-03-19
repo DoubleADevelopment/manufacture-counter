@@ -4,7 +4,15 @@ import type { IButtonProps } from '../../../types/';
 //styles
 import style from './button-delete-with-confirm.module.scss';
 
-const ButtonDeleteWithConfirm = ({ text, clickHandler }: IButtonProps): JSX.Element => {
+interface IButtonDeleteWithConfirmProps extends IButtonProps {
+  modalTitle: string;
+}
+
+const ButtonDeleteWithConfirm = ({
+  text,
+  clickHandler,
+  modalTitle,
+}: IButtonDeleteWithConfirmProps): JSX.Element => {
   const [confirmModalIsOpen, setConfirmModalIsOpen] = useState<boolean>(false);
 
   const onDeleteButtonClickHandler = () => {
@@ -32,7 +40,7 @@ const ButtonDeleteWithConfirm = ({ text, clickHandler }: IButtonProps): JSX.Elem
       {confirmModalIsOpen && (
         <div className={style['button-delete-with-confirm__modal']}>
           <div className={style['button-delete-with-confirm__modal-content']}>
-            <h4>Clear your chat history - are you sure?</h4>
+            <h4>{modalTitle}</h4>
             <button
               onClick={onCancelButtonClickHandler}
               className={style['button-delete-with-confirm__cancel-btn']}
