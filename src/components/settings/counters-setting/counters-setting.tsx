@@ -3,7 +3,7 @@ import { ButtonDeleteWithConfirm } from '../../buttons';
 //variables
 import { CounterText, InterfaceText } from '../../../variables';
 //styles
-import style from './components-setting.module.scss';
+import style from './counters-setting.module.scss';
 
 const CountersSetting = (): JSX.Element => {
   const onClearAppsDataClickHandler = () => {
