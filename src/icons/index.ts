@@ -8,6 +8,8 @@ import WarningIcon from './notification-icons/warning-icon';
 import InfoIcon from './notification-icons/info-icon';
 import PositiveIcon from './notification-icons/positive-icon';
 import CloseIcon from './common-icons/close-icon';
+import GitHubIcon from './info-icons/git-hub-icon';
+import InstagramIcon from './info-icons/instagram-icon';
 
 export {
   ErrorIcon,
@@ -20,4 +22,6 @@ export {
   ArrowBackIcon,
   PositiveIcon,
   CloseIcon,
+  GitHubIcon,
+  InstagramIcon,
 };
