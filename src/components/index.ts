@@ -21,6 +21,7 @@ import CounterHeader from './counter-header/counter-header';
 import { BasicCounter, CounterWithAdditionalValue } from './counter';
 import AdditionalNav from './additional-nav/additional-nav';
 import { CountersSetting } from './settings';
+import InfoAboutApp from './info-about-app/info-about-app';
 
 export {
   Header,
@@ -49,4 +50,5 @@ export {
   CounterWithAdditionalValue,
   ControlSetAdditionalValue,
   CountersSetting,
+  InfoAboutApp,
 };
