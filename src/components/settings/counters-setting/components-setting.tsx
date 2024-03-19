@@ -12,7 +12,7 @@ const CountersSetting = (): JSX.Element => {
 
   return (
     <section className={style['components-setting']}>
-      <h2 className="content-primary-a heading-x-small">Ustawienia liczników</h2>
+      <h2 className="content-primary-a heading-x-small">{CounterText.COUNTERS_SETTING}</h2>
 
       <div className={style['components-setting__controll-field']}>
         <p className="label-medium content-primary-a">{CounterText.CLEAR_ALL_COUNTERS_DATA}</p>

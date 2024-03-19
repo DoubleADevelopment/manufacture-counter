@@ -9,6 +9,7 @@ const CounterText = {
   CLEAR_ALL_COUNTERS_DATA: 'Usunąć danę wszystkich liczników w aplikacji',
   OPEN_COUNTER: 'Otwórz licznik',
   LASST_CHANGE_TITLE: 'Ostatnia zmiana',
+  COUNTERS_SETTING: 'Ustawienia liczników',
 };
 
 enum InputMessagesText {
