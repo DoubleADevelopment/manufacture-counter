@@ -1,10 +1,7 @@
 .info-page {
   display: grid;
+  align-items: flex-end;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr min-content;
+  grid-template-rows: 1fr;
   gap: 40px;
-}
-
-.info-page__title {
-  justify-self: left;
 }
