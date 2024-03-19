@@ -7,10 +7,17 @@ const ComponentsSetting = (): JSX.Element => {
   const onClearAppsDataClickHandler = () => {
     console.log('clear');
   };
+
   return (
     <section className={style['components-setting']}>
-      <h2>ustawienia liczników</h2>
-      <ButtonDeleteWithConfirm clickHandler={onClearAppsDataClickHandler} text="text" />
+      <h2 className="content-primary-a heading-x-small">Ustawienia liczników</h2>
+
+      <div className={style['components-setting__controll-field']}>
+        <p className="label-medium content-primary-a">
+          Usunąć danę wszystkich liczników w aplikacji
+        </p>
+        <ButtonDeleteWithConfirm clickHandler={onClearAppsDataClickHandler} text="Usunać" />
+      </div>
     </section>
   );
 };
