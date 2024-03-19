@@ -34,8 +34,11 @@ export const chemistrySlice = createSlice({
       const { UNID } = action.payload.item;
       state[action.payload.packageName][UNID] = action.payload.item;
     },
+    // clearData: (state, action: PayloadAction<IChemistryData>) => {
+    //   state = action.payload;
+    // },
     clearData: (state, action: PayloadAction<IChemistryData>) => {
-      state = action.payload;
+      return action.payload;
     },
   },
 });

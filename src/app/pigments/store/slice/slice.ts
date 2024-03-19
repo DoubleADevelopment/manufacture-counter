@@ -35,8 +35,11 @@ export const pigmentsSlice = createSlice({
       const { UNID } = action.payload.item;
       state[UNID] = action.payload.item;
     },
+    // clearData: (state, action: PayloadAction<IPigmentsData>) => {
+    //   state = action.payload;
+    // },
     clearData: (state, action: PayloadAction<IPigmentsData>) => {
-      state = action.payload;
+      return action.payload;
     },
     changeItemSetting: (state, action: PayloadAction<IChangeItemSetting>) => {
       const { UNID, settingName, newSettingValue } = action.payload;
