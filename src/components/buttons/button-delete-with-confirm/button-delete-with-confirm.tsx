@@ -3,6 +3,7 @@ import { useState } from 'react';
 import type { IButtonProps } from '../../../types/';
 //styles
 import style from './button-delete-with-confirm.module.scss';
+import { ConfirmDeletingModal } from '../../modals';
 
 interface IButtonDeleteWithConfirmProps extends IButtonProps {
   modalTitle: string;
@@ -13,18 +14,19 @@ const ButtonDeleteWithConfirm = ({
   clickHandler,
   modalTitle,
 }: IButtonDeleteWithConfirmProps): JSX.Element => {
-  const [confirmModalIsOpen, setConfirmModalIsOpen] = useState<boolean>(false);
+  const [isConfirmModalOpen, setIsConfirmModalOpen] = useState<boolean>(false);
 
-  const onDeleteButtonClickHandler = () => {
-    setConfirmModalIsOpen(true);
-  };
-
-  const confirmButtonClickHandler = () => {
+  const onDeleteClickHandler = () => {
     clickHandler();
+    setIsConfirmModalOpen(false);
   };
 
-  const onCancelButtonClickHandler = () => {
-    setConfirmModalIsOpen(false);
+  const openConfirmDeletingModal = () => {
+    setIsConfirmModalOpen(true);
+  };
+
+  const closeConfirmDeletingModal = () => {
+    setIsConfirmModalOpen(false);
   };
 
   return (
@@ -32,31 +34,17 @@ const ButtonDeleteWithConfirm = ({
       <button
         type="button"
         className={`${style['button-delete-with-confirm']} unselectable label-small content-primary-b`}
-        onClick={onDeleteButtonClickHandler}
+        onClick={openConfirmDeletingModal}
       >
         {text}
       </button>
 
-      {confirmModalIsOpen && (
-        <div className={style['button-delete-with-confirm__modal']}>
-          <div className={style['button-delete-with-confirm__modal-content']}>
-            <h4>{modalTitle}</h4>
-            <button
-              onClick={onCancelButtonClickHandler}
-              className={style['button-delete-with-confirm__cancel-btn']}
-              type="button"
-            >
-              anulować
-            </button>
-            <button
-              onClick={confirmButtonClickHandler}
-              type="button"
-              className={`${style['button-delete-with-confirm']} unselectable label-small content-primary-b`}
-            >
-              Potwierdź usunięcie
-            </button>
-          </div>
-        </div>
+      {isConfirmModalOpen && (
+        <ConfirmDeletingModal
+          modalTitle={modalTitle}
+          onCancelButtonClickHandler={closeConfirmDeletingModal}
+          confirmButtonClickHandler={onDeleteClickHandler}
+        />
       )}
     </>
   );

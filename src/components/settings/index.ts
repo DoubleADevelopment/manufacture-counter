@@ -1,3 +1,3 @@
-import ComponentsSetting from './components-setting/components-setting';
+import CountersSetting from './counters-setting/components-setting';
 
-export { ComponentsSetting };
+export { CountersSetting };
