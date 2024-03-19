@@ -1,8 +1,3 @@
-// interface IDataService<D extends DataAliasType> {
-//   getData(): D;
-//   getDataItem?(id: string): any;
-// }
-
 interface ILocalstorageService<D> {
   getItems(): D | Error | null;
 
