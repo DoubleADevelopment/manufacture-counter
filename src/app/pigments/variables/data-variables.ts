@@ -8,6 +8,7 @@ enum PigmentsSettingsNames {
   BASE_BAG_VALUE = 'baseBagValue',
   BASE_CONTAINER_VALUE = 'baseContainerValue',
   CONTAINER_WEIGHT = 'containerWeight',
+  BASE_COUNTER_VALUE = 'baseCounterValue',
 }
 
 const PIGMENTS_STORAGE_NAME = 'pigments-data';

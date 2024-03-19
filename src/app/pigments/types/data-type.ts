@@ -34,6 +34,10 @@ interface IPigmentsSettings {
     settingValue: number;
     name: string;
   };
+  [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
+    settingValue: number;
+    name: string;
+  };
 }
 
 interface IPigmentsItem {

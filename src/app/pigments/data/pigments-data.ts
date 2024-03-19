@@ -49,6 +49,10 @@ const pigmentsData: IPigmentsPackage = {
           settingValue: 77,
           name: 'Waga jednego kontenera / KG',
         },
+        [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 500,
+          name: 'Waga pigmentu / KG',
+        },
       },
       additionalResources: [],
       packagingInfo: 'karton',
@@ -94,6 +98,10 @@ const pigmentsData: IPigmentsPackage = {
         [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
           settingValue: 77,
           name: 'Waga jednego kontenera / KG',
+        },
+        [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 500,
+          name: 'Waga pigmentu / KG',
         },
       },
       additionalResources: [],
@@ -141,6 +149,10 @@ const pigmentsData: IPigmentsPackage = {
           settingValue: 77,
           name: 'Waga jednego kontenera / KG',
         },
+        [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 500,
+          name: 'Waga pigmentu / KG',
+        },
       },
       additionalResources: [],
       packagingInfo: 'karton',
@@ -186,6 +198,10 @@ const pigmentsData: IPigmentsPackage = {
         [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
           settingValue: 77,
           name: 'Waga jednego kontenera / KG',
+        },
+        [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 500,
+          name: 'Waga pigmentu / KG',
         },
       },
       additionalResources: [],
@@ -233,6 +249,10 @@ const pigmentsData: IPigmentsPackage = {
           settingValue: 77,
           name: 'Waga jednego kontenera / KG',
         },
+        [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 500,
+          name: 'Waga pigmentu / KG',
+        },
       },
       additionalResources: [],
       packagingInfo: 'karton',
@@ -278,6 +298,10 @@ const pigmentsData: IPigmentsPackage = {
         [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
           settingValue: 77,
           name: 'Waga jednego kontenera / KG',
+        },
+        [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 500,
+          name: 'Waga pigmentu / KG',
         },
       },
       additionalResources: [],
@@ -325,6 +349,10 @@ const pigmentsData: IPigmentsPackage = {
           settingValue: 77,
           name: 'Waga jednego kontenera / KG',
         },
+        [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 500,
+          name: 'Waga pigmentu / KG',
+        },
       },
       additionalResources: [],
       packagingInfo: 'karton',
@@ -371,6 +399,10 @@ const pigmentsData: IPigmentsPackage = {
           settingValue: 77,
           name: 'Waga jednego kontenera / KG',
         },
+        [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 500,
+          name: 'Waga pigmentu / KG',
+        },
       },
       additionalResources: [],
       packagingInfo: 'karton',
@@ -416,6 +448,10 @@ const pigmentsData: IPigmentsPackage = {
         [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
           settingValue: 77,
           name: 'Waga jednego kontenera / KG',
+        },
+        [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 500,
+          name: 'Waga pigmentu / KG',
         },
       },
       additionalResources: [],
