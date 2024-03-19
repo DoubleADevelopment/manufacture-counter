@@ -13,7 +13,7 @@ interface IGumsBasicCounterProps {
 
 const GumsBasicCounter = ({ UNID }: IGumsBasicCounterProps): JSX.Element => {
   const gumsBasicCounterDefaultValue = useAppSelector(
-    SelectorGetCurrentGumSetting(UNID, GumsSettingsNames.BASE_CARDBOARD_VALUE),
+    SelectorGetCurrentGumSetting(UNID, GumsSettingsNames.BASE_COUNTER_VALUE),
   );
 
   const dispatch = useAppDispatch();

@@ -35,6 +35,10 @@ const gumsData: IGumsPackage = {
           settingValue: 500,
           name: 'Waga kartonu / KG',
         },
+        [GumsSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 500,
+          name: 'Waga gumy / KG',
+        },
       },
       additionalResources: [],
       packagingInfo: 'karton',
@@ -67,6 +71,10 @@ const gumsData: IGumsPackage = {
         [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
           settingValue: 500,
           name: 'Waga kartonu / KG',
+        },
+        [GumsSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 500,
+          name: 'Waga gumy / KG',
         },
       },
       additionalResources: [],
@@ -101,6 +109,10 @@ const gumsData: IGumsPackage = {
           settingValue: 500,
           name: 'Waga kartonu / KG',
         },
+        [GumsSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 500,
+          name: 'Waga gumy / KG',
+        },
       },
       additionalResources: [],
       packagingInfo: 'karton',
@@ -133,6 +145,10 @@ const gumsData: IGumsPackage = {
         [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
           settingValue: 500,
           name: 'Waga kartonu / KG',
+        },
+        [GumsSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 500,
+          name: 'Waga gumy / KG',
         },
       },
       additionalResources: [],
@@ -167,6 +183,10 @@ const gumsData: IGumsPackage = {
           settingValue: 500,
           name: 'Waga kartonu / KG',
         },
+        [GumsSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 500,
+          name: 'Waga gumy / KG',
+        },
       },
       additionalResources: [],
       packagingInfo: 'karton',
@@ -199,6 +219,10 @@ const gumsData: IGumsPackage = {
         [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
           settingValue: 500,
           name: 'Waga kartonu / KG',
+        },
+        [GumsSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 500,
+          name: 'Waga gumy / KG',
         },
       },
       additionalResources: [],
@@ -233,6 +257,10 @@ const gumsData: IGumsPackage = {
           settingValue: 500,
           name: 'Waga kartonu / KG',
         },
+        [GumsSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 500,
+          name: 'Waga gumy / KG',
+        },
       },
       additionalResources: [],
       packagingInfo: 'karton',
@@ -265,6 +293,10 @@ const gumsData: IGumsPackage = {
         [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
           settingValue: 500,
           name: 'Waga kartonu / KG',
+        },
+        [GumsSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 500,
+          name: 'Waga gumy / KG',
         },
       },
       additionalResources: [],
@@ -299,6 +331,10 @@ const gumsData: IGumsPackage = {
           settingValue: 500,
           name: 'Waga kartonu / KG',
         },
+        [GumsSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 500,
+          name: 'Waga gumy / KG',
+        },
       },
       additionalResources: [],
       packagingInfo: 'karton',
@@ -331,6 +367,10 @@ const gumsData: IGumsPackage = {
         [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
           settingValue: 500,
           name: 'Waga kartonu / KG',
+        },
+        [GumsSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 500,
+          name: 'Waga gumy / KG',
         },
       },
       additionalResources: [],
@@ -365,6 +405,10 @@ const gumsData: IGumsPackage = {
           settingValue: 500,
           name: 'Waga kartonu / KG',
         },
+        [GumsSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 500,
+          name: 'Waga gumy / KG',
+        },
       },
       additionalResources: [],
       packagingInfo: 'karton',
@@ -398,6 +442,10 @@ const gumsData: IGumsPackage = {
           settingValue: 500,
           name: 'Waga kartonu / KG',
         },
+        [GumsSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 500,
+          name: 'Waga gumy / KG',
+        },
       },
       additionalResources: [],
       packagingInfo: 'karton',
@@ -430,6 +478,10 @@ const gumsData: IGumsPackage = {
         [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
           settingValue: 500,
           name: 'Waga kartonu / KG',
+        },
+        [GumsSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 500,
+          name: 'Waga gumy / KG',
         },
       },
       additionalResources: [],

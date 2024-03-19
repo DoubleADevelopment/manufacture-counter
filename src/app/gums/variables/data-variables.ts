@@ -5,6 +5,7 @@ enum GumsLogsNames {
 
 enum GumsSettingsNames {
   BASE_CARDBOARD_VALUE = 'baseCardboardValue',
+  BASE_COUNTER_VALUE = 'baseCounterValue',
 }
 
 const GUMS_STORAGE_NAME = 'gums-data';

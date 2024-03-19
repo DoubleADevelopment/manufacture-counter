@@ -21,6 +21,10 @@ interface IGumsSettings {
     settingValue: number;
     name: string;
   };
+  [GumsSettingsNames.BASE_COUNTER_VALUE]: {
+    settingValue: number;
+    name: string;
+  };
 }
 
 interface IGumsItem {
