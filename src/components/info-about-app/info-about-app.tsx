@@ -1,5 +1,5 @@
 //icons
-import { GitHubIcon, InstagramIcon } from '../../icons';
+import { GitHubIcon, Linkedincon } from '../../icons';
 //styles
 import style from './info-about-app.module.scss';
 //version from package.json
@@ -49,11 +49,11 @@ const InfoAboutApp = (): JSX.Element => {
         </a>
         <a
           className={`${style['info__social-link']} content-primary-a`}
-          href="https://www.instagram.com/ooshurek/"
+          href="https://www.linkedin.com/in/anton-oshurek-a6232521a/"
           target="blank"
         >
-          <span className="visually-hidden">Link na mój instagram</span>
-          <InstagramIcon />
+          <span className="visually-hidden">Link na mój Linkedin</span>
+          <Linkedincon />
         </a>
       </div>
       <p className="content-primary-a paragraph-small">version - {version}</p>

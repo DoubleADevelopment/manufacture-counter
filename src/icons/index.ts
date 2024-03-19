@@ -9,7 +9,7 @@ import InfoIcon from './notification-icons/info-icon';
 import PositiveIcon from './notification-icons/positive-icon';
 import CloseIcon from './common-icons/close-icon';
 import GitHubIcon from './info-icons/git-hub-icon';
-import InstagramIcon from './info-icons/instagram-icon';
+import Linkedincon from './info-icons/instagram-icon';
 
 export {
   ErrorIcon,
@@ -23,5 +23,5 @@ export {
   PositiveIcon,
   CloseIcon,
   GitHubIcon,
-  InstagramIcon,
+  Linkedincon,
 };
