@@ -1,7 +1,8 @@
 .info-page {
   display: grid;
+  align-items: flex-end;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr min-content;
+  grid-template-rows: 1fr;
   gap: 40px;
 }
 
@@ -11,33 +12,8 @@
   align-items: center;
   justify-content: center;
   padding: 0 10px;
+  text-align: center;
   gap: 20px;
-}
-
-.info__title {
-  font-family: var(--basic-font-family);
-  font-weight: var(--info-title-text-font-weight);
-  font-size: var(--info-title-text-font-size);
-  text-align: center;
-  text-transform: capitalize;
-  color: var(--info-text-color);
-}
-
-.info__subtitle {
-  font-family: var(--basic-font-family);
-  font-weight: var(--info-subtitle-text-font-weight);
-  font-size: var(--info-subtitle-text-font-size);
-  text-align: center;
-  text-transform: capitalize;
-  color: var(--info-text-color);
-}
-
-.info__text {
-  font-family: var(--basic-font-family);
-  font-weight: var(--info-text-font-weight);
-  font-size: var(--info-text-font-size);
-  text-align: center;
-  color: var(--info-text-color);
 }
 
 .info__stack {
@@ -54,18 +30,13 @@
   align-items: center;
   justify-content: center;
   list-style: none;
-  font-family: var(--basic-font-family);
-  font-weight: 600;
-  font-size: var(--info-text-font-size);
-  color: var(--code-text-color);
   gap: 10px;
 
   & code {
     border-radius: 3px;
-    padding: 2px 3px;
-    font-family: var(--basic-font-family);
+    padding: 4px;
     font-family: courier, monospace;
-    background-color: var(--info-text-color);
+    background-color: var(--background-secondary);
   }
 }
 
@@ -77,7 +48,7 @@
 }
 
 .info__social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  &:hover {
+    color: var(--content-accent);
+  }
 }
