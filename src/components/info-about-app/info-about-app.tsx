@@ -2,8 +2,11 @@
 import { GitHubIcon, InstagramIcon } from '../../icons';
 //styles
 import style from './info-about-app.module.scss';
+//version from package.json
+import packageJson from '../../../package.json';
 
 const InfoAboutApp = (): JSX.Element => {
+  const { version } = packageJson;
   return (
     <section className={style.info}>
       <h2 className={`content-primary-a heading-large`}>Info about application</h2>
@@ -53,6 +56,7 @@ const InfoAboutApp = (): JSX.Element => {
           <InstagramIcon />
         </a>
       </div>
+      <p className="content-primary-a paragraph-small">version - {version}</p>
     </section>
   );
 };
