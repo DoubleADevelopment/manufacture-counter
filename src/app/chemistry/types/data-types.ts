@@ -8,7 +8,7 @@ interface IChemistryLogs extends ILogs {
   [ChemistryLogsNames.COUNTER]: {
     log: string[];
     name: string;
-    lastChange: Date | null;
+    lastChange: string | null;
   };
 }
 

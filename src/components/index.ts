@@ -20,6 +20,7 @@ import { LogsModal, ConfirmDeletingModal } from './modals';
 import CounterHeader from './counter-header/counter-header';
 import { BasicCounter, CounterWithAdditionalValue } from './counter';
 import AdditionalNav from './additional-nav/additional-nav';
+import { CountersSetting } from './settings';
 
 export {
   Header,
@@ -47,4 +48,5 @@ export {
   ButtonDeleteSmall,
   CounterWithAdditionalValue,
   ControlSetAdditionalValue,
+  CountersSetting,
 };

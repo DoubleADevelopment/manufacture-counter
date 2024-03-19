@@ -5,8 +5,11 @@ const CounterText = {
   NO_LOGS: 'Brak logów',
   COUNTER_LOGS: 'Logi licznika',
   CLEAR_COUNTER_HISTORY_CONFIRM: 'Napewno chcesz usunąć danę licznika?',
+  CLEAR_ALL_COUNTERS_DATA_CONFIRM: 'Napewno chcesz usunąć danę wszystkich liczników?',
+  CLEAR_ALL_COUNTERS_DATA: 'Usunąć danę wszystkich liczników w aplikacji',
   OPEN_COUNTER: 'Otwórz licznik',
   LASST_CHANGE_TITLE: 'Ostatnia zmiana',
+  COUNTERS_SETTING: 'Ustawienia liczników',
 };
 
 enum InputMessagesText {
@@ -30,6 +33,7 @@ const InterfaceText = {
   CANCEL_DELETING: 'Anulować',
   CONFIRM_DELETING: 'Potwierdź usunięcie',
   AMOUNT: 'Ilość',
+  DELETE: 'Usunąć',
 };
 
 export { CounterText, ErrorsText, InterfaceText, InputMessagesText };

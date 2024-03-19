@@ -1,0 +1,11 @@
+.components-setting {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content;
+  gap: 20px;
+}
+
+.components-setting__controll-field {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}

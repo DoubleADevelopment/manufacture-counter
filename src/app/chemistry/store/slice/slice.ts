@@ -28,14 +28,17 @@ export const chemistrySlice = createSlice({
     log: (state, action: PayloadAction<ILogAction<ChemistryLogsNames>>) => {
       const { UNID, logName, log, packageName } = action.payload;
       state[packageName][UNID].logs[logName].log.push(log);
-      state[packageName][UNID].logs[logName].lastChange = new Date();
+      state[packageName][UNID].logs[logName].lastChange = new Date().getTime().toString();
     },
     clearItem: (state, action: PayloadAction<IClearItemAction<IChemistryItem>>) => {
       const { UNID } = action.payload.item;
       state[action.payload.packageName][UNID] = action.payload.item;
     },
+    // clearData: (state, action: PayloadAction<IChemistryData>) => {
+    //   state = action.payload;
+    // },
     clearData: (state, action: PayloadAction<IChemistryData>) => {
-      state = action.payload;
+      return action.payload;
     },
   },
 });

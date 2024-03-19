@@ -33,7 +33,7 @@ type ItemsDataToDisplayListType = IItemDataToDisplay[];
 interface ILogItem {
   log: string[];
   name: string;
-  lastChange: Date | null;
+  lastChange: string | null;
 }
 
 //data types for apps/counters

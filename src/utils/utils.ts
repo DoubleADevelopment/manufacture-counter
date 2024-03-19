@@ -41,7 +41,8 @@ const inputValueValidate = (value: number | null): IInputValueValidate => {
   }
 };
 
-const formatDateToShortFormat = (date: Date): string => {
+const formatDateToShortFormat = (milliseconds: string): string => {
+  const date = new Date(+milliseconds);
   const options: Intl.DateTimeFormatOptions = {
     hour: 'numeric',
     minute: 'numeric',
@@ -49,7 +50,7 @@ const formatDateToShortFormat = (date: Date): string => {
     day: 'numeric',
   };
 
-  const transformedDate = new Intl.DateTimeFormat('pl-PL', options).format(new Date(date));
+  const transformedDate = new Intl.DateTimeFormat('pl-PL', options).format(date);
 
   return transformedDate;
 };

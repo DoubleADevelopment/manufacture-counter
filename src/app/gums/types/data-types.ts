@@ -7,12 +7,12 @@ interface IGumsLogs extends ILogs {
   [GumsLogsNames.COUNTER]: {
     log: string[];
     name: string;
-    lastChange: Date | null;
+    lastChange: string | null;
   };
   [GumsLogsNames.CARDBOARD]: {
     log: string[];
     name: string;
-    lastChange: Date | null;
+    lastChange: string | null;
   };
 }
 
