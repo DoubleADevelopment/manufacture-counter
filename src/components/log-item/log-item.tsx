@@ -1,10 +1,10 @@
 //variables
-import { CounterText } from '../../../../variables';
+import { CounterText } from '../../variables';
 //types
-import type { ILogItem } from '../../../../types';
+import type { ILogItem } from '../../types';
 //styles
 import style from './log-item.module.scss';
-import { formatDateToShortFormat } from '../../../../utils/utils';
+import { formatDateToShortFormat } from '../../utils/utils';
 
 interface ILogsItemProps {
   item: ILogItem;

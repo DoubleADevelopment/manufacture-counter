@@ -1,6 +1,6 @@
 //components
 import { ButtonDeleteSmall } from '../../../';
-import LogItem from '../log-item/log-item';
+import { LogItem } from '../../../';
 //layouts
 import { ModalLayout } from '../../../../layouts';
 //types

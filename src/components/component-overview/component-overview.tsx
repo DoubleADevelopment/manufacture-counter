@@ -4,6 +4,8 @@ import style from './component-overview.module.scss';
 import type { ItemsDataToDisplayListType } from '../../types';
 import { useState } from 'react';
 import { ArrowDownIcon, ArrowUpIcon } from '../../icons';
+import ComponentOverviewList from './component-overview-list/component-overview-list';
+import { ButtonWithIcon } from '../';
 
 interface IComponentOverviewProps {
   data: ItemsDataToDisplayListType;
@@ -30,51 +32,17 @@ const ComponentOverview = ({ data, title }: IComponentOverviewProps): JSX.Elemen
         >
           {title}
         </h2>
-        <button
-          className={style['component-overview__show-button']}
-          onClick={onShowListButtonClickHandler}
-          type="button"
-        >
+
+        <ButtonWithIcon text="pokaz liste" clickHandler={onShowListButtonClickHandler}>
           {showList ? <ArrowUpIcon /> : <ArrowDownIcon />}
-        </button>
+        </ButtonWithIcon>
       </header>
 
       {showList && (
-        <ul className={style['component-overview__list']}>
-          {data.map((item) => {
-            return (
-              <li className={style['overview-list-item']} key={item.UNID}>
-                <div className={style['overview-list-item__info-block']}>
-                  <h3 className="content-primary-a heading-x-small">{item.productName}</h3>
-                  <p
-                    className={`${style['overview-list-item__amount']} content-primary-a label-large`}
-                  >
-                    {item.amount}
-                    <span className="paragraph-small ">{item.unitsOfMeasurement}</span>
-                  </p>
-                </div>
-                <img
-                  className={style['overview-list-item__image']}
-                  src={item.image}
-                  alt=""
-                  width={100}
-                  height={100}
-                />
-                <div className={style['overview-list-item__logs']}>
-                  <h4>logi</h4>
-                </div>
-              </li>
-            );
-          })}
-
-          <button
-            className={`${style['component-overview__show-button']} ${style['component-overview__show-button--full']}`}
-            onClick={onCloseListButtonClickHandler}
-            type="button"
-          >
-            <ArrowUpIcon />
-          </button>
-        </ul>
+        <ComponentOverviewList
+          data={data}
+          onCloseListButtonClickHandler={onCloseListButtonClickHandler}
+        />
       )}
     </section>
   );

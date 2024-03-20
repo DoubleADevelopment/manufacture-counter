@@ -14,6 +14,7 @@ import {
   ButtonTertiarySmall,
   ButtonTertiary,
   ButtonDeleteSmall,
+  ButtonWithIcon,
 } from './buttons';
 import { NotificationStatic, PageNotification } from './notifications/';
 import { LogsModal, ConfirmDeletingModal } from './modals';
@@ -23,6 +24,7 @@ import AdditionalNav from './additional-nav/additional-nav';
 import { CountersSetting } from './settings';
 import InfoAboutApp from './info-about-app/info-about-app';
 import ComponentOverview from './component-overview/component-overview';
+import LogItem from './log-item/log-item';
 
 export {
   Header,
@@ -53,4 +55,6 @@ export {
   CountersSetting,
   InfoAboutApp,
   ComponentOverview,
+  LogItem,
+  ButtonWithIcon,
 };
