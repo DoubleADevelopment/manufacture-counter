@@ -7,7 +7,7 @@ import { useAppSelector } from '../../hooks/hooks';
 import { SelectorGetExtrusionChemistry } from '../../app/chemistry/store/slectors/selectors';
 import { SelectorGetGums } from '../../app/gums/store/slectors/selectors';
 import { SelectorGetPigments } from '../../app/pigments/store/slectors/selectors';
-//app components
+//app services
 import chemistryAdapterService from '../../app/chemistry/services/chemistry-adapter.service';
 import gumsAdapterService from '../../app/gums/services/gums-adapter.service';
 import pigmentsAdapterService from '../../app/pigments/services/pigments-adapter.service';

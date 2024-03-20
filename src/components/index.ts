@@ -14,6 +14,7 @@ import {
   ButtonTertiarySmall,
   ButtonTertiary,
   ButtonDeleteSmall,
+  ButtonWithIcon,
 } from './buttons';
 import { NotificationStatic, PageNotification } from './notifications/';
 import { LogsModal, ConfirmDeletingModal } from './modals';
@@ -55,4 +56,5 @@ export {
   InfoAboutApp,
   ComponentOverview,
   LogItem,
+  ButtonWithIcon,
 };

@@ -7,6 +7,7 @@ import ButtonTertiary from './button-tertiary/button-tertiary';
 import ButtonTertiarySmall from './button-tertiary-small/button-tertiary-small';
 import ButtonDelete from './button-delete/button-delete';
 import ButtonDeleteSmall from './button-delete-small/button-delete-small';
+import ButtonWithIcon from './button-with-icon/button-with-icon';
 
 export {
   ButtonPrimary,
@@ -18,4 +19,5 @@ export {
   ButtonTertiary,
   ButtonTertiarySmall,
   ButtonDeleteSmall,
+  ButtonWithIcon,
 };
