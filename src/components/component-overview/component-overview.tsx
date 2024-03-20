@@ -3,7 +3,7 @@ import style from './component-overview.module.scss';
 //types
 import type { ILogs, ItemsDataToDisplayListType } from '../../types';
 import { useState } from 'react';
-import { ArrowDownIcon, ArrowUpIcon } from '../../icons';
+import { ArrowDownIcon, ArrowUpIcon, LogsIcon } from '../../icons';
 import { LogItem } from '..';
 
 interface IComponentOverviewProps {
@@ -13,9 +13,14 @@ interface IComponentOverviewProps {
 
 const ComponentOverview = ({ data, title }: IComponentOverviewProps): JSX.Element => {
   const [showList, setShowList] = useState<boolean>(false);
+  const [showLogs, setShowLogs] = useState<boolean>(false);
 
   const onShowListButtonClickHandler = () => {
     setShowList((prev) => !prev);
+  };
+
+  const onShowLogsButtonClickHandler = () => {
+    setShowLogs((prev) => !prev);
   };
 
   const onCloseListButtonClickHandler = () => {
@@ -69,11 +74,17 @@ const ComponentOverview = ({ data, title }: IComponentOverviewProps): JSX.Elemen
                   width={100}
                   height={100}
                 />
-                <div className={style['overview-list-item__logs']}>
-                  {/* <h4 className="content-primary-a heading-x-small">logi</h4> */}
-
-                  {generateLogs(item.logs)}
-                </div>
+                <button
+                  className={`${style['component-overview__log-button']} ${style['component-overview__show-button--full']}`}
+                  type="button"
+                  onClick={onShowLogsButtonClickHandler}
+                >
+                  Otwóz logi
+                  <LogsIcon />
+                </button>
+                {showLogs && (
+                  <div className={style['overview-list-item__logs']}>{generateLogs(item.logs)}</div>
+                )}
               </li>
             );
           })}

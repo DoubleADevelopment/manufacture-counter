@@ -1,7 +1,7 @@
 .component-overview {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: min-content 1fr;
+  grid-template-rows: repeat(2, min-content);
   width: 100%;
   gap: 20px;
 }
@@ -28,6 +28,18 @@
   cursor: pointer;
 }
 
+.component-overview__log-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: logbtn;
+  border: none;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .component-overview__show-button--full {
   flex: 1;
   border: 1px solid var(--border-opaque);
@@ -46,11 +58,13 @@
   display: grid;
   grid-template-areas:
     'info img'
+    'logbtn logbtn'
     'log log';
   grid-template-columns: 1fr 100px;
   grid-template-rows: min-content max-content;
   border: 1px solid var(--border-opaque);
   border-radius: var(--basic-border-radius);
+    gap: 10px;
 }
 
 .overview-list-item__info-block {
