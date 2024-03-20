@@ -22,6 +22,7 @@ import { BasicCounter, CounterWithAdditionalValue } from './counter';
 import AdditionalNav from './additional-nav/additional-nav';
 import { CountersSetting } from './settings';
 import InfoAboutApp from './info-about-app/info-about-app';
+import ComponentOverview from './component-overview/component-overview';
 
 export {
   Header,
@@ -51,4 +52,5 @@ export {
   ControlSetAdditionalValue,
   CountersSetting,
   InfoAboutApp,
+  ComponentOverview,
 };

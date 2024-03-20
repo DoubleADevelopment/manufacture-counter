@@ -10,6 +10,8 @@ import PositiveIcon from './notification-icons/positive-icon';
 import CloseIcon from './common-icons/close-icon';
 import GitHubIcon from './info-icons/git-hub-icon';
 import Linkedincon from './info-icons/instagram-icon';
+import ArrowDownIcon from './common-icons/arrow-down-icon';
+import ArrowUpIcon from './common-icons/arrow-up-icon';
 
 export {
   ErrorIcon,
@@ -24,4 +26,6 @@ export {
   CloseIcon,
   GitHubIcon,
   Linkedincon,
+  ArrowDownIcon,
+  ArrowUpIcon,
 };
