@@ -3,6 +3,7 @@ import style from './component-overview.module.scss';
 //types
 import type { ItemsDataToDisplayListType } from '../../types';
 import { useState } from 'react';
+import { ArrowDownIcon, ArrowUpIcon } from '../../icons';
 
 interface IComponentOverviewProps {
   data: ItemsDataToDisplayListType;
@@ -25,7 +26,7 @@ const ComponentOverview = ({ data, title }: IComponentOverviewProps): JSX.Elemen
           onClick={onShowListButtonClickHandler}
           type="button"
         >
-          s
+          {showList ? <ArrowUpIcon /> : <ArrowDownIcon />}
         </button>
       </header>
 
