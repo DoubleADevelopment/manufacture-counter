@@ -2,6 +2,8 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: min-content;
+  border-bottom: 2px solid var(--border-opaque);
+  padding: 10px 0;
   gap: 20px;
 }
 
@@ -9,4 +11,5 @@
   display: grid;
   align-items: center;
   grid-template-columns: 2fr 1fr;
+  gap: 10px;
 }
