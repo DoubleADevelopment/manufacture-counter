@@ -1,9 +1,10 @@
 //styles
 import style from './component-overview.module.scss';
 //types
-import type { ItemsDataToDisplayListType } from '../../types';
+import type { ILogs, ItemsDataToDisplayListType } from '../../types';
 import { useState } from 'react';
 import { ArrowDownIcon, ArrowUpIcon } from '../../icons';
+import { LogItem } from '..';
 
 interface IComponentOverviewProps {
   data: ItemsDataToDisplayListType;
@@ -19,6 +20,14 @@ const ComponentOverview = ({ data, title }: IComponentOverviewProps): JSX.Elemen
 
   const onCloseListButtonClickHandler = () => {
     setShowList(false);
+  };
+
+  const generateLogs = (logs: ILogs): JSX.Element[] => {
+    const logsArray: JSX.Element[] = [];
+    for (const key in logs) {
+      logsArray.push(<LogItem item={logs[key]} key={key} />);
+    }
+    return logsArray;
   };
 
   return (
@@ -61,7 +70,9 @@ const ComponentOverview = ({ data, title }: IComponentOverviewProps): JSX.Elemen
                   height={100}
                 />
                 <div className={style['overview-list-item__logs']}>
-                  <h4>logi</h4>
+                  {/* <h4 className="content-primary-a heading-x-small">logi</h4> */}
+
+                  {generateLogs(item.logs)}
                 </div>
               </li>
             );
