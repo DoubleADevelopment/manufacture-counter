@@ -20,7 +20,11 @@ const ComponentOverviewList = ({
         return <OverviewListItem item={item} />;
       })}
 
-      <ButtonWithIcon text="ukryj liste" clickHandler={onCloseListButtonClickHandler}>
+      <ButtonWithIcon
+        text="ukryj liste"
+        fullWidth={true}
+        clickHandler={onCloseListButtonClickHandler}
+      >
         {<ArrowUpIcon />}
       </ButtonWithIcon>
     </ul>
