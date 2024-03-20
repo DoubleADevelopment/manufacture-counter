@@ -9,6 +9,7 @@ export const SelectorGetCurrentGum =
   (UNID: string) =>
   (state: RootState): IGumsItem =>
     state.gums[UNID];
+
 export const SelectorGetCurrentGumSetting =
   (UNID: string, settingName: GumsSettingsNames) =>
   (state: RootState): number =>
@@ -19,6 +20,7 @@ export const SelectorGetGums =
   (state: RootState): IGumsData => {
     return state.gums;
   };
+
 export const SelectorCheckIfElementExistsByUNID =
   (UNID: string | undefined) =>
   (state: RootState): boolean => {

@@ -9,6 +9,7 @@ export const SelectorGetCurrentPigment =
   (UNID: string) =>
   (state: RootState): IPigmentsItem =>
     state.pigments[UNID];
+
 export const SelectorGetCurrentPigmentSetting =
   (UNID: string, settingName: PigmentsSettingsNames) =>
   (state: RootState): number =>
@@ -19,6 +20,7 @@ export const SelectorGetPigments =
   (state: RootState): IPigmentsData => {
     return state.pigments;
   };
+
 export const SelectorCheckIfElementExistsByUNID =
   (UNID: string | undefined) =>
   (state: RootState): boolean => {
