@@ -17,10 +17,19 @@ const ComponentOverview = ({ data, title }: IComponentOverviewProps): JSX.Elemen
     setShowList((prev) => !prev);
   };
 
+  const onCloseListButtonClickHandler = () => {
+    setShowList(false);
+  };
+
   return (
     <section className={style['component-overview']}>
       <header className={style['component-overview__header']}>
-        <h2 className="content-primary-a heading-medium ">{title}</h2>
+        <h2
+          className={`${style['component-overview__title']} unselectable content-primary-a heading-medium`}
+          onClick={onShowListButtonClickHandler}
+        >
+          {title}
+        </h2>
         <button
           className={style['component-overview__show-button']}
           onClick={onShowListButtonClickHandler}
@@ -57,6 +66,14 @@ const ComponentOverview = ({ data, title }: IComponentOverviewProps): JSX.Elemen
               </li>
             );
           })}
+
+          <button
+            className={`${style['component-overview__show-button']} ${style['component-overview__show-button--full']}`}
+            onClick={onCloseListButtonClickHandler}
+            type="button"
+          >
+            <ArrowUpIcon />
+          </button>
         </ul>
       )}
     </section>

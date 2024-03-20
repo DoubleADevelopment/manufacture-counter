@@ -13,13 +13,26 @@
   gap: 20px;
 }
 
+.component-overview__title {
+  cursor: pointer;
+}
+
 .component-overview__show-button {
-  border: 1px solid var(--border-selected);
-  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
   width: 40px;
   height: 40px;
   background-color: transparent;
   cursor: pointer;
+}
+
+.component-overview__show-button--full {
+  flex: 1;
+  border: 1px solid var(--border-opaque);
+  border-radius: var(--basic-border-radius);
+  width: 100%;
 }
 
 .component-overview__list {
