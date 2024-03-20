@@ -8,11 +8,17 @@
   height: 40px;
   background-color: transparent;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border-color: var(--border-accent-light);
+    color: var(--content-accent);
+  }
+
 }
 
 .button-with-icon--full {
-  flex: 1;
   border: 1px solid var(--border-opaque);
-  border-radius: var(--basic-border-radius);
+  border-radius: var(--button-border-radius);
   width: 100%;
 }

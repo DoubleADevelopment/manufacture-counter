@@ -17,7 +17,7 @@ const ButtonWithIcon = ({
 }: IButtonWithIconProps): JSX.Element => {
   return (
     <button
-      className={`${style['button-with-icon']} ${fullWidth && style['button-with-icon--full']}`}
+      className={`${style['button-with-icon']} ${fullWidth && style['button-with-icon--full']} unselectable`}
       type="button"
       onClick={clickHandler}
     >

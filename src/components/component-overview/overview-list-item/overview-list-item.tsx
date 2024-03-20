@@ -43,7 +43,7 @@ const OverviewListItem = ({ item }: IOverviewListItemProps): JSX.Element => {
         height={100}
       />
       <ButtonWithIcon
-        text="Otwóz logi"
+        text={showLogs ? 'ukryj logi' : 'pokaz logi'}
         showText={true}
         fullWidth={true}
         clickHandler={onShowLogsButtonClickHandler}
