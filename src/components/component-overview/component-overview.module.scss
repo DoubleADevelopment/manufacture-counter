@@ -1,0 +1,43 @@
+.component-overview {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr;
+  gap: 20px;
+}
+
+.component-overview__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 10px;
+}
+
+.overview-list-item {
+  display: grid;
+  grid-template-areas:
+    'info img'
+    'log log';
+  grid-template-columns: 1fr 100px;
+  grid-template-rows: min-content max-content;
+  border: 1px solid var( --border-opaque);
+  border-radius: var(--basic-border-radius);
+}
+
+.overview-list-item__info-block {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0 5px 5px;
+}
+
+.overview-list-item__image {
+  grid-area: img;
+  border-radius: var(--basic-border-radius);
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.overview-list-item__logs {
+  display: none;
+  grid-area: log;
+}

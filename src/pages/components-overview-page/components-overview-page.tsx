@@ -1,5 +1,7 @@
 //layouts
 import { PageWithMenuLayout } from '../../layouts';
+//components
+import { ComponentOverview } from '../../components';
 //store
 import { useAppSelector } from '../../hooks/hooks';
 import { SelectorGetExtrusionChemistry } from '../../app/chemistry/store/slectors/selectors';
@@ -25,26 +27,12 @@ const ComponentOverviewPage = (): JSX.Element => {
     useAppSelector(SelectorGetPigments()),
   );
 
-  console.log(chemistryData);
-  console.log(gumsData);
-  console.log(pigmentsData);
-
   return (
     <PageWithMenuLayout headerTitle={AppRouting.COMPONENTS_OVERVIEW.title}>
       <main className={style['components-overview-page']}>
-        <section>
-          <h2>Chemia</h2>
-
-          <ul>
-            {chemistryData.map((item) => {
-              return (
-                <li>
-                  <h3>{item.productName}</h3>
-                </li>
-              );
-            })}
-          </ul>
-        </section>
+        <ComponentOverview data={chemistryData} />
+        <ComponentOverview data={gumsData} />
+        <ComponentOverview data={pigmentsData} />
       </main>
     </PageWithMenuLayout>
   );

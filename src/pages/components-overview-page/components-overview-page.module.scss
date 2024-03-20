@@ -1,10 +1,6 @@
 .components-overview-page {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr min-content;
+  grid-template-rows: min-content;
   gap: 40px;
-}
-
-.components-overview-page__title {
-  justify-self: left;
 }
