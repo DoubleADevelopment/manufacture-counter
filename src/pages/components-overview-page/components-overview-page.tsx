@@ -30,9 +30,9 @@ const ComponentOverviewPage = (): JSX.Element => {
   return (
     <PageWithMenuLayout headerTitle={AppRouting.COMPONENTS_OVERVIEW.title}>
       <main className={style['components-overview-page']}>
-        <ComponentOverview data={chemistryData} />
-        <ComponentOverview data={gumsData} />
-        <ComponentOverview data={pigmentsData} />
+        <ComponentOverview data={chemistryData} title="Chemia" />
+        <ComponentOverview data={gumsData} title="Granulaty" />
+        <ComponentOverview data={pigmentsData} title="Pigmenty" />
       </main>
     </PageWithMenuLayout>
   );

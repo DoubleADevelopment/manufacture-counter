@@ -37,7 +37,7 @@ const chemistryData: ChemistryPackagesListType = [
         },
         additionalResources: [],
         packagingInfo: 'butelka',
-        unitsOfMeasurement: '',
+        unitsOfMeasurement: 'sztuka/sztuk',
       },
       {
         UNID: `chemistry-Atrament-70000-00030`,
@@ -66,7 +66,7 @@ const chemistryData: ChemistryPackagesListType = [
         },
         additionalResources: [],
         packagingInfo: 'butelka',
-        unitsOfMeasurement: '',
+        unitsOfMeasurement: 'sztuka/sztuk',
       },
       {
         UNID: `chemistry-Solvent-SJN1700`,
@@ -95,7 +95,7 @@ const chemistryData: ChemistryPackagesListType = [
         },
         additionalResources: [],
         packagingInfo: 'butelka',
-        unitsOfMeasurement: '',
+        unitsOfMeasurement: 'sztuka/sztuk',
       },
 
       {
@@ -125,7 +125,7 @@ const chemistryData: ChemistryPackagesListType = [
         },
         additionalResources: [],
         packagingInfo: 'butelka',
-        unitsOfMeasurement: '',
+        unitsOfMeasurement: 'sztuka/sztuk',
       },
       {
         UNID: `chemistry-Atrament-VJ411-D`,
@@ -154,7 +154,7 @@ const chemistryData: ChemistryPackagesListType = [
         },
         additionalResources: [],
         packagingInfo: 'butelka',
-        unitsOfMeasurement: '',
+        unitsOfMeasurement: 'sztuka/sztuk',
       },
 
       {
@@ -184,7 +184,7 @@ const chemistryData: ChemistryPackagesListType = [
         },
         additionalResources: [],
         packagingInfo: 'butelka',
-        unitsOfMeasurement: '',
+        unitsOfMeasurement: 'sztuka/sztuk',
       },
       {
         UNID: `chemistry-Atrament-VJ4262-D`,
@@ -213,7 +213,7 @@ const chemistryData: ChemistryPackagesListType = [
         },
         additionalResources: [],
         packagingInfo: 'butelka',
-        unitsOfMeasurement: '',
+        unitsOfMeasurement: 'sztuka/sztuk',
       },
     ],
   },

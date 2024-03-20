@@ -2,7 +2,24 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: min-content 1fr;
+  width: 100%;
   gap: 20px;
+}
+
+.component-overview__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.component-overview__show-button {
+  border: 1px solid var(--border-selected);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .component-overview__list {
@@ -24,9 +41,17 @@
 }
 
 .overview-list-item__info-block {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr;
   padding: 5px 0 5px 5px;
+}
+
+.overview-list-item__amount {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
 }
 
 .overview-list-item__image {
