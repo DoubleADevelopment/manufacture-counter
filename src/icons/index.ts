@@ -12,6 +12,7 @@ import GitHubIcon from './info-icons/git-hub-icon';
 import Linkedincon from './info-icons/instagram-icon';
 import ArrowDownIcon from './common-icons/arrow-down-icon';
 import ArrowUpIcon from './common-icons/arrow-up-icon';
+import LogsIcon from './common-icons/logs-icon';
 
 export {
   ErrorIcon,
@@ -28,4 +29,5 @@ export {
   Linkedincon,
   ArrowDownIcon,
   ArrowUpIcon,
+  LogsIcon,
 };
