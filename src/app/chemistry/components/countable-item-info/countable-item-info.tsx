@@ -45,13 +45,7 @@ const CountableItemInfo = ({ packageName }: ICountableItemInfoProps): JSX.Elemen
     }
   };
 
-  return (
-    <ShortCardWithLogsModal
-      item={convertedItem}
-      itemLogs={item?.logs}
-      clearDataHandler={clearDataHandler}
-    />
-  );
+  return <ShortCardWithLogsModal item={convertedItem} clearDataHandler={clearDataHandler} />;
 };
 
 export default CountableItemInfo;

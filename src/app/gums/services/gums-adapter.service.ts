@@ -33,6 +33,7 @@ class GumsAdapterService {
       image: item.image,
       amount: item.amount,
       unitsOfMeasurement: item.unitsOfMeasurement,
+      logs: item.logs,
     };
   }
 

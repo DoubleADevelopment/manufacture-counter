@@ -2,16 +2,14 @@ import { useState } from 'react';
 //components
 import { ItemCardShort, LogsModal } from '../..';
 //types
-import type { IItemDataToDisplay, ILogs } from '../../../types';
+import type { IItemDataToDisplay } from '../../../types';
 
 interface IShortCardWithLogsModal {
-  itemLogs: ILogs | undefined;
   item: IItemDataToDisplay | undefined;
   clearDataHandler: () => void;
 }
 
 const ShortCardWithLogsModal = ({
-  itemLogs,
   item,
   clearDataHandler,
 }: IShortCardWithLogsModal): JSX.Element => {
@@ -31,9 +29,9 @@ const ShortCardWithLogsModal = ({
 
   return (
     <>
-      {modalIsOpen && itemLogs && (
+      {modalIsOpen && item && (
         <LogsModal
-          logsData={itemLogs}
+          logsData={item.logs}
           closeModal={onModalClickHandler}
           clearData={onClearDataButtonClickHandler}
         />
