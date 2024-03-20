@@ -12,6 +12,8 @@ interface IOverviewListItemProps {
 }
 
 const OverviewListItem = ({ item }: IOverviewListItemProps): JSX.Element => {
+  const { productName, image, amount, unitsOfMeasurement, description } = item;
+
   const [showLogs, setShowLogs] = useState<boolean>(false);
 
   const onShowLogsButtonClickHandler = () => {
@@ -28,20 +30,26 @@ const OverviewListItem = ({ item }: IOverviewListItemProps): JSX.Element => {
 
   return (
     <li className={style['overview-list-item']} key={item.UNID}>
-      <div className={style['overview-list-item__info-block']}>
-        <h3 className="content-primary-a heading-x-small">{item.productName}</h3>
-        <p className={`${style['overview-list-item__amount']} content-primary-a label-large`}>
-          {item.amount}
-          <span className="paragraph-small ">{item.unitsOfMeasurement}</span>
-        </p>
-      </div>
+      <h3 className={`${style['overview-list-item__title']} content-primary-a heading-x-small  `}>
+        {productName}
+      </h3>
+
       <img
-        className={style['overview-list-item__image']}
-        src={item.image}
+        className={`${style['overview-list-item__image']}`}
+        src={image}
         alt=""
         width={100}
         height={100}
       />
+      {description && (
+        <p className={`${style['overview-list-item__description']}`}>{description}</p>
+      )}
+
+      <p className={`${style['overview-list-item__amount']} content-primary-a label-large`}>
+        {amount}
+        <span className="paragraph-small ">{unitsOfMeasurement}</span>
+      </p>
+
       <ButtonWithIcon
         text={showLogs ? 'ukryj logi' : 'pokaz logi'}
         showText={true}
@@ -50,6 +58,7 @@ const OverviewListItem = ({ item }: IOverviewListItemProps): JSX.Element => {
       >
         {<LogsIcon />}
       </ButtonWithIcon>
+
       {showLogs && (
         <div className={style['overview-list-item__logs']}>{generateLogs(item.logs)}</div>
       )}
