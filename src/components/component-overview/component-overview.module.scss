@@ -47,3 +47,23 @@
   background-color: transparent;
   cursor: pointer;
 }
+
+.foo {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  width: 100%;
+  transition: all ease 1s;
+  pointer-events: none;
+
+}
+
+.foo-open {
+  grid-template-rows: 1fr;
+  transition: all ease 1s;
+  pointer-events: all;
+}
+
+.bar {
+  min-height: 0;
+}

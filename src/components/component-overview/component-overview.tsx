@@ -46,12 +46,21 @@ const ComponentOverview = ({ data, title }: IComponentOverviewProps): JSX.Elemen
         </button>
       </header>
 
-      {showList && (
+      <div className={`${style.foo} ${showList && style['foo-open']}`}>
+        <div className={style.bar}>
+          <ComponentOverviewList
+            data={data}
+            onCloseListButtonClickHandler={onCloseListButtonClickHandler}
+          />
+        </div>
+      </div>
+
+      {/* {showList && (
         <ComponentOverviewList
           data={data}
           onCloseListButtonClickHandler={onCloseListButtonClickHandler}
         />
-      )}
+      )} */}
     </section>
   );
 };
