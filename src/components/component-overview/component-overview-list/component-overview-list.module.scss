@@ -1,6 +1,6 @@
 .component-overview__list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   list-style: none;
   gap: 10px;
 }

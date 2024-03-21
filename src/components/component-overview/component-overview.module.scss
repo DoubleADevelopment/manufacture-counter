@@ -1,7 +1,6 @@
 .component-overview {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: min-content 1fr;
   width: 100%;
   gap: 20px;
 }
@@ -48,22 +47,22 @@
   cursor: pointer;
 }
 
-.foo {
+.component-overview__list {
   display: grid;
   grid-template-rows: 0fr;
   overflow: hidden;
   width: 100%;
-  transition: all ease 1s;
+  height: min-content;
+  transition: all ease-in-out 1s;
   pointer-events: none;
-
 }
 
-.foo-open {
+.component-overview__list--open {
   grid-template-rows: 1fr;
-  transition: all ease 1s;
+  transition: all ease-in-out 1s;
   pointer-events: all;
 }
 
-.bar {
+.component-overview__list-wrap {
   min-height: 0;
 }
