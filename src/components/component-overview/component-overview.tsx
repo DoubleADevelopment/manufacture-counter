@@ -1,6 +1,7 @@
 import { useState } from 'react';
 //components
 import ComponentOverviewList from './component-overview-list/component-overview-list';
+import { ButtonWithIcon } from '../';
 //styles
 import style from './component-overview.module.scss';
 //icons
@@ -46,21 +47,23 @@ const ComponentOverview = ({ data, title }: IComponentOverviewProps): JSX.Elemen
         </button>
       </header>
 
-      <div className={`${style.foo} ${showList && style['foo-open']}`}>
-        <div className={style.bar}>
-          <ComponentOverviewList
-            data={data}
-            onCloseListButtonClickHandler={onCloseListButtonClickHandler}
-          />
+      <div
+        className={`${style['component-overview__list']} ${showList && style['component-overview__list--open']}`}
+      >
+        <div className={style['component-overview__list-wrap']}>
+          <ComponentOverviewList data={data} />
         </div>
       </div>
 
-      {/* {showList && (
-        <ComponentOverviewList
-          data={data}
-          onCloseListButtonClickHandler={onCloseListButtonClickHandler}
-        />
-      )} */}
+      {showList && (
+        <ButtonWithIcon
+          text="ukryj liste"
+          fullWidth={true}
+          clickHandler={onCloseListButtonClickHandler}
+        >
+          {<ArrowUpIcon />}
+        </ButtonWithIcon>
+      )}
     </section>
   );
 };
