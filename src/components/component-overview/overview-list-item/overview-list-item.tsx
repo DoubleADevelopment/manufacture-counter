@@ -59,9 +59,11 @@ const OverviewListItem = ({ item }: IOverviewListItemProps): JSX.Element => {
         {<LogsIcon />}
       </ButtonWithIcon>
 
-      {showLogs && (
-        <div className={style['overview-list-item__logs']}>{generateLogs(item.logs)}</div>
-      )}
+      <div
+        className={`${style['overview-list-item__logs']} ${showLogs && style['overview-list-item__logs--open']}`}
+      >
+        <div className={style['overview-list-item__logs-wrap']}>{generateLogs(item.logs)}</div>
+      </div>
     </li>
   );
 };
