@@ -16,8 +16,7 @@
   padding: 10px;
   width: 100%;
   height: min-content;
-
-  // gap: 20px;
+  box-shadow:  var(--item-box-shadow);
 }
 
 .overview-list-item__title {
