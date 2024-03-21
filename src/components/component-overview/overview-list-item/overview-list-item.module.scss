@@ -2,7 +2,7 @@
 .overview-list-item {
   display: grid;
   align-items: center;
-  grid-column-gap: 20px;
+  grid-column-gap: 10px;
   grid-row-gap: 10px;
   grid-template-areas:
     'img title amount'
