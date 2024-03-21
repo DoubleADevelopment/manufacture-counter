@@ -7,12 +7,63 @@
 }
 
 .component-overview__header {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+
+  &:focus-within .component-overview__fake-button,
+  &:hover .component-overview__fake-button  {
+    border-color: var(--border-accent-light);
+    color: var(--content-accent);
+  }
 }
 
 .component-overview__title {
   cursor: pointer;
+}
+
+.component-overview__fake-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: logbtn;
+  border: none;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.component-overview__show-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: none;
+  border: 2px solid transparent;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.foo {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  width: 100%;
+  transition: all ease 1s;
+  pointer-events: none;
+
+}
+
+.foo-open {
+  grid-template-rows: 1fr;
+  transition: all ease 1s;
+  pointer-events: all;
+}
+
+.bar {
+  min-height: 0;
 }

@@ -2,7 +2,7 @@
 .overview-list-item {
   display: grid;
   align-items: center;
-  grid-column-gap: 20px;
+  grid-column-gap: 10px;
   grid-row-gap: 10px;
   grid-template-areas:
     'img title amount'
@@ -10,13 +10,12 @@
     'logbutton logbutton logbutton'
     'log log log';
   grid-template-columns: 60px 1fr 100px;
-  grid-template-rows: 1fr min-content 40px max-content;
-  border: 1px solid var(--border-opaque);
+  grid-template-rows: 1fr min-content 40px min-content;
+  border: 2px solid var(--border-opaque);
   border-radius: var(--basic-border-radius);
   padding: 10px;
   width: 100%;
-  height: min-content;
-  gap: 20px;
+  box-shadow:  var(--item-box-shadow);
 }
 
 .overview-list-item__title {
@@ -32,7 +31,7 @@
 }
 
 .overview-list-item__description {
-  grid-area:description ;
+  grid-area: description ;
 }
 
 .overview-list-item__amount {
@@ -42,16 +41,27 @@
   grid-area: amount;
 }
 
-// .overview-list-item__logs-button {
-//   grid-area: logbutton;
-// }
-
 .overview-list-item > button {
   grid-area: logbutton;
 }
 
 .overview-list-item__logs {
+  display: grid;
   grid-area: log;
+  grid-template-rows: 0fr;
+  overflow: hidden;
   width: 100%;
+  transition: all ease 0.5s;
+  pointer-events: none;
+}
+
+.overview-list-item__logs--open {
+  grid-template-rows: 1fr;
+  transition: all ease 0.5s;
+  pointer-events: all;
+}
+
+.overview-list-item__logs-wrap {
+  min-height: 0;
 }
 

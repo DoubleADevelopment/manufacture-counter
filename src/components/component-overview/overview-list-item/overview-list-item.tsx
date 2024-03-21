@@ -45,9 +45,9 @@ const OverviewListItem = ({ item }: IOverviewListItemProps): JSX.Element => {
         <p className={`${style['overview-list-item__description']}`}>{description}</p>
       )}
 
-      <p className={`${style['overview-list-item__amount']} content-primary-a label-large`}>
+      <p className={`${style['overview-list-item__amount']} content-primary-a heading-medium`}>
         {amount}
-        <span className="paragraph-small ">{unitsOfMeasurement}</span>
+        <span className="paragraph-small">{unitsOfMeasurement}</span>
       </p>
 
       <ButtonWithIcon
@@ -59,9 +59,11 @@ const OverviewListItem = ({ item }: IOverviewListItemProps): JSX.Element => {
         {<LogsIcon />}
       </ButtonWithIcon>
 
-      {showLogs && (
-        <div className={style['overview-list-item__logs']}>{generateLogs(item.logs)}</div>
-      )}
+      <div
+        className={`${style['overview-list-item__logs']} ${showLogs && style['overview-list-item__logs--open']}`}
+      >
+        <div className={style['overview-list-item__logs-wrap']}>{generateLogs(item.logs)}</div>
+      </div>
     </li>
   );
 };

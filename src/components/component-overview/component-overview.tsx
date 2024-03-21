@@ -1,11 +1,12 @@
+import { useState } from 'react';
+//components
+import ComponentOverviewList from './component-overview-list/component-overview-list';
 //styles
 import style from './component-overview.module.scss';
+//icons
+import { ArrowDownIcon, ArrowUpIcon } from '../../icons';
 //types
 import type { ItemsDataToDisplayListType } from '../../types';
-import { useState } from 'react';
-import { ArrowDownIcon, ArrowUpIcon } from '../../icons';
-import ComponentOverviewList from './component-overview-list/component-overview-list';
-import { ButtonWithIcon } from '../';
 
 interface IComponentOverviewProps {
   data: ItemsDataToDisplayListType;
@@ -28,22 +29,38 @@ const ComponentOverview = ({ data, title }: IComponentOverviewProps): JSX.Elemen
       <header className={style['component-overview__header']}>
         <h2
           className={`${style['component-overview__title']} unselectable content-primary-a heading-medium`}
-          onClick={onShowListButtonClickHandler}
         >
           {title}
         </h2>
 
-        <ButtonWithIcon text="pokaz liste" clickHandler={onShowListButtonClickHandler}>
+        <div className={style['component-overview__fake-button']} aria-hidden="true">
           {showList ? <ArrowUpIcon /> : <ArrowDownIcon />}
-        </ButtonWithIcon>
+        </div>
+
+        <button
+          className={style['component-overview__show-button']}
+          type="button"
+          onClick={onShowListButtonClickHandler}
+        >
+          <span className="visually-hidden">pokaz liste</span>
+        </button>
       </header>
 
-      {showList && (
+      <div className={`${style.foo} ${showList && style['foo-open']}`}>
+        <div className={style.bar}>
+          <ComponentOverviewList
+            data={data}
+            onCloseListButtonClickHandler={onCloseListButtonClickHandler}
+          />
+        </div>
+      </div>
+
+      {/* {showList && (
         <ComponentOverviewList
           data={data}
           onCloseListButtonClickHandler={onCloseListButtonClickHandler}
         />
-      )}
+      )} */}
     </section>
   );
 };

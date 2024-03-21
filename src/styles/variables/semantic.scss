@@ -4,6 +4,10 @@
   --background-secondary: var(--gray-50);
   --background-tertiary: var(--gray-100);
 
+  // shadow
+  --item-box-shadow: 4px 4px 8px var(--gray-200),
+    -4px -4px 8px var(--white);
+
   // content
   --content-primary-a: var(--black);
   --content-secondary-a: var(--gray-800);
