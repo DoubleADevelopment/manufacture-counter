@@ -25,6 +25,7 @@ interface IItemDataToDisplay {
   unitsOfMeasurement: string;
   lastChange?: Date;
   logs: ILogs;
+  color: string;
 }
 
 type ItemsDataToDisplayListType = IItemDataToDisplay[];

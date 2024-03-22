@@ -15,5 +15,6 @@
   &:active {
     color: var(--content-primary-b);
     background-color: var(--gray-800);
+    transform: translateY(3px);
   }
 }

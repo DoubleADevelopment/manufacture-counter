@@ -21,10 +21,15 @@ const ItemsListItem = ({ item }: IItemsListItemProps): JSX.Element => {
     amount,
     manufactured,
     unitsOfMeasurement,
+    color,
   } = item;
 
   return (
-    <li className={`${style['items-list-item']} unselectable`} key={UNID}>
+    <li
+      className={`${style['items-list-item']} unselectable`}
+      key={UNID}
+      style={{ borderBottomColor: color }}
+    >
       <div className={style['items-list-item__info']}>
         <h2 className={`content-primary-a heading-x-small`}>{productName}</h2>
         {description && <p className={`content-primary-a paragraph-medium`}> {description}</p>}

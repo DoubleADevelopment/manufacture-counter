@@ -6,12 +6,17 @@
   width: 40px;
   height: 40px;
   background-color: transparent;
+  transition: all ease 0.1s;
   cursor: pointer;
 
   &:hover,
   &:focus {
     border-color: var(--border-accent-light);
     color: var(--content-accent);
+  }
+
+  &:active {
+    transform: translateY(3px);
   }
 }
 

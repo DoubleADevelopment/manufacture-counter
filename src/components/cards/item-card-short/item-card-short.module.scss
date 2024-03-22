@@ -4,18 +4,23 @@
   grid-template-columns: 100px 1fr max-content;
   grid-template-rows: 1fr;
   border: 2px solid var(--border-opaque);
+  border-bottom: 4px solid transparent;
   border-radius: var(--basic-border-radius);
   height: min-content;
   min-height: 120px;
   box-shadow:  var(--item-box-shadow);
+
 }
 
 .item-card-short--with-modal {
+  transition: all ease 0.2s;
   cursor: pointer;
 
   &:focus,
   &:hover {
     border-color: var(--border-accent-light);
+    transform: translateY(-4px);
+    transition: all ease 0.2s;
   }
 }
 

@@ -5,16 +5,16 @@
   grid-row-gap: 10px;
   grid-template-areas:
     'img title amount'
-    ' description description description'
+    ' description description amount'
     'logbutton logbutton logbutton'
     'log log log';
-  grid-template-columns: 60px 1fr min-content;
+  grid-template-columns: 60px 1fr max-content;
   grid-template-rows: 1fr min-content 40px min-content;
   border: 2px solid var(--border-opaque);
+  border-bottom: 5px solid var(--border-opaque);
   border-radius: var(--basic-border-radius);
   padding: 10px;
   width: 100%;
-  box-shadow:  var(--item-box-shadow);
 }
 
 .overview-list-item__title {
@@ -36,7 +36,7 @@
 .overview-list-item__amount {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   grid-area: amount;
 }
 

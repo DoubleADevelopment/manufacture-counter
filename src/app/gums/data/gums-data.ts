@@ -164,7 +164,7 @@ const gumsData: IGumsPackage = {
       description: 'kolor etykiety biały',
       additionalInfo: '',
       image: `${rootBaseName}/images/gums/uszczelka szara.jpg`,
-      color: '#d0312d',
+      color: '#ffff00',
       logs: {
         [GumsLogsNames.COUNTER]: {
           log: [],
@@ -201,7 +201,7 @@ const gumsData: IGumsPackage = {
       description: 'kolor etykiety pomarańczowy, 550kg',
       additionalInfo: '',
       image: `${rootBaseName}/images/gums/uszczelka szara.jpg`,
-      color: '#F4B084',
+      color: '#d0312d',
       logs: {
         [GumsLogsNames.COUNTER]: {
           log: [],
@@ -275,7 +275,7 @@ const gumsData: IGumsPackage = {
       description: 'kolor etykiety pomarańczowy',
       additionalInfo: '',
       image: `${rootBaseName}/images/gums/uszczelka czarna.jpg`,
-      color: '#ffffff',
+      color: '#d0312d',
       logs: {
         [GumsLogsNames.COUNTER]: {
           log: [],
@@ -460,7 +460,7 @@ const gumsData: IGumsPackage = {
       description: '',
       additionalInfo: '',
       image: `${rootBaseName}/images/gums/uszczelka szara.jpg`,
-      color: '#c0c0c0',
+      color: '',
       logs: {
         [GumsLogsNames.COUNTER]: {
           log: [],

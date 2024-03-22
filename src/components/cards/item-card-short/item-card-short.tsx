@@ -18,6 +18,7 @@ const ItemCardShort = ({ item, onCardClickHandler }: IItemCardShortProps): JSX.E
       {item ? (
         <article
           className={`${style['item-card-short']} ${onCardClickHandler && style['item-card-short--with-modal']}`}
+          style={{ borderBottomColor: item.color }}
         >
           <div className={style['item-card-short__wrap']}>
             <h3 className={`content-primary-a heading-x-small`}>{item.productName}</h3>
