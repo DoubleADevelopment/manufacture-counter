@@ -1,3 +1,4 @@
 import { SuppliesAppRouting } from './app-routing-variables';
+import { SUPPLIES_TEXT } from './text-variables';
 
-export { SuppliesAppRouting };
+export { SuppliesAppRouting, SUPPLIES_TEXT };
