@@ -1,18 +1,16 @@
 import { Route, Routes } from 'react-router-dom';
 //variables
-import { ChemistryAppRouting } from '../variables';
+import { SuppliesAppRouting } from '../variables';
 //pages
+// import * as Pages from '../pages';
 import * as Pages from '../pages';
 
 const Router = (): JSX.Element => {
   return (
     <Routes>
-      <Route index element={<Pages.ChemistryPages.ChemistryExtrusionPage />} />
+      <Route index element={<Pages.SuppliesRootPage />} />
 
-      <Route
-        path={ChemistryAppRouting.COUNTER.route}
-        element={<Pages.CounterPages.ExtrusionCounterPage />}
-      />
+      <Route path={SuppliesAppRouting.COUNTER.route} element={<Pages.SuppliesCounterPage />} />
     </Routes>
   );
 };

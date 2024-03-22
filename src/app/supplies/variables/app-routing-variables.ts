@@ -19,7 +19,7 @@ const SuppliesAppPaths: Record<SuppliesAppRoutingNames, string> = {
   [SuppliesAppRoutingNames.COUNTER]: `/${SUPPLIES_ROOT}/:UNID`,
 };
 
-const ChemistryAppRouting: Record<SuppliesAppRoutingNames, IRouteItem> = {
+const SuppliesAppRouting: Record<SuppliesAppRoutingNames, IRouteItem> = {
   [SuppliesAppRoutingNames.ROOT]: {
     title: 'Strona główna',
     route: SuppliesAppRoutes.ROOT,
@@ -32,4 +32,4 @@ const ChemistryAppRouting: Record<SuppliesAppRoutingNames, IRouteItem> = {
   },
 };
 
-export { ChemistryAppRouting };
+export { SuppliesAppRouting };
