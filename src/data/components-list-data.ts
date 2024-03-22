@@ -21,6 +21,12 @@ const componentsListData: ComponentsDataListType = [
     link: ComponentsRouting.CHEMISTRY.path,
     image: 'https://prus.edu.pl/wp-content/uploads/2022/09/chemia-.jpg',
   },
+  {
+    title: ComponentsRouting.SUPPLIES.title,
+    link: ComponentsRouting.SUPPLIES.path,
+    image:
+      'https://www.planettogether.com/hs-fs/hubfs/lean_manu_tools.jpg?width=625&name=lean_manu_tools.jpg',
+  },
 ];
 
 export { componentsListData };
