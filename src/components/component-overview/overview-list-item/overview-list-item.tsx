@@ -12,7 +12,7 @@ interface IOverviewListItemProps {
 }
 
 const OverviewListItem = ({ item }: IOverviewListItemProps): JSX.Element => {
-  const { productName, image, amount, unitsOfMeasurement, description } = item;
+  const { productName, image, amount, unitsOfMeasurement, description, color } = item;
 
   const [showLogs, setShowLogs] = useState<boolean>(false);
 
@@ -29,7 +29,11 @@ const OverviewListItem = ({ item }: IOverviewListItemProps): JSX.Element => {
   };
 
   return (
-    <li className={style['overview-list-item']} key={item.UNID}>
+    <li
+      className={style['overview-list-item']}
+      key={item.UNID}
+      style={{ borderBottomColor: color }}
+    >
       <h3 className={`${style['overview-list-item__title']} content-primary-a label-large`}>
         {productName}
       </h3>
