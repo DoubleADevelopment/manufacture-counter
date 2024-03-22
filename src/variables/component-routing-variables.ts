@@ -5,18 +5,21 @@ const enum ComponentsRoutingNames {
   CHEMISTRY = 'CHEMISTRY',
   PIGMENTS = 'PIGMENTS',
   GUMS = 'GUMS',
+  SUPPLIES = 'SUPPLIES',
 }
 
 const ComponentsRoutes: Record<ComponentsRoutingNames, string> = {
   [ComponentsRoutingNames.CHEMISTRY]: 'chemistry',
   [ComponentsRoutingNames.PIGMENTS]: 'pigments',
   [ComponentsRoutingNames.GUMS]: 'gums',
+  [ComponentsRoutingNames.SUPPLIES]: 'supplies',
 };
 
 const ComponentsPaths: Record<ComponentsRoutingNames, string> = {
   [ComponentsRoutingNames.CHEMISTRY]: '/chemistry',
   [ComponentsRoutingNames.PIGMENTS]: '/pigments',
   [ComponentsRoutingNames.GUMS]: '/gums',
+  [ComponentsRoutingNames.SUPPLIES]: '/supplies',
 };
 
 const ComponentsRouting: Record<ComponentsRoutingNames, IRouteItem> = {
@@ -34,6 +37,11 @@ const ComponentsRouting: Record<ComponentsRoutingNames, IRouteItem> = {
     title: 'Pigmenty',
     route: ComponentsRoutes.PIGMENTS,
     path: ComponentsPaths.PIGMENTS,
+  },
+  [ComponentsRoutingNames.SUPPLIES]: {
+    title: 'Komponenty',
+    route: ComponentsRoutes.SUPPLIES,
+    path: ComponentsPaths.SUPPLIES,
   },
 };
 
