@@ -30,7 +30,7 @@ const OverviewListItem = ({ item }: IOverviewListItemProps): JSX.Element => {
 
   return (
     <li className={style['overview-list-item']} key={item.UNID}>
-      <h3 className={`${style['overview-list-item__title']} content-primary-a heading-x-small  `}>
+      <h3 className={`${style['overview-list-item__title']} content-primary-a label-large`}>
         {productName}
       </h3>
 
