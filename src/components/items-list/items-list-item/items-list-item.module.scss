@@ -6,12 +6,16 @@
   grid-template-columns: 100px 1fr;
   grid-template-rows: min-content;
   border: 2px solid var(--border-opaque);
+  border-bottom: 4px solid transparent;
   border-radius: var(--basic-border-radius);
   box-shadow:  var(--item-box-shadow);
+  transition: all ease 0.2s;
 
   &:focus-within,
   &:hover {
     border-color: var(--border-accent-light);
+    transform: translateY(-6px);
+    transition: all ease 0.2s;
   }
 }
 

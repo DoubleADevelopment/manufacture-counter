@@ -15,7 +15,7 @@ interface IComponentOverviewProps {
 }
 
 const ComponentOverview = ({ data, title }: IComponentOverviewProps): JSX.Element => {
-  const [showList, setShowList] = useState<boolean>(true);
+  const [showList, setShowList] = useState<boolean>(false);
 
   const onShowListButtonClickHandler = () => {
     setShowList((prev) => !prev);

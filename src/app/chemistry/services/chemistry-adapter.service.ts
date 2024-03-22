@@ -47,6 +47,7 @@ class ChemistryAdapterService {
       amount: item.amount,
       unitsOfMeasurement: item.unitsOfMeasurement,
       logs: item.logs,
+      color: item.color,
     };
   }
 
