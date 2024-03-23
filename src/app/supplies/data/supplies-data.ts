@@ -1,22 +1,22 @@
 //types
-import { rootBaseName } from '../../../variables';
+// import { rootBaseName } from '../../../variables';
 import type { ISuppliesPackage } from '../types/data-types';
 //vars
 import { SuppliesLogsNames, SuppliesSettingsNames } from '../variables';
 
-const gumsData: ISuppliesPackage = {
+const suppliesData: ISuppliesPackage = {
   dataPackageName: 'supplies',
   dataPackageUNID: 3004,
   items: [
     {
-      UNID: 'gums-ALFA-PVC-794125',
+      UNID: 'supplies-abc123',
       amount: 0,
-      manufactured: 'ALFA PVC',
-      productName: 'Uszczelka czarna dynamiczna do profili ',
-      systemCode: '794125',
-      description: 'kolor etykiety niebieski, 500kg',
-      additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka czarna.jpg`,
+      manufactured: '',
+      productName: 'Przekładki polipropylenowe (do listwy) - zamówienia J. Wasielewska',
+      systemCode: '',
+      description: '',
+      additionalInfo: '3 kartony (karton ma 5 tyś szt)',
+      image: ``,
       color: '',
       logs: {
         [SuppliesLogsNames.COUNTER]: {
@@ -28,14 +28,662 @@ const gumsData: ISuppliesPackage = {
       settings: {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
           settingValue: 1,
-          name: 'Ilość',
+          name: 'szt',
         },
       },
       additionalResources: [],
       packagingInfo: '',
-      unitsOfMeasurement: 'ilość',
+      unitsOfMeasurement: 'szt',
+    },
+    {
+      UNID: 'supplies-def456',
+      amount: 0,
+      manufactured: '',
+      productName: 'Taśma do bandowania - GREENSTRAP (15,5X0,90MM), 1400m zielona karb.',
+      systemCode: '',
+      description: '',
+      additionalInfo: '1 paleta (48szt.)',
+      image: ``,
+      color: '',
+      logs: {
+        [SuppliesLogsNames.COUNTER]: {
+          log: [],
+          name: 'Licznik',
+          lastChange: null,
+        },
+      },
+      settings: {
+        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 1,
+          name: 'szt',
+        },
+      },
+      additionalResources: [],
+      packagingInfo: '',
+      unitsOfMeasurement: 'szt',
+    },
+    {
+      UNID: 'supplies-ghi789',
+      amount: 0,
+      manufactured: '',
+      productName: 'Półrękaw biały 1400 perforacja co 7,5',
+      systemCode: '',
+      description: '',
+      additionalInfo: '40 rolek',
+      image: ``,
+      color: '',
+      logs: {
+        [SuppliesLogsNames.COUNTER]: {
+          log: [],
+          name: 'Licznik',
+          lastChange: null,
+        },
+      },
+      settings: {
+        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 1,
+          name: 'rolki',
+        },
+      },
+      additionalResources: [],
+      packagingInfo: '',
+      unitsOfMeasurement: 'rolki',
+    },
+    {
+      UNID: 'supplies-jkl012',
+      amount: 0,
+      manufactured: '',
+      productName: 'Półrękaw czarny 1200 perforacja co 7',
+      systemCode: '',
+      description: '',
+      additionalInfo: '20 rolek',
+      image: ``,
+      color: '',
+      logs: {
+        [SuppliesLogsNames.COUNTER]: {
+          log: [],
+          name: 'Licznik',
+          lastChange: null,
+        },
+      },
+      settings: {
+        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 1,
+          name: 'rolki',
+        },
+      },
+      additionalResources: [],
+      packagingInfo: '',
+      unitsOfMeasurement: 'rolki',
+    },
+    {
+      UNID: 'supplies-mno345',
+      amount: 0,
+      manufactured: '',
+      productName: 'Półrękaw czarno-biały 1200 perforacja co 7,0 90 µm',
+      systemCode: '',
+      description: '',
+      additionalInfo: '',
+      image: ``,
+      color: '#ffff00',
+      logs: {
+        [SuppliesLogsNames.COUNTER]: {
+          log: [],
+          name: 'Licznik',
+          lastChange: null,
+        },
+      },
+      settings: {
+        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 1,
+          name: 'szt',
+        },
+      },
+      additionalResources: [],
+      packagingInfo: '',
+      unitsOfMeasurement: 'szt',
+    },
+    {
+      UNID: 'supplies-pqr678',
+      amount: 0,
+      manufactured: '',
+      productName: 'Półrękaw czarno-biały 1400 perforacja co 7,5 90 µm',
+      systemCode: '',
+      description: '',
+      additionalInfo: '',
+      image: ``,
+      color: '#ffff00',
+      logs: {
+        [SuppliesLogsNames.COUNTER]: {
+          log: [],
+          name: 'Licznik',
+          lastChange: null,
+        },
+      },
+      settings: {
+        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 1,
+          name: 'szt',
+        },
+      },
+      additionalResources: [],
+      packagingInfo: '',
+      unitsOfMeasurement: 'szt',
+    },
+    {
+      UNID: 'supplies-stu901',
+      amount: 0,
+      manufactured: '',
+      productName: 'Półrękaw czarno-biały 1400 perforacja co 7,0 90 µm',
+      systemCode: '',
+      description: '',
+      additionalInfo: '10 rolek',
+      image: `#ffff00`,
+      color: '',
+      logs: {
+        [SuppliesLogsNames.COUNTER]: {
+          log: [],
+          name: 'Licznik',
+          lastChange: null,
+        },
+      },
+      settings: {
+        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 1,
+          name: 'rolki',
+        },
+      },
+      additionalResources: [],
+      packagingInfo: '',
+      unitsOfMeasurement: 'rolki',
+    },
+    {
+      UNID: 'supplies-vwx234',
+      amount: 0,
+      manufactured: '',
+      productName: 'Półrękaw czarny 1400 perforacja co 7,5',
+      systemCode: '',
+      description: '',
+      additionalInfo: '40 rolek',
+      image: ``,
+      color: '',
+      logs: {
+        [SuppliesLogsNames.COUNTER]: {
+          log: [],
+          name: 'Licznik',
+          lastChange: null,
+        },
+      },
+      settings: {
+        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 1,
+          name: 'rolki',
+        },
+      },
+      additionalResources: [],
+      packagingInfo: '',
+      unitsOfMeasurement: 'rolki',
+    },
+    {
+      UNID: 'supplies-yza567',
+      amount: 0,
+      manufactured: '',
+      productName: 'Półrękaw czarny 1600 perforacja co 7,5',
+      systemCode: '',
+      description: '',
+      additionalInfo: '10 rolek',
+      image: ``,
+      color: '',
+      logs: {
+        [SuppliesLogsNames.COUNTER]: {
+          log: [],
+          name: 'Licznik',
+          lastChange: null,
+        },
+      },
+      settings: {
+        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 1,
+          name: 'rolki',
+        },
+      },
+      additionalResources: [],
+      packagingInfo: '',
+      unitsOfMeasurement: 'rolki',
+    },
+    {
+      UNID: 'supplies-bcd890',
+      amount: 0,
+      manufactured: '',
+      productName: 'Półrękaw czarny 1600 perforacja co 7,7',
+      systemCode: '',
+      description: '',
+      additionalInfo: '30 rolek',
+      image: ``,
+      color: '',
+      logs: {
+        [SuppliesLogsNames.COUNTER]: {
+          log: [],
+          name: 'Licznik',
+          lastChange: null,
+        },
+      },
+      settings: {
+        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 1,
+          name: 'rolki',
+        },
+      },
+      additionalResources: [],
+      packagingInfo: '',
+      unitsOfMeasurement: 'rolki',
+    },
+    {
+      UNID: 'supplies-efg123',
+      amount: 0,
+      manufactured: '',
+      productName: 'Etykieta biała 100x150 (szt na rolce 1000szt), półbłysk -fi = 40mm',
+      systemCode: '',
+      description: '',
+      additionalInfo: '1 kart.(x8szt.)',
+      image: ``,
+      color: 'blue',
+      logs: {
+        [SuppliesLogsNames.COUNTER]: {
+          log: [],
+          name: 'Licznik',
+          lastChange: null,
+        },
+      },
+      settings: {
+        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 1,
+          name: 'szt',
+        },
+      },
+      additionalResources: [],
+      packagingInfo: '',
+      unitsOfMeasurement: 'szt',
+    },
+    {
+      UNID: 'supplies-hij456',
+      amount: 0,
+      manufactured: '',
+      productName: 'Etykieta czerwona 150x100 (szt na rolce 1000szt),półbłysk - fi = 40mm',
+      systemCode: '',
+      description: '',
+      additionalInfo: '1 kart.(x8szt.)',
+      image: ``,
+      color: '',
+      logs: {
+        [SuppliesLogsNames.COUNTER]: {
+          log: [],
+          name: 'Licznik',
+          lastChange: null,
+        },
+      },
+      settings: {
+        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 1,
+          name: 'szt',
+        },
+      },
+      additionalResources: [],
+      packagingInfo: '',
+      unitsOfMeasurement: 'szt',
+    },
+    {
+      UNID: 'supplies-klm789',
+      amount: 0,
+      manufactured: '',
+      productName: 'Etykieta niebieska 100x150 (szt na rolce 1000szt), półbłysk -fi = 40mm',
+      systemCode: '',
+      description: '',
+      additionalInfo: '1 kart.(x8szt.)',
+      image: ``,
+      color: '',
+      logs: {
+        [SuppliesLogsNames.COUNTER]: {
+          log: [],
+          name: 'Licznik',
+          lastChange: null,
+        },
+      },
+      settings: {
+        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 1,
+          name: 'szt',
+        },
+      },
+      additionalResources: [],
+      packagingInfo: '',
+      unitsOfMeasurement: 'szt',
+    },
+    {
+      UNID: 'supplies-nop012',
+      amount: 0,
+      manufactured: '',
+      productName: 'Etykiety żółte 150x100 szt na rolce 1000szt),półbłysk -fi = 40mm',
+      systemCode: '',
+      description: '',
+      additionalInfo: '1 kart. (x8szt)',
+      image: ``,
+      color: '',
+      logs: {
+        [SuppliesLogsNames.COUNTER]: {
+          log: [],
+          name: 'Licznik',
+          lastChange: null,
+        },
+      },
+      settings: {
+        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 1,
+          name: 'szt',
+        },
+      },
+      additionalResources: [],
+      packagingInfo: '',
+      unitsOfMeasurement: 'szt',
+    },
+    {
+      UNID: 'supplies-qrs345',
+      amount: 0,
+      manufactured: '',
+      productName: 'Etykiety zielone 150x100 (szt na rolce 1000 szt),półbłysk -fi = 40 mm',
+      systemCode: '',
+      description: '',
+      additionalInfo: '1 kart.(x8szt.)',
+      image: ``,
+      color: '',
+      logs: {
+        [SuppliesLogsNames.COUNTER]: {
+          log: [],
+          name: 'Licznik',
+          lastChange: null,
+        },
+      },
+      settings: {
+        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 1,
+          name: 'szt',
+        },
+      },
+      additionalResources: [],
+      packagingInfo: '',
+      unitsOfMeasurement: 'szt',
+    },
+    {
+      UNID: 'supplies-tuv678',
+      amount: 0,
+      manufactured: '',
+      productName: 'Etykiety białe Małe 100x70 (szt na rolce 1000 szt),półbłysk- fi=40mm',
+      systemCode: '',
+      description: '',
+      additionalInfo: '1 kart.(x8szt.)',
+      image: ``,
+      color: 'blue',
+      logs: {
+        [SuppliesLogsNames.COUNTER]: {
+          log: [],
+          name: 'Licznik',
+          lastChange: null,
+        },
+      },
+      settings: {
+        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 1,
+          name: 'szt',
+        },
+      },
+      additionalResources: [],
+      packagingInfo: '',
+      unitsOfMeasurement: 'szt',
+    },
+    {
+      UNID: 'supplies-wxy901',
+      amount: 0,
+      manufactured: '',
+      productName: 'Gwoździe  firma PREBENA  CNW 25/50 BK RI (10,800 szt.)',
+      systemCode: '',
+      description: '',
+      additionalInfo: '10 kart.',
+      image: ``,
+      color: '',
+      logs: {
+        [SuppliesLogsNames.COUNTER]: {
+          log: [],
+          name: 'Licznik',
+          lastChange: null,
+        },
+      },
+      settings: {
+        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 1,
+          name: 'szt',
+        },
+      },
+      additionalResources: [],
+      packagingInfo: '',
+      unitsOfMeasurement: 'szt',
+    },
+    {
+      UNID: 'supplies-zab234',
+      amount: 0,
+      manufactured: '',
+      productName: 'Taśma pakowa z nadrukiem - TOWAR NIEZGODNY',
+      systemCode: '',
+      description: '',
+      additionalInfo: '',
+      image: ``,
+      color: '',
+      logs: {
+        [SuppliesLogsNames.COUNTER]: {
+          log: [],
+          name: 'Licznik',
+          lastChange: null,
+        },
+      },
+      settings: {
+        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 1,
+          name: 'szt',
+        },
+      },
+      additionalResources: [],
+      packagingInfo: '',
+      unitsOfMeasurement: 'szt',
+    },
+    {
+      UNID: 'supplies-cde567',
+      amount: 0,
+      manufactured: '',
+      productName: 'Taśma pomarańczowa z nadrukiem- ENERGETO',
+      systemCode: '',
+      description: '',
+      additionalInfo: '5 kart.(x36szt.)',
+      image: ``,
+      color: '',
+      logs: {
+        [SuppliesLogsNames.COUNTER]: {
+          log: [],
+          name: 'Licznik',
+          lastChange: null,
+        },
+      },
+      settings: {
+        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 1,
+          name: 'szt',
+        },
+      },
+      additionalResources: [],
+      packagingInfo: '',
+      unitsOfMeasurement: 'szt',
+    },
+    {
+      UNID: 'supplies-fgh890',
+      amount: 0,
+      manufactured: '',
+      productName: 'Biała taśma klejąca - White Solvent (szt rolek 36 pcs) - 48mm',
+      systemCode: '',
+      description: '',
+      additionalInfo: '3 kart.(x10)',
+      image: ``,
+      color: '',
+      logs: {
+        [SuppliesLogsNames.COUNTER]: {
+          log: [],
+          name: 'Licznik',
+          lastChange: null,
+        },
+      },
+      settings: {
+        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 1,
+          name: 'szt',
+        },
+      },
+      additionalResources: [],
+      packagingInfo: '',
+      unitsOfMeasurement: 'szt',
+    },
+    {
+      UNID: 'supplies-ijk123',
+      amount: 0,
+      manufactured: '',
+      productName: 'Kalka do drukarki Index: WAX RESIN ECO OUT ( szt w kart. 10szt),104x450mm',
+      systemCode: '',
+      description: '',
+      additionalInfo: '5 kart.(x36szt.)',
+      image: ``,
+      color: '',
+      logs: {
+        [SuppliesLogsNames.COUNTER]: {
+          log: [],
+          name: 'Licznik',
+          lastChange: null,
+        },
+      },
+      settings: {
+        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 1,
+          name: 'szt',
+        },
+      },
+      additionalResources: [],
+      packagingInfo: '',
+      unitsOfMeasurement: 'szt',
+    },
+    {
+      UNID: 'supplies-lmn456',
+      amount: 0,
+      manufactured: '',
+      productName: 'Styropian grubość 2,0 cm ( w paczce 240 szt) - zamówienia J. Wasielewska',
+      systemCode: '',
+      description: '',
+      additionalInfo: '5 kart.(x10szt.)',
+      image: ``,
+      color: '',
+      logs: {
+        [SuppliesLogsNames.COUNTER]: {
+          log: [],
+          name: 'Licznik',
+          lastChange: null,
+        },
+      },
+      settings: {
+        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 1,
+          name: 'szt',
+        },
+      },
+      additionalResources: [],
+      packagingInfo: '',
+      unitsOfMeasurement: 'szt',
+    },
+    {
+      UNID: 'supplies-opq789',
+      amount: 0,
+      manufactured: '',
+      productName: 'Styropian grubość 0,5 cm ( w paczce 480 szt) - zamówienia J. Wasielewska',
+      systemCode: '',
+      description: '',
+      additionalInfo: '50 paczek',
+      image: ``,
+      color: '',
+      logs: {
+        [SuppliesLogsNames.COUNTER]: {
+          log: [],
+          name: 'Licznik',
+          lastChange: null,
+        },
+      },
+      settings: {
+        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 1,
+          name: 'szt',
+        },
+      },
+      additionalResources: [],
+      packagingInfo: '',
+      unitsOfMeasurement: 'szt',
+    },
+    {
+      UNID: 'supplies-rst012',
+      amount: 0,
+      manufactured: '',
+      productName: 'Spray do hamulców BREMSEN FORCH ECO',
+      systemCode: '',
+      description: '',
+      additionalInfo: '1 kart.(30x500ml)',
+      image: ``,
+      color: '',
+      logs: {
+        [SuppliesLogsNames.COUNTER]: {
+          log: [],
+          name: 'Licznik',
+          lastChange: null,
+        },
+      },
+      settings: {
+        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 1,
+          name: 'szt',
+        },
+      },
+      additionalResources: [],
+      packagingInfo: '',
+      unitsOfMeasurement: 'szt',
+    },
+    {
+      UNID: 'supplies-uvw345',
+      amount: 0,
+      manufactured: '',
+      productName: 'Płyn Release IT - 5l baniaki',
+      systemCode: '',
+      description: '',
+      additionalInfo: '',
+      image: ``,
+      color: '',
+      logs: {
+        [SuppliesLogsNames.COUNTER]: {
+          log: [],
+          name: 'Licznik',
+          lastChange: null,
+        },
+      },
+      settings: {
+        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 1,
+          name: 'szt',
+        },
+      },
+      additionalResources: [],
+      packagingInfo: '',
+      unitsOfMeasurement: 'szt',
     },
   ],
 };
 
-export default gumsData;
+export default suppliesData;

@@ -14,6 +14,7 @@ class SuppliesAdapterService {
     data.items.forEach((item: ISuppliesItem) => {
       adaptedData[item.UNID] = item;
     });
+
     return adaptedData;
   }
 
