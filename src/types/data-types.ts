@@ -3,6 +3,7 @@ import { CHEMISTRY_STORAGE_NAME } from '../app/chemistry/variables';
 import { GUMS_STORAGE_NAME } from '../app/gums/variables/data-variables';
 import { PIGMENTS_STORAGE_NAME } from '../app/pigments/variables/data-variables';
 import { SUPPLIES_STORAGE_NAME } from '../app/supplies/variables';
+import { COUNTERS_TYPES } from '../variables';
 
 //componentsList type we use in main page for show all components in overview page
 interface IComponentData {
@@ -61,6 +62,7 @@ interface IItemData<L extends ILogs, S extends ISettings> {
   color: string;
   logs: L;
   settings: S;
+  counters?: { counterName: string; counterComponent: COUNTERS_TYPES }[];
   additionalResources: string[];
   packagingInfo: string;
   unitsOfMeasurement: string;
