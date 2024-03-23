@@ -4,6 +4,7 @@ import {
   SuppliesSettingsNames,
   SUPPLIES_STORAGE_NAME,
   suppliesCountersList,
+  SUPPLIES_COUNTERS,
 } from './data-variables';
 import { SUPPLIES_TEXT } from './text-variables';
 
@@ -14,4 +15,5 @@ export {
   SuppliesSettingsNames,
   SUPPLIES_STORAGE_NAME,
   suppliesCountersList,
+  SUPPLIES_COUNTERS,
 };
