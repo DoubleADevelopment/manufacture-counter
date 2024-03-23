@@ -9,7 +9,7 @@ import {
 } from '../../../store/actions/actions';
 import { SelectorGetCurrentSupplieSetting } from '../../../store/slectors/selectors';
 //variables
-import { SuppliesLogsNames, SuppliesSettingsNames } from '../../../variables';
+import { SUPPLIES_TEXT, SuppliesLogsNames, SuppliesSettingsNames } from '../../../variables';
 
 interface IGumsCardboardCounterProps {
   UNID: string;
@@ -81,9 +81,11 @@ const SuppliesCardboardCounter = ({ UNID }: IGumsCardboardCounterProps): JSX.Ele
       onAdditionalValueChangeHandler={changeCardboarSetting}
       defaultAdditionalValue={cardboardDefaultValue}
       text={{
-        valueTitle: 'valueTitle',
-        additionalValueTitleBefore: 'additionalValueTitleBefore',
-        additionalValueTitleAfter: 'additionalValueTitleAfter',
+        valueTitle: SUPPLIES_TEXT.SUPPLIES_CARDBOARD_COUNTER_INPUT_FIELD_TEXT,
+        additionalValueTitleBefore:
+          SUPPLIES_TEXT.SUPPLIES_CARDBOARD_COUNTER_ADDITIONAL_INPUT_BEFORE_TEXT,
+        additionalValueTitleAfter:
+          SUPPLIES_TEXT.SUPPLIES_CARDBOARD_COUNTER_ADDITIONAL_INPUT_AFTER_TEXT,
       }}
     />
   );
