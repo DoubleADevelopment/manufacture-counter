@@ -16,7 +16,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '3 kartony (karton ma 5 tyś szt)',
-      image: `https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fltpack.pl%2Fwp-content%2Fuploads%2F2021%2F01%2Fxprzekladki.jpg.pagespeed.ic.KGXeZCVNg5.jpg&f=1&nofb=1&ipt=a8d8ab734faa3ee13b14b582f709b3b6036be8d400496e9c0cf0dacc50e465f7&ipo=images`,
+      image: `https://a.allegroimg.com/s1440/11d55f/e6d50dc84210a352f7cb467a7302/Plyta-polipropylenowa-kanalikowa-HKP-1x1m`,
       color: '',
       counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
@@ -53,7 +53,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '1 paleta (48szt.)',
-      image: `https://static.ajproducts.com/resize/globalassets/147692.jpg?ref=1BCA618C1B&width=1472`,
+      image: `https://www.harmadon.pl/cache/files/1078139145/935greenstrap-1.jpg`,
       color: '',
       logs: {
         [SuppliesLogsNames.COUNTER]: {
@@ -107,7 +107,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '20 rolek',
-      image: `https://fol-mech.pl/wp-content/uploads/2020/07/zdjecie-1-1024x740.jpeg`,
+      image: `https://www.fuhmateo.pl/storage/sklep/produkty/158/zdjecia/folia-budowlana-typ-300-8m-x-25m-200-m2-290.jpg`,
       color: '',
       logs: {
         [SuppliesLogsNames.COUNTER]: {
@@ -134,7 +134,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '',
-      image: `https://fol-mech.pl/wp-content/uploads/2020/07/zdjecie-1-1024x740.jpeg`,
+      image: `https://www.fuhmateo.pl/storage/sklep/produkty/158/zdjecia/folia-budowlana-typ-300-8m-x-25m-200-m2-290.jpg`,
       color: '#ffff00',
       logs: {
         [SuppliesLogsNames.COUNTER]: {
@@ -161,7 +161,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '',
-      image: `https://fol-mech.pl/wp-content/uploads/2020/07/zdjecie-1-1024x740.jpeg`,
+      image: `https://www.fuhmateo.pl/storage/sklep/produkty/158/zdjecia/folia-budowlana-typ-300-8m-x-25m-200-m2-290.jpg`,
       color: '#ffff00',
       logs: {
         [SuppliesLogsNames.COUNTER]: {
@@ -188,7 +188,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '10 rolek',
-      image: `https://fol-mech.pl/wp-content/uploads/2020/07/zdjecie-1-1024x740.jpeg`,
+      image: `https://www.fuhmateo.pl/storage/sklep/produkty/158/zdjecia/folia-budowlana-typ-300-8m-x-25m-200-m2-290.jpg`,
       color: '#ffff00',
       logs: {
         [SuppliesLogsNames.COUNTER]: {
@@ -215,7 +215,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '40 rolek',
-      image: `https://fol-mech.pl/wp-content/uploads/2020/07/zdjecie-1-1024x740.jpeg`,
+      image: `https://www.fuhmateo.pl/storage/sklep/produkty/158/zdjecia/folia-budowlana-typ-300-8m-x-25m-200-m2-290.jpg`,
       color: '',
       logs: {
         [SuppliesLogsNames.COUNTER]: {
@@ -242,7 +242,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '10 rolek',
-      image: `https://fol-mech.pl/wp-content/uploads/2020/07/zdjecie-1-1024x740.jpeg`,
+      image: `https://www.fuhmateo.pl/storage/sklep/produkty/158/zdjecia/folia-budowlana-typ-300-8m-x-25m-200-m2-290.jpg`,
       color: '',
       logs: {
         [SuppliesLogsNames.COUNTER]: {
@@ -269,7 +269,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '30 rolek',
-      image: `https://fol-mech.pl/wp-content/uploads/2020/07/zdjecie-1-1024x740.jpeg`,
+      image: `https://www.fuhmateo.pl/storage/sklep/produkty/158/zdjecia/folia-budowlana-typ-300-8m-x-25m-200-m2-290.jpg`,
       color: '',
       logs: {
         [SuppliesLogsNames.COUNTER]: {
@@ -333,7 +333,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '1 kart.(x8szt.)',
-      image: `https://printandstick.eu/wp-content/uploads/2019/03/13a.jpg`,
+      image: `https://etykietolandia.pl/cdn/shop/files/Zebraetykietytermiczneczerwone.webp?v=1707654818&width=1200`,
       color: '',
       counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
@@ -370,7 +370,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '1 kart.(x8szt.)',
-      image: `https://printandstick.eu/wp-content/uploads/2019/03/13a.jpg`,
+      image: `https://m.media-amazon.com/images/I/61g+1k4s2HL._AC_UF1000,1000_QL80_.jpg`,
       color: '',
       counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
@@ -407,7 +407,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '1 kart. (x8szt)',
-      image: `https://printandstick.eu/wp-content/uploads/2019/03/13a.jpg`,
+      image: `https://www.ilh.pl/wh/960-720/img/catalog/img/PA10Y-60-30.jpg`,
       color: '',
       counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
@@ -444,7 +444,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '1 kart.(x8szt.)',
-      image: `https://printandstick.eu/wp-content/uploads/2019/03/13a.jpg`,
+      image: `https://image.ceneostatic.pl/data/products/139404591/8b88d30f-e014-4422-97ae-070267137646_p-interlabel-etykiety-ttr-60x40-zielona.jpg`,
       color: '',
       counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
@@ -481,7 +481,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '1 kart.(x8szt.)',
-      image: `https://printandstick.eu/wp-content/uploads/2019/03/13a.jpg`,
+      image: `https://a.allegroimg.com/s1440/118df6/d8edf5d944d2a82b41feaf8ef6b9/ETYKIETY-TERMICZNE-BIALE-50x30-mm-1000szt`,
       color: 'blue',
       counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
@@ -545,7 +545,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '',
-      image: `https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Firge-system.pl%2F77-large_default%2Fta%25C5%259Bma-pakowa-48-mm-60yd-muroll-opp-325-br%25C4%2585z.jpg&f=1&nofb=1&ipt=4a37bd7deaf610b8099d4c57e311d8797cfab64bf333f79893990b735e8f1ca2&ipo=images`,
+      image: `https://neopak.pl/dane/source/9/9cf2af4a81be4dc985f0e6928f806fdb.jpg`,
       color: '',
       logs: {
         [SuppliesLogsNames.COUNTER]: {
@@ -572,7 +572,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '5 kart.(x36szt.)',
-      image: `https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Firge-system.pl%2F77-large_default%2Fta%25C5%259Bma-pakowa-48-mm-60yd-muroll-opp-325-br%25C4%2585z.jpg&f=1&nofb=1&ipt=4a37bd7deaf610b8099d4c57e311d8797cfab64bf333f79893990b735e8f1ca2&ipo=images`,
+      image: `https://neopak.pl/dane/source/9/9cf2af4a81be4dc985f0e6928f806fdb.jpg`,
       color: '',
       counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
@@ -609,7 +609,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '3 kart.(x10)',
-      image: `https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Firge-system.pl%2F77-large_default%2Fta%25C5%259Bma-pakowa-48-mm-60yd-muroll-opp-325-br%25C4%2585z.jpg&f=1&nofb=1&ipt=4a37bd7deaf610b8099d4c57e311d8797cfab64bf333f79893990b735e8f1ca2&ipo=images`,
+      image: `https://techmarkety-sklep.pl/10390-large_default/p17-tasma-izolacyjna-biala-zbrojona-50mbx50mm.jpg`,
       color: '',
       counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
@@ -646,7 +646,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '5 kart.(x36szt.)',
-      image: `https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.sunpack.pl%2F_data%2Fsection-1%2F154.jpg&f=1&nofb=1&ipt=3df6ab76091bc9f57d0cb8e10ff4b191dbeeb28114436720146b7efad2d0d989&ipo=images`,
+      image: `https://a.allegroimg.com/s512/11a1e8/a69188014166a76803f8f0c52ec2/Kalka-tasma-TTR-80mm-x-300m-woskowa-Liczba-etykiet-na-rolce-arkuszu-1`,
       color: '',
       counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
