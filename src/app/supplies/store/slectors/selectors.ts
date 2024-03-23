@@ -12,8 +12,9 @@ export const SelectorGetCurrentSupplie =
 
 export const SelectorGetCurrentSupplieSetting =
   (UNID: string, settingName: SuppliesSettingsNames) =>
-  (state: RootState): number =>
-    state.supplies[UNID].settings[settingName].settingValue;
+  (state: RootState): number => {
+    return state.supplies[UNID].settings[settingName].settingValue;
+  };
 
 export const SelectorGetSupplies =
   () =>

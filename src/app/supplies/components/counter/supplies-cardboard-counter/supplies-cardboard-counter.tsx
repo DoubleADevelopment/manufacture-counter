@@ -19,7 +19,7 @@ const SuppliesCardboardCounter = ({ UNID }: IGumsCardboardCounterProps): JSX.Ele
   const dispatch = useAppDispatch();
 
   const cardboardDefaultValue = useAppSelector(
-    SelectorGetCurrentSupplieSetting(UNID, SuppliesSettingsNames.BASE_COUNTER_VALUE),
+    SelectorGetCurrentSupplieSetting(UNID, SuppliesSettingsNames.BASE_CARDBOARD_VALUE),
   );
 
   const inc = (value: number, additionalValue: number): void => {
@@ -36,7 +36,7 @@ const SuppliesCardboardCounter = ({ UNID }: IGumsCardboardCounterProps): JSX.Ele
       incrementAction({
         UNID: UNID,
         value: valueToAdd,
-        logName: SuppliesLogsNames.COUNTER,
+        logName: SuppliesLogsNames.CARDBOARD,
         logText: logText,
       }),
     );
@@ -56,7 +56,7 @@ const SuppliesCardboardCounter = ({ UNID }: IGumsCardboardCounterProps): JSX.Ele
       decrementAction({
         UNID: UNID,
         value: valueToAdd,
-        logName: SuppliesLogsNames.COUNTER,
+        logName: SuppliesLogsNames.CARDBOARD,
         logText: logText,
       }),
     );
@@ -67,7 +67,7 @@ const SuppliesCardboardCounter = ({ UNID }: IGumsCardboardCounterProps): JSX.Ele
       dispatch(
         changeItemSettingAction({
           UNID: UNID,
-          settingName: SuppliesSettingsNames.BASE_COUNTER_VALUE,
+          settingName: SuppliesSettingsNames.BASE_CARDBOARD_VALUE,
           newSettingValue: value,
         }),
       );

@@ -1,6 +1,5 @@
 //types
 // import { rootBaseName } from '../../../variables';
-import { COUNTERS_TYPES } from '../../../variables';
 import type { ISuppliesPackage } from '../types/data-types';
 //vars
 import { SUPPLIES_COUNTERS, SuppliesLogsNames, SuppliesSettingsNames } from '../variables';
@@ -19,21 +18,16 @@ const suppliesData: ISuppliesPackage = {
       additionalInfo: '3 kartony (karton ma 5 tyś szt)',
       image: `https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fltpack.pl%2Fwp-content%2Fuploads%2F2021%2F01%2Fxprzekladki.jpg.pagespeed.ic.KGXeZCVNg5.jpg&f=1&nofb=1&ipt=a8d8ab734faa3ee13b14b582f709b3b6036be8d400496e9c0cf0dacc50e465f7&ipo=images`,
       color: '',
-      counters: [
-        { counterName: SUPPLIES_COUNTERS.COUNTER, counterComponent: COUNTERS_TYPES.BASIC_COUNTER },
-        {
-          counterName: SUPPLIES_COUNTERS.CARDBOARD,
-          counterComponent: COUNTERS_TYPES.COUNTER_WITH_ADDITIONAL_VALUE,
-        },
-        {
-          counterName: 'test',
-          counterComponent: COUNTERS_TYPES.COUNTER_WITH_ADDITIONAL_VALUE,
-        },
-      ],
+      counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
         [SuppliesLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
+        },
+        [SuppliesLogsNames.CARDBOARD]: {
+          log: [],
+          name: 'Kartony',
           lastChange: null,
         },
       },
@@ -41,6 +35,10 @@ const suppliesData: ISuppliesPackage = {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
           settingValue: 1,
           name: 'szt',
+        },
+        [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
+          settingValue: 500,
+          name: 'Waga kartonu / KG',
         },
       },
       additionalResources: [],
