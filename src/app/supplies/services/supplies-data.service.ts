@@ -1,11 +1,11 @@
 //types
 import type { ISuppliesData } from '../types';
 //data
-import gumsData from '../data/gums-data';
+import suppliesData from '../data/supplies-data';
 //adapters
 import gumsAdapterService from './supplies-adapter.service';
 
-const adaptedData: ISuppliesData = gumsAdapterService.adaptDataToApp(gumsData);
+const adaptedData: ISuppliesData = gumsAdapterService.adaptDataToApp(suppliesData);
 
 class SuppliesDataService {
   #data: ISuppliesData;
