@@ -32,8 +32,6 @@ const ComponentOverviewPage = (): JSX.Element => {
     useAppSelector(SelectorGetSupplies()),
   );
 
-  console.log(chemistryData, gumsData, pigmentsData);
-
   return (
     <PageWithMenuLayout headerTitle={AppRouting.COMPONENTS_OVERVIEW.title}>
       <main className={style['components-overview-page']}>
