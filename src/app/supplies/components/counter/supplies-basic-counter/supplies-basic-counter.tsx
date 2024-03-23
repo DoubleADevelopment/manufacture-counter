@@ -7,11 +7,11 @@ import { SelectorGetCurrentSupplieSetting } from '../../../store/slectors/select
 //variables
 import { SUPPLIES_TEXT, SuppliesLogsNames, SuppliesSettingsNames } from '../../../variables';
 
-interface IGumsBasicCounterProps {
+interface ISuppliesBasicCounterProps {
   UNID: string;
 }
 
-const GumsBasicCounter = ({ UNID }: IGumsBasicCounterProps): JSX.Element => {
+const SuppliesBasicCounter = ({ UNID }: ISuppliesBasicCounterProps): JSX.Element => {
   const gumsBasicCounterDefaultValue = useAppSelector(
     SelectorGetCurrentSupplieSetting(UNID, SuppliesSettingsNames.BASE_COUNTER_VALUE),
   );
@@ -36,4 +36,4 @@ const GumsBasicCounter = ({ UNID }: IGumsBasicCounterProps): JSX.Element => {
   );
 };
 
-export default GumsBasicCounter;
+export default SuppliesBasicCounter;

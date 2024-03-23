@@ -9,7 +9,7 @@ import {
 } from '../../../store/actions/actions';
 import { SelectorGetCurrentSupplieSetting } from '../../../store/slectors/selectors';
 //variables
-import { SuppliesLogsNames, SuppliesSettingsNames } from '../../../variables';
+import { SUPPLIES_TEXT, SuppliesLogsNames, SuppliesSettingsNames } from '../../../variables';
 
 interface IGumsCardboardCounterProps {
   UNID: string;
@@ -19,7 +19,7 @@ const SuppliesCardboardCounter = ({ UNID }: IGumsCardboardCounterProps): JSX.Ele
   const dispatch = useAppDispatch();
 
   const cardboardDefaultValue = useAppSelector(
-    SelectorGetCurrentSupplieSetting(UNID, SuppliesSettingsNames.BASE_COUNTER_VALUE),
+    SelectorGetCurrentSupplieSetting(UNID, SuppliesSettingsNames.BASE_CARDBOARD_VALUE),
   );
 
   const inc = (value: number, additionalValue: number): void => {
@@ -36,7 +36,7 @@ const SuppliesCardboardCounter = ({ UNID }: IGumsCardboardCounterProps): JSX.Ele
       incrementAction({
         UNID: UNID,
         value: valueToAdd,
-        logName: SuppliesLogsNames.COUNTER,
+        logName: SuppliesLogsNames.CARDBOARD,
         logText: logText,
       }),
     );
@@ -56,7 +56,7 @@ const SuppliesCardboardCounter = ({ UNID }: IGumsCardboardCounterProps): JSX.Ele
       decrementAction({
         UNID: UNID,
         value: valueToAdd,
-        logName: SuppliesLogsNames.COUNTER,
+        logName: SuppliesLogsNames.CARDBOARD,
         logText: logText,
       }),
     );
@@ -67,7 +67,7 @@ const SuppliesCardboardCounter = ({ UNID }: IGumsCardboardCounterProps): JSX.Ele
       dispatch(
         changeItemSettingAction({
           UNID: UNID,
-          settingName: SuppliesSettingsNames.BASE_COUNTER_VALUE,
+          settingName: SuppliesSettingsNames.BASE_CARDBOARD_VALUE,
           newSettingValue: value,
         }),
       );
@@ -81,9 +81,11 @@ const SuppliesCardboardCounter = ({ UNID }: IGumsCardboardCounterProps): JSX.Ele
       onAdditionalValueChangeHandler={changeCardboarSetting}
       defaultAdditionalValue={cardboardDefaultValue}
       text={{
-        valueTitle: 'valueTitle',
-        additionalValueTitleBefore: 'additionalValueTitleBefore',
-        additionalValueTitleAfter: 'additionalValueTitleAfter',
+        valueTitle: SUPPLIES_TEXT.SUPPLIES_CARDBOARD_COUNTER_INPUT_FIELD_TEXT,
+        additionalValueTitleBefore:
+          SUPPLIES_TEXT.SUPPLIES_CARDBOARD_COUNTER_ADDITIONAL_INPUT_BEFORE_TEXT,
+        additionalValueTitleAfter:
+          SUPPLIES_TEXT.SUPPLIES_CARDBOARD_COUNTER_ADDITIONAL_INPUT_AFTER_TEXT,
       }}
     />
   );

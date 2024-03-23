@@ -1,9 +1,11 @@
 enum SuppliesLogsNames {
   COUNTER = 'counter',
+  CARDBOARD = 'cardboard',
 }
 
 enum SuppliesSettingsNames {
   BASE_COUNTER_VALUE = 'baseCounterValue',
+  BASE_CARDBOARD_VALUE = 'baseCardboardValue',
 }
 
 const SUPPLIES_STORAGE_NAME = 'supplies-data';
