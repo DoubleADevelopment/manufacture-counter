@@ -1,5 +1,5 @@
 //types
-// import { rootBaseName } from '../../../variables';
+import { rootBaseName } from '../../../variables';
 import type { ISuppliesPackage } from '../types/data-types';
 //vars
 import { SUPPLIES_COUNTERS, SuppliesLogsNames, SuppliesSettingsNames } from '../variables';
@@ -16,7 +16,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '3 kartony (karton ma 5 tyś szt)',
-      image: `https://a.allegroimg.com/s1440/11d55f/e6d50dc84210a352f7cb467a7302/Plyta-polipropylenowa-kanalikowa-HKP-1x1m`,
+      image: `${rootBaseName}/images/supplies/supplies-przekladki-polipropylenowe.webp`,
       color: '',
       counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
@@ -53,7 +53,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '1 paleta (48szt.)',
-      image: `https://www.harmadon.pl/cache/files/1078139145/935greenstrap-1.jpg`,
+      image: `${rootBaseName}/images/supplies/supplies-tasma-bandowanie-zielona.webp`,
       color: '',
       logs: {
         [SuppliesLogsNames.COUNTER]: {
@@ -80,7 +80,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '40 rolek',
-      image: `https://fol-mech.pl/wp-content/uploads/2020/07/zdjecie-1-1024x740.jpeg`,
+      image: `${rootBaseName}/images/supplies/supplies-polrekaw-bialy.webp`,
       color: '',
       logs: {
         [SuppliesLogsNames.COUNTER]: {
@@ -107,7 +107,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '20 rolek',
-      image: `https://www.fuhmateo.pl/storage/sklep/produkty/158/zdjecia/folia-budowlana-typ-300-8m-x-25m-200-m2-290.jpg`,
+      image: `${rootBaseName}/images/supplies/supplies-polrekaw-czarny.webp`,
       color: '',
       logs: {
         [SuppliesLogsNames.COUNTER]: {
@@ -134,7 +134,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '',
-      image: `https://www.fuhmateo.pl/storage/sklep/produkty/158/zdjecia/folia-budowlana-typ-300-8m-x-25m-200-m2-290.jpg`,
+      image: `${rootBaseName}/images/supplies/supplies-polrekaw-czarny.webp`,
       color: '#ffff00',
       logs: {
         [SuppliesLogsNames.COUNTER]: {
@@ -161,7 +161,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '',
-      image: `https://www.fuhmateo.pl/storage/sklep/produkty/158/zdjecia/folia-budowlana-typ-300-8m-x-25m-200-m2-290.jpg`,
+      image: `${rootBaseName}/images/supplies/supplies-polrekaw-czarny.webp`,
       color: '#ffff00',
       logs: {
         [SuppliesLogsNames.COUNTER]: {
@@ -188,7 +188,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '10 rolek',
-      image: `https://www.fuhmateo.pl/storage/sklep/produkty/158/zdjecia/folia-budowlana-typ-300-8m-x-25m-200-m2-290.jpg`,
+      image: `${rootBaseName}/images/supplies/supplies-polrekaw-czarny.webp`,
       color: '#ffff00',
       logs: {
         [SuppliesLogsNames.COUNTER]: {
@@ -215,7 +215,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '40 rolek',
-      image: `https://www.fuhmateo.pl/storage/sklep/produkty/158/zdjecia/folia-budowlana-typ-300-8m-x-25m-200-m2-290.jpg`,
+      image: `${rootBaseName}/images/supplies/supplies-polrekaw-czarny.webp`,
       color: '',
       logs: {
         [SuppliesLogsNames.COUNTER]: {
@@ -242,7 +242,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '10 rolek',
-      image: `https://www.fuhmateo.pl/storage/sklep/produkty/158/zdjecia/folia-budowlana-typ-300-8m-x-25m-200-m2-290.jpg`,
+      image: `${rootBaseName}/images/supplies/supplies-polrekaw-czarny.webp`,
       color: '',
       logs: {
         [SuppliesLogsNames.COUNTER]: {
@@ -269,7 +269,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '30 rolek',
-      image: `https://www.fuhmateo.pl/storage/sklep/produkty/158/zdjecia/folia-budowlana-typ-300-8m-x-25m-200-m2-290.jpg`,
+      image: `${rootBaseName}/images/supplies/supplies-polrekaw-czarny.webp`,
       color: '',
       logs: {
         [SuppliesLogsNames.COUNTER]: {
@@ -296,7 +296,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '1 kart.(x8szt.)',
-      image: `https://printandstick.eu/wp-content/uploads/2019/03/13a.jpg`,
+      image: `${rootBaseName}/images/supplies/supplies-etykieta-biala.webp`,
       color: 'blue',
       counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
@@ -333,7 +333,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '1 kart.(x8szt.)',
-      image: `https://etykietolandia.pl/cdn/shop/files/Zebraetykietytermiczneczerwone.webp?v=1707654818&width=1200`,
+      image: `${rootBaseName}/images/supplies/supplies-etykieta-czerwona.webp`,
       color: '',
       counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
@@ -370,7 +370,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '1 kart.(x8szt.)',
-      image: `https://m.media-amazon.com/images/I/61g+1k4s2HL._AC_UF1000,1000_QL80_.jpg`,
+      image: `${rootBaseName}/images/supplies/supplies-etykieta-niebieska.webp`,
       color: '',
       counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
@@ -407,7 +407,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '1 kart. (x8szt)',
-      image: `https://www.ilh.pl/wh/960-720/img/catalog/img/PA10Y-60-30.jpg`,
+      image: `${rootBaseName}/images/supplies/supplies-etykieta-zolta.webp`,
       color: '',
       counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
@@ -444,7 +444,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '1 kart.(x8szt.)',
-      image: `https://image.ceneostatic.pl/data/products/139404591/8b88d30f-e014-4422-97ae-070267137646_p-interlabel-etykiety-ttr-60x40-zielona.jpg`,
+      image: `${rootBaseName}/images/supplies/supplies-etykieta-zielona.webp`,
       color: '',
       counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
@@ -481,7 +481,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '1 kart.(x8szt.)',
-      image: `https://a.allegroimg.com/s1440/118df6/d8edf5d944d2a82b41feaf8ef6b9/ETYKIETY-TERMICZNE-BIALE-50x30-mm-1000szt`,
+      image: `${rootBaseName}/images/supplies/supplies-etykieta-biala-1.webp`,
       color: 'blue',
       counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
@@ -518,7 +518,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '10 kart.',
-      image: `https://budemi.pl/1146-medium_default/gwozdzie-budowlane-paczka-5kg-rozne-rozmiary.jpg`,
+      image: `${rootBaseName}/images/supplies/supplies-gwozdzie.webp`,
       color: '',
       logs: {
         [SuppliesLogsNames.COUNTER]: {
@@ -545,7 +545,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '',
-      image: `https://neopak.pl/dane/source/9/9cf2af4a81be4dc985f0e6928f806fdb.jpg`,
+      image: `${rootBaseName}/images/supplies/supplies-tasma-z-nadrukiem.webp`,
       color: '',
       logs: {
         [SuppliesLogsNames.COUNTER]: {
@@ -572,7 +572,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '5 kart.(x36szt.)',
-      image: `https://neopak.pl/dane/source/9/9cf2af4a81be4dc985f0e6928f806fdb.jpg`,
+      image: `${rootBaseName}/images/supplies/supplies-tasma-z-nadrukiem.webp`,
       color: '',
       counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
@@ -609,7 +609,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '3 kart.(x10)',
-      image: `https://techmarkety-sklep.pl/10390-large_default/p17-tasma-izolacyjna-biala-zbrojona-50mbx50mm.jpg`,
+      image: `${rootBaseName}/images/supplies/supplies-tasma-biala.webp`,
       color: '',
       counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
@@ -646,7 +646,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '5 kart.(x36szt.)',
-      image: `https://a.allegroimg.com/s512/11a1e8/a69188014166a76803f8f0c52ec2/Kalka-tasma-TTR-80mm-x-300m-woskowa-Liczba-etykiet-na-rolce-arkuszu-1`,
+      image: `${rootBaseName}/images/supplies/supplies-kalka-do-drukarki.webp`,
       color: '',
       counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
@@ -683,7 +683,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '5 kart.(x10szt.)',
-      image: `https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftytuurzadzisz.pl%2Fwp-content%2Fuploads%2F2020%2F07%2Fstyropian.jpg&f=1&nofb=1&ipt=42883ea9f7497c40192b59cdcc39dedf1d1dbd6939f9896e272f7a867f00cee3&ipo=images`,
+      image: `${rootBaseName}/images/supplies/supplies-styropian-bialy.webp`,
       color: '',
       counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
@@ -720,7 +720,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '50 paczek',
-      image: `https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftytuurzadzisz.pl%2Fwp-content%2Fuploads%2F2020%2F07%2Fstyropian.jpg&f=1&nofb=1&ipt=42883ea9f7497c40192b59cdcc39dedf1d1dbd6939f9896e272f7a867f00cee3&ipo=images`,
+      image: `${rootBaseName}/images/supplies/supplies-styropian-bialy.webp`,
       color: '',
       logs: {
         [SuppliesLogsNames.COUNTER]: {
@@ -747,7 +747,7 @@ const suppliesData: ISuppliesPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '1 kart.(30x500ml)',
-      image: `https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fa.allegroimg.com%2Foriginal%2F1e4fc8%2F117044b9494480f17c2ed6d6fe80&f=1&nofb=1&ipt=ac9c7cc44df3eb8b30c699592bf1c1f03c2ef52611a2e8f013220c70a96023c5&ipo=images`,
+      image: `${rootBaseName}/images/supplies/supplies-spray-do-hamulcow-bremen-forch-eco.webp`,
       color: '',
       counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
