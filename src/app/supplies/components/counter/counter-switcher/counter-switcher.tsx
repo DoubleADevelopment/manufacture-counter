@@ -8,12 +8,12 @@ import { ErrorsText, NotificationType } from '../../../../../variables';
 //styles
 import style from './counter-switcher.module.scss';
 
-interface ICounterSwitcheProps {
+interface ICounterSwitcherProps {
   counters: string[];
   UNID: string;
 }
 
-const CounterSwitcher = ({ counters, UNID }: ICounterSwitcheProps): JSX.Element => {
+const CounterSwitcher = ({ counters, UNID }: ICounterSwitcherProps): JSX.Element => {
   const [currentCounter, setCurrentCounter] = useState<string>(counters[0]);
 
   const getCurrentCounterComponent = (): JSX.Element => {

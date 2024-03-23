@@ -37,8 +37,8 @@ const suppliesData: ISuppliesPackage = {
           name: 'szt',
         },
         [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
-          settingValue: 500,
-          name: 'Waga kartonu / KG',
+          settingValue: 5000,
+          name: 'Sztuk w kartonie',
         },
       },
       additionalResources: [],
@@ -298,10 +298,16 @@ const suppliesData: ISuppliesPackage = {
       additionalInfo: '1 kart.(x8szt.)',
       image: `https://printandstick.eu/wp-content/uploads/2019/03/13a.jpg`,
       color: 'blue',
+      counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
         [SuppliesLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
+        },
+        [SuppliesLogsNames.CARDBOARD]: {
+          log: [],
+          name: 'Kartony',
           lastChange: null,
         },
       },
@@ -309,6 +315,10 @@ const suppliesData: ISuppliesPackage = {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
           settingValue: 1,
           name: 'szt',
+        },
+        [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
+          settingValue: 8,
+          name: 'Sztuk w kartonie',
         },
       },
       additionalResources: [],
@@ -325,10 +335,16 @@ const suppliesData: ISuppliesPackage = {
       additionalInfo: '1 kart.(x8szt.)',
       image: `https://printandstick.eu/wp-content/uploads/2019/03/13a.jpg`,
       color: '',
+      counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
         [SuppliesLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
+        },
+        [SuppliesLogsNames.CARDBOARD]: {
+          log: [],
+          name: 'Kartony',
           lastChange: null,
         },
       },
@@ -336,6 +352,10 @@ const suppliesData: ISuppliesPackage = {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
           settingValue: 1,
           name: 'szt',
+        },
+        [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
+          settingValue: 8,
+          name: 'Sztuk w kartonie',
         },
       },
       additionalResources: [],
@@ -352,10 +372,16 @@ const suppliesData: ISuppliesPackage = {
       additionalInfo: '1 kart.(x8szt.)',
       image: `https://printandstick.eu/wp-content/uploads/2019/03/13a.jpg`,
       color: '',
+      counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
         [SuppliesLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
+        },
+        [SuppliesLogsNames.CARDBOARD]: {
+          log: [],
+          name: 'Kartony',
           lastChange: null,
         },
       },
@@ -363,6 +389,10 @@ const suppliesData: ISuppliesPackage = {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
           settingValue: 1,
           name: 'szt',
+        },
+        [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
+          settingValue: 8,
+          name: 'Sztuk w kartonie',
         },
       },
       additionalResources: [],
@@ -379,10 +409,16 @@ const suppliesData: ISuppliesPackage = {
       additionalInfo: '1 kart. (x8szt)',
       image: `https://printandstick.eu/wp-content/uploads/2019/03/13a.jpg`,
       color: '',
+      counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
         [SuppliesLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
+        },
+        [SuppliesLogsNames.CARDBOARD]: {
+          log: [],
+          name: 'Kartony',
           lastChange: null,
         },
       },
@@ -390,6 +426,10 @@ const suppliesData: ISuppliesPackage = {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
           settingValue: 1,
           name: 'szt',
+        },
+        [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
+          settingValue: 8,
+          name: 'Sztuk w kartonie',
         },
       },
       additionalResources: [],
@@ -406,10 +446,16 @@ const suppliesData: ISuppliesPackage = {
       additionalInfo: '1 kart.(x8szt.)',
       image: `https://printandstick.eu/wp-content/uploads/2019/03/13a.jpg`,
       color: '',
+      counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
         [SuppliesLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
+        },
+        [SuppliesLogsNames.CARDBOARD]: {
+          log: [],
+          name: 'Kartony',
           lastChange: null,
         },
       },
@@ -417,6 +463,10 @@ const suppliesData: ISuppliesPackage = {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
           settingValue: 1,
           name: 'szt',
+        },
+        [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
+          settingValue: 8,
+          name: 'Sztuk w kartonie',
         },
       },
       additionalResources: [],
@@ -433,10 +483,16 @@ const suppliesData: ISuppliesPackage = {
       additionalInfo: '1 kart.(x8szt.)',
       image: `https://printandstick.eu/wp-content/uploads/2019/03/13a.jpg`,
       color: 'blue',
+      counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
         [SuppliesLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
+        },
+        [SuppliesLogsNames.CARDBOARD]: {
+          log: [],
+          name: 'Kartony',
           lastChange: null,
         },
       },
@@ -444,6 +500,10 @@ const suppliesData: ISuppliesPackage = {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
           settingValue: 1,
           name: 'szt',
+        },
+        [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
+          settingValue: 8,
+          name: 'Sztuk w kartonie',
         },
       },
       additionalResources: [],
@@ -514,10 +574,16 @@ const suppliesData: ISuppliesPackage = {
       additionalInfo: '5 kart.(x36szt.)',
       image: `https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Firge-system.pl%2F77-large_default%2Fta%25C5%259Bma-pakowa-48-mm-60yd-muroll-opp-325-br%25C4%2585z.jpg&f=1&nofb=1&ipt=4a37bd7deaf610b8099d4c57e311d8797cfab64bf333f79893990b735e8f1ca2&ipo=images`,
       color: '',
+      counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
         [SuppliesLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
+        },
+        [SuppliesLogsNames.CARDBOARD]: {
+          log: [],
+          name: 'Kartony',
           lastChange: null,
         },
       },
@@ -525,6 +591,10 @@ const suppliesData: ISuppliesPackage = {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
           settingValue: 1,
           name: 'szt',
+        },
+        [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
+          settingValue: 36,
+          name: 'Sztuk w kartonie',
         },
       },
       additionalResources: [],
@@ -541,10 +611,16 @@ const suppliesData: ISuppliesPackage = {
       additionalInfo: '3 kart.(x10)',
       image: `https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Firge-system.pl%2F77-large_default%2Fta%25C5%259Bma-pakowa-48-mm-60yd-muroll-opp-325-br%25C4%2585z.jpg&f=1&nofb=1&ipt=4a37bd7deaf610b8099d4c57e311d8797cfab64bf333f79893990b735e8f1ca2&ipo=images`,
       color: '',
+      counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
         [SuppliesLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
+        },
+        [SuppliesLogsNames.CARDBOARD]: {
+          log: [],
+          name: 'Kartony',
           lastChange: null,
         },
       },
@@ -552,6 +628,10 @@ const suppliesData: ISuppliesPackage = {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
           settingValue: 1,
           name: 'szt',
+        },
+        [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
+          settingValue: 10,
+          name: 'Sztuk w kartonie',
         },
       },
       additionalResources: [],
@@ -568,10 +648,16 @@ const suppliesData: ISuppliesPackage = {
       additionalInfo: '5 kart.(x36szt.)',
       image: `https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.sunpack.pl%2F_data%2Fsection-1%2F154.jpg&f=1&nofb=1&ipt=3df6ab76091bc9f57d0cb8e10ff4b191dbeeb28114436720146b7efad2d0d989&ipo=images`,
       color: '',
+      counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
         [SuppliesLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
+        },
+        [SuppliesLogsNames.CARDBOARD]: {
+          log: [],
+          name: 'Kartony',
           lastChange: null,
         },
       },
@@ -579,6 +665,10 @@ const suppliesData: ISuppliesPackage = {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
           settingValue: 1,
           name: 'szt',
+        },
+        [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
+          settingValue: 36,
+          name: 'Sztuk w kartonie',
         },
       },
       additionalResources: [],
@@ -595,10 +685,16 @@ const suppliesData: ISuppliesPackage = {
       additionalInfo: '5 kart.(x10szt.)',
       image: `https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftytuurzadzisz.pl%2Fwp-content%2Fuploads%2F2020%2F07%2Fstyropian.jpg&f=1&nofb=1&ipt=42883ea9f7497c40192b59cdcc39dedf1d1dbd6939f9896e272f7a867f00cee3&ipo=images`,
       color: '',
+      counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
         [SuppliesLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
+        },
+        [SuppliesLogsNames.CARDBOARD]: {
+          log: [],
+          name: 'Kartony',
           lastChange: null,
         },
       },
@@ -606,6 +702,10 @@ const suppliesData: ISuppliesPackage = {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
           settingValue: 1,
           name: 'szt',
+        },
+        [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
+          settingValue: 10,
+          name: 'Sztuk w kartonie',
         },
       },
       additionalResources: [],
@@ -632,12 +732,12 @@ const suppliesData: ISuppliesPackage = {
       settings: {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
           settingValue: 1,
-          name: 'szt',
+          name: 'paczka',
         },
       },
       additionalResources: [],
       packagingInfo: '',
-      unitsOfMeasurement: 'szt',
+      unitsOfMeasurement: 'paczka',
     },
     {
       UNID: 'supplies-rst012',
@@ -649,10 +749,16 @@ const suppliesData: ISuppliesPackage = {
       additionalInfo: '1 kart.(30x500ml)',
       image: `https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fa.allegroimg.com%2Foriginal%2F1e4fc8%2F117044b9494480f17c2ed6d6fe80&f=1&nofb=1&ipt=ac9c7cc44df3eb8b30c699592bf1c1f03c2ef52611a2e8f013220c70a96023c5&ipo=images`,
       color: '',
+      counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
       logs: {
         [SuppliesLogsNames.COUNTER]: {
           log: [],
           name: 'Licznik',
+          lastChange: null,
+        },
+        [SuppliesLogsNames.CARDBOARD]: {
+          log: [],
+          name: 'Kartony',
           lastChange: null,
         },
       },
@@ -660,6 +766,10 @@ const suppliesData: ISuppliesPackage = {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
           settingValue: 1,
           name: 'szt',
+        },
+        [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
+          settingValue: 30,
+          name: 'Sztuk w kartonie',
         },
       },
       additionalResources: [],
