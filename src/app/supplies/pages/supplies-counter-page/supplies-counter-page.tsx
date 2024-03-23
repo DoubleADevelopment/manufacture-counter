@@ -1,7 +1,7 @@
 //layouts
 import { CounterPageLayout } from '../../../../layouts';
-import { CountableItemInfo } from '../../components';
 //components
+import { CountableItemInfo, Counter } from '../../components';
 //variables
 import { SuppliesAppRouting } from '../../variables';
 //style
@@ -12,6 +12,7 @@ const SuppliesCounterPage = (): JSX.Element => {
     <CounterPageLayout backLink={SuppliesAppRouting.ROOT.path} headerTitle={'licznik komponentów'}>
       <main className={style['counter-page']}>
         <CountableItemInfo />
+        <Counter />
       </main>
     </CounterPageLayout>
   );
