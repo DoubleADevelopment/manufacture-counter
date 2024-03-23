@@ -7,10 +7,12 @@ import { useAppSelector } from '../../hooks/hooks';
 import { SelectorGetExtrusionChemistry } from '../../app/chemistry/store/slectors/selectors';
 import { SelectorGetGums } from '../../app/gums/store/slectors/selectors';
 import { SelectorGetPigments } from '../../app/pigments/store/slectors/selectors';
+import { SelectorGetSupplies } from '../../app/supplies/store/slectors/selectors';
 //app services
 import chemistryAdapterService from '../../app/chemistry/services/chemistry-adapter.service';
 import gumsAdapterService from '../../app/gums/services/gums-adapter.service';
 import pigmentsAdapterService from '../../app/pigments/services/pigments-adapter.service';
+import suppliesAdapterService from '../../app/supplies/services/supplies-adapter.service';
 //variables
 import { AppRouting } from '../../variables';
 //styles
@@ -26,6 +28,9 @@ const ComponentOverviewPage = (): JSX.Element => {
   const pigmentsData = pigmentsAdapterService.adaptItemsDataToDisplayList(
     useAppSelector(SelectorGetPigments()),
   );
+  const suppliesData = suppliesAdapterService.adaptItemsDataToDisplayList(
+    useAppSelector(SelectorGetSupplies()),
+  );
 
   console.log(chemistryData, gumsData, pigmentsData);
 
@@ -35,6 +40,7 @@ const ComponentOverviewPage = (): JSX.Element => {
         <ComponentOverview data={chemistryData} title="Chemia" />
         <ComponentOverview data={gumsData} title="Granulaty" />
         <ComponentOverview data={pigmentsData} title="Pigmenty" />
+        <ComponentOverview data={suppliesData} title="Komponenty" />
       </main>
     </PageWithMenuLayout>
   );
