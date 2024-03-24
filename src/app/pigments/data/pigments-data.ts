@@ -16,7 +16,7 @@ const pigmentsData: IPigmentsPackage = {
       systemCode: '799549',
       description: '',
       additionalInfo: '',
-      image: `${rootBaseName}/images/pigments/pigment-braz.jpg`,
+      image: `${rootBaseName}/images/pigments/pigment-braz.webp`,
       color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
@@ -66,7 +66,7 @@ const pigmentsData: IPigmentsPackage = {
       systemCode: '799531',
       description: '',
       additionalInfo: '',
-      image: `${rootBaseName}/images/pigments/pigment-antracyt.jpg`,
+      image: `${rootBaseName}/images/pigments/pigment-antracyt.webp`,
       color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
@@ -116,7 +116,7 @@ const pigmentsData: IPigmentsPackage = {
       systemCode: '799602',
       description: '',
       additionalInfo: '',
-      image: `${rootBaseName}/images/pigments/pigment-cream.jpg`,
+      image: `${rootBaseName}/images/pigments/pigment-cream.webp`,
       color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
@@ -166,7 +166,7 @@ const pigmentsData: IPigmentsPackage = {
       systemCode: '799547',
       description: '',
       additionalInfo: '',
-      image: `${rootBaseName}/images/pigments/pigment-ochra.jpg`,
+      image: `${rootBaseName}/images/pigments/pigment-ochra.webp`,
       color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
@@ -216,7 +216,7 @@ const pigmentsData: IPigmentsPackage = {
       systemCode: '799290',
       description: '',
       additionalInfo: '',
-      image: `${rootBaseName}/images/pigments/pigment-braz.jpg`,
+      image: `${rootBaseName}/images/pigments/pigment-braz.webp`,
       color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
@@ -266,7 +266,7 @@ const pigmentsData: IPigmentsPackage = {
       systemCode: '799600',
       description: '',
       additionalInfo: '',
-      image: `${rootBaseName}/images/pigments/pigment-bialy.jpg`,
+      image: `${rootBaseName}/images/pigments/pigment-bialy.webp`,
       color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
@@ -316,7 +316,7 @@ const pigmentsData: IPigmentsPackage = {
       systemCode: '799805',
       description: '',
       additionalInfo: '',
-      image: `${rootBaseName}/images/pigments/pigment-zolty.jpg`,
+      image: `${rootBaseName}/images/pigments/pigment-zolty.webp`,
       color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
@@ -366,7 +366,7 @@ const pigmentsData: IPigmentsPackage = {
       systemCode: '799544',
       description: '',
       additionalInfo: '',
-      image: `${rootBaseName}/images/pigments/pigment-antracyt.jpg`,
+      image: `${rootBaseName}/images/pigments/pigment-antracyt.webp`,
       color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
@@ -416,7 +416,7 @@ const pigmentsData: IPigmentsPackage = {
       systemCode: '799291',
       description: '',
       additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka szara.jpg`,
+      image: `${rootBaseName}/images/pigments/pigment-szary.webp`,
       color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
@@ -466,7 +466,7 @@ const pigmentsData: IPigmentsPackage = {
       systemCode: '799199',
       description: '',
       additionalInfo: '',
-      image: `${rootBaseName}/images/pigments/pigment-shelblue.jpg`,
+      image: `${rootBaseName}/images/pigments/pigment-shelblue.webp`,
       color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
@@ -516,7 +516,7 @@ const pigmentsData: IPigmentsPackage = {
       systemCode: '799199',
       description: '',
       additionalInfo: '',
-      image: `${rootBaseName}/images/pigments`,
+      image: `${rootBaseName}/images/pigments/pigment-massa-wysokostabilna.webp`,
       color: '',
       logs: {
         [PigmentsLogsNames.COUNTER]: {
