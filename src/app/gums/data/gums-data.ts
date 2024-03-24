@@ -69,11 +69,11 @@ const gumsData: IGumsPackage = {
 
       settings: {
         [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
-          settingValue: 500,
+          settingValue: 250,
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 250,
           name: 'Waga gumy / KG',
         },
       },
@@ -119,7 +119,7 @@ const gumsData: IGumsPackage = {
       unitsOfMeasurement: 'kg',
     },
     {
-      UNID: 'gums-ALFA-PVC-250kg',
+      UNID: 'gums-ALFA-PVC-250kg-szara',
       amount: 0,
       manufactured: 'ALFA PVC',
       productName: 'Uszczelka szara dynamiczna do profili',
@@ -143,11 +143,11 @@ const gumsData: IGumsPackage = {
 
       settings: {
         [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
-          settingValue: 500,
+          settingValue: 250,
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 250,
           name: 'Waga gumy / KG',
         },
       },
@@ -163,7 +163,7 @@ const gumsData: IGumsPackage = {
       systemCode: '794096A',
       description: 'kolor etykiety biały',
       additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka szara.jpg`,
+      image: `${rootBaseName}/images/gums/uszczelka czarna.jpg`,
       color: '#ffff00',
       logs: {
         [GumsLogsNames.COUNTER]: {
@@ -198,7 +198,7 @@ const gumsData: IGumsPackage = {
       manufactured: 'ALFA PVC',
       productName: 'Uszczelka szara statyczna do listwy',
       systemCode: '794091',
-      description: 'kolor etykiety pomarańczowy, 550kg',
+      description: 'kolor etykiety pomarańczowy, 500kg',
       additionalInfo: '',
       image: `${rootBaseName}/images/gums/uszczelka szara.jpg`,
       color: '#d0312d',
@@ -254,11 +254,11 @@ const gumsData: IGumsPackage = {
 
       settings: {
         [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
-          settingValue: 500,
+          settingValue: 550,
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 550,
           name: 'Waga gumy / KG',
         },
       },
@@ -291,11 +291,11 @@ const gumsData: IGumsPackage = {
 
       settings: {
         [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
-          settingValue: 500,
+          settingValue: 550,
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 550,
           name: 'Waga gumy / KG',
         },
       },
