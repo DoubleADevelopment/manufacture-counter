@@ -33,7 +33,7 @@ const suppliesData: ISuppliesPackage = {
       },
       settings: {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 1,
+          settingValue: 0,
           name: 'szt',
         },
         [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
@@ -64,7 +64,7 @@ const suppliesData: ISuppliesPackage = {
       },
       settings: {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 1,
+          settingValue: 0,
           name: 'szt',
         },
       },
@@ -91,7 +91,7 @@ const suppliesData: ISuppliesPackage = {
       },
       settings: {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 1,
+          settingValue: 0,
           name: 'rolki',
         },
       },
@@ -118,7 +118,7 @@ const suppliesData: ISuppliesPackage = {
       },
       settings: {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 1,
+          settingValue: 0,
           name: 'rolki',
         },
       },
@@ -145,7 +145,7 @@ const suppliesData: ISuppliesPackage = {
       },
       settings: {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 1,
+          settingValue: 0,
           name: 'szt',
         },
       },
@@ -172,7 +172,7 @@ const suppliesData: ISuppliesPackage = {
       },
       settings: {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 1,
+          settingValue: 0,
           name: 'szt',
         },
       },
@@ -199,7 +199,7 @@ const suppliesData: ISuppliesPackage = {
       },
       settings: {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 1,
+          settingValue: 0,
           name: 'rolki',
         },
       },
@@ -226,7 +226,7 @@ const suppliesData: ISuppliesPackage = {
       },
       settings: {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 1,
+          settingValue: 0,
           name: 'rolki',
         },
       },
@@ -253,7 +253,7 @@ const suppliesData: ISuppliesPackage = {
       },
       settings: {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 1,
+          settingValue: 0,
           name: 'rolki',
         },
       },
@@ -280,7 +280,7 @@ const suppliesData: ISuppliesPackage = {
       },
       settings: {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 1,
+          settingValue: 0,
           name: 'rolki',
         },
       },
@@ -313,7 +313,7 @@ const suppliesData: ISuppliesPackage = {
       },
       settings: {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 1,
+          settingValue: 0,
           name: 'szt',
         },
         [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
@@ -350,7 +350,7 @@ const suppliesData: ISuppliesPackage = {
       },
       settings: {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 1,
+          settingValue: 0,
           name: 'szt',
         },
         [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
@@ -387,7 +387,7 @@ const suppliesData: ISuppliesPackage = {
       },
       settings: {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 1,
+          settingValue: 0,
           name: 'szt',
         },
         [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
@@ -424,7 +424,7 @@ const suppliesData: ISuppliesPackage = {
       },
       settings: {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 1,
+          settingValue: 0,
           name: 'szt',
         },
         [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
@@ -461,7 +461,7 @@ const suppliesData: ISuppliesPackage = {
       },
       settings: {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 1,
+          settingValue: 0,
           name: 'szt',
         },
         [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
@@ -498,7 +498,7 @@ const suppliesData: ISuppliesPackage = {
       },
       settings: {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 1,
+          settingValue: 0,
           name: 'szt',
         },
         [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
@@ -529,7 +529,7 @@ const suppliesData: ISuppliesPackage = {
       },
       settings: {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 1,
+          settingValue: 0,
           name: 'szt',
         },
       },
@@ -556,7 +556,7 @@ const suppliesData: ISuppliesPackage = {
       },
       settings: {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 1,
+          settingValue: 0,
           name: 'szt',
         },
       },
@@ -589,7 +589,7 @@ const suppliesData: ISuppliesPackage = {
       },
       settings: {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 1,
+          settingValue: 0,
           name: 'szt',
         },
         [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
@@ -626,7 +626,7 @@ const suppliesData: ISuppliesPackage = {
       },
       settings: {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 1,
+          settingValue: 0,
           name: 'szt',
         },
         [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
@@ -663,7 +663,7 @@ const suppliesData: ISuppliesPackage = {
       },
       settings: {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 1,
+          settingValue: 0,
           name: 'szt',
         },
         [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
@@ -700,7 +700,7 @@ const suppliesData: ISuppliesPackage = {
       },
       settings: {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 1,
+          settingValue: 0,
           name: 'szt',
         },
         [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
@@ -731,7 +731,7 @@ const suppliesData: ISuppliesPackage = {
       },
       settings: {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 1,
+          settingValue: 0,
           name: 'paczka',
         },
       },
@@ -764,7 +764,7 @@ const suppliesData: ISuppliesPackage = {
       },
       settings: {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 1,
+          settingValue: 0,
           name: 'szt',
         },
         [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
@@ -795,7 +795,7 @@ const suppliesData: ISuppliesPackage = {
       },
       settings: {
         [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 1,
+          settingValue: 0,
           name: 'szt',
         },
       },

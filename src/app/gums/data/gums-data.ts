@@ -16,7 +16,7 @@ const gumsData: IGumsPackage = {
       systemCode: '794125',
       description: 'kolor etykiety niebieski, 500kg',
       additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka czarna.jpg`,
+      image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#2181FC',
       logs: {
         [GumsLogsNames.COUNTER]: {
@@ -36,7 +36,7 @@ const gumsData: IGumsPackage = {
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga gumy / KG',
         },
       },
@@ -52,7 +52,7 @@ const gumsData: IGumsPackage = {
       systemCode: '',
       description: 'kolor etykiety niebieski, 250kg',
       additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka czarna.jpg`,
+      image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#2181FC',
       logs: {
         [GumsLogsNames.COUNTER]: {
@@ -69,11 +69,11 @@ const gumsData: IGumsPackage = {
 
       settings: {
         [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
-          settingValue: 500,
+          settingValue: 250,
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga gumy / KG',
         },
       },
@@ -89,7 +89,7 @@ const gumsData: IGumsPackage = {
       systemCode: '794126',
       description: 'kolor etykiety zielony, 500kg',
       additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka szara.jpg`,
+      image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '#32BD43',
       logs: {
         [GumsLogsNames.COUNTER]: {
@@ -110,7 +110,7 @@ const gumsData: IGumsPackage = {
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga gumy / KG',
         },
       },
@@ -119,14 +119,14 @@ const gumsData: IGumsPackage = {
       unitsOfMeasurement: 'kg',
     },
     {
-      UNID: 'gums-ALFA-PVC-250kg',
+      UNID: 'gums-ALFA-PVC-250kg-szara',
       amount: 0,
       manufactured: 'ALFA PVC',
       productName: 'Uszczelka szara dynamiczna do profili',
       systemCode: '',
       description: 'kolor etykiety zielony, 250kg',
       additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka szara.jpg`,
+      image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '#32BD43',
       logs: {
         [GumsLogsNames.COUNTER]: {
@@ -143,11 +143,11 @@ const gumsData: IGumsPackage = {
 
       settings: {
         [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
-          settingValue: 500,
+          settingValue: 250,
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga gumy / KG',
         },
       },
@@ -163,7 +163,7 @@ const gumsData: IGumsPackage = {
       systemCode: '794096A',
       description: 'kolor etykiety biały',
       additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka szara.jpg`,
+      image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#ffff00',
       logs: {
         [GumsLogsNames.COUNTER]: {
@@ -184,7 +184,7 @@ const gumsData: IGumsPackage = {
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga gumy / KG',
         },
       },
@@ -198,9 +198,9 @@ const gumsData: IGumsPackage = {
       manufactured: 'ALFA PVC',
       productName: 'Uszczelka szara statyczna do listwy',
       systemCode: '794091',
-      description: 'kolor etykiety pomarańczowy, 550kg',
+      description: 'kolor etykiety pomarańczowy, 500kg',
       additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka szara.jpg`,
+      image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '#d0312d',
       logs: {
         [GumsLogsNames.COUNTER]: {
@@ -221,7 +221,7 @@ const gumsData: IGumsPackage = {
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga gumy / KG',
         },
       },
@@ -237,7 +237,7 @@ const gumsData: IGumsPackage = {
       systemCode: '794096A',
       description: 'kolor etykiety biały, 550kg',
       additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka czarna.jpg`,
+      image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#ffff00',
       logs: {
         [GumsLogsNames.COUNTER]: {
@@ -254,11 +254,11 @@ const gumsData: IGumsPackage = {
 
       settings: {
         [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
-          settingValue: 500,
+          settingValue: 550,
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga gumy / KG',
         },
       },
@@ -274,7 +274,7 @@ const gumsData: IGumsPackage = {
       systemCode: '794091',
       description: 'kolor etykiety pomarańczowy',
       additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka czarna.jpg`,
+      image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#d0312d',
       logs: {
         [GumsLogsNames.COUNTER]: {
@@ -291,11 +291,11 @@ const gumsData: IGumsPackage = {
 
       settings: {
         [GumsSettingsNames.BASE_CARDBOARD_VALUE]: {
-          settingValue: 500,
+          settingValue: 550,
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga gumy / KG',
         },
       },
@@ -311,7 +311,7 @@ const gumsData: IGumsPackage = {
       systemCode: '794125',
       description: 'kolor etykiety niebieski',
       additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka czarna.jpg`,
+      image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#004DFF',
       logs: {
         [GumsLogsNames.COUNTER]: {
@@ -332,7 +332,7 @@ const gumsData: IGumsPackage = {
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga gumy / KG',
         },
       },
@@ -348,7 +348,7 @@ const gumsData: IGumsPackage = {
       systemCode: '794126',
       description: 'kolor etykiety zielony',
       additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka szara.jpg`,
+      image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '#87FF00',
       logs: {
         [GumsLogsNames.COUNTER]: {
@@ -369,7 +369,7 @@ const gumsData: IGumsPackage = {
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga gumy / KG',
         },
       },
@@ -385,7 +385,7 @@ const gumsData: IGumsPackage = {
       systemCode: '794196',
       description: 'kolor etykiety biały',
       additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka czarna.jpg`,
+      image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#ffffff',
       logs: {
         [GumsLogsNames.COUNTER]: {
@@ -406,7 +406,7 @@ const gumsData: IGumsPackage = {
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga gumy / KG',
         },
       },
@@ -422,7 +422,7 @@ const gumsData: IGumsPackage = {
       systemCode: '794142',
       description: 'kolor etykiety czerwony',
       additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka szara.jpg`,
+      image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '#FFAA00',
       logs: {
         [GumsLogsNames.COUNTER]: {
@@ -443,7 +443,7 @@ const gumsData: IGumsPackage = {
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga gumy / KG',
         },
       },
@@ -459,7 +459,7 @@ const gumsData: IGumsPackage = {
       systemCode: '794124',
       description: '',
       additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka szara.jpg`,
+      image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '',
       logs: {
         [GumsLogsNames.COUNTER]: {
@@ -480,7 +480,7 @@ const gumsData: IGumsPackage = {
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga gumy / KG',
         },
       },
