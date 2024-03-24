@@ -16,7 +16,7 @@ const gumsData: IGumsPackage = {
       systemCode: '794125',
       description: 'kolor etykiety niebieski, 500kg',
       additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka czarna.jpg`,
+      image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#2181FC',
       logs: {
         [GumsLogsNames.COUNTER]: {
@@ -52,7 +52,7 @@ const gumsData: IGumsPackage = {
       systemCode: '',
       description: 'kolor etykiety niebieski, 250kg',
       additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka czarna.jpg`,
+      image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#2181FC',
       logs: {
         [GumsLogsNames.COUNTER]: {
@@ -89,7 +89,7 @@ const gumsData: IGumsPackage = {
       systemCode: '794126',
       description: 'kolor etykiety zielony, 500kg',
       additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka szara.jpg`,
+      image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '#32BD43',
       logs: {
         [GumsLogsNames.COUNTER]: {
@@ -126,7 +126,7 @@ const gumsData: IGumsPackage = {
       systemCode: '',
       description: 'kolor etykiety zielony, 250kg',
       additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka szara.jpg`,
+      image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '#32BD43',
       logs: {
         [GumsLogsNames.COUNTER]: {
@@ -163,7 +163,7 @@ const gumsData: IGumsPackage = {
       systemCode: '794096A',
       description: 'kolor etykiety biały',
       additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka czarna.jpg`,
+      image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#ffff00',
       logs: {
         [GumsLogsNames.COUNTER]: {
@@ -200,7 +200,7 @@ const gumsData: IGumsPackage = {
       systemCode: '794091',
       description: 'kolor etykiety pomarańczowy, 500kg',
       additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka szara.jpg`,
+      image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '#d0312d',
       logs: {
         [GumsLogsNames.COUNTER]: {
@@ -237,7 +237,7 @@ const gumsData: IGumsPackage = {
       systemCode: '794096A',
       description: 'kolor etykiety biały, 550kg',
       additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka czarna.jpg`,
+      image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#ffff00',
       logs: {
         [GumsLogsNames.COUNTER]: {
@@ -274,7 +274,7 @@ const gumsData: IGumsPackage = {
       systemCode: '794091',
       description: 'kolor etykiety pomarańczowy',
       additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka czarna.jpg`,
+      image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#d0312d',
       logs: {
         [GumsLogsNames.COUNTER]: {
@@ -311,7 +311,7 @@ const gumsData: IGumsPackage = {
       systemCode: '794125',
       description: 'kolor etykiety niebieski',
       additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka czarna.jpg`,
+      image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#004DFF',
       logs: {
         [GumsLogsNames.COUNTER]: {
@@ -348,7 +348,7 @@ const gumsData: IGumsPackage = {
       systemCode: '794126',
       description: 'kolor etykiety zielony',
       additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka szara.jpg`,
+      image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '#87FF00',
       logs: {
         [GumsLogsNames.COUNTER]: {
@@ -385,7 +385,7 @@ const gumsData: IGumsPackage = {
       systemCode: '794196',
       description: 'kolor etykiety biały',
       additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka czarna.jpg`,
+      image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#ffffff',
       logs: {
         [GumsLogsNames.COUNTER]: {
@@ -422,7 +422,7 @@ const gumsData: IGumsPackage = {
       systemCode: '794142',
       description: 'kolor etykiety czerwony',
       additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka szara.jpg`,
+      image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '#FFAA00',
       logs: {
         [GumsLogsNames.COUNTER]: {
@@ -459,7 +459,7 @@ const gumsData: IGumsPackage = {
       systemCode: '794124',
       description: '',
       additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka szara.jpg`,
+      image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '',
       logs: {
         [GumsLogsNames.COUNTER]: {
