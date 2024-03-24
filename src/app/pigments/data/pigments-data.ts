@@ -42,7 +42,7 @@ const pigmentsData: IPigmentsPackage = {
           name: 'Waga jednego worka / KG',
         },
         [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga kontenera / KG',
         },
         [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
@@ -50,7 +50,7 @@ const pigmentsData: IPigmentsPackage = {
           name: 'Waga jednego kontenera / KG',
         },
         [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga pigmentu / KG',
         },
       },
@@ -92,7 +92,7 @@ const pigmentsData: IPigmentsPackage = {
           name: 'Waga jednego worka / KG',
         },
         [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga kontenera / KG',
         },
         [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
@@ -100,7 +100,7 @@ const pigmentsData: IPigmentsPackage = {
           name: 'Waga jednego kontenera / KG',
         },
         [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga pigmentu / KG',
         },
       },
@@ -142,7 +142,7 @@ const pigmentsData: IPigmentsPackage = {
           name: 'Waga jednego worka / KG',
         },
         [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga kontenera / KG',
         },
         [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
@@ -150,7 +150,7 @@ const pigmentsData: IPigmentsPackage = {
           name: 'Waga jednego kontenera / KG',
         },
         [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga pigmentu / KG',
         },
       },
@@ -192,7 +192,7 @@ const pigmentsData: IPigmentsPackage = {
           name: 'Waga jednego worka / KG',
         },
         [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga kontenera / KG',
         },
         [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
@@ -200,7 +200,7 @@ const pigmentsData: IPigmentsPackage = {
           name: 'Waga jednego kontenera / KG',
         },
         [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga pigmentu / KG',
         },
       },
@@ -242,7 +242,7 @@ const pigmentsData: IPigmentsPackage = {
           name: 'Waga jednego worka / KG',
         },
         [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga kontenera / KG',
         },
         [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
@@ -250,7 +250,7 @@ const pigmentsData: IPigmentsPackage = {
           name: 'Waga jednego kontenera / KG',
         },
         [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga pigmentu / KG',
         },
       },
@@ -292,7 +292,7 @@ const pigmentsData: IPigmentsPackage = {
           name: 'Waga jednego worka / KG',
         },
         [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga kontenera / KG',
         },
         [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
@@ -300,7 +300,7 @@ const pigmentsData: IPigmentsPackage = {
           name: 'Waga jednego kontenera / KG',
         },
         [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga pigmentu / KG',
         },
       },
@@ -342,7 +342,7 @@ const pigmentsData: IPigmentsPackage = {
           name: 'Waga jednego worka / KG',
         },
         [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga kontenera / KG',
         },
         [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
@@ -350,7 +350,7 @@ const pigmentsData: IPigmentsPackage = {
           name: 'Waga jednego kontenera / KG',
         },
         [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga pigmentu / KG',
         },
       },
@@ -392,7 +392,7 @@ const pigmentsData: IPigmentsPackage = {
           name: 'Waga jednego worka / KG',
         },
         [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga kontenera / KG',
         },
         [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
@@ -400,7 +400,7 @@ const pigmentsData: IPigmentsPackage = {
           name: 'Waga jednego kontenera / KG',
         },
         [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga pigmentu / KG',
         },
       },
@@ -414,6 +414,56 @@ const pigmentsData: IPigmentsPackage = {
       manufactured: 'MASTERTEC',
       productName: 'Pigment Light  Grey  -M1700345',
       systemCode: '799291',
+      description: '',
+      additionalInfo: '',
+      image: `${rootBaseName}/images/gums/uszczelka szara.jpg`,
+      color: '',
+      logs: {
+        [PigmentsLogsNames.COUNTER]: {
+          log: [],
+          name: 'Licznik',
+          lastChange: null,
+        },
+        [PigmentsLogsNames.CONTAINER]: {
+          log: [],
+          name: 'Kontenery',
+          lastChange: null,
+        },
+        [PigmentsLogsNames.BAG]: {
+          log: [],
+          name: 'Worki',
+          lastChange: null,
+        },
+      },
+
+      settings: {
+        [PigmentsSettingsNames.BASE_BAG_VALUE]: {
+          settingValue: 25,
+          name: 'Waga jednego worka / KG',
+        },
+        [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
+          settingValue: 0,
+          name: 'Waga kontenera / KG',
+        },
+        [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
+          settingValue: 77,
+          name: 'Waga jednego kontenera / KG',
+        },
+        [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 0,
+          name: 'Waga pigmentu / KG',
+        },
+      },
+      additionalResources: [],
+      packagingInfo: 'karton',
+      unitsOfMeasurement: 'kg',
+    },
+    {
+      UNID: 'pigment-INEOS/Ekomer-799199',
+      amount: 0,
+      manufactured: 'INEOS/Ekomer',
+      productName: 'Masa wysokostabilna- Evicom granulat ACF400/5hellblau 5154 ',
+      systemCode: '799199',
       description: '',
       additionalInfo: '',
       image: `${rootBaseName}/images/pigments/pigment-shelblue.jpg`,
@@ -442,7 +492,7 @@ const pigmentsData: IPigmentsPackage = {
           name: 'Waga jednego worka / KG',
         },
         [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga kontenera / KG',
         },
         [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
@@ -450,7 +500,57 @@ const pigmentsData: IPigmentsPackage = {
           name: 'Waga jednego kontenera / KG',
         },
         [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
+          name: 'Waga pigmentu / KG',
+        },
+      },
+      additionalResources: [],
+      packagingInfo: 'karton',
+      unitsOfMeasurement: 'kg',
+    },
+    {
+      UNID: 'pigment-Colorstab-799199',
+      amount: 0,
+      manufactured: 'Colorstab',
+      productName: 'Masa wysokostabilna CMX/1',
+      systemCode: '799199',
+      description: '',
+      additionalInfo: '',
+      image: `${rootBaseName}/images/pigments`,
+      color: '',
+      logs: {
+        [PigmentsLogsNames.COUNTER]: {
+          log: [],
+          name: 'Licznik',
+          lastChange: null,
+        },
+        [PigmentsLogsNames.CONTAINER]: {
+          log: [],
+          name: 'Kontenery',
+          lastChange: null,
+        },
+        [PigmentsLogsNames.BAG]: {
+          log: [],
+          name: 'Worki',
+          lastChange: null,
+        },
+      },
+
+      settings: {
+        [PigmentsSettingsNames.BASE_BAG_VALUE]: {
+          settingValue: 20,
+          name: 'Waga jednego worka / KG',
+        },
+        [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
+          settingValue: 0,
+          name: 'Waga kontenera / KG',
+        },
+        [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
+          settingValue: 77,
+          name: 'Waga jednego kontenera / KG',
+        },
+        [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
+          settingValue: 0,
           name: 'Waga pigmentu / KG',
         },
       },
