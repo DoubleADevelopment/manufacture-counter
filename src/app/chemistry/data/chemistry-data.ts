@@ -28,10 +28,9 @@ const chemistryData: ChemistryPackagesListType = [
             lastChange: null,
           },
         },
-
         settings: {
           [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
-            settingValue: 1,
+            settingValue: 0,
             name: 'string',
           },
         },
@@ -57,10 +56,9 @@ const chemistryData: ChemistryPackagesListType = [
             lastChange: null,
           },
         },
-
         settings: {
           [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
-            settingValue: 1,
+            settingValue: 0,
             name: 'string',
           },
         },
@@ -86,10 +84,9 @@ const chemistryData: ChemistryPackagesListType = [
             lastChange: null,
           },
         },
-
         settings: {
           [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
-            settingValue: 1,
+            settingValue: 0,
             name: 'string',
           },
         },
@@ -116,10 +113,9 @@ const chemistryData: ChemistryPackagesListType = [
             lastChange: null,
           },
         },
-
         settings: {
           [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
-            settingValue: 1,
+            settingValue: 0,
             name: 'string',
           },
         },
@@ -148,7 +144,7 @@ const chemistryData: ChemistryPackagesListType = [
 
         settings: {
           [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
-            settingValue: 1,
+            settingValue: 0,
             name: 'string',
           },
         },
@@ -178,7 +174,7 @@ const chemistryData: ChemistryPackagesListType = [
 
         settings: {
           [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
-            settingValue: 1,
+            settingValue: 0,
             name: 'string',
           },
         },
@@ -207,7 +203,7 @@ const chemistryData: ChemistryPackagesListType = [
 
         settings: {
           [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
-            settingValue: 1,
+            settingValue: 0,
             name: 'string',
           },
         },
@@ -242,7 +238,7 @@ const chemistryData: ChemistryPackagesListType = [
 
         settings: {
           [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
-            settingValue: 1,
+            settingValue: 0,
             name: 'string',
           },
         },
@@ -271,7 +267,7 @@ const chemistryData: ChemistryPackagesListType = [
 
         settings: {
           [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
-            settingValue: 1,
+            settingValue: 0,
             name: 'string',
           },
         },
@@ -300,7 +296,7 @@ const chemistryData: ChemistryPackagesListType = [
 
         settings: {
           [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
-            settingValue: 1,
+            settingValue: 0,
             name: 'string',
           },
         },
@@ -330,7 +326,7 @@ const chemistryData: ChemistryPackagesListType = [
 
         settings: {
           [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
-            settingValue: 1,
+            settingValue: 0,
             name: 'string',
           },
         },
@@ -359,7 +355,7 @@ const chemistryData: ChemistryPackagesListType = [
 
         settings: {
           [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
-            settingValue: 1,
+            settingValue: 0,
             name: 'string',
           },
         },
@@ -389,7 +385,7 @@ const chemistryData: ChemistryPackagesListType = [
 
         settings: {
           [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
-            settingValue: 1,
+            settingValue: 0,
             name: 'string',
           },
         },
@@ -418,7 +414,7 @@ const chemistryData: ChemistryPackagesListType = [
 
         settings: {
           [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
-            settingValue: 1,
+            settingValue: 0,
             name: 'string',
           },
         },

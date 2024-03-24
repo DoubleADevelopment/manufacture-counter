@@ -36,7 +36,7 @@ const gumsData: IGumsPackage = {
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga gumy / KG',
         },
       },
@@ -73,7 +73,7 @@ const gumsData: IGumsPackage = {
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 250,
+          settingValue: 0,
           name: 'Waga gumy / KG',
         },
       },
@@ -110,7 +110,7 @@ const gumsData: IGumsPackage = {
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga gumy / KG',
         },
       },
@@ -147,7 +147,7 @@ const gumsData: IGumsPackage = {
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 250,
+          settingValue: 0,
           name: 'Waga gumy / KG',
         },
       },
@@ -184,7 +184,7 @@ const gumsData: IGumsPackage = {
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga gumy / KG',
         },
       },
@@ -221,7 +221,7 @@ const gumsData: IGumsPackage = {
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga gumy / KG',
         },
       },
@@ -258,7 +258,7 @@ const gumsData: IGumsPackage = {
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 550,
+          settingValue: 0,
           name: 'Waga gumy / KG',
         },
       },
@@ -295,7 +295,7 @@ const gumsData: IGumsPackage = {
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 550,
+          settingValue: 0,
           name: 'Waga gumy / KG',
         },
       },
@@ -332,7 +332,7 @@ const gumsData: IGumsPackage = {
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga gumy / KG',
         },
       },
@@ -369,7 +369,7 @@ const gumsData: IGumsPackage = {
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga gumy / KG',
         },
       },
@@ -406,7 +406,7 @@ const gumsData: IGumsPackage = {
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga gumy / KG',
         },
       },
@@ -443,7 +443,7 @@ const gumsData: IGumsPackage = {
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga gumy / KG',
         },
       },
@@ -480,7 +480,7 @@ const gumsData: IGumsPackage = {
           name: 'Waga kartonu / KG',
         },
         [GumsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 500,
+          settingValue: 0,
           name: 'Waga gumy / KG',
         },
       },

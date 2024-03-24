@@ -30,7 +30,7 @@ const CounterWithAdditionalValue = ({
   defaultValue,
 }: ICounterWithAdditionalValueProps): JSX.Element => {
   //main value state
-  const [value, setValue] = useState<number | null>(defaultValue ? defaultValue : 1);
+  const [value, setValue] = useState<number | null>(defaultValue ? defaultValue : 0);
   const [valueMessage, setValueMessage] = useState<InputMessagesText>(InputMessagesText.DEFAULT);
   const [valueStatus, setValueStatus] = useState<InputStatuses>(InputStatuses.DEFAULT);
   //addtitional value state
