@@ -1,5 +1,5 @@
 //types
-import type { IData } from './data-types';
+import type { IData, IItemData } from './data-types';
 
 interface IRepository {
   sendData(data: IData): IData | Error;
@@ -7,6 +7,8 @@ interface IRepository {
   getData(): IData;
 
   getDefaultData(): IData;
+
+  getDefaultItemData(id: string): IItemData;
 
   clearData(): void;
 }

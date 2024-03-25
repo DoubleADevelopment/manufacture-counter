@@ -18,8 +18,16 @@ abstract class AbstractRepository implements IRepository {
     return localstorageService.setItems(data, this.#storageName);
   }
 
+  #clearDataFromStorage(): void {
+    localstorageService.clearStore(this.#storageName);
+  }
+
   #getDefaultData(): IData {
     return this.#defaultData;
+  }
+
+  #getDefaultItemData(id: string): IItemData {
+    return this.#defaultData[id];
   }
 
   sendData(data: IData): IData | Error {
@@ -50,11 +58,11 @@ abstract class AbstractRepository implements IRepository {
   }
 
   getDefaultItemData(id: string): IItemData {
-    return this.#defaultData[id];
+    return this.#getDefaultItemData(id);
   }
 
-  clearData() {
-    localstorageService.clearStore(this.#storageName);
+  clearData(): void {
+    this.#clearDataFromStorage();
   }
 }
 
