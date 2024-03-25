@@ -1,13 +1,17 @@
+//services
 import { adapterService, localstorageService } from '../../services';
-import { IData, IItemData, IPackage, IRepository, storageNamesAliasType } from '../../types';
+//types
+import type { IData, IItemData, IPackage, IRepository } from '../../types';
 
 abstract class AbstractRepository implements IRepository {
   #defaultData: IData;
-  #storageName: storageNamesAliasType;
+  #storageName: string;
+  #packageData: IPackage;
 
-  constructor(data: IPackage, storageName: storageNamesAliasType) {
+  constructor(data: IPackage) {
     this.#defaultData = adapterService.adaptDataToApp(data);
-    this.#storageName = storageName;
+    this.#storageName = data.dataStorageName;
+    this.#packageData = data;
   }
 
   #getDataFromStorage(): IData | null | Error {

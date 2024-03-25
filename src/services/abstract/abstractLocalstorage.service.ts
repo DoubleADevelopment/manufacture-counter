@@ -1,8 +1,8 @@
 //types
-import type { IData, ILocalstorageService, storageNamesAliasType } from '../../types';
+import type { IData, ILocalstorageService } from '../../types';
 
 abstract class AbstractLocalstorageService implements ILocalstorageService {
-  getItems(storageName: storageNamesAliasType): IData | Error | null {
+  getItems(storageName: string): IData | Error | null {
     try {
       const jsonData: string | null = localStorage.getItem(storageName);
 
@@ -21,7 +21,7 @@ abstract class AbstractLocalstorageService implements ILocalstorageService {
     }
   }
 
-  setItems(data: IData, storageName: storageNamesAliasType): IData | Error {
+  setItems(data: IData, storageName: string): IData | Error {
     try {
       localStorage.setItem(storageName, JSON.stringify(data));
       return data;
@@ -34,7 +34,7 @@ abstract class AbstractLocalstorageService implements ILocalstorageService {
     }
   }
 
-  clearStore(storageName: storageNamesAliasType) {
+  clearStore(storageName: string) {
     localStorage.removeItem(storageName);
   }
 }

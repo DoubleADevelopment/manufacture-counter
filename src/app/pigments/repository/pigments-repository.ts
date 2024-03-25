@@ -2,11 +2,9 @@
 import { AbstractRepository } from '../../../repository';
 //data
 import pigmentsData from '../data/pigments-data';
-//variables
-import { PIGMENTS_STORAGE_NAME } from '../variables';
 
 class PigmentsRepositroy extends AbstractRepository {}
 
-const pigmentsRepository = new PigmentsRepositroy(pigmentsData, PIGMENTS_STORAGE_NAME);
+const pigmentsRepository = new PigmentsRepositroy(pigmentsData);
 
 export default pigmentsRepository;

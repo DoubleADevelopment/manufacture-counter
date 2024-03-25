@@ -5,8 +5,9 @@ import { rootBaseName } from '../../../variables';
 import type { IPackage } from '../../../types';
 
 const chemistryData: IPackage = {
-  dataPackageName: 'Chemistry',
+  dataPackageName: 'chemistry',
   dataPackageUNID: 1001,
+  dataStorageName: 'chemistry-data-1001',
   items: [
     {
       UNID: `chemistry-Solvent-77001-00030`,

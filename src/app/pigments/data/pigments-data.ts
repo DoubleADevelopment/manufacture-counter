@@ -7,6 +7,7 @@ import { PigmentsLogsNames, PigmentsSettingsNames } from '../variables/data-vari
 const pigmentsData: IPackage = {
   dataPackageName: 'pigments',
   dataPackageUNID: 2001,
+  dataStorageName: 'pigments-data-2001',
   items: [
     {
       UNID: 'pigment-AURUM-799549',

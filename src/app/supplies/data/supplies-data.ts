@@ -6,7 +6,8 @@ import { SUPPLIES_COUNTERS, SuppliesLogsNames, SuppliesSettingsNames } from '../
 
 const suppliesData: IPackage = {
   dataPackageName: 'supplies',
-  dataPackageUNID: 3004,
+  dataPackageUNID: 4001,
+  dataStorageName: 'supplies-data-4001',
   items: [
     {
       UNID: 'supplies-abc123',

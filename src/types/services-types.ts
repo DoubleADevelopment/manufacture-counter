@@ -1,18 +1,18 @@
-import {
+//types
+import type {
   IData,
   IItemData,
   IItemDataToDisplay,
   IPackage,
   ItemsDataToDisplayListType,
-  storageNamesAliasType,
 } from './data-types';
 
 interface ILocalstorageService {
-  getItems(storageName: storageNamesAliasType): IData | Error | null;
+  getItems(storageName: string): IData | Error | null;
 
-  setItems(data: IData, storageName: storageNamesAliasType): IData | Error;
+  setItems(data: IData, storageName: string): IData | Error;
 
-  clearStore(storageName: storageNamesAliasType): void;
+  clearStore(storageName: string): void;
 }
 
 interface IAbstractAdapterService {
