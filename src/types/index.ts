@@ -1,4 +1,4 @@
-import type { ILocalstorageService } from './services-types';
+import type { IAbstractAdapterService, ILocalstorageService } from './services-types';
 import type { IRepository } from './repository-types';
 import type {
   IComponentData,
@@ -8,8 +8,9 @@ import type {
   IItemDataToDisplay,
   ISettings,
   IItemData,
-  storageNamesAliasType,
   ILogItem,
+  IData,
+  IPackage,
 } from './data-types';
 import type { IRouteItem } from './routing-types';
 import type { IIncDecAction, ILogAction, IClearItemAction } from './action-types';
@@ -36,9 +37,11 @@ export type {
   IItemDataToDisplay,
   ISettings,
   IItemData,
-  storageNamesAliasType,
   IClearItemAction,
   IButtonProps,
   IInputValueValidate,
   ILogItem,
+  IData,
+  IPackage,
+  IAbstractAdapterService,
 };

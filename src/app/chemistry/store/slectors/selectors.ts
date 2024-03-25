@@ -1,41 +1,34 @@
+//variables
+import { ChemistrySettingsNames } from '../../variables/';
 //types
-import type { RootState } from '../../../../types';
-import type { IChemistryItem, IChemistryData, IChemistryItems } from '../../types/';
-import { ChemistryPackagesNames, ChemistrySettingsNames } from '../../variables/';
+import type { IData, IItemData, RootState } from '../../../../types';
 
-export const SelectorGetChemistryState = (state: RootState): IChemistryData => state.chemistry;
+export const SelectorGetChemistryState = (state: RootState): IData => state.chemistry;
 
-export const SelectorGetCurrentChemistry =
-  (UNID: string, packName: ChemistryPackagesNames) =>
-  (state: RootState): IChemistryItem =>
-    state.chemistry[packName][UNID];
-
-export const SelectorGetExtrusionChemistry =
+export const SelectorGetChemistry =
   () =>
-  (state: RootState): IChemistryItems => {
-    return state.chemistry.extrusion;
+  (state: RootState): IData => {
+    return state.chemistry;
   };
 
-export const SelectorGetVeenerChemistry =
-  () =>
-  (state: RootState): IChemistryItems =>
-    state.chemistry.veener;
+export const SelectorGetCurrentChemistry =
+  (UNID: string) =>
+  (state: RootState): IItemData =>
+    state.chemistry[UNID];
 
 export const SelectorGetCurrentChemistrySetting =
-  (UNID: string, settingName: ChemistrySettingsNames, packName: ChemistryPackagesNames) =>
+  (UNID: string, settingName: ChemistrySettingsNames) =>
   (state: RootState): number =>
-    state.chemistry[packName][UNID].settings[settingName].settingValue;
+    state.chemistry[UNID].settings[settingName].settingValue;
 
 export const SelectorCheckIfElementExistsByUNID =
-  (UNID: string | undefined, packName: ChemistryPackagesNames | undefined) =>
+  (UNID: string | undefined) =>
   (state: RootState): boolean => {
     let result = false;
-    if (!UNID || !packName) {
+    if (!UNID) {
       result = false;
     } else {
-      if (!state.chemistry[packName]) {
-        result = false;
-      } else if (!state.chemistry[packName][UNID]) {
+      if (!state.chemistry[UNID]) {
         result = false;
       } else {
         result = true;

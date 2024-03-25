@@ -4,14 +4,8 @@ import { PigmentsLogsNames } from '../../variables/';
 //state
 import pigmentsState from '../state/state';
 //types
-import type {
-  IClearItemAction,
-  IIncDecAction,
-  ILogAction,
-  IPigmentsData,
-  IPigmentsItem,
-  IChangeItemSetting,
-} from '../../types';
+import type { IClearItemAction, IIncDecAction, ILogAction, IChangeItemSetting } from '../../types';
+import { IData } from '../../../../types';
 
 export const pigmentsSlice = createSlice({
   name: 'pigments',
@@ -31,14 +25,11 @@ export const pigmentsSlice = createSlice({
       state[UNID].logs[logName].log.push(log);
       state[UNID].logs[logName].lastChange = new Date().getTime().toString();
     },
-    clearItem: (state, action: PayloadAction<IClearItemAction<IPigmentsItem>>) => {
+    clearItem: (state, action: PayloadAction<IClearItemAction>) => {
       const { UNID } = action.payload.item;
       state[UNID] = action.payload.item;
     },
-    // clearData: (state, action: PayloadAction<IPigmentsData>) => {
-    //   state = action.payload;
-    // },
-    clearData: (state, action: PayloadAction<IPigmentsData>) => {
+    clearData: (state, action: PayloadAction<IData>) => {
       return action.payload;
     },
     changeItemSetting: (state, action: PayloadAction<IChangeItemSetting>) => {

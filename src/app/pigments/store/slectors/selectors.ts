@@ -1,13 +1,12 @@
 //types
-import type { RootState } from '../../../../types';
-import type { IPigmentsItem, IPigmentsData } from '../../types/';
+import type { IData, IItemData, RootState } from '../../../../types';
 import { PigmentsSettingsNames } from '../../variables';
 
-export const SelectorGetGumsState = (state: RootState): IPigmentsData => state.pigments;
+export const SelectorGetGumsState = (state: RootState): IData => state.pigments;
 
 export const SelectorGetCurrentPigment =
   (UNID: string) =>
-  (state: RootState): IPigmentsItem =>
+  (state: RootState): IItemData =>
     state.pigments[UNID];
 
 export const SelectorGetCurrentPigmentSetting =
@@ -17,7 +16,7 @@ export const SelectorGetCurrentPigmentSetting =
 
 export const SelectorGetPigments =
   () =>
-  (state: RootState): IPigmentsData => {
+  (state: RootState): IData => {
     return state.pigments;
   };
 

@@ -1,7 +1,7 @@
 //components
 import { ItemsList, PageNotification } from '../../../../components';
 //services
-import pigmentsAdapterService from '../../services/pigments-adapter.service';
+import { adapterService } from '../../../../services';
 //store
 import { useAppSelector } from '../../../../hooks/hooks';
 import { SelectorGetPigments } from '../../store/slectors/selectors';
@@ -15,7 +15,7 @@ import style from './pigments-root-page.module.scss';
 
 const PigmentsRootPage = () => {
   const pigmentsState = useAppSelector(SelectorGetPigments());
-  const adaptedData = pigmentsAdapterService.adaptItemsDataToDisplayList(pigmentsState);
+  const adaptedData = adapterService.adaptItemsDataToDisplayList(pigmentsState);
 
   return (
     <PageWithMenuLayout headerTitle={PIGMENTS_TEXT.PIGMENTS} backLink={AppRouting.ROOT.path}>

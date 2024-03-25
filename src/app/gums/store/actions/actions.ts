@@ -1,11 +1,9 @@
 import { gumsSlice } from '../slice/slice';
-//services
-import gumsDataService from '../../services/gums-data.service';
 //repository
 import gumsRepository from '../../repository/gums-repository';
 //types
 import type { AppThunk } from '../../../../types';
-import type { IChangeItemSetting, IClearItemAction, IGumsItem, IIncDecAction } from '../../types';
+import type { IChangeItemSetting, IClearItemAction, IIncDecAction } from '../../types';
 
 const { increment, decrement, log, clearItem, clearData, changeItemSetting } = gumsSlice.actions;
 
@@ -40,19 +38,19 @@ export const decrementAction =
   };
 
 export const clearItemDataAction =
-  (action: IClearItemAction<IGumsItem>): AppThunk =>
+  (action: IClearItemAction): AppThunk =>
   (dispatch, getState) => {
-    const clearedItem = gumsDataService.getDataItem(action.item.UNID);
+    const clearedItem = gumsRepository.getDefaultItemData(action.item.UNID);
     dispatch(clearItem({ item: clearedItem }));
 
     gumsRepository.sendData(getState().gums);
   };
 
-export const clearDataAction = (): AppThunk => (dispatch, getState) => {
-  const clearedItem = gumsDataService.getData();
+export const clearDataAction = (): AppThunk => (dispatch) => {
+  const clearedItem = gumsRepository.getDefaultData();
   dispatch(clearData(clearedItem));
 
-  gumsRepository.sendData(getState().gums);
+  gumsRepository.clearData();
 };
 
 export const changeItemSettingAction =

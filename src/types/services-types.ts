@@ -1,9 +1,25 @@
-interface ILocalstorageService<D> {
-  getItems(): D | Error | null;
+//types
+import type {
+  IData,
+  IItemData,
+  IItemDataToDisplay,
+  IPackage,
+  ItemsDataToDisplayListType,
+} from './data-types';
 
-  setItems(data: D): D | Error;
+interface ILocalstorageService {
+  getItems(storageName: string): IData | Error | null;
 
-  clearStore(): void;
+  setItems(data: IData, storageName: string): IData | Error;
+
+  clearStore(storageName: string): void;
 }
 
-export type { ILocalstorageService };
+interface IAbstractAdapterService {
+  adaptDataToApp(data: IPackage): IData;
+  adaptDataToView(data: IData): IItemData[];
+  adaptItemDataToDisplay(item: IItemData): IItemDataToDisplay;
+  adaptItemsDataToDisplayList(data: IData): ItemsDataToDisplayListType;
+}
+
+export type { ILocalstorageService, IAbstractAdapterService };

@@ -5,20 +5,19 @@ import { ShortCardWithLogsModal } from '../../../../components';
 import { useAppDispatch, useAppSelector } from '../../../../hooks/hooks';
 import { clearItemDataAction } from '../../store/actions/actions';
 //services
-import gumsAdapterService from '../../services/gums-adapter.service';
+import { adapterService } from '../../../../services';
 import {
   SelectorCheckIfElementExistsByUNID,
   SelectorGetCurrentGum,
 } from '../../store/slectors/selectors';
 //types
-import type { IGumsItem } from '../../types';
-import type { IItemDataToDisplay } from '../../../../types';
+import type { IItemData, IItemDataToDisplay } from '../../../../types';
 
 const CountableItemInfo = (): JSX.Element => {
   const { UNID } = useParams();
 
   const itemFromUnidIsset = useAppSelector(SelectorCheckIfElementExistsByUNID(UNID));
-  const item: IGumsItem | undefined =
+  const item: IItemData | undefined =
     UNID && itemFromUnidIsset ? useAppSelector(SelectorGetCurrentGum(UNID)) : undefined;
 
   const dispatch = useAppDispatch();
@@ -26,7 +25,7 @@ const CountableItemInfo = (): JSX.Element => {
   let convertedItem: IItemDataToDisplay | undefined;
 
   if (item !== undefined && item) {
-    convertedItem = gumsAdapterService.adaptItemDataToDisplay(item);
+    convertedItem = adapterService.adaptItemDataToDisplay(item);
   } else {
     convertedItem = undefined;
   }

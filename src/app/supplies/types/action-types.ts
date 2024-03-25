@@ -11,7 +11,7 @@ interface IIncDecAction extends incDec {
   logName: SuppliesLogsNames;
   logText?: string;
 }
-interface IClearItemAction<T> extends clearItem<T> {}
+interface IClearItemAction extends clearItem {}
 interface ILogAction<T> extends log<T> {}
 
 interface IChangeItemSetting {

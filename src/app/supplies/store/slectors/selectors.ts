@@ -1,25 +1,22 @@
 //types
-import type { RootState } from '../../../../types';
-import type { ISuppliesItem, ISuppliesData } from '../../types/';
+import type { IData, IItemData, RootState } from '../../../../types';
 import { SuppliesSettingsNames } from '../../variables';
 
-export const SelectorGetSuppliesState = (state: RootState): ISuppliesData => state.gums;
+export const SelectorGetSupplies =
+  () =>
+  (state: RootState): IData => {
+    return state.supplies;
+  };
 
 export const SelectorGetCurrentSupplie =
   (UNID: string) =>
-  (state: RootState): ISuppliesItem =>
+  (state: RootState): IItemData =>
     state.supplies[UNID];
 
 export const SelectorGetCurrentSupplieSetting =
   (UNID: string, settingName: SuppliesSettingsNames) =>
   (state: RootState): number => {
     return state.supplies[UNID].settings[settingName].settingValue;
-  };
-
-export const SelectorGetSupplies =
-  () =>
-  (state: RootState): ISuppliesData => {
-    return state.supplies;
   };
 
 export const SelectorCheckIfElementExistsByUNID =

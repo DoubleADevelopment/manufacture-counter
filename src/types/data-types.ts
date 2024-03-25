@@ -1,9 +1,3 @@
-//data types
-import { CHEMISTRY_STORAGE_NAME } from '../app/chemistry/variables';
-import { GUMS_STORAGE_NAME } from '../app/gums/variables/data-variables';
-import { PIGMENTS_STORAGE_NAME } from '../app/pigments/variables/data-variables';
-import { SUPPLIES_STORAGE_NAME } from '../app/supplies/variables';
-
 //componentsList type we use in main page for show all components in overview page
 interface IComponentData {
   title: string;
@@ -49,7 +43,7 @@ interface ISettings {
   };
 }
 
-interface IItemData<L extends ILogs, S extends ISettings> {
+interface IItemData {
   UNID: string;
   amount: number;
   manufactured: string;
@@ -59,19 +53,24 @@ interface IItemData<L extends ILogs, S extends ISettings> {
   additionalInfo: string;
   image: string;
   color: string;
-  logs: L;
-  settings: S;
+  logs: ILogs;
+  settings: ISettings;
   counters?: string[];
   additionalResources: string[];
   packagingInfo: string;
   unitsOfMeasurement: string;
 }
 
-type storageNamesAliasType =
-  | typeof CHEMISTRY_STORAGE_NAME
-  | typeof GUMS_STORAGE_NAME
-  | typeof PIGMENTS_STORAGE_NAME
-  | typeof SUPPLIES_STORAGE_NAME;
+interface IData {
+  [key: string]: IItemData;
+}
+
+interface IPackage {
+  dataPackageName: string;
+  dataPackageUNID: number;
+  dataStorageName: string;
+  items: IItemData[];
+}
 
 export type {
   IComponentData,
@@ -81,6 +80,7 @@ export type {
   ILogs,
   ISettings,
   IItemData,
-  storageNamesAliasType,
   ILogItem,
+  IData,
+  IPackage,
 };

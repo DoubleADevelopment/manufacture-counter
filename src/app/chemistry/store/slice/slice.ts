@@ -4,13 +4,8 @@ import { ChemistryLogsNames } from '../../variables/';
 //state
 import chemistryState from '../state/state';
 //types
-import type {
-  IClearItemAction,
-  IIncDecAction,
-  ILogAction,
-  IChemistryData,
-  IChemistryItem,
-} from '../../types';
+import type { IClearItemAction, IIncDecAction, ILogAction } from '../../types';
+import { IData } from '../../../../types';
 
 export const chemistrySlice = createSlice({
   name: 'chemistry',
@@ -18,26 +13,23 @@ export const chemistrySlice = createSlice({
 
   reducers: {
     increment: (state, action: PayloadAction<IIncDecAction>) => {
-      const { UNID, value, packageName } = action.payload;
-      state[packageName][UNID].amount = state[packageName][UNID].amount + value;
+      const { UNID, value } = action.payload;
+      state[UNID].amount = state[UNID].amount + value;
     },
     decrement: (state, action: PayloadAction<IIncDecAction>) => {
-      const { UNID, value, packageName } = action.payload;
-      state[packageName][UNID].amount = state[packageName][UNID].amount - value;
+      const { UNID, value } = action.payload;
+      state[UNID].amount = state[UNID].amount - value;
     },
     log: (state, action: PayloadAction<ILogAction<ChemistryLogsNames>>) => {
-      const { UNID, logName, log, packageName } = action.payload;
-      state[packageName][UNID].logs[logName].log.push(log);
-      state[packageName][UNID].logs[logName].lastChange = new Date().getTime().toString();
+      const { UNID, logName, log } = action.payload;
+      state[UNID].logs[logName].log.push(log);
+      state[UNID].logs[logName].lastChange = new Date().getTime().toString();
     },
-    clearItem: (state, action: PayloadAction<IClearItemAction<IChemistryItem>>) => {
+    clearItem: (state, action: PayloadAction<IClearItemAction>) => {
       const { UNID } = action.payload.item;
-      state[action.payload.packageName][UNID] = action.payload.item;
+      state[UNID] = action.payload.item;
     },
-    // clearData: (state, action: PayloadAction<IChemistryData>) => {
-    //   state = action.payload;
-    // },
-    clearData: (state, action: PayloadAction<IChemistryData>) => {
+    clearData: (state, action: PayloadAction<IData>) => {
       return action.payload;
     },
   },

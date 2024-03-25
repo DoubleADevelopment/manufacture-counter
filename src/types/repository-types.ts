@@ -1,9 +1,14 @@
-interface IRepository<D> {
-  sendData(data: D): D | Error;
+//types
+import type { IData, IItemData } from './data-types';
 
-  getData(): D;
+interface IRepository {
+  sendData(data: IData): IData | Error;
 
-  getDefaultData(): D;
+  getData(): IData;
+
+  getDefaultData(): IData;
+
+  getDefaultItemData(id: string): IItemData;
 
   clearData(): void;
 }

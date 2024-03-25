@@ -1,19 +1,25 @@
 //types
-import type { IItemDataToDisplay, ItemsDataToDisplayListType } from '../../../types';
-import type { IGumsItem, IGumsPackage, IGumsData, GumsItemsListType } from '../types/data-types';
+import type {
+  IData,
+  IItemDataToDisplay,
+  IPackage,
+  ItemsDataToDisplayListType,
+  IItemData,
+  IAbstractAdapterService,
+} from '../../types';
 
-class GumsAdapterService {
-  adaptDataToApp(data: IGumsPackage): IGumsData {
-    const adaptedData: IGumsData = {};
+abstract class AbstractAdapterService implements IAbstractAdapterService {
+  adaptDataToApp(data: IPackage): IData {
+    const adaptedData: Record<string, IItemData> = {};
 
-    data.items.forEach((item: IGumsItem) => {
+    data.items.forEach((item: IItemData) => {
       adaptedData[item.UNID] = item;
     });
-    return adaptedData;
+    return adaptedData as IData;
   }
 
-  adaptDataToView(data: IGumsData): GumsItemsListType {
-    const itemsArray: GumsItemsListType = [];
+  adaptDataToView(data: IData): IItemData[] {
+    const itemsArray: IItemData[] = [];
 
     for (const item in data) {
       itemsArray.push(data[item]);
@@ -22,7 +28,7 @@ class GumsAdapterService {
     return itemsArray;
   }
 
-  adaptItemDataToDisplay(item: IGumsItem): IItemDataToDisplay {
+  adaptItemDataToDisplay(item: IItemData): IItemDataToDisplay {
     return {
       UNID: item.UNID,
       manufactured: item.manufactured,
@@ -38,7 +44,7 @@ class GumsAdapterService {
     };
   }
 
-  adaptItemsDataToDisplayList(data: IGumsData): ItemsDataToDisplayListType {
+  adaptItemsDataToDisplayList(data: IData): ItemsDataToDisplayListType {
     const dataAdaptedToView = this.adaptDataToView(data);
     const adaptedData = dataAdaptedToView.map((item) => {
       return this.adaptItemDataToDisplay(item);
@@ -47,6 +53,4 @@ class GumsAdapterService {
   }
 }
 
-const gumsAdapterService = new GumsAdapterService();
-
-export default gumsAdapterService;
+export default AbstractAdapterService;

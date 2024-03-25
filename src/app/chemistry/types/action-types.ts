@@ -3,16 +3,9 @@ import {
   IClearItemAction as clearItem,
   ILogAction as log,
 } from '../../../types';
-import { ChemistryPackagesNames } from '../variables/';
 
-interface IIncDecAction extends incDec {
-  packageName: ChemistryPackagesNames;
-}
-interface IClearItemAction<T> extends clearItem<T> {
-  packageName: ChemistryPackagesNames;
-}
-interface ILogAction<T> extends log<T> {
-  packageName: ChemistryPackagesNames;
-}
+interface IIncDecAction extends incDec {}
+interface IClearItemAction extends clearItem {}
+interface ILogAction<T> extends log<T> {}
 
 export type { IIncDecAction, IClearItemAction, ILogAction };

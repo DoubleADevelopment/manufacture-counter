@@ -1,12 +1,13 @@
 //types
-import { rootBaseName } from '../../../variables';
-import type { IPigmentsPackage } from '../types/data-type';
+import type { IPackage } from '../../../types';
 //vars
+import { rootBaseName } from '../../../variables';
 import { PigmentsLogsNames, PigmentsSettingsNames } from '../variables/data-variables';
 
-const pigmentsData: IPigmentsPackage = {
+const pigmentsData: IPackage = {
   dataPackageName: 'pigments',
   dataPackageUNID: 2001,
+  dataStorageName: 'pigments-data-2001',
   items: [
     {
       UNID: 'pigment-AURUM-799549',

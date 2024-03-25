@@ -1,13 +1,11 @@
 import { chemistrySlice } from '../slice/slice';
 //variables
 import { ChemistryLogsNames } from '../../variables/';
-//services
-import chemistryDataService from '../../services/chemistry-data.service';
 //repository
 import chemistryRepository from '../../repository/chemistry-repository';
 //types
 import type { AppThunk } from '../../../../types';
-import type { IChemistryItem, IClearItemAction, IIncDecAction } from '../../types';
+import type { IClearItemAction, IIncDecAction } from '../../types';
 
 const { increment, decrement, log, clearItem, clearData } = chemistrySlice.actions;
 
@@ -20,7 +18,6 @@ export const incrementAction =
       log: `+${action.value.toString()}`,
       logName: ChemistryLogsNames.COUNTER,
       UNID: action.UNID,
-      packageName: action.packageName,
     };
 
     dispatch(log(newLog));
@@ -36,7 +33,6 @@ export const decrementAction =
       log: `-${action.value.toString()}`,
       logName: ChemistryLogsNames.COUNTER,
       UNID: action.UNID,
-      packageName: action.packageName,
     };
 
     dispatch(log(newLog));
@@ -44,17 +40,17 @@ export const decrementAction =
   };
 
 export const clearItemDataAction =
-  (action: IClearItemAction<IChemistryItem>): AppThunk =>
+  (action: IClearItemAction): AppThunk =>
   (dispatch, getState) => {
-    const clearedItem = chemistryDataService.getDataItem(action.item.UNID, action.packageName);
-    dispatch(clearItem({ item: clearedItem, packageName: action.packageName }));
+    const clearedItem = chemistryRepository.getDefaultItemData(action.item.UNID);
+    dispatch(clearItem({ item: clearedItem }));
 
     chemistryRepository.sendData(getState().chemistry);
   };
 
-export const clearDataAction = (): AppThunk => (dispatch, getState) => {
-  const clearedItem = chemistryDataService.getData();
+export const clearDataAction = (): AppThunk => (dispatch) => {
+  const clearedItem = chemistryRepository.getDefaultData();
   dispatch(clearData(clearedItem));
 
-  chemistryRepository.sendData(getState().chemistry);
+  chemistryRepository.clearData();
 };

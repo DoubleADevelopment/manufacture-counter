@@ -1,10 +1,12 @@
+import { IItemData } from './data-types';
+
 interface IIncDecAction {
   UNID: string;
   value: number;
 }
 
-interface IClearItemAction<T> {
-  item: T;
+interface IClearItemAction {
+  item: IItemData;
 }
 
 interface ILogAction<T> {

@@ -4,31 +4,26 @@ import { PageWithMenuLayout } from '../../layouts';
 import { ComponentOverview } from '../../components';
 //store
 import { useAppSelector } from '../../hooks/hooks';
-import { SelectorGetExtrusionChemistry } from '../../app/chemistry/store/slectors/selectors';
+import { SelectorGetChemistry } from '../../app/chemistry/store/slectors/selectors';
 import { SelectorGetGums } from '../../app/gums/store/slectors/selectors';
 import { SelectorGetPigments } from '../../app/pigments/store/slectors/selectors';
 import { SelectorGetSupplies } from '../../app/supplies/store/slectors/selectors';
-//app services
-import chemistryAdapterService from '../../app/chemistry/services/chemistry-adapter.service';
-import gumsAdapterService from '../../app/gums/services/gums-adapter.service';
-import pigmentsAdapterService from '../../app/pigments/services/pigments-adapter.service';
-import suppliesAdapterService from '../../app/supplies/services/supplies-adapter.service';
+//adapter
+import { adapterService } from '../../services';
 //variables
 import { AppRouting } from '../../variables';
 //styles
 import style from './components-overview-page.module.scss';
 
 const ComponentOverviewPage = (): JSX.Element => {
-  const chemistryData = chemistryAdapterService.adaptItemsDataToDisplayList(
-    useAppSelector(SelectorGetExtrusionChemistry()),
+  const chemistryData = adapterService.adaptItemsDataToDisplayList(
+    useAppSelector(SelectorGetChemistry()),
   );
-  const gumsData = gumsAdapterService.adaptItemsDataToDisplayList(
-    useAppSelector(SelectorGetGums()),
-  );
-  const pigmentsData = pigmentsAdapterService.adaptItemsDataToDisplayList(
+  const gumsData = adapterService.adaptItemsDataToDisplayList(useAppSelector(SelectorGetGums()));
+  const pigmentsData = adapterService.adaptItemsDataToDisplayList(
     useAppSelector(SelectorGetPigments()),
   );
-  const suppliesData = suppliesAdapterService.adaptItemsDataToDisplayList(
+  const suppliesData = adapterService.adaptItemsDataToDisplayList(
     useAppSelector(SelectorGetSupplies()),
   );
 

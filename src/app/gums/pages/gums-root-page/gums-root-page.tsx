@@ -1,7 +1,7 @@
 //components
 import { ItemsList, PageNotification } from '../../../../components';
 //services
-import gumsAdapterService from '../../services/gums-adapter.service';
+import { adapterService } from '../../../../services';
 //store
 import { useAppSelector } from '../../../../hooks/hooks';
 import { SelectorGetGums } from '../../store/slectors/selectors';
@@ -15,7 +15,7 @@ import style from './gums-root-page.module.scss';
 
 const GumsRootPage = () => {
   const gumsState = useAppSelector(SelectorGetGums());
-  const adaptedData = gumsAdapterService.adaptItemsDataToDisplayList(gumsState);
+  const adaptedData = adapterService.adaptItemsDataToDisplayList(gumsState);
 
   return (
     <PageWithMenuLayout headerTitle={GUMS_TEXT.GUMS} backLink={AppRouting.ROOT.path}>

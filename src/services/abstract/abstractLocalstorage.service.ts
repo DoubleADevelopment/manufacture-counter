@@ -1,19 +1,13 @@
 //types
-import type { ILocalstorageService, storageNamesAliasType } from '../../types';
+import type { IData, ILocalstorageService } from '../../types';
 
-abstract class AbstractLocalstorageService<D> implements ILocalstorageService<D> {
-  #storageName: storageNamesAliasType;
-
-  constructor(storageName: storageNamesAliasType) {
-    this.#storageName = storageName;
-  }
-
-  getItems(): D | Error | null {
+abstract class AbstractLocalstorageService implements ILocalstorageService {
+  getItems(storageName: string): IData | Error | null {
     try {
-      const jsonData: string | null = localStorage.getItem(this.#storageName);
+      const jsonData: string | null = localStorage.getItem(storageName);
 
       if (jsonData) {
-        const parsedJsonData: D = JSON.parse(jsonData);
+        const parsedJsonData: IData = JSON.parse(jsonData);
         return parsedJsonData;
       } else {
         return null;
@@ -27,9 +21,9 @@ abstract class AbstractLocalstorageService<D> implements ILocalstorageService<D>
     }
   }
 
-  setItems(data: D): D | Error {
+  setItems(data: IData, storageName: string): IData | Error {
     try {
-      localStorage.setItem(this.#storageName, JSON.stringify(data));
+      localStorage.setItem(storageName, JSON.stringify(data));
       return data;
     } catch (err) {
       if (err instanceof Error) {
@@ -40,8 +34,8 @@ abstract class AbstractLocalstorageService<D> implements ILocalstorageService<D>
     }
   }
 
-  clearStore() {
-    localStorage.removeItem(this.#storageName);
+  clearStore(storageName: string) {
+    localStorage.removeItem(storageName);
   }
 }
 

@@ -1,8 +1,8 @@
 //repository
 import pigmentsRepository from '../../repository/pigments-repository';
 //types
-import type { IPigmentsData } from '../../types/';
+import type { IData } from '../../../../types';
 
-const gumsState: IPigmentsData = pigmentsRepository.getData();
+const gumsState: IData = pigmentsRepository.getData();
 
 export default gumsState;
