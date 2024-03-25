@@ -8,9 +8,8 @@ import { ChemistryAppRouting, ChemistryPackagesNames } from '../../variables';
 import style from './counter-page.module.scss';
 import { CHEMISTRY_TEXT } from '../../variables';
 
-const ExtrusionCounterPage = (): JSX.Element => {
+const CounterPage = (): JSX.Element => {
   return (
-    // backLink={ChemistryAppRouting.EXTRUSION.path} commented while we have only 1 package of chemistry
     <CounterPageLayout
       backLink={ChemistryAppRouting.ROOT.path}
       headerTitle={CHEMISTRY_TEXT.CHEMISTRY_COUNTER_TITLE}
@@ -23,4 +22,4 @@ const ExtrusionCounterPage = (): JSX.Element => {
   );
 };
 
-export default ExtrusionCounterPage;
+export default CounterPage;

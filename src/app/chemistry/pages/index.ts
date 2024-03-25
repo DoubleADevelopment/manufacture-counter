@@ -1,5 +1,4 @@
-import * as ChemistryPages from './chemistry-pages';
-import * as CounterPages from './counter-page/';
+import CounterPage from './counter-page/counter-page';
 import ChemistryRootPage from './chemistry-root-page/chemistry-root-page';
 
-export { ChemistryRootPage, ChemistryPages, CounterPages };
+export { ChemistryRootPage, CounterPage };
