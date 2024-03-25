@@ -459,7 +459,7 @@ const pigmentsData: IPigmentsPackage = {
       unitsOfMeasurement: 'kg',
     },
     {
-      UNID: 'pigment-INEOS/Ekomer-799199',
+      UNID: 'pigment-INEOS-Ekomer-799199',
       amount: 0,
       manufactured: 'INEOS/Ekomer',
       productName: 'Masa wysokostabilna- Evicom granulat ACF400/5hellblau 5154 ',
