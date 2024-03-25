@@ -48,9 +48,9 @@ export const clearItemDataAction =
     chemistryRepository.sendData(getState().chemistry);
   };
 
-export const clearDataAction = (): AppThunk => (dispatch, getState) => {
+export const clearDataAction = (): AppThunk => (dispatch) => {
   const clearedItem = chemistryRepository.getDefaultData();
   dispatch(clearData(clearedItem));
 
-  chemistryRepository.sendData(getState().chemistry);
+  chemistryRepository.clearData();
 };

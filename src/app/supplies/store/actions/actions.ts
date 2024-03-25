@@ -47,11 +47,11 @@ export const clearItemDataAction =
     suppliesRepository.sendData(getState().supplies);
   };
 
-export const clearDataAction = (): AppThunk => (dispatch, getState) => {
+export const clearDataAction = (): AppThunk => (dispatch) => {
   const clearedItem = suppliesRepository.getDefaultData();
   dispatch(clearData(clearedItem));
 
-  suppliesRepository.sendData(getState().supplies);
+  suppliesRepository.clearData();
 };
 
 export const changeItemSettingAction =

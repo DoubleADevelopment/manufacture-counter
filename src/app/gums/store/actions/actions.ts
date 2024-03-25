@@ -46,11 +46,11 @@ export const clearItemDataAction =
     gumsRepository.sendData(getState().gums);
   };
 
-export const clearDataAction = (): AppThunk => (dispatch, getState) => {
+export const clearDataAction = (): AppThunk => (dispatch) => {
   const clearedItem = gumsRepository.getDefaultData();
   dispatch(clearData(clearedItem));
 
-  gumsRepository.sendData(getState().gums);
+  gumsRepository.clearData();
 };
 
 export const changeItemSettingAction =

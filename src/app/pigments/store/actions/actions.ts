@@ -47,11 +47,11 @@ export const clearItemDataAction =
     pigmentsRepository.sendData(getState().pigments);
   };
 
-export const clearDataAction = (): AppThunk => (dispatch, getState) => {
+export const clearDataAction = (): AppThunk => (dispatch) => {
   const clearedItem = pigmentsRepository.getDefaultData();
   dispatch(clearData(clearedItem));
 
-  pigmentsRepository.sendData(getState().pigments);
+  pigmentsRepository.clearData();
 };
 
 export const changeItemSettingAction =
