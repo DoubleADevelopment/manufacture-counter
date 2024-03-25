@@ -4,7 +4,7 @@ import pigmentsDataService from '../../services/pigments-data.service';
 //repository
 import pigmentsRepository from '../../repository/pigments-repository';
 //types
-import type { AppThunk, IItemData } from '../../../../types';
+import type { AppThunk } from '../../../../types';
 import type { IChangeItemSetting, IClearItemAction, IIncDecAction } from '../../types';
 
 const { increment, decrement, log, clearItem, clearData, changeItemSetting } =
@@ -41,7 +41,7 @@ export const decrementAction =
   };
 
 export const clearItemDataAction =
-  (action: IClearItemAction<IItemData>): AppThunk =>
+  (action: IClearItemAction): AppThunk =>
   (dispatch, getState) => {
     const clearedItem = pigmentsDataService.getDataItem(action.item.UNID);
     dispatch(clearItem({ item: clearedItem }));

@@ -5,7 +5,7 @@ import {
 } from '../../../types';
 
 interface IIncDecAction extends incDec {}
-interface IClearItemAction<T> extends clearItem<T> {}
+interface IClearItemAction extends clearItem {}
 interface ILogAction<T> extends log<T> {}
 
 export type { IIncDecAction, IClearItemAction, ILogAction };

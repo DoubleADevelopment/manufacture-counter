@@ -5,7 +5,7 @@ import { ChemistryLogsNames } from '../../variables/';
 import chemistryState from '../state/state';
 //types
 import type { IClearItemAction, IIncDecAction, ILogAction } from '../../types';
-import { IData, IItemData } from '../../../../types';
+import { IData } from '../../../../types';
 
 export const chemistrySlice = createSlice({
   name: 'chemistry',
@@ -25,7 +25,7 @@ export const chemistrySlice = createSlice({
       state[UNID].logs[logName].log.push(log);
       state[UNID].logs[logName].lastChange = new Date().getTime().toString();
     },
-    clearItem: (state, action: PayloadAction<IClearItemAction<IItemData>>) => {
+    clearItem: (state, action: PayloadAction<IClearItemAction>) => {
       const { UNID } = action.payload.item;
       state[UNID] = action.payload.item;
     },

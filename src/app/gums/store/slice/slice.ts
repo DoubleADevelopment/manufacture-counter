@@ -5,7 +5,7 @@ import { GumsLogsNames } from '../../variables/';
 import gumsState from '../state/state';
 //types
 import type { IClearItemAction, IIncDecAction, ILogAction, IChangeItemSetting } from '../../types';
-import type { IData, IItemData } from '../../../../types';
+import type { IData } from '../../../../types';
 
 export const gumsSlice = createSlice({
   name: 'gums',
@@ -25,7 +25,7 @@ export const gumsSlice = createSlice({
       state[UNID].logs[logName].log.push(log);
       state[UNID].logs[logName].lastChange = new Date().getTime().toString();
     },
-    clearItem: (state, action: PayloadAction<IClearItemAction<IItemData>>) => {
+    clearItem: (state, action: PayloadAction<IClearItemAction>) => {
       const { UNID } = action.payload.item;
       state[UNID] = action.payload.item;
     },
