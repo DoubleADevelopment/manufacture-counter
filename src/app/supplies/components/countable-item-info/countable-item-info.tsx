@@ -4,12 +4,12 @@ import { ShortCardWithLogsModal } from '../../../../components';
 //store
 import { useAppDispatch, useAppSelector } from '../../../../hooks/hooks';
 import { clearItemDataAction } from '../../store/actions/actions';
-//services
-import suppliesAdapterService from '../../services/supplies-adapter.service';
 import {
   SelectorCheckIfElementExistsByUNID,
   SelectorGetCurrentSupplie,
 } from '../../store/slectors/selectors';
+//services
+import { adapterService } from '../../../../services';
 //types
 import type { IItemData, IItemDataToDisplay } from '../../../../types';
 
@@ -25,7 +25,7 @@ const CountableItemInfo = (): JSX.Element => {
   let convertedItem: IItemDataToDisplay | undefined;
 
   if (item !== undefined && item) {
-    convertedItem = suppliesAdapterService.adaptItemDataToDisplay(item);
+    convertedItem = adapterService.adaptItemDataToDisplay(item);
   } else {
     convertedItem = undefined;
   }

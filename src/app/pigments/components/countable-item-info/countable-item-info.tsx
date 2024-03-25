@@ -5,7 +5,7 @@ import { ShortCardWithLogsModal } from '../../../../components';
 import { useAppDispatch, useAppSelector } from '../../../../hooks/hooks';
 import { clearItemDataAction } from '../../store/actions/actions';
 //services
-import pigmentsAdapterService from '../../services/pigments-adapter.service';
+import { adapterService } from '../../../../services';
 import {
   SelectorCheckIfElementExistsByUNID,
   SelectorGetCurrentPigment,
@@ -25,7 +25,7 @@ const CountableItemInfo = (): JSX.Element => {
   let convertedItem: IItemDataToDisplay | undefined;
 
   if (item !== undefined && item) {
-    convertedItem = pigmentsAdapterService.adaptItemDataToDisplay(item);
+    convertedItem = adapterService.adaptItemDataToDisplay(item);
   } else {
     convertedItem = undefined;
   }

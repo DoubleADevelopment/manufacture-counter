@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../../../hooks/hooks';
 //services
-import chemistryAdapterService from '../../services/chemistry-adapter.service';
+import { adapterService } from '../../../../services';
 //store
 import { clearItemDataAction } from '../../store/actions/actions';
 import {
@@ -25,7 +25,7 @@ const CountableItemInfo = (): JSX.Element => {
   let convertedItem: IItemDataToDisplay | undefined;
 
   if (item !== undefined && item) {
-    convertedItem = chemistryAdapterService.adaptItemDataToDisplay(item);
+    convertedItem = adapterService.adaptItemDataToDisplay(item);
   } else {
     convertedItem = undefined;
   }

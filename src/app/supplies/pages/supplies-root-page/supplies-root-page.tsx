@@ -1,7 +1,7 @@
 //components
 import { ItemsList, PageNotification } from '../../../../components';
 //services
-import suppliesAdapterService from '../../services/supplies-adapter.service';
+import { adapterService } from '../../../../services';
 //store
 import { SelectorGetSupplies } from '../../store/slectors/selectors';
 import { useAppSelector } from '../../../../hooks/hooks';
@@ -15,7 +15,7 @@ import style from './supplies-root-page.module.scss';
 
 const SuppliesRootPage = () => {
   const suppliesState = useAppSelector(SelectorGetSupplies());
-  const adaptedData = suppliesAdapterService.adaptItemsDataToDisplayList(suppliesState);
+  const adaptedData = adapterService.adaptItemsDataToDisplayList(suppliesState);
 
   return (
     <PageWithMenuLayout headerTitle={SUPPLIES_TEXT.SUPPLIES} backLink={AppRouting.ROOT.path}>

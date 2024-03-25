@@ -1,13 +1,11 @@
 //abstract
-import { AbstractDataService } from '../../../services';
+import { AbstractDataService, adapterService } from '../../../services';
 //types
 import type { IData } from '../../../types';
 //data
 import suppliesData from '../data/supplies-data';
-//adapters
-import suppliesAdapterService from './supplies-adapter.service';
 
-const adaptedData: IData = suppliesAdapterService.adaptDataToApp(suppliesData);
+const adaptedData: IData = adapterService.adaptDataToApp(suppliesData);
 
 class SuppliesDataService extends AbstractDataService {}
 

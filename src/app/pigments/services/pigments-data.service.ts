@@ -1,13 +1,11 @@
-//abstract
-import { AbstractDataService } from '../../../services';
+//services
+import { AbstractDataService, adapterService } from '../../../services';
 //types
 import type { IData } from '../../../types';
 //data
 import pigmentsData from '../data/pigments-data';
-//adapters
-import pigmentsAdapterService from './pigments-adapter.service';
 
-const adaptedData: IData = pigmentsAdapterService.adaptDataToApp(pigmentsData);
+const adaptedData: IData = adapterService.adaptDataToApp(pigmentsData);
 
 class PigmentsDataService extends AbstractDataService {}
 

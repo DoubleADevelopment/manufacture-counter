@@ -2,7 +2,7 @@
 import { useAppSelector } from '../../../../hooks/hooks';
 import { SelectorGetChemistry } from '../../store/slectors/selectors';
 //services
-import chemistryAdapterService from '../../services/chemistry-adapter.service';
+import { adapterService } from '../../../../services';
 //components
 import { ItemsList, PageNotification } from '../../../../components';
 //layouts
@@ -15,7 +15,7 @@ import style from './chemistry-root-page.module.scss';
 
 const ChemistryExtrusionPage = (): JSX.Element => {
   const chemistryState = useAppSelector(SelectorGetChemistry());
-  const adaptedData = chemistryAdapterService.adaptItemsDataToDisplayList(chemistryState);
+  const adaptedData = adapterService.adaptItemsDataToDisplayList(chemistryState);
 
   return (
     <PageWithMenuLayout headerTitle={CHEMISTRY_TEXT.CHEMISTRY} backLink={AppRouting.ROOT.path}>
