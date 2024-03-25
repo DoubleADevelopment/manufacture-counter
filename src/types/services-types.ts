@@ -15,12 +15,6 @@ interface ILocalstorageService {
   clearStore(storageName: storageNamesAliasType): void;
 }
 
-interface IDataService {
-  getData(): IData;
-
-  getDataItem(id: string): IItemData;
-}
-
 interface IAbstractAdapterService {
   adaptDataToApp(data: IPackage): IData;
   adaptDataToView(data: IData): IItemData[];
@@ -28,4 +22,4 @@ interface IAbstractAdapterService {
   adaptItemsDataToDisplayList(data: IData): ItemsDataToDisplayListType;
 }
 
-export type { ILocalstorageService, IDataService, IAbstractAdapterService };
+export type { ILocalstorageService, IAbstractAdapterService };

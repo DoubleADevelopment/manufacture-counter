@@ -1,4 +1,4 @@
-import type { IAbstractAdapterService, IDataService, ILocalstorageService } from './services-types';
+import type { IAbstractAdapterService, ILocalstorageService } from './services-types';
 import type { IRepository } from './repository-types';
 import type {
   IComponentData,
@@ -43,7 +43,6 @@ export type {
   IButtonProps,
   IInputValueValidate,
   ILogItem,
-  IDataService,
   IData,
   IPackage,
   IAbstractAdapterService,

@@ -1,6 +1,4 @@
 import { pigmentsSlice } from '../slice/slice';
-//services
-import pigmentsDataService from '../../services/pigments-data.service';
 //repository
 import pigmentsRepository from '../../repository/pigments-repository';
 //types
@@ -43,14 +41,14 @@ export const decrementAction =
 export const clearItemDataAction =
   (action: IClearItemAction): AppThunk =>
   (dispatch, getState) => {
-    const clearedItem = pigmentsDataService.getDataItem(action.item.UNID);
+    const clearedItem = pigmentsRepository.getDefaultItemData(action.item.UNID);
     dispatch(clearItem({ item: clearedItem }));
 
     pigmentsRepository.sendData(getState().pigments);
   };
 
 export const clearDataAction = (): AppThunk => (dispatch, getState) => {
-  const clearedItem = pigmentsDataService.getData();
+  const clearedItem = pigmentsRepository.getDefaultData();
   dispatch(clearData(clearedItem));
 
   pigmentsRepository.sendData(getState().pigments);

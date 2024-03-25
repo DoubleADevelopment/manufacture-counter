@@ -1,12 +1,12 @@
 import { localstorageService } from '../../services';
-import { IData, IDataService, IRepository, storageNamesAliasType } from '../../types';
+import { IData, IItemData, IRepository, storageNamesAliasType } from '../../types';
 
 abstract class AbstractRepository implements IRepository {
-  #dataService: IDataService;
+  #defaultData: IData;
   #storageName: storageNamesAliasType;
 
-  constructor(dataService: IDataService, storageName: storageNamesAliasType) {
-    this.#dataService = dataService;
+  constructor(data: IData, storageName: storageNamesAliasType) {
+    this.#defaultData = data;
     this.#storageName = storageName;
   }
 
@@ -19,7 +19,7 @@ abstract class AbstractRepository implements IRepository {
   }
 
   #getDefaultData(): IData {
-    return this.#dataService.getData();
+    return this.#defaultData;
   }
 
   sendData(data: IData): IData | Error {
@@ -47,6 +47,10 @@ abstract class AbstractRepository implements IRepository {
 
   getDefaultData(): IData {
     return this.#getDefaultData();
+  }
+
+  getDefaultItemData(id: string): IItemData {
+    return this.#defaultData[id];
   }
 
   clearData() {

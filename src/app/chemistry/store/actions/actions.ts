@@ -1,8 +1,6 @@
 import { chemistrySlice } from '../slice/slice';
 //variables
 import { ChemistryLogsNames } from '../../variables/';
-//services
-import chemistryDataService from '../../services/chemistry-data.service';
 //repository
 import chemistryRepository from '../../repository/chemistry-repository';
 //types
@@ -44,14 +42,14 @@ export const decrementAction =
 export const clearItemDataAction =
   (action: IClearItemAction): AppThunk =>
   (dispatch, getState) => {
-    const clearedItem = chemistryDataService.getDataItem(action.item.UNID);
+    const clearedItem = chemistryRepository.getDefaultItemData(action.item.UNID);
     dispatch(clearItem({ item: clearedItem }));
 
     chemistryRepository.sendData(getState().chemistry);
   };
 
 export const clearDataAction = (): AppThunk => (dispatch, getState) => {
-  const clearedItem = chemistryDataService.getData();
+  const clearedItem = chemistryRepository.getDefaultData();
   dispatch(clearData(clearedItem));
 
   chemistryRepository.sendData(getState().chemistry);

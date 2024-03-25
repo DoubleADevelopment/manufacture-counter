@@ -1,6 +1,4 @@
 import { suppliesSlice } from '../slice/slice';
-//services
-import suppliesDataService from '../../services/supplies-data.service';
 //repository
 import suppliesRepository from '../../repository/supplies-repository';
 //types
@@ -43,14 +41,14 @@ export const decrementAction =
 export const clearItemDataAction =
   (action: IClearItemAction): AppThunk =>
   (dispatch, getState) => {
-    const clearedItem = suppliesDataService.getDataItem(action.item.UNID);
+    const clearedItem = suppliesRepository.getDefaultItemData(action.item.UNID);
     dispatch(clearItem({ item: clearedItem }));
 
     suppliesRepository.sendData(getState().supplies);
   };
 
 export const clearDataAction = (): AppThunk => (dispatch, getState) => {
-  const clearedItem = suppliesDataService.getData();
+  const clearedItem = suppliesRepository.getDefaultData();
   dispatch(clearData(clearedItem));
 
   suppliesRepository.sendData(getState().supplies);
