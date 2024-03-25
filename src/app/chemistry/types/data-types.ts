@@ -1,7 +1,7 @@
 //vars
 import { ChemistryLogsNames, ChemistrySettingsNames } from '../variables/';
 //types
-import type { IData, IItemData, ILogs, ISettings } from '../../../types';
+import type { IData, IItemData, ILogs, IPackage, ISettings } from '../../../types';
 
 interface IChemistryLogs extends ILogs {
   [ChemistryLogsNames.COUNTER]: {
@@ -22,11 +22,7 @@ interface IChemistryItem extends IItemData<IChemistryLogs, IChemistrySettings> {
 
 type ChemistryItemsListType = IChemistryItem[];
 
-interface IChemistryPackage {
-  dataPackageName: string;
-  dataPackageUNID: number;
-  items: ChemistryItemsListType;
-}
+interface IChemistryPackage extends IPackage<IChemistryItem> {}
 
 interface IChemistryData extends IData<IChemistryItem> {}
 

@@ -7,6 +7,7 @@ import type {
   IItemData,
   ILogs,
   ISettings,
+  IAbstractAdapterService,
 } from '../../types';
 
 abstract class AbstractAdapterService<
@@ -15,7 +16,8 @@ abstract class AbstractAdapterService<
   I extends IItemData<L, S>,
   L extends ILogs,
   S extends ISettings,
-> {
+> implements IAbstractAdapterService<P, D, I, L, S>
+{
   adaptDataToApp(data: P): D {
     const adaptedData: Record<string, I> = {};
 

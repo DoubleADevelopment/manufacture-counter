@@ -10,6 +10,7 @@ import type {
   IGumsPackage,
   IGumsLogs,
   GumsItemsListType,
+  IGumsSettings,
 } from './data-types';
 
 export type {
@@ -22,4 +23,5 @@ export type {
   IClearItemAction,
   ILogAction,
   IChangeItemSetting,
+  IGumsSettings,
 };

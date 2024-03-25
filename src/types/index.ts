@@ -1,4 +1,4 @@
-import type { IDataService, ILocalstorageService } from './services-types';
+import type { IAbstractAdapterService, IDataService, ILocalstorageService } from './services-types';
 import type { IRepository } from './repository-types';
 import type {
   IComponentData,
@@ -46,4 +46,5 @@ export type {
   IDataService,
   IData,
   IPackage,
+  IAbstractAdapterService,
 };

@@ -1,51 +1,66 @@
 //types
-import type { IItemDataToDisplay, ItemsDataToDisplayListType } from '../../../types';
-import type { IGumsItem, IGumsPackage, IGumsData, GumsItemsListType } from '../types/data-types';
+import AbstractAdapterService from '../../../services/abstract/abstractAdapter.service';
+// import type { IItemDataToDisplay, ItemsDataToDisplayListType } from '../../../types';
+import type {
+  IGumsItem,
+  IGumsPackage,
+  IGumsData,
+  IGumsLogs,
+  IGumsSettings,
+} from '../types/data-types';
 
-class GumsAdapterService {
-  adaptDataToApp(data: IGumsPackage): IGumsData {
-    const adaptedData: IGumsData = {};
+class GumsAdapterService extends AbstractAdapterService<
+  IGumsPackage,
+  IGumsData,
+  IGumsItem,
+  IGumsLogs,
+  IGumsSettings
+> {}
 
-    data.items.forEach((item: IGumsItem) => {
-      adaptedData[item.UNID] = item;
-    });
-    return adaptedData;
-  }
+// class GumsAdapterService {
+//   adaptDataToApp(data: IGumsPackage): IGumsData {
+//     const adaptedData: IGumsData = {};
 
-  adaptDataToView(data: IGumsData): GumsItemsListType {
-    const itemsArray: GumsItemsListType = [];
+//     data.items.forEach((item: IGumsItem) => {
+//       adaptedData[item.UNID] = item;
+//     });
+//     return adaptedData;
+//   }
 
-    for (const item in data) {
-      itemsArray.push(data[item]);
-    }
+//   adaptDataToView(data: IGumsData): GumsItemsListType {
+//     const itemsArray: GumsItemsListType = [];
 
-    return itemsArray;
-  }
+//     for (const item in data) {
+//       itemsArray.push(data[item]);
+//     }
 
-  adaptItemDataToDisplay(item: IGumsItem): IItemDataToDisplay {
-    return {
-      UNID: item.UNID,
-      manufactured: item.manufactured,
-      productName: item.productName,
-      systemCode: item.systemCode,
-      description: item.description,
-      additionalInfo: item.additionalInfo,
-      image: item.image,
-      amount: item.amount,
-      unitsOfMeasurement: item.unitsOfMeasurement,
-      logs: item.logs,
-      color: item.color,
-    };
-  }
+//     return itemsArray;
+//   }
 
-  adaptItemsDataToDisplayList(data: IGumsData): ItemsDataToDisplayListType {
-    const dataAdaptedToView = this.adaptDataToView(data);
-    const adaptedData = dataAdaptedToView.map((item) => {
-      return this.adaptItemDataToDisplay(item);
-    });
-    return adaptedData;
-  }
-}
+//   adaptItemDataToDisplay(item: IGumsItem): IItemDataToDisplay {
+//     return {
+//       UNID: item.UNID,
+//       manufactured: item.manufactured,
+//       productName: item.productName,
+//       systemCode: item.systemCode,
+//       description: item.description,
+//       additionalInfo: item.additionalInfo,
+//       image: item.image,
+//       amount: item.amount,
+//       unitsOfMeasurement: item.unitsOfMeasurement,
+//       logs: item.logs,
+//       color: item.color,
+//     };
+//   }
+
+//   adaptItemsDataToDisplayList(data: IGumsData): ItemsDataToDisplayListType {
+//     const dataAdaptedToView = this.adaptDataToView(data);
+//     const adaptedData = dataAdaptedToView.map((item) => {
+//       return this.adaptItemDataToDisplay(item);
+//     });
+//     return adaptedData;
+//   }
+// }
 
 const gumsAdapterService = new GumsAdapterService();
 

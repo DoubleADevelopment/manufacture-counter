@@ -1,5 +1,5 @@
 //types
-import type { IItemData, ILogs, ISettings } from '../../../types';
+import type { IItemData, ILogs, IPackage, ISettings } from '../../../types';
 //vars
 import { GumsLogsNames, GumsSettingsNames } from '../variables/data-variables';
 
@@ -31,14 +31,10 @@ interface IGumsItem extends IItemData<IGumsLogs, IGumsSettings> {}
 
 type GumsItemsListType = IGumsItem[];
 
-interface IGumsPackage {
-  dataPackageName: string;
-  dataPackageUNID: number;
-  items: GumsItemsListType;
-}
+interface IGumsPackage extends IPackage<IGumsItem> {}
 
 interface IGumsData {
   [UNID: string]: IGumsItem;
 }
 
-export type { IGumsItem, IGumsData, IGumsPackage, IGumsLogs, GumsItemsListType };
+export type { IGumsItem, IGumsData, IGumsPackage, IGumsLogs, GumsItemsListType, IGumsSettings };
