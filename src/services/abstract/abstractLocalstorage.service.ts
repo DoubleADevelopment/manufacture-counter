@@ -1,19 +1,19 @@
 //types
-import type { ILocalstorageService, storageNamesAliasType } from '../../types';
+import type { IData, ILocalstorageService, storageNamesAliasType } from '../../types';
 
-abstract class AbstractLocalstorageService<D> implements ILocalstorageService<D> {
+abstract class AbstractLocalstorageService implements ILocalstorageService {
   #storageName: storageNamesAliasType;
 
   constructor(storageName: storageNamesAliasType) {
     this.#storageName = storageName;
   }
 
-  getItems(): D | Error | null {
+  getItems(): IData | Error | null {
     try {
       const jsonData: string | null = localStorage.getItem(this.#storageName);
 
       if (jsonData) {
-        const parsedJsonData: D = JSON.parse(jsonData);
+        const parsedJsonData: IData = JSON.parse(jsonData);
         return parsedJsonData;
       } else {
         return null;
@@ -27,7 +27,7 @@ abstract class AbstractLocalstorageService<D> implements ILocalstorageService<D>
     }
   }
 
-  setItems(data: D): D | Error {
+  setItems(data: IData): IData | Error {
     try {
       localStorage.setItem(this.#storageName, JSON.stringify(data));
       return data;

@@ -49,7 +49,7 @@ interface ISettings {
   };
 }
 
-interface IItemData<L extends ILogs, S extends ISettings> {
+interface IItemData {
   UNID: string;
   amount: number;
   manufactured: string;
@@ -59,22 +59,22 @@ interface IItemData<L extends ILogs, S extends ISettings> {
   additionalInfo: string;
   image: string;
   color: string;
-  logs: L;
-  settings: S;
+  logs: ILogs;
+  settings: ISettings;
   counters?: string[];
   additionalResources: string[];
   packagingInfo: string;
   unitsOfMeasurement: string;
 }
 
-interface IData<I> {
-  [key: string]: I;
+interface IData {
+  [key: string]: IItemData;
 }
 
-interface IPackage<I> {
+interface IPackage {
   dataPackageName: string;
   dataPackageUNID: number;
-  items: I[];
+  items: IItemData[];
 }
 
 type storageNamesAliasType =

@@ -3,10 +3,8 @@ import { AbstractRepository } from '../../../repository';
 //services
 import suppliesDataService from '../services/supplies-data.service';
 import suppliesLocalstorageService from '../services/supplies-localstorage.service';
-//types
-import type { ISuppliesData, ISuppliesItem } from '../types/data-types';
 
-class SuppliesRepositroy extends AbstractRepository<ISuppliesItem, ISuppliesData> {}
+class SuppliesRepositroy extends AbstractRepository {}
 
 const suppliesRepository = new SuppliesRepositroy(suppliesDataService, suppliesLocalstorageService);
 

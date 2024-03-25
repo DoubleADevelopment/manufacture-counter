@@ -1,20 +1,19 @@
 //variables
 import { ChemistrySettingsNames } from '../../variables/';
 //types
-import type { RootState } from '../../../../types';
-import type { IChemistryItem, IChemistryData } from '../../types/';
+import type { IData, IItemData, RootState } from '../../../../types';
 
-export const SelectorGetChemistryState = (state: RootState): IChemistryData => state.chemistry;
+export const SelectorGetChemistryState = (state: RootState): IData => state.chemistry;
 
 export const SelectorGetChemistry =
   () =>
-  (state: RootState): IChemistryData => {
+  (state: RootState): IData => {
     return state.chemistry;
   };
 
 export const SelectorGetCurrentChemistry =
   (UNID: string) =>
-  (state: RootState): IChemistryItem =>
+  (state: RootState): IItemData =>
     state.chemistry[UNID];
 
 export const SelectorGetCurrentChemistrySetting =

@@ -1,21 +1,7 @@
 //abstract
 import { AbstractAdapterService } from '../../../services';
-//types
-import type {
-  ISuppliesItem,
-  ISuppliesPackage,
-  ISuppliesData,
-  ISuppliesLogs,
-  ISuppliesSettings,
-} from '../types/data-types';
 
-class SuppliesAdapterService extends AbstractAdapterService<
-  ISuppliesPackage,
-  ISuppliesData,
-  ISuppliesItem,
-  ISuppliesLogs,
-  ISuppliesSettings
-> {}
+class SuppliesAdapterService extends AbstractAdapterService {}
 
 const suppliesAdapterService = new SuppliesAdapterService();
 

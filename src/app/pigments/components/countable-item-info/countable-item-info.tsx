@@ -11,14 +11,13 @@ import {
   SelectorGetCurrentPigment,
 } from '../../store/slectors/selectors';
 //types
-import type { IPigmentsItem } from '../../types';
-import type { IItemDataToDisplay } from '../../../../types';
+import type { IItemData, IItemDataToDisplay } from '../../../../types';
 
 const CountableItemInfo = (): JSX.Element => {
   const { UNID } = useParams();
 
   const itemFromUnidIsset = useAppSelector(SelectorCheckIfElementExistsByUNID(UNID));
-  const item: IPigmentsItem | undefined =
+  const item: IItemData | undefined =
     UNID && itemFromUnidIsset ? useAppSelector(SelectorGetCurrentPigment(UNID)) : undefined;
 
   const dispatch = useAppDispatch();

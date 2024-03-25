@@ -1,15 +1,15 @@
 //abstract
 import { AbstractDataService } from '../../../services';
 //types
-import type { IGumsData, IGumsItem } from '../types/';
+import { IData } from '../../../types';
 //data
 import gumsData from '../data/gums-data';
 //adapters
 import gumsAdapterService from './gums-adapter.service';
 
-const adaptedData: IGumsData = gumsAdapterService.adaptDataToApp(gumsData);
+const adaptedData: IData = gumsAdapterService.adaptDataToApp(gumsData);
 
-class GumsDataService extends AbstractDataService<IGumsItem, IGumsData> {}
+class GumsDataService extends AbstractDataService {}
 
 const gumsDataService = new GumsDataService(adaptedData);
 

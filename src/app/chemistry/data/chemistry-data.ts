@@ -2,9 +2,9 @@
 import { ChemistryLogsNames, ChemistrySettingsNames } from '../variables/';
 import { rootBaseName } from '../../../variables';
 //types
-import type { IChemistryPackage } from '../types';
+import type { IPackage } from '../../../types';
 
-const chemistryData: IChemistryPackage = {
+const chemistryData: IPackage = {
   dataPackageName: 'Chemistry',
   dataPackageUNID: 1001,
   items: [

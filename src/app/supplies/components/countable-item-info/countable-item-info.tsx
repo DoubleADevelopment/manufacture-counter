@@ -11,14 +11,13 @@ import {
   SelectorGetCurrentSupplie,
 } from '../../store/slectors/selectors';
 //types
-import type { ISuppliesItem } from '../../types';
-import type { IItemDataToDisplay } from '../../../../types';
+import type { IItemData, IItemDataToDisplay } from '../../../../types';
 
 const CountableItemInfo = (): JSX.Element => {
   const { UNID } = useParams();
 
   const itemFromUnidIsset = useAppSelector(SelectorCheckIfElementExistsByUNID(UNID));
-  const item: ISuppliesItem | undefined =
+  const item: IItemData | undefined =
     UNID && itemFromUnidIsset ? useAppSelector(SelectorGetCurrentSupplie(UNID)) : undefined;
 
   const dispatch = useAppDispatch();

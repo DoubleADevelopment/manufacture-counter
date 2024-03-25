@@ -1,17 +1,17 @@
-import type { IData, IDataService } from '../../types';
+import type { IData, IDataService, IItemData } from '../../types';
 
-abstract class AbstractDataService<I, D extends IData<I>> implements IDataService<I, D> {
-  #data: D;
+abstract class AbstractDataService implements IDataService {
+  #data: IData;
 
-  constructor(data: D) {
+  constructor(data: IData) {
     this.#data = data;
   }
 
-  getData(): D {
+  getData(): IData {
     return this.#data;
   }
 
-  getDataItem(id: string): I {
+  getDataItem(id: string): IItemData {
     return this.#data[id];
   }
 }

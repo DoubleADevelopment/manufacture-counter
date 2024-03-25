@@ -1,27 +1,27 @@
-import { IDataService, ILocalstorageService, IRepository } from '../../types';
+import { IData, IDataService, ILocalstorageService, IRepository } from '../../types';
 
-abstract class AbstractRepository<I, D> implements IRepository<D> {
-  #dataService: IDataService<I, D>;
-  #localstorageService: ILocalstorageService<D>;
+abstract class AbstractRepository implements IRepository {
+  #dataService: IDataService;
+  #localstorageService: ILocalstorageService;
 
-  constructor(dataService: IDataService<I, D>, localstorageService: ILocalstorageService<D>) {
+  constructor(dataService: IDataService, localstorageService: ILocalstorageService) {
     this.#dataService = dataService;
     this.#localstorageService = localstorageService;
   }
 
-  #getDataFromStorage(): D | null | Error {
+  #getDataFromStorage(): IData | null | Error {
     return this.#localstorageService.getItems();
   }
 
-  #sendDataToStorage(data: D): D | Error {
+  #sendDataToStorage(data: IData): IData | Error {
     return this.#localstorageService.setItems(data);
   }
 
-  #getDefaultData(): D {
+  #getDefaultData(): IData {
     return this.#dataService.getData();
   }
 
-  sendData(data: D): D | Error {
+  sendData(data: IData): IData | Error {
     const result = this.#sendDataToStorage(data);
 
     if (result instanceof Error) {
@@ -31,7 +31,7 @@ abstract class AbstractRepository<I, D> implements IRepository<D> {
     }
   }
 
-  getData(): D {
+  getData(): IData {
     const result = this.#getDataFromStorage();
 
     if (result instanceof Error) {
@@ -44,7 +44,7 @@ abstract class AbstractRepository<I, D> implements IRepository<D> {
     }
   }
 
-  getDefaultData(): D {
+  getDefaultData(): IData {
     return this.#getDefaultData();
   }
 

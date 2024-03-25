@@ -1,15 +1,15 @@
 //abstract
 import { AbstractDataService } from '../../../services';
 //types
-import type { IPigmentsData, IPigmentsItem } from '../types/data-type';
+import type { IData } from '../../../types';
 //data
 import pigmentsData from '../data/pigments-data';
 //adapters
 import pigmentsAdapterService from './pigments-adapter.service';
 
-const adaptedData: IPigmentsData = pigmentsAdapterService.adaptDataToApp(pigmentsData);
+const adaptedData: IData = pigmentsAdapterService.adaptDataToApp(pigmentsData);
 
-class PigmentsDataService extends AbstractDataService<IPigmentsItem, IPigmentsData> {}
+class PigmentsDataService extends AbstractDataService {}
 
 const pigmentsDataService = new PigmentsDataService(adaptedData);
 

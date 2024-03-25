@@ -4,14 +4,8 @@ import { GumsLogsNames } from '../../variables/';
 //state
 import gumsState from '../state/state';
 //types
-import type {
-  IClearItemAction,
-  IIncDecAction,
-  ILogAction,
-  IGumsData,
-  IGumsItem,
-  IChangeItemSetting,
-} from '../../types';
+import type { IClearItemAction, IIncDecAction, ILogAction, IChangeItemSetting } from '../../types';
+import type { IData, IItemData } from '../../../../types';
 
 export const gumsSlice = createSlice({
   name: 'gums',
@@ -31,14 +25,11 @@ export const gumsSlice = createSlice({
       state[UNID].logs[logName].log.push(log);
       state[UNID].logs[logName].lastChange = new Date().getTime().toString();
     },
-    clearItem: (state, action: PayloadAction<IClearItemAction<IGumsItem>>) => {
+    clearItem: (state, action: PayloadAction<IClearItemAction<IItemData>>) => {
       const { UNID } = action.payload.item;
       state[UNID] = action.payload.item;
     },
-    // clearData: (state, action: PayloadAction<IGumsData>) => {
-    //   state = action.payload;
-    // },
-    clearData: (state, action: PayloadAction<IGumsData>) => {
+    clearData: (state, action: PayloadAction<IData>) => {
       return action.payload;
     },
     changeItemSetting: (state, action: PayloadAction<IChangeItemSetting>) => {

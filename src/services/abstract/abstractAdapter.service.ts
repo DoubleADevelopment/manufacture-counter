@@ -5,30 +5,21 @@ import type {
   IPackage,
   ItemsDataToDisplayListType,
   IItemData,
-  ILogs,
-  ISettings,
   IAbstractAdapterService,
 } from '../../types';
 
-abstract class AbstractAdapterService<
-  P extends IPackage<I>,
-  D extends IData<I>,
-  I extends IItemData<L, S>,
-  L extends ILogs,
-  S extends ISettings,
-> implements IAbstractAdapterService<P, D, I, L, S>
-{
-  adaptDataToApp(data: P): D {
-    const adaptedData: Record<string, I> = {};
+abstract class AbstractAdapterService implements IAbstractAdapterService {
+  adaptDataToApp(data: IPackage): IData {
+    const adaptedData: Record<string, IItemData> = {};
 
-    data.items.forEach((item: I) => {
+    data.items.forEach((item: IItemData) => {
       adaptedData[item.UNID] = item;
     });
-    return adaptedData as D;
+    return adaptedData as IData;
   }
 
-  adaptDataToView(data: D): I[] {
-    const itemsArray: I[] = [];
+  adaptDataToView(data: IData): IItemData[] {
+    const itemsArray: IItemData[] = [];
 
     for (const item in data) {
       itemsArray.push(data[item]);
@@ -37,7 +28,7 @@ abstract class AbstractAdapterService<
     return itemsArray;
   }
 
-  adaptItemDataToDisplay(item: I): IItemDataToDisplay {
+  adaptItemDataToDisplay(item: IItemData): IItemDataToDisplay {
     return {
       UNID: item.UNID,
       manufactured: item.manufactured,
@@ -53,7 +44,7 @@ abstract class AbstractAdapterService<
     };
   }
 
-  adaptItemsDataToDisplayList(data: D): ItemsDataToDisplayListType {
+  adaptItemsDataToDisplayList(data: IData): ItemsDataToDisplayListType {
     const dataAdaptedToView = this.adaptDataToView(data);
     const adaptedData = dataAdaptedToView.map((item) => {
       return this.adaptItemDataToDisplay(item);

@@ -1,10 +1,10 @@
 //types
+import { IPackage } from '../../../types';
 import { rootBaseName } from '../../../variables';
-import type { IGumsPackage } from '../types/data-types';
 //vars
 import { GumsLogsNames, GumsSettingsNames } from '../variables/data-variables';
 
-const gumsData: IGumsPackage = {
+const gumsData: IPackage = {
   dataPackageName: 'gums',
   dataPackageUNID: 3001,
   items: [

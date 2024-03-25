@@ -1,12 +1,11 @@
 //types
 import type { storageNamesAliasType } from '../../../types';
-import type { ISuppliesData } from '../types/data-types';
 //variables
 import { SUPPLIES_STORAGE_NAME } from '../variables';
 //abstract
 import { AbstractLocalstorageService } from '../../../services';
 
-class SuppliesLocalstorageService extends AbstractLocalstorageService<ISuppliesData> {
+class SuppliesLocalstorageService extends AbstractLocalstorageService {
   constructor(storageName: storageNamesAliasType) {
     super(storageName);
   }

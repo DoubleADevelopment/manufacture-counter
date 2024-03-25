@@ -1,12 +1,11 @@
 //types
 import type { storageNamesAliasType } from '../../../types';
-import type { IPigmentsData } from '../types/data-type';
 //variables
 import { PIGMENTS_STORAGE_NAME } from '../variables/data-variables';
 //abstract
 import { AbstractLocalstorageService } from '../../../services';
 
-class PigmentsLocalstorageService extends AbstractLocalstorageService<IPigmentsData> {
+class PigmentsLocalstorageService extends AbstractLocalstorageService {
   constructor(storageName: storageNamesAliasType) {
     super(storageName);
   }

@@ -2,37 +2,29 @@ import {
   IData,
   IItemData,
   IItemDataToDisplay,
-  ILogs,
   IPackage,
-  ISettings,
   ItemsDataToDisplayListType,
 } from './data-types';
 
-interface ILocalstorageService<D> {
-  getItems(): D | Error | null;
+interface ILocalstorageService {
+  getItems(): IData | Error | null;
 
-  setItems(data: D): D | Error;
+  setItems(data: IData): IData | Error;
 
   clearStore(): void;
 }
 
-interface IDataService<I, D> {
-  getData(): D;
+interface IDataService {
+  getData(): IData;
 
-  getDataItem(id: string): I;
+  getDataItem(id: string): IItemData;
 }
 
-interface IAbstractAdapterService<
-  P extends IPackage<I>,
-  D extends IData<I>,
-  I extends IItemData<L, S>,
-  L extends ILogs,
-  S extends ISettings,
-> {
-  adaptDataToApp(data: P): D;
-  adaptDataToView(data: D): I[];
-  adaptItemDataToDisplay(item: I): IItemDataToDisplay;
-  adaptItemsDataToDisplayList(data: D): ItemsDataToDisplayListType;
+interface IAbstractAdapterService {
+  adaptDataToApp(data: IPackage): IData;
+  adaptDataToView(data: IData): IItemData[];
+  adaptItemDataToDisplay(item: IItemData): IItemDataToDisplay;
+  adaptItemsDataToDisplayList(data: IData): ItemsDataToDisplayListType;
 }
 
 export type { ILocalstorageService, IDataService, IAbstractAdapterService };

@@ -11,14 +11,13 @@ import {
 //components
 import { ShortCardWithLogsModal } from '../../../../components/cards';
 //types
-import type { IItemDataToDisplay } from '../../../../types';
-import type { IChemistryItem } from '../../types/';
+import type { IItemData, IItemDataToDisplay } from '../../../../types';
 
 const CountableItemInfo = (): JSX.Element => {
   const { UNID } = useParams();
 
   const itemFromUnidIsset = useAppSelector(SelectorCheckIfElementExistsByUNID(UNID));
-  const item: IChemistryItem | undefined =
+  const item: IItemData | undefined =
     UNID && itemFromUnidIsset ? useAppSelector(SelectorGetCurrentChemistry(UNID)) : undefined;
 
   const dispatch = useAppDispatch();
