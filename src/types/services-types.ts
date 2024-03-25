@@ -6,4 +6,10 @@ interface ILocalstorageService<D> {
   clearStore(): void;
 }
 
-export type { ILocalstorageService };
+interface IDataService<I, D> {
+  getData(): D;
+
+  getDataItem(id: string): I;
+}
+
+export type { ILocalstorageService, IDataService };

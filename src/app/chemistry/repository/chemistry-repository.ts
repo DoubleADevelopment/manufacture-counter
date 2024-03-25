@@ -2,64 +2,67 @@
 import chemistryDataService from '../services/chemistry-data.service';
 import chemistryLocalstorageService from '../services/chemistry-localstorage.service';
 //types
-import type { IRepository } from '../../../types';
-import type { IChemistryData } from '../types/';
+// import type { IRepository } from '../../../types';
+import type { IChemistryData, IChemistryItem } from '../types/';
+import { AbstractRepository } from '../../../repository';
 
-class ChemistryRepositroy implements IRepository<IChemistryData> {
-  #dataService: typeof chemistryDataService;
-  #localstorageService: typeof chemistryLocalstorageService;
+// class ChemistryRepositroy implements IRepository<IChemistryData> {
+//   #dataService: typeof chemistryDataService;
+//   #localstorageService: typeof chemistryLocalstorageService;
 
-  constructor(
-    dataService: typeof chemistryDataService,
-    localstorageService: typeof chemistryLocalstorageService,
-  ) {
-    this.#dataService = dataService;
-    this.#localstorageService = localstorageService;
-  }
+//   constructor(
+//     dataService: typeof chemistryDataService,
+//     localstorageService: typeof chemistryLocalstorageService,
+//   ) {
+//     this.#dataService = dataService;
+//     this.#localstorageService = localstorageService;
+//   }
 
-  #getDataFromStorage(): IChemistryData | null | Error {
-    return this.#localstorageService.getItems();
-  }
+//   #getDataFromStorage(): IChemistryData | null | Error {
+//     return this.#localstorageService.getItems();
+//   }
 
-  #sendDataToStorage(data: IChemistryData): IChemistryData | Error {
-    return this.#localstorageService.setItems(data);
-  }
+//   #sendDataToStorage(data: IChemistryData): IChemistryData | Error {
+//     return this.#localstorageService.setItems(data);
+//   }
 
-  #getDefaultData(): IChemistryData {
-    return this.#dataService.getData();
-  }
+//   #getDefaultData(): IChemistryData {
+//     return this.#dataService.getData();
+//   }
 
-  sendData(data: IChemistryData): IChemistryData | Error {
-    const result = this.#sendDataToStorage(data);
+//   sendData(data: IChemistryData): IChemistryData | Error {
+//     const result = this.#sendDataToStorage(data);
 
-    if (result instanceof Error) {
-      throw new Error(result.message);
-    } else {
-      return result;
-    }
-  }
+//     if (result instanceof Error) {
+//       throw new Error(result.message);
+//     } else {
+//       return result;
+//     }
+//   }
 
-  getData(): IChemistryData {
-    const result = this.#getDataFromStorage();
+//   getData(): IChemistryData {
+//     const result = this.#getDataFromStorage();
 
-    if (result instanceof Error) {
-      throw new Error(result.message);
-    } else if (result === null) {
-      const defaultData = this.#getDefaultData();
-      return defaultData;
-    } else {
-      return result;
-    }
-  }
+//     if (result instanceof Error) {
+//       throw new Error(result.message);
+//     } else if (result === null) {
+//       const defaultData = this.#getDefaultData();
+//       return defaultData;
+//     } else {
+//       return result;
+//     }
+//   }
 
-  getDefaultData(): IChemistryData {
-    return this.#getDefaultData();
-  }
+//   getDefaultData(): IChemistryData {
+//     return this.#getDefaultData();
+//   }
 
-  clearData() {
-    this.#localstorageService.clearStore();
-  }
-}
+//   clearData() {
+//     this.#localstorageService.clearStore();
+//   }
+// }
+
+class ChemistryRepositroy extends AbstractRepository<IChemistryItem, IChemistryData> {}
 
 const chemistryRepository = new ChemistryRepositroy(
   chemistryDataService,

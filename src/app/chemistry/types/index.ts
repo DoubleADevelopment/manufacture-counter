@@ -5,6 +5,7 @@ import type {
   IChemistryPackage,
   IChemistryLogs,
   ChemistryItemsListType,
+  IChemistrySettings,
 } from './data-types';
 
 export type {
@@ -16,4 +17,5 @@ export type {
   IChemistryPackage,
   IChemistryLogs,
   ChemistryItemsListType,
+  IChemistrySettings,
 };

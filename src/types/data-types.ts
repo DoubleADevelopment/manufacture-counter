@@ -67,6 +67,16 @@ interface IItemData<L extends ILogs, S extends ISettings> {
   unitsOfMeasurement: string;
 }
 
+interface IData<I> {
+  [key: string]: I;
+}
+
+interface IPackage<I> {
+  dataPackageName: string;
+  dataPackageUNID: number;
+  items: I[];
+}
+
 type storageNamesAliasType =
   | typeof CHEMISTRY_STORAGE_NAME
   | typeof GUMS_STORAGE_NAME
@@ -83,4 +93,6 @@ export type {
   IItemData,
   storageNamesAliasType,
   ILogItem,
+  IData,
+  IPackage,
 };
