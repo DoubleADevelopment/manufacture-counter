@@ -11,8 +11,6 @@ enum PigmentsSettingsNames {
   BASE_COUNTER_VALUE = 'baseCounterValue',
 }
 
-const PIGMENTS_STORAGE_NAME = 'pigments-data';
-
 enum PIGMENTS_COUNTERS {
   COUNTER = 'Licznik',
   BAGS = 'Worki',
@@ -25,10 +23,4 @@ const pigmentsCountersList: PIGMENTS_COUNTERS[] = [
   PIGMENTS_COUNTERS.CONTAINER,
 ];
 
-export {
-  PigmentsLogsNames,
-  PigmentsSettingsNames,
-  PIGMENTS_STORAGE_NAME,
-  PIGMENTS_COUNTERS,
-  pigmentsCountersList,
-};
+export { PigmentsLogsNames, PigmentsSettingsNames, PIGMENTS_COUNTERS, pigmentsCountersList };

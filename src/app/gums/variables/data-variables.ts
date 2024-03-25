@@ -8,8 +8,6 @@ enum GumsSettingsNames {
   BASE_COUNTER_VALUE = 'baseCounterValue',
 }
 
-const GUMS_STORAGE_NAME = 'gums-data';
-
 enum GUMS_COUNTERS {
   COUNTER = 'Licznik',
   CARDBOARD = 'Kartony',
@@ -17,4 +15,4 @@ enum GUMS_COUNTERS {
 
 const gumsCountersList: GUMS_COUNTERS[] = [GUMS_COUNTERS.COUNTER, GUMS_COUNTERS.CARDBOARD];
 
-export { GumsLogsNames, GumsSettingsNames, GUMS_STORAGE_NAME, GUMS_COUNTERS, gumsCountersList };
+export { GumsLogsNames, GumsSettingsNames, GUMS_COUNTERS, gumsCountersList };
