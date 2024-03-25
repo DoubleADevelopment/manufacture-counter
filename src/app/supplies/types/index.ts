@@ -5,6 +5,7 @@ import {
   ISuppliesPackage,
   ISuppliesLogs,
   SuppliesItemsListType,
+  ISuppliesSettings,
 } from './data-types';
 
 export type {
@@ -17,4 +18,5 @@ export type {
   IClearItemAction,
   ILogAction,
   IChangeItemSetting,
+  ISuppliesSettings,
 };

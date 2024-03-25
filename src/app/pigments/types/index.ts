@@ -10,6 +10,7 @@ import type {
   IPigmentsPackage,
   IPigmentsLogs,
   PigmentsItemsListType,
+  IPigmentsSettings,
 } from './data-type';
 
 export type {
@@ -22,4 +23,5 @@ export type {
   IClearItemAction,
   ILogAction,
   IChangeItemSetting,
+  IPigmentsSettings,
 };

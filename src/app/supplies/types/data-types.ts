@@ -1,5 +1,5 @@
 //types
-import type { IItemData, ILogs, ISettings } from '../../../types';
+import type { IItemData, ILogs, IPackage, ISettings } from '../../../types';
 //vars
 import { SuppliesLogsNames, SuppliesSettingsNames } from '../variables/data-variables';
 
@@ -22,11 +22,7 @@ interface ISuppliesItem extends IItemData<ISuppliesLogs, ISuppliesSettings> {}
 
 type SuppliesItemsListType = ISuppliesItem[];
 
-interface ISuppliesPackage {
-  dataPackageName: string;
-  dataPackageUNID: number;
-  items: ISuppliesItem[];
-}
+interface ISuppliesPackage extends IPackage<ISuppliesItem> {}
 
 interface ISuppliesData {
   [UNID: string]: ISuppliesItem;
@@ -38,4 +34,5 @@ export type {
   ISuppliesPackage,
   ISuppliesLogs,
   SuppliesItemsListType,
+  ISuppliesSettings,
 };

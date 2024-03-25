@@ -1,5 +1,5 @@
 //types
-import type { IItemData, ILogs, ISettings } from '../../../types';
+import type { IItemData, ILogs, IPackage, ISettings } from '../../../types';
 //vars
 import { PigmentsLogsNames, PigmentsSettingsNames } from '../variables/data-variables';
 
@@ -44,11 +44,7 @@ interface IPigmentsItem extends IItemData<IPigmentsLogs, IPigmentsSettings> {}
 
 type PigmentsItemsListType = IPigmentsItem[];
 
-interface IPigmentsPackage {
-  dataPackageName: string;
-  dataPackageUNID: number;
-  items: IPigmentsItem[];
-}
+interface IPigmentsPackage extends IPackage<IPigmentsItem> {}
 
 interface IPigmentsData {
   [UNID: string]: IPigmentsItem;
@@ -60,4 +56,5 @@ export type {
   IPigmentsPackage,
   IPigmentsLogs,
   PigmentsItemsListType,
+  IPigmentsSettings,
 };
