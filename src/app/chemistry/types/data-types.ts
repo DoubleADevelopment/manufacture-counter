@@ -1,8 +1,7 @@
 //vars
-import { IItemData, ILogs, ISettings } from '../../../types';
 import { ChemistryLogsNames, ChemistrySettingsNames } from '../variables/';
 //types
-import { ChemistryPackagesNames } from '../variables/';
+import type { IItemData, ILogs, ISettings } from '../../../types';
 
 interface IChemistryLogs extends ILogs {
   [ChemistryLogsNames.COUNTER]: {
@@ -19,35 +18,24 @@ interface IChemistrySettings extends ISettings {
   };
 }
 
-interface IChemistryItem extends IItemData<IChemistryLogs, IChemistrySettings> {
-  packageName: ChemistryPackagesNames;
-}
+interface IChemistryItem extends IItemData<IChemistryLogs, IChemistrySettings> {}
 
 type ChemistryItemsListType = IChemistryItem[];
 
 interface IChemistryPackage {
-  dataPackageName: ChemistryPackagesNames;
+  dataPackageName: string;
   dataPackageUNID: number;
   items: ChemistryItemsListType;
 }
 
-type ChemistryPackagesListType = IChemistryPackage[];
-
-interface IChemistryItems {
+interface IChemistryData {
   [UNID: string]: IChemistryItem;
 }
 
-interface IChemistryData {
-  [ChemistryPackagesNames.EXTRUSION]: IChemistryItems;
-  [ChemistryPackagesNames.VENEER]: IChemistryItems;
-}
-
 export type {
-  ChemistryPackagesListType,
   IChemistryItem,
-  IChemistryData,
   IChemistryPackage,
   IChemistryLogs,
-  IChemistryItems,
+  IChemistryData,
   ChemistryItemsListType,
 };

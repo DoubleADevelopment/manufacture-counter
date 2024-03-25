@@ -20,7 +20,6 @@ export const incrementAction =
       log: `+${action.value.toString()}`,
       logName: ChemistryLogsNames.COUNTER,
       UNID: action.UNID,
-      packageName: action.packageName,
     };
 
     dispatch(log(newLog));
@@ -36,7 +35,6 @@ export const decrementAction =
       log: `-${action.value.toString()}`,
       logName: ChemistryLogsNames.COUNTER,
       UNID: action.UNID,
-      packageName: action.packageName,
     };
 
     dispatch(log(newLog));
@@ -46,8 +44,8 @@ export const decrementAction =
 export const clearItemDataAction =
   (action: IClearItemAction<IChemistryItem>): AppThunk =>
   (dispatch, getState) => {
-    const clearedItem = chemistryDataService.getDataItem(action.item.UNID, action.packageName);
-    dispatch(clearItem({ item: clearedItem, packageName: action.packageName }));
+    const clearedItem = chemistryDataService.getDataItem(action.item.UNID);
+    dispatch(clearItem({ item: clearedItem }));
 
     chemistryRepository.sendData(getState().chemistry);
   };

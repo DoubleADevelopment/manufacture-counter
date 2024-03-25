@@ -1,6 +1,6 @@
 //store
 import { useAppSelector } from '../../../../hooks/hooks';
-import { SelectorGetExtrusionChemistry } from '../../store/slectors/selectors';
+import { SelectorGetChemistry } from '../../store/slectors/selectors';
 //services
 import chemistryAdapterService from '../../services/chemistry-adapter.service';
 //components
@@ -14,7 +14,7 @@ import { AppRouting, ErrorsText, NotificationType } from '../../../../variables'
 import style from './chemistry-root-page.module.scss';
 
 const ChemistryExtrusionPage = (): JSX.Element => {
-  const chemistryState = useAppSelector(SelectorGetExtrusionChemistry());
+  const chemistryState = useAppSelector(SelectorGetChemistry());
   const adaptedData = chemistryAdapterService.adaptItemsDataToDisplayList(chemistryState);
 
   return (

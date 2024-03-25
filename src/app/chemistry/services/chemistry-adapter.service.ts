@@ -1,31 +1,23 @@
-//variablse
-import { ChemistryPackagesNames } from '../variables/';
 //types
 import type { IItemDataToDisplay, ItemsDataToDisplayListType } from '../../../types';
 import type {
   IChemistryItem,
   IChemistryData,
-  ChemistryPackagesListType,
   ChemistryItemsListType,
-  IChemistryItems,
+  IChemistryPackage,
 } from '../types/data-types';
 
 class ChemistryAdapterService {
-  adaptDataToApp(data: ChemistryPackagesListType): IChemistryData {
-    const adaptedData: IChemistryData = {
-      [ChemistryPackagesNames.EXTRUSION]: {},
-      [ChemistryPackagesNames.VENEER]: {},
-    };
+  adaptDataToApp(data: IChemistryPackage): IChemistryData {
+    const adaptedData: IChemistryData = {};
 
-    for (const dataPackage of data) {
-      dataPackage.items.forEach((item: IChemistryItem) => {
-        adaptedData[dataPackage.dataPackageName][item.UNID] = item;
-      });
-    }
+    data.items.forEach((item: IChemistryItem) => {
+      adaptedData[item.UNID] = item;
+    });
     return adaptedData;
   }
 
-  adaptDataToView(data: IChemistryItems): ChemistryItemsListType {
+  adaptDataToView(data: IChemistryData): ChemistryItemsListType {
     const itemsArray: ChemistryItemsListType = [];
 
     for (const item in data) {
@@ -51,7 +43,7 @@ class ChemistryAdapterService {
     };
   }
 
-  adaptItemsDataToDisplayList(data: IChemistryItems): ItemsDataToDisplayListType {
+  adaptItemsDataToDisplayList(data: IChemistryData): ItemsDataToDisplayListType {
     const dataAdaptedToView = this.adaptDataToView(data);
     const adaptedData = dataAdaptedToView.map((item) => {
       return this.adaptItemDataToDisplay(item);

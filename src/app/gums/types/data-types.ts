@@ -34,7 +34,7 @@ type GumsItemsListType = IGumsItem[];
 interface IGumsPackage {
   dataPackageName: string;
   dataPackageUNID: number;
-  items: IGumsItem[];
+  items: GumsItemsListType;
 }
 
 interface IGumsData {

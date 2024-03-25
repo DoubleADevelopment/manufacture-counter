@@ -2,8 +2,6 @@
 import type { IChemistryData } from '../types/data-types';
 //data
 import chemistryData from '../data/chemistry-data';
-//variables
-import { ChemistryPackagesNames } from '../variables/';
 //adapters
 import chemistryAdapterService from './chemistry-adapter.service';
 
@@ -20,8 +18,8 @@ class ChemistryDataService {
     return this.#data;
   }
 
-  getDataItem(id: string, packageName: ChemistryPackagesNames) {
-    return this.#data[packageName][id];
+  getDataItem(id: string) {
+    return this.#data[id];
   }
 }
 const chemistryDataService = new ChemistryDataService(adaptedData);

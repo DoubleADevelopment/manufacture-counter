@@ -1,9 +1,16 @@
+//variables
+import { GumsSettingsNames } from '../../variables';
 //types
 import type { RootState } from '../../../../types';
 import type { IGumsItem, IGumsData } from '../../types/';
-import { GumsSettingsNames } from '../../variables';
 
 export const SelectorGetGumsState = (state: RootState): IGumsData => state.gums;
+
+export const SelectorGetGums =
+  () =>
+  (state: RootState): IGumsData => {
+    return state.gums;
+  };
 
 export const SelectorGetCurrentGum =
   (UNID: string) =>
@@ -14,12 +21,6 @@ export const SelectorGetCurrentGumSetting =
   (UNID: string, settingName: GumsSettingsNames) =>
   (state: RootState): number =>
     state.gums[UNID].settings[settingName].settingValue;
-
-export const SelectorGetGums =
-  () =>
-  (state: RootState): IGumsData => {
-    return state.gums;
-  };
 
 export const SelectorCheckIfElementExistsByUNID =
   (UNID: string | undefined) =>

@@ -4,7 +4,7 @@ import { PageWithMenuLayout } from '../../layouts';
 import { ComponentOverview } from '../../components';
 //store
 import { useAppSelector } from '../../hooks/hooks';
-import { SelectorGetExtrusionChemistry } from '../../app/chemistry/store/slectors/selectors';
+import { SelectorGetChemistry } from '../../app/chemistry/store/slectors/selectors';
 import { SelectorGetGums } from '../../app/gums/store/slectors/selectors';
 import { SelectorGetPigments } from '../../app/pigments/store/slectors/selectors';
 import { SelectorGetSupplies } from '../../app/supplies/store/slectors/selectors';
@@ -20,7 +20,7 @@ import style from './components-overview-page.module.scss';
 
 const ComponentOverviewPage = (): JSX.Element => {
   const chemistryData = chemistryAdapterService.adaptItemsDataToDisplayList(
-    useAppSelector(SelectorGetExtrusionChemistry()),
+    useAppSelector(SelectorGetChemistry()),
   );
   const gumsData = gumsAdapterService.adaptItemsDataToDisplayList(
     useAppSelector(SelectorGetGums()),

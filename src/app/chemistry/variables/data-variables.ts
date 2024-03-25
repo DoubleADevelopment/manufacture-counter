@@ -8,15 +8,4 @@ enum ChemistrySettingsNames {
 
 const CHEMISTRY_STORAGE_NAME = 'chemistry-data';
 
-//veneer, extrusion
-enum ChemistryPackagesNames {
-  VENEER = 'veener',
-  EXTRUSION = 'extrusion',
-}
-
-export {
-  CHEMISTRY_STORAGE_NAME,
-  ChemistrySettingsNames,
-  ChemistryLogsNames,
-  ChemistryPackagesNames,
-};
+export { CHEMISTRY_STORAGE_NAME, ChemistrySettingsNames, ChemistryLogsNames };

@@ -7,19 +7,14 @@ import { useAppSelector } from '../../../../hooks/hooks';
 import { SelectorCheckIfElementExistsByUNID } from '../../store/slectors/selectors';
 //variables
 import { ErrorsText, NotificationType } from '../../../../variables';
-import { ChemistryPackagesNames } from '../../variables/';
 
-interface ICounterProps {
-  packageName: ChemistryPackagesNames;
-}
-
-const Counter = ({ packageName }: ICounterProps): JSX.Element => {
+const Counter = (): JSX.Element => {
   const { UNID } = useParams();
-  const itemFromUnidIsset = useAppSelector(SelectorCheckIfElementExistsByUNID(UNID, packageName));
+  const itemFromUnidIsset = useAppSelector(SelectorCheckIfElementExistsByUNID(UNID));
 
   const renderComponents = (): JSX.Element => {
     if (UNID && itemFromUnidIsset) {
-      return <CounterControls UNID={UNID} packName={packageName} />;
+      return <CounterControls UNID={UNID} />;
     } else {
       return (
         <PageNotification

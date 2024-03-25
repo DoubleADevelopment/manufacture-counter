@@ -8,26 +8,18 @@ import {
   SelectorCheckIfElementExistsByUNID,
   SelectorGetCurrentChemistry,
 } from '../../store/slectors/selectors';
-//variables
-import { ChemistryPackagesNames } from '../../variables/';
 //components
 import { ShortCardWithLogsModal } from '../../../../components/cards';
 //types
 import type { IItemDataToDisplay } from '../../../../types';
 import type { IChemistryItem } from '../../types/';
 
-interface ICountableItemInfoProps {
-  packageName: ChemistryPackagesNames;
-}
-
-const CountableItemInfo = ({ packageName }: ICountableItemInfoProps): JSX.Element => {
+const CountableItemInfo = (): JSX.Element => {
   const { UNID } = useParams();
 
-  const itemFromUnidIsset = useAppSelector(SelectorCheckIfElementExistsByUNID(UNID, packageName));
+  const itemFromUnidIsset = useAppSelector(SelectorCheckIfElementExistsByUNID(UNID));
   const item: IChemistryItem | undefined =
-    UNID && itemFromUnidIsset
-      ? useAppSelector(SelectorGetCurrentChemistry(UNID, packageName))
-      : undefined;
+    UNID && itemFromUnidIsset ? useAppSelector(SelectorGetCurrentChemistry(UNID)) : undefined;
 
   const dispatch = useAppDispatch();
 
@@ -41,7 +33,7 @@ const CountableItemInfo = ({ packageName }: ICountableItemInfoProps): JSX.Elemen
 
   const clearDataHandler = () => {
     if (item) {
-      dispatch(clearItemDataAction({ item: item, packageName: item.packageName }));
+      dispatch(clearItemDataAction({ item: item }));
     }
   };
 

@@ -5,30 +5,25 @@ import { useAppDispatch, useAppSelector } from '../../../../../hooks/hooks';
 import { decrementAction, incrementAction } from '../../../store/actions/actions';
 import { SelectorGetCurrentChemistrySetting } from '../../../store/slectors/selectors';
 //variables
-import {
-  CHEMISTRY_TEXT,
-  ChemistryPackagesNames,
-  ChemistrySettingsNames,
-} from '../../../variables/';
+import { CHEMISTRY_TEXT, ChemistrySettingsNames } from '../../../variables/';
 //styles
 import style from './counter-controls.module.scss';
 
 interface ICounterControlsProps {
   UNID: string;
-  packName: ChemistryPackagesNames;
 }
 
-const CounterControls = ({ UNID, packName }: ICounterControlsProps): JSX.Element => {
+const CounterControls = ({ UNID }: ICounterControlsProps): JSX.Element => {
   const chemistryBasicCounterDefaultValue = useAppSelector(
-    SelectorGetCurrentChemistrySetting(UNID, ChemistrySettingsNames.BASE_COUNTER_VALUE, packName),
+    SelectorGetCurrentChemistrySetting(UNID, ChemistrySettingsNames.BASE_COUNTER_VALUE),
   );
   const dispatch = useAppDispatch();
 
   const inc = (value: number): void => {
-    dispatch(incrementAction({ UNID: UNID, value: value, packageName: packName }));
+    dispatch(incrementAction({ UNID: UNID, value: value }));
   };
   const dec = (value: number): void => {
-    dispatch(decrementAction({ UNID: UNID, value: value, packageName: packName }));
+    dispatch(decrementAction({ UNID: UNID, value: value }));
   };
   return (
     <section className={style['counter-controls']}>
