@@ -2,10 +2,11 @@
 import { AbstractRepository } from '../../../repository';
 //services
 import suppliesDataService from '../services/supplies-data.service';
-import suppliesLocalstorageService from '../services/supplies-localstorage.service';
+//variables
+import { SUPPLIES_STORAGE_NAME } from '../variables';
 
 class SuppliesRepositroy extends AbstractRepository {}
 
-const suppliesRepository = new SuppliesRepositroy(suppliesDataService, suppliesLocalstorageService);
+const suppliesRepository = new SuppliesRepositroy(suppliesDataService, SUPPLIES_STORAGE_NAME);
 
 export default suppliesRepository;

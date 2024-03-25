@@ -4,14 +4,15 @@ import {
   IItemDataToDisplay,
   IPackage,
   ItemsDataToDisplayListType,
+  storageNamesAliasType,
 } from './data-types';
 
 interface ILocalstorageService {
-  getItems(): IData | Error | null;
+  getItems(storageName: storageNamesAliasType): IData | Error | null;
 
-  setItems(data: IData): IData | Error;
+  setItems(data: IData, storageName: storageNamesAliasType): IData | Error;
 
-  clearStore(): void;
+  clearStore(storageName: storageNamesAliasType): void;
 }
 
 interface IDataService {
