@@ -3,7 +3,7 @@ import { BasicCounter } from '../../../../../components';
 //store
 import { useAppDispatch, useAppSelector } from '../../../../../hooks/hooks';
 import { decrementAction, incrementAction } from '../../../store/actions/actions';
-import { SelectorGetCurrentPigmentSetting } from '../../../store/slectors/selectors';
+import { SelectorGetItemSetting } from '../../../store/slectors/selectors';
 //variables
 import { PIGMENTS_TEXT, PigmentsLogsNames, PigmentsSettingsNames } from '../../../variables';
 
@@ -13,7 +13,7 @@ interface IPigmentsBasicCounterProps {
 
 const GumsBasicCounter = ({ UNID }: IPigmentsBasicCounterProps): JSX.Element => {
   const pigmentBasicCounterDefaultValue = useAppSelector(
-    SelectorGetCurrentPigmentSetting(UNID, PigmentsSettingsNames.BASE_COUNTER_VALUE),
+    SelectorGetItemSetting(UNID, PigmentsSettingsNames.BASE_COUNTER_VALUE),
   );
 
   const dispatch = useAppDispatch();

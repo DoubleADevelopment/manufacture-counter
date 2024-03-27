@@ -1,5 +1,5 @@
 //store
-import { SelectorGetCurrentSupplie } from '../../../store/slectors/selectors';
+import { SelectorGetItemData } from '../../../store/slectors/selectors';
 import { useAppSelector } from '../../../../../hooks/hooks';
 //components
 import SuppliesBasicCounter from '../supplies-basic-counter/supplies-basic-counter';
@@ -12,7 +12,7 @@ interface ICounterControlsProps {
 }
 
 const CounterControls = ({ UNID }: ICounterControlsProps): JSX.Element => {
-  const itemData = useAppSelector(SelectorGetCurrentSupplie(UNID));
+  const itemData = useAppSelector(SelectorGetItemData(UNID));
 
   const renderedCounters = () => {
     if (itemData.counters?.length) {

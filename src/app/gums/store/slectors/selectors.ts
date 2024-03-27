@@ -3,18 +3,18 @@ import { GumsSettingsNames } from '../../variables';
 //types
 import type { IData, IItemData, RootState } from '../../../../types';
 
-export const SelectorGetGums =
+export const SelectorGetData =
   () =>
   (state: RootState): IData => {
     return state.gums;
   };
 
-export const SelectorGetCurrentGum =
+export const SelectorGetItemData =
   (UNID: string) =>
   (state: RootState): IItemData =>
     state.gums[UNID];
 
-export const SelectorGetCurrentGumSetting =
+export const SelectorGetItemSetting =
   (UNID: string, settingName: GumsSettingsNames) =>
   (state: RootState): number =>
     state.gums[UNID].settings[settingName].settingValue;

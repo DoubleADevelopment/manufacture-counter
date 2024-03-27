@@ -1,14 +1,45 @@
 import { Route, Routes } from 'react-router-dom';
-//variables
-import { PigmentsAppRouting } from '../variables';
+//store
+import {
+  SelectorCheckIfElementExistsByUNID,
+  SelectorGetItemData,
+  SelectorGetData,
+} from '../store/slectors/selectors';
+import { clearItemDataAction } from '../store/actions/actions';
 //pages
-import * as Pages from '../pages';
+import { ComponentRootPage, CounterPage } from '../../../pages';
+//components
+import { Counter } from '../components';
+//variables
+import { PIGMENTS_TEXT, PigmentsAppRouting } from '../variables';
 
 const Router = (): JSX.Element => {
   return (
     <Routes>
-      <Route index element={<Pages.PigmentsRootPage />} />
-      <Route path={PigmentsAppRouting.COUNTER.route} element={<Pages.CounterPage />} />
+      <Route
+        index
+        element={
+          <ComponentRootPage
+            SelectorGetComponentState={SelectorGetData}
+            headerTitle={PIGMENTS_TEXT.PIGMENTS}
+          />
+        }
+      />
+
+      <Route
+        path={PigmentsAppRouting.COUNTER.route}
+        element={
+          <CounterPage
+            backLink={PigmentsAppRouting.ROOT.path}
+            headerTitle={PIGMENTS_TEXT.PIGMENTS_COUNTER_TITLE}
+            SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
+            SelectorGetCurrentItemData={SelectorGetItemData}
+            clearItemDataAction={clearItemDataAction}
+          >
+            <Counter />
+          </CounterPage>
+        }
+      />
     </Routes>
   );
 };

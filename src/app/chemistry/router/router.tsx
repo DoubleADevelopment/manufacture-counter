@@ -1,14 +1,45 @@
 import { Route, Routes } from 'react-router-dom';
-//variables
-import { ChemistryAppRouting } from '../variables';
+//state
+import {
+  SelectorCheckIfElementExistsByUNID,
+  SelectorGetData,
+  SelectorGetItemData,
+} from '../store/slectors/selectors';
+import { clearItemDataAction } from '../store/actions/actions';
 //pages
-import * as Pages from '../pages';
+import { ComponentRootPage, CounterPage } from '../../../pages';
+//components
+import { Counter } from '../components';
+//variables
+import { CHEMISTRY_TEXT, ChemistryAppRouting } from '../variables';
 
 const Router = (): JSX.Element => {
   return (
     <Routes>
-      <Route index element={<Pages.ChemistryRootPage />} />
-      <Route path={ChemistryAppRouting.COUNTER.route} element={<Pages.CounterPage />} />
+      <Route
+        index
+        element={
+          <ComponentRootPage
+            SelectorGetComponentState={SelectorGetData}
+            headerTitle={CHEMISTRY_TEXT.CHEMISTRY}
+          />
+        }
+      />
+
+      <Route
+        path={ChemistryAppRouting.COUNTER.route}
+        element={
+          <CounterPage
+            backLink={ChemistryAppRouting.ROOT.path}
+            headerTitle={CHEMISTRY_TEXT.CHEMISTRY_COUNTER_TITLE}
+            SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
+            SelectorGetCurrentItemData={SelectorGetItemData}
+            clearItemDataAction={clearItemDataAction}
+          >
+            <Counter />
+          </CounterPage>
+        }
+      />
     </Routes>
   );
 };

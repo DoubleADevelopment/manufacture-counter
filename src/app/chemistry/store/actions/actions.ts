@@ -1,16 +1,15 @@
 import { chemistrySlice } from '../slice/slice';
-//variables
-import { ChemistryLogsNames } from '../../variables/';
 //repository
 import chemistryRepository from '../../repository/chemistry-repository';
 //types
-import type { AppThunk } from '../../../../types';
-import type { IClearItemAction, IIncDecAction } from '../../types';
+import type { AppThunk, IClearItemActionPayload, IIncDecActionPayload } from '../../../../types';
+//variables
+import { ChemistryLogsNames } from '../../variables/';
 
 const { increment, decrement, log, clearItem, clearData } = chemistrySlice.actions;
 
-export const incrementAction =
-  (action: IIncDecAction): AppThunk =>
+const incrementAction =
+  (action: IIncDecActionPayload<ChemistryLogsNames>): AppThunk =>
   (dispatch, getState) => {
     dispatch(increment(action));
 
@@ -24,8 +23,8 @@ export const incrementAction =
     chemistryRepository.sendData(getState().chemistry);
   };
 
-export const decrementAction =
-  (action: IIncDecAction): AppThunk =>
+const decrementAction =
+  (action: IIncDecActionPayload<ChemistryLogsNames>): AppThunk =>
   (dispatch, getState) => {
     dispatch(decrement(action));
 
@@ -39,8 +38,8 @@ export const decrementAction =
     chemistryRepository.sendData(getState().chemistry);
   };
 
-export const clearItemDataAction =
-  (action: IClearItemAction): AppThunk =>
+const clearItemDataAction =
+  (action: IClearItemActionPayload): AppThunk =>
   (dispatch, getState) => {
     const clearedItem = chemistryRepository.getDefaultItemData(action.item.UNID);
     dispatch(clearItem({ item: clearedItem }));
@@ -48,9 +47,11 @@ export const clearItemDataAction =
     chemistryRepository.sendData(getState().chemistry);
   };
 
-export const clearDataAction = (): AppThunk => (dispatch) => {
+const clearDataAction = (): AppThunk => (dispatch) => {
   const clearedItem = chemistryRepository.getDefaultData();
   dispatch(clearData(clearedItem));
 
   chemistryRepository.clearData();
 };
+
+export { incrementAction, decrementAction, clearItemDataAction, clearDataAction };

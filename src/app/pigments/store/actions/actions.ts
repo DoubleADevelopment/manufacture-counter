@@ -2,14 +2,20 @@ import { pigmentsSlice } from '../slice/slice';
 //repository
 import pigmentsRepository from '../../repository/pigments-repository';
 //types
-import type { AppThunk } from '../../../../types';
-import type { IChangeItemSetting, IClearItemAction, IIncDecAction } from '../../types';
+import type {
+  AppThunk,
+  IChangeItemSettingActionPayload,
+  IClearItemActionPayload,
+  IIncDecActionPayload,
+} from '../../../../types';
+//variables
+import { PigmentsLogsNames, PigmentsSettingsNames } from '../../variables';
 
 const { increment, decrement, log, clearItem, clearData, changeItemSetting } =
   pigmentsSlice.actions;
 
 export const incrementAction =
-  (action: IIncDecAction): AppThunk =>
+  (action: IIncDecActionPayload<PigmentsLogsNames>): AppThunk =>
   (dispatch, getState) => {
     dispatch(increment(action));
 
@@ -24,7 +30,7 @@ export const incrementAction =
   };
 
 export const decrementAction =
-  (action: IIncDecAction): AppThunk =>
+  (action: IIncDecActionPayload<PigmentsLogsNames>): AppThunk =>
   (dispatch, getState) => {
     dispatch(decrement(action));
 
@@ -39,7 +45,7 @@ export const decrementAction =
   };
 
 export const clearItemDataAction =
-  (action: IClearItemAction): AppThunk =>
+  (action: IClearItemActionPayload): AppThunk =>
   (dispatch, getState) => {
     const clearedItem = pigmentsRepository.getDefaultItemData(action.item.UNID);
     dispatch(clearItem({ item: clearedItem }));
@@ -55,7 +61,7 @@ export const clearDataAction = (): AppThunk => (dispatch) => {
 };
 
 export const changeItemSettingAction =
-  (action: IChangeItemSetting): AppThunk =>
+  (action: IChangeItemSettingActionPayload<PigmentsSettingsNames>): AppThunk =>
   (dispatch, getState) => {
     dispatch(changeItemSetting(action));
     pigmentsRepository.sendData(getState().pigments);

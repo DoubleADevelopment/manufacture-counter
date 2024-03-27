@@ -7,7 +7,7 @@ import {
   decrementAction,
   changeItemSettingAction,
 } from '../../../store/actions/actions';
-import { SelectorGetCurrentPigmentSetting } from '../../../store/slectors/selectors';
+import { SelectorGetItemSetting } from '../../../store/slectors/selectors';
 //variables
 import { PIGMENTS_TEXT, PigmentsLogsNames, PigmentsSettingsNames } from '../../../variables';
 
@@ -19,7 +19,7 @@ const GumsBagCounter = ({ UNID }: IPigmentsBagCounterProps): JSX.Element => {
   const dispatch = useAppDispatch();
 
   const bagDefaultValue = useAppSelector(
-    SelectorGetCurrentPigmentSetting(UNID, PigmentsSettingsNames.BASE_BAG_VALUE),
+    SelectorGetItemSetting(UNID, PigmentsSettingsNames.BASE_BAG_VALUE),
   );
 
   const inc = (value: number, additionalValue: number): void => {
