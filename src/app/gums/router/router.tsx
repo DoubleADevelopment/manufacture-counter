@@ -1,11 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
 //store
 import { SelectorGetGums } from '../store/slectors/selectors';
+//pages
+import { ComponentRootPage, CounterPage } from '../../../pages';
+//components
+import { CountableItemInfo, Counter } from '../components';
 //variables
 import { GUMS_TEXT, GumsAppRouting } from '../variables';
-//pages
-import * as Pages from '../pages';
-import { ComponentRootPage } from '../../../pages';
 
 const Router = (): JSX.Element => {
   return (
@@ -19,7 +20,19 @@ const Router = (): JSX.Element => {
           />
         }
       />
-      <Route path={GumsAppRouting.COUNTER.route} element={<Pages.CounterPage />} />
+
+      <Route
+        path={GumsAppRouting.COUNTER.route}
+        element={
+          <CounterPage
+            backLink={GumsAppRouting.ROOT.path}
+            headerTitle={GUMS_TEXT.GUMS_COUNTER_TITLE}
+          >
+            <CountableItemInfo />
+            <Counter />
+          </CounterPage>
+        }
+      />
     </Routes>
   );
 };

@@ -1,12 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
 //state
 import { SelectorGetChemistry } from '../store/slectors/selectors';
+//pages
+import { ComponentRootPage, CounterPage } from '../../../pages';
+//components
+import { CountableItemInfo, Counter } from '../components';
 //variables
 import { CHEMISTRY_TEXT, ChemistryAppRouting } from '../variables';
-//pages
-// import * as Pages from '../pages';
-import { ComponentRootPage, CounterPage } from '../../../pages';
-import { CountableItemInfo, Counter } from '../components';
 
 const Router = (): JSX.Element => {
   return (

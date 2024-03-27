@@ -1,11 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
 //store
 import { SelectorGetSupplies } from '../store/slectors/selectors';
+//pages
+import { ComponentRootPage, CounterPage } from '../../../pages';
+//components
+import { CountableItemInfo, Counter } from '../components';
 //variables
 import { SUPPLIES_TEXT, SuppliesAppRouting } from '../variables';
-//pages
-import * as Pages from '../pages';
-import { ComponentRootPage } from '../../../pages';
 
 const Router = (): JSX.Element => {
   return (
@@ -19,8 +20,18 @@ const Router = (): JSX.Element => {
           />
         }
       />
-
-      <Route path={SuppliesAppRouting.COUNTER.route} element={<Pages.SuppliesCounterPage />} />
+      <Route
+        path={SuppliesAppRouting.COUNTER.route}
+        element={
+          <CounterPage
+            backLink={SuppliesAppRouting.ROOT.path}
+            headerTitle={SUPPLIES_TEXT.SUPPLIES_COUNTER_TITLE}
+          >
+            <CountableItemInfo />
+            <Counter />
+          </CounterPage>
+        }
+      />
     </Routes>
   );
 };

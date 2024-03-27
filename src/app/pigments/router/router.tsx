@@ -1,11 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
 //store
 import { SelectorGetPigments } from '../store/slectors/selectors';
+//pages
+import { ComponentRootPage, CounterPage } from '../../../pages';
+//components
+import { CountableItemInfo, Counter } from '../components';
 //variables
 import { PIGMENTS_TEXT, PigmentsAppRouting } from '../variables';
-//pages
-import * as Pages from '../pages';
-import { ComponentRootPage } from '../../../pages';
 
 const Router = (): JSX.Element => {
   return (
@@ -19,7 +20,18 @@ const Router = (): JSX.Element => {
           />
         }
       />
-      <Route path={PigmentsAppRouting.COUNTER.route} element={<Pages.CounterPage />} />
+      <Route
+        path={PigmentsAppRouting.COUNTER.route}
+        element={
+          <CounterPage
+            backLink={PigmentsAppRouting.ROOT.path}
+            headerTitle={PIGMENTS_TEXT.PIGMENTS_COUNTER_TITLE}
+          >
+            <CountableItemInfo />
+            <Counter />
+          </CounterPage>
+        }
+      />
     </Routes>
   );
 };
