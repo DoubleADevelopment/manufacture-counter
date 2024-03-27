@@ -1,12 +1,18 @@
 import { Route, Routes } from 'react-router-dom';
 //state
-import { SelectorGetChemistry } from '../store/slectors/selectors';
+import {
+  SelectorCheckIfElementExistsByUNID,
+  SelectorGetChemistry,
+  SelectorGetCurrentChemistry,
+} from '../store/slectors/selectors';
 //pages
 import { ComponentRootPage, CounterPage } from '../../../pages';
 //components
-import { CountableItemInfo, Counter } from '../components';
+import { Counter } from '../components';
+import { CountableItemInfo } from '../../../components';
 //variables
 import { CHEMISTRY_TEXT, ChemistryAppRouting } from '../variables';
+import { clearItemDataAction } from '../store/actions/actions';
 
 const Router = (): JSX.Element => {
   return (
@@ -28,7 +34,11 @@ const Router = (): JSX.Element => {
             backLink={ChemistryAppRouting.ROOT.path}
             headerTitle={CHEMISTRY_TEXT.CHEMISTRY_COUNTER_TITLE}
           >
-            <CountableItemInfo />
+            <CountableItemInfo
+              SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
+              SelectorGetCurrentItemData={SelectorGetCurrentChemistry}
+              clearItemDataAction={clearItemDataAction}
+            />
             <Counter />
           </CounterPage>
         }

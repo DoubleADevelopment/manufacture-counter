@@ -13,10 +13,7 @@ interface ICounterPageProps {
 const CounterPage = ({ backLink, headerTitle, children }: ICounterPageProps): JSX.Element => {
   return (
     <CounterPageLayout backLink={backLink} headerTitle={headerTitle}>
-      <main className={style['counter-page']}>
-        {children}
-        <h1>test</h1>
-      </main>
+      <main className={style['counter-page']}>{children}</main>
     </CounterPageLayout>
   );
 };

@@ -25,6 +25,7 @@ import { CountersSetting } from './settings';
 import InfoAboutApp from './info-about-app/info-about-app';
 import ComponentOverview from './component-overview/component-overview';
 import LogItem from './log-item/log-item';
+import CountableItemInfo from './countable-item-info/countable-item-info';
 
 export {
   Header,
@@ -57,4 +58,5 @@ export {
   ComponentOverview,
   LogItem,
   ButtonWithIcon,
+  CountableItemInfo,
 };
