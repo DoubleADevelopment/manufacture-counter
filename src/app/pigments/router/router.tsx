@@ -25,6 +25,7 @@ const Router = (): JSX.Element => {
           />
         }
       />
+
       <Route
         path={PigmentsAppRouting.COUNTER.route}
         element={
