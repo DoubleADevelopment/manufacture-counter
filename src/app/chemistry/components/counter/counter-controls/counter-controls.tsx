@@ -3,7 +3,7 @@ import { BasicCounter } from '../../../../../components';
 //store
 import { useAppDispatch, useAppSelector } from '../../../../../hooks/hooks';
 import { decrementAction, incrementAction } from '../../../store/actions/actions';
-import { SelectorGetCurrentChemistrySetting } from '../../../store/slectors/selectors';
+import { SelectorGetItemSetting } from '../../../store/slectors/selectors';
 //variables
 import { CHEMISTRY_TEXT, ChemistryLogsNames, ChemistrySettingsNames } from '../../../variables/';
 //styles
@@ -15,7 +15,7 @@ interface ICounterControlsProps {
 
 const CounterControls = ({ UNID }: ICounterControlsProps): JSX.Element => {
   const chemistryBasicCounterDefaultValue = useAppSelector(
-    SelectorGetCurrentChemistrySetting(UNID, ChemistrySettingsNames.BASE_COUNTER_VALUE),
+    SelectorGetItemSetting(UNID, ChemistrySettingsNames.BASE_COUNTER_VALUE),
   );
   const dispatch = useAppDispatch();
 

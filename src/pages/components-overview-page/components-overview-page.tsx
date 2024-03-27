@@ -4,10 +4,10 @@ import { PageWithMenuLayout } from '../../layouts';
 import { ComponentOverview } from '../../components';
 //store
 import { useAppSelector } from '../../hooks/hooks';
-import { SelectorGetChemistry } from '../../app/chemistry/store/slectors/selectors';
-import { SelectorGetGums } from '../../app/gums/store/slectors/selectors';
-import { SelectorGetPigments } from '../../app/pigments/store/slectors/selectors';
-import { SelectorGetSupplies } from '../../app/supplies/store/slectors/selectors';
+import { SelectorGetData as SelectorGetChemistryData } from '../../app/chemistry/store/slectors/selectors';
+import { SelectorGetData as SelectorGetGumsData } from '../../app/gums/store/slectors/selectors';
+import { SelectorGetData as SelectorGetPigmentsData } from '../../app/pigments/store/slectors/selectors';
+import { SelectorGetData as SelectorGetSuppliesData } from '../../app/supplies/store/slectors/selectors';
 //adapter
 import { adapterService } from '../../services';
 //variables
@@ -17,14 +17,16 @@ import style from './components-overview-page.module.scss';
 
 const ComponentOverviewPage = (): JSX.Element => {
   const chemistryData = adapterService.adaptItemsDataToDisplayList(
-    useAppSelector(SelectorGetChemistry()),
+    useAppSelector(SelectorGetChemistryData()),
   );
-  const gumsData = adapterService.adaptItemsDataToDisplayList(useAppSelector(SelectorGetGums()));
+  const gumsData = adapterService.adaptItemsDataToDisplayList(
+    useAppSelector(SelectorGetGumsData()),
+  );
   const pigmentsData = adapterService.adaptItemsDataToDisplayList(
-    useAppSelector(SelectorGetPigments()),
+    useAppSelector(SelectorGetPigmentsData()),
   );
   const suppliesData = adapterService.adaptItemsDataToDisplayList(
-    useAppSelector(SelectorGetSupplies()),
+    useAppSelector(SelectorGetSuppliesData()),
   );
 
   return (

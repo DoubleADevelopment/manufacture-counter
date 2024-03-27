@@ -2,8 +2,8 @@ import { Route, Routes } from 'react-router-dom';
 //store
 import {
   SelectorCheckIfElementExistsByUNID,
-  SelectorGetCurrentSupplie,
-  SelectorGetSupplies,
+  SelectorGetItemData,
+  SelectorGetData,
 } from '../store/slectors/selectors';
 import { clearItemDataAction } from '../store/actions/actions';
 //pages
@@ -21,7 +21,7 @@ const Router = (): JSX.Element => {
         index
         element={
           <ComponentRootPage
-            SelectorGetComponentState={SelectorGetSupplies}
+            SelectorGetComponentState={SelectorGetData}
             headerTitle={SUPPLIES_TEXT.SUPPLIES}
           />
         }
@@ -35,7 +35,7 @@ const Router = (): JSX.Element => {
           >
             <CountableItemInfo
               SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
-              SelectorGetCurrentItemData={SelectorGetCurrentSupplie}
+              SelectorGetCurrentItemData={SelectorGetItemData}
               clearItemDataAction={clearItemDataAction}
             />
             <Counter />

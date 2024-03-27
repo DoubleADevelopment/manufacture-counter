@@ -7,7 +7,7 @@ import {
   decrementAction,
   changeItemSettingAction,
 } from '../../../store/actions/actions';
-import { SelectorGetCurrentGumSetting } from '../../../store/slectors/selectors';
+import { SelectorGetItemSetting } from '../../../store/slectors/selectors';
 //variables
 import { GUMS_TEXT, GumsLogsNames, GumsSettingsNames } from '../../../variables';
 
@@ -19,7 +19,7 @@ const GumsCardboardCounter = ({ UNID }: IGumsCardboardCounterProps): JSX.Element
   const dispatch = useAppDispatch();
 
   const cardboardDefaultValue = useAppSelector(
-    SelectorGetCurrentGumSetting(UNID, GumsSettingsNames.BASE_CARDBOARD_VALUE),
+    SelectorGetItemSetting(UNID, GumsSettingsNames.BASE_CARDBOARD_VALUE),
   );
 
   const inc = (value: number, additionalValue: number): void => {

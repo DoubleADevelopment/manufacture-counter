@@ -3,7 +3,7 @@ import { BasicCounter } from '../../../../../components';
 //store
 import { useAppDispatch, useAppSelector } from '../../../../../hooks/hooks';
 import { decrementAction, incrementAction } from '../../../store/actions/actions';
-import { SelectorGetCurrentGumSetting } from '../../../store/slectors/selectors';
+import { SelectorGetItemSetting } from '../../../store/slectors/selectors';
 //variables
 import { GUMS_TEXT, GumsLogsNames, GumsSettingsNames } from '../../../variables';
 
@@ -13,7 +13,7 @@ interface IGumsBasicCounterProps {
 
 const GumsBasicCounter = ({ UNID }: IGumsBasicCounterProps): JSX.Element => {
   const gumsBasicCounterDefaultValue = useAppSelector(
-    SelectorGetCurrentGumSetting(UNID, GumsSettingsNames.BASE_COUNTER_VALUE),
+    SelectorGetItemSetting(UNID, GumsSettingsNames.BASE_COUNTER_VALUE),
   );
 
   const dispatch = useAppDispatch();

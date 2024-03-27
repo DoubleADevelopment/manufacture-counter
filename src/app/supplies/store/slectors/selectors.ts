@@ -1,19 +1,20 @@
+//variables
+import { SuppliesSettingsNames } from '../../variables';
 //types
 import type { IData, IItemData, RootState } from '../../../../types';
-import { SuppliesSettingsNames } from '../../variables';
 
-export const SelectorGetSupplies =
+export const SelectorGetData =
   () =>
   (state: RootState): IData => {
     return state.supplies;
   };
 
-export const SelectorGetCurrentSupplie =
+export const SelectorGetItemData =
   (UNID: string) =>
   (state: RootState): IItemData =>
     state.supplies[UNID];
 
-export const SelectorGetCurrentSupplieSetting =
+export const SelectorGetItemSetting =
   (UNID: string, settingName: SuppliesSettingsNames) =>
   (state: RootState): number => {
     return state.supplies[UNID].settings[settingName].settingValue;

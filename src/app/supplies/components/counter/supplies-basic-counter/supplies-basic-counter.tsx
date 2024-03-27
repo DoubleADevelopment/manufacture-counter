@@ -3,7 +3,7 @@ import { BasicCounter } from '../../../../../components';
 //store
 import { useAppDispatch, useAppSelector } from '../../../../../hooks/hooks';
 import { decrementAction, incrementAction } from '../../../store/actions/actions';
-import { SelectorGetCurrentSupplieSetting } from '../../../store/slectors/selectors';
+import { SelectorGetItemSetting } from '../../../store/slectors/selectors';
 //variables
 import { SUPPLIES_TEXT, SuppliesLogsNames, SuppliesSettingsNames } from '../../../variables';
 
@@ -13,7 +13,7 @@ interface ISuppliesBasicCounterProps {
 
 const SuppliesBasicCounter = ({ UNID }: ISuppliesBasicCounterProps): JSX.Element => {
   const gumsBasicCounterDefaultValue = useAppSelector(
-    SelectorGetCurrentSupplieSetting(UNID, SuppliesSettingsNames.BASE_COUNTER_VALUE),
+    SelectorGetItemSetting(UNID, SuppliesSettingsNames.BASE_COUNTER_VALUE),
   );
 
   const dispatch = useAppDispatch();

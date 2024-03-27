@@ -8,7 +8,7 @@ import { ChemistryLogsNames } from '../../variables/';
 
 const { increment, decrement, log, clearItem, clearData } = chemistrySlice.actions;
 
-export const incrementAction =
+const incrementAction =
   (action: IIncDecAction<ChemistryLogsNames>): AppThunk =>
   (dispatch, getState) => {
     dispatch(increment(action));
@@ -23,7 +23,7 @@ export const incrementAction =
     chemistryRepository.sendData(getState().chemistry);
   };
 
-export const decrementAction =
+const decrementAction =
   (action: IIncDecAction<ChemistryLogsNames>): AppThunk =>
   (dispatch, getState) => {
     dispatch(decrement(action));
@@ -38,7 +38,7 @@ export const decrementAction =
     chemistryRepository.sendData(getState().chemistry);
   };
 
-export const clearItemDataAction =
+const clearItemDataAction =
   (action: IClearItemAction): AppThunk =>
   (dispatch, getState) => {
     const clearedItem = chemistryRepository.getDefaultItemData(action.item.UNID);
@@ -47,9 +47,11 @@ export const clearItemDataAction =
     chemistryRepository.sendData(getState().chemistry);
   };
 
-export const clearDataAction = (): AppThunk => (dispatch) => {
+const clearDataAction = (): AppThunk => (dispatch) => {
   const clearedItem = chemistryRepository.getDefaultData();
   dispatch(clearData(clearedItem));
 
   chemistryRepository.clearData();
 };
+
+export { incrementAction, decrementAction, clearItemDataAction, clearDataAction };

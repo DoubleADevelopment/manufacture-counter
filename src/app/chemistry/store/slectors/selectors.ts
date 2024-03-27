@@ -3,25 +3,23 @@ import { ChemistrySettingsNames } from '../../variables/';
 //types
 import type { IData, IItemData, RootState } from '../../../../types';
 
-export const SelectorGetChemistryState = (state: RootState): IData => state.chemistry;
-
-export const SelectorGetChemistry =
+const SelectorGetData =
   () =>
   (state: RootState): IData => {
     return state.chemistry;
   };
 
-export const SelectorGetCurrentChemistry =
+const SelectorGetItemData =
   (UNID: string) =>
   (state: RootState): IItemData =>
     state.chemistry[UNID];
 
-export const SelectorGetCurrentChemistrySetting =
+const SelectorGetItemSetting =
   (UNID: string, settingName: ChemistrySettingsNames) =>
   (state: RootState): number =>
     state.chemistry[UNID].settings[settingName].settingValue;
 
-export const SelectorCheckIfElementExistsByUNID =
+const SelectorCheckIfElementExistsByUNID =
   (UNID: string | undefined) =>
   (state: RootState): boolean => {
     let result = false;
@@ -37,3 +35,10 @@ export const SelectorCheckIfElementExistsByUNID =
 
     return result;
   };
+
+export {
+  SelectorGetData,
+  SelectorGetItemData,
+  SelectorGetItemSetting,
+  SelectorCheckIfElementExistsByUNID,
+};

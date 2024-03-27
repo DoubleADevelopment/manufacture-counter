@@ -7,7 +7,7 @@ import {
   decrementAction,
   changeItemSettingAction,
 } from '../../../store/actions/actions';
-import { SelectorGetCurrentSupplieSetting } from '../../../store/slectors/selectors';
+import { SelectorGetItemSetting } from '../../../store/slectors/selectors';
 //variables
 import { SUPPLIES_TEXT, SuppliesLogsNames, SuppliesSettingsNames } from '../../../variables';
 
@@ -19,7 +19,7 @@ const SuppliesCardboardCounter = ({ UNID }: IGumsCardboardCounterProps): JSX.Ele
   const dispatch = useAppDispatch();
 
   const cardboardDefaultValue = useAppSelector(
-    SelectorGetCurrentSupplieSetting(UNID, SuppliesSettingsNames.BASE_CARDBOARD_VALUE),
+    SelectorGetItemSetting(UNID, SuppliesSettingsNames.BASE_CARDBOARD_VALUE),
   );
 
   const inc = (value: number, additionalValue: number): void => {
