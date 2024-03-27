@@ -13,7 +13,12 @@ import type {
   IPackage,
 } from './data-types';
 import type { IRouteItem } from './routing-types';
-import type { IIncDecAction, ILogAction, IClearItemAction } from './action-types';
+import type {
+  IIncDecAction,
+  ILogAction,
+  IClearItemAction,
+  IChangeItemSetting,
+} from './action-types';
 import { AppDispatch, RootState, AppThunk } from './store-types';
 import { ISetActiveLink, IButtonProps } from './other-types';
 import { IIconProps } from './icon-props-type';
@@ -44,4 +49,5 @@ export type {
   IData,
   IPackage,
   IAbstractAdapterService,
+  IChangeItemSetting,
 };

@@ -2,14 +2,20 @@ import { suppliesSlice } from '../slice/slice';
 //repository
 import suppliesRepository from '../../repository/supplies-repository';
 //types
-import type { AppThunk } from '../../../../types';
-import type { IChangeItemSetting, IClearItemAction, IIncDecAction } from '../../types';
+import type {
+  AppThunk,
+  IChangeItemSetting,
+  IClearItemAction,
+  IIncDecAction,
+} from '../../../../types';
+//variables
+import { SuppliesLogsNames, SuppliesSettingsNames } from '../../variables';
 
 const { increment, decrement, log, clearItem, clearData, changeItemSetting } =
   suppliesSlice.actions;
 
 export const incrementAction =
-  (action: IIncDecAction): AppThunk =>
+  (action: IIncDecAction<SuppliesLogsNames>): AppThunk =>
   (dispatch, getState) => {
     dispatch(increment(action));
 
@@ -24,7 +30,7 @@ export const incrementAction =
   };
 
 export const decrementAction =
-  (action: IIncDecAction): AppThunk =>
+  (action: IIncDecAction<SuppliesLogsNames>): AppThunk =>
   (dispatch, getState) => {
     dispatch(decrement(action));
 
@@ -55,7 +61,7 @@ export const clearDataAction = (): AppThunk => (dispatch) => {
 };
 
 export const changeItemSettingAction =
-  (action: IChangeItemSetting): AppThunk =>
+  (action: IChangeItemSetting<SuppliesSettingsNames>): AppThunk =>
   (dispatch, getState) => {
     dispatch(changeItemSetting(action));
     suppliesRepository.sendData(getState().supplies);

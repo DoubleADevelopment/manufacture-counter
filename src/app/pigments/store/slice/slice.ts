@@ -1,22 +1,27 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 //variables
-import { PigmentsLogsNames } from '../../variables/';
+import { PigmentsLogsNames, PigmentsSettingsNames } from '../../variables/';
 //state
 import pigmentsState from '../state/state';
 //types
-import type { IClearItemAction, IIncDecAction, ILogAction, IChangeItemSetting } from '../../types';
-import { IData } from '../../../../types';
+import type {
+  IChangeItemSetting,
+  IClearItemAction,
+  IData,
+  IIncDecAction,
+  ILogAction,
+} from '../../../../types';
 
 export const pigmentsSlice = createSlice({
   name: 'pigments',
   initialState: pigmentsState,
 
   reducers: {
-    increment: (state, action: PayloadAction<IIncDecAction>) => {
+    increment: (state, action: PayloadAction<IIncDecAction<PigmentsLogsNames>>) => {
       const { UNID, value } = action.payload;
       state[UNID].amount = state[UNID].amount + value;
     },
-    decrement: (state, action: PayloadAction<IIncDecAction>) => {
+    decrement: (state, action: PayloadAction<IIncDecAction<PigmentsLogsNames>>) => {
       const { UNID, value } = action.payload;
       state[UNID].amount = state[UNID].amount - value;
     },
@@ -32,7 +37,10 @@ export const pigmentsSlice = createSlice({
     clearData: (state, action: PayloadAction<IData>) => {
       return action.payload;
     },
-    changeItemSetting: (state, action: PayloadAction<IChangeItemSetting>) => {
+    changeItemSetting: (
+      state,
+      action: PayloadAction<IChangeItemSetting<PigmentsSettingsNames>>,
+    ) => {
       const { UNID, settingName, newSettingValue } = action.payload;
       state[UNID].settings[settingName].settingValue = newSettingValue;
     },

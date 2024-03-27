@@ -4,19 +4,18 @@ import { ChemistryLogsNames } from '../../variables/';
 //state
 import chemistryState from '../state/state';
 //types
-import type { IClearItemAction, IIncDecAction, ILogAction } from '../../types';
-import { IData } from '../../../../types';
+import type { IClearItemAction, IData, IIncDecAction, ILogAction } from '../../../../types';
 
 export const chemistrySlice = createSlice({
   name: 'chemistry',
   initialState: chemistryState,
 
   reducers: {
-    increment: (state, action: PayloadAction<IIncDecAction>) => {
+    increment: (state, action: PayloadAction<IIncDecAction<ChemistryLogsNames>>) => {
       const { UNID, value } = action.payload;
       state[UNID].amount = state[UNID].amount + value;
     },
-    decrement: (state, action: PayloadAction<IIncDecAction>) => {
+    decrement: (state, action: PayloadAction<IIncDecAction<ChemistryLogsNames>>) => {
       const { UNID, value } = action.payload;
       state[UNID].amount = state[UNID].amount - value;
     },

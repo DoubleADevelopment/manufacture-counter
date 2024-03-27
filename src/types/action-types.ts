@@ -1,8 +1,10 @@
 import { IItemData } from './data-types';
 
-interface IIncDecAction {
+interface IIncDecAction<L> {
   UNID: string;
   value: number;
+  logName: L;
+  logText?: string;
 }
 
 interface IClearItemAction {
@@ -15,4 +17,10 @@ interface ILogAction<T> {
   logName: T;
 }
 
-export type { IIncDecAction, ILogAction, IClearItemAction };
+interface IChangeItemSetting<S> {
+  UNID: string;
+  settingName: S;
+  newSettingValue: number;
+}
+
+export type { IIncDecAction, ILogAction, IClearItemAction, IChangeItemSetting };

@@ -1,22 +1,27 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 //variables
-import { GumsLogsNames } from '../../variables/';
+import { GumsLogsNames, GumsSettingsNames } from '../../variables/';
 //state
 import gumsState from '../state/state';
 //types
-import type { IClearItemAction, IIncDecAction, ILogAction, IChangeItemSetting } from '../../types';
-import type { IData } from '../../../../types';
+import type {
+  IChangeItemSetting,
+  IClearItemAction,
+  IData,
+  IIncDecAction,
+  ILogAction,
+} from '../../../../types';
 
 export const gumsSlice = createSlice({
   name: 'gums',
   initialState: gumsState,
 
   reducers: {
-    increment: (state, action: PayloadAction<IIncDecAction>) => {
+    increment: (state, action: PayloadAction<IIncDecAction<GumsLogsNames>>) => {
       const { UNID, value } = action.payload;
       state[UNID].amount = state[UNID].amount + value;
     },
-    decrement: (state, action: PayloadAction<IIncDecAction>) => {
+    decrement: (state, action: PayloadAction<IIncDecAction<GumsLogsNames>>) => {
       const { UNID, value } = action.payload;
       state[UNID].amount = state[UNID].amount - value;
     },
@@ -32,7 +37,7 @@ export const gumsSlice = createSlice({
     clearData: (state, action: PayloadAction<IData>) => {
       return action.payload;
     },
-    changeItemSetting: (state, action: PayloadAction<IChangeItemSetting>) => {
+    changeItemSetting: (state, action: PayloadAction<IChangeItemSetting<GumsSettingsNames>>) => {
       const { UNID, settingName, newSettingValue } = action.payload;
       state[UNID].settings[settingName].settingValue = newSettingValue;
     },
