@@ -1,10 +1,16 @@
 import { Route, Routes } from 'react-router-dom';
 //store
-import { SelectorGetGums } from '../store/slectors/selectors';
+import {
+  SelectorCheckIfElementExistsByUNID,
+  SelectorGetCurrentGum,
+  SelectorGetGums,
+} from '../store/slectors/selectors';
+import { clearItemDataAction } from '../store/actions/actions';
 //pages
 import { ComponentRootPage, CounterPage } from '../../../pages';
 //components
-import { CountableItemInfo, Counter } from '../components';
+import { Counter } from '../components';
+import { CountableItemInfo } from '../../../components';
 //variables
 import { GUMS_TEXT, GumsAppRouting } from '../variables';
 
@@ -28,7 +34,11 @@ const Router = (): JSX.Element => {
             backLink={GumsAppRouting.ROOT.path}
             headerTitle={GUMS_TEXT.GUMS_COUNTER_TITLE}
           >
-            <CountableItemInfo />
+            <CountableItemInfo
+              SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
+              SelectorGetCurrentItemData={SelectorGetCurrentGum}
+              clearItemDataAction={clearItemDataAction}
+            />
             <Counter />
           </CounterPage>
         }

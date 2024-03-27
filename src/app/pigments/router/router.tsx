@@ -1,10 +1,16 @@
 import { Route, Routes } from 'react-router-dom';
 //store
-import { SelectorGetPigments } from '../store/slectors/selectors';
+import {
+  SelectorCheckIfElementExistsByUNID,
+  SelectorGetCurrentPigment,
+  SelectorGetPigments,
+} from '../store/slectors/selectors';
+import { clearItemDataAction } from '../store/actions/actions';
 //pages
 import { ComponentRootPage, CounterPage } from '../../../pages';
 //components
-import { CountableItemInfo, Counter } from '../components';
+import { Counter } from '../components';
+import { CountableItemInfo } from '../../../components';
 //variables
 import { PIGMENTS_TEXT, PigmentsAppRouting } from '../variables';
 
@@ -27,7 +33,11 @@ const Router = (): JSX.Element => {
             backLink={PigmentsAppRouting.ROOT.path}
             headerTitle={PIGMENTS_TEXT.PIGMENTS_COUNTER_TITLE}
           >
-            <CountableItemInfo />
+            <CountableItemInfo
+              SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
+              SelectorGetCurrentItemData={SelectorGetCurrentPigment}
+              clearItemDataAction={clearItemDataAction}
+            />
             <Counter />
           </CounterPage>
         }

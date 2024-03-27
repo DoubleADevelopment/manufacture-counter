@@ -47,12 +47,7 @@ const CountableItemInfo = ({
     }
   };
 
-  return (
-    <>
-      <h1>test</h1>
-      <ShortCardWithLogsModal item={convertedItem} clearDataHandler={clearDataHandler} />;
-    </>
-  );
+  return <ShortCardWithLogsModal item={convertedItem} clearDataHandler={clearDataHandler} />;
 };
 
 export default CountableItemInfo;

@@ -1,10 +1,16 @@
 import { Route, Routes } from 'react-router-dom';
 //store
-import { SelectorGetSupplies } from '../store/slectors/selectors';
+import {
+  SelectorCheckIfElementExistsByUNID,
+  SelectorGetCurrentSupplie,
+  SelectorGetSupplies,
+} from '../store/slectors/selectors';
+import { clearItemDataAction } from '../store/actions/actions';
 //pages
 import { ComponentRootPage, CounterPage } from '../../../pages';
 //components
-import { CountableItemInfo, Counter } from '../components';
+import { Counter } from '../components';
+import { CountableItemInfo } from '../../../components';
 //variables
 import { SUPPLIES_TEXT, SuppliesAppRouting } from '../variables';
 
@@ -27,7 +33,11 @@ const Router = (): JSX.Element => {
             backLink={SuppliesAppRouting.ROOT.path}
             headerTitle={SUPPLIES_TEXT.SUPPLIES_COUNTER_TITLE}
           >
-            <CountableItemInfo />
+            <CountableItemInfo
+              SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
+              SelectorGetCurrentItemData={SelectorGetCurrentSupplie}
+              clearItemDataAction={clearItemDataAction}
+            />
             <Counter />
           </CounterPage>
         }

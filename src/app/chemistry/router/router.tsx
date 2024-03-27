@@ -5,6 +5,7 @@ import {
   SelectorGetChemistry,
   SelectorGetCurrentChemistry,
 } from '../store/slectors/selectors';
+import { clearItemDataAction } from '../store/actions/actions';
 //pages
 import { ComponentRootPage, CounterPage } from '../../../pages';
 //components
@@ -12,7 +13,6 @@ import { Counter } from '../components';
 import { CountableItemInfo } from '../../../components';
 //variables
 import { CHEMISTRY_TEXT, ChemistryAppRouting } from '../variables';
-import { clearItemDataAction } from '../store/actions/actions';
 
 const Router = (): JSX.Element => {
   return (
