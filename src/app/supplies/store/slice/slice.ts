@@ -5,11 +5,11 @@ import { SuppliesLogsNames, SuppliesSettingsNames } from '../../variables/';
 import gumsState from '../state/state';
 //types
 import type {
-  IChangeItemSetting,
-  IClearItemAction,
+  IChangeItemSettingActionPayload,
+  IClearItemActionPayload,
   IData,
-  IIncDecAction,
-  ILogAction,
+  IIncDecActionPayload,
+  ILogActionPayload,
 } from '../../../../types';
 
 export const suppliesSlice = createSlice({
@@ -17,20 +17,20 @@ export const suppliesSlice = createSlice({
   initialState: gumsState,
 
   reducers: {
-    increment: (state, action: PayloadAction<IIncDecAction<SuppliesLogsNames>>) => {
+    increment: (state, action: PayloadAction<IIncDecActionPayload<SuppliesLogsNames>>) => {
       const { UNID, value } = action.payload;
       state[UNID].amount = state[UNID].amount + value;
     },
-    decrement: (state, action: PayloadAction<IIncDecAction<SuppliesLogsNames>>) => {
+    decrement: (state, action: PayloadAction<IIncDecActionPayload<SuppliesLogsNames>>) => {
       const { UNID, value } = action.payload;
       state[UNID].amount = state[UNID].amount - value;
     },
-    log: (state, action: PayloadAction<ILogAction<SuppliesLogsNames>>) => {
+    log: (state, action: PayloadAction<ILogActionPayload<SuppliesLogsNames>>) => {
       const { UNID, logName, log } = action.payload;
       state[UNID].logs[logName].log.push(log);
       state[UNID].logs[logName].lastChange = new Date().getTime().toString();
     },
-    clearItem: (state, action: PayloadAction<IClearItemAction>) => {
+    clearItem: (state, action: PayloadAction<IClearItemActionPayload>) => {
       const { UNID } = action.payload.item;
       state[UNID] = action.payload.item;
     },
@@ -39,7 +39,7 @@ export const suppliesSlice = createSlice({
     },
     changeItemSetting: (
       state,
-      action: PayloadAction<IChangeItemSetting<SuppliesSettingsNames>>,
+      action: PayloadAction<IChangeItemSettingActionPayload<SuppliesSettingsNames>>,
     ) => {
       const { UNID, settingName, newSettingValue } = action.payload;
       state[UNID].settings[settingName].settingValue = newSettingValue;

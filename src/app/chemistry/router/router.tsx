@@ -10,7 +10,6 @@ import { clearItemDataAction } from '../store/actions/actions';
 import { ComponentRootPage, CounterPage } from '../../../pages';
 //components
 import { Counter } from '../components';
-import { CountableItemInfo } from '../../../components';
 //variables
 import { CHEMISTRY_TEXT, ChemistryAppRouting } from '../variables';
 
@@ -33,12 +32,10 @@ const Router = (): JSX.Element => {
           <CounterPage
             backLink={ChemistryAppRouting.ROOT.path}
             headerTitle={CHEMISTRY_TEXT.CHEMISTRY_COUNTER_TITLE}
+            SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
+            SelectorGetCurrentItemData={SelectorGetItemData}
+            clearItemDataAction={clearItemDataAction}
           >
-            <CountableItemInfo
-              SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
-              SelectorGetCurrentItemData={SelectorGetItemData}
-              clearItemDataAction={clearItemDataAction}
-            />
             <Counter />
           </CounterPage>
         }

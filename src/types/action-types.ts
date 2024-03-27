@@ -1,26 +1,38 @@
 import { IItemData } from './data-types';
+import { AppThunk } from './store-types';
 
-interface IIncDecAction<L> {
+interface IIncDecActionPayload<L> {
   UNID: string;
   value: number;
   logName: L;
   logText?: string;
 }
 
-interface IClearItemAction {
+interface IClearItemActionPayload {
   item: IItemData;
 }
 
-interface ILogAction<T> {
+interface ILogActionPayload<T> {
   UNID: string;
   log: string;
   logName: T;
 }
 
-interface IChangeItemSetting<S> {
+interface IChangeItemSettingActionPayload<S> {
   UNID: string;
   settingName: S;
   newSettingValue: number;
 }
 
-export type { IIncDecAction, ILogAction, IClearItemAction, IChangeItemSetting };
+// type IncDecActionType = (action: IIncDecActionPayload<ChemistryLogsNames>) => AppThunk;
+type ClearItemDataActionType = (action: IClearItemActionPayload) => AppThunk;
+type ClearDataActionType = () => AppThunk;
+
+export type {
+  IIncDecActionPayload,
+  ILogActionPayload,
+  IClearItemActionPayload,
+  IChangeItemSettingActionPayload,
+  ClearDataActionType,
+  ClearItemDataActionType,
+};

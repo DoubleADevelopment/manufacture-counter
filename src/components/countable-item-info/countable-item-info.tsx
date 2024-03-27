@@ -7,17 +7,17 @@ import { adapterService } from '../../services';
 import { ShortCardWithLogsModal } from '../../components';
 //types
 import type {
-  AppThunk,
-  IClearItemAction,
+  ClearItemDataActionType,
   IItemData,
   IItemDataToDisplay,
-  RootState,
+  ISelectorCheckIfElementExistsByUNID,
+  ISelectorGetItemData,
 } from '../../types';
 
 interface ICountableItemInfoProps {
-  SelectorCheckIfElementExistsByUNID: (UNID: string | undefined) => (state: RootState) => boolean;
-  SelectorGetCurrentItemData: (UNID: string) => (state: RootState) => IItemData;
-  clearItemDataAction: (action: IClearItemAction) => AppThunk;
+  SelectorCheckIfElementExistsByUNID: ISelectorCheckIfElementExistsByUNID;
+  SelectorGetCurrentItemData: ISelectorGetItemData;
+  clearItemDataAction: ClearItemDataActionType;
 }
 
 const CountableItemInfo = ({

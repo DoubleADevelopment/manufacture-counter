@@ -10,7 +10,6 @@ import { clearItemDataAction } from '../store/actions/actions';
 import { ComponentRootPage, CounterPage } from '../../../pages';
 //components
 import { Counter } from '../components';
-import { CountableItemInfo } from '../../../components';
 //variables
 import { PIGMENTS_TEXT, PigmentsAppRouting } from '../variables';
 
@@ -32,12 +31,10 @@ const Router = (): JSX.Element => {
           <CounterPage
             backLink={PigmentsAppRouting.ROOT.path}
             headerTitle={PIGMENTS_TEXT.PIGMENTS_COUNTER_TITLE}
+            SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
+            SelectorGetCurrentItemData={SelectorGetItemData}
+            clearItemDataAction={clearItemDataAction}
           >
-            <CountableItemInfo
-              SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
-              SelectorGetCurrentItemData={SelectorGetItemData}
-              clearItemDataAction={clearItemDataAction}
-            />
             <Counter />
           </CounterPage>
         }

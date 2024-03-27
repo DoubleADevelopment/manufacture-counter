@@ -14,21 +14,28 @@ import type {
 } from './data-types';
 import type { IRouteItem } from './routing-types';
 import type {
-  IIncDecAction,
-  ILogAction,
-  IClearItemAction,
-  IChangeItemSetting,
+  IIncDecActionPayload,
+  ILogActionPayload,
+  IClearItemActionPayload,
+  IChangeItemSettingActionPayload,
+  ClearDataActionType,
+  ClearItemDataActionType,
 } from './action-types';
 import { AppDispatch, RootState, AppThunk } from './store-types';
 import { ISetActiveLink, IButtonProps } from './other-types';
 import { IIconProps } from './icon-props-type';
 import { IInputValueValidate } from './utils-types';
+import {
+  ISelectorGetData,
+  ISelectorGetItemData,
+  ISelectorCheckIfElementExistsByUNID,
+} from './selector-types';
 
 export type {
-  ILogAction,
+  ILogActionPayload,
   ILocalstorageService,
   IRepository,
-  IIncDecAction,
+  IIncDecActionPayload,
   AppDispatch,
   RootState,
   AppThunk,
@@ -42,12 +49,17 @@ export type {
   IItemDataToDisplay,
   ISettings,
   IItemData,
-  IClearItemAction,
+  IClearItemActionPayload,
   IButtonProps,
   IInputValueValidate,
   ILogItem,
   IData,
   IPackage,
   IAbstractAdapterService,
-  IChangeItemSetting,
+  IChangeItemSettingActionPayload,
+  ISelectorGetData,
+  ISelectorGetItemData,
+  ISelectorCheckIfElementExistsByUNID,
+  ClearDataActionType,
+  ClearItemDataActionType,
 };

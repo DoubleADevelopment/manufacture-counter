@@ -5,11 +5,11 @@ import { PigmentsLogsNames, PigmentsSettingsNames } from '../../variables/';
 import pigmentsState from '../state/state';
 //types
 import type {
-  IChangeItemSetting,
-  IClearItemAction,
+  IChangeItemSettingActionPayload,
+  IClearItemActionPayload,
   IData,
-  IIncDecAction,
-  ILogAction,
+  IIncDecActionPayload,
+  ILogActionPayload,
 } from '../../../../types';
 
 export const pigmentsSlice = createSlice({
@@ -17,20 +17,20 @@ export const pigmentsSlice = createSlice({
   initialState: pigmentsState,
 
   reducers: {
-    increment: (state, action: PayloadAction<IIncDecAction<PigmentsLogsNames>>) => {
+    increment: (state, action: PayloadAction<IIncDecActionPayload<PigmentsLogsNames>>) => {
       const { UNID, value } = action.payload;
       state[UNID].amount = state[UNID].amount + value;
     },
-    decrement: (state, action: PayloadAction<IIncDecAction<PigmentsLogsNames>>) => {
+    decrement: (state, action: PayloadAction<IIncDecActionPayload<PigmentsLogsNames>>) => {
       const { UNID, value } = action.payload;
       state[UNID].amount = state[UNID].amount - value;
     },
-    log: (state, action: PayloadAction<ILogAction<PigmentsLogsNames>>) => {
+    log: (state, action: PayloadAction<ILogActionPayload<PigmentsLogsNames>>) => {
       const { UNID, logName, log } = action.payload;
       state[UNID].logs[logName].log.push(log);
       state[UNID].logs[logName].lastChange = new Date().getTime().toString();
     },
-    clearItem: (state, action: PayloadAction<IClearItemAction>) => {
+    clearItem: (state, action: PayloadAction<IClearItemActionPayload>) => {
       const { UNID } = action.payload.item;
       state[UNID] = action.payload.item;
     },
@@ -39,7 +39,7 @@ export const pigmentsSlice = createSlice({
     },
     changeItemSetting: (
       state,
-      action: PayloadAction<IChangeItemSetting<PigmentsSettingsNames>>,
+      action: PayloadAction<IChangeItemSettingActionPayload<PigmentsSettingsNames>>,
     ) => {
       const { UNID, settingName, newSettingValue } = action.payload;
       state[UNID].settings[settingName].settingValue = newSettingValue;

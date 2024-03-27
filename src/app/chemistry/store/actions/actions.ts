@@ -2,14 +2,14 @@ import { chemistrySlice } from '../slice/slice';
 //repository
 import chemistryRepository from '../../repository/chemistry-repository';
 //types
-import type { AppThunk, IClearItemAction, IIncDecAction } from '../../../../types';
+import type { AppThunk, IClearItemActionPayload, IIncDecActionPayload } from '../../../../types';
 //variables
 import { ChemistryLogsNames } from '../../variables/';
 
 const { increment, decrement, log, clearItem, clearData } = chemistrySlice.actions;
 
 const incrementAction =
-  (action: IIncDecAction<ChemistryLogsNames>): AppThunk =>
+  (action: IIncDecActionPayload<ChemistryLogsNames>): AppThunk =>
   (dispatch, getState) => {
     dispatch(increment(action));
 
@@ -24,7 +24,7 @@ const incrementAction =
   };
 
 const decrementAction =
-  (action: IIncDecAction<ChemistryLogsNames>): AppThunk =>
+  (action: IIncDecActionPayload<ChemistryLogsNames>): AppThunk =>
   (dispatch, getState) => {
     dispatch(decrement(action));
 
@@ -39,7 +39,7 @@ const decrementAction =
   };
 
 const clearItemDataAction =
-  (action: IClearItemAction): AppThunk =>
+  (action: IClearItemActionPayload): AppThunk =>
   (dispatch, getState) => {
     const clearedItem = chemistryRepository.getDefaultItemData(action.item.UNID);
     dispatch(clearItem({ item: clearedItem }));
