@@ -2,8 +2,7 @@
 import { SelectorGetItemData } from '../../../store/slectors/selectors';
 import { useAppSelector } from '../../../../../hooks/hooks';
 //components
-import SuppliesBasicCounter from '../supplies-basic-counter/supplies-basic-counter';
-import { CounterSwitcher } from '../../';
+import { CounterSwitcher, SuppliesBasicCounter } from '../../';
 //styles
 import style from './counter-controls.module.scss';
 

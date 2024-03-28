@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 //components
 import { PageNotification } from '../../../../components';
-import CounterControls from './counter-controls/counter-controls';
+import { CounterControls } from '../';
 //store
 import { useAppSelector } from '../../../../hooks/hooks';
 import { SelectorCheckIfElementExistsByUNID } from '../../store/slectors/selectors';

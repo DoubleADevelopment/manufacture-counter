@@ -2,7 +2,11 @@
 import type { IPackage } from '../../../types';
 //vars
 import { rootBaseName } from '../../../variables';
-import { PigmentsLogsNames, PigmentsSettingsNames } from '../variables/data-variables';
+import {
+  PIGMENTS_COUNTERS,
+  PigmentsLogsNames,
+  PigmentsSettingsNames,
+} from '../variables/data-variables';
 
 const pigmentsData: IPackage = {
   dataPackageName: 'pigments',
@@ -19,6 +23,7 @@ const pigmentsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/pigments/pigment-braz.webp`,
       color: '',
+      counters: [PIGMENTS_COUNTERS.COUNTER, PIGMENTS_COUNTERS.BAGS, PIGMENTS_COUNTERS.CONTAINER],
       logs: {
         [PigmentsLogsNames.COUNTER]: {
           log: [],
@@ -69,6 +74,7 @@ const pigmentsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/pigments/pigment-antracyt.webp`,
       color: '',
+      counters: [PIGMENTS_COUNTERS.COUNTER, PIGMENTS_COUNTERS.BAGS, PIGMENTS_COUNTERS.CONTAINER],
       logs: {
         [PigmentsLogsNames.COUNTER]: {
           log: [],
@@ -119,6 +125,7 @@ const pigmentsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/pigments/pigment-cream.webp`,
       color: '',
+      counters: [PIGMENTS_COUNTERS.COUNTER, PIGMENTS_COUNTERS.BAGS, PIGMENTS_COUNTERS.CONTAINER],
       logs: {
         [PigmentsLogsNames.COUNTER]: {
           log: [],
@@ -169,6 +176,7 @@ const pigmentsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/pigments/pigment-ochra.webp`,
       color: '',
+      counters: [PIGMENTS_COUNTERS.COUNTER, PIGMENTS_COUNTERS.BAGS, PIGMENTS_COUNTERS.CONTAINER],
       logs: {
         [PigmentsLogsNames.COUNTER]: {
           log: [],
@@ -219,6 +227,7 @@ const pigmentsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/pigments/pigment-braz.webp`,
       color: '',
+      counters: [PIGMENTS_COUNTERS.COUNTER, PIGMENTS_COUNTERS.BAGS, PIGMENTS_COUNTERS.CONTAINER],
       logs: {
         [PigmentsLogsNames.COUNTER]: {
           log: [],
@@ -269,6 +278,7 @@ const pigmentsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/pigments/pigment-bialy.webp`,
       color: '',
+      counters: [PIGMENTS_COUNTERS.COUNTER, PIGMENTS_COUNTERS.BAGS, PIGMENTS_COUNTERS.CONTAINER],
       logs: {
         [PigmentsLogsNames.COUNTER]: {
           log: [],
@@ -319,6 +329,7 @@ const pigmentsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/pigments/pigment-zolty.webp`,
       color: '',
+      counters: [PIGMENTS_COUNTERS.COUNTER, PIGMENTS_COUNTERS.BAGS, PIGMENTS_COUNTERS.CONTAINER],
       logs: {
         [PigmentsLogsNames.COUNTER]: {
           log: [],
@@ -369,6 +380,7 @@ const pigmentsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/pigments/pigment-antracyt.webp`,
       color: '',
+      counters: [PIGMENTS_COUNTERS.COUNTER, PIGMENTS_COUNTERS.BAGS, PIGMENTS_COUNTERS.CONTAINER],
       logs: {
         [PigmentsLogsNames.COUNTER]: {
           log: [],
@@ -419,6 +431,7 @@ const pigmentsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/pigments/pigment-szary.webp`,
       color: '',
+      counters: [PIGMENTS_COUNTERS.COUNTER, PIGMENTS_COUNTERS.BAGS, PIGMENTS_COUNTERS.CONTAINER],
       logs: {
         [PigmentsLogsNames.COUNTER]: {
           log: [],
@@ -469,6 +482,7 @@ const pigmentsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/pigments/pigment-shelblue.webp`,
       color: '',
+      counters: [PIGMENTS_COUNTERS.COUNTER, PIGMENTS_COUNTERS.BAGS, PIGMENTS_COUNTERS.CONTAINER],
       logs: {
         [PigmentsLogsNames.COUNTER]: {
           log: [],
@@ -519,6 +533,7 @@ const pigmentsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/pigments/pigment-massa-wysokostabilna.webp`,
       color: '',
+      counters: [PIGMENTS_COUNTERS.COUNTER, PIGMENTS_COUNTERS.BAGS, PIGMENTS_COUNTERS.CONTAINER],
       logs: {
         [PigmentsLogsNames.COUNTER]: {
           log: [],
