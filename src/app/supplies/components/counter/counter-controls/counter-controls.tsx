@@ -14,7 +14,7 @@ interface ICounterControlsProps {
 const CounterControls = ({ UNID }: ICounterControlsProps): JSX.Element => {
   const itemData = useAppSelector(SelectorGetItemData(UNID));
 
-  const renderedCounters = () => {
+  const renderedCounters = (): JSX.Element => {
     if (itemData.counters?.length) {
       return <CounterSwitcher counters={itemData.counters} UNID={UNID} />;
     } else {
@@ -29,12 +29,5 @@ const CounterControls = ({ UNID }: ICounterControlsProps): JSX.Element => {
 
   return <>{renderedCounters()}</>;
 };
-
-// <section className={style['counter-controls']}>
-//   <h2 className="visually-hidden">Licnik</h2>
-//   {/* <SuppliesBasicCounter UNID={UNID} /> */}
-
-//   {renderedCounters()}
-// </section>
 
 export default CounterControls;
