@@ -1,20 +1,19 @@
 import { useState } from 'react';
 //components
 import { AdditionalNav, PageNotification } from '../../../../../components';
-import GumsCardboardCounter from '../gums-cardboard-counter/gums-cardboard-counter';
-import GumsBasicCounter from '../gums-basic-counter/gums-basic-counter';
+import { GumsCardboardCounter, GumsBasicCounter } from '../../';
 //variables
 import { GUMS_COUNTERS, gumsCountersList } from '../../../variables';
 import { ErrorsText, NotificationType } from '../../../../../variables';
 //styles
 import style from './gums-counter-switcher.module.scss';
 
-interface ICounterControlsProps {
+interface IGumsCounterSwitcherProps {
   counters: string[];
   UNID: string;
 }
 
-const CounterControls = ({ counters, UNID }: ICounterControlsProps): JSX.Element => {
+const GumsCounterSwitcher = ({ counters, UNID }: IGumsCounterSwitcherProps): JSX.Element => {
   const [currentCounter, setCurrentCounter] = useState<string>(counters[0]);
 
   const getCurrentCounterComponent = (): JSX.Element => {
@@ -55,4 +54,4 @@ const CounterControls = ({ counters, UNID }: ICounterControlsProps): JSX.Element
   );
 };
 
-export default CounterControls;
+export default GumsCounterSwitcher;
