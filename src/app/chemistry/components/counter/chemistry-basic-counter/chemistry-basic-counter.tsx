@@ -5,7 +5,7 @@ import { useAppDispatch, useAppSelector } from '../../../../../hooks/hooks';
 import { decrementAction, incrementAction } from '../../../store/actions/actions';
 import { SelectorGetItemSetting } from '../../../store/slectors/selectors';
 //variables
-import { CHEMISTRY_TEXT, ChemistryLogsNames, ChemistrySettingsNames } from '../../../variables';
+import { CHEMISTRY_COUNTERS, CHEMISTRY_TEXT, ChemistrySettingsNames } from '../../../variables';
 
 interface ISuppliesBasicCounterProps {
   UNID: string;
@@ -19,11 +19,11 @@ const ChemistryBasicCounter = ({ UNID }: ISuppliesBasicCounterProps): JSX.Elemen
   const dispatch = useAppDispatch();
 
   const inc = (value: number): void => {
-    dispatch(incrementAction({ UNID: UNID, value: value, logName: ChemistryLogsNames.COUNTER }));
+    dispatch(incrementAction({ UNID: UNID, value: value, logName: CHEMISTRY_COUNTERS.COUNTER }));
   };
 
   const dec = (value: number): void => {
-    dispatch(decrementAction({ UNID: UNID, value: value, logName: ChemistryLogsNames.COUNTER }));
+    dispatch(decrementAction({ UNID: UNID, value: value, logName: CHEMISTRY_COUNTERS.COUNTER }));
   };
 
   return (

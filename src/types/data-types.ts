@@ -55,7 +55,7 @@ interface IItemData {
   color: string;
   logs: ILogs;
   settings: ISettings;
-  counters?: string[];
+  counters: string[];
   additionalResources: string[];
   packagingInfo: string;
   unitsOfMeasurement: string;

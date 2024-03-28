@@ -6,4 +6,8 @@ enum ChemistrySettingsNames {
   BASE_COUNTER_VALUE = 'baseCounterValue',
 }
 
-export { ChemistrySettingsNames, ChemistryLogsNames };
+enum CHEMISTRY_COUNTERS {
+  COUNTER = 'counter',
+}
+
+export { ChemistrySettingsNames, ChemistryLogsNames, CHEMISTRY_COUNTERS };

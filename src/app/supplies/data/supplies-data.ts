@@ -56,6 +56,7 @@ const suppliesData: IPackage = {
       additionalInfo: '1 paleta (48szt.)',
       image: `${rootBaseName}/images/supplies/supplies-tasma-bandowanie-zielona.webp`,
       color: '',
+      counters: [SUPPLIES_COUNTERS.COUNTER],
       logs: {
         [SuppliesLogsNames.COUNTER]: {
           log: [],
@@ -83,6 +84,7 @@ const suppliesData: IPackage = {
       additionalInfo: '40 rolek',
       image: `${rootBaseName}/images/supplies/supplies-polrekaw-bialy.webp`,
       color: '',
+      counters: [SUPPLIES_COUNTERS.COUNTER],
       logs: {
         [SuppliesLogsNames.COUNTER]: {
           log: [],
@@ -110,6 +112,7 @@ const suppliesData: IPackage = {
       additionalInfo: '20 rolek',
       image: `${rootBaseName}/images/supplies/supplies-polrekaw-czarny.webp`,
       color: '',
+      counters: [SUPPLIES_COUNTERS.COUNTER],
       logs: {
         [SuppliesLogsNames.COUNTER]: {
           log: [],
@@ -137,6 +140,7 @@ const suppliesData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/supplies/supplies-polrekaw-czarny.webp`,
       color: '#ffff00',
+      counters: [SUPPLIES_COUNTERS.COUNTER],
       logs: {
         [SuppliesLogsNames.COUNTER]: {
           log: [],
@@ -164,6 +168,7 @@ const suppliesData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/supplies/supplies-polrekaw-czarny.webp`,
       color: '#ffff00',
+      counters: [SUPPLIES_COUNTERS.COUNTER],
       logs: {
         [SuppliesLogsNames.COUNTER]: {
           log: [],
@@ -191,6 +196,7 @@ const suppliesData: IPackage = {
       additionalInfo: '10 rolek',
       image: `${rootBaseName}/images/supplies/supplies-polrekaw-czarny.webp`,
       color: '#ffff00',
+      counters: [SUPPLIES_COUNTERS.COUNTER],
       logs: {
         [SuppliesLogsNames.COUNTER]: {
           log: [],
@@ -218,6 +224,7 @@ const suppliesData: IPackage = {
       additionalInfo: '40 rolek',
       image: `${rootBaseName}/images/supplies/supplies-polrekaw-czarny.webp`,
       color: '',
+      counters: [SUPPLIES_COUNTERS.COUNTER],
       logs: {
         [SuppliesLogsNames.COUNTER]: {
           log: [],
@@ -245,6 +252,7 @@ const suppliesData: IPackage = {
       additionalInfo: '10 rolek',
       image: `${rootBaseName}/images/supplies/supplies-polrekaw-czarny.webp`,
       color: '',
+      counters: [SUPPLIES_COUNTERS.COUNTER],
       logs: {
         [SuppliesLogsNames.COUNTER]: {
           log: [],
@@ -272,6 +280,7 @@ const suppliesData: IPackage = {
       additionalInfo: '30 rolek',
       image: `${rootBaseName}/images/supplies/supplies-polrekaw-czarny.webp`,
       color: '',
+      counters: [SUPPLIES_COUNTERS.COUNTER],
       logs: {
         [SuppliesLogsNames.COUNTER]: {
           log: [],
@@ -521,6 +530,7 @@ const suppliesData: IPackage = {
       additionalInfo: '10 kart.',
       image: `${rootBaseName}/images/supplies/supplies-gwozdzie.webp`,
       color: '',
+      counters: [SUPPLIES_COUNTERS.COUNTER],
       logs: {
         [SuppliesLogsNames.COUNTER]: {
           log: [],
@@ -548,6 +558,7 @@ const suppliesData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/supplies/supplies-tasma-z-nadrukiem.webp`,
       color: '',
+      counters: [SUPPLIES_COUNTERS.COUNTER],
       logs: {
         [SuppliesLogsNames.COUNTER]: {
           log: [],
@@ -723,6 +734,7 @@ const suppliesData: IPackage = {
       additionalInfo: '50 paczek',
       image: `${rootBaseName}/images/supplies/supplies-styropian-bialy.webp`,
       color: '',
+      counters: [SUPPLIES_COUNTERS.COUNTER],
       logs: {
         [SuppliesLogsNames.COUNTER]: {
           log: [],
@@ -787,6 +799,7 @@ const suppliesData: IPackage = {
       additionalInfo: '',
       image: ``,
       color: '',
+      counters: [SUPPLIES_COUNTERS.COUNTER],
       logs: {
         [SuppliesLogsNames.COUNTER]: {
           log: [],
