@@ -3,18 +3,14 @@ import { ReactNode } from 'react';
 import { CounterPageLayout } from '../../layouts';
 //components
 import { CountableItemInfo } from '../../components';
-//style
-import style from './counter-page.module.scss';
-import { clearItemDataAction } from '../../app/chemistry/store/actions/actions';
-import {
-  SelectorCheckIfElementExistsByUNID,
-  SelectorGetItemData,
-} from '../../app/chemistry/store/slectors/selectors';
+//types
 import {
   ISelectorCheckIfElementExistsByUNID,
   ISelectorGetItemData,
   ClearItemDataActionType,
 } from '../../types';
+//style
+import style from './counter-page.module.scss';
 
 interface ICounterPageProps {
   backLink: string;
@@ -25,13 +21,20 @@ interface ICounterPageProps {
   children: ReactNode;
 }
 
-const CounterPage = ({ backLink, headerTitle, children }: ICounterPageProps): JSX.Element => {
+const CounterPage = ({
+  backLink,
+  headerTitle,
+  children,
+  SelectorCheckIfElementExistsByUNID,
+  SelectorGetCurrentItemData,
+  clearItemDataAction,
+}: ICounterPageProps): JSX.Element => {
   return (
     <CounterPageLayout backLink={backLink} headerTitle={headerTitle}>
       <main className={style['counter-page']}>
         <CountableItemInfo
           SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
-          SelectorGetCurrentItemData={SelectorGetItemData}
+          SelectorGetCurrentItemData={SelectorGetCurrentItemData}
           clearItemDataAction={clearItemDataAction}
         />
         {children}
