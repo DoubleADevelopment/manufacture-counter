@@ -14,7 +14,7 @@ const CounterControls = ({ UNID }: ICounterControlsProps): JSX.Element => {
   const itemData = useAppSelector(SelectorGetItemData(UNID));
 
   const renderedCounters = (): JSX.Element => {
-    if (itemData.counters?.length) {
+    if (itemData.counters?.length > 1) {
       return <GumsCounterSwitcher counters={itemData.counters} UNID={UNID} />;
     } else {
       return (

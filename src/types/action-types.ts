@@ -24,7 +24,6 @@ interface IChangeItemSettingActionPayload<S> {
   newSettingValue: number;
 }
 
-// type IncDecActionType = (action: IIncDecActionPayload<ChemistryLogsNames>) => AppThunk;
 type ClearItemDataActionType = (action: IClearItemActionPayload) => AppThunk;
 type ClearDataActionType = () => AppThunk;
 
