@@ -2,8 +2,7 @@
 import { SelectorGetItemData } from '../../../store/slectors/selectors';
 import { useAppSelector } from '../../../../../hooks/hooks';
 //components
-import SuppliesBasicCounter from '../supplies-basic-counter/supplies-basic-counter';
-import { CounterSwitcher } from '../../';
+import { CounterSwitcher, SuppliesBasicCounter } from '../../';
 //styles
 import style from './counter-controls.module.scss';
 
@@ -14,8 +13,8 @@ interface ICounterControlsProps {
 const CounterControls = ({ UNID }: ICounterControlsProps): JSX.Element => {
   const itemData = useAppSelector(SelectorGetItemData(UNID));
 
-  const renderedCounters = () => {
-    if (itemData.counters?.length) {
+  const renderedCounters = (): JSX.Element => {
+    if (itemData.counters?.length > 1) {
       return <CounterSwitcher counters={itemData.counters} UNID={UNID} />;
     } else {
       return (
@@ -29,12 +28,5 @@ const CounterControls = ({ UNID }: ICounterControlsProps): JSX.Element => {
 
   return <>{renderedCounters()}</>;
 };
-
-// <section className={style['counter-controls']}>
-//   <h2 className="visually-hidden">Licnik</h2>
-//   {/* <SuppliesBasicCounter UNID={UNID} /> */}
-
-//   {renderedCounters()}
-// </section>
 
 export default CounterControls;

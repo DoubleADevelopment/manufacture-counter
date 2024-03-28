@@ -16,8 +16,9 @@ export const SelectorGetItemData =
 
 export const SelectorGetItemSetting =
   (UNID: string, settingName: PigmentsSettingsNames) =>
-  (state: RootState): number =>
-    state.pigments[UNID].settings[settingName].settingValue;
+  (state: RootState): number => {
+    return state.pigments[UNID].settings[settingName].settingValue;
+  };
 
 export const SelectorCheckIfElementExistsByUNID =
   (UNID: string | undefined) =>

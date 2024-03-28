@@ -28,9 +28,9 @@ const CountableItemInfo = ({
   const { UNID } = useParams();
 
   const itemFromUnidIsset = useAppSelector(SelectorCheckIfElementExistsByUNID(UNID));
+
   const item: IItemData | undefined =
     UNID && itemFromUnidIsset ? useAppSelector(SelectorGetCurrentItemData(UNID)) : undefined;
-
   const dispatch = useAppDispatch();
 
   let convertedItem: IItemDataToDisplay | undefined;

@@ -2,7 +2,7 @@
 import { IPackage } from '../../../types';
 import { rootBaseName } from '../../../variables';
 //vars
-import { GumsLogsNames, GumsSettingsNames } from '../variables/data-variables';
+import { GUMS_COUNTERS, GumsLogsNames, GumsSettingsNames } from '../variables/data-variables';
 
 const gumsData: IPackage = {
   dataPackageName: 'gums',
@@ -19,6 +19,7 @@ const gumsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#2181FC',
+      counters: [GUMS_COUNTERS.CARDBOARD, GUMS_COUNTERS.COUNTER],
       logs: {
         [GumsLogsNames.COUNTER]: {
           log: [],
@@ -55,6 +56,7 @@ const gumsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#2181FC',
+      counters: [GUMS_COUNTERS.CARDBOARD, GUMS_COUNTERS.COUNTER],
       logs: {
         [GumsLogsNames.COUNTER]: {
           log: [],
@@ -92,6 +94,7 @@ const gumsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '#32BD43',
+      counters: [GUMS_COUNTERS.CARDBOARD, GUMS_COUNTERS.COUNTER],
       logs: {
         [GumsLogsNames.COUNTER]: {
           log: [],
@@ -129,6 +132,7 @@ const gumsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '#32BD43',
+      counters: [GUMS_COUNTERS.CARDBOARD, GUMS_COUNTERS.COUNTER],
       logs: {
         [GumsLogsNames.COUNTER]: {
           log: [],
@@ -166,6 +170,7 @@ const gumsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#ffff00',
+      counters: [GUMS_COUNTERS.CARDBOARD, GUMS_COUNTERS.COUNTER],
       logs: {
         [GumsLogsNames.COUNTER]: {
           log: [],
@@ -203,6 +208,7 @@ const gumsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '#d0312d',
+      counters: [GUMS_COUNTERS.CARDBOARD, GUMS_COUNTERS.COUNTER],
       logs: {
         [GumsLogsNames.COUNTER]: {
           log: [],
@@ -240,6 +246,7 @@ const gumsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#ffff00',
+      counters: [GUMS_COUNTERS.CARDBOARD, GUMS_COUNTERS.COUNTER],
       logs: {
         [GumsLogsNames.COUNTER]: {
           log: [],
@@ -277,6 +284,7 @@ const gumsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#d0312d',
+      counters: [GUMS_COUNTERS.CARDBOARD, GUMS_COUNTERS.COUNTER],
       logs: {
         [GumsLogsNames.COUNTER]: {
           log: [],
@@ -314,6 +322,7 @@ const gumsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#004DFF',
+      counters: [GUMS_COUNTERS.CARDBOARD, GUMS_COUNTERS.COUNTER],
       logs: {
         [GumsLogsNames.COUNTER]: {
           log: [],
@@ -351,6 +360,7 @@ const gumsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '#87FF00',
+      counters: [GUMS_COUNTERS.CARDBOARD, GUMS_COUNTERS.COUNTER],
       logs: {
         [GumsLogsNames.COUNTER]: {
           log: [],
@@ -388,6 +398,7 @@ const gumsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#ffffff',
+      counters: [GUMS_COUNTERS.CARDBOARD, GUMS_COUNTERS.COUNTER],
       logs: {
         [GumsLogsNames.COUNTER]: {
           log: [],
@@ -425,6 +436,7 @@ const gumsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '#FFAA00',
+      counters: [GUMS_COUNTERS.CARDBOARD, GUMS_COUNTERS.COUNTER],
       logs: {
         [GumsLogsNames.COUNTER]: {
           log: [],
@@ -462,6 +474,7 @@ const gumsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '',
+      counters: [GUMS_COUNTERS.CARDBOARD, GUMS_COUNTERS.COUNTER],
       logs: {
         [GumsLogsNames.COUNTER]: {
           log: [],

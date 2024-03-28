@@ -55,7 +55,7 @@ interface IItemData {
   color: string;
   logs: ILogs;
   settings: ISettings;
-  counters?: string[];
+  counters: string[];
   additionalResources: string[];
   packagingInfo: string;
   unitsOfMeasurement: string;
@@ -72,6 +72,22 @@ interface IPackage {
   items: IItemData[];
 }
 
+interface ICounter {
+  counterSystemName: string;
+  counterTitle: string;
+  counterLogTitle: string;
+  logs: string[];
+  lastChange: string | null;
+  counterBaseValue: number;
+  counterBaseValueTitle: string;
+  counterAdditionalValue: number;
+  counterAdditionalValueTitle: string;
+}
+
+interface ICounters {
+  [key: string]: ICounter;
+}
+
 export type {
   IComponentData,
   ComponentsDataListType,
@@ -83,4 +99,6 @@ export type {
   ILogItem,
   IData,
   IPackage,
+  ICounter,
+  ICounters,
 };

@@ -32,6 +32,5 @@ export const SelectorCheckIfElementExistsByUNID =
         result = true;
       }
     }
-
     return result;
   };

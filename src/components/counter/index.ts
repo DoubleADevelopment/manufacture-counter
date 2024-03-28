@@ -12,7 +12,6 @@ import {
 import { ControlSetValue } from '../controls';
 import BasicCounter from './basic-counter/basic-counter';
 import CounterWithAdditionalValue from './counter-with-additional-value/counter-with-additional-value';
-import CounterWrap from './counter-wrap/counter-wrap';
 
 export {
   BasicCounter,
@@ -27,5 +26,4 @@ export {
   ButtonDeleteSmall,
   ControlSetValue,
   CounterWithAdditionalValue,
-  CounterWrap,
 };

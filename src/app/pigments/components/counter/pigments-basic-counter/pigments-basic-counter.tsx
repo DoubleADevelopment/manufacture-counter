@@ -11,7 +11,7 @@ interface IPigmentsBasicCounterProps {
   UNID: string;
 }
 
-const GumsBasicCounter = ({ UNID }: IPigmentsBasicCounterProps): JSX.Element => {
+const PigmentsBasicCounter = ({ UNID }: IPigmentsBasicCounterProps): JSX.Element => {
   const pigmentBasicCounterDefaultValue = useAppSelector(
     SelectorGetItemSetting(UNID, PigmentsSettingsNames.BASE_COUNTER_VALUE),
   );
@@ -36,4 +36,4 @@ const GumsBasicCounter = ({ UNID }: IPigmentsBasicCounterProps): JSX.Element => 
   );
 };
 
-export default GumsBasicCounter;
+export default PigmentsBasicCounter;

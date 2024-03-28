@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 //variables
-import { ChemistryLogsNames } from '../../variables/';
+import { CHEMISTRY_COUNTERS } from '../../variables/';
 //state
 import chemistryState from '../state/state';
 //types
@@ -16,15 +16,15 @@ export const chemistrySlice = createSlice({
   initialState: chemistryState,
 
   reducers: {
-    increment: (state, action: PayloadAction<IIncDecActionPayload<ChemistryLogsNames>>) => {
+    increment: (state, action: PayloadAction<IIncDecActionPayload<CHEMISTRY_COUNTERS>>) => {
       const { UNID, value } = action.payload;
       state[UNID].amount = state[UNID].amount + value;
     },
-    decrement: (state, action: PayloadAction<IIncDecActionPayload<ChemistryLogsNames>>) => {
+    decrement: (state, action: PayloadAction<IIncDecActionPayload<CHEMISTRY_COUNTERS>>) => {
       const { UNID, value } = action.payload;
       state[UNID].amount = state[UNID].amount - value;
     },
-    log: (state, action: PayloadAction<ILogActionPayload<ChemistryLogsNames>>) => {
+    log: (state, action: PayloadAction<ILogActionPayload<CHEMISTRY_COUNTERS>>) => {
       const { UNID, logName, log } = action.payload;
       state[UNID].logs[logName].log.push(log);
       state[UNID].logs[logName].lastChange = new Date().getTime().toString();

@@ -13,6 +13,4 @@ enum SUPPLIES_COUNTERS {
   CARDBOARD = 'kartony',
 }
 
-const suppliesCountersList: SUPPLIES_COUNTERS[] = [SUPPLIES_COUNTERS.COUNTER];
-
-export { SuppliesLogsNames, SuppliesSettingsNames, suppliesCountersList, SUPPLIES_COUNTERS };
+export { SuppliesLogsNames, SuppliesSettingsNames, SUPPLIES_COUNTERS };

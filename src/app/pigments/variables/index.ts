@@ -1,10 +1,5 @@
 import { PigmentsAppRouting } from './app-routing-variables';
-import {
-  PigmentsLogsNames,
-  PigmentsSettingsNames,
-  PIGMENTS_COUNTERS,
-  pigmentsCountersList,
-} from './data-variables';
+import { PigmentsLogsNames, PigmentsSettingsNames, PIGMENTS_COUNTERS } from './data-variables';
 import { PIGMENTS_TEXT } from './text-variables';
 
 export {
@@ -12,6 +7,5 @@ export {
   PigmentsLogsNames,
   PigmentsSettingsNames,
   PIGMENTS_COUNTERS,
-  pigmentsCountersList,
   PIGMENTS_TEXT,
 };
