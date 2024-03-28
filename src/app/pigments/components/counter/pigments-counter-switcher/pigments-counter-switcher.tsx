@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { AdditionalNav, PageNotification } from '../../../../../components';
 import { PigmentsBagCounter, PigmentsBasicCounter, PigmentsContainerCounter } from '../../';
 //variables
-import { PIGMENTS_COUNTERS, pigmentsCountersList } from '../../../variables';
+import { PIGMENTS_COUNTERS } from '../../../variables';
 import { ErrorsText, NotificationType } from '../../../../../variables';
 //styles
 import style from './pigments-counter-switcher.module.scss';
@@ -49,7 +49,7 @@ const PigmentsCounterSwitcher = ({
         <h2 className="visually-hidden">Licnik</h2>
         <AdditionalNav
           changeHandler={additionalNavHandler}
-          items={pigmentsCountersList}
+          items={counters}
           defaultItem={currentCounter}
         />
 

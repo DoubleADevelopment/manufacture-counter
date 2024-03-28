@@ -17,10 +17,4 @@ enum PIGMENTS_COUNTERS {
   CONTAINER = 'Kontenery',
 }
 
-const pigmentsCountersList: PIGMENTS_COUNTERS[] = [
-  PIGMENTS_COUNTERS.COUNTER,
-  PIGMENTS_COUNTERS.BAGS,
-  PIGMENTS_COUNTERS.CONTAINER,
-];
-
-export { PigmentsLogsNames, PigmentsSettingsNames, PIGMENTS_COUNTERS, pigmentsCountersList };
+export { PigmentsLogsNames, PigmentsSettingsNames, PIGMENTS_COUNTERS };

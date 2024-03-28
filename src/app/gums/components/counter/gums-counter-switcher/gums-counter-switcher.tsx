@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { AdditionalNav, PageNotification } from '../../../../../components';
 import { GumsCardboardCounter, GumsBasicCounter } from '../../';
 //variables
-import { GUMS_COUNTERS, gumsCountersList } from '../../../variables';
+import { GUMS_COUNTERS } from '../../../variables';
 import { ErrorsText, NotificationType } from '../../../../../variables';
 //styles
 import style from './gums-counter-switcher.module.scss';
@@ -44,7 +44,7 @@ const GumsCounterSwitcher = ({ counters, UNID }: IGumsCounterSwitcherProps): JSX
         <h2 className="visually-hidden">Licnik</h2>
         <AdditionalNav
           changeHandler={additionalNavHandler}
-          items={gumsCountersList}
+          items={counters}
           defaultItem={currentCounter}
         />
 

@@ -13,6 +13,4 @@ enum GUMS_COUNTERS {
   CARDBOARD = 'Kartony',
 }
 
-const gumsCountersList: GUMS_COUNTERS[] = [GUMS_COUNTERS.COUNTER, GUMS_COUNTERS.CARDBOARD];
-
-export { GumsLogsNames, GumsSettingsNames, GUMS_COUNTERS, gumsCountersList };
+export { GumsLogsNames, GumsSettingsNames, GUMS_COUNTERS };
