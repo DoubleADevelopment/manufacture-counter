@@ -19,7 +19,7 @@ interface IItemDataToDisplay {
   amount: number;
   unitsOfMeasurement: string;
   lastChange?: Date;
-  logs: ILogs;
+  counters: ICounters;
   color: string;
 }
 
@@ -53,9 +53,7 @@ interface IItemData {
   additionalInfo: string;
   image: string;
   color: string;
-  logs: ILogs;
-  settings: ISettings;
-  counters: string[];
+  counters: ICounters;
   additionalResources: string[];
   packagingInfo: string;
   unitsOfMeasurement: string;
@@ -72,6 +70,8 @@ interface IPackage {
   items: IItemData[];
 }
 
+type CountersType = 'BASIC_COUNTER' | 'ADDITIONAL_VALUE_COUNTER';
+
 interface ICounter {
   counterSystemName: string;
   counterTitle: string;
@@ -82,6 +82,7 @@ interface ICounter {
   counterBaseValueTitle: string;
   counterAdditionalValue: number;
   counterAdditionalValueTitle: string;
+  counterType: CountersType;
 }
 
 interface ICounters {

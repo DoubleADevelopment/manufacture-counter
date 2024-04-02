@@ -23,6 +23,7 @@ const ControlSetAdditionalValue = ({
   status,
   message,
 }: IControlSetAdditionalValueProps): JSX.Element => {
+  console.log(value);
   const inputEl = useRef<HTMLInputElement>(null);
   const [inputClassName, setInputClassName] = useState<string>('');
 

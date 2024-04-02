@@ -1,32 +1,63 @@
 import { useState } from 'react';
 //components
-import { AdditionalNav, PageNotification } from '../../../../../components';
-import { PigmentsBagCounter, PigmentsBasicCounter, PigmentsContainerCounter } from '../../';
+import {
+  AdditionalNav,
+  BasicCounterWrap,
+  CounterWithAdditionalValueWrap,
+  PageNotification,
+} from '../../../../../components';
 //variables
-import { PIGMENTS_COUNTERS } from '../../../variables';
-import { ErrorsText, NotificationType } from '../../../../../variables';
+import { COUNTERS, ErrorsText, NotificationType } from '../../../../../variables';
 //styles
 import style from './pigments-counter-switcher.module.scss';
+import { IAdditionalNavItem, IItemData } from '../../../../../types';
+import { useAppSelector } from '../../../../../hooks/hooks';
+import { SelectorGetItemData } from '../../../store/slectors/selectors';
+import {
+  changeItemSettingAction,
+  decrementAction,
+  incrementAction,
+} from '../../../store/actions/actions';
 
 interface IPigmentsCounterSwitcherProps {
   UNID: string;
-  counters: string[];
 }
 
-const PigmentsCounterSwitcher = ({
-  counters,
-  UNID,
-}: IPigmentsCounterSwitcherProps): JSX.Element => {
-  const [currentCounter, setCurrentCounter] = useState<string>(counters[0]);
+const PigmentsCounterSwitcher = ({ UNID }: IPigmentsCounterSwitcherProps): JSX.Element => {
+  const item: IItemData = useAppSelector(SelectorGetItemData(UNID));
+
+  const countersArray: IAdditionalNavItem[] = Object.entries(item.counters).map(([key, value]) => {
+    return {
+      value: key,
+      title: value.counterTitle,
+    };
+  });
+
+  const [currentCounter, setCurrentCounter] = useState<string>(countersArray[0].value);
 
   const getCurrentCounterComponent = (): JSX.Element => {
-    switch (currentCounter) {
-      case PIGMENTS_COUNTERS.BAGS:
-        return <PigmentsBagCounter UNID={UNID} />;
-      case PIGMENTS_COUNTERS.COUNTER:
-        return <PigmentsBasicCounter UNID={UNID} />;
-      case PIGMENTS_COUNTERS.CONTAINER:
-        return <PigmentsContainerCounter UNID={UNID} />;
+    const curCounterType = item.counters[currentCounter].counterType;
+
+    switch (curCounterType) {
+      case COUNTERS.ADDITIONAL_VALUE_COUNTER:
+        return (
+          <CounterWithAdditionalValueWrap
+            UNID={item.UNID}
+            counter={item.counters[currentCounter]}
+            incrementAction={incrementAction}
+            decrementAction={decrementAction}
+            changeItemSettingAction={changeItemSettingAction}
+          />
+        );
+      case COUNTERS.BASIC_COUNTER:
+        return (
+          <BasicCounterWrap
+            UNID={item.UNID}
+            counter={item.counters[currentCounter]}
+            incrementAction={incrementAction}
+            decrementAction={decrementAction}
+          />
+        );
       default:
         return (
           <PageNotification
@@ -49,7 +80,7 @@ const PigmentsCounterSwitcher = ({
         <h2 className="visually-hidden">Licnik</h2>
         <AdditionalNav
           changeHandler={additionalNavHandler}
-          items={counters}
+          items={countersArray}
           defaultItem={currentCounter}
         />
 

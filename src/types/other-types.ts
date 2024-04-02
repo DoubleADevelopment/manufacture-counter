@@ -7,4 +7,9 @@ interface IButtonProps {
   clickHandler: () => void;
 }
 
-export type { ISetActiveLink, IButtonProps };
+interface IAdditionalNavItem {
+  value: string;
+  title: string;
+}
+
+export type { ISetActiveLink, IButtonProps, IAdditionalNavItem };

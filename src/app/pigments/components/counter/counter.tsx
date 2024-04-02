@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 //components
 import { PageNotification } from '../../../../components';
-import { CounterControls } from '../';
+import { PigmentsCounterSwitcher } from '../';
 //store
 import { useAppSelector } from '../../../../hooks/hooks';
 import { SelectorCheckIfElementExistsByUNID } from '../../store/slectors/selectors';
@@ -14,7 +14,7 @@ const Counter = (): JSX.Element => {
 
   const renderComponents = (): JSX.Element => {
     if (UNID && itemFromUnidIsset) {
-      return <CounterControls UNID={UNID} />;
+      return <PigmentsCounterSwitcher UNID={UNID} />;
     } else {
       return (
         <PageNotification
