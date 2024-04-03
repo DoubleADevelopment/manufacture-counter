@@ -4,24 +4,22 @@ import suppliesRepository from '../../repository/supplies-repository';
 //types
 import type {
   AppThunk,
-  IChangeItemSettingActionPayload,
+  IChangeItemAdditionalSettingActionPayload,
   IClearItemActionPayload,
   IIncDecActionPayload,
 } from '../../../../types';
-//variables
-import { SuppliesLogsNames, SuppliesSettingsNames } from '../../variables';
 
 const { increment, decrement, log, clearItem, clearData, changeItemSetting } =
   suppliesSlice.actions;
 
 export const incrementAction =
-  (action: IIncDecActionPayload<SuppliesLogsNames>): AppThunk =>
+  (action: IIncDecActionPayload): AppThunk =>
   (dispatch, getState) => {
     dispatch(increment(action));
 
     const newLog = {
       log: action.logText ? action.logText : `+${action.value.toString()}`,
-      logName: action.logName,
+      counterName: action.counterName,
       UNID: action.UNID,
     };
 
@@ -30,13 +28,13 @@ export const incrementAction =
   };
 
 export const decrementAction =
-  (action: IIncDecActionPayload<SuppliesLogsNames>): AppThunk =>
+  (action: IIncDecActionPayload): AppThunk =>
   (dispatch, getState) => {
     dispatch(decrement(action));
 
     const newLog = {
       log: action.logText ? action.logText : `-${action.value.toString()}`,
-      logName: action.logName,
+      counterName: action.counterName,
       UNID: action.UNID,
     };
 
@@ -61,7 +59,7 @@ export const clearDataAction = (): AppThunk => (dispatch) => {
 };
 
 export const changeItemSettingAction =
-  (action: IChangeItemSettingActionPayload<SuppliesSettingsNames>): AppThunk =>
+  (action: IChangeItemAdditionalSettingActionPayload): AppThunk =>
   (dispatch, getState) => {
     dispatch(changeItemSetting(action));
     suppliesRepository.sendData(getState().supplies);

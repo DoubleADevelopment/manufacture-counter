@@ -4,23 +4,22 @@ import gumsRepository from '../../repository/gums-repository';
 //types
 import type {
   AppThunk,
-  IChangeItemSettingActionPayload,
+  IChangeItemAdditionalSettingActionPayload,
   IClearItemActionPayload,
   IIncDecActionPayload,
 } from '../../../../types';
-//variables
-import { GumsLogsNames, GumsSettingsNames } from '../../variables';
 
-const { increment, decrement, log, clearItem, clearData, changeItemSetting } = gumsSlice.actions;
+const { increment, decrement, log, clearItem, clearData, changeItemAdditionalSetting } =
+  gumsSlice.actions;
 
 export const incrementAction =
-  (action: IIncDecActionPayload<GumsLogsNames>): AppThunk =>
+  (action: IIncDecActionPayload): AppThunk =>
   (dispatch, getState) => {
     dispatch(increment(action));
 
     const newLog = {
       log: action.logText ? action.logText : `+${action.value.toString()}`,
-      logName: action.logName,
+      counterName: action.counterName,
       UNID: action.UNID,
     };
 
@@ -29,13 +28,13 @@ export const incrementAction =
   };
 
 export const decrementAction =
-  (action: IIncDecActionPayload<GumsLogsNames>): AppThunk =>
+  (action: IIncDecActionPayload): AppThunk =>
   (dispatch, getState) => {
     dispatch(decrement(action));
 
     const newLog = {
       log: action.logText ? action.logText : `-${action.value.toString()}`,
-      logName: action.logName,
+      counterName: action.counterName,
       UNID: action.UNID,
     };
 
@@ -60,8 +59,8 @@ export const clearDataAction = (): AppThunk => (dispatch) => {
 };
 
 export const changeItemSettingAction =
-  (action: IChangeItemSettingActionPayload<GumsSettingsNames>): AppThunk =>
+  (action: IChangeItemAdditionalSettingActionPayload): AppThunk =>
   (dispatch, getState) => {
-    dispatch(changeItemSetting(action));
+    dispatch(changeItemAdditionalSetting(action));
     gumsRepository.sendData(getState().gums);
   };

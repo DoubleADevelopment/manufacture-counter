@@ -1,6 +1,4 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-//variables
-import { CHEMISTRY_COUNTERS } from '../../variables/';
 //state
 import chemistryState from '../state/state';
 //types
@@ -16,18 +14,18 @@ export const chemistrySlice = createSlice({
   initialState: chemistryState,
 
   reducers: {
-    increment: (state, action: PayloadAction<IIncDecActionPayload<CHEMISTRY_COUNTERS>>) => {
+    increment: (state, action: PayloadAction<IIncDecActionPayload>) => {
       const { UNID, value } = action.payload;
       state[UNID].amount = state[UNID].amount + value;
     },
-    decrement: (state, action: PayloadAction<IIncDecActionPayload<CHEMISTRY_COUNTERS>>) => {
+    decrement: (state, action: PayloadAction<IIncDecActionPayload>) => {
       const { UNID, value } = action.payload;
       state[UNID].amount = state[UNID].amount - value;
     },
-    log: (state, action: PayloadAction<ILogActionPayload<CHEMISTRY_COUNTERS>>) => {
-      const { UNID, logName, log } = action.payload;
-      state[UNID].logs[logName].log.push(log);
-      state[UNID].logs[logName].lastChange = new Date().getTime().toString();
+    log: (state, action: PayloadAction<ILogActionPayload>) => {
+      const { UNID, counterName, log } = action.payload;
+      state[UNID].counters[counterName].logs.push(log);
+      state[UNID].counters[counterName].lastChange = new Date().getTime().toString();
     },
     clearItem: (state, action: PayloadAction<IClearItemActionPayload>) => {
       const { UNID } = action.payload.item;

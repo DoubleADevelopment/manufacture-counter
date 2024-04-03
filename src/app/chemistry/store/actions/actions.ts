@@ -3,19 +3,17 @@ import { chemistrySlice } from '../slice/slice';
 import chemistryRepository from '../../repository/chemistry-repository';
 //types
 import type { AppThunk, IClearItemActionPayload, IIncDecActionPayload } from '../../../../types';
-//variables
-import { CHEMISTRY_COUNTERS } from '../../variables/';
 
 const { increment, decrement, log, clearItem, clearData } = chemistrySlice.actions;
 
 const incrementAction =
-  (action: IIncDecActionPayload<CHEMISTRY_COUNTERS>): AppThunk =>
+  (action: IIncDecActionPayload): AppThunk =>
   (dispatch, getState) => {
     dispatch(increment(action));
 
     const newLog = {
       log: `+${action.value.toString()}`,
-      logName: CHEMISTRY_COUNTERS.COUNTER,
+      counterName: action.counterName,
       UNID: action.UNID,
     };
 
@@ -24,13 +22,13 @@ const incrementAction =
   };
 
 const decrementAction =
-  (action: IIncDecActionPayload<CHEMISTRY_COUNTERS>): AppThunk =>
+  (action: IIncDecActionPayload): AppThunk =>
   (dispatch, getState) => {
     dispatch(decrement(action));
 
     const newLog = {
       log: `-${action.value.toString()}`,
-      logName: CHEMISTRY_COUNTERS.COUNTER,
+      counterName: action.counterName,
       UNID: action.UNID,
     };
 

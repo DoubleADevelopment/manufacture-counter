@@ -1,5 +1,3 @@
-//variables
-import { SuppliesSettingsNames } from '../../variables';
 //types
 import type { IData, IItemData, RootState } from '../../../../types';
 
@@ -13,12 +11,6 @@ export const SelectorGetItemData =
   (UNID: string) =>
   (state: RootState): IItemData =>
     state.supplies[UNID];
-
-export const SelectorGetItemSetting =
-  (UNID: string, settingName: SuppliesSettingsNames) =>
-  (state: RootState): number => {
-    return state.supplies[UNID].settings[settingName].settingValue;
-  };
 
 export const SelectorCheckIfElementExistsByUNID =
   (UNID: string | undefined) =>
