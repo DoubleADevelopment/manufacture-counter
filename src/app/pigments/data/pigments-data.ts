@@ -1,12 +1,7 @@
 //types
 import type { IPackage } from '../../../types';
-//vars
+//variables
 import { rootBaseName } from '../../../variables';
-import {
-  PIGMENTS_COUNTERS,
-  PigmentsLogsNames,
-  PigmentsSettingsNames,
-} from '../variables/data-variables';
 
 const pigmentsData: IPackage = {
   dataPackageName: 'pigments',
@@ -23,41 +18,45 @@ const pigmentsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/pigments/pigment-braz.webp`,
       color: '',
-      counters: [PIGMENTS_COUNTERS.COUNTER, PIGMENTS_COUNTERS.BAGS, PIGMENTS_COUNTERS.CONTAINER],
-      logs: {
-        [PigmentsLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        BAGS: {
+          counterSystemName: 'BAGS',
+          counterTitle: 'Worki',
+          counterLogTitle: 'Worki',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość worków',
+          counterAdditionalValue: 25,
+          counterAdditionalValueTitle: 'Waga jednego worka / KG',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'multiplication',
         },
-        [PigmentsLogsNames.CONTAINER]: {
-          log: [],
-          name: 'Kontenery',
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 500,
+          counterBaseValueTitle: 'Ilość pigmentu w kg',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
-        [PigmentsLogsNames.BAG]: {
-          log: [],
-          name: 'Worki',
+        CONTAINER: {
+          counterSystemName: 'CONTAINER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-
-      settings: {
-        [PigmentsSettingsNames.BASE_BAG_VALUE]: {
-          settingValue: 25,
-          name: 'Waga jednego worka / KG',
-        },
-        [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
-          settingValue: 0,
-          name: 'Waga kontenera / KG',
-        },
-        [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
-          settingValue: 77,
-          name: 'Waga jednego kontenera / KG',
-        },
-        [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'Waga pigmentu / KG',
+          counterBaseValue: 500,
+          counterBaseValueTitle: 'Waga kontenera / KG',
+          counterAdditionalValue: 77,
+          counterAdditionalValueTitle: 'Waga jednego kontenera / KG',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'subtraction',
         },
       },
       additionalResources: [],
@@ -74,41 +73,45 @@ const pigmentsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/pigments/pigment-antracyt.webp`,
       color: '',
-      counters: [PIGMENTS_COUNTERS.COUNTER, PIGMENTS_COUNTERS.BAGS, PIGMENTS_COUNTERS.CONTAINER],
-      logs: {
-        [PigmentsLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        BAGS: {
+          counterSystemName: 'BAGS',
+          counterTitle: 'Worki',
+          counterLogTitle: 'Worki',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość worków',
+          counterAdditionalValue: 25,
+          counterAdditionalValueTitle: 'Waga jednego worka / KG',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'multiplication',
         },
-        [PigmentsLogsNames.CONTAINER]: {
-          log: [],
-          name: 'Kontenery',
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 500,
+          counterBaseValueTitle: 'Ilość pigmentu w kg',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
-        [PigmentsLogsNames.BAG]: {
-          log: [],
-          name: 'Worki',
+        CONTAINER: {
+          counterSystemName: 'CONTAINER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-
-      settings: {
-        [PigmentsSettingsNames.BASE_BAG_VALUE]: {
-          settingValue: 25,
-          name: 'Waga jednego worka / KG',
-        },
-        [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
-          settingValue: 0,
-          name: 'Waga kontenera / KG',
-        },
-        [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
-          settingValue: 77,
-          name: 'Waga jednego kontenera / KG',
-        },
-        [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'Waga pigmentu / KG',
+          counterBaseValue: 500,
+          counterBaseValueTitle: 'Waga kontenera / KG',
+          counterAdditionalValue: 77,
+          counterAdditionalValueTitle: 'Waga jednego kontenera / KG',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'subtraction',
         },
       },
       additionalResources: [],
@@ -125,41 +128,45 @@ const pigmentsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/pigments/pigment-cream.webp`,
       color: '',
-      counters: [PIGMENTS_COUNTERS.COUNTER, PIGMENTS_COUNTERS.BAGS, PIGMENTS_COUNTERS.CONTAINER],
-      logs: {
-        [PigmentsLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        BAGS: {
+          counterSystemName: 'BAGS',
+          counterTitle: 'Worki',
+          counterLogTitle: 'Worki',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość worków',
+          counterAdditionalValue: 25,
+          counterAdditionalValueTitle: 'Waga jednego worka / KG',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'multiplication',
         },
-        [PigmentsLogsNames.CONTAINER]: {
-          log: [],
-          name: 'Kontenery',
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 500,
+          counterBaseValueTitle: 'Ilość pigmentu w kg',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
-        [PigmentsLogsNames.BAG]: {
-          log: [],
-          name: 'Worki',
+        CONTAINER: {
+          counterSystemName: 'CONTAINER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-
-      settings: {
-        [PigmentsSettingsNames.BASE_BAG_VALUE]: {
-          settingValue: 25,
-          name: 'Waga jednego worka / KG',
-        },
-        [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
-          settingValue: 0,
-          name: 'Waga kontenera / KG',
-        },
-        [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
-          settingValue: 77,
-          name: 'Waga jednego kontenera / KG',
-        },
-        [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'Waga pigmentu / KG',
+          counterBaseValue: 500,
+          counterBaseValueTitle: 'Waga kontenera / KG',
+          counterAdditionalValue: 77,
+          counterAdditionalValueTitle: 'Waga jednego kontenera / KG',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'subtraction',
         },
       },
       additionalResources: [],
@@ -176,41 +183,45 @@ const pigmentsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/pigments/pigment-ochra.webp`,
       color: '',
-      counters: [PIGMENTS_COUNTERS.COUNTER, PIGMENTS_COUNTERS.BAGS, PIGMENTS_COUNTERS.CONTAINER],
-      logs: {
-        [PigmentsLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        BAGS: {
+          counterSystemName: 'BAGS',
+          counterTitle: 'Worki',
+          counterLogTitle: 'Worki',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość worków',
+          counterAdditionalValue: 25,
+          counterAdditionalValueTitle: 'Waga jednego worka / KG',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'multiplication',
         },
-        [PigmentsLogsNames.CONTAINER]: {
-          log: [],
-          name: 'Kontenery',
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 500,
+          counterBaseValueTitle: 'Ilość pigmentu w kg',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
-        [PigmentsLogsNames.BAG]: {
-          log: [],
-          name: 'Worki',
+        CONTAINER: {
+          counterSystemName: 'CONTAINER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-
-      settings: {
-        [PigmentsSettingsNames.BASE_BAG_VALUE]: {
-          settingValue: 25,
-          name: 'Waga jednego worka / KG',
-        },
-        [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
-          settingValue: 0,
-          name: 'Waga kontenera / KG',
-        },
-        [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
-          settingValue: 77,
-          name: 'Waga jednego kontenera / KG',
-        },
-        [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'Waga pigmentu / KG',
+          counterBaseValue: 500,
+          counterBaseValueTitle: 'Waga kontenera / KG',
+          counterAdditionalValue: 77,
+          counterAdditionalValueTitle: 'Waga jednego kontenera / KG',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'subtraction',
         },
       },
       additionalResources: [],
@@ -227,41 +238,45 @@ const pigmentsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/pigments/pigment-braz.webp`,
       color: '',
-      counters: [PIGMENTS_COUNTERS.COUNTER, PIGMENTS_COUNTERS.BAGS, PIGMENTS_COUNTERS.CONTAINER],
-      logs: {
-        [PigmentsLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        BAGS: {
+          counterSystemName: 'BAGS',
+          counterTitle: 'Worki',
+          counterLogTitle: 'Worki',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość worków',
+          counterAdditionalValue: 25,
+          counterAdditionalValueTitle: 'Waga jednego worka / KG',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'multiplication',
         },
-        [PigmentsLogsNames.CONTAINER]: {
-          log: [],
-          name: 'Kontenery',
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 500,
+          counterBaseValueTitle: 'Ilość pigmentu w kg',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
-        [PigmentsLogsNames.BAG]: {
-          log: [],
-          name: 'Worki',
+        CONTAINER: {
+          counterSystemName: 'CONTAINER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-
-      settings: {
-        [PigmentsSettingsNames.BASE_BAG_VALUE]: {
-          settingValue: 25,
-          name: 'Waga jednego worka / KG',
-        },
-        [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
-          settingValue: 0,
-          name: 'Waga kontenera / KG',
-        },
-        [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
-          settingValue: 77,
-          name: 'Waga jednego kontenera / KG',
-        },
-        [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'Waga pigmentu / KG',
+          counterBaseValue: 500,
+          counterBaseValueTitle: 'Waga kontenera / KG',
+          counterAdditionalValue: 77,
+          counterAdditionalValueTitle: 'Waga jednego kontenera / KG',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'subtraction',
         },
       },
       additionalResources: [],
@@ -278,41 +293,45 @@ const pigmentsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/pigments/pigment-bialy.webp`,
       color: '',
-      counters: [PIGMENTS_COUNTERS.COUNTER, PIGMENTS_COUNTERS.BAGS, PIGMENTS_COUNTERS.CONTAINER],
-      logs: {
-        [PigmentsLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        BAGS: {
+          counterSystemName: 'BAGS',
+          counterTitle: 'Worki',
+          counterLogTitle: 'Worki',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość worków',
+          counterAdditionalValue: 25,
+          counterAdditionalValueTitle: 'Waga jednego worka / KG',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'multiplication',
         },
-        [PigmentsLogsNames.CONTAINER]: {
-          log: [],
-          name: 'Kontenery',
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 500,
+          counterBaseValueTitle: 'Ilość pigmentu w kg',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
-        [PigmentsLogsNames.BAG]: {
-          log: [],
-          name: 'Worki',
+        CONTAINER: {
+          counterSystemName: 'CONTAINER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-
-      settings: {
-        [PigmentsSettingsNames.BASE_BAG_VALUE]: {
-          settingValue: 25,
-          name: 'Waga jednego worka / KG',
-        },
-        [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
-          settingValue: 0,
-          name: 'Waga kontenera / KG',
-        },
-        [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
-          settingValue: 77,
-          name: 'Waga jednego kontenera / KG',
-        },
-        [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'Waga pigmentu / KG',
+          counterBaseValue: 500,
+          counterBaseValueTitle: 'Waga kontenera / KG',
+          counterAdditionalValue: 77,
+          counterAdditionalValueTitle: 'Waga jednego kontenera / KG',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'subtraction',
         },
       },
       additionalResources: [],
@@ -329,41 +348,45 @@ const pigmentsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/pigments/pigment-zolty.webp`,
       color: '',
-      counters: [PIGMENTS_COUNTERS.COUNTER, PIGMENTS_COUNTERS.BAGS, PIGMENTS_COUNTERS.CONTAINER],
-      logs: {
-        [PigmentsLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        BAGS: {
+          counterSystemName: 'BAGS',
+          counterTitle: 'Worki',
+          counterLogTitle: 'Worki',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość worków',
+          counterAdditionalValue: 25,
+          counterAdditionalValueTitle: 'Waga jednego worka / KG',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'multiplication',
         },
-        [PigmentsLogsNames.CONTAINER]: {
-          log: [],
-          name: 'Kontenery',
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 500,
+          counterBaseValueTitle: 'Ilość pigmentu w kg',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
-        [PigmentsLogsNames.BAG]: {
-          log: [],
-          name: 'Worki',
+        CONTAINER: {
+          counterSystemName: 'CONTAINER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-
-      settings: {
-        [PigmentsSettingsNames.BASE_BAG_VALUE]: {
-          settingValue: 25,
-          name: 'Waga jednego worka / KG',
-        },
-        [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
-          settingValue: 0,
-          name: 'Waga kontenera / KG',
-        },
-        [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
-          settingValue: 77,
-          name: 'Waga jednego kontenera / KG',
-        },
-        [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'Waga pigmentu / KG',
+          counterBaseValue: 500,
+          counterBaseValueTitle: 'Waga kontenera / KG',
+          counterAdditionalValue: 77,
+          counterAdditionalValueTitle: 'Waga jednego kontenera / KG',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'subtraction',
         },
       },
       additionalResources: [],
@@ -380,41 +403,45 @@ const pigmentsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/pigments/pigment-antracyt.webp`,
       color: '',
-      counters: [PIGMENTS_COUNTERS.COUNTER, PIGMENTS_COUNTERS.BAGS, PIGMENTS_COUNTERS.CONTAINER],
-      logs: {
-        [PigmentsLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        BAGS: {
+          counterSystemName: 'BAGS',
+          counterTitle: 'Worki',
+          counterLogTitle: 'Worki',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość worków',
+          counterAdditionalValue: 25,
+          counterAdditionalValueTitle: 'Waga jednego worka / KG',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'multiplication',
         },
-        [PigmentsLogsNames.CONTAINER]: {
-          log: [],
-          name: 'Kontenery',
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 500,
+          counterBaseValueTitle: 'Ilość pigmentu w kg',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
-        [PigmentsLogsNames.BAG]: {
-          log: [],
-          name: 'Worki',
+        CONTAINER: {
+          counterSystemName: 'CONTAINER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-
-      settings: {
-        [PigmentsSettingsNames.BASE_BAG_VALUE]: {
-          settingValue: 25,
-          name: 'Waga jednego worka / KG',
-        },
-        [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
-          settingValue: 0,
-          name: 'Waga kontenera / KG',
-        },
-        [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
-          settingValue: 77,
-          name: 'Waga jednego kontenera / KG',
-        },
-        [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'Waga pigmentu / KG',
+          counterBaseValue: 500,
+          counterBaseValueTitle: 'Waga kontenera / KG',
+          counterAdditionalValue: 77,
+          counterAdditionalValueTitle: 'Waga jednego kontenera / KG',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'subtraction',
         },
       },
       additionalResources: [],
@@ -431,41 +458,45 @@ const pigmentsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/pigments/pigment-szary.webp`,
       color: '',
-      counters: [PIGMENTS_COUNTERS.COUNTER, PIGMENTS_COUNTERS.BAGS, PIGMENTS_COUNTERS.CONTAINER],
-      logs: {
-        [PigmentsLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        BAGS: {
+          counterSystemName: 'BAGS',
+          counterTitle: 'Worki',
+          counterLogTitle: 'Worki',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość worków',
+          counterAdditionalValue: 25,
+          counterAdditionalValueTitle: 'Waga jednego worka / KG',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'multiplication',
         },
-        [PigmentsLogsNames.CONTAINER]: {
-          log: [],
-          name: 'Kontenery',
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 500,
+          counterBaseValueTitle: 'Ilość pigmentu w kg',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
-        [PigmentsLogsNames.BAG]: {
-          log: [],
-          name: 'Worki',
+        CONTAINER: {
+          counterSystemName: 'CONTAINER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-
-      settings: {
-        [PigmentsSettingsNames.BASE_BAG_VALUE]: {
-          settingValue: 25,
-          name: 'Waga jednego worka / KG',
-        },
-        [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
-          settingValue: 0,
-          name: 'Waga kontenera / KG',
-        },
-        [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
-          settingValue: 77,
-          name: 'Waga jednego kontenera / KG',
-        },
-        [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'Waga pigmentu / KG',
+          counterBaseValue: 500,
+          counterBaseValueTitle: 'Waga kontenera / KG',
+          counterAdditionalValue: 77,
+          counterAdditionalValueTitle: 'Waga jednego kontenera / KG',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'subtraction',
         },
       },
       additionalResources: [],
@@ -482,41 +513,45 @@ const pigmentsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/pigments/pigment-shelblue.webp`,
       color: '',
-      counters: [PIGMENTS_COUNTERS.COUNTER, PIGMENTS_COUNTERS.BAGS, PIGMENTS_COUNTERS.CONTAINER],
-      logs: {
-        [PigmentsLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        BAGS: {
+          counterSystemName: 'BAGS',
+          counterTitle: 'Worki',
+          counterLogTitle: 'Worki',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość worków',
+          counterAdditionalValue: 25,
+          counterAdditionalValueTitle: 'Waga jednego worka / KG',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'multiplication',
         },
-        [PigmentsLogsNames.CONTAINER]: {
-          log: [],
-          name: 'Kontenery',
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 500,
+          counterBaseValueTitle: 'Ilość pigmentu w kg',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
-        [PigmentsLogsNames.BAG]: {
-          log: [],
-          name: 'Worki',
+        CONTAINER: {
+          counterSystemName: 'CONTAINER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-
-      settings: {
-        [PigmentsSettingsNames.BASE_BAG_VALUE]: {
-          settingValue: 25,
-          name: 'Waga jednego worka / KG',
-        },
-        [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
-          settingValue: 0,
-          name: 'Waga kontenera / KG',
-        },
-        [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
-          settingValue: 77,
-          name: 'Waga jednego kontenera / KG',
-        },
-        [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'Waga pigmentu / KG',
+          counterBaseValue: 500,
+          counterBaseValueTitle: 'Waga kontenera / KG',
+          counterAdditionalValue: 77,
+          counterAdditionalValueTitle: 'Waga jednego kontenera / KG',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'subtraction',
         },
       },
       additionalResources: [],
@@ -533,41 +568,45 @@ const pigmentsData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/pigments/pigment-massa-wysokostabilna.webp`,
       color: '',
-      counters: [PIGMENTS_COUNTERS.COUNTER, PIGMENTS_COUNTERS.BAGS, PIGMENTS_COUNTERS.CONTAINER],
-      logs: {
-        [PigmentsLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        BAGS: {
+          counterSystemName: 'BAGS',
+          counterTitle: 'Worki',
+          counterLogTitle: 'Worki',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość worków',
+          counterAdditionalValue: 25,
+          counterAdditionalValueTitle: 'Waga jednego worka / KG',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'multiplication',
         },
-        [PigmentsLogsNames.CONTAINER]: {
-          log: [],
-          name: 'Kontenery',
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 500,
+          counterBaseValueTitle: 'Ilość pigmentu w kg',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
-        [PigmentsLogsNames.BAG]: {
-          log: [],
-          name: 'Worki',
+        CONTAINER: {
+          counterSystemName: 'CONTAINER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-
-      settings: {
-        [PigmentsSettingsNames.BASE_BAG_VALUE]: {
-          settingValue: 20,
-          name: 'Waga jednego worka / KG',
-        },
-        [PigmentsSettingsNames.BASE_CONTAINER_VALUE]: {
-          settingValue: 0,
-          name: 'Waga kontenera / KG',
-        },
-        [PigmentsSettingsNames.CONTAINER_WEIGHT]: {
-          settingValue: 77,
-          name: 'Waga jednego kontenera / KG',
-        },
-        [PigmentsSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'Waga pigmentu / KG',
+          counterBaseValue: 500,
+          counterBaseValueTitle: 'Waga kontenera / KG',
+          counterAdditionalValue: 77,
+          counterAdditionalValueTitle: 'Waga jednego kontenera / KG',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'subtraction',
         },
       },
       additionalResources: [],
