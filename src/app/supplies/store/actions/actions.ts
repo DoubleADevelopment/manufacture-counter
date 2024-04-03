@@ -9,7 +9,7 @@ import type {
   IIncDecActionPayload,
 } from '../../../../types';
 
-const { increment, decrement, log, clearItem, clearData, changeItemSetting } =
+const { increment, decrement, log, clearItem, clearData, changeItemAdditionalSetting } =
   suppliesSlice.actions;
 
 export const incrementAction =
@@ -61,6 +61,6 @@ export const clearDataAction = (): AppThunk => (dispatch) => {
 export const changeItemSettingAction =
   (action: IChangeItemAdditionalSettingActionPayload): AppThunk =>
   (dispatch, getState) => {
-    dispatch(changeItemSetting(action));
+    dispatch(changeItemAdditionalSetting(action));
     suppliesRepository.sendData(getState().supplies);
   };

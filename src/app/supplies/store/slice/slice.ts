@@ -35,7 +35,7 @@ export const suppliesSlice = createSlice({
     clearData: (state, action: PayloadAction<IData>) => {
       return action.payload;
     },
-    changeItemSetting: (
+    changeItemAdditionalSetting: (
       state,
       action: PayloadAction<IChangeItemAdditionalSettingActionPayload>,
     ) => {
@@ -45,7 +45,7 @@ export const suppliesSlice = createSlice({
   },
 });
 
-export const { increment, decrement, log, clearItem, clearData, changeItemSetting } =
+export const { increment, decrement, log, clearItem, clearData, changeItemAdditionalSetting } =
   suppliesSlice.actions;
 
 export default suppliesSlice.reducer;
