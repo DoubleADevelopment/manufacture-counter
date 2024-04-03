@@ -19,14 +19,14 @@ const gumsData: IPackage = {
       image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#2181FC',
       counters: {
-        CARDBOARD: {
+        CONTAINERS: {
           counterSystemName: 'CONTAINERS',
           counterTitle: 'Kontenery',
           counterLogTitle: 'Kontenery',
           logs: [],
           lastChange: null,
-          counterBaseValue: 0,
-          counterBaseValueTitle: 'Waga kartonu / KG',
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość kartonów / szt',
           counterAdditionalValue: 500,
           counterAdditionalValueTitle: 'Waga kartonu / KG',
           counterType: 'ADDITIONAL_VALUE_COUNTER',
@@ -61,14 +61,14 @@ const gumsData: IPackage = {
       image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#2181FC',
       counters: {
-        CARDBOARD: {
+        CONTAINERS: {
           counterSystemName: 'CONTAINERS',
           counterTitle: 'Kontenery',
           counterLogTitle: 'Kontenery',
           logs: [],
           lastChange: null,
-          counterBaseValue: 0,
-          counterBaseValueTitle: 'Waga kartonu / KG',
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość kartonów / szt',
           counterAdditionalValue: 500,
           counterAdditionalValueTitle: 'Waga kartonu / KG',
           counterType: 'ADDITIONAL_VALUE_COUNTER',
@@ -103,14 +103,14 @@ const gumsData: IPackage = {
       image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '#32BD43',
       counters: {
-        CARDBOARD: {
+        CONTAINERS: {
           counterSystemName: 'CONTAINERS',
           counterTitle: 'Kontenery',
           counterLogTitle: 'Kontenery',
           logs: [],
           lastChange: null,
-          counterBaseValue: 0,
-          counterBaseValueTitle: 'Waga kartonu / KG',
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość kartonów / szt',
           counterAdditionalValue: 500,
           counterAdditionalValueTitle: 'Waga kartonu / KG',
           counterType: 'ADDITIONAL_VALUE_COUNTER',
@@ -145,14 +145,14 @@ const gumsData: IPackage = {
       image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '#32BD43',
       counters: {
-        CARDBOARD: {
+        CONTAINERS: {
           counterSystemName: 'CONTAINERS',
           counterTitle: 'Kontenery',
           counterLogTitle: 'Kontenery',
           logs: [],
           lastChange: null,
-          counterBaseValue: 0,
-          counterBaseValueTitle: 'Waga kartonu / KG',
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość kartonów / szt',
           counterAdditionalValue: 500,
           counterAdditionalValueTitle: 'Waga kartonu / KG',
           counterType: 'ADDITIONAL_VALUE_COUNTER',
@@ -187,14 +187,14 @@ const gumsData: IPackage = {
       image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#ffff00',
       counters: {
-        CARDBOARD: {
+        CONTAINERS: {
           counterSystemName: 'CONTAINERS',
           counterTitle: 'Kontenery',
           counterLogTitle: 'Kontenery',
           logs: [],
           lastChange: null,
-          counterBaseValue: 0,
-          counterBaseValueTitle: 'Waga kartonu / KG',
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość kartonów / szt',
           counterAdditionalValue: 500,
           counterAdditionalValueTitle: 'Waga kartonu / KG',
           counterType: 'ADDITIONAL_VALUE_COUNTER',
@@ -229,14 +229,14 @@ const gumsData: IPackage = {
       image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '#d0312d',
       counters: {
-        CARDBOARD: {
+        CONTAINERS: {
           counterSystemName: 'CONTAINERS',
           counterTitle: 'Kontenery',
           counterLogTitle: 'Kontenery',
           logs: [],
           lastChange: null,
-          counterBaseValue: 0,
-          counterBaseValueTitle: 'Waga kartonu / KG',
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość kartonów / szt',
           counterAdditionalValue: 500,
           counterAdditionalValueTitle: 'Waga kartonu / KG',
           counterType: 'ADDITIONAL_VALUE_COUNTER',
@@ -271,14 +271,14 @@ const gumsData: IPackage = {
       image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#ffff00',
       counters: {
-        CARDBOARD: {
+        CONTAINERS: {
           counterSystemName: 'CONTAINERS',
           counterTitle: 'Kontenery',
           counterLogTitle: 'Kontenery',
           logs: [],
           lastChange: null,
-          counterBaseValue: 0,
-          counterBaseValueTitle: 'Waga kartonu / KG',
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość kartonów / szt',
           counterAdditionalValue: 500,
           counterAdditionalValueTitle: 'Waga kartonu / KG',
           counterType: 'ADDITIONAL_VALUE_COUNTER',
@@ -313,14 +313,14 @@ const gumsData: IPackage = {
       image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#d0312d',
       counters: {
-        CARDBOARD: {
+        CONTAINERS: {
           counterSystemName: 'CONTAINERS',
           counterTitle: 'Kontenery',
           counterLogTitle: 'Kontenery',
           logs: [],
           lastChange: null,
-          counterBaseValue: 0,
-          counterBaseValueTitle: 'Waga kartonu / KG',
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość kartonów / szt',
           counterAdditionalValue: 500,
           counterAdditionalValueTitle: 'Waga kartonu / KG',
           counterType: 'ADDITIONAL_VALUE_COUNTER',
@@ -355,14 +355,14 @@ const gumsData: IPackage = {
       image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#004DFF',
       counters: {
-        CARDBOARD: {
+        CONTAINERS: {
           counterSystemName: 'CONTAINERS',
           counterTitle: 'Kontenery',
           counterLogTitle: 'Kontenery',
           logs: [],
           lastChange: null,
-          counterBaseValue: 0,
-          counterBaseValueTitle: 'Waga kartonu / KG',
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość kartonów / szt',
           counterAdditionalValue: 500,
           counterAdditionalValueTitle: 'Waga kartonu / KG',
           counterType: 'ADDITIONAL_VALUE_COUNTER',
@@ -397,14 +397,14 @@ const gumsData: IPackage = {
       image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '#87FF00',
       counters: {
-        CARDBOARD: {
+        CONTAINERS: {
           counterSystemName: 'CONTAINERS',
           counterTitle: 'Kontenery',
           counterLogTitle: 'Kontenery',
           logs: [],
           lastChange: null,
-          counterBaseValue: 0,
-          counterBaseValueTitle: 'Waga kartonu / KG',
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość kartonów / szt',
           counterAdditionalValue: 500,
           counterAdditionalValueTitle: 'Waga kartonu / KG',
           counterType: 'ADDITIONAL_VALUE_COUNTER',
@@ -439,14 +439,14 @@ const gumsData: IPackage = {
       image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#ffffff',
       counters: {
-        CARDBOARD: {
+        CONTAINERS: {
           counterSystemName: 'CONTAINERS',
           counterTitle: 'Kontenery',
           counterLogTitle: 'Kontenery',
           logs: [],
           lastChange: null,
-          counterBaseValue: 0,
-          counterBaseValueTitle: 'Waga kartonu / KG',
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość kartonów / szt',
           counterAdditionalValue: 500,
           counterAdditionalValueTitle: 'Waga kartonu / KG',
           counterType: 'ADDITIONAL_VALUE_COUNTER',
@@ -481,14 +481,14 @@ const gumsData: IPackage = {
       image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '#FFAA00',
       counters: {
-        CARDBOARD: {
+        CONTAINERS: {
           counterSystemName: 'CONTAINERS',
           counterTitle: 'Kontenery',
           counterLogTitle: 'Kontenery',
           logs: [],
           lastChange: null,
-          counterBaseValue: 0,
-          counterBaseValueTitle: 'Waga kartonu / KG',
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość kartonów / szt',
           counterAdditionalValue: 500,
           counterAdditionalValueTitle: 'Waga kartonu / KG',
           counterType: 'ADDITIONAL_VALUE_COUNTER',
@@ -523,14 +523,14 @@ const gumsData: IPackage = {
       image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '',
       counters: {
-        CARDBOARD: {
+        CONTAINERS: {
           counterSystemName: 'CONTAINERS',
           counterTitle: 'Kontenery',
           counterLogTitle: 'Kontenery',
           logs: [],
           lastChange: null,
-          counterBaseValue: 0,
-          counterBaseValueTitle: 'Waga kartonu / KG',
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość kartonów / szt',
           counterAdditionalValue: 500,
           counterAdditionalValueTitle: 'Waga kartonu / KG',
           counterType: 'ADDITIONAL_VALUE_COUNTER',

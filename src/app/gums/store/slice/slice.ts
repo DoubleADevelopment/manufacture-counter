@@ -25,6 +25,7 @@ export const gumsSlice = createSlice({
     },
     log: (state, action: PayloadAction<ILogActionPayload>) => {
       const { UNID, counterName, log } = action.payload;
+      console.log(UNID, counterName, log);
       state[UNID].counters[counterName].logs.push(log);
       state[UNID].counters[counterName].lastChange = new Date().getTime().toString();
     },
