@@ -5,6 +5,8 @@ import { ButtonPrimary, ButtonSecondary, ControlSetAdditionalValue, ControlSetVa
 import { inputValueValidate } from '../../../utils/utils';
 //variables
 import { CounterText, InputMessagesText, InputStatuses } from '../../../variables';
+//types
+import type { ICounter } from '../../../types/data-types';
 //style
 import style from './counter-with-additional-value.module.scss';
 
@@ -12,35 +14,34 @@ interface ICounterWithAdditionalValueProps {
   inc: (value: number, additionalValue: number) => void;
   dec: (value: number, additionalValue: number) => void;
   onAdditionalValueChangeHandler: (value: number) => void;
-  defaultAdditionalValue: number;
-  defaultValue?: number;
-  text: {
-    valueTitle: string;
-    additionalValueTitleBefore: string;
-    additionalValueTitleAfter: string;
-  };
+  counter: ICounter;
 }
 
 const CounterWithAdditionalValue = ({
   inc,
   dec,
   onAdditionalValueChangeHandler,
-  defaultAdditionalValue,
-  text,
-  defaultValue,
+  counter,
 }: ICounterWithAdditionalValueProps): JSX.Element => {
   //main value state
-  const [value, setValue] = useState<number | null>(defaultValue ? defaultValue : 0);
+  const [value, setValue] = useState<number | null>(counter.counterBaseValue);
   const [valueMessage, setValueMessage] = useState<InputMessagesText>(InputMessagesText.DEFAULT);
   const [valueStatus, setValueStatus] = useState<InputStatuses>(InputStatuses.DEFAULT);
   //addtitional value state
-  const [additionalValue, setAdditionalValue] = useState<number | null>(defaultAdditionalValue);
+  const [additionalValue, setAdditionalValue] = useState<number | null>(
+    counter.counterAdditionalValue,
+  );
   const [additionalValueMessage, setAdditionalValueMessage] = useState<InputMessagesText>(
     InputMessagesText.DEFAULT,
   );
   const [additionalValueStatus, setAdditionalValueStatus] = useState<InputStatuses>(
     InputStatuses.DEFAULT,
   );
+
+  useEffect(() => {
+    setValue(counter.counterBaseValue);
+    setAdditionalValue(counter.counterAdditionalValue);
+  }, [counter]);
 
   useEffect(() => {
     if (!!additionalValue && additionalValue !== 0) onAdditionalValueChangeHandler(additionalValue);
@@ -86,8 +87,7 @@ const CounterWithAdditionalValue = ({
     <div className={style['items-counter']}>
       <ControlSetAdditionalValue
         value={additionalValue}
-        titleBefore={text.additionalValueTitleBefore}
-        titleAfter={text.additionalValueTitleAfter}
+        titleBefore={counter.counterAdditionalValueTitle}
         onInputChangeHandler={additionalValueHandler}
         status={additionalValueStatus}
         message={additionalValueMessage}
@@ -98,7 +98,7 @@ const CounterWithAdditionalValue = ({
         value={value}
         status={valueStatus}
         message={valueMessage}
-        title={text.valueTitle}
+        title={counter.counterBaseValueTitle}
       />
 
       <div className={style['items-counter__buttons']}>

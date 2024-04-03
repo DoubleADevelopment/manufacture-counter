@@ -1,22 +1,22 @@
 //variables
 import { CounterText } from '../../variables';
 //types
-import type { ILogItem } from '../../types';
+import type { ICounter } from '../../types';
 //styles
 import style from './log-item.module.scss';
 import { formatDateToShortFormat } from '../../utils/utils';
 
 interface ILogsItemProps {
-  item: ILogItem;
+  counter: ICounter;
 }
 
-const LogItem = ({ item }: ILogsItemProps): JSX.Element => {
-  const { name, lastChange, log } = item;
+const LogItem = ({ counter }: ILogsItemProps): JSX.Element => {
+  const { logs, lastChange, counterLogTitle } = counter;
 
   return (
     <article className={style['log-item']}>
       <header className={style['log-item__header']}>
-        <h4 className="heading-x-small content-primary-a">{name}</h4>
+        <h4 className="heading-x-small content-primary-a">{counterLogTitle}</h4>
 
         {lastChange && (
           <div className={style['log-item__last-change']}>
@@ -31,8 +31,8 @@ const LogItem = ({ item }: ILogsItemProps): JSX.Element => {
         )}
       </header>
       <ul className={`${style['log-item__list']}`}>
-        {log.length ? (
-          log.map((item, i) => (
+        {logs.length ? (
+          logs.map((item, i) => (
             <li className={`${style['log-item__item']} content-primary-a paragraph-medium`} key={i}>
               {item}
             </li>

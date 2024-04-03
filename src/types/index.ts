@@ -25,7 +25,7 @@ import type {
   IChangeItemAdditionalSettingActionType,
 } from './action-types';
 import { AppDispatch, RootState, AppThunk } from './store-types';
-import { ISetActiveLink, IButtonProps } from './other-types';
+import { ISetActiveLink, IButtonProps, IAdditionalNavItem } from './other-types';
 import { IIconProps } from './icon-props-type';
 import { IInputValueValidate } from './utils-types';
 import {
@@ -68,4 +68,5 @@ export type {
   CountersType,
   IncDecActionType,
   IChangeItemAdditionalSettingActionType,
+  IAdditionalNavItem,
 };
