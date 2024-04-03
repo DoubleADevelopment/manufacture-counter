@@ -5,11 +5,9 @@ import {
   SelectorGetData,
   SelectorGetItemData,
 } from '../store/slectors/selectors';
-import { clearItemDataAction } from '../store/actions/actions';
+import { clearItemDataAction, decrementAction, incrementAction } from '../store/actions/actions';
 //pages
 import { ComponentRootPage, CounterPage } from '../../../pages';
-//components
-import { Counter } from '../components';
 //variables
 import { CHEMISTRY_TEXT, ChemistryAppRouting } from '../variables';
 
@@ -35,9 +33,9 @@ const Router = (): JSX.Element => {
             SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
             SelectorGetCurrentItemData={SelectorGetItemData}
             clearItemDataAction={clearItemDataAction}
-          >
-            <Counter />
-          </CounterPage>
+            incrementAction={incrementAction}
+            decrementAction={decrementAction}
+          />
         }
       />
     </Routes>

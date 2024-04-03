@@ -1,11 +1,13 @@
-//types
 import { useState } from 'react';
-import { LogsIcon } from '../../../icons';
-import type { IItemDataToDisplay, ILogs } from '../../../types';
-//styles
-import style from './overview-list-item.module.scss';
+//components
 import LogItem from '../../log-item/log-item';
 import { ButtonWithIcon } from '../../buttons';
+//types
+import type { ICounters, IItemDataToDisplay } from '../../../types';
+//styles
+import style from './overview-list-item.module.scss';
+//icons
+import { LogsIcon } from '../../../icons';
 
 interface IOverviewListItemProps {
   item: IItemDataToDisplay;
@@ -20,10 +22,10 @@ const OverviewListItem = ({ item }: IOverviewListItemProps): JSX.Element => {
     setShowLogs((prev) => !prev);
   };
 
-  const generateLogs = (logs: ILogs): JSX.Element[] => {
+  const generateLogs = (logs: ICounters): JSX.Element[] => {
     const logsArray: JSX.Element[] = [];
     for (const key in logs) {
-      logsArray.push(<LogItem item={logs[key]} key={key} />);
+      logsArray.push(<LogItem counter={logs[key]} key={key} />);
     }
     return logsArray;
   };
@@ -66,7 +68,7 @@ const OverviewListItem = ({ item }: IOverviewListItemProps): JSX.Element => {
       <div
         className={`${style['overview-list-item__logs']} ${showLogs && style['overview-list-item__logs--open']}`}
       >
-        <div className={style['overview-list-item__logs-wrap']}>{generateLogs(item.logs)}</div>
+        <div className={style['overview-list-item__logs-wrap']}>{generateLogs(item.counters)}</div>
       </div>
     </li>
   );

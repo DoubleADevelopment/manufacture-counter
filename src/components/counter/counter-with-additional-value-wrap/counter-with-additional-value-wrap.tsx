@@ -10,7 +10,7 @@ interface ICounterWithAdditionalValueWrapProps {
   counter: ICounter;
   incrementAction: IncDecActionType;
   decrementAction: IncDecActionType;
-  changeItemSettingAction: IChangeItemAdditionalSettingActionType;
+  changeItemAdditionalSettingAction?: IChangeItemAdditionalSettingActionType;
 }
 
 const CounterWithAdditionalValueWrap = ({
@@ -18,7 +18,7 @@ const CounterWithAdditionalValueWrap = ({
   counter,
   incrementAction,
   decrementAction,
-  changeItemSettingAction,
+  changeItemAdditionalSettingAction,
 }: ICounterWithAdditionalValueWrapProps): JSX.Element => {
   const dispatch = useAppDispatch();
 
@@ -94,14 +94,24 @@ const CounterWithAdditionalValueWrap = ({
   };
 
   const changeContainerSetting = (value: number) => {
-    if (value !== counter.counterAdditionalValue) {
+    if (
+      value !== counter.counterAdditionalValue &&
+      typeof changeItemAdditionalSettingAction === 'function'
+    ) {
       dispatch(
-        changeItemSettingAction({
+        changeItemAdditionalSettingAction({
           UNID: UNID,
           counterName: counter.counterSystemName,
           newSettingValue: value,
         }),
       );
+    } else {
+      console.error(
+        'function changeContainerSetting can run because changeItemAdditionalSettingAction method is absent.',
+      );
+      // throw new Error(
+      //   'function changeContainerSetting can run because changeItemAdditionalSettingAction method is absent.',
+      // );
     }
   };
 

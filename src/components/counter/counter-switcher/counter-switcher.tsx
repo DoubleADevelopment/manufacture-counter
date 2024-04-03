@@ -23,7 +23,7 @@ interface ICounterSwitcherProps {
   UNID: string;
   incrementAction: IncDecActionType;
   decrementAction: IncDecActionType;
-  changeItemSettingAction: IChangeItemAdditionalSettingActionType;
+  changeItemAdditionalSettingAction?: IChangeItemAdditionalSettingActionType;
   SelectorGetItemData: ISelectorGetItemData;
 }
 
@@ -31,7 +31,7 @@ const CounterSwitcher = ({
   UNID,
   incrementAction,
   decrementAction,
-  changeItemSettingAction,
+  changeItemAdditionalSettingAction,
   SelectorGetItemData,
 }: ICounterSwitcherProps): JSX.Element => {
   const item: IItemData = useAppSelector(SelectorGetItemData(UNID));
@@ -56,7 +56,7 @@ const CounterSwitcher = ({
             counter={item.counters[currentCounter]}
             incrementAction={incrementAction}
             decrementAction={decrementAction}
-            changeItemSettingAction={changeItemSettingAction}
+            changeItemAdditionalSettingAction={changeItemAdditionalSettingAction}
           />
         );
       case 'BASIC_COUNTER':

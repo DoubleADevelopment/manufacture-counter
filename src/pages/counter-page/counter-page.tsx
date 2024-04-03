@@ -24,7 +24,7 @@ interface ICounterPageProps {
   clearItemDataAction: ClearItemDataActionType;
   incrementAction: IncDecActionType;
   decrementAction: IncDecActionType;
-  changeItemSettingAction: IChangeItemAdditionalSettingActionType;
+  changeItemAdditionalSettingAction?: IChangeItemAdditionalSettingActionType;
 }
 
 const CounterPage = ({
@@ -35,7 +35,7 @@ const CounterPage = ({
   clearItemDataAction,
   incrementAction,
   decrementAction,
-  changeItemSettingAction,
+  changeItemAdditionalSettingAction,
 }: ICounterPageProps): JSX.Element => {
   const { UNID } = useParams();
   const itemFromUnidIsset = useAppSelector(SelectorCheckIfElementExistsByUNID(UNID));
@@ -47,7 +47,7 @@ const CounterPage = ({
           UNID={UNID}
           incrementAction={incrementAction}
           decrementAction={decrementAction}
-          changeItemSettingAction={changeItemSettingAction}
+          changeItemAdditionalSettingAction={changeItemAdditionalSettingAction}
           SelectorGetItemData={SelectorGetCurrentItemData}
         />
       );

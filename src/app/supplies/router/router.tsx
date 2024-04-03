@@ -5,11 +5,14 @@ import {
   SelectorGetItemData,
   SelectorGetData,
 } from '../store/slectors/selectors';
-import { clearItemDataAction } from '../store/actions/actions';
+import {
+  clearItemDataAction,
+  changeItemAdditionalSettingAction,
+  decrementAction,
+  incrementAction,
+} from '../store/actions/actions';
 //pages
 import { ComponentRootPage, CounterPage } from '../../../pages';
-//components
-import { Counter } from '../components';
 //variables
 import { SUPPLIES_TEXT, SuppliesAppRouting } from '../variables';
 
@@ -35,9 +38,10 @@ const Router = (): JSX.Element => {
             SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
             SelectorGetCurrentItemData={SelectorGetItemData}
             clearItemDataAction={clearItemDataAction}
-          >
-            <Counter />
-          </CounterPage>
+            incrementAction={incrementAction}
+            decrementAction={decrementAction}
+            changeItemAdditionalSettingAction={changeItemAdditionalSettingAction}
+          />
         }
       />
     </Routes>
