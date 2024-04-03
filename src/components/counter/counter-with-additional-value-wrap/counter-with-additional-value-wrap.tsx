@@ -106,12 +106,9 @@ const CounterWithAdditionalValueWrap = ({
         }),
       );
     } else {
-      console.error(
+      console.log(
         'function changeContainerSetting can run because changeItemAdditionalSettingAction method is absent.',
       );
-      // throw new Error(
-      //   'function changeContainerSetting can run because changeItemAdditionalSettingAction method is absent.',
-      // );
     }
   };
 

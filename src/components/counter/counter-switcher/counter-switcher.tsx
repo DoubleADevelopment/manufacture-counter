@@ -43,6 +43,8 @@ const CounterSwitcher = ({
     };
   });
 
+  const counterIsOne: boolean = countersArray.length <= 1;
+
   const [currentCounter, setCurrentCounter] = useState<string>(countersArray[0].value);
 
   const getCurrentCounterComponent = (): JSX.Element => {
@@ -86,13 +88,18 @@ const CounterSwitcher = ({
 
   return (
     <>
-      <section className={style['counter-switcher']}>
+      <section
+        className={`${style['counter-switcher']}  ${counterIsOne && style['counter-switcher__without-menu']}`}
+      >
         <h2 className="visually-hidden">Licnik</h2>
-        <AdditionalNav
-          changeHandler={additionalNavHandler}
-          items={countersArray}
-          defaultItem={currentCounter}
-        />
+
+        {!counterIsOne && (
+          <AdditionalNav
+            changeHandler={additionalNavHandler}
+            items={countersArray}
+            defaultItem={currentCounter}
+          />
+        )}
 
         {getCurrentCounterComponent()}
       </section>
