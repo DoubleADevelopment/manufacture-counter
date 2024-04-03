@@ -1,5 +1,3 @@
-//variables
-import { ChemistrySettingsNames } from '../../variables/';
 //types
 import type { IData, IItemData, RootState } from '../../../../types';
 
@@ -13,11 +11,6 @@ const SelectorGetItemData =
   (UNID: string) =>
   (state: RootState): IItemData =>
     state.chemistry[UNID];
-
-const SelectorGetItemSetting =
-  (UNID: string, settingName: ChemistrySettingsNames) =>
-  (state: RootState): number =>
-    state.chemistry[UNID].settings[settingName].settingValue;
 
 const SelectorCheckIfElementExistsByUNID =
   (UNID: string | undefined) =>
@@ -36,9 +29,4 @@ const SelectorCheckIfElementExistsByUNID =
     return result;
   };
 
-export {
-  SelectorGetData,
-  SelectorGetItemData,
-  SelectorGetItemSetting,
-  SelectorCheckIfElementExistsByUNID,
-};
+export { SelectorGetData, SelectorGetItemData, SelectorCheckIfElementExistsByUNID };

@@ -4,25 +4,29 @@ import type {
   IComponentData,
   ComponentsDataListType,
   ItemsDataToDisplayListType,
-  ILogs,
   IItemDataToDisplay,
-  ISettings,
   IItemData,
   ILogItem,
   IData,
   IPackage,
+  CountersType,
+  ICounter,
+  ICounters,
+  OperationBetweenBaseAndAdditionType,
 } from './data-types';
 import type { IRouteItem } from './routing-types';
 import type {
   IIncDecActionPayload,
   ILogActionPayload,
   IClearItemActionPayload,
-  IChangeItemSettingActionPayload,
   ClearDataActionType,
   ClearItemDataActionType,
+  IncDecActionType,
+  IChangeItemAdditionalSettingActionType,
+  IChangeItemAdditionalSettingActionPayload,
 } from './action-types';
 import { AppDispatch, RootState, AppThunk } from './store-types';
-import { ISetActiveLink, IButtonProps } from './other-types';
+import { ISetActiveLink, IButtonProps, IAdditionalNavItem } from './other-types';
 import { IIconProps } from './icon-props-type';
 import { IInputValueValidate } from './utils-types';
 import {
@@ -45,9 +49,7 @@ export type {
   IComponentData,
   IRouteItem,
   ItemsDataToDisplayListType,
-  ILogs,
   IItemDataToDisplay,
-  ISettings,
   IItemData,
   IClearItemActionPayload,
   IButtonProps,
@@ -56,10 +58,17 @@ export type {
   IData,
   IPackage,
   IAbstractAdapterService,
-  IChangeItemSettingActionPayload,
   ISelectorGetData,
   ISelectorGetItemData,
   ISelectorCheckIfElementExistsByUNID,
   ClearDataActionType,
   ClearItemDataActionType,
+  ICounter,
+  ICounters,
+  OperationBetweenBaseAndAdditionType,
+  CountersType,
+  IncDecActionType,
+  IChangeItemAdditionalSettingActionType,
+  IAdditionalNavItem,
+  IChangeItemAdditionalSettingActionPayload,
 };

@@ -1,8 +1,7 @@
-//vars
-import { CHEMISTRY_COUNTERS, ChemistrySettingsNames } from '../variables/';
-import { rootBaseName } from '../../../variables';
 //types
 import type { IPackage } from '../../../types';
+//variables
+import { rootBaseName } from '../../../variables';
 
 const chemistryData: IPackage = {
   dataPackageName: 'chemistry',
@@ -19,18 +18,19 @@ const chemistryData: IPackage = {
       additionalInfo: 'Drukarki Leibinger Jet2neo/Jet2neoS',
       image: `${rootBaseName}/images/chemistry/Solvent-770001-00030.webp`,
       color: '',
-      counters: [CHEMISTRY_COUNTERS.COUNTER],
-      logs: {
-        [CHEMISTRY_COUNTERS.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-      settings: {
-        [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'string',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'Ilość',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -47,18 +47,19 @@ const chemistryData: IPackage = {
       additionalInfo: 'Drukarki Leibinger Jet2neo/Jet2neoS',
       image: `${rootBaseName}/images/chemistry/Atrament-70000-00030.webp`,
       color: '',
-      counters: [CHEMISTRY_COUNTERS.COUNTER],
-      logs: {
-        [CHEMISTRY_COUNTERS.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-      settings: {
-        [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'string',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'Ilość',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -75,18 +76,19 @@ const chemistryData: IPackage = {
       additionalInfo: 'Drukarki Leibinger Jet2neo/Jet2neoS',
       image: `${rootBaseName}/images/chemistry/Solvent-SJN 1700.webp`,
       color: '',
-      counters: [CHEMISTRY_COUNTERS.COUNTER],
-      logs: {
-        [CHEMISTRY_COUNTERS.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-      settings: {
-        [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'string',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'Ilość',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -104,18 +106,19 @@ const chemistryData: IPackage = {
       additionalInfo: 'dot. drukarek 1220',
       image: `${rootBaseName}/images/chemistry/Make-up-VJ706-D.webp`,
       color: '',
-      counters: [CHEMISTRY_COUNTERS.COUNTER],
-      logs: {
-        [CHEMISTRY_COUNTERS.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-      settings: {
-        [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'string',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'Ilość',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -132,19 +135,19 @@ const chemistryData: IPackage = {
       additionalInfo: 'dot. drukarek 1220',
       image: `${rootBaseName}/images/chemistry/Atrament-VJ411-D.webp`,
       color: '',
-      counters: [CHEMISTRY_COUNTERS.COUNTER],
-      logs: {
-        [CHEMISTRY_COUNTERS.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-
-      settings: {
-        [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'string',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'Ilość',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -162,19 +165,19 @@ const chemistryData: IPackage = {
       additionalInfo: 'dot. drukarek 1580',
       image: `${rootBaseName}/images/chemistry/Make-up-VJ7222-D.webp`,
       color: '',
-      counters: [CHEMISTRY_COUNTERS.COUNTER],
-      logs: {
-        [CHEMISTRY_COUNTERS.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-
-      settings: {
-        [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'string',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'Ilość',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -191,19 +194,19 @@ const chemistryData: IPackage = {
       additionalInfo: 'dot. drukarek 1580',
       image: `${rootBaseName}/images/chemistry/Atrament-VJ411-D.webp`,
       color: '',
-      counters: [CHEMISTRY_COUNTERS.COUNTER],
-      logs: {
-        [CHEMISTRY_COUNTERS.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-
-      settings: {
-        [ChemistrySettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'string',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'Ilość',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],

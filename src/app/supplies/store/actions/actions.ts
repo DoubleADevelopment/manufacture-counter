@@ -4,24 +4,22 @@ import suppliesRepository from '../../repository/supplies-repository';
 //types
 import type {
   AppThunk,
-  IChangeItemSettingActionPayload,
+  IChangeItemAdditionalSettingActionPayload,
   IClearItemActionPayload,
   IIncDecActionPayload,
 } from '../../../../types';
-//variables
-import { SuppliesLogsNames, SuppliesSettingsNames } from '../../variables';
 
-const { increment, decrement, log, clearItem, clearData, changeItemSetting } =
+const { increment, decrement, log, clearItem, clearData, changeItemAdditionalSetting } =
   suppliesSlice.actions;
 
-export const incrementAction =
-  (action: IIncDecActionPayload<SuppliesLogsNames>): AppThunk =>
+const incrementAction =
+  (action: IIncDecActionPayload): AppThunk =>
   (dispatch, getState) => {
     dispatch(increment(action));
 
     const newLog = {
       log: action.logText ? action.logText : `+${action.value.toString()}`,
-      logName: action.logName,
+      counterName: action.counterName,
       UNID: action.UNID,
     };
 
@@ -29,14 +27,14 @@ export const incrementAction =
     suppliesRepository.sendData(getState().supplies);
   };
 
-export const decrementAction =
-  (action: IIncDecActionPayload<SuppliesLogsNames>): AppThunk =>
+const decrementAction =
+  (action: IIncDecActionPayload): AppThunk =>
   (dispatch, getState) => {
     dispatch(decrement(action));
 
     const newLog = {
       log: action.logText ? action.logText : `-${action.value.toString()}`,
-      logName: action.logName,
+      counterName: action.counterName,
       UNID: action.UNID,
     };
 
@@ -44,7 +42,7 @@ export const decrementAction =
     suppliesRepository.sendData(getState().supplies);
   };
 
-export const clearItemDataAction =
+const clearItemDataAction =
   (action: IClearItemActionPayload): AppThunk =>
   (dispatch, getState) => {
     const clearedItem = suppliesRepository.getDefaultItemData(action.item.UNID);
@@ -53,16 +51,24 @@ export const clearItemDataAction =
     suppliesRepository.sendData(getState().supplies);
   };
 
-export const clearDataAction = (): AppThunk => (dispatch) => {
+const clearDataAction = (): AppThunk => (dispatch) => {
   const clearedItem = suppliesRepository.getDefaultData();
   dispatch(clearData(clearedItem));
 
   suppliesRepository.clearData();
 };
 
-export const changeItemSettingAction =
-  (action: IChangeItemSettingActionPayload<SuppliesSettingsNames>): AppThunk =>
+const changeItemAdditionalSettingAction =
+  (action: IChangeItemAdditionalSettingActionPayload): AppThunk =>
   (dispatch, getState) => {
-    dispatch(changeItemSetting(action));
+    dispatch(changeItemAdditionalSetting(action));
     suppliesRepository.sendData(getState().supplies);
   };
+
+export {
+  incrementAction,
+  decrementAction,
+  clearItemDataAction,
+  clearDataAction,
+  changeItemAdditionalSettingAction,
+};

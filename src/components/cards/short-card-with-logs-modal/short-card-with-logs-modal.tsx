@@ -31,7 +31,7 @@ const ShortCardWithLogsModal = ({
     <>
       {modalIsOpen && item && (
         <LogsModal
-          logsData={item.logs}
+          counters={item.counters}
           closeModal={onModalClickHandler}
           clearData={onClearDataButtonClickHandler}
         />

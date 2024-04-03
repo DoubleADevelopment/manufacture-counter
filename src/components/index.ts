@@ -19,7 +19,13 @@ import {
 import { NotificationStatic, PageNotification } from './notifications/';
 import { LogsModal, ConfirmDeletingModal } from './modals';
 import CounterHeader from './counter-header/counter-header';
-import { BasicCounter, CounterWithAdditionalValue } from './counter';
+import {
+  BasicCounter,
+  BasicCounterWrap,
+  CounterSwitcher,
+  CounterWithAdditionalValue,
+  CounterWithAdditionalValueWrap,
+} from './counter';
 import AdditionalNav from './additional-nav/additional-nav';
 import { CountersSetting } from './settings';
 import InfoAboutApp from './info-about-app/info-about-app';
@@ -59,4 +65,7 @@ export {
   LogItem,
   ButtonWithIcon,
   CountableItemInfo,
+  BasicCounterWrap,
+  CounterWithAdditionalValueWrap,
+  CounterSwitcher,
 };

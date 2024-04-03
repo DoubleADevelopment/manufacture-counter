@@ -5,15 +5,15 @@ import { ConfirmDeletingModal } from '../../';
 //variables
 import { CounterText } from '../../../variables';
 //types
-import type { ILogs } from '../../../types';
+import type { ICounters } from '../../../types';
 
 interface ILogsModalProps {
-  logsData: ILogs;
+  counters: ICounters;
   closeModal: () => void;
   clearData: () => void;
 }
 
-const LogsModal = ({ logsData, closeModal, clearData }: ILogsModalProps) => {
+const LogsModal = ({ counters, closeModal, clearData }: ILogsModalProps) => {
   const [isConfirmModalOpen, setIsConfirmModalOpen] = useState<boolean>(false);
 
   const closeModalClickHandler = () => {
@@ -43,7 +43,7 @@ const LogsModal = ({ logsData, closeModal, clearData }: ILogsModalProps) => {
       ) : (
         <LogsModalBody
           closeModalClickHandler={closeModalClickHandler}
-          logsData={logsData}
+          counters={counters}
           openConfirmDeletingModal={openConfirmDeletingModal}
         />
       )}

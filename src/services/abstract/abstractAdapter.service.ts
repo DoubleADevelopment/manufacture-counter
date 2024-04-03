@@ -39,7 +39,7 @@ abstract class AbstractAdapterService implements IAbstractAdapterService {
       image: item.image,
       amount: item.amount,
       unitsOfMeasurement: item.unitsOfMeasurement,
-      logs: item.logs,
+      counters: item.counters,
       color: item.color,
     };
   }

@@ -1,8 +1,7 @@
 //types
 import type { IPackage } from '../../../types';
-//vars
+//variables
 import { rootBaseName } from '../../../variables';
-import { SUPPLIES_COUNTERS, SuppliesLogsNames, SuppliesSettingsNames } from '../variables';
 
 const suppliesData: IPackage = {
   dataPackageName: 'supplies',
@@ -19,27 +18,32 @@ const suppliesData: IPackage = {
       additionalInfo: '3 kartony (karton ma 5 tyś szt)',
       image: `${rootBaseName}/images/supplies/supplies-przekladki-polipropylenowe.webp`,
       color: '',
-      counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
-      logs: {
-        [SuppliesLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        CARDBOARD: {
+          counterSystemName: 'CARDBOARD',
+          counterTitle: 'Kartony',
+          counterLogTitle: 'Kartony',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość kartonów',
+          counterAdditionalValue: 500,
+          counterAdditionalValueTitle: 'Sztuk w kartonie',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'multiplication',
         },
-        [SuppliesLogsNames.CARDBOARD]: {
-          log: [],
-          name: 'Kartony',
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-      settings: {
-        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'szt',
-        },
-        [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
-          settingValue: 5000,
-          name: 'Sztuk w kartonie',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'szt',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -56,18 +60,19 @@ const suppliesData: IPackage = {
       additionalInfo: '1 paleta (48szt.)',
       image: `${rootBaseName}/images/supplies/supplies-tasma-bandowanie-zielona.webp`,
       color: '',
-      counters: [SUPPLIES_COUNTERS.COUNTER],
-      logs: {
-        [SuppliesLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-      settings: {
-        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'szt',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'szt',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -84,18 +89,19 @@ const suppliesData: IPackage = {
       additionalInfo: '40 rolek',
       image: `${rootBaseName}/images/supplies/supplies-polrekaw-bialy.webp`,
       color: '',
-      counters: [SUPPLIES_COUNTERS.COUNTER],
-      logs: {
-        [SuppliesLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-      settings: {
-        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'rolki',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'szt',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -112,18 +118,19 @@ const suppliesData: IPackage = {
       additionalInfo: '20 rolek',
       image: `${rootBaseName}/images/supplies/supplies-polrekaw-czarny.webp`,
       color: '',
-      counters: [SUPPLIES_COUNTERS.COUNTER],
-      logs: {
-        [SuppliesLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-      settings: {
-        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'rolki',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'szt',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -140,18 +147,19 @@ const suppliesData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/supplies/supplies-polrekaw-czarny.webp`,
       color: '#ffff00',
-      counters: [SUPPLIES_COUNTERS.COUNTER],
-      logs: {
-        [SuppliesLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-      settings: {
-        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'szt',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'szt',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -168,18 +176,19 @@ const suppliesData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/supplies/supplies-polrekaw-czarny.webp`,
       color: '#ffff00',
-      counters: [SUPPLIES_COUNTERS.COUNTER],
-      logs: {
-        [SuppliesLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-      settings: {
-        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'szt',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'szt',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -196,18 +205,19 @@ const suppliesData: IPackage = {
       additionalInfo: '10 rolek',
       image: `${rootBaseName}/images/supplies/supplies-polrekaw-czarny.webp`,
       color: '#ffff00',
-      counters: [SUPPLIES_COUNTERS.COUNTER],
-      logs: {
-        [SuppliesLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-      settings: {
-        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'rolki',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'szt',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -224,18 +234,19 @@ const suppliesData: IPackage = {
       additionalInfo: '40 rolek',
       image: `${rootBaseName}/images/supplies/supplies-polrekaw-czarny.webp`,
       color: '',
-      counters: [SUPPLIES_COUNTERS.COUNTER],
-      logs: {
-        [SuppliesLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-      settings: {
-        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'rolki',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'szt',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -252,18 +263,19 @@ const suppliesData: IPackage = {
       additionalInfo: '10 rolek',
       image: `${rootBaseName}/images/supplies/supplies-polrekaw-czarny.webp`,
       color: '',
-      counters: [SUPPLIES_COUNTERS.COUNTER],
-      logs: {
-        [SuppliesLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-      settings: {
-        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'rolki',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'szt',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -280,18 +292,19 @@ const suppliesData: IPackage = {
       additionalInfo: '30 rolek',
       image: `${rootBaseName}/images/supplies/supplies-polrekaw-czarny.webp`,
       color: '',
-      counters: [SUPPLIES_COUNTERS.COUNTER],
-      logs: {
-        [SuppliesLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-      settings: {
-        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'rolki',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'szt',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -308,27 +321,32 @@ const suppliesData: IPackage = {
       additionalInfo: '1 kart.(x8szt.)',
       image: `${rootBaseName}/images/supplies/supplies-etykieta-biala.webp`,
       color: 'blue',
-      counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
-      logs: {
-        [SuppliesLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        CARDBOARD: {
+          counterSystemName: 'CARDBOARD',
+          counterTitle: 'Kartony',
+          counterLogTitle: 'Kartony',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość kartonów',
+          counterAdditionalValue: 500,
+          counterAdditionalValueTitle: 'Sztuk w kartonie',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'multiplication',
         },
-        [SuppliesLogsNames.CARDBOARD]: {
-          log: [],
-          name: 'Kartony',
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-      settings: {
-        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'szt',
-        },
-        [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
-          settingValue: 8,
-          name: 'Sztuk w kartonie',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'szt',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -345,27 +363,32 @@ const suppliesData: IPackage = {
       additionalInfo: '1 kart.(x8szt.)',
       image: `${rootBaseName}/images/supplies/supplies-etykieta-czerwona.webp`,
       color: '',
-      counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
-      logs: {
-        [SuppliesLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        CARDBOARD: {
+          counterSystemName: 'CARDBOARD',
+          counterTitle: 'Kartony',
+          counterLogTitle: 'Kartony',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość kartonów',
+          counterAdditionalValue: 500,
+          counterAdditionalValueTitle: 'Sztuk w kartonie',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'multiplication',
         },
-        [SuppliesLogsNames.CARDBOARD]: {
-          log: [],
-          name: 'Kartony',
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-      settings: {
-        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'szt',
-        },
-        [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
-          settingValue: 8,
-          name: 'Sztuk w kartonie',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'szt',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -382,27 +405,32 @@ const suppliesData: IPackage = {
       additionalInfo: '1 kart.(x8szt.)',
       image: `${rootBaseName}/images/supplies/supplies-etykieta-niebieska.webp`,
       color: '',
-      counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
-      logs: {
-        [SuppliesLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        CARDBOARD: {
+          counterSystemName: 'CARDBOARD',
+          counterTitle: 'Kartony',
+          counterLogTitle: 'Kartony',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość kartonów',
+          counterAdditionalValue: 8,
+          counterAdditionalValueTitle: 'Sztuk w kartonie',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'multiplication',
         },
-        [SuppliesLogsNames.CARDBOARD]: {
-          log: [],
-          name: 'Kartony',
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-      settings: {
-        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'szt',
-        },
-        [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
-          settingValue: 8,
-          name: 'Sztuk w kartonie',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'szt',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -419,27 +447,32 @@ const suppliesData: IPackage = {
       additionalInfo: '1 kart. (x8szt)',
       image: `${rootBaseName}/images/supplies/supplies-etykieta-zolta.webp`,
       color: '',
-      counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
-      logs: {
-        [SuppliesLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        CARDBOARD: {
+          counterSystemName: 'CARDBOARD',
+          counterTitle: 'Kartony',
+          counterLogTitle: 'Kartony',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość kartonów',
+          counterAdditionalValue: 8,
+          counterAdditionalValueTitle: 'Sztuk w kartonie',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'multiplication',
         },
-        [SuppliesLogsNames.CARDBOARD]: {
-          log: [],
-          name: 'Kartony',
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-      settings: {
-        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'szt',
-        },
-        [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
-          settingValue: 8,
-          name: 'Sztuk w kartonie',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'szt',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -456,27 +489,32 @@ const suppliesData: IPackage = {
       additionalInfo: '1 kart.(x8szt.)',
       image: `${rootBaseName}/images/supplies/supplies-etykieta-zielona.webp`,
       color: '',
-      counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
-      logs: {
-        [SuppliesLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        CARDBOARD: {
+          counterSystemName: 'CARDBOARD',
+          counterTitle: 'Kartony',
+          counterLogTitle: 'Kartony',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość kartonów',
+          counterAdditionalValue: 8,
+          counterAdditionalValueTitle: 'Sztuk w kartonie',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'multiplication',
         },
-        [SuppliesLogsNames.CARDBOARD]: {
-          log: [],
-          name: 'Kartony',
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-      settings: {
-        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'szt',
-        },
-        [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
-          settingValue: 8,
-          name: 'Sztuk w kartonie',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'szt',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -493,27 +531,32 @@ const suppliesData: IPackage = {
       additionalInfo: '1 kart.(x8szt.)',
       image: `${rootBaseName}/images/supplies/supplies-etykieta-biala-1.webp`,
       color: 'blue',
-      counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
-      logs: {
-        [SuppliesLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        CARDBOARD: {
+          counterSystemName: 'CARDBOARD',
+          counterTitle: 'Kartony',
+          counterLogTitle: 'Kartony',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość kartonów',
+          counterAdditionalValue: 8,
+          counterAdditionalValueTitle: 'Sztuk w kartonie',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'multiplication',
         },
-        [SuppliesLogsNames.CARDBOARD]: {
-          log: [],
-          name: 'Kartony',
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-      settings: {
-        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'szt',
-        },
-        [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
-          settingValue: 8,
-          name: 'Sztuk w kartonie',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'szt',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -530,18 +573,19 @@ const suppliesData: IPackage = {
       additionalInfo: '10 kart.',
       image: `${rootBaseName}/images/supplies/supplies-gwozdzie.webp`,
       color: '',
-      counters: [SUPPLIES_COUNTERS.COUNTER],
-      logs: {
-        [SuppliesLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-      settings: {
-        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'szt',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'szt',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -558,18 +602,19 @@ const suppliesData: IPackage = {
       additionalInfo: '',
       image: `${rootBaseName}/images/supplies/supplies-tasma-z-nadrukiem.webp`,
       color: '',
-      counters: [SUPPLIES_COUNTERS.COUNTER],
-      logs: {
-        [SuppliesLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-      settings: {
-        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'szt',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'szt',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -586,27 +631,32 @@ const suppliesData: IPackage = {
       additionalInfo: '5 kart.(x36szt.)',
       image: `${rootBaseName}/images/supplies/supplies-tasma-z-nadrukiem.webp`,
       color: '',
-      counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
-      logs: {
-        [SuppliesLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        CARDBOARD: {
+          counterSystemName: 'CARDBOARD',
+          counterTitle: 'Kartony',
+          counterLogTitle: 'Kartony',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość kartonów',
+          counterAdditionalValue: 36,
+          counterAdditionalValueTitle: 'Sztuk w kartonie',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'multiplication',
         },
-        [SuppliesLogsNames.CARDBOARD]: {
-          log: [],
-          name: 'Kartony',
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-      settings: {
-        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'szt',
-        },
-        [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
-          settingValue: 36,
-          name: 'Sztuk w kartonie',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'szt',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -623,27 +673,32 @@ const suppliesData: IPackage = {
       additionalInfo: '3 kart.(x10)',
       image: `${rootBaseName}/images/supplies/supplies-tasma-biala.webp`,
       color: '',
-      counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
-      logs: {
-        [SuppliesLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        CARDBOARD: {
+          counterSystemName: 'CARDBOARD',
+          counterTitle: 'Kartony',
+          counterLogTitle: 'Kartony',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość kartonów',
+          counterAdditionalValue: 10,
+          counterAdditionalValueTitle: 'Sztuk w kartonie',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'multiplication',
         },
-        [SuppliesLogsNames.CARDBOARD]: {
-          log: [],
-          name: 'Kartony',
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-      settings: {
-        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'szt',
-        },
-        [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
-          settingValue: 10,
-          name: 'Sztuk w kartonie',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'szt',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -660,27 +715,32 @@ const suppliesData: IPackage = {
       additionalInfo: '5 kart.(x36szt.)',
       image: `${rootBaseName}/images/supplies/supplies-kalka-do-drukarki.webp`,
       color: '',
-      counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
-      logs: {
-        [SuppliesLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        CARDBOARD: {
+          counterSystemName: 'CARDBOARD',
+          counterTitle: 'Kartony',
+          counterLogTitle: 'Kartony',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość kartonów',
+          counterAdditionalValue: 36,
+          counterAdditionalValueTitle: 'Sztuk w kartonie',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'multiplication',
         },
-        [SuppliesLogsNames.CARDBOARD]: {
-          log: [],
-          name: 'Kartony',
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-      settings: {
-        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'szt',
-        },
-        [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
-          settingValue: 36,
-          name: 'Sztuk w kartonie',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'szt',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -697,27 +757,32 @@ const suppliesData: IPackage = {
       additionalInfo: '5 kart.(x10szt.)',
       image: `${rootBaseName}/images/supplies/supplies-styropian-bialy.webp`,
       color: '',
-      counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
-      logs: {
-        [SuppliesLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        CARDBOARD: {
+          counterSystemName: 'CARDBOARD',
+          counterTitle: 'Kartony',
+          counterLogTitle: 'Kartony',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość kartonów',
+          counterAdditionalValue: 10,
+          counterAdditionalValueTitle: 'Sztuk w kartonie',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'multiplication',
         },
-        [SuppliesLogsNames.CARDBOARD]: {
-          log: [],
-          name: 'Kartony',
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-      settings: {
-        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'szt',
-        },
-        [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
-          settingValue: 10,
-          name: 'Sztuk w kartonie',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'szt',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -734,18 +799,19 @@ const suppliesData: IPackage = {
       additionalInfo: '50 paczek',
       image: `${rootBaseName}/images/supplies/supplies-styropian-bialy.webp`,
       color: '',
-      counters: [SUPPLIES_COUNTERS.COUNTER],
-      logs: {
-        [SuppliesLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-      settings: {
-        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'paczka',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'szt',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -762,27 +828,32 @@ const suppliesData: IPackage = {
       additionalInfo: '1 kart.(30x500ml)',
       image: `${rootBaseName}/images/supplies/supplies-spray-do-hamulcow-bremen-forch-eco.webp`,
       color: '',
-      counters: [SUPPLIES_COUNTERS.COUNTER, SUPPLIES_COUNTERS.CARDBOARD],
-      logs: {
-        [SuppliesLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        CARDBOARD: {
+          counterSystemName: 'CARDBOARD',
+          counterTitle: 'Kartony',
+          counterLogTitle: 'Kartony',
+          logs: [],
           lastChange: null,
+          counterBaseValue: 1,
+          counterBaseValueTitle: 'Ilość kartonów',
+          counterAdditionalValue: 30,
+          counterAdditionalValueTitle: 'Sztuk w kartonie',
+          counterType: 'ADDITIONAL_VALUE_COUNTER',
+          operationBetweenBaseAndAddition: 'multiplication',
         },
-        [SuppliesLogsNames.CARDBOARD]: {
-          log: [],
-          name: 'Kartony',
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-      settings: {
-        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'szt',
-        },
-        [SuppliesSettingsNames.BASE_CARDBOARD_VALUE]: {
-          settingValue: 30,
-          name: 'Sztuk w kartonie',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'szt',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],
@@ -799,18 +870,19 @@ const suppliesData: IPackage = {
       additionalInfo: '',
       image: ``,
       color: '',
-      counters: [SUPPLIES_COUNTERS.COUNTER],
-      logs: {
-        [SuppliesLogsNames.COUNTER]: {
-          log: [],
-          name: 'Licznik',
+      counters: {
+        COUNTER: {
+          counterSystemName: 'COUNTER',
+          counterTitle: 'Licznik',
+          counterLogTitle: 'Licznik',
+          logs: [],
           lastChange: null,
-        },
-      },
-      settings: {
-        [SuppliesSettingsNames.BASE_COUNTER_VALUE]: {
-          settingValue: 0,
-          name: 'szt',
+          counterBaseValue: 0,
+          counterBaseValueTitle: 'szt',
+          counterAdditionalValue: 0,
+          counterAdditionalValueTitle: '',
+          counterType: 'BASIC_COUNTER',
+          operationBetweenBaseAndAddition: 'none',
         },
       },
       additionalResources: [],

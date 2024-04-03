@@ -4,24 +4,22 @@ import pigmentsRepository from '../../repository/pigments-repository';
 //types
 import type {
   AppThunk,
-  IChangeItemSettingActionPayload,
+  IChangeItemAdditionalSettingActionPayload,
   IClearItemActionPayload,
   IIncDecActionPayload,
 } from '../../../../types';
-//variables
-import { PigmentsLogsNames, PigmentsSettingsNames } from '../../variables';
 
-const { increment, decrement, log, clearItem, clearData, changeItemSetting } =
+const { increment, decrement, log, clearItem, clearData, changeItemAdditionalSetting } =
   pigmentsSlice.actions;
 
-export const incrementAction =
-  (action: IIncDecActionPayload<PigmentsLogsNames>): AppThunk =>
+const incrementAction =
+  (action: IIncDecActionPayload): AppThunk =>
   (dispatch, getState) => {
     dispatch(increment(action));
 
     const newLog = {
       log: action.logText ? action.logText : `+${action.value.toString()}`,
-      logName: action.logName,
+      counterName: action.counterName,
       UNID: action.UNID,
     };
 
@@ -29,14 +27,14 @@ export const incrementAction =
     pigmentsRepository.sendData(getState().pigments);
   };
 
-export const decrementAction =
-  (action: IIncDecActionPayload<PigmentsLogsNames>): AppThunk =>
+const decrementAction =
+  (action: IIncDecActionPayload): AppThunk =>
   (dispatch, getState) => {
     dispatch(decrement(action));
 
     const newLog = {
       log: action.logText ? action.logText : `-${action.value.toString()}`,
-      logName: action.logName,
+      counterName: action.counterName,
       UNID: action.UNID,
     };
 
@@ -44,7 +42,7 @@ export const decrementAction =
     pigmentsRepository.sendData(getState().pigments);
   };
 
-export const clearItemDataAction =
+const clearItemDataAction =
   (action: IClearItemActionPayload): AppThunk =>
   (dispatch, getState) => {
     const clearedItem = pigmentsRepository.getDefaultItemData(action.item.UNID);
@@ -53,16 +51,24 @@ export const clearItemDataAction =
     pigmentsRepository.sendData(getState().pigments);
   };
 
-export const clearDataAction = (): AppThunk => (dispatch) => {
+const clearDataAction = (): AppThunk => (dispatch) => {
   const clearedItem = pigmentsRepository.getDefaultData();
   dispatch(clearData(clearedItem));
 
   pigmentsRepository.clearData();
 };
 
-export const changeItemSettingAction =
-  (action: IChangeItemSettingActionPayload<PigmentsSettingsNames>): AppThunk =>
+const changeItemAdditionalSettingAction =
+  (action: IChangeItemAdditionalSettingActionPayload): AppThunk =>
   (dispatch, getState) => {
-    dispatch(changeItemSetting(action));
+    dispatch(changeItemAdditionalSetting(action));
     pigmentsRepository.sendData(getState().pigments);
   };
+
+export {
+  incrementAction,
+  decrementAction,
+  clearItemDataAction,
+  clearDataAction,
+  changeItemAdditionalSettingAction,
+};

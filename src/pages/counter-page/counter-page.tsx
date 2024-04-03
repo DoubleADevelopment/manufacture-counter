@@ -1,16 +1,20 @@
-import { ReactNode } from 'react';
 //layouts
 import { CounterPageLayout } from '../../layouts';
 //components
-import { CountableItemInfo } from '../../components';
+import { CountableItemInfo, CounterSwitcher, PageNotification } from '../../components';
 //types
 import {
   ISelectorCheckIfElementExistsByUNID,
   ISelectorGetItemData,
   ClearItemDataActionType,
+  IncDecActionType,
+  IChangeItemAdditionalSettingActionType,
 } from '../../types';
 //style
 import style from './counter-page.module.scss';
+import { ErrorsText, NotificationType } from '../../variables';
+import { useParams } from 'react-router-dom';
+import { useAppSelector } from '../../hooks/hooks';
 
 interface ICounterPageProps {
   backLink: string;
@@ -18,17 +22,47 @@ interface ICounterPageProps {
   SelectorCheckIfElementExistsByUNID: ISelectorCheckIfElementExistsByUNID;
   SelectorGetCurrentItemData: ISelectorGetItemData;
   clearItemDataAction: ClearItemDataActionType;
-  children: ReactNode;
+  incrementAction: IncDecActionType;
+  decrementAction: IncDecActionType;
+  changeItemAdditionalSettingAction?: IChangeItemAdditionalSettingActionType;
 }
 
 const CounterPage = ({
   backLink,
   headerTitle,
-  children,
   SelectorCheckIfElementExistsByUNID,
   SelectorGetCurrentItemData,
   clearItemDataAction,
+  incrementAction,
+  decrementAction,
+  changeItemAdditionalSettingAction,
 }: ICounterPageProps): JSX.Element => {
+  const { UNID } = useParams();
+  const itemFromUnidIsset = useAppSelector(SelectorCheckIfElementExistsByUNID(UNID));
+
+  const renderComponents = (): JSX.Element => {
+    if (UNID && itemFromUnidIsset) {
+      return (
+        <CounterSwitcher
+          UNID={UNID}
+          incrementAction={incrementAction}
+          decrementAction={decrementAction}
+          changeItemAdditionalSettingAction={changeItemAdditionalSettingAction}
+          SelectorGetItemData={SelectorGetCurrentItemData}
+        />
+      );
+    } else {
+      return (
+        <PageNotification
+          headingText={ErrorsText.COUNTER_OPENING_ERROR}
+          paragraphText={ErrorsText.COMPONENT_NOT_FOUND}
+          type={NotificationType.ERROR}
+          additionalInfo={`${ErrorsText.COMPONENT_NOT_FOUND_WITH_UNID} ${UNID}`}
+        />
+      );
+    }
+  };
+
   return (
     <CounterPageLayout backLink={backLink} headerTitle={headerTitle}>
       <main className={style['counter-page']}>
@@ -37,7 +71,7 @@ const CounterPage = ({
           SelectorGetCurrentItemData={SelectorGetCurrentItemData}
           clearItemDataAction={clearItemDataAction}
         />
-        {children}
+        {renderComponents()}
       </main>
     </CounterPageLayout>
   );

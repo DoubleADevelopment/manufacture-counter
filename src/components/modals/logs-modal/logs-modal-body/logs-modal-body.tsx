@@ -4,7 +4,7 @@ import { LogItem } from '../../../';
 //layouts
 import { ModalLayout } from '../../../../layouts';
 //types
-import type { ILogs } from '../../../../types';
+import type { ICounters } from '../../../../types';
 //variables
 import { CounterText, InterfaceText } from '../../../../variables';
 //icons
@@ -15,18 +15,18 @@ import style from './logs-modal-body.module.scss';
 interface ILogsModalBodyProps {
   closeModalClickHandler: () => void;
   openConfirmDeletingModal: () => void;
-  logsData: ILogs;
+  counters: ICounters;
 }
 
 const LogsModalBody = ({
   closeModalClickHandler,
-  logsData,
+  counters,
   openConfirmDeletingModal,
 }: ILogsModalBodyProps): JSX.Element => {
   const generateLogs = (): JSX.Element[] => {
     const logsArray: JSX.Element[] = [];
-    for (const key in logsData) {
-      logsArray.push(<LogItem item={logsData[key]} key={key} />);
+    for (const key in counters) {
+      logsArray.push(<LogItem counter={counters[key]} key={key} />);
     }
     return logsArray;
   };
