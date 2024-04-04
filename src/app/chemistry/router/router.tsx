@@ -6,12 +6,16 @@ import {
   SelectorGetItemData,
 } from '../store/slectors/selectors';
 import { clearItemDataAction, decrementAction, incrementAction } from '../store/actions/actions';
+//repository
+import chemistryRepository from '../repository/chemistry-repository';
 //pages
 import { ComponentRootPage, CounterPage } from '../../../pages';
 //variables
-import { CHEMISTRY_TEXT, ChemistryAppRouting } from '../variables';
+import { ChemistryAppRouting } from '../variables';
 
 const Router = (): JSX.Element => {
+  const packageData = chemistryRepository.getPackageData();
+
   return (
     <Routes>
       <Route
@@ -19,7 +23,7 @@ const Router = (): JSX.Element => {
         element={
           <ComponentRootPage
             SelectorGetComponentState={SelectorGetData}
-            headerTitle={CHEMISTRY_TEXT.CHEMISTRY}
+            headerTitle={packageData.packageTitle}
           />
         }
       />
@@ -29,7 +33,7 @@ const Router = (): JSX.Element => {
         element={
           <CounterPage
             backLink={ChemistryAppRouting.ROOT.path}
-            headerTitle={CHEMISTRY_TEXT.CHEMISTRY_COUNTER_TITLE}
+            headerTitle={packageData.packageCounterTitle}
             SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
             SelectorGetCurrentItemData={SelectorGetItemData}
             clearItemDataAction={clearItemDataAction}

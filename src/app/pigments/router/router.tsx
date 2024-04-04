@@ -11,12 +11,16 @@ import {
   decrementAction,
   incrementAction,
 } from '../store/actions/actions';
+//repository
+import pigmentsRepository from '../repository/pigments-repository';
 //pages
 import { ComponentRootPage, CounterPage } from '../../../pages';
 //variables
-import { PIGMENTS_TEXT, PigmentsAppRouting } from '../variables';
+import { PigmentsAppRouting } from '../variables';
 
 const Router = (): JSX.Element => {
+  const packageData = pigmentsRepository.getPackageData();
+
   return (
     <Routes>
       <Route
@@ -24,7 +28,7 @@ const Router = (): JSX.Element => {
         element={
           <ComponentRootPage
             SelectorGetComponentState={SelectorGetData}
-            headerTitle={PIGMENTS_TEXT.PIGMENTS}
+            headerTitle={packageData.packageTitle}
           />
         }
       />
@@ -34,7 +38,7 @@ const Router = (): JSX.Element => {
         element={
           <CounterPage
             backLink={PigmentsAppRouting.ROOT.path}
-            headerTitle={PIGMENTS_TEXT.PIGMENTS_COUNTER_TITLE}
+            headerTitle={packageData.packageCounterTitle}
             SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
             SelectorGetCurrentItemData={SelectorGetItemData}
             clearItemDataAction={clearItemDataAction}

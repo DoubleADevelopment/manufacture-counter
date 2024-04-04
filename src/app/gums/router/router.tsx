@@ -11,12 +11,16 @@ import {
   incrementAction,
   changeItemAdditionalSettingAction,
 } from '../store/actions/actions';
+//repository
+import gumsRepository from '../repository/gums-repository';
 //pages
 import { ComponentRootPage, CounterPage } from '../../../pages';
 //variables
-import { GUMS_TEXT, GumsAppRouting } from '../variables';
+import { GumsAppRouting } from '../variables';
 
 const Router = (): JSX.Element => {
+  const packageData = gumsRepository.getPackageData();
+
   return (
     <Routes>
       <Route
@@ -24,7 +28,7 @@ const Router = (): JSX.Element => {
         element={
           <ComponentRootPage
             SelectorGetComponentState={SelectorGetData}
-            headerTitle={GUMS_TEXT.GUMS}
+            headerTitle={packageData.packageTitle}
           />
         }
       />
@@ -34,7 +38,7 @@ const Router = (): JSX.Element => {
         element={
           <CounterPage
             backLink={GumsAppRouting.ROOT.path}
-            headerTitle={GUMS_TEXT.GUMS_COUNTER_TITLE}
+            headerTitle={packageData.packageCounterTitle}
             SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
             SelectorGetCurrentItemData={SelectorGetItemData}
             clearItemDataAction={clearItemDataAction}

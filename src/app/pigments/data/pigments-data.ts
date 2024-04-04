@@ -7,6 +7,8 @@ const pigmentsData: IPackage = {
   dataPackageName: 'pigments',
   dataPackageUNID: 2001,
   dataStorageName: 'pigments-data-2001',
+  packageTitle: 'Pigmenty',
+  packageCounterTitle: 'Licznik pigmentów',
   items: [
     {
       UNID: 'pigment-AURUM-799549',

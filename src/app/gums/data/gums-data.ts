@@ -7,6 +7,8 @@ const gumsData: IPackage = {
   dataPackageName: 'gums',
   dataPackageUNID: 3001,
   dataStorageName: 'gums-data-3001',
+  packageTitle: 'Uszczelka',
+  packageCounterTitle: 'Licznik gumy',
   items: [
     {
       UNID: 'gums-ALFA-PVC-794125',

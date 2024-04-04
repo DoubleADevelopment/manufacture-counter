@@ -7,6 +7,8 @@ const chemistryData: IPackage = {
   dataPackageName: 'chemistry',
   dataPackageUNID: 1001,
   dataStorageName: 'chemistry-data-1001',
+  packageTitle: 'Chemia',
+  packageCounterTitle: 'Licznik chemii',
   items: [
     {
       UNID: `chemistry-Solvent-77001-00030`,

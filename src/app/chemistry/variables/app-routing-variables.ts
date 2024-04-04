@@ -1,5 +1,6 @@
 //types
 import type { IRouteItem } from '../../../types';
+//variables
 import { ComponentsRouting } from '../../../variables';
 
 const CHEMISTRY_ROOT = ComponentsRouting.CHEMISTRY.route;

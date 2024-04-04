@@ -7,6 +7,8 @@ const suppliesData: IPackage = {
   dataPackageName: 'supplies',
   dataPackageUNID: 4001,
   dataStorageName: 'supplies-data-4001',
+  packageTitle: 'Komponenty',
+  packageCounterTitle: 'Licznik komponentu',
   items: [
     {
       UNID: 'supplies-abc123',

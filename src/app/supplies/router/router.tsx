@@ -11,12 +11,16 @@ import {
   decrementAction,
   incrementAction,
 } from '../store/actions/actions';
+//repository
+import suppliesRepository from '../repository/supplies-repository';
 //pages
 import { ComponentRootPage, CounterPage } from '../../../pages';
 //variables
-import { SUPPLIES_TEXT, SuppliesAppRouting } from '../variables';
+import { SuppliesAppRouting } from '../variables';
 
 const Router = (): JSX.Element => {
+  const packageData = suppliesRepository.getPackageData();
+
   return (
     <Routes>
       <Route
@@ -24,7 +28,7 @@ const Router = (): JSX.Element => {
         element={
           <ComponentRootPage
             SelectorGetComponentState={SelectorGetData}
-            headerTitle={SUPPLIES_TEXT.SUPPLIES}
+            headerTitle={packageData.packageTitle}
           />
         }
       />
@@ -34,7 +38,7 @@ const Router = (): JSX.Element => {
         element={
           <CounterPage
             backLink={SuppliesAppRouting.ROOT.path}
-            headerTitle={SUPPLIES_TEXT.SUPPLIES_COUNTER_TITLE}
+            headerTitle={packageData.packageCounterTitle}
             SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
             SelectorGetCurrentItemData={SelectorGetItemData}
             clearItemDataAction={clearItemDataAction}
