@@ -15,8 +15,6 @@ import {
 import pigmentsRepository from '../repository/pigments-repository';
 //pages
 import { ComponentRootPage, CounterPage } from '../../../pages';
-//variables
-import { PigmentsAppRouting } from '../variables';
 
 const Router = (): JSX.Element => {
   const packageData = pigmentsRepository.getPackageData();
@@ -34,10 +32,10 @@ const Router = (): JSX.Element => {
       />
 
       <Route
-        path={PigmentsAppRouting.COUNTER.route}
+        path={'/:UNID'}
         element={
           <CounterPage
-            backLink={PigmentsAppRouting.ROOT.path}
+            backLink={`/${packageData.dataPackageName}`}
             headerTitle={packageData.packageCounterTitle}
             SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
             SelectorGetCurrentItemData={SelectorGetItemData}

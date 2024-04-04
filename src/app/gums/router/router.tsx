@@ -15,8 +15,6 @@ import {
 import gumsRepository from '../repository/gums-repository';
 //pages
 import { ComponentRootPage, CounterPage } from '../../../pages';
-//variables
-import { GumsAppRouting } from '../variables';
 
 const Router = (): JSX.Element => {
   const packageData = gumsRepository.getPackageData();
@@ -34,10 +32,10 @@ const Router = (): JSX.Element => {
       />
 
       <Route
-        path={GumsAppRouting.COUNTER.route}
+        path={'/:UNID'}
         element={
           <CounterPage
-            backLink={GumsAppRouting.ROOT.path}
+            backLink={`/${packageData.dataPackageName}`}
             headerTitle={packageData.packageCounterTitle}
             SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
             SelectorGetCurrentItemData={SelectorGetItemData}

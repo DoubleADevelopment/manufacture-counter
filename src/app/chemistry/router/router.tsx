@@ -10,8 +10,6 @@ import { clearItemDataAction, decrementAction, incrementAction } from '../store/
 import chemistryRepository from '../repository/chemistry-repository';
 //pages
 import { ComponentRootPage, CounterPage } from '../../../pages';
-//variables
-import { ChemistryAppRouting } from '../variables';
 
 const Router = (): JSX.Element => {
   const packageData = chemistryRepository.getPackageData();
@@ -29,10 +27,10 @@ const Router = (): JSX.Element => {
       />
 
       <Route
-        path={ChemistryAppRouting.COUNTER.route}
+        path={'/:UNID'}
         element={
           <CounterPage
-            backLink={ChemistryAppRouting.ROOT.path}
+            backLink={`/${packageData.dataPackageName}`}
             headerTitle={packageData.packageCounterTitle}
             SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
             SelectorGetCurrentItemData={SelectorGetItemData}

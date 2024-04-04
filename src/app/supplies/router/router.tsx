@@ -15,8 +15,6 @@ import {
 import suppliesRepository from '../repository/supplies-repository';
 //pages
 import { ComponentRootPage, CounterPage } from '../../../pages';
-//variables
-import { SuppliesAppRouting } from '../variables';
 
 const Router = (): JSX.Element => {
   const packageData = suppliesRepository.getPackageData();
@@ -34,10 +32,10 @@ const Router = (): JSX.Element => {
       />
 
       <Route
-        path={SuppliesAppRouting.COUNTER.route}
+        path={'/:UNID'}
         element={
           <CounterPage
-            backLink={SuppliesAppRouting.ROOT.path}
+            backLink={`/${packageData.dataPackageName}`}
             headerTitle={packageData.packageCounterTitle}
             SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
             SelectorGetCurrentItemData={SelectorGetItemData}

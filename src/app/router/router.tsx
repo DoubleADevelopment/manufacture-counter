@@ -6,10 +6,20 @@ import ChemistryApp from '../chemistry/app';
 import GumsApp from '../gums/app';
 import PigmentsApp from '../pigments/app';
 import SuppliesApp from '../supplies/app';
+//apps repository
+import chemistryRepository from '../chemistry/repository/chemistry-repository';
+import gumsRepository from '../gums/repository/gums-repository';
+import suppliesRepository from '../supplies/repository/supplies-repository';
+import pigmentsRepository from '../pigments/repository/pigments-repository';
 //variables
-import { AppRouting, rootBaseName, ComponentsRouting } from '../../variables';
+import { AppRouting, rootBaseName } from '../../variables';
 
 const Router = (): JSX.Element => {
+  const chemistryRootPath = chemistryRepository.getPackageData().dataPackageName;
+  const gumsRootPath = gumsRepository.getPackageData().dataPackageName;
+  const suppliesRootPath = suppliesRepository.getPackageData().dataPackageName;
+  const pigmentsRootPath = pigmentsRepository.getPackageData().dataPackageName;
+
   return (
     <BrowserRouter basename={rootBaseName}>
       <Routes>
@@ -21,10 +31,10 @@ const Router = (): JSX.Element => {
           element={<Pages.ComponentOverviewPage />}
         />
 
-        <Route path={`${ComponentsRouting.CHEMISTRY.route}/*`} element={<ChemistryApp />} />
-        <Route path={`${ComponentsRouting.GUMS.route}/*`} element={<GumsApp />} />
-        <Route path={`${ComponentsRouting.PIGMENTS.route}/*`} element={<PigmentsApp />} />
-        <Route path={`${ComponentsRouting.SUPPLIES.route}/*`} element={<SuppliesApp />} />
+        <Route path={`${chemistryRootPath}/*`} element={<ChemistryApp />} />
+        <Route path={`${gumsRootPath}/*`} element={<GumsApp />} />
+        <Route path={`${pigmentsRootPath}/*`} element={<PigmentsApp />} />
+        <Route path={`${suppliesRootPath}/*`} element={<SuppliesApp />} />
       </Routes>
     </BrowserRouter>
   );
