@@ -2,10 +2,10 @@ import { Route, Routes, BrowserRouter } from 'react-router-dom';
 //pages
 import * as Pages from '../../pages';
 //aps
-import ChemistryApp from '../chemistry/app';
-import GumsApp from '../gums/app';
-import PigmentsApp from '../pigments/app';
-import SuppliesApp from '../supplies/app';
+import ChemistryApp from '../chemistry';
+import GumsApp from '../gums';
+import PigmentsApp from '../pigments';
+import SuppliesApp from '../supplies';
 //apps repository
 import chemistryRepository from '../chemistry/repository/chemistry-repository';
 import gumsRepository from '../gums/repository/gums-repository';

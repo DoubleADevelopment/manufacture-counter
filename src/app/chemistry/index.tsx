@@ -4,14 +4,14 @@ import {
   SelectorCheckIfElementExistsByUNID,
   SelectorGetData,
   SelectorGetItemData,
-} from '../store/slectors/selectors';
-import { clearItemDataAction, decrementAction, incrementAction } from '../store/actions/actions';
+} from './store/slectors/selectors';
+import { clearItemDataAction, decrementAction, incrementAction } from './store/actions/actions';
 //repository
-import chemistryRepository from '../repository/chemistry-repository';
+import chemistryRepository from './repository/chemistry-repository';
 //pages
-import { ComponentRootPage, CounterPage } from '../../../pages';
+import { ComponentRootPage, CounterPage } from '../../pages';
 
-const Router = (): JSX.Element => {
+const ChemistryApp = (): JSX.Element => {
   const packageData = chemistryRepository.getPackageData();
 
   return (
@@ -44,4 +44,4 @@ const Router = (): JSX.Element => {
   );
 };
 
-export default Router;
+export default ChemistryApp;

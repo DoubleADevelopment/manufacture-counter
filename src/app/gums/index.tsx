@@ -4,20 +4,20 @@ import {
   SelectorCheckIfElementExistsByUNID,
   SelectorGetItemData,
   SelectorGetData,
-} from '../store/slectors/selectors';
+} from './store/slectors/selectors';
 import {
   clearItemDataAction,
-  changeItemAdditionalSettingAction,
   decrementAction,
   incrementAction,
-} from '../store/actions/actions';
+  changeItemAdditionalSettingAction,
+} from './store/actions/actions';
 //repository
-import suppliesRepository from '../repository/supplies-repository';
+import gumsRepository from './repository/gums-repository';
 //pages
-import { ComponentRootPage, CounterPage } from '../../../pages';
+import { ComponentRootPage, CounterPage } from '../../pages';
 
-const Router = (): JSX.Element => {
-  const packageData = suppliesRepository.getPackageData();
+const GumsApp = (): JSX.Element => {
+  const packageData = gumsRepository.getPackageData();
 
   return (
     <Routes>
@@ -50,4 +50,4 @@ const Router = (): JSX.Element => {
   );
 };
 
-export default Router;
+export default GumsApp;
