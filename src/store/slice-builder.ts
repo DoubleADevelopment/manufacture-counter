@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction, Slice } from '@reduxjs/toolkit';
 //types
 import type {
   IRepository,
@@ -13,7 +13,7 @@ interface ISliceBuilderParams {
   repository: IRepository;
 }
 
-const SliceBuilder = ({ repository }: ISliceBuilderParams) => {
+const SliceBuilder = ({ repository }: ISliceBuilderParams): Slice<IData> => {
   const AppSlice = createSlice({
     name: repository.getPackageData().dataPackageName,
     initialState: repository.getData(),
