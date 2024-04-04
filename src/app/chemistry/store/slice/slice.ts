@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-//state
-import chemistryState from '../state/state';
+//repository
+import chemistryRepository from '../../repository/chemistry-repository';
 //types
 import type {
   IChangeItemAdditionalSettingActionPayload,
@@ -12,7 +12,7 @@ import type {
 
 export const chemistrySlice = createSlice({
   name: 'chemistry',
-  initialState: chemistryState,
+  initialState: chemistryRepository.getData(),
 
   reducers: {
     increment: (state, action: PayloadAction<IIncDecActionPayload>) => {

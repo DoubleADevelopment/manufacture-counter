@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-//state
-import pigmentsState from '../state/state';
+//repository
+import pigmentsRepository from '../../repository/pigments-repository';
 //types
 import type {
   IChangeItemAdditionalSettingActionPayload,
@@ -12,7 +12,7 @@ import type {
 
 export const pigmentsSlice = createSlice({
   name: 'pigments',
-  initialState: pigmentsState,
+  initialState: pigmentsRepository.getData(),
 
   reducers: {
     increment: (state, action: PayloadAction<IIncDecActionPayload>) => {

@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-//state
-import gumsState from '../state/state';
+//repository
+import gumsRepository from '../../repository/gums-repository';
 //types
 import type {
   IChangeItemAdditionalSettingActionPayload,
@@ -12,7 +12,7 @@ import type {
 
 export const gumsSlice = createSlice({
   name: 'gums',
-  initialState: gumsState,
+  initialState: gumsRepository.getData(),
 
   reducers: {
     increment: (state, action: PayloadAction<IIncDecActionPayload>) => {
