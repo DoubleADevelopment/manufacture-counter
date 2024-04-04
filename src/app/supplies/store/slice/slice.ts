@@ -1,5 +1,5 @@
 //slice builder
-import SliceBuilder from '../../../../store/SliceBuilder';
+import SliceBuilder from '../../../../store/slice-builder';
 //repository
 import suppliesRepository from '../../repository/supplies-repository';
 
