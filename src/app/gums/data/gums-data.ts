@@ -9,6 +9,8 @@ const gumsData: IPackage = {
   dataStorageName: 'gums-data-3001',
   packageTitle: 'Uszczelka',
   packageCounterTitle: 'Licznik gumy',
+  packageImage:
+    'https://media.istockphoto.com/id/1221227912/pl/zdj%C4%99cie/granulki-z-czarnej-gumy.jpg?s=612x612&w=is&k=20&c=BDCbsa8HfJpGgPErJtdesdVwAA7vJCu_kZchYSGVaIE=',
   items: [
     {
       UNID: 'gums-ALFA-PVC-794125',

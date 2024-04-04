@@ -57,6 +57,7 @@ interface IPackage {
   dataStorageName: string;
   packageTitle: string;
   packageCounterTitle: string;
+  packageImage: string;
   items: IItemData[];
 }
 

@@ -9,6 +9,8 @@ const pigmentsData: IPackage = {
   dataStorageName: 'pigments-data-2001',
   packageTitle: 'Pigmenty',
   packageCounterTitle: 'Licznik pigmentów',
+  packageImage:
+    'https://webp-konwerter.infor.pl/eyJmIjoiaHR0cHM6Ly9nO/S5pbmZvci5wbC9wL19maW/xlcy8yMDIwMDAvcGlnbWV/udHkuanBnIiwidyI6ODAwfQ.png',
   items: [
     {
       UNID: 'pigment-AURUM-799549',
