@@ -5,18 +5,18 @@ import type { IData, IItemData, RootState } from '../../../../types';
 
 const packageName = pigmentsRepository.getPackageData().dataPackageName;
 
-export const SelectorGetData =
+const SelectorGetData =
   () =>
   (state: RootState): IData => {
     return state[packageName];
   };
 
-export const SelectorGetItemData =
+const SelectorGetItemData =
   (UNID: string) =>
   (state: RootState): IItemData =>
     state[packageName][UNID];
 
-export const SelectorCheckIfElementExistsByUNID =
+const SelectorCheckIfElementExistsByUNID =
   (UNID: string | undefined) =>
   (state: RootState): boolean => {
     let result = false;
@@ -32,3 +32,5 @@ export const SelectorCheckIfElementExistsByUNID =
 
     return result;
   };
+
+export { SelectorGetData, SelectorGetItemData, SelectorCheckIfElementExistsByUNID };

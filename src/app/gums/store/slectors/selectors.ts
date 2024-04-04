@@ -1,21 +1,22 @@
+//repository
+import gumsRepository from '../../repository/gums-repository';
 //types
 import type { IData, IItemData, RootState } from '../../../../types';
-import gumsRepository from '../../repository/gums-repository';
 
 const packageName = gumsRepository.getPackageData().dataPackageName;
 
-export const SelectorGetData =
+const SelectorGetData =
   () =>
   (state: RootState): IData => {
     return state[packageName];
   };
 
-export const SelectorGetItemData =
+const SelectorGetItemData =
   (UNID: string) =>
   (state: RootState): IItemData =>
     state[packageName][UNID];
 
-export const SelectorCheckIfElementExistsByUNID =
+const SelectorCheckIfElementExistsByUNID =
   (UNID: string | undefined) =>
   (state: RootState): boolean => {
     let result = false;
@@ -28,5 +29,8 @@ export const SelectorCheckIfElementExistsByUNID =
         result = true;
       }
     }
+
     return result;
   };
+
+export { SelectorGetData, SelectorGetItemData, SelectorCheckIfElementExistsByUNID };
