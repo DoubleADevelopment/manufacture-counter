@@ -1,16 +1,20 @@
+//repository
+import suppliesRepository from '../../repository/supplies-repository';
 //types
 import type { IData, IItemData, RootState } from '../../../../types';
+
+const packageName = suppliesRepository.getPackageData().dataPackageName;
 
 export const SelectorGetData =
   () =>
   (state: RootState): IData => {
-    return state.supplies;
+    return state[packageName];
   };
 
 export const SelectorGetItemData =
   (UNID: string) =>
   (state: RootState): IItemData =>
-    state.supplies[UNID];
+    state[packageName][UNID];
 
 export const SelectorCheckIfElementExistsByUNID =
   (UNID: string | undefined) =>
@@ -19,7 +23,7 @@ export const SelectorCheckIfElementExistsByUNID =
     if (!UNID) {
       result = false;
     } else {
-      if (!state.supplies[UNID]) {
+      if (!state[packageName][UNID]) {
         result = false;
       } else {
         result = true;

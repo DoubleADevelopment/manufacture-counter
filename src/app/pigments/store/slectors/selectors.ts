@@ -1,16 +1,20 @@
+//repository
+import pigmentsRepository from '../../repository/pigments-repository';
 //types
 import type { IData, IItemData, RootState } from '../../../../types';
+
+const packageName = pigmentsRepository.getPackageData().dataPackageName;
 
 export const SelectorGetData =
   () =>
   (state: RootState): IData => {
-    return state.pigments;
+    return state[packageName];
   };
 
 export const SelectorGetItemData =
   (UNID: string) =>
   (state: RootState): IItemData =>
-    state.pigments[UNID];
+    state[packageName][UNID];
 
 export const SelectorCheckIfElementExistsByUNID =
   (UNID: string | undefined) =>
@@ -19,7 +23,7 @@ export const SelectorCheckIfElementExistsByUNID =
     if (!UNID) {
       result = false;
     } else {
-      if (!state.pigments[UNID]) {
+      if (!state[packageName][UNID]) {
         result = false;
       } else {
         result = true;

@@ -9,6 +9,8 @@ import type {
   IIncDecActionPayload,
 } from '../../../../types';
 
+const packageName = chemistryRepository.getPackageData().dataPackageName;
+
 const { increment, decrement, log, clearItem, clearData, changeItemAdditionalSetting } =
   chemistrySlice.actions;
 
@@ -24,7 +26,7 @@ const incrementAction =
     };
 
     dispatch(log(newLog));
-    chemistryRepository.sendData(getState().chemistry);
+    chemistryRepository.sendData(getState()[packageName]);
   };
 
 const decrementAction =
@@ -39,7 +41,7 @@ const decrementAction =
     };
 
     dispatch(log(newLog));
-    chemistryRepository.sendData(getState().chemistry);
+    chemistryRepository.sendData(getState()[packageName]);
   };
 
 const clearItemDataAction =
@@ -48,7 +50,7 @@ const clearItemDataAction =
     const clearedItem = chemistryRepository.getDefaultItemData(action.item.UNID);
     dispatch(clearItem({ item: clearedItem }));
 
-    chemistryRepository.sendData(getState().chemistry);
+    chemistryRepository.sendData(getState()[packageName]);
   };
 
 const clearDataAction = (): AppThunk => (dispatch) => {
@@ -62,7 +64,7 @@ const changeItemAdditionalSettingAction =
   (action: IChangeItemAdditionalSettingActionPayload): AppThunk =>
   (dispatch, getState) => {
     dispatch(changeItemAdditionalSetting(action));
-    chemistryRepository.sendData(getState().gums);
+    chemistryRepository.sendData(getState()[packageName]);
   };
 
 export {

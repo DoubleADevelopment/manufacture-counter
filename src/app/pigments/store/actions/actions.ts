@@ -9,6 +9,8 @@ import type {
   IIncDecActionPayload,
 } from '../../../../types';
 
+const packageName = pigmentsRepository.getPackageData().dataPackageName;
+
 const { increment, decrement, log, clearItem, clearData, changeItemAdditionalSetting } =
   pigmentsSlice.actions;
 
@@ -24,7 +26,7 @@ const incrementAction =
     };
 
     dispatch(log(newLog));
-    pigmentsRepository.sendData(getState().pigments);
+    pigmentsRepository.sendData(getState()[packageName]);
   };
 
 const decrementAction =
@@ -39,7 +41,7 @@ const decrementAction =
     };
 
     dispatch(log(newLog));
-    pigmentsRepository.sendData(getState().pigments);
+    pigmentsRepository.sendData(getState()[packageName]);
   };
 
 const clearItemDataAction =
@@ -48,7 +50,7 @@ const clearItemDataAction =
     const clearedItem = pigmentsRepository.getDefaultItemData(action.item.UNID);
     dispatch(clearItem({ item: clearedItem }));
 
-    pigmentsRepository.sendData(getState().pigments);
+    pigmentsRepository.sendData(getState()[packageName]);
   };
 
 const clearDataAction = (): AppThunk => (dispatch) => {
@@ -62,7 +64,7 @@ const changeItemAdditionalSettingAction =
   (action: IChangeItemAdditionalSettingActionPayload): AppThunk =>
   (dispatch, getState) => {
     dispatch(changeItemAdditionalSetting(action));
-    pigmentsRepository.sendData(getState().pigments);
+    pigmentsRepository.sendData(getState()[packageName]);
   };
 
 export {
