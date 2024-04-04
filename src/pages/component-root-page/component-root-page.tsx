@@ -9,13 +9,13 @@ import { PageWithMenuLayout } from '../../layouts';
 //variables
 import { AppRouting, ErrorsText, NotificationType } from '../../variables';
 //types
-import type { IData, RootState } from '../../types';
+import type { ISelectorGetData } from '../../types';
 //styles
 import style from './component-root-page.module.scss';
 
 interface IComponentRootPageProps {
   headerTitle: string;
-  SelectorGetComponentState: () => (state: RootState) => IData;
+  SelectorGetComponentState: ISelectorGetData;
 }
 
 const ComponentRootPage = ({

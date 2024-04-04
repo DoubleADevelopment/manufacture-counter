@@ -57,6 +57,10 @@ abstract class AbstractRepository implements IRepository {
     }
   }
 
+  getPackageData(): IPackage {
+    return this.#packageData;
+  }
+
   getDefaultData(): IData {
     return this.#getDefaultData();
   }

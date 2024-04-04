@@ -25,12 +25,6 @@ interface IItemDataToDisplay {
 
 type ItemsDataToDisplayListType = IItemDataToDisplay[];
 
-interface ILogItem {
-  log: string[];
-  name: string;
-  lastChange: string | null;
-}
-
 interface IItemData {
   UNID: string;
   amount: number;
@@ -51,10 +45,23 @@ interface IData {
   [key: string]: IItemData;
 }
 
+// interface IState {
+//   dataPackageName: string;
+//   dataPackageUNID: number;
+//   dataStorageName: string;
+//   packageTitle: string;
+//   packageCounterTitle: string;
+//   packageImage: string;
+//   items: IData;
+// }
+
 interface IPackage {
   dataPackageName: string;
   dataPackageUNID: number;
   dataStorageName: string;
+  packageTitle: string;
+  packageCounterTitle: string;
+  packageImage: string;
   items: IItemData[];
 }
 
@@ -91,7 +98,6 @@ export type {
   IItemDataToDisplay,
   ItemsDataToDisplayListType,
   IItemData,
-  ILogItem,
   IData,
   IPackage,
   ICounter,

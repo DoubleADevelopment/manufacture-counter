@@ -7,6 +7,10 @@ const suppliesData: IPackage = {
   dataPackageName: 'supplies',
   dataPackageUNID: 4001,
   dataStorageName: 'supplies-data-4001',
+  packageTitle: 'Komponenty',
+  packageCounterTitle: 'Licznik komponentu',
+  packageImage:
+    'https://www.planettogether.com/hs-fs/hubfs/lean_manu_tools.jpg?width=625&name=lean_manu_tools.jpg',
   items: [
     {
       UNID: 'supplies-abc123',

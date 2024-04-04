@@ -7,6 +7,9 @@ const chemistryData: IPackage = {
   dataPackageName: 'chemistry',
   dataPackageUNID: 1001,
   dataStorageName: 'chemistry-data-1001',
+  packageTitle: 'Chemia',
+  packageCounterTitle: 'Licznik chemii',
+  packageImage: 'https://prus.edu.pl/wp-content/uploads/2022/09/chemia-.jpg',
   items: [
     {
       UNID: `chemistry-Solvent-77001-00030`,

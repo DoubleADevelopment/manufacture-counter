@@ -1,29 +1,11 @@
-//types
-import type { IData, IItemData, RootState } from '../../../../types';
+//repository
+import gumsRepository from '../../repository/gums-repository';
+//selector builder
+import SelectorBuilder from '../../../../store/selector-builder';
 
-export const SelectorGetData =
-  () =>
-  (state: RootState): IData => {
-    return state.gums;
-  };
+const packageName = gumsRepository.getPackageData().dataPackageName;
 
-export const SelectorGetItemData =
-  (UNID: string) =>
-  (state: RootState): IItemData =>
-    state.gums[UNID];
+const { SelectorGetData, SelectorGetItemData, SelectorCheckIfElementExistsByUNID } =
+  SelectorBuilder(packageName);
 
-export const SelectorCheckIfElementExistsByUNID =
-  (UNID: string | undefined) =>
-  (state: RootState): boolean => {
-    let result = false;
-    if (!UNID) {
-      result = false;
-    } else {
-      if (!state.gums[UNID]) {
-        result = false;
-      } else {
-        result = true;
-      }
-    }
-    return result;
-  };
+export { SelectorGetData, SelectorGetItemData, SelectorCheckIfElementExistsByUNID };

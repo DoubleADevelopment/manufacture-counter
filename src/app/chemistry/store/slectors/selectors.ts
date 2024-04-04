@@ -1,32 +1,11 @@
-//types
-import type { IData, IItemData, RootState } from '../../../../types';
+//repository
+import chemistryRepository from '../../repository/chemistry-repository';
+//selector builder
+import SelectorBuilder from '../../../../store/selector-builder';
 
-const SelectorGetData =
-  () =>
-  (state: RootState): IData => {
-    return state.chemistry;
-  };
+const packageName = chemistryRepository.getPackageData().dataPackageName;
 
-const SelectorGetItemData =
-  (UNID: string) =>
-  (state: RootState): IItemData =>
-    state.chemistry[UNID];
-
-const SelectorCheckIfElementExistsByUNID =
-  (UNID: string | undefined) =>
-  (state: RootState): boolean => {
-    let result = false;
-    if (!UNID) {
-      result = false;
-    } else {
-      if (!state.chemistry[UNID]) {
-        result = false;
-      } else {
-        result = true;
-      }
-    }
-
-    return result;
-  };
+const { SelectorGetData, SelectorGetItemData, SelectorCheckIfElementExistsByUNID } =
+  SelectorBuilder(packageName);
 
 export { SelectorGetData, SelectorGetItemData, SelectorCheckIfElementExistsByUNID };
