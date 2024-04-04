@@ -1,4 +1,5 @@
-import { Route, Routes } from 'react-router-dom';
+//layout
+import { AppRoutingLayout } from '../../layouts';
 //store
 import {
   SelectorCheckIfElementExistsByUNID,
@@ -13,40 +14,19 @@ import {
 } from './store/actions/actions';
 //repository
 import suppliesRepository from './repository/supplies-repository';
-//pages
-import { ComponentRootPage, CounterPage } from '../../pages';
 
 const SuppliesApp = (): JSX.Element => {
-  const packageData = suppliesRepository.getPackageData();
-
   return (
-    <Routes>
-      <Route
-        index
-        element={
-          <ComponentRootPage
-            SelectorGetComponentState={SelectorGetData}
-            headerTitle={packageData.packageTitle}
-          />
-        }
-      />
-
-      <Route
-        path={'/:UNID'}
-        element={
-          <CounterPage
-            backLink={`/${packageData.dataPackageName}`}
-            headerTitle={packageData.packageCounterTitle}
-            SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
-            SelectorGetCurrentItemData={SelectorGetItemData}
-            clearItemDataAction={clearItemDataAction}
-            incrementAction={incrementAction}
-            decrementAction={decrementAction}
-            changeItemAdditionalSettingAction={changeItemAdditionalSettingAction}
-          />
-        }
-      />
-    </Routes>
+    <AppRoutingLayout
+      repository={suppliesRepository}
+      SelectorGetData={SelectorGetData}
+      SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
+      SelectorGetItemData={SelectorGetItemData}
+      clearItemDataAction={clearItemDataAction}
+      incrementAction={incrementAction}
+      decrementAction={decrementAction}
+      changeItemAdditionalSettingAction={changeItemAdditionalSettingAction}
+    />
   );
 };
 
