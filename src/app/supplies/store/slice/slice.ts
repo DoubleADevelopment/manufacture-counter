@@ -11,7 +11,7 @@ import type {
 } from '../../../../types';
 
 export const suppliesSlice = createSlice({
-  name: 'supplies',
+  name: suppliesRepository.getPackageData().dataPackageName,
   initialState: suppliesRepository.getData(),
 
   reducers: {

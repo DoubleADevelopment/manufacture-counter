@@ -11,7 +11,7 @@ import type {
 } from '../../../../types';
 
 export const gumsSlice = createSlice({
-  name: 'gums',
+  name: gumsRepository.getPackageData().dataPackageName,
   initialState: gumsRepository.getData(),
 
   reducers: {

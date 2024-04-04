@@ -11,7 +11,7 @@ import type {
 } from '../../../../types';
 
 export const chemistrySlice = createSlice({
-  name: 'chemistry',
+  name: chemistryRepository.getPackageData().dataPackageName,
   initialState: chemistryRepository.getData(),
 
   reducers: {

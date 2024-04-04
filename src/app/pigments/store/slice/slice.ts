@@ -11,7 +11,7 @@ import type {
 } from '../../../../types';
 
 export const pigmentsSlice = createSlice({
-  name: 'pigments',
+  name: pigmentsRepository.getPackageData().dataPackageName,
   initialState: pigmentsRepository.getData(),
 
   reducers: {
