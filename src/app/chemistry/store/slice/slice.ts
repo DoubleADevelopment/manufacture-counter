@@ -3,6 +3,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import chemistryState from '../state/state';
 //types
 import type {
+  IChangeItemAdditionalSettingActionPayload,
   IClearItemActionPayload,
   IData,
   IIncDecActionPayload,
@@ -33,6 +34,13 @@ export const chemistrySlice = createSlice({
     },
     clearData: (state, action: PayloadAction<IData>) => {
       return action.payload;
+    },
+    changeItemAdditionalSetting: (
+      state,
+      action: PayloadAction<IChangeItemAdditionalSettingActionPayload>,
+    ) => {
+      const { UNID, counterName, newSettingValue } = action.payload;
+      state[UNID].counters[counterName].counterAdditionalValue = newSettingValue;
     },
   },
 });

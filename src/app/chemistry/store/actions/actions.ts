@@ -2,9 +2,15 @@ import { chemistrySlice } from '../slice/slice';
 //repository
 import chemistryRepository from '../../repository/chemistry-repository';
 //types
-import type { AppThunk, IClearItemActionPayload, IIncDecActionPayload } from '../../../../types';
+import type {
+  AppThunk,
+  IChangeItemAdditionalSettingActionPayload,
+  IClearItemActionPayload,
+  IIncDecActionPayload,
+} from '../../../../types';
 
-const { increment, decrement, log, clearItem, clearData } = chemistrySlice.actions;
+const { increment, decrement, log, clearItem, clearData, changeItemAdditionalSetting } =
+  chemistrySlice.actions;
 
 const incrementAction =
   (action: IIncDecActionPayload): AppThunk =>
@@ -52,4 +58,17 @@ const clearDataAction = (): AppThunk => (dispatch) => {
   chemistryRepository.clearData();
 };
 
-export { incrementAction, decrementAction, clearItemDataAction, clearDataAction };
+const changeItemAdditionalSettingAction =
+  (action: IChangeItemAdditionalSettingActionPayload): AppThunk =>
+  (dispatch, getState) => {
+    dispatch(changeItemAdditionalSetting(action));
+    chemistryRepository.sendData(getState().gums);
+  };
+
+export {
+  incrementAction,
+  decrementAction,
+  clearItemDataAction,
+  clearDataAction,
+  changeItemAdditionalSettingAction,
+};
