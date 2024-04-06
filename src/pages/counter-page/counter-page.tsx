@@ -1,54 +1,42 @@
+import { useParams } from 'react-router-dom';
+//store
+import { useAppSelector } from '../../hooks/hooks';
 //layouts
 import { CounterPageLayout } from '../../layouts';
 //components
 import { CountableItemInfo, CounterSwitcher, PageNotification } from '../../components';
 //types
-import {
-  ISelectorCheckIfElementExistsByUNID,
-  ISelectorGetItemData,
-  ClearItemDataActionType,
-  IncDecActionType,
-  IChangeItemAdditionalSettingActionType,
-} from '../../types';
+import { ISelectors, IActions } from '../../types';
+//variables
+import { ErrorsText, NotificationType } from '../../variables';
 //style
 import style from './counter-page.module.scss';
-import { ErrorsText, NotificationType } from '../../variables';
-import { useParams } from 'react-router-dom';
-import { useAppSelector } from '../../hooks/hooks';
 
 interface ICounterPageProps {
   backLink: string;
   headerTitle: string;
-  SelectorCheckIfElementExistsByUNID: ISelectorCheckIfElementExistsByUNID;
-  SelectorGetCurrentItemData: ISelectorGetItemData;
-  clearItemDataAction: ClearItemDataActionType;
-  incrementAction: IncDecActionType;
-  decrementAction: IncDecActionType;
-  changeItemAdditionalSettingAction?: IChangeItemAdditionalSettingActionType;
+  Selectors: ISelectors;
+  Actions: IActions;
 }
 
 const CounterPage = ({
   backLink,
   headerTitle,
-  SelectorCheckIfElementExistsByUNID,
-  SelectorGetCurrentItemData,
-  clearItemDataAction,
-  incrementAction,
-  decrementAction,
-  changeItemAdditionalSettingAction,
+  Selectors,
+  Actions,
 }: ICounterPageProps): JSX.Element => {
   const { UNID } = useParams();
-  const itemFromUnidIsset = useAppSelector(SelectorCheckIfElementExistsByUNID(UNID));
+  const itemFromUnidIsset = useAppSelector(Selectors.SelectorCheckIfElementExistsByUNID(UNID));
 
   const renderComponents = (): JSX.Element => {
     if (UNID && itemFromUnidIsset) {
       return (
         <CounterSwitcher
           UNID={UNID}
-          incrementAction={incrementAction}
-          decrementAction={decrementAction}
-          changeItemAdditionalSettingAction={changeItemAdditionalSettingAction}
-          SelectorGetItemData={SelectorGetCurrentItemData}
+          incrementAction={Actions.incrementAction}
+          decrementAction={Actions.decrementAction}
+          changeItemAdditionalSettingAction={Actions.changeItemAdditionalSettingAction}
+          SelectorGetItemData={Selectors.SelectorGetItemData}
         />
       );
     } else {
@@ -67,9 +55,9 @@ const CounterPage = ({
     <CounterPageLayout backLink={backLink} headerTitle={headerTitle}>
       <main className={style['counter-page']}>
         <CountableItemInfo
-          SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
-          SelectorGetCurrentItemData={SelectorGetCurrentItemData}
-          clearItemDataAction={clearItemDataAction}
+          SelectorCheckIfElementExistsByUNID={Selectors.SelectorCheckIfElementExistsByUNID}
+          SelectorGetCurrentItemData={Selectors.SelectorGetItemData}
+          clearItemDataAction={Actions.clearItemDataAction}
         />
         {renderComponents()}
       </main>

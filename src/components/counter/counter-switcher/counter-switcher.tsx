@@ -1,4 +1,6 @@
 import { useState } from 'react';
+//store
+import { useAppSelector } from '../../../hooks/hooks';
 //components
 import {
   AdditionalNav,
@@ -8,16 +10,16 @@ import {
 } from '../../';
 //variables
 import { ErrorsText, NotificationType } from '../../../variables';
-//styles
-import style from './counter-switcher.module.scss';
-import {
+//types
+import type {
   IAdditionalNavItem,
   IChangeItemAdditionalSettingActionType,
   IItemData,
   IncDecActionType,
   ISelectorGetItemData,
 } from '../../../types';
-import { useAppSelector } from '../../../hooks/hooks';
+//styles
+import style from './counter-switcher.module.scss';
 
 interface ICounterSwitcherProps {
   UNID: string;

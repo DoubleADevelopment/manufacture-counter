@@ -2,8 +2,13 @@
 import { CounterWithAdditionalValue } from '../';
 //store
 import { useAppDispatch } from '../../../hooks/hooks';
-import { IChangeItemAdditionalSettingActionType, IncDecActionType } from '../../../types';
-import { ICounter, OperationBetweenBaseAndAdditionType } from '../../../types/data-types';
+//types
+import type {
+  IChangeItemAdditionalSettingActionType,
+  IncDecActionType,
+  ICounter,
+  OperationBetweenBaseAndAdditionType,
+} from '../../../types';
 
 interface ICounterWithAdditionalValueWrapProps {
   UNID: string;

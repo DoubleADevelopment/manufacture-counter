@@ -32,12 +32,8 @@ const AppRoutingLayout = (props: IAppRoutingLayoutProps): JSX.Element => {
           <CounterPage
             backLink={`/${packageData.dataPackageName}`}
             headerTitle={packageData.packageCounterTitle}
-            SelectorCheckIfElementExistsByUNID={Selectors.SelectorCheckIfElementExistsByUNID}
-            SelectorGetCurrentItemData={Selectors.SelectorGetItemData}
-            clearItemDataAction={Actions.clearItemDataAction}
-            incrementAction={Actions.incrementAction}
-            decrementAction={Actions.decrementAction}
-            changeItemAdditionalSettingAction={Actions.changeItemAdditionalSettingAction}
+            Selectors={Selectors}
+            Actions={Actions}
           />
         }
       />
