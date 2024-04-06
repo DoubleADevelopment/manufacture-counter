@@ -1,12 +1,3 @@
-//componentsList type we use in main page for show all components in overview page
-// interface IComponentData {
-//   title: string;
-//   link: string;
-//   image: string;
-// }
-
-// type ComponentsDataListType = IComponentData[];
-
 //card type we use inside a card components
 interface IItemDataToDisplay {
   UNID: string;
