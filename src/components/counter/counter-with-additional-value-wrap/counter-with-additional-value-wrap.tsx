@@ -15,7 +15,7 @@ interface ICounterWithAdditionalValueWrapProps {
   counter: ICounter;
   incrementAction: IncDecActionType;
   decrementAction: IncDecActionType;
-  changeItemAdditionalSettingAction?: IChangeItemAdditionalSettingActionType;
+  changeItemAdditionalSettingAction: IChangeItemAdditionalSettingActionType;
 }
 
 const CounterWithAdditionalValueWrap = ({
@@ -64,22 +64,13 @@ const CounterWithAdditionalValueWrap = ({
   };
 
   const changeContainerSetting = (value: number) => {
-    if (
-      value !== counter.counterAdditionalValue &&
-      typeof changeItemAdditionalSettingAction === 'function'
-    ) {
-      dispatch(
-        changeItemAdditionalSettingAction({
-          UNID: UNID,
-          counterName: counter.counterSystemName,
-          newSettingValue: value,
-        }),
-      );
-    } else {
-      console.log(
-        'function changeContainerSetting can run because changeItemAdditionalSettingAction method is absent.',
-      );
-    }
+    dispatch(
+      changeItemAdditionalSettingAction({
+        UNID: UNID,
+        counterName: counter.counterSystemName,
+        newSettingValue: value,
+      }),
+    );
   };
 
   return (
