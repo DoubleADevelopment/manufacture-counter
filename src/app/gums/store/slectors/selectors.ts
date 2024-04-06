@@ -2,10 +2,11 @@
 import gumsRepository from '../../repository/gums-repository';
 //selector builder
 import SelectorBuilder from '../../../../store/selector-builder';
+//types
+import type { ISelectors } from '../../../../types';
 
 const packageName = gumsRepository.getPackageData().dataPackageName;
 
-const { SelectorGetData, SelectorGetItemData, SelectorCheckIfElementExistsByUNID } =
-  SelectorBuilder(packageName);
+const Selectors: ISelectors = SelectorBuilder(packageName);
 
-export { SelectorGetData, SelectorGetItemData, SelectorCheckIfElementExistsByUNID };
+export default Selectors;

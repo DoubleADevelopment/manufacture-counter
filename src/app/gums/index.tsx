@@ -1,11 +1,7 @@
 //layout
 import { AppRoutingLayout } from '../../layouts';
 //store
-import {
-  SelectorCheckIfElementExistsByUNID,
-  SelectorGetItemData,
-  SelectorGetData,
-} from './store/slectors/selectors';
+import Selectors from './store/slectors/selectors';
 import {
   clearItemDataAction,
   decrementAction,
@@ -19,9 +15,7 @@ const GumsApp = (): JSX.Element => {
   return (
     <AppRoutingLayout
       repository={gumsRepository}
-      SelectorGetData={SelectorGetData}
-      SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
-      SelectorGetItemData={SelectorGetItemData}
+      Selectors={Selectors}
       clearItemDataAction={clearItemDataAction}
       incrementAction={incrementAction}
       decrementAction={decrementAction}

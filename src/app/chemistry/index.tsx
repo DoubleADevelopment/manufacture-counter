@@ -1,11 +1,7 @@
 //layout
 import { AppRoutingLayout } from '../../layouts';
 //state
-import {
-  SelectorCheckIfElementExistsByUNID,
-  SelectorGetData,
-  SelectorGetItemData,
-} from './store/slectors/selectors';
+import Selectors from './store/slectors/selectors';
 import {
   clearItemDataAction,
   decrementAction,
@@ -19,9 +15,7 @@ const ChemistryApp = (): JSX.Element => {
   return (
     <AppRoutingLayout
       repository={chemistryRepository}
-      SelectorGetData={SelectorGetData}
-      SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
-      SelectorGetItemData={SelectorGetItemData}
+      Selectors={Selectors}
       clearItemDataAction={clearItemDataAction}
       incrementAction={incrementAction}
       decrementAction={decrementAction}

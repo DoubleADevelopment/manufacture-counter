@@ -1,6 +1,7 @@
-import { RootState, IData, IItemData } from '../types';
+//types
+import type { RootState, IData, IItemData, ISelectors } from '../types';
 
-const SelectorBuilder = (packageName: string) => {
+const SelectorBuilder = (packageName: string): ISelectors => {
   return {
     SelectorGetData:
       () =>

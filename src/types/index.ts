@@ -31,6 +31,7 @@ import {
   ISelectorGetData,
   ISelectorGetItemData,
   ISelectorCheckIfElementExistsByUNID,
+  ISelectors,
 } from './selector-types';
 
 export type {
@@ -67,4 +68,5 @@ export type {
   IAdditionalNavItem,
   IChangeItemAdditionalSettingActionPayload,
   IState,
+  ISelectors,
 };

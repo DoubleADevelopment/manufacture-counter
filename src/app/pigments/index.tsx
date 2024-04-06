@@ -1,11 +1,7 @@
 //layout
 import { AppRoutingLayout } from '../../layouts';
 //store
-import {
-  SelectorCheckIfElementExistsByUNID,
-  SelectorGetItemData,
-  SelectorGetData,
-} from './store/slectors/selectors';
+import Selectors from './store/slectors/selectors';
 import {
   changeItemAdditionalSettingAction,
   clearItemDataAction,
@@ -19,9 +15,7 @@ const PigmentsApp = (): JSX.Element => {
   return (
     <AppRoutingLayout
       repository={pigmentsRepository}
-      SelectorGetData={SelectorGetData}
-      SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
-      SelectorGetItemData={SelectorGetItemData}
+      Selectors={Selectors}
       clearItemDataAction={clearItemDataAction}
       incrementAction={incrementAction}
       decrementAction={decrementAction}

@@ -1,21 +1,18 @@
 import { Route, Routes } from 'react-router-dom';
 //pages
 import { ComponentRootPage, CounterPage } from '../../pages';
-import {
+//types
+import type {
   ClearItemDataActionType,
   IChangeItemAdditionalSettingActionType,
   IncDecActionType,
   IRepository,
-  ISelectorCheckIfElementExistsByUNID,
-  ISelectorGetData,
-  ISelectorGetItemData,
+  ISelectors,
 } from '../../types';
 
 interface IAppRoutingLayoutProps {
   repository: IRepository;
-  SelectorGetData: ISelectorGetData;
-  SelectorCheckIfElementExistsByUNID: ISelectorCheckIfElementExistsByUNID;
-  SelectorGetItemData: ISelectorGetItemData;
+  Selectors: ISelectors;
   clearItemDataAction: ClearItemDataActionType;
   incrementAction: IncDecActionType;
   decrementAction: IncDecActionType;
@@ -25,9 +22,7 @@ interface IAppRoutingLayoutProps {
 const AppRoutingLayout = (props: IAppRoutingLayoutProps): JSX.Element => {
   const {
     repository,
-    SelectorGetData,
-    SelectorCheckIfElementExistsByUNID,
-    SelectorGetItemData,
+    Selectors,
     clearItemDataAction,
     incrementAction,
     decrementAction,
@@ -41,7 +36,7 @@ const AppRoutingLayout = (props: IAppRoutingLayoutProps): JSX.Element => {
         index
         element={
           <ComponentRootPage
-            SelectorGetComponentState={SelectorGetData}
+            SelectorGetComponentState={Selectors.SelectorGetData}
             headerTitle={packageData.packageTitle}
           />
         }
@@ -53,8 +48,8 @@ const AppRoutingLayout = (props: IAppRoutingLayoutProps): JSX.Element => {
           <CounterPage
             backLink={`/${packageData.dataPackageName}`}
             headerTitle={packageData.packageCounterTitle}
-            SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
-            SelectorGetCurrentItemData={SelectorGetItemData}
+            SelectorCheckIfElementExistsByUNID={Selectors.SelectorCheckIfElementExistsByUNID}
+            SelectorGetCurrentItemData={Selectors.SelectorGetItemData}
             clearItemDataAction={clearItemDataAction}
             incrementAction={incrementAction}
             decrementAction={decrementAction}
