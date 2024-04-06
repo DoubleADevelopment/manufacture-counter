@@ -15,7 +15,6 @@ const CountersSetting = (): JSX.Element => {
   const dispatch = useAppDispatch();
 
   const onClearAppsDataClickHandler = () => {
-    console.log('clear');
     dispatch(clearDataActionChemistry());
     dispatch(clearDataActionGums());
     dispatch(clearDataActionPigments());
