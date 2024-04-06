@@ -7,15 +7,15 @@ import type {
   IChangeItemAdditionalSettingActionType,
   IncDecActionType,
   ICounter,
-  OperationBetweenBaseAndAdditionType,
 } from '../../../types';
+import { calculateWithOperator } from '../../../utils/utils';
 
 interface ICounterWithAdditionalValueWrapProps {
   UNID: string;
   counter: ICounter;
   incrementAction: IncDecActionType;
   decrementAction: IncDecActionType;
-  changeItemAdditionalSettingAction?: IChangeItemAdditionalSettingActionType;
+  changeItemAdditionalSettingAction: IChangeItemAdditionalSettingActionType;
 }
 
 const CounterWithAdditionalValueWrap = ({
@@ -26,41 +26,6 @@ const CounterWithAdditionalValueWrap = ({
   changeItemAdditionalSettingAction,
 }: ICounterWithAdditionalValueWrapProps): JSX.Element => {
   const dispatch = useAppDispatch();
-
-  const calculateWithOperator = (
-    value: number,
-    additionalValue: number,
-    operator: OperationBetweenBaseAndAdditionType,
-    operation: '+' | '-',
-  ) => {
-    switch (operator) {
-      case 'subtraction':
-        return {
-          valueToAdd: value - additionalValue,
-          logText: `${operation}${value - additionalValue} (${value} - ${additionalValue})`,
-        };
-      case 'addition':
-        return {
-          valueToAdd: value + additionalValue,
-          logText: `${operation}${value + additionalValue} (${value} + ${additionalValue})`,
-        };
-      case 'multiplication':
-        return {
-          valueToAdd: value * additionalValue,
-          logText: `${operation}${value * additionalValue} (${value} * ${additionalValue})`,
-        };
-      case 'division':
-        return {
-          valueToAdd: value / additionalValue,
-          logText: `${operation}${value / additionalValue} (${value} / ${additionalValue})`,
-        };
-      case 'none':
-        return {
-          valueToAdd: value,
-          logText: `${operation}${value}`,
-        };
-    }
-  };
 
   const inc = (value: number, additionalValue: number): void => {
     const calculateResult = calculateWithOperator(
@@ -99,22 +64,13 @@ const CounterWithAdditionalValueWrap = ({
   };
 
   const changeContainerSetting = (value: number) => {
-    if (
-      value !== counter.counterAdditionalValue &&
-      typeof changeItemAdditionalSettingAction === 'function'
-    ) {
-      dispatch(
-        changeItemAdditionalSettingAction({
-          UNID: UNID,
-          counterName: counter.counterSystemName,
-          newSettingValue: value,
-        }),
-      );
-    } else {
-      console.log(
-        'function changeContainerSetting can run because changeItemAdditionalSettingAction method is absent.',
-      );
-    }
+    dispatch(
+      changeItemAdditionalSettingAction({
+        UNID: UNID,
+        counterName: counter.counterSystemName,
+        newSettingValue: value,
+      }),
+    );
   };
 
   return (

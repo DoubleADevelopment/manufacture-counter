@@ -21,11 +21,25 @@ const BasicCounterWrap = ({
   const dispatch = useAppDispatch();
 
   const inc = (value: number): void => {
-    dispatch(incrementAction({ UNID: UNID, value: value, counterName: counter.counterSystemName }));
+    dispatch(
+      incrementAction({
+        UNID: UNID,
+        value: value,
+        counterName: counter.counterSystemName,
+        logText: `+${value}`,
+      }),
+    );
   };
 
   const dec = (value: number): void => {
-    dispatch(decrementAction({ UNID: UNID, value: value, counterName: counter.counterSystemName }));
+    dispatch(
+      decrementAction({
+        UNID: UNID,
+        value: value,
+        counterName: counter.counterSystemName,
+        logText: `-${value}`,
+      }),
+    );
   };
 
   return (

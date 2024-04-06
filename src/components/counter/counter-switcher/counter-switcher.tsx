@@ -25,7 +25,7 @@ interface ICounterSwitcherProps {
   UNID: string;
   incrementAction: IncDecActionType;
   decrementAction: IncDecActionType;
-  changeItemAdditionalSettingAction?: IChangeItemAdditionalSettingActionType;
+  changeItemAdditionalSettingAction: IChangeItemAdditionalSettingActionType;
   SelectorGetItemData: ISelectorGetItemData;
 }
 
