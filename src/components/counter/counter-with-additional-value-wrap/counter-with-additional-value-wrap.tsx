@@ -7,8 +7,8 @@ import type {
   IChangeItemAdditionalSettingActionType,
   IncDecActionType,
   ICounter,
-  OperationBetweenBaseAndAdditionType,
 } from '../../../types';
+import { calculateWithOperator } from '../../../utils/utils';
 
 interface ICounterWithAdditionalValueWrapProps {
   UNID: string;
@@ -26,41 +26,6 @@ const CounterWithAdditionalValueWrap = ({
   changeItemAdditionalSettingAction,
 }: ICounterWithAdditionalValueWrapProps): JSX.Element => {
   const dispatch = useAppDispatch();
-
-  const calculateWithOperator = (
-    value: number,
-    additionalValue: number,
-    operator: OperationBetweenBaseAndAdditionType,
-    operation: '+' | '-',
-  ) => {
-    switch (operator) {
-      case 'subtraction':
-        return {
-          valueToAdd: value - additionalValue,
-          logText: `${operation}${value - additionalValue} (${value} - ${additionalValue})`,
-        };
-      case 'addition':
-        return {
-          valueToAdd: value + additionalValue,
-          logText: `${operation}${value + additionalValue} (${value} + ${additionalValue})`,
-        };
-      case 'multiplication':
-        return {
-          valueToAdd: value * additionalValue,
-          logText: `${operation}${value * additionalValue} (${value} * ${additionalValue})`,
-        };
-      case 'division':
-        return {
-          valueToAdd: value / additionalValue,
-          logText: `${operation}${value / additionalValue} (${value} / ${additionalValue})`,
-        };
-      case 'none':
-        return {
-          valueToAdd: value,
-          logText: `${operation}${value}`,
-        };
-    }
-  };
 
   const inc = (value: number, additionalValue: number): void => {
     const calculateResult = calculateWithOperator(

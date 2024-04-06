@@ -1,7 +1,7 @@
 //variables
 import { InputMessagesText, InputStatuses } from '../variables';
 //types
-import type { IInputValueValidate } from '../types';
+import type { IInputValueValidate, OperationBetweenBaseAndAdditionType } from '../types';
 
 const onEnterClickHandlerToElementBlur = (
   evt: any,
@@ -55,9 +55,45 @@ const formatDateToShortFormat = (milliseconds: string): string => {
   return transformedDate;
 };
 
+const calculateWithOperator = (
+  value: number,
+  additionalValue: number,
+  operator: OperationBetweenBaseAndAdditionType,
+  operation: '+' | '-',
+) => {
+  switch (operator) {
+    case 'subtraction':
+      return {
+        valueToAdd: value - additionalValue,
+        logText: `${operation}${value - additionalValue} (${value} - ${additionalValue})`,
+      };
+    case 'addition':
+      return {
+        valueToAdd: value + additionalValue,
+        logText: `${operation}${value + additionalValue} (${value} + ${additionalValue})`,
+      };
+    case 'multiplication':
+      return {
+        valueToAdd: value * additionalValue,
+        logText: `${operation}${value * additionalValue} (${value} * ${additionalValue})`,
+      };
+    case 'division':
+      return {
+        valueToAdd: value / additionalValue,
+        logText: `${operation}${value / additionalValue} (${value} / ${additionalValue})`,
+      };
+    case 'none':
+      return {
+        valueToAdd: value,
+        logText: `${operation}${value}`,
+      };
+  }
+};
+
 export {
   onEnterClickHandlerToElementBlur,
   extractNumbers,
   inputValueValidate,
   formatDateToShortFormat,
+  calculateWithOperator,
 };
