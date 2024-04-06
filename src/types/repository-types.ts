@@ -1,10 +1,12 @@
 //types
-import type { IData, IItemData, IPackage } from './data-types';
+import type { IData, IItemData, IPackage, IState } from './data-types';
 
 interface IRepository {
   sendData(data: IData): IData | Error;
 
   getData(): IData;
+
+  getState(): IState;
 
   getPackageData(): IPackage;
 

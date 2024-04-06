@@ -1,7 +1,7 @@
 //services
 import { adapterService, localstorageService } from '../../services';
 //types
-import type { IData, IItemData, IPackage, IRepository } from '../../types';
+import type { IData, IItemData, IPackage, IRepository, IState } from '../../types';
 
 abstract class AbstractRepository implements IRepository {
   #defaultData: IData;
@@ -55,6 +55,18 @@ abstract class AbstractRepository implements IRepository {
     } else {
       return result;
     }
+  }
+
+  getState(): IState {
+    return {
+      dataPackageName: this.#packageData.dataPackageName,
+      dataPackageUNID: this.#packageData.dataPackageUNID,
+      dataStorageName: this.#packageData.dataStorageName,
+      packageTitle: this.#packageData.packageTitle,
+      packageCounterTitle: this.#packageData.packageCounterTitle,
+      packageImage: this.#packageData.packageImage,
+      items: this.getData(),
+    };
   }
 
   getPackageData(): IPackage {

@@ -1,11 +1,11 @@
 //componentsList type we use in main page for show all components in overview page
-interface IComponentData {
-  title: string;
-  link: string;
-  image: string;
-}
+// interface IComponentData {
+//   title: string;
+//   link: string;
+//   image: string;
+// }
 
-type ComponentsDataListType = IComponentData[];
+// type ComponentsDataListType = IComponentData[];
 
 //card type we use inside a card components
 interface IItemDataToDisplay {
@@ -45,15 +45,15 @@ interface IData {
   [key: string]: IItemData;
 }
 
-// interface IState {
-//   dataPackageName: string;
-//   dataPackageUNID: number;
-//   dataStorageName: string;
-//   packageTitle: string;
-//   packageCounterTitle: string;
-//   packageImage: string;
-//   items: IData;
-// }
+interface IState {
+  dataPackageName: string;
+  dataPackageUNID: number;
+  dataStorageName: string;
+  packageTitle: string;
+  packageCounterTitle: string;
+  packageImage: string;
+  items: IData;
+}
 
 interface IPackage {
   dataPackageName: string;
@@ -93,8 +93,6 @@ interface ICounters {
 }
 
 export type {
-  IComponentData,
-  ComponentsDataListType,
   IItemDataToDisplay,
   ItemsDataToDisplayListType,
   IItemData,
@@ -104,4 +102,5 @@ export type {
   ICounters,
   OperationBetweenBaseAndAdditionType,
   CountersType,
+  IState,
 };

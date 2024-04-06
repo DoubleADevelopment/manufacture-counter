@@ -1,7 +1,7 @@
 //components
 import { ComponentsList } from '../../components';
-//data
-import { componentsListData } from '../../data/components-list-data';
+//store
+import { store } from '../../store/store';
 //layouts
 import { PageWithMenuLayout } from '../../layouts';
 //variables
@@ -10,10 +10,12 @@ import { AppRouting } from '../../variables';
 import style from './main-page.module.scss';
 
 const MainPage = (): JSX.Element => {
+  const reduxStateArray = Object.values(store.getState());
+
   return (
     <PageWithMenuLayout headerTitle={AppRouting.ROOT.title}>
       <main className={style['main-page']}>
-        <ComponentsList dataList={componentsListData} />
+        <ComponentsList dataList={reduxStateArray} />
       </main>
     </PageWithMenuLayout>
   );

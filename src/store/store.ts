@@ -10,6 +10,7 @@ import gumsRepository from '../app/gums/repository/gums-repository';
 import pigmentsRepository from '../app/pigments/repository/pigments-repository';
 import suppliesRepository from '../app/supplies/repository/supplies-repository';
 
+//packages names
 const chemistryPackageName = chemistryRepository.getPackageData().dataPackageName;
 const gumsPackageName = gumsRepository.getPackageData().dataPackageName;
 const pigmentsPackageName = pigmentsRepository.getPackageData().dataPackageName;

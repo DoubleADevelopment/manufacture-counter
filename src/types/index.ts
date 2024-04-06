@@ -1,8 +1,6 @@
 import type { IAbstractAdapterService, ILocalstorageService } from './services-types';
 import type { IRepository } from './repository-types';
 import type {
-  IComponentData,
-  ComponentsDataListType,
   ItemsDataToDisplayListType,
   IItemDataToDisplay,
   IItemData,
@@ -12,6 +10,7 @@ import type {
   ICounter,
   ICounters,
   OperationBetweenBaseAndAdditionType,
+  IState,
 } from './data-types';
 import type { IRouteItem } from './routing-types';
 import type {
@@ -44,8 +43,6 @@ export type {
   AppThunk,
   IIconProps,
   ISetActiveLink,
-  ComponentsDataListType,
-  IComponentData,
   IRouteItem,
   ItemsDataToDisplayListType,
   IItemDataToDisplay,
@@ -69,4 +66,5 @@ export type {
   IChangeItemAdditionalSettingActionType,
   IAdditionalNavItem,
   IChangeItemAdditionalSettingActionPayload,
+  IState,
 };

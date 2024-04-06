@@ -3,12 +3,12 @@ import type {
   AppThunk,
   IChangeItemAdditionalSettingActionPayload,
   IClearItemActionPayload,
-  IData,
   IIncDecActionPayload,
   IRepository,
+  IState,
 } from '../types';
 
-const ActionsBuilder = (repository: IRepository, Slice: Slice<IData>) => {
+const ActionsBuilder = (repository: IRepository, Slice: Slice<IState>) => {
   const packageName = repository.getPackageData().dataPackageName;
 
   const { increment, decrement, log, clearItem, clearData, changeItemAdditionalSetting } =
@@ -27,7 +27,7 @@ const ActionsBuilder = (repository: IRepository, Slice: Slice<IData>) => {
         };
 
         dispatch(log(newLog));
-        repository.sendData(getState()[packageName]);
+        repository.sendData(getState()[packageName].items);
       },
 
     decrementAction:
@@ -42,7 +42,7 @@ const ActionsBuilder = (repository: IRepository, Slice: Slice<IData>) => {
         };
 
         dispatch(log(newLog));
-        repository.sendData(getState()[packageName]);
+        repository.sendData(getState()[packageName].items);
       },
 
     clearItemDataAction:
@@ -51,7 +51,7 @@ const ActionsBuilder = (repository: IRepository, Slice: Slice<IData>) => {
         const clearedItem = repository.getDefaultItemData(action.item.UNID);
         dispatch(clearItem({ item: clearedItem }));
 
-        repository.sendData(getState()[packageName]);
+        repository.sendData(getState()[packageName].items);
       },
 
     clearDataAction: (): AppThunk => (dispatch) => {
@@ -65,7 +65,7 @@ const ActionsBuilder = (repository: IRepository, Slice: Slice<IData>) => {
       (action: IChangeItemAdditionalSettingActionPayload): AppThunk =>
       (dispatch, getState) => {
         dispatch(changeItemAdditionalSetting(action));
-        repository.sendData(getState()[packageName]);
+        repository.sendData(getState()[packageName].items);
       },
   };
 };
