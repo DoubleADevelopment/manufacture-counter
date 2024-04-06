@@ -1,6 +1,6 @@
-//types
 import { Link } from 'react-router-dom';
-import { IState } from '../../../types';
+//types
+import type { IState } from '../../../types';
 //styles
 import style from './components-list-item.module.scss';
 

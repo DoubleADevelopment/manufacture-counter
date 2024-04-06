@@ -1,18 +1,15 @@
 //components
 import ComponentsListItem from './components-list-item/components-list-item';
-//types
-import { IState } from '../../types';
+//store
+import { store } from '../../store/store';
 //styles
 import style from './components-list.module.scss';
 
-interface IComponentsListProps {
-  dataList: IState[];
-}
-
-const ComponentsList = ({ dataList }: IComponentsListProps): JSX.Element => {
+const ComponentsList = (): JSX.Element => {
+  const reduxStateArray = Object.values(store.getState());
   return (
     <ul className={style['components-list']}>
-      {dataList.map((item) => {
+      {reduxStateArray.map((item) => {
         return <ComponentsListItem item={item} key={item.dataPackageUNID} />;
       })}
     </ul>
