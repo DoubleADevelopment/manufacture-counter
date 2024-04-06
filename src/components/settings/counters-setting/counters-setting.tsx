@@ -1,8 +1,8 @@
 //store
-import { clearDataAction as clearDataActionChemistry } from '../../../app/chemistry/store/actions/actions';
-import { clearDataAction as clearDataActionGums } from '../../../app/gums/store/actions/actions';
-import { clearDataAction as clearDataActionPigments } from '../../../app/pigments/store/actions/actions';
-import { clearDataAction as clearDataActionSupplies } from '../../../app/supplies/store/actions/actions';
+import ActionsChemistry from '../../../app/chemistry/store/actions/actions';
+import ActionsGums from '../../../app/gums/store/actions/actions';
+import ActionsPigments from '../../../app/pigments/store/actions/actions';
+import ActionsSupplies from '../../../app/supplies/store/actions/actions';
 import { useAppDispatch } from '../../../hooks/hooks';
 //components
 import { ButtonDeleteWithConfirm } from '../../buttons';
@@ -15,11 +15,10 @@ const CountersSetting = (): JSX.Element => {
   const dispatch = useAppDispatch();
 
   const onClearAppsDataClickHandler = () => {
-    console.log('clear');
-    dispatch(clearDataActionChemistry());
-    dispatch(clearDataActionGums());
-    dispatch(clearDataActionPigments());
-    dispatch(clearDataActionSupplies());
+    dispatch(ActionsChemistry.clearDataAction());
+    dispatch(ActionsGums.clearDataAction());
+    dispatch(ActionsPigments.clearDataAction());
+    dispatch(ActionsSupplies.clearDataAction());
   };
 
   return (

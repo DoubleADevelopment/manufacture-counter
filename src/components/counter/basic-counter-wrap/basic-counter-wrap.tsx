@@ -2,9 +2,8 @@
 import { BasicCounter } from '../../';
 //store
 import { useAppDispatch } from '../../../hooks/hooks';
-import { IncDecActionType } from '../../../types';
 //types
-import { ICounter } from '../../../types/data-types';
+import type { ICounter, IncDecActionType } from '../../../types';
 
 interface IBasicCounterWrapProps {
   UNID: string;

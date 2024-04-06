@@ -12,4 +12,15 @@ interface ISelectorCheckIfElementExistsByUNID {
   (UNID: string | undefined): (state: RootState) => boolean;
 }
 
-export type { ISelectorGetData, ISelectorGetItemData, ISelectorCheckIfElementExistsByUNID };
+interface ISelectors {
+  SelectorGetData: ISelectorGetData;
+  SelectorGetItemData: ISelectorGetItemData;
+  SelectorCheckIfElementExistsByUNID: ISelectorCheckIfElementExistsByUNID;
+}
+
+export type {
+  ISelectorGetData,
+  ISelectorGetItemData,
+  ISelectorCheckIfElementExistsByUNID,
+  ISelectors,
+};

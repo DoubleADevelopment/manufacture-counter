@@ -1,38 +1,17 @@
 import { Route, Routes } from 'react-router-dom';
 //pages
 import { ComponentRootPage, CounterPage } from '../../pages';
-import {
-  ClearItemDataActionType,
-  IChangeItemAdditionalSettingActionType,
-  IncDecActionType,
-  IRepository,
-  ISelectorCheckIfElementExistsByUNID,
-  ISelectorGetData,
-  ISelectorGetItemData,
-} from '../../types';
+//types
+import type { IActions, IRepository, ISelectors } from '../../types';
 
 interface IAppRoutingLayoutProps {
   repository: IRepository;
-  SelectorGetData: ISelectorGetData;
-  SelectorCheckIfElementExistsByUNID: ISelectorCheckIfElementExistsByUNID;
-  SelectorGetItemData: ISelectorGetItemData;
-  clearItemDataAction: ClearItemDataActionType;
-  incrementAction: IncDecActionType;
-  decrementAction: IncDecActionType;
-  changeItemAdditionalSettingAction?: IChangeItemAdditionalSettingActionType;
+  Selectors: ISelectors;
+  Actions: IActions;
 }
 
 const AppRoutingLayout = (props: IAppRoutingLayoutProps): JSX.Element => {
-  const {
-    repository,
-    SelectorGetData,
-    SelectorCheckIfElementExistsByUNID,
-    SelectorGetItemData,
-    clearItemDataAction,
-    incrementAction,
-    decrementAction,
-    changeItemAdditionalSettingAction,
-  } = props;
+  const { repository, Selectors, Actions } = props;
   const packageData = repository.getPackageData();
 
   return (
@@ -41,7 +20,7 @@ const AppRoutingLayout = (props: IAppRoutingLayoutProps): JSX.Element => {
         index
         element={
           <ComponentRootPage
-            SelectorGetComponentState={SelectorGetData}
+            SelectorGetComponentState={Selectors.SelectorGetData}
             headerTitle={packageData.packageTitle}
           />
         }
@@ -53,12 +32,8 @@ const AppRoutingLayout = (props: IAppRoutingLayoutProps): JSX.Element => {
           <CounterPage
             backLink={`/${packageData.dataPackageName}`}
             headerTitle={packageData.packageCounterTitle}
-            SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
-            SelectorGetCurrentItemData={SelectorGetItemData}
-            clearItemDataAction={clearItemDataAction}
-            incrementAction={incrementAction}
-            decrementAction={decrementAction}
-            changeItemAdditionalSettingAction={changeItemAdditionalSettingAction}
+            Selectors={Selectors}
+            Actions={Actions}
           />
         }
       />

@@ -31,6 +31,14 @@ type IChangeItemAdditionalSettingActionType = (
   action: IChangeItemAdditionalSettingActionPayload,
 ) => AppThunk;
 
+interface IActions {
+  incrementAction: IncDecActionType;
+  decrementAction: IncDecActionType;
+  clearItemDataAction: ClearItemDataActionType;
+  clearDataAction: ClearDataActionType;
+  changeItemAdditionalSettingAction: IChangeItemAdditionalSettingActionType;
+}
+
 export type {
   IIncDecActionPayload,
   ILogActionPayload,
@@ -40,4 +48,5 @@ export type {
   ClearItemDataActionType,
   IncDecActionType,
   IChangeItemAdditionalSettingActionType,
+  IActions,
 };

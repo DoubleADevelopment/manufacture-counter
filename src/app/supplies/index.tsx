@@ -1,32 +1,14 @@
 //layout
 import { AppRoutingLayout } from '../../layouts';
 //store
-import {
-  SelectorCheckIfElementExistsByUNID,
-  SelectorGetItemData,
-  SelectorGetData,
-} from './store/slectors/selectors';
-import {
-  clearItemDataAction,
-  changeItemAdditionalSettingAction,
-  decrementAction,
-  incrementAction,
-} from './store/actions/actions';
+import Selectors from './store/slectors/selectors';
+import Actions from './store/actions/actions';
 //repository
 import suppliesRepository from './repository/supplies-repository';
 
 const SuppliesApp = (): JSX.Element => {
   return (
-    <AppRoutingLayout
-      repository={suppliesRepository}
-      SelectorGetData={SelectorGetData}
-      SelectorCheckIfElementExistsByUNID={SelectorCheckIfElementExistsByUNID}
-      SelectorGetItemData={SelectorGetItemData}
-      clearItemDataAction={clearItemDataAction}
-      incrementAction={incrementAction}
-      decrementAction={decrementAction}
-      changeItemAdditionalSettingAction={changeItemAdditionalSettingAction}
-    />
+    <AppRoutingLayout repository={suppliesRepository} Selectors={Selectors} Actions={Actions} />
   );
 };
 
