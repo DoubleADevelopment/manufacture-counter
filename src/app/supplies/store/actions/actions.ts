@@ -4,18 +4,6 @@ import suppliesRepository from '../../repository/supplies-repository';
 //actions builder
 import ActionsBuilder from '../../../../store/actions-builder';
 
-const {
-  incrementAction,
-  decrementAction,
-  clearItemDataAction,
-  clearDataAction,
-  changeItemAdditionalSettingAction,
-} = ActionsBuilder(suppliesRepository, suppliesSlice);
+const Actions = ActionsBuilder(suppliesRepository, suppliesSlice);
 
-export {
-  incrementAction,
-  decrementAction,
-  clearItemDataAction,
-  clearDataAction,
-  changeItemAdditionalSettingAction,
-};
+export default Actions;

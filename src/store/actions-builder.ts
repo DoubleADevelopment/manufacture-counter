@@ -1,6 +1,8 @@
 import { Slice } from '@reduxjs/toolkit';
+//types
 import type {
   AppThunk,
+  IActions,
   IChangeItemAdditionalSettingActionPayload,
   IClearItemActionPayload,
   IIncDecActionPayload,
@@ -8,7 +10,7 @@ import type {
   IState,
 } from '../types';
 
-const ActionsBuilder = (repository: IRepository, Slice: Slice<IState>) => {
+const ActionsBuilder = (repository: IRepository, Slice: Slice<IState>): IActions => {
   const packageName = repository.getPackageData().dataPackageName;
 
   const { increment, decrement, log, clearItem, clearData, changeItemAdditionalSetting } =
