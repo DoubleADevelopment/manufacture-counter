@@ -5,7 +5,7 @@ interface IIncDecActionPayload {
   UNID: string;
   value: number;
   counterName: string;
-  logText?: string;
+  logText: string;
 }
 
 interface IClearItemActionPayload {

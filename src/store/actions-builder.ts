@@ -23,7 +23,7 @@ const ActionsBuilder = (repository: IRepository, Slice: Slice<IState>): IActions
         dispatch(increment(action));
 
         const newLog = {
-          log: `+${action.value.toString()}`,
+          log: action.logText,
           counterName: action.counterName,
           UNID: action.UNID,
         };
@@ -38,7 +38,7 @@ const ActionsBuilder = (repository: IRepository, Slice: Slice<IState>): IActions
         dispatch(decrement(action));
 
         const newLog = {
-          log: `-${action.value.toString()}`,
+          log: action.logText,
           counterName: action.counterName,
           UNID: action.UNID,
         };
