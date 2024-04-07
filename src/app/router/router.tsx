@@ -6,11 +6,13 @@ import ChemistryApp from '../chemistry';
 import GumsApp from '../gums';
 import PigmentsApp from '../pigments';
 import SuppliesApp from '../supplies';
+import BigbagsApp from '../bigbags';
 //apps repository
 import chemistryRepository from '../chemistry/repository/chemistry-repository';
 import gumsRepository from '../gums/repository/gums-repository';
 import suppliesRepository from '../supplies/repository/supplies-repository';
 import pigmentsRepository from '../pigments/repository/pigments-repository';
+import bigbagsRepository from '../bigbags/repository/bigbags-repository';
 //variables
 import { AppRouting, rootBaseName } from '../../variables';
 
@@ -19,6 +21,7 @@ const Router = (): JSX.Element => {
   const gumsRootPath = gumsRepository.getPackageData().dataPackageName;
   const suppliesRootPath = suppliesRepository.getPackageData().dataPackageName;
   const pigmentsRootPath = pigmentsRepository.getPackageData().dataPackageName;
+  const bigbagsRootPath = bigbagsRepository.getPackageData().dataPackageName;
 
   return (
     <BrowserRouter basename={rootBaseName}>
@@ -35,6 +38,7 @@ const Router = (): JSX.Element => {
         <Route path={`${gumsRootPath}/*`} element={<GumsApp />} />
         <Route path={`${pigmentsRootPath}/*`} element={<PigmentsApp />} />
         <Route path={`${suppliesRootPath}/*`} element={<SuppliesApp />} />
+        <Route path={`${bigbagsRootPath}/*`} element={<BigbagsApp />} />
       </Routes>
     </BrowserRouter>
   );

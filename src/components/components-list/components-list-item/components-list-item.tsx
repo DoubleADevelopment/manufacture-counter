@@ -11,9 +11,7 @@ interface ICountersListItemProps {
 const ComponentsListItem = ({ item }: ICountersListItemProps): JSX.Element => {
   return (
     <li className={`${style['components-list-item']} unselectable`}>
-      <h3 className={`${style['components-list-item__title']} heading-medium content-primary-b`}>
-        {item.packageTitle}
-      </h3>
+      <h3 className={`heading-medium content-primary-a`}>{item.packageTitle}</h3>
       <img className={style['components-list-item__image']} src={item.packageImage} alt="" />
       <Link className={style['components-list-item__link']} to={item.dataPackageName}>
         <span className="visually-hidden">{item.packageTitle}</span>
