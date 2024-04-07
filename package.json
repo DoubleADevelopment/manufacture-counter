@@ -1,7 +1,7 @@
 {
   "name": "aluplast-component-counter",
   "homepage": "https://antonoshurek.github.io/component-counter/",
-  "version": "0.9.5",
+  "version": "1.0.0",
   "private": false,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
