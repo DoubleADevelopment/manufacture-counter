@@ -9,8 +9,7 @@ const bigbagsData: IPackage = {
   dataStorageName: 'gums-data-3001',
   packageTitle: 'Uszczelka',
   packageCounterTitle: 'Licznik gumy',
-  packageImage:
-    'https://media.istockphoto.com/id/1221227912/pl/zdj%C4%99cie/granulki-z-czarnej-gumy.jpg?s=612x612&w=is&k=20&c=BDCbsa8HfJpGgPErJtdesdVwAA7vJCu_kZchYSGVaIE=',
+  packageImage: `${rootBaseName}/images/bigbags/big-bag.webp`,
   items: [
     {
       UNID: 'gums-ALFA-PVC-794125',
@@ -20,7 +19,7 @@ const bigbagsData: IPackage = {
       systemCode: '794125',
       description: 'kolor etykiety niebieski, 500kg',
       additionalInfo: '',
-      image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
+      image: `${rootBaseName}/images/bigbags/big-bag.webp`,
       color: '#2181FC',
       counters: {
         CONTAINERS: {
