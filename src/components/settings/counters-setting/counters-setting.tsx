@@ -3,6 +3,7 @@ import ActionsChemistry from '../../../app/chemistry/store/actions/actions';
 import ActionsGums from '../../../app/gums/store/actions/actions';
 import ActionsPigments from '../../../app/pigments/store/actions/actions';
 import ActionsSupplies from '../../../app/supplies/store/actions/actions';
+import ActionsBigbags from '../../../app/bigbags/store/actions/actions';
 import { useAppDispatch } from '../../../hooks/hooks';
 //components
 import { ButtonDeleteWithConfirm } from '../../buttons';
@@ -19,6 +20,7 @@ const CountersSetting = (): JSX.Element => {
     dispatch(ActionsGums.clearDataAction());
     dispatch(ActionsPigments.clearDataAction());
     dispatch(ActionsSupplies.clearDataAction());
+    dispatch(ActionsBigbags.clearDataAction());
   };
 
   return (
