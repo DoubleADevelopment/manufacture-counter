@@ -1,5 +1,5 @@
 //types
-import type { RootState, IData, IItemData, ISelectors } from '../types';
+import type { RootState, IData, IItemData, ISelectors } from '../../types';
 
 const SelectorBuilder = (packageName: string): ISelectors => {
   return {

@@ -8,7 +8,7 @@ import type {
   IIncDecActionPayload,
   IRepository,
   IState,
-} from '../types';
+} from '../../types';
 
 const ActionsBuilder = (repository: IRepository, Slice: Slice<IState>): IActions => {
   const packageName = repository.getPackageData().dataPackageName;
