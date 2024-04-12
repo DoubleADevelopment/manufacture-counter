@@ -1,7 +1,7 @@
 //layouts
 import { PageWithMenuLayout } from '../../layouts';
 //component
-import { AppSetting, CountersSetting } from '../../components/';
+import { OverviewSetting, CountersSetting } from '../../components/';
 //variables
 import { AppRouting } from '../../variables';
 //styles
@@ -12,7 +12,7 @@ const SettingsPage = (): JSX.Element => {
     <PageWithMenuLayout headerTitle={AppRouting.SETTINGS.title}>
       <main className={style['settings-page']}>
         <CountersSetting />
-        <AppSetting />
+        <OverviewSetting />
       </main>
     </PageWithMenuLayout>
   );

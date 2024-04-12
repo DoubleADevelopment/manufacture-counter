@@ -27,7 +27,7 @@ import {
   CounterWithAdditionalValueWrap,
 } from './counter';
 import AdditionalNav from './additional-nav/additional-nav';
-import { AppSetting, CountersSetting } from './settings';
+import { OverviewSetting, CountersSetting } from './settings';
 import InfoAboutApp from './info-about-app/info-about-app';
 import ComponentOverview from './component-overview/component-overview';
 import LogItem from './log-item/log-item';
@@ -69,6 +69,6 @@ export {
   BasicCounterWrap,
   CounterWithAdditionalValueWrap,
   CounterSwitcher,
-  AppSetting,
+  OverviewSetting,
   Switcher,
 };

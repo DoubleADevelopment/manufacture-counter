@@ -7,7 +7,7 @@ import { useAppSelector } from '../../../hooks/hooks';
 import { SelectorGetOverviewPanelStatus } from '../../../store/app-selectors';
 import { Switcher } from '../../';
 
-const AppSetting = (): JSX.Element => {
+const OverviewSetting = (): JSX.Element => {
   const [overviewPanelStatus, setOverviewPanelStatus] = useState<overviewPanelStatusType>(
     useAppSelector(SelectorGetOverviewPanelStatus()),
   );
@@ -34,4 +34,4 @@ const AppSetting = (): JSX.Element => {
   );
 };
 
-export default AppSetting;
+export default OverviewSetting;
