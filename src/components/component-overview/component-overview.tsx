@@ -2,14 +2,15 @@ import { useState } from 'react';
 //components
 import ComponentOverviewList from './component-overview-list/component-overview-list';
 import { ButtonWithIcon } from '../';
+//store
+import { SelectorGetOverviewPanelStatus } from '../../store/app-selectors';
+import { useAppSelector } from '../../hooks/hooks';
 //styles
 import style from './component-overview.module.scss';
 //icons
 import { ArrowDownIcon, ArrowUpIcon } from '../../icons';
 //types
 import type { ItemsDataToDisplayListType, overviewPanelStatusType } from '../../types';
-import { useAppSelector } from '../../hooks/hooks';
-import { SelectorGetOverviewPanelStatus } from '../../store/app-selectors';
 
 interface IComponentOverviewProps {
   data: ItemsDataToDisplayListType;

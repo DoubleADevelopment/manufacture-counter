@@ -1,5 +1,6 @@
-import { AppThunk, IChangeOverviewPanelStatus } from '../types';
-
+//types
+import type { AppThunk, IChangeOverviewPanelStatus } from '../types';
+//slice
 import AppSlice from './app-slice';
 
 const changeOverviewPanelStatus =

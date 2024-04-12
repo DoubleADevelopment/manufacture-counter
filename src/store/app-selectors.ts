@@ -1,4 +1,5 @@
-import { overviewPanelStatusType, RootState } from '../types';
+//types
+import type { overviewPanelStatusType, RootState } from '../types';
 
 const SelectorGetOverviewPanelStatus =
   () =>
