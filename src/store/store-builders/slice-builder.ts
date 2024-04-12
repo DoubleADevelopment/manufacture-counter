@@ -8,7 +8,7 @@ import type {
   IIncDecActionPayload,
   ILogActionPayload,
   IState,
-} from '../types';
+} from '../../types';
 
 interface ISliceBuilderParams {
   repository: IRepository;

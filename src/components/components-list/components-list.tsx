@@ -6,7 +6,7 @@ import { store } from '../../store/store';
 import style from './components-list.module.scss';
 
 const ComponentsList = (): JSX.Element => {
-  const reduxStateArray = Object.values(store.getState());
+  const reduxStateArray = Object.values(store.getState().packages);
   return (
     <ul className={style['components-list']}>
       {reduxStateArray.map((item) => {

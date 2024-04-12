@@ -1,4 +1,4 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
 //slice
 import chemistrySlice from '../app/chemistry/store/slice/slice';
 import gumsSlice from '../app/gums/store/slice/slice';
@@ -12,6 +12,9 @@ import pigmentsRepository from '../app/pigments/repository/pigments-repository';
 import suppliesRepository from '../app/supplies/repository/supplies-repository';
 import bigbagsRepository from '../app/bigbags/repository/bigbags-repository';
 
+//app slice
+import AppSlice from './app-slice';
+
 //packages names
 const chemistryPackageName = chemistryRepository.getPackageData().dataPackageName;
 const gumsPackageName = gumsRepository.getPackageData().dataPackageName;
@@ -19,12 +22,17 @@ const pigmentsPackageName = pigmentsRepository.getPackageData().dataPackageName;
 const suppliesPackageName = suppliesRepository.getPackageData().dataPackageName;
 const bigbagsPackageName = bigbagsRepository.getPackageData().dataPackageName;
 
-export const store = configureStore({
-  reducer: {
+const rootReducer = combineReducers({
+  app: AppSlice.reducer,
+  packages: combineReducers({
     [chemistryPackageName]: chemistrySlice,
     [gumsPackageName]: gumsSlice,
     [pigmentsPackageName]: pigmentsSlice,
     [suppliesPackageName]: suppliesSlice,
     [bigbagsPackageName]: bigbagsSlice,
-  },
+  }),
+});
+
+export const store = configureStore({
+  reducer: rootReducer,
 });

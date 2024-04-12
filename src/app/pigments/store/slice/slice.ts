@@ -1,5 +1,5 @@
 //slice builder
-import SliceBuilder from '../../../../store/slice-builder';
+import SliceBuilder from '../../../../store/store-builders/slice-builder';
 //repository
 import pigmentsRepository from '../../repository/pigments-repository';
 

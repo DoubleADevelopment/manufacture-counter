@@ -1,3 +1,4 @@
+import { overviewPanelStatusType } from './app-types';
 import { IItemData } from './data-types';
 import { AppThunk } from './store-types';
 
@@ -39,6 +40,10 @@ interface IActions {
   changeItemAdditionalSettingAction: IChangeItemAdditionalSettingActionType;
 }
 
+interface IChangeOverviewPanelStatus {
+  newStatus: overviewPanelStatusType;
+}
+
 export type {
   IIncDecActionPayload,
   ILogActionPayload,
@@ -49,4 +54,5 @@ export type {
   IncDecActionType,
   IChangeItemAdditionalSettingActionType,
   IActions,
+  IChangeOverviewPanelStatus,
 };
