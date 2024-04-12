@@ -12,7 +12,7 @@ import { AppRouting } from '../../variables';
 import style from './components-overview-page.module.scss';
 
 const ComponentOverviewPage = (): JSX.Element => {
-  const reduxStateArray = Object.values(store.getState());
+  const reduxStateArray = Object.values(store.getState().packages);
 
   return (
     <PageWithMenuLayout headerTitle={AppRouting.COMPONENTS_OVERVIEW.title}>

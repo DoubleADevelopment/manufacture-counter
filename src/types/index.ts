@@ -23,6 +23,7 @@ import type {
   IChangeItemAdditionalSettingActionType,
   IChangeItemAdditionalSettingActionPayload,
   IActions,
+  IChangeOverviewOpenStatus,
 } from './action-types';
 import { AppDispatch, RootState, AppThunk } from './store-types';
 import { ISetActiveLink, IButtonProps, IAdditionalNavItem } from './other-types';
@@ -71,4 +72,5 @@ export type {
   IState,
   ISelectors,
   IActions,
+  IChangeOverviewOpenStatus,
 };

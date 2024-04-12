@@ -39,6 +39,10 @@ interface IActions {
   changeItemAdditionalSettingAction: IChangeItemAdditionalSettingActionType;
 }
 
+interface IChangeOverviewOpenStatus {
+  newStatus: boolean;
+}
+
 export type {
   IIncDecActionPayload,
   ILogActionPayload,
@@ -49,4 +53,5 @@ export type {
   IncDecActionType,
   IChangeItemAdditionalSettingActionType,
   IActions,
+  IChangeOverviewOpenStatus,
 };

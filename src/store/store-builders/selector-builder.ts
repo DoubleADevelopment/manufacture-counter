@@ -6,13 +6,13 @@ const SelectorBuilder = (packageName: string): ISelectors => {
     SelectorGetData:
       () =>
       (state: RootState): IData => {
-        return state[packageName].items;
+        return state.packages[packageName].items;
       },
 
     SelectorGetItemData:
       (UNID: string) =>
       (state: RootState): IItemData =>
-        state[packageName].items[UNID],
+        state.packages[packageName].items[UNID],
 
     SelectorCheckIfElementExistsByUNID:
       (UNID: string | undefined) =>
@@ -21,7 +21,7 @@ const SelectorBuilder = (packageName: string): ISelectors => {
         if (!UNID) {
           result = false;
         } else {
-          if (!state[packageName].items[UNID]) {
+          if (!state.packages[packageName].items[UNID]) {
             result = false;
           } else {
             result = true;

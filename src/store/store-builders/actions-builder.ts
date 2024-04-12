@@ -29,7 +29,7 @@ const ActionsBuilder = (repository: IRepository, Slice: Slice<IState>): IActions
         };
 
         dispatch(log(newLog));
-        repository.sendData(getState()[packageName].items);
+        repository.sendData(getState().packages[packageName].items);
       },
 
     decrementAction:
@@ -44,7 +44,7 @@ const ActionsBuilder = (repository: IRepository, Slice: Slice<IState>): IActions
         };
 
         dispatch(log(newLog));
-        repository.sendData(getState()[packageName].items);
+        repository.sendData(getState().packages[packageName].items);
       },
 
     clearItemDataAction:
@@ -53,7 +53,7 @@ const ActionsBuilder = (repository: IRepository, Slice: Slice<IState>): IActions
         const clearedItem = repository.getDefaultItemData(action.item.UNID);
         dispatch(clearItem({ item: clearedItem }));
 
-        repository.sendData(getState()[packageName].items);
+        repository.sendData(getState().packages[packageName].items);
       },
 
     clearDataAction: (): AppThunk => (dispatch) => {
@@ -67,7 +67,7 @@ const ActionsBuilder = (repository: IRepository, Slice: Slice<IState>): IActions
       (action: IChangeItemAdditionalSettingActionPayload): AppThunk =>
       (dispatch, getState) => {
         dispatch(changeItemAdditionalSetting(action));
-        repository.sendData(getState()[packageName].items);
+        repository.sendData(getState().packages[packageName].items);
       },
   };
 };
