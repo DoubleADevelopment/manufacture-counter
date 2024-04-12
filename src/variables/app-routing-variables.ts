@@ -1,7 +1,7 @@
 //type
 import type { IRouteItem } from '../types';
 
-const rootBaseName = '/component-counter';
+const rootBaseName = '/manufacture-counter';
 
 const enum AppRoutingNames {
   ROOT = 'ROOT',
