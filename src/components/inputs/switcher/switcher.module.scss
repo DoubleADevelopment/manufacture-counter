@@ -9,12 +9,11 @@
 .switcher__input {
   appearance: none;
   position: relative;
-  outline: none;
-  border-radius: 20px;
-  width: 80px;
-  height: 40px;
-  box-shadow: inset 0 0 5px rgb(0 0 0 / 20%);
-  background: #C6C6C6;
+  border-radius: var(--basic-border-radius);
+  width: 50px;
+  height: 25px;
+  box-shadow: inset 0 0 4px var(--background-tertiary);
+  background: var(--background-tertiary);
   transition: background 300ms linear;
   cursor: pointer;
 
@@ -23,20 +22,20 @@
     position: absolute;
     left: 0;
     top: 0;
-    border-radius: 20px;
-    width: 40px;
-    height: 40px;
-    box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
-    background: #FFFFFF;
+    border-radius: var(--basic-border-radius);
+    width: 25px;
+    height: 25px;
+    box-shadow: 0 4px 5px var(--gray-400);
+    background: var(--backgroud-primary);
     transform: scale(1.1);
     transition: left 300ms linear;
   }
 
-  &:checked[type="checkbox"] {
+  &:checked {
     background: #7DFF0B;
   }
 
   &:checked::before {
-    left: 40px;
+    left: 25px;
   }
 }
