@@ -1,11 +1,13 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-//styles
-import { ChangeEvent, useState } from 'react';
-import style from './app-setting.module.scss';
-import { overviewPanelStatusType } from '../../../types';
+import { useState } from 'react';
+//components
+import { Switcher } from '../..';
+//store
 import { useAppSelector } from '../../../hooks/hooks';
 import { SelectorGetOverviewPanelStatus } from '../../../store/app-selectors';
-import { Switcher } from '../../';
+//types
+import type { overviewPanelStatusType } from '../../../types';
+//styles
+import style from './overview-setting.module.scss';
 
 const OverviewSetting = (): JSX.Element => {
   const [overviewPanelStatus, setOverviewPanelStatus] = useState<overviewPanelStatusType>(
