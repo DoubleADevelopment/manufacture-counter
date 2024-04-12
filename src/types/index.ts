@@ -23,6 +23,7 @@ import type {
   IChangeItemAdditionalSettingActionType,
   IChangeItemAdditionalSettingActionPayload,
   IActions,
+  IChangeOverviewPanelStatus,
 } from './action-types';
 import { AppDispatch, RootState, AppThunk } from './store-types';
 import { ISetActiveLink, IButtonProps, IAdditionalNavItem } from './other-types';
@@ -34,6 +35,7 @@ import {
   ISelectorCheckIfElementExistsByUNID,
   ISelectors,
 } from './selector-types';
+import { overviewPanelStatusType } from './app-types';
 
 export type {
   ILogActionPayload,
@@ -71,4 +73,6 @@ export type {
   IState,
   ISelectors,
   IActions,
+  IChangeOverviewPanelStatus,
+  overviewPanelStatusType,
 };

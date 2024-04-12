@@ -1,7 +1,7 @@
 //repository
 import chemistryRepository from '../../repository/chemistry-repository';
 //selector builder
-import SelectorBuilder from '../../../../store/selector-builder';
+import SelectorBuilder from '../../../../store/store-builders/selector-builder';
 //types
 import type { ISelectors } from '../../../../types';
 

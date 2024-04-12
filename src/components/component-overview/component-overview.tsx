@@ -2,12 +2,15 @@ import { useState } from 'react';
 //components
 import ComponentOverviewList from './component-overview-list/component-overview-list';
 import { ButtonWithIcon } from '../';
+//store
+import { SelectorGetOverviewPanelStatus } from '../../store/app-selectors';
+import { useAppSelector } from '../../hooks/hooks';
 //styles
 import style from './component-overview.module.scss';
 //icons
 import { ArrowDownIcon, ArrowUpIcon } from '../../icons';
 //types
-import type { ItemsDataToDisplayListType } from '../../types';
+import type { ItemsDataToDisplayListType, overviewPanelStatusType } from '../../types';
 
 interface IComponentOverviewProps {
   data: ItemsDataToDisplayListType;
@@ -15,14 +18,15 @@ interface IComponentOverviewProps {
 }
 
 const ComponentOverview = ({ data, title }: IComponentOverviewProps): JSX.Element => {
-  const [showList, setShowList] = useState<boolean>(false);
+  const overviewPanelStatus = useAppSelector(SelectorGetOverviewPanelStatus());
+  const [showList, setShowList] = useState<overviewPanelStatusType>(overviewPanelStatus);
 
   const onShowListButtonClickHandler = () => {
-    setShowList((prev) => !prev);
+    setShowList((prev) => (prev === 'close' ? 'open' : 'close'));
   };
 
   const onCloseListButtonClickHandler = () => {
-    setShowList(false);
+    setShowList('close');
   };
 
   return (
@@ -35,7 +39,7 @@ const ComponentOverview = ({ data, title }: IComponentOverviewProps): JSX.Elemen
         </h2>
 
         <div className={style['component-overview__fake-button']} aria-hidden="true">
-          {showList ? <ArrowUpIcon /> : <ArrowDownIcon />}
+          {showList === 'open' ? <ArrowUpIcon /> : <ArrowDownIcon />}
         </div>
 
         <button
@@ -48,14 +52,14 @@ const ComponentOverview = ({ data, title }: IComponentOverviewProps): JSX.Elemen
       </header>
 
       <div
-        className={`${style['component-overview__list']} ${showList && style['component-overview__list--open']}`}
+        className={`${style['component-overview__list']} ${showList === 'open' && style['component-overview__list--open']}`}
       >
         <div className={style['component-overview__list-wrap']}>
           <ComponentOverviewList data={data} />
         </div>
       </div>
 
-      {showList && (
+      {showList === 'open' && (
         <ButtonWithIcon
           text="ukryj liste"
           fullWidth={true}
