@@ -4,10 +4,11 @@ import style from './switcher.module.scss';
 
 interface ISwitcherProps {
   onChangeListener: (value: boolean) => void;
+  checked: boolean;
   text?: string;
 }
 
-const Switcher = ({ onChangeListener, text }: ISwitcherProps) => {
+const Switcher = ({ onChangeListener, text, checked }: ISwitcherProps) => {
   const onChangeHandler = (evt: ChangeEvent<HTMLInputElement>) => {
     const switcherStatus: boolean = evt.target.checked;
     onChangeListener(switcherStatus);
@@ -23,6 +24,7 @@ const Switcher = ({ onChangeListener, text }: ISwitcherProps) => {
         name="overview-status"
         id=""
         onChange={onChangeHandler}
+        checked={checked}
       />
     </label>
   );

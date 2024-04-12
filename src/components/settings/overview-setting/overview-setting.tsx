@@ -1,18 +1,25 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 //components
 import { Switcher } from '../..';
 //store
-import { useAppSelector } from '../../../hooks/hooks';
+import { useAppDispatch, useAppSelector } from '../../../hooks/hooks';
 import { SelectorGetOverviewPanelStatus } from '../../../store/app-selectors';
+import { changeOverviewPanelStatusAction } from '../../../store/app-actions';
 //types
 import type { overviewPanelStatusType } from '../../../types';
 //styles
 import style from './overview-setting.module.scss';
 
 const OverviewSetting = (): JSX.Element => {
+  const dispatch = useAppDispatch();
+
   const [overviewPanelStatus, setOverviewPanelStatus] = useState<overviewPanelStatusType>(
     useAppSelector(SelectorGetOverviewPanelStatus()),
   );
+
+  useEffect(() => {
+    dispatch(changeOverviewPanelStatusAction({ newStatus: overviewPanelStatus }));
+  }, [overviewPanelStatus]);
 
   const onOverviewStatusSwitcherHandler = (value: boolean) => {
     if (value === true) {
@@ -30,7 +37,10 @@ const OverviewSetting = (): JSX.Element => {
         <p className="label-medium content-primary-a">
           lista komponentów / {overviewPanelStatus === 'open' ? 'otwarta' : 'zamknięta'}
         </p>
-        <Switcher onChangeListener={onOverviewStatusSwitcherHandler} />
+        <Switcher
+          onChangeListener={onOverviewStatusSwitcherHandler}
+          checked={overviewPanelStatus === 'open' ? true : false}
+        />
       </div>
     </section>
   );
