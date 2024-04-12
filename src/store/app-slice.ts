@@ -1,17 +1,23 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 //types
-import type { IChangeOverviewOpenStatus } from '../types';
+import type { IChangeOverviewPanelStatus, overviewPanelStatusType } from '../types';
+
+interface IAppInitialState {
+  overviewPanelStatus: overviewPanelStatusType;
+}
+
+const AppInitialState: IAppInitialState = {
+  overviewPanelStatus: 'close',
+};
 
 const AppSlice = createSlice({
   name: 'app',
-  initialState: {
-    overviewOpenStatus: false,
-  },
+  initialState: AppInitialState,
 
   reducers: {
-    changeOverviewOpenStatus: (state, action: PayloadAction<IChangeOverviewOpenStatus>) => {
+    changeOverviewPanelStatus: (state, action: PayloadAction<IChangeOverviewPanelStatus>) => {
       const { newStatus } = action.payload;
-      state.overviewOpenStatus = newStatus;
+      state.overviewPanelStatus = newStatus;
     },
   },
 });
