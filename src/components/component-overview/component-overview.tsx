@@ -1,10 +1,8 @@
-import { useState } from 'react';
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { useEffect, useState } from 'react';
 //components
 import ComponentOverviewList from './component-overview-list/component-overview-list';
 import { ButtonWithIcon } from '../';
-//store
-import { SelectorGetOverviewPanelStatus } from '../../store/app-selectors';
-import { useAppSelector } from '../../hooks/hooks';
 //styles
 import style from './component-overview.module.scss';
 //icons
@@ -15,11 +13,17 @@ import type { ItemsDataToDisplayListType, overviewPanelStatusType } from '../../
 interface IComponentOverviewProps {
   data: ItemsDataToDisplayListType;
   title: string;
+  isOpen: overviewPanelStatusType;
+  refreshKey: number;
 }
 
-const ComponentOverview = ({ data, title }: IComponentOverviewProps): JSX.Element => {
-  const overviewPanelStatus = useAppSelector(SelectorGetOverviewPanelStatus());
-  const [showList, setShowList] = useState<overviewPanelStatusType>(overviewPanelStatus);
+const ComponentOverview = ({
+  data,
+  title,
+  isOpen,
+  refreshKey,
+}: IComponentOverviewProps): JSX.Element => {
+  const [showList, setShowList] = useState<overviewPanelStatusType>(isOpen);
 
   const onShowListButtonClickHandler = () => {
     setShowList((prev) => (prev === 'close' ? 'open' : 'close'));
@@ -28,6 +32,10 @@ const ComponentOverview = ({ data, title }: IComponentOverviewProps): JSX.Elemen
   const onCloseListButtonClickHandler = () => {
     setShowList('close');
   };
+
+  useEffect(() => {
+    setShowList('close');
+  }, [refreshKey]);
 
   return (
     <section className={style['component-overview']}>
