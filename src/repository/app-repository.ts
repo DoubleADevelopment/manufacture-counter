@@ -1,4 +1,14 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-class AppRepository {}
+//types
+import type { IAppState } from '../types';
 
-export default AppRepository;
+class AppRepository {
+  getState(): IAppState {
+    return {
+      overviewPanelStatus: 'close',
+    };
+  }
+}
+
+const appRepository = new AppRepository();
+
+export default appRepository;
