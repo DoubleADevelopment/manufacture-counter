@@ -34,6 +34,7 @@ const InterfaceText = {
   CONFIRM_DELETING: 'Potwierdź usunięcie',
   AMOUNT: 'Ilość',
   DELETE: 'Usunąć',
+  CLOSE_ALL_OVERVIEWS: 'Zamknij wszystko',
 };
 
 export { CounterText, ErrorsText, InterfaceText, InputMessagesText };

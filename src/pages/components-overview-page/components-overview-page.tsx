@@ -7,11 +7,11 @@ import { store } from '../../store/store';
 import { useAppSelector } from '../../hooks/hooks';
 import { SelectorGetOverviewPanelStatus } from '../../store/app-selectors';
 //components
-import { ComponentOverview } from '../../components';
+import { ComponentOverview, ButtonSecondarySmall } from '../../components';
 //adapter
 import { adapterService } from '../../services';
 //variables
-import { AppRouting } from '../../variables';
+import { AppRouting, InterfaceText } from '../../variables';
 //styles
 import style from './components-overview-page.module.scss';
 
@@ -29,7 +29,12 @@ const ComponentOverviewPage = (): JSX.Element => {
   return (
     <PageWithMenuLayout
       headerTitle={AppRouting.COMPONENTS_OVERVIEW.title}
-      additionalNav={<button onClick={refreshOverview}>test close</button>}
+      additionalNav={
+        <ButtonSecondarySmall
+          clickHandler={refreshOverview}
+          text={InterfaceText.CLOSE_ALL_OVERVIEWS}
+        />
+      }
     >
       <main className={style['components-overview-page']}>
         {reduxStateArray.map((item) => {
