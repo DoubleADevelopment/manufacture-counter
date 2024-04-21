@@ -22,15 +22,16 @@ const ComponentOverviewPage = (): JSX.Element => {
 
   const [refreshKey, setRefreshKey] = useState<number>(0);
 
-  const footest = () => {
+  const refreshOverview = () => {
     setRefreshKey((prevKey) => prevKey + 1);
   };
 
   return (
-    <PageWithMenuLayout headerTitle={AppRouting.COMPONENTS_OVERVIEW.title}>
+    <PageWithMenuLayout
+      headerTitle={AppRouting.COMPONENTS_OVERVIEW.title}
+      additionalNav={<button onClick={refreshOverview}>test close</button>}
+    >
       <main className={style['components-overview-page']}>
-        <button onClick={footest}>test close</button>
-
         {reduxStateArray.map((item) => {
           return (
             <ComponentOverview
