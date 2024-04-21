@@ -1,3 +1,7 @@
 type overviewPanelStatusType = 'open' | 'close';
 
-export type { overviewPanelStatusType };
+interface IAppState {
+  overviewPanelStatus: overviewPanelStatusType;
+}
+
+export type { overviewPanelStatusType, IAppState };

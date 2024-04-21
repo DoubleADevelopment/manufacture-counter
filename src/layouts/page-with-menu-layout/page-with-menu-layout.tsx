@@ -8,16 +8,18 @@ interface IPageWithMenuLayoutProps {
   children: ReactNode;
   headerTitle: string;
   backLink?: string;
+  additionalNav?: JSX.Element;
 }
 
 const PageWithMenuLayout = ({
   children,
   headerTitle,
   backLink,
+  additionalNav,
 }: IPageWithMenuLayoutProps): JSX.Element => {
   return (
     <div className={`${style['page']} container-mobile`}>
-      <Header title={headerTitle} backLink={backLink} />
+      <Header title={headerTitle} backLink={backLink} additionalNav={additionalNav} />
       {children}
     </div>
   );

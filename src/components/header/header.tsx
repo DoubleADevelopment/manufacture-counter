@@ -11,9 +11,10 @@ import style from './header.module.scss';
 interface IHeaderProps {
   title: string;
   backLink?: string;
+  additionalNav?: JSX.Element;
 }
 
-const Header = ({ title, backLink }: IHeaderProps): JSX.Element => {
+const Header = ({ title, backLink, additionalNav }: IHeaderProps): JSX.Element => {
   return (
     <header className={style.header}>
       <h1 className={`heading-medium content-primary-a`}>{title}</h1>
@@ -25,7 +26,7 @@ const Header = ({ title, backLink }: IHeaderProps): JSX.Element => {
         </Link>
       )}
 
-      <Navigation />
+      <Navigation additionalNav={additionalNav} />
     </header>
   );
 };

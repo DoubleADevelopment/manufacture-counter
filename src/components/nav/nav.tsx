@@ -7,9 +7,14 @@ import style from './nav.module.scss';
 //icons
 import { NavIconHome, NavIconSettings, NavIconInfo, NavIconOverview } from '../../icons';
 
-const Navigation = (): JSX.Element => {
+interface INavigationProps {
+  additionalNav?: JSX.Element;
+}
+
+const Navigation = ({ additionalNav }: INavigationProps): JSX.Element => {
   return (
     <nav className={`${style.nav} unselectable`}>
+      {additionalNav}
       <ul className={style.nav__list}>
         <li className={style.nav__item}>
           <NavigationLink to={AppRouting.ROOT.path} name={AppRouting.ROOT.title}>
