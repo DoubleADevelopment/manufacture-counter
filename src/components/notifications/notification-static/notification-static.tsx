@@ -9,12 +9,14 @@ interface INotificationProps {
   type: NotificationType;
   headingText: string;
   paragraphText: string;
+  show: boolean;
 }
 
 const NotificationStatic = ({
   headingText,
   paragraphText,
   type,
+  show,
 }: INotificationProps): JSX.Element => {
   const NotificationIcon = ((): JSX.Element => {
     switch (type) {
@@ -32,8 +34,14 @@ const NotificationStatic = ({
     }
   })();
 
+  const notificationClasses: string = `
+    ${style['notification-static']}
+    ${style['notification-static--' + type]}
+    ${style['notification-static--show-' + show]}
+    `;
+
   return (
-    <div className={`${style['notification-static']} ${style['notification-static--' + type]}`}>
+    <div className={notificationClasses}>
       <span className={style['notification-static__icon']}>{NotificationIcon}</span>
       <h4 className="label-medium content-primary-a">{headingText}</h4>
       <p className="paragraph-medium content-primary-a">{paragraphText}</p>

@@ -1,13 +1,27 @@
 .notification-static {
+  position: absolute;
+  left: 0;
+  bottom: 100px;
   display: grid;
   align-items: center;
   grid-template-columns: min-content 1fr;
   grid-template-rows: repeat(2, max-content);
   border-radius: var(--basic-border-radius);
   padding: 16px;
-  width: 100%;
+  width: max-content;
   height: min-content;
+  transform: translateX(-150%);
+  transition: all ease 1s;
   gap: 5px;
+}
+
+.notification-static--show-true {
+  transform: translateX(0);
+
+}
+
+.notification-static--show-false {
+  transform: translateX(-150%);
 }
 
 .notification-static__icon {
