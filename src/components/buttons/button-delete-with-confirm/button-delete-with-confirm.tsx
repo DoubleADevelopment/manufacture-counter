@@ -5,7 +5,7 @@ import type { IButtonProps } from '../../../types/';
 import { NotificationStatic } from '../..';
 import { ConfirmDeletingModal } from '../../modals';
 //variables
-import { NotificationType } from '../../../variables';
+import { NotificationType, SuccessText } from '../../../variables';
 //styles
 import style from './button-delete-with-confirm.module.scss';
 
@@ -59,8 +59,8 @@ const ButtonDeleteWithConfirm = ({
 
       <NotificationStatic
         type={NotificationType.POSITIVE}
-        headingText="Powodzenie!"
-        paragraphText="Wszystkie danę zostali usunięci."
+        headingText={SuccessText.SUCCESS}
+        paragraphText={SuccessText.SUCCESSFULLY_DELETED}
         show={showNotification}
       />
 

@@ -27,6 +27,11 @@ enum ErrorsText {
   FAILED_OPEN_COUNTER_CALLED_COUNTERNAME = 'Nie udało się otworzyć licznik o nazwie - ',
 }
 
+enum SuccessText {
+  SUCCESS = 'Powodzenie',
+  SUCCESSFULLY_DELETED = 'Usunięto pomyślnie',
+}
+
 const InterfaceText = {
   CLOSE_MODAL: 'Zamknąć okno',
   BACK_TO_OVERVIEW: 'Powrót do przeglądu',
@@ -37,4 +42,4 @@ const InterfaceText = {
   CLOSE_ALL_OVERVIEWS: 'Zamknij wszystko',
 };
 
-export { CounterText, ErrorsText, InterfaceText, InputMessagesText };
+export { CounterText, ErrorsText, InterfaceText, InputMessagesText, SuccessText };

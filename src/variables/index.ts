@@ -1,5 +1,11 @@
 import { InputStatuses } from './input-variables';
-import { CounterText, ErrorsText, InterfaceText, InputMessagesText } from './text-variables';
+import {
+  CounterText,
+  ErrorsText,
+  InterfaceText,
+  InputMessagesText,
+  SuccessText,
+} from './text-variables';
 import { NotificationType } from './notofication-variables';
 import { AppRouting, rootBaseName } from './app-routing-variables';
 
@@ -12,4 +18,5 @@ export {
   AppRouting,
   rootBaseName,
   InputMessagesText,
+  SuccessText,
 };
