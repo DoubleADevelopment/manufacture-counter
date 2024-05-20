@@ -31,6 +31,9 @@ const BasicCounter = ({ inc, dec, title, defaultValue }: IBasicCounterProps): JS
     const validateResult = inputValueValidate(value);
     if (validateResult.status === InputStatuses.SUCCESS && value !== null) {
       inc(value);
+    } else {
+      setStatus(validateResult.status);
+      setMessage(validateResult.message);
     }
   };
 
@@ -38,6 +41,9 @@ const BasicCounter = ({ inc, dec, title, defaultValue }: IBasicCounterProps): JS
     const validateResult = inputValueValidate(value);
     if (validateResult.status === InputStatuses.SUCCESS && value !== null) {
       dec(value);
+    } else {
+      setStatus(validateResult.status);
+      setMessage(validateResult.message);
     }
   };
 
