@@ -14,12 +14,23 @@
       }
     },
     {
-      "files": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
+      "files": [
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.ts",
+        "**/*.tsx"
+      ],
       "options": {
         "parser": "typescript"
       }
     }
   ],
-  "ignore": ["**/node_modules/**"],
-  "htmlVoidElements": ["img", "meta", "img"]
+  "ignore": [
+    "**/node_modules/**"
+  ],
+  "htmlVoidElements": [
+    "img",
+    "meta",
+    "img"
+  ]
 }
