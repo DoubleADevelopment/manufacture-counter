@@ -19,7 +19,7 @@ const suppliesData: IPackage = {
       productName: 'Przekładki polipropylenowe (do listwy) - zamówienia J. Wasielewska',
       systemCode: '',
       description: '',
-      additionalInfo: '3 kartony (karton ma 5 tyś szt)',
+      additionalInfo: '',
       image: `${rootBaseName}/images/supplies/supplies-przekladki-polipropylenowe.webp`,
       color: '',
       counters: {
@@ -77,7 +77,7 @@ const suppliesData: IPackage = {
       productName: 'Półrękaw biały 1400 perforacja co 7,5',
       systemCode: '',
       description: '',
-      additionalInfo: '40 rolek',
+      additionalInfo: '20 rolek',
       image: `${rootBaseName}/images/supplies/supplies-polrekaw-bialy.webp`,
       color: '',
       counters: {
@@ -135,7 +135,7 @@ const suppliesData: IPackage = {
       productName: 'Półrękaw czarno-biały 1200 perforacja co 7,0 90 µm',
       systemCode: '',
       description: '',
-      additionalInfo: '',
+      additionalInfo: '20 rolek',
       image: `${rootBaseName}/images/supplies/supplies-polrekaw-czarny.webp`,
       color: '#ffff00',
       counters: {
@@ -164,7 +164,7 @@ const suppliesData: IPackage = {
       productName: 'Półrękaw czarno-biały 1400 perforacja co 7,5 90 µm',
       systemCode: '',
       description: '',
-      additionalInfo: '',
+      additionalInfo: '20 rolek',
       image: `${rootBaseName}/images/supplies/supplies-polrekaw-czarny.webp`,
       color: '#ffff00',
       counters: {
@@ -193,7 +193,7 @@ const suppliesData: IPackage = {
       productName: 'Półrękaw czarno-biały 1400 perforacja co 7,0 90 µm',
       systemCode: '',
       description: '',
-      additionalInfo: '10 rolek',
+      additionalInfo: '20 rolek',
       image: `${rootBaseName}/images/supplies/supplies-polrekaw-czarny.webp`,
       color: '#ffff00',
       counters: {
@@ -222,7 +222,7 @@ const suppliesData: IPackage = {
       productName: 'Półrękaw czarny 1400 perforacja co 7,5',
       systemCode: '',
       description: '',
-      additionalInfo: '40 rolek',
+      additionalInfo: '20 rolek',
       image: `${rootBaseName}/images/supplies/supplies-polrekaw-czarny.webp`,
       color: '',
       counters: {
@@ -251,7 +251,7 @@ const suppliesData: IPackage = {
       productName: 'Półrękaw czarny 1600 perforacja co 7,5',
       systemCode: '',
       description: '',
-      additionalInfo: '10 rolek',
+      additionalInfo: '20 rolek',
       image: `${rootBaseName}/images/supplies/supplies-polrekaw-czarny.webp`,
       color: '',
       counters: {
@@ -280,7 +280,7 @@ const suppliesData: IPackage = {
       productName: 'Półrękaw czarny 1600 perforacja co 7,7',
       systemCode: '',
       description: '',
-      additionalInfo: '30 rolek',
+      additionalInfo: '20 rolek',
       image: `${rootBaseName}/images/supplies/supplies-polrekaw-czarny.webp`,
       color: '',
       counters: {
@@ -309,7 +309,7 @@ const suppliesData: IPackage = {
       productName: 'Etykieta biała 100x150 (szt na rolce 1000szt), półbłysk -fi = 40mm',
       systemCode: '',
       description: '',
-      additionalInfo: '1 kart.(x8szt.)',
+      additionalInfo: '',
       image: `${rootBaseName}/images/supplies/supplies-etykieta-biala.webp`,
       color: '',
       counters: {
@@ -338,7 +338,7 @@ const suppliesData: IPackage = {
       productName: 'Etykieta czerwona 150x100 (szt na rolce 1000szt),półbłysk - fi = 40mm',
       systemCode: '',
       description: '',
-      additionalInfo: '1 kart.(x8szt.)',
+      additionalInfo: '',
       image: `${rootBaseName}/images/supplies/supplies-etykieta-czerwona.webp`,
       color: '',
       counters: {
@@ -367,7 +367,7 @@ const suppliesData: IPackage = {
       productName: 'Etykieta niebieska 100x150 (szt na rolce 1000szt), półbłysk -fi = 40mm',
       systemCode: '',
       description: '',
-      additionalInfo: '1 kart.(x8szt.)',
+      additionalInfo: '',
       image: `${rootBaseName}/images/supplies/supplies-etykieta-niebieska.webp`,
       color: '',
       counters: {
@@ -396,7 +396,7 @@ const suppliesData: IPackage = {
       productName: 'Etykiety żółte 150x100 szt na rolce 1000szt),półbłysk -fi = 40mm',
       systemCode: '',
       description: '',
-      additionalInfo: '1 kart. (x8szt)',
+      additionalInfo: '',
       image: `${rootBaseName}/images/supplies/supplies-etykieta-zolta.webp`,
       color: '',
       counters: {
@@ -425,7 +425,7 @@ const suppliesData: IPackage = {
       productName: 'Etykiety zielone 150x100 (szt na rolce 1000 szt),półbłysk -fi = 40 mm',
       systemCode: '',
       description: '',
-      additionalInfo: '1 kart.(x8szt.)',
+      additionalInfo: '',
       image: `${rootBaseName}/images/supplies/supplies-etykieta-zielona.webp`,
       color: '',
       counters: {
@@ -454,7 +454,7 @@ const suppliesData: IPackage = {
       productName: 'Etykiety białe Małe 100x70 (szt na rolce 1000 szt),półbłysk- fi=40mm',
       systemCode: '',
       description: '',
-      additionalInfo: '1 kart.(x8szt.)',
+      additionalInfo: '',
       image: `${rootBaseName}/images/supplies/supplies-etykieta-biala-1.webp`,
       color: '',
       counters: {
@@ -541,7 +541,7 @@ const suppliesData: IPackage = {
       productName: 'Taśma pomarańczowa z nadrukiem- ENERGETO',
       systemCode: '',
       description: '',
-      additionalInfo: '5 kart.(x36szt.)',
+      additionalInfo: '',
       image: `${rootBaseName}/images/supplies/supplies-tasma-z-nadrukiem.webp`,
       color: '',
       counters: {
@@ -570,7 +570,7 @@ const suppliesData: IPackage = {
       productName: 'Biała taśma klejąca - White Solvent (szt rolek 36 pcs) - 48mm',
       systemCode: '',
       description: '',
-      additionalInfo: '3 kart.(x10)',
+      additionalInfo: '',
       image: `${rootBaseName}/images/supplies/supplies-tasma-biala.webp`,
       color: '',
       counters: {
@@ -599,7 +599,7 @@ const suppliesData: IPackage = {
       productName: 'Kalka do drukarki Index: WAX RESIN ECO OUT ( szt w kart. 10szt),104x450mm',
       systemCode: '',
       description: '',
-      additionalInfo: '5 kart.(x36szt.)',
+      additionalInfo: '',
       image: `${rootBaseName}/images/supplies/supplies-kalka-do-drukarki.webp`,
       color: '',
       counters: {
@@ -628,7 +628,7 @@ const suppliesData: IPackage = {
       productName: 'Styropian grubość 2,0 cm ( w paczce 240 szt) - zamówienia J. Wasielewska',
       systemCode: '',
       description: '',
-      additionalInfo: '5 kart.(x10szt.)',
+      additionalInfo: '',
       image: `${rootBaseName}/images/supplies/supplies-styropian-bialy.webp`,
       color: '',
       counters: {
@@ -657,7 +657,7 @@ const suppliesData: IPackage = {
       productName: 'Styropian grubość 0,5 cm ( w paczce 480 szt) - zamówienia J. Wasielewska',
       systemCode: '',
       description: '',
-      additionalInfo: '50 paczek',
+      additionalInfo: '',
       image: `${rootBaseName}/images/supplies/supplies-styropian-bialy.webp`,
       color: '',
       counters: {
@@ -686,7 +686,7 @@ const suppliesData: IPackage = {
       productName: 'Spray do hamulców BREMSEN FORCH ECO',
       systemCode: '',
       description: '',
-      additionalInfo: '1 kart.(30x500ml)',
+      additionalInfo: '',
       image: `${rootBaseName}/images/supplies/supplies-spray-do-hamulcow-bremen-forch-eco.webp`,
       color: '',
       counters: {

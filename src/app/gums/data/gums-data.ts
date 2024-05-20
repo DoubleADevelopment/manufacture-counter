@@ -23,10 +23,10 @@ const gumsData: IPackage = {
       image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#2181FC',
       counters: {
-        CONTAINERS: {
-          counterSystemName: 'CONTAINERS',
-          counterTitle: 'Kontenery',
-          counterLogTitle: 'Kontenery',
+        BAGS: {
+          counterSystemName: 'BAGS',
+          counterTitle: 'Kartony',
+          counterLogTitle: 'Kartony',
           logs: [],
           lastChange: null,
           counterBaseValue: 1,
@@ -65,10 +65,10 @@ const gumsData: IPackage = {
       image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#2181FC',
       counters: {
-        CONTAINERS: {
-          counterSystemName: 'CONTAINERS',
-          counterTitle: 'Kontenery',
-          counterLogTitle: 'Kontenery',
+        BAGS: {
+          counterSystemName: 'BAGS',
+          counterTitle: 'Kartony',
+          counterLogTitle: 'Kartony',
           logs: [],
           lastChange: null,
           counterBaseValue: 1,
@@ -107,10 +107,10 @@ const gumsData: IPackage = {
       image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '#32BD43',
       counters: {
-        CONTAINERS: {
-          counterSystemName: 'CONTAINERS',
-          counterTitle: 'Kontenery',
-          counterLogTitle: 'Kontenery',
+        BAGS: {
+          counterSystemName: 'BAGS',
+          counterTitle: 'Kartony',
+          counterLogTitle: 'Kartony',
           logs: [],
           lastChange: null,
           counterBaseValue: 1,
@@ -149,10 +149,10 @@ const gumsData: IPackage = {
       image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '#32BD43',
       counters: {
-        CONTAINERS: {
-          counterSystemName: 'CONTAINERS',
-          counterTitle: 'Kontenery',
-          counterLogTitle: 'Kontenery',
+        BAGS: {
+          counterSystemName: 'BAGS',
+          counterTitle: 'Kartony',
+          counterLogTitle: 'Kartony',
           logs: [],
           lastChange: null,
           counterBaseValue: 1,
@@ -191,10 +191,10 @@ const gumsData: IPackage = {
       image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#ffff00',
       counters: {
-        CONTAINERS: {
-          counterSystemName: 'CONTAINERS',
-          counterTitle: 'Kontenery',
-          counterLogTitle: 'Kontenery',
+        BAGS: {
+          counterSystemName: 'BAGS',
+          counterTitle: 'Kartony',
+          counterLogTitle: 'Kartony',
           logs: [],
           lastChange: null,
           counterBaseValue: 1,
@@ -233,10 +233,10 @@ const gumsData: IPackage = {
       image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '#d0312d',
       counters: {
-        CONTAINERS: {
-          counterSystemName: 'CONTAINERS',
-          counterTitle: 'Kontenery',
-          counterLogTitle: 'Kontenery',
+        BAGS: {
+          counterSystemName: 'BAGS',
+          counterTitle: 'Kartony',
+          counterLogTitle: 'Kartony',
           logs: [],
           lastChange: null,
           counterBaseValue: 1,
@@ -275,10 +275,10 @@ const gumsData: IPackage = {
       image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#ffff00',
       counters: {
-        CONTAINERS: {
-          counterSystemName: 'CONTAINERS',
-          counterTitle: 'Kontenery',
-          counterLogTitle: 'Kontenery',
+        BAGS: {
+          counterSystemName: 'BAGS',
+          counterTitle: 'Kartony',
+          counterLogTitle: 'Kartony',
           logs: [],
           lastChange: null,
           counterBaseValue: 1,
@@ -317,10 +317,10 @@ const gumsData: IPackage = {
       image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#d0312d',
       counters: {
-        CONTAINERS: {
-          counterSystemName: 'CONTAINERS',
-          counterTitle: 'Kontenery',
-          counterLogTitle: 'Kontenery',
+        BAGS: {
+          counterSystemName: 'BAGS',
+          counterTitle: 'Kartony',
+          counterLogTitle: 'Kartony',
           logs: [],
           lastChange: null,
           counterBaseValue: 1,
@@ -359,10 +359,10 @@ const gumsData: IPackage = {
       image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#004DFF',
       counters: {
-        CONTAINERS: {
-          counterSystemName: 'CONTAINERS',
-          counterTitle: 'Kontenery',
-          counterLogTitle: 'Kontenery',
+        BAGS: {
+          counterSystemName: 'BAGS',
+          counterTitle: 'Kartony',
+          counterLogTitle: 'Kartony',
           logs: [],
           lastChange: null,
           counterBaseValue: 1,
@@ -401,10 +401,10 @@ const gumsData: IPackage = {
       image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '#87FF00',
       counters: {
-        CONTAINERS: {
-          counterSystemName: 'CONTAINERS',
-          counterTitle: 'Kontenery',
-          counterLogTitle: 'Kontenery',
+        BAGS: {
+          counterSystemName: 'BAGS',
+          counterTitle: 'Kartony',
+          counterLogTitle: 'Kartony',
           logs: [],
           lastChange: null,
           counterBaseValue: 1,
@@ -443,10 +443,10 @@ const gumsData: IPackage = {
       image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
       color: '#ffffff',
       counters: {
-        CONTAINERS: {
-          counterSystemName: 'CONTAINERS',
-          counterTitle: 'Kontenery',
-          counterLogTitle: 'Kontenery',
+        BAGS: {
+          counterSystemName: 'BAGS',
+          counterTitle: 'Kartony',
+          counterLogTitle: 'Kartony',
           logs: [],
           lastChange: null,
           counterBaseValue: 1,
@@ -485,10 +485,10 @@ const gumsData: IPackage = {
       image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '#FFAA00',
       counters: {
-        CONTAINERS: {
-          counterSystemName: 'CONTAINERS',
-          counterTitle: 'Kontenery',
-          counterLogTitle: 'Kontenery',
+        BAGS: {
+          counterSystemName: 'BAGS',
+          counterTitle: 'Kartony',
+          counterLogTitle: 'Kartony',
           logs: [],
           lastChange: null,
           counterBaseValue: 1,
@@ -527,10 +527,10 @@ const gumsData: IPackage = {
       image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
       color: '',
       counters: {
-        CONTAINERS: {
-          counterSystemName: 'CONTAINERS',
-          counterTitle: 'Kontenery',
-          counterLogTitle: 'Kontenery',
+        BAGS: {
+          counterSystemName: 'BAGS',
+          counterTitle: 'Kartony',
+          counterLogTitle: 'Kartony',
           logs: [],
           lastChange: null,
           counterBaseValue: 1,
