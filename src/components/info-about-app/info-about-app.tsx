@@ -49,14 +49,17 @@ const InfoAboutApp = (): JSX.Element => {
         </a>
         <a
           className={`${style['info__social-link']} content-primary-a`}
-          href="https://www.linkedin.com/in/anton-oshurek-a6232521a/"
+          href="https://www.linkedin.com/in/anton-oshurek/"
           target="blank"
         >
           <span className="visually-hidden">Link na mój Linkedin</span>
           <Linkedincon />
         </a>
       </div>
-      <p className="content-primary-a paragraph-small">version - {version}</p>
+      <div>
+        <p className="content-primary-a paragraph-small">version - {version}</p>
+        <p className="content-primary-a paragraph-small">last change - 20.05.2024</p>
+      </div>
     </section>
   );
 };

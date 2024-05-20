@@ -21,18 +21,6 @@ const ButtonDeleteWithConfirm = ({
   const [isConfirmModalOpen, setIsConfirmModalOpen] = useState<boolean>(false);
   const [showNotification, setShowNotification] = useState<boolean>(false);
 
-  useEffect(() => {
-    let timer: NodeJS.Timeout;
-
-    if (showNotification === true) {
-      timer = setTimeout(() => {
-        setShowNotification(false);
-      }, 3000);
-    }
-
-    return () => clearTimeout(timer);
-  }, [showNotification]);
-
   const onDeleteClickHandler = () => {
     clickHandler();
     setIsConfirmModalOpen(false);
@@ -47,6 +35,18 @@ const ButtonDeleteWithConfirm = ({
     setIsConfirmModalOpen(false);
   };
 
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+
+    if (showNotification === true) {
+      timer = setTimeout(() => {
+        setShowNotification(false);
+      }, 3000);
+    }
+
+    return () => clearTimeout(timer);
+  }, [showNotification]);
+
   return (
     <>
       <button
@@ -57,6 +57,7 @@ const ButtonDeleteWithConfirm = ({
         {text}
       </button>
 
+      {/* notification only for successfully deleting  */}
       <NotificationStatic
         type={NotificationType.POSITIVE}
         headingText={SuccessText.SUCCESS}
