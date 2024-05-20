@@ -1,9 +1,13 @@
+import { useEffect, useState } from 'react';
 //types
-import { useState } from 'react';
 import type { IButtonProps } from '../../../types/';
+//components
+import { NotificationStatic } from '../..';
+import { ConfirmDeletingModal } from '../../modals';
+//variables
+import { NotificationType, SuccessText } from '../../../variables';
 //styles
 import style from './button-delete-with-confirm.module.scss';
-import { ConfirmDeletingModal } from '../../modals';
 
 interface IButtonDeleteWithConfirmProps extends IButtonProps {
   modalTitle: string;
@@ -15,10 +19,12 @@ const ButtonDeleteWithConfirm = ({
   modalTitle,
 }: IButtonDeleteWithConfirmProps): JSX.Element => {
   const [isConfirmModalOpen, setIsConfirmModalOpen] = useState<boolean>(false);
+  const [showNotification, setShowNotification] = useState<boolean>(false);
 
   const onDeleteClickHandler = () => {
     clickHandler();
     setIsConfirmModalOpen(false);
+    setShowNotification(true);
   };
 
   const openConfirmDeletingModal = () => {
@@ -29,6 +35,18 @@ const ButtonDeleteWithConfirm = ({
     setIsConfirmModalOpen(false);
   };
 
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+
+    if (showNotification === true) {
+      timer = setTimeout(() => {
+        setShowNotification(false);
+      }, 3000);
+    }
+
+    return () => clearTimeout(timer);
+  }, [showNotification]);
+
   return (
     <>
       <button
@@ -38,6 +56,14 @@ const ButtonDeleteWithConfirm = ({
       >
         {text}
       </button>
+
+      {/* notification only for successfully deleting  */}
+      <NotificationStatic
+        type={NotificationType.POSITIVE}
+        headingText={SuccessText.SUCCESS}
+        paragraphText={SuccessText.SUCCESSFULLY_DELETED}
+        show={showNotification}
+      />
 
       {isConfirmModalOpen && (
         <ConfirmDeletingModal
