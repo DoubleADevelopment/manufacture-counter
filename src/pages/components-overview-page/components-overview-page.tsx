@@ -21,24 +21,24 @@ const ComponentOverviewPage = (): JSX.Element => {
 
   const reduxStateArray = Object.values(store.getState().packages);
 
-  const [refreshKey, setRefreshKey] = useState<{ refresh: overviewPanelStatusType }>({
-    refresh: overviewPanelStatus,
+  const [refreshStatushKey, setRefreshStatusKey] = useState<{ key: overviewPanelStatusType }>({
+    key: overviewPanelStatus,
   });
   const [openItems, setOpenItems] = useState<{ [key: string]: overviewPanelStatusType }>({});
 
   const closeAllOverviews = () => {
-    setRefreshKey(() => {
-      return { refresh: 'close' };
+    setRefreshStatusKey(() => {
+      return { key: 'close' };
     });
   };
+
   const openAllOverviews = () => {
-    setRefreshKey(() => {
-      return { refresh: 'open' };
+    setRefreshStatusKey(() => {
+      return { key: 'open' };
     });
   };
 
   const setItemShowStatus = (status: overviewPanelStatusType, packageName: string): void => {
-    console.log(status, packageName);
     setOpenItems((prev) => {
       return { ...prev, [packageName]: status };
     });
@@ -56,10 +56,6 @@ const ComponentOverviewPage = (): JSX.Element => {
   }, []);
 
   const hasOpenStatus = () => Object.values(openItems).some((status) => status === 'open');
-
-  useEffect(() => {
-    console.log(openItems);
-  }, [openItems]);
 
   return (
     <PageWithMenuLayout
@@ -81,7 +77,7 @@ const ComponentOverviewPage = (): JSX.Element => {
               title={item.packageTitle}
               key={item.dataPackageUNID}
               isOpen={overviewPanelStatus}
-              refreshKey={refreshKey}
+              refreshStatushKey={refreshStatushKey}
               setItemShowStatus={setItemShowStatus}
             />
           );
