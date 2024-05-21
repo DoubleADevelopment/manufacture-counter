@@ -1,7 +1,11 @@
 //variables
 import { InputMessagesText, InputStatuses } from '../variables';
 //types
-import type { IInputValueValidate, OperationBetweenBaseAndAdditionType } from '../types';
+import type {
+  IComponentOverviewOpenItems,
+  IInputValueValidate,
+  OperationBetweenBaseAndAdditionType,
+} from '../types';
 
 const onEnterClickHandlerToElementBlur = (
   evt: any,
@@ -90,10 +94,14 @@ const calculateWithOperator = (
   }
 };
 
+const componentOverviewItemsHasOpenStatus = (openItems: IComponentOverviewOpenItems) =>
+  Object.values(openItems).some((status) => status === 'open');
+
 export {
   onEnterClickHandlerToElementBlur,
   extractNumbers,
   inputValueValidate,
   formatDateToShortFormat,
   calculateWithOperator,
+  componentOverviewItemsHasOpenStatus,
 };
