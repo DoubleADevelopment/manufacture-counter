@@ -58,7 +58,7 @@ const InfoAboutApp = (): JSX.Element => {
       </div>
       <div>
         <p className="content-primary-a paragraph-small">version - {version}</p>
-        <p className="content-primary-a paragraph-small">last change - 20.05.2024</p>
+        <p className="content-primary-a paragraph-small">release date - 21.05.2024</p>
       </div>
     </section>
   );
