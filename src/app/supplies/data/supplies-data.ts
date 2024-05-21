@@ -716,7 +716,7 @@ const suppliesData: IPackage = {
       systemCode: '',
       description: '',
       additionalInfo: '',
-      image: ``,
+      image: `${rootBaseName}/images/supplies/supplies-plyn-release-it.webp`,
       color: '',
       counters: {
         COUNTER: {
