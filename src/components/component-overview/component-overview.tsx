@@ -24,7 +24,6 @@ const ComponentOverview = ({
   refreshKey,
 }: IComponentOverviewProps): JSX.Element => {
   const [showList, setShowList] = useState<overviewPanelStatusType>(isOpen);
-  console.log(showList);
 
   const onShowListButtonClickHandler = () => {
     setShowList((prev) => (prev === 'close' ? 'open' : 'close'));
