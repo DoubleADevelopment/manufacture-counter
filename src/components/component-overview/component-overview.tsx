@@ -14,7 +14,8 @@ interface IComponentOverviewProps {
   data: ItemsDataToDisplayListType;
   title: string;
   isOpen: overviewPanelStatusType;
-  refreshKey: number;
+  refreshKey: { refresh: overviewPanelStatusType };
+  setItemShowStatus: (status: overviewPanelStatusType, packageName: string) => void;
 }
 
 const ComponentOverview = ({
@@ -22,6 +23,7 @@ const ComponentOverview = ({
   title,
   isOpen,
   refreshKey,
+  setItemShowStatus,
 }: IComponentOverviewProps): JSX.Element => {
   const [showList, setShowList] = useState<overviewPanelStatusType>(isOpen);
 
@@ -34,10 +36,12 @@ const ComponentOverview = ({
   };
 
   useEffect(() => {
-    if (refreshKey !== 0) {
-      setShowList('close');
-    }
+    setShowList(refreshKey.refresh);
   }, [refreshKey]);
+
+  useEffect(() => {
+    setItemShowStatus(showList, title);
+  }, [showList]);
 
   return (
     <section className={style['component-overview']}>
