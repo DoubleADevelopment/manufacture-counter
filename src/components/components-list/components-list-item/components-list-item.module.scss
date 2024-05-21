@@ -20,8 +20,8 @@
   display: flex;
   border: 2px solid transparent;
   border-radius: var(--basic-border-radius);
-  width: 150px;
-  height: 150px;
+  width: var(--component-list-item-image-size);
+  height: var(--component-list-item-image-size);
   object-fit: cover;
   transition: all ease 0.2s;
 }
