@@ -35,7 +35,7 @@ import {
   ISelectorCheckIfElementExistsByUNID,
   ISelectors,
 } from './selector-types';
-import { IAppState, overviewPanelStatusType } from './app-types';
+import { IAppState, IOverviewRefreshStatusKey, overviewPanelStatusType } from './app-types';
 
 export type {
   ILogActionPayload,
@@ -76,4 +76,5 @@ export type {
   IChangeOverviewPanelStatus,
   overviewPanelStatusType,
   IAppState,
+  IOverviewRefreshStatusKey,
 };

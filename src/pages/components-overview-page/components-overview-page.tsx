@@ -12,16 +12,17 @@ import { ComponentOverview, ButtonSecondarySmall } from '../../components';
 import { adapterService } from '../../services';
 //variables
 import { AppRouting, InterfaceText } from '../../variables';
+//types
+import type { IOverviewRefreshStatusKey, overviewPanelStatusType } from '../../types';
 //styles
 import style from './components-overview-page.module.scss';
-import { overviewPanelStatusType } from '../../types';
 
 const ComponentOverviewPage = (): JSX.Element => {
   const overviewPanelStatus = useAppSelector(SelectorGetOverviewPanelStatus());
 
   const reduxStateArray = Object.values(store.getState().packages);
 
-  const [refreshStatushKey, setRefreshStatusKey] = useState<{ key: overviewPanelStatusType }>({
+  const [refreshStatushKey, setRefreshStatusKey] = useState<IOverviewRefreshStatusKey>({
     key: overviewPanelStatus,
   });
   const [openItems, setOpenItems] = useState<{ [key: string]: overviewPanelStatusType }>({});

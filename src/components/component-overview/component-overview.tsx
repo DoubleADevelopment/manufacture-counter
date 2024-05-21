@@ -1,20 +1,20 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useEffect, useState } from 'react';
 //components
-import ComponentOverviewList from './component-overview-list/component-overview-list';
-import { ButtonWithIcon } from '../';
+import OverviewBody from './overview-body/overview-body';
 //styles
 import style from './component-overview.module.scss';
-//icons
-import { ArrowDownIcon, ArrowUpIcon } from '../../icons';
 //types
-import type { ItemsDataToDisplayListType, overviewPanelStatusType } from '../../types';
+import type {
+  IOverviewRefreshStatusKey,
+  ItemsDataToDisplayListType,
+  overviewPanelStatusType,
+} from '../../types';
 
 interface IComponentOverviewProps {
   data: ItemsDataToDisplayListType;
   title: string;
   isOpen: overviewPanelStatusType;
-  refreshStatushKey: { key: overviewPanelStatusType };
+  refreshStatushKey: IOverviewRefreshStatusKey;
   setItemShowStatus: (status: overviewPanelStatusType, packageName: string) => void;
 }
 
@@ -45,43 +45,13 @@ const ComponentOverview = ({
 
   return (
     <section className={style['component-overview']}>
-      <header className={style['component-overview__header']}>
-        <h2
-          className={`${style['component-overview__title']} unselectable content-primary-a heading-medium`}
-        >
-          {title}
-        </h2>
-
-        <div className={style['component-overview__fake-button']} aria-hidden="true">
-          {showList === 'open' ? <ArrowUpIcon /> : <ArrowDownIcon />}
-        </div>
-
-        <button
-          className={style['component-overview__show-button']}
-          type="button"
-          onClick={onShowListButtonClickHandler}
-        >
-          <span className="visually-hidden">pokaz liste</span>
-        </button>
-      </header>
-
-      <div
-        className={`${style['component-overview__list']} ${showList === 'open' && style['component-overview__list--open']}`}
-      >
-        <div className={style['component-overview__list-wrap']}>
-          <ComponentOverviewList data={data} />
-        </div>
-      </div>
-
-      {showList === 'open' && (
-        <ButtonWithIcon
-          text="ukryj liste"
-          fullWidth={true}
-          clickHandler={onCloseListButtonClickHandler}
-        >
-          {<ArrowUpIcon />}
-        </ButtonWithIcon>
-      )}
+      <OverviewBody
+        data={data}
+        onShowListButtonClickHandler={onShowListButtonClickHandler}
+        onCloseListButtonClickHandler={onCloseListButtonClickHandler}
+        showList={showList}
+        title={title}
+      />
     </section>
   );
 };
