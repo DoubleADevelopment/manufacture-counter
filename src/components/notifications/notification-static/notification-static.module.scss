@@ -12,15 +12,18 @@
   height: min-content;
   transform: translateX(-150%);
   transition: all ease 1s;
+  pointer-events: none;
+  user-select: none;
   gap: 5px;
 }
 
 .notification-static--show-true {
+  opacity: 1;
   transform: translateX(0);
-
 }
 
 .notification-static--show-false {
+  opacity: 0;
   transform: translateX(-150%);
 }
 
