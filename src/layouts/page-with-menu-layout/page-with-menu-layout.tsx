@@ -17,8 +17,9 @@ const PageWithMenuLayout = ({
   backLink,
   additionalNav,
 }: IPageWithMenuLayoutProps): JSX.Element => {
+  const paddingClass = additionalNav ? style['page--with-additional-menu'] : '';
   return (
-    <div className={`${style['page']} container-mobile`}>
+    <div className={`${style['page']} container-mobile ${paddingClass}`}>
       <Header title={headerTitle} backLink={backLink} additionalNav={additionalNav} />
       {children}
     </div>
