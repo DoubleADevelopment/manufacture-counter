@@ -8,3 +8,7 @@
   background-color: var(--backgroud-primary);
   gap: var(--page-blocks-gap);
 }
+
+.page--with-additional-menu {
+  padding: var(--standart-page-with-additional-menu-padding);
+}

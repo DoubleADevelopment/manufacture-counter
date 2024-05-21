@@ -33,6 +33,7 @@ import ComponentOverview from './component-overview/component-overview';
 import LogItem from './log-item/log-item';
 import CountableItemInfo from './countable-item-info/countable-item-info';
 import { Switcher } from './inputs';
+import ComponentOverviewList from './component-overview/component-overview-list/component-overview-list';
 
 export {
   Header,
@@ -60,6 +61,7 @@ export {
   ButtonDeleteSmall,
   CounterWithAdditionalValue,
   ControlSetAdditionalValue,
+  ComponentOverviewList,
   CountersSetting,
   InfoAboutApp,
   ComponentOverview,

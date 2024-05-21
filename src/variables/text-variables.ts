@@ -40,6 +40,7 @@ const InterfaceText = {
   AMOUNT: 'Ilość',
   DELETE: 'Usunąć',
   CLOSE_ALL_OVERVIEWS: 'Zamknij wszystko',
+  OPEN_ALL_OVERVIEWS: 'Otwórz wszystko',
 };
 
 export { CounterText, ErrorsText, InterfaceText, InputMessagesText, SuccessText };

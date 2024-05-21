@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 //layouts
 import { PageWithMenuLayout } from '../../layouts';
 //store
@@ -12,6 +11,14 @@ import { ComponentOverview, ButtonSecondarySmall } from '../../components';
 import { adapterService } from '../../services';
 //variables
 import { AppRouting, InterfaceText } from '../../variables';
+//utils
+import { componentOverviewItemsHasOpenStatus } from '../../utils/utils';
+//types
+import type {
+  IComponentOverviewOpenItems,
+  IOverviewRefreshStatusKey,
+  overviewPanelStatusType,
+} from '../../types';
 //styles
 import style from './components-overview-page.module.scss';
 
@@ -20,20 +27,55 @@ const ComponentOverviewPage = (): JSX.Element => {
 
   const reduxStateArray = Object.values(store.getState().packages);
 
-  const [refreshKey, setRefreshKey] = useState<number>(0);
+  const [refreshStatushKey, setRefreshStatusKey] = useState<IOverviewRefreshStatusKey>({
+    key: overviewPanelStatus,
+  });
 
-  const refreshOverview = () => {
-    setRefreshKey((prevKey) => prevKey + 1);
+  const [openItems, setOpenItems] = useState<IComponentOverviewOpenItems>({});
+
+  const closeAllOverviews = () => {
+    setRefreshStatusKey(() => {
+      return { key: 'close' };
+    });
   };
+
+  const openAllOverviews = () => {
+    setRefreshStatusKey(() => {
+      return { key: 'open' };
+    });
+  };
+
+  const setItemShowStatus = (status: overviewPanelStatusType, packageName: string): void => {
+    setOpenItems((prev) => {
+      return { ...prev, [packageName]: status };
+    });
+  };
+
+  useEffect(() => {
+    const initOpenItemsObject: IComponentOverviewOpenItems =
+      reduxStateArray.reduce<IComponentOverviewOpenItems>((acc, item) => {
+        acc[item.packageTitle] = overviewPanelStatus;
+        return acc;
+      }, {});
+
+    setOpenItems(initOpenItemsObject);
+  }, []);
 
   return (
     <PageWithMenuLayout
       headerTitle={AppRouting.COMPONENTS_OVERVIEW.title}
       additionalNav={
-        <ButtonSecondarySmall
-          clickHandler={refreshOverview}
-          text={InterfaceText.CLOSE_ALL_OVERVIEWS}
-        />
+        componentOverviewItemsHasOpenStatus(openItems) ? (
+          <ButtonSecondarySmall
+            clickHandler={closeAllOverviews}
+            text={InterfaceText.CLOSE_ALL_OVERVIEWS}
+          />
+        ) : (
+          <ButtonSecondarySmall
+            clickHandler={openAllOverviews}
+            text={InterfaceText.OPEN_ALL_OVERVIEWS}
+          />
+        )
       }
     >
       <main className={style['components-overview-page']}>
@@ -44,7 +86,8 @@ const ComponentOverviewPage = (): JSX.Element => {
               title={item.packageTitle}
               key={item.dataPackageUNID}
               isOpen={overviewPanelStatus}
-              refreshKey={refreshKey}
+              refreshStatushKey={refreshStatushKey}
+              setItemShowStatus={setItemShowStatus}
             />
           );
         })}
