@@ -17,11 +17,11 @@ interface IHeaderProps {
 const Header = ({ title, backLink, additionalNav }: IHeaderProps): JSX.Element => {
   return (
     <header className={style.header}>
-      <h1 className={`heading-medium content-primary-a`}>{title}</h1>
+      <h1 className={`heading-x-small content-primary-a`}>{title}</h1>
 
       {backLink && (
         <Link className={`${style['header__back-link']} unselectable`} to={backLink}>
-          <ArrowBackIcon />
+          <ArrowBackIcon size={{ width: 30, height: 30 }} />
           <span className="visually-hidden">{InterfaceText.BACK_TO_OVERVIEW}</span>
         </Link>
       )}

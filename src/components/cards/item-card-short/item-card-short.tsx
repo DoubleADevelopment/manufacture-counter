@@ -21,7 +21,7 @@ const ItemCardShort = ({ item, onCardClickHandler }: IItemCardShortProps): JSX.E
           style={{ borderBottomColor: item.color }}
         >
           <div className={style['item-card-short__wrap']}>
-            <h3 className={`content-primary-a heading-x-small`}>{item.productName}</h3>
+            <h3 className={`content-primary-a label-medium `}>{item.productName}</h3>
 
             {item.description && (
               <p className={`content-primary-a paragraph-small`}>{item.description}</p>
@@ -37,10 +37,10 @@ const ItemCardShort = ({ item, onCardClickHandler }: IItemCardShortProps): JSX.E
             className={style['item-card-short__image']}
             src={item.image}
             alt={item.description}
-            width={120}
-            height={120}
+            width={100}
+            height={100}
           />
-          <div className={`${style['item-card-short__amount']} paragraph-primary-a label-medium`}>
+          <div className={`${style['item-card-short__amount']} paragraph-primary-a label-small`}>
             {InterfaceText.AMOUNT}
             <span className="paragraph-primary-a heading-medium">{item.amount}</span>
             {item.unitsOfMeasurement}
@@ -52,7 +52,7 @@ const ItemCardShort = ({ item, onCardClickHandler }: IItemCardShortProps): JSX.E
               type="button"
               onClick={onCardClickHandler}
             >
-              <span className="visually-hidden">otwó dodatkową informację</span>
+              <span className="visually-hidden">otwórz dodatkową informację</span>
             </button>
           )}
         </article>
