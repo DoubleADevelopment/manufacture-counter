@@ -231,7 +231,7 @@ const gumsData: IPackage = {
       description: 'kolor etykiety pomarańczowy, 500kg',
       additionalInfo: '',
       image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
-      color: '#ffa500',
+      color: '#FFDF00',
       counters: {
         BAGS: {
           counterSystemName: 'BAGS',
@@ -315,7 +315,7 @@ const gumsData: IPackage = {
       description: 'kolor etykiety pomarańczowy',
       additionalInfo: '',
       image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
-      color: '#F04A00',
+      color: '#FF6600',
       counters: {
         BAGS: {
           counterSystemName: 'BAGS',
