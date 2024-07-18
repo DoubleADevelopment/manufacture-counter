@@ -315,7 +315,7 @@ const gumsData: IPackage = {
       description: 'kolor etykiety pomarańczowy',
       additionalInfo: '',
       image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
-      color: '#FF6600',
+      color: '#FFAA00',
       counters: {
         BAGS: {
           counterSystemName: 'BAGS',
