@@ -41,7 +41,7 @@ const ItemsListItem = ({ item }: IItemsListItemProps): JSX.Element => {
             <span className={`content-secondary-a`}>Kod systemowy:</span> {systemCode}
           </p>
         )}
-        {manufactured && <p className={`content-primary-a paragraph-small`}> {manufactured}</p>}
+        {manufactured && <p className={`content-primary-a label-large`}> {manufactured}</p>}
 
         <div className={`${style['items-list-item__amount']} paragraph-primary-a label-small`}>
           {InterfaceText.AMOUNT}:
