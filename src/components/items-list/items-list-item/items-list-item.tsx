@@ -31,12 +31,10 @@ const ItemsListItem = ({ item }: IItemsListItemProps): JSX.Element => {
       style={{ borderBottomColor: color }}
     >
       <div className={style['items-list-item__info']}>
-        <h2 className={`content-primary-a heading-x-small`}>{productName}</h2>
+        <h2 className={`content-primary-a label-large`}>{productName}</h2>
         {description && <p className={`content-primary-a paragraph-medium`}> {description}</p>}
 
-        {additionalInfo && (
-          <p className={`content-primary-a paragraph-medium`}> {additionalInfo}</p>
-        )}
+        {additionalInfo && <p className={`content-primary-a paragraph-small`}> {additionalInfo}</p>}
 
         {systemCode && (
           <p className={`content-primary-a paragraph-small`}>
