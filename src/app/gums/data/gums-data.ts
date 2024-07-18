@@ -189,7 +189,7 @@ const gumsData: IPackage = {
       description: 'kolor etykiety biały',
       additionalInfo: '',
       image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
-      color: '#ffff00',
+      color: '#ffffff',
       counters: {
         BAGS: {
           counterSystemName: 'BAGS',
@@ -231,7 +231,7 @@ const gumsData: IPackage = {
       description: 'kolor etykiety pomarańczowy, 500kg',
       additionalInfo: '',
       image: `${rootBaseName}/images/gums/uszczelka-szara.webp`,
-      color: '#d0312d',
+      color: '#ffa500',
       counters: {
         BAGS: {
           counterSystemName: 'BAGS',
@@ -273,7 +273,7 @@ const gumsData: IPackage = {
       description: 'kolor etykiety biały, 550kg',
       additionalInfo: '',
       image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
-      color: '#ffff00',
+      color: '#ffffff',
       counters: {
         BAGS: {
           counterSystemName: 'BAGS',
@@ -315,7 +315,7 @@ const gumsData: IPackage = {
       description: 'kolor etykiety pomarańczowy',
       additionalInfo: '',
       image: `${rootBaseName}/images/gums/uszczelka-czarna.webp`,
-      color: '#d0312d',
+      color: '#F04A00',
       counters: {
         BAGS: {
           counterSystemName: 'BAGS',
